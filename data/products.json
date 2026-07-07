@@ -1,0 +1,762 @@
+[
+  {
+    "id": "cream-cheese",
+    "name": "Cream Cheese",
+    "brand": "",
+    "category": "Dairy",
+    "unit": "block",
+    "size": "250 g",
+    "emoji": "🧀",
+    "searchTerms": [
+      "cream cheese",
+      "philadelphia"
+    ],
+    "prices": {
+      "freshco": 4.26,
+      "walmart": 3.99,
+      "nofrills": 4.46,
+      "metro": 4.71
+    }
+  },
+  {
+    "id": "butter",
+    "name": "Butter",
+    "brand": "",
+    "category": "Dairy",
+    "unit": "block",
+    "size": "454 g",
+    "emoji": "🧈",
+    "searchTerms": [
+      "butter",
+      "unsalted butter",
+      "salted butter"
+    ],
+    "prices": {
+      "freshco": 5.67,
+      "walmart": 5.35,
+      "nofrills": 5.6,
+      "metro": 6.25
+    }
+  },
+  {
+    "id": "eggs",
+    "name": "Large Eggs",
+    "brand": "",
+    "category": "Dairy",
+    "unit": "dozen",
+    "size": "12 ct",
+    "emoji": "🥚",
+    "searchTerms": [
+      "egg",
+      "eggs",
+      "large eggs"
+    ],
+    "prices": {
+      "freshco": 4.08,
+      "walmart": 3.69,
+      "nofrills": 3.92,
+      "metro": 4.15
+    }
+  },
+  {
+    "id": "milk",
+    "name": "2% Milk",
+    "brand": "",
+    "category": "Dairy",
+    "unit": "carton",
+    "size": "2 L",
+    "emoji": "🥛",
+    "searchTerms": [
+      "milk",
+      "whole milk",
+      "2% milk"
+    ],
+    "prices": {
+      "freshco": 4.17,
+      "walmart": 3.75,
+      "nofrills": 4.09,
+      "metro": 4.83
+    }
+  },
+  {
+    "id": "sour-cream",
+    "name": "Sour Cream",
+    "brand": "",
+    "category": "Dairy",
+    "unit": "tub",
+    "size": "500 mL",
+    "emoji": "🥛",
+    "searchTerms": [
+      "sour cream"
+    ],
+    "prices": {
+      "freshco": 3.24,
+      "walmart": 2.96,
+      "nofrills": 3.33,
+      "metro": 3.33
+    }
+  },
+  {
+    "id": "whipping-cream",
+    "name": "Whipping Cream",
+    "brand": "",
+    "category": "Dairy",
+    "unit": "carton",
+    "size": "473 mL",
+    "emoji": "🥛",
+    "searchTerms": [
+      "heavy cream",
+      "whipping cream",
+      "cream",
+      "double cream"
+    ],
+    "prices": {
+      "freshco": 4.78,
+      "walmart": 4.56,
+      "nofrills": 4.5,
+      "metro": 4.87
+    }
+  },
+  {
+    "id": "cheddar",
+    "name": "Cheddar Cheese",
+    "brand": "",
+    "category": "Dairy",
+    "unit": "block",
+    "size": "400 g",
+    "emoji": "🧀",
+    "searchTerms": [
+      "cheddar",
+      "cheese",
+      "cheddar cheese"
+    ],
+    "prices": {
+      "freshco": 6.58,
+      "walmart": 5.75,
+      "nofrills": 6.54,
+      "metro": 7.06
+    }
+  },
+  {
+    "id": "greek-yogurt",
+    "name": "Greek Yogurt",
+    "brand": "",
+    "category": "Dairy",
+    "unit": "tub",
+    "size": "750 g",
+    "emoji": "🥣",
+    "searchTerms": [
+      "yogurt",
+      "greek yogurt",
+      "plain yogurt"
+    ],
+    "prices": {
+      "freshco": 5.18,
+      "walmart": 5.09,
+      "nofrills": 5.09,
+      "metro": 6.16
+    }
+  },
+  {
+    "id": "blueberries",
+    "name": "Blueberries",
+    "brand": "",
+    "category": "Produce",
+    "unit": "pack",
+    "size": "170 g",
+    "emoji": "🫐",
+    "searchTerms": [
+      "blueberries",
+      "fresh blueberries",
+      "blueberry"
+    ],
+    "prices": {
+      "freshco": 3.89,
+      "walmart": 3.55,
+      "nofrills": 3.66,
+      "metro": 4.37
+    }
+  },
+  {
+    "id": "strawberries",
+    "name": "Strawberries",
+    "brand": "",
+    "category": "Produce",
+    "unit": "pack",
+    "size": "454 g",
+    "emoji": "🍓",
+    "searchTerms": [
+      "strawberries",
+      "strawberry"
+    ],
+    "prices": {
+      "freshco": 4.62,
+      "walmart": 4.28,
+      "nofrills": 4.15,
+      "metro": 4.56
+    }
+  },
+  {
+    "id": "lemon",
+    "name": "Lemon",
+    "brand": "",
+    "category": "Produce",
+    "unit": "each",
+    "size": "1 ct",
+    "emoji": "🍋",
+    "searchTerms": [
+      "lemon",
+      "lemons",
+      "lemon juice",
+      "lemon zest"
+    ],
+    "prices": {
+      "freshco": 0.77,
+      "walmart": 0.78,
+      "nofrills": 0.75,
+      "metro": 0.81
+    }
+  },
+  {
+    "id": "banana",
+    "name": "Bananas",
+    "brand": "",
+    "category": "Produce",
+    "unit": "bunch",
+    "size": "per lb",
+    "emoji": "🍌",
+    "searchTerms": [
+      "banana",
+      "bananas"
+    ],
+    "prices": {
+      "freshco": 0.68,
+      "walmart": 0.6,
+      "nofrills": 0.68,
+      "metro": 0.77
+    }
+  },
+  {
+    "id": "onion",
+    "name": "Yellow Onion",
+    "brand": "",
+    "category": "Produce",
+    "unit": "each",
+    "size": "1 ct",
+    "emoji": "🧅",
+    "searchTerms": [
+      "onion",
+      "onions",
+      "yellow onion"
+    ],
+    "prices": {
+      "freshco": 0.93,
+      "walmart": 0.78,
+      "nofrills": 0.86,
+      "metro": 0.98
+    }
+  },
+  {
+    "id": "garlic",
+    "name": "Garlic",
+    "brand": "",
+    "category": "Produce",
+    "unit": "bulb",
+    "size": "1 ct",
+    "emoji": "🧄",
+    "searchTerms": [
+      "garlic",
+      "garlic clove",
+      "garlic cloves",
+      "minced garlic"
+    ],
+    "prices": {
+      "freshco": 1.02,
+      "walmart": 0.94,
+      "nofrills": 0.93,
+      "metro": 1.01
+    }
+  },
+  {
+    "id": "tomato",
+    "name": "Tomatoes",
+    "brand": "",
+    "category": "Produce",
+    "unit": "each",
+    "size": "per lb",
+    "emoji": "🍅",
+    "searchTerms": [
+      "tomato",
+      "tomatoes"
+    ],
+    "prices": {
+      "freshco": 2.47,
+      "walmart": 2.28,
+      "nofrills": 2.53,
+      "metro": 2.77
+    }
+  },
+  {
+    "id": "potato",
+    "name": "Potatoes",
+    "brand": "",
+    "category": "Produce",
+    "unit": "bag",
+    "size": "5 lb",
+    "emoji": "🥔",
+    "searchTerms": [
+      "potato",
+      "potatoes"
+    ],
+    "prices": {
+      "freshco": 5.23,
+      "walmart": 4.62,
+      "nofrills": 4.56,
+      "metro": 5.14
+    }
+  },
+  {
+    "id": "spinach",
+    "name": "Baby Spinach",
+    "brand": "",
+    "category": "Produce",
+    "unit": "pack",
+    "size": "142 g",
+    "emoji": "🥬",
+    "searchTerms": [
+      "spinach",
+      "baby spinach"
+    ],
+    "prices": {
+      "freshco": 3.63,
+      "walmart": 3.19,
+      "nofrills": 3.23,
+      "metro": 3.91
+    }
+  },
+  {
+    "id": "avocado",
+    "name": "Avocado",
+    "brand": "",
+    "category": "Produce",
+    "unit": "each",
+    "size": "1 ct",
+    "emoji": "🥑",
+    "searchTerms": [
+      "avocado",
+      "avocados"
+    ],
+    "prices": {
+      "freshco": 1.47,
+      "walmart": 1.4,
+      "nofrills": 1.34,
+      "metro": 1.54
+    }
+  },
+  {
+    "id": "graham-crackers",
+    "name": "Graham Crackers",
+    "brand": "",
+    "category": "Bakery",
+    "unit": "box",
+    "size": "200 g",
+    "emoji": "🍪",
+    "searchTerms": [
+      "graham crackers",
+      "graham cracker crumbs",
+      "digestive biscuits",
+      "biscuits"
+    ],
+    "prices": {
+      "freshco": 3.3,
+      "walmart": 3.1,
+      "nofrills": 3.36,
+      "metro": 3.82
+    }
+  },
+  {
+    "id": "bread",
+    "name": "Whole Wheat Bread",
+    "brand": "",
+    "category": "Bakery",
+    "unit": "loaf",
+    "size": "675 g",
+    "emoji": "🍞",
+    "searchTerms": [
+      "bread",
+      "loaf",
+      "sliced bread"
+    ],
+    "prices": {
+      "freshco": 3.18,
+      "walmart": 3.11,
+      "nofrills": 3.04,
+      "metro": 3.64
+    }
+  },
+  {
+    "id": "flour",
+    "name": "All-Purpose Flour",
+    "brand": "",
+    "category": "Pantry",
+    "unit": "bag",
+    "size": "2.5 kg",
+    "emoji": "🌾",
+    "searchTerms": [
+      "flour",
+      "all-purpose flour",
+      "all purpose flour"
+    ],
+    "prices": {
+      "freshco": 4.8,
+      "walmart": 4.94,
+      "nofrills": 4.57,
+      "metro": 5.05
+    }
+  },
+  {
+    "id": "spaghetti",
+    "name": "Spaghetti",
+    "brand": "",
+    "category": "Pantry",
+    "unit": "box",
+    "size": "500 g",
+    "emoji": "🍝",
+    "searchTerms": [
+      "pasta",
+      "spaghetti",
+      "noodles"
+    ],
+    "prices": {
+      "freshco": 1.89,
+      "walmart": 1.96,
+      "nofrills": 1.9,
+      "metro": 2.12
+    }
+  },
+  {
+    "id": "rice",
+    "name": "Basmati Rice",
+    "brand": "",
+    "category": "Pantry",
+    "unit": "bag",
+    "size": "2 kg",
+    "emoji": "🍚",
+    "searchTerms": [
+      "rice",
+      "basmati rice",
+      "white rice"
+    ],
+    "prices": {
+      "freshco": 8.57,
+      "walmart": 8.49,
+      "nofrills": 8.15,
+      "metro": 9.98
+    }
+  },
+  {
+    "id": "sugar",
+    "name": "Granulated Sugar",
+    "brand": "",
+    "category": "Pantry",
+    "unit": "bag",
+    "size": "2 kg",
+    "emoji": "🍬",
+    "searchTerms": [
+      "sugar",
+      "granulated sugar",
+      "white sugar",
+      "caster sugar"
+    ],
+    "prices": {
+      "freshco": 3.82,
+      "walmart": 3.62,
+      "nofrills": 3.81,
+      "metro": 4.07
+    }
+  },
+  {
+    "id": "brown-sugar",
+    "name": "Brown Sugar",
+    "brand": "",
+    "category": "Pantry",
+    "unit": "bag",
+    "size": "1 kg",
+    "emoji": "🍯",
+    "searchTerms": [
+      "brown sugar"
+    ],
+    "prices": {
+      "freshco": 3.15,
+      "walmart": 3.25,
+      "nofrills": 2.97,
+      "metro": 3.41
+    }
+  },
+  {
+    "id": "vanilla",
+    "name": "Vanilla Extract",
+    "brand": "",
+    "category": "Pantry",
+    "unit": "bottle",
+    "size": "43 mL",
+    "emoji": "🌼",
+    "searchTerms": [
+      "vanilla",
+      "vanilla extract"
+    ],
+    "prices": {
+      "freshco": 5.8,
+      "walmart": 5.2,
+      "nofrills": 5.41,
+      "metro": 5.74
+    }
+  },
+  {
+    "id": "baking-powder",
+    "name": "Baking Powder",
+    "brand": "",
+    "category": "Pantry",
+    "unit": "tin",
+    "size": "227 g",
+    "emoji": "🧂",
+    "searchTerms": [
+      "baking powder"
+    ],
+    "prices": {
+      "freshco": 3.15,
+      "walmart": 2.86,
+      "nofrills": 2.76,
+      "metro": 3.36
+    }
+  },
+  {
+    "id": "olive-oil",
+    "name": "Olive Oil",
+    "brand": "",
+    "category": "Pantry",
+    "unit": "bottle",
+    "size": "1 L",
+    "emoji": "🫒",
+    "searchTerms": [
+      "olive oil",
+      "oil",
+      "cooking oil"
+    ],
+    "prices": {
+      "freshco": 9.96,
+      "walmart": 8.91,
+      "nofrills": 9.05,
+      "metro": 10.24
+    }
+  },
+  {
+    "id": "salt",
+    "name": "Table Salt",
+    "brand": "",
+    "category": "Pantry",
+    "unit": "box",
+    "size": "1 kg",
+    "emoji": "🧂",
+    "searchTerms": [
+      "salt",
+      "table salt",
+      "sea salt"
+    ],
+    "prices": {
+      "freshco": 1.55,
+      "walmart": 1.32,
+      "nofrills": 1.51,
+      "metro": 1.65
+    }
+  },
+  {
+    "id": "black-pepper",
+    "name": "Black Pepper",
+    "brand": "",
+    "category": "Pantry",
+    "unit": "jar",
+    "size": "100 g",
+    "emoji": "🌶️",
+    "searchTerms": [
+      "pepper",
+      "black pepper"
+    ],
+    "prices": {
+      "freshco": 3.56,
+      "walmart": 3.26,
+      "nofrills": 3.44,
+      "metro": 3.86
+    }
+  },
+  {
+    "id": "honey",
+    "name": "Honey",
+    "brand": "",
+    "category": "Pantry",
+    "unit": "jar",
+    "size": "500 g",
+    "emoji": "🍯",
+    "searchTerms": [
+      "honey"
+    ],
+    "prices": {
+      "freshco": 6.81,
+      "walmart": 6.24,
+      "nofrills": 6.23,
+      "metro": 6.7
+    }
+  },
+  {
+    "id": "peanut-butter",
+    "name": "Peanut Butter",
+    "brand": "",
+    "category": "Pantry",
+    "unit": "jar",
+    "size": "1 kg",
+    "emoji": "🥜",
+    "searchTerms": [
+      "peanut butter"
+    ],
+    "prices": {
+      "freshco": 5.68,
+      "walmart": 5.65,
+      "nofrills": 5.59,
+      "metro": 6.46
+    }
+  },
+  {
+    "id": "tomato-sauce",
+    "name": "Tomato Pasta Sauce",
+    "brand": "",
+    "category": "Pantry",
+    "unit": "jar",
+    "size": "680 mL",
+    "emoji": "🍅",
+    "searchTerms": [
+      "tomato sauce",
+      "pasta sauce",
+      "marinara"
+    ],
+    "prices": {
+      "freshco": 2.75,
+      "walmart": 2.53,
+      "nofrills": 2.77,
+      "metro": 2.84
+    }
+  },
+  {
+    "id": "chicken-breast",
+    "name": "Chicken Breast",
+    "brand": "",
+    "category": "Meat",
+    "unit": "pack",
+    "size": "per lb",
+    "emoji": "🍗",
+    "searchTerms": [
+      "chicken",
+      "chicken breast"
+    ],
+    "prices": {
+      "freshco": 7.84,
+      "walmart": 7.45,
+      "nofrills": 7.57,
+      "metro": 8.53
+    }
+  },
+  {
+    "id": "ground-beef",
+    "name": "Ground Beef",
+    "brand": "",
+    "category": "Meat",
+    "unit": "pack",
+    "size": "per lb",
+    "emoji": "🥩",
+    "searchTerms": [
+      "ground beef",
+      "beef",
+      "minced beef"
+    ],
+    "prices": {
+      "freshco": 6.14,
+      "walmart": 6.32,
+      "nofrills": 6.46,
+      "metro": 7.04
+    }
+  },
+  {
+    "id": "bacon",
+    "name": "Bacon",
+    "brand": "",
+    "category": "Meat",
+    "unit": "pack",
+    "size": "375 g",
+    "emoji": "🥓",
+    "searchTerms": [
+      "bacon"
+    ],
+    "prices": {
+      "freshco": 6.89,
+      "walmart": 6.9,
+      "nofrills": 6.34,
+      "metro": 7.44
+    }
+  },
+  {
+    "id": "salmon",
+    "name": "Salmon Fillet",
+    "brand": "",
+    "category": "Meat",
+    "unit": "pack",
+    "size": "per lb",
+    "emoji": "🐟",
+    "searchTerms": [
+      "salmon",
+      "salmon fillet"
+    ],
+    "prices": {
+      "freshco": 12.54,
+      "walmart": 11.83,
+      "nofrills": 11.8,
+      "metro": 13.92
+    }
+  },
+  {
+    "id": "orange-juice",
+    "name": "Orange Juice",
+    "brand": "",
+    "category": "Beverages",
+    "unit": "carton",
+    "size": "1.75 L",
+    "emoji": "🧃",
+    "searchTerms": [
+      "orange juice",
+      "oj"
+    ],
+    "prices": {
+      "freshco": 4.43,
+      "walmart": 4.33,
+      "nofrills": 4.32,
+      "metro": 4.66
+    }
+  },
+  {
+    "id": "coffee",
+    "name": "Ground Coffee",
+    "brand": "",
+    "category": "Beverages",
+    "unit": "bag",
+    "size": "900 g",
+    "emoji": "☕",
+    "searchTerms": [
+      "coffee",
+      "ground coffee"
+    ],
+    "prices": {
+      "freshco": 13.37,
+      "walmart": 12.36,
+      "nofrills": 11.86,
+      "metro": 13.7
+    }
+  }
+]
