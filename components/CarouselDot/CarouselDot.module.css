@@ -1,0 +1,18 @@
+.dot {
+  display: inline-block;
+  flex-shrink: 0;
+  border-radius: var(--radius-full);
+  transition: width 200ms ease, background-color 200ms ease;
+}
+
+.selected {
+  width: 26px;
+  height: 15px;
+  background: var(--color-primary);
+}
+
+.unselected {
+  width: 15.28px;
+  height: 15.28px;
+  background: #cccccc;
+}

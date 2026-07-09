@@ -1,0 +1,45 @@
+.star {
+  display: inline-block;
+  position: relative;
+  width: var(--star-size, 10px);
+  height: var(--star-size, 10px);
+  line-height: 0;
+  flex-shrink: 0;
+}
+
+.star svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Full — solid fill */
+.full path {
+  fill: var(--color-rating);
+}
+
+/* None — grey outline only */
+.empty path {
+  fill: none;
+  stroke: var(--color-rating-empty);
+  stroke-width: 2;
+  stroke-linejoin: round;
+}
+
+/* Half — outline underneath, left-half fill on top */
+.half .base path {
+  fill: none;
+  stroke: var(--color-rating-empty);
+  stroke-width: 2;
+  stroke-linejoin: round;
+}
+
+.half .fill {
+  position: absolute;
+  inset: 0;
+  clip-path: inset(0 50% 0 0);
+}
+
+.half .fill path {
+  fill: var(--color-rating);
+}

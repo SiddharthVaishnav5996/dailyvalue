@@ -1,0 +1,75 @@
+/* ---- "ADD" button ---- */
+.addBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 20px;
+  background: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--radius-full);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+  transition: background 150ms ease;
+}
+
+.addBtn:hover {
+  background: var(--color-primary-hover);
+}
+
+.addBtn:active {
+  background: var(--color-primary-hover);
+}
+
+/* Forced states (styleguide / programmatic). Active shares the primary color. */
+.stateActive {
+  background: var(--color-primary);
+}
+.stateHover {
+  background: var(--color-primary-hover);
+}
+
+.label {
+  font: var(--text-normal-bold);
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+}
+
+/* ---- "Grocery added" — quantity stepper ---- */
+.stepper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 20px;
+  background: var(--color-primary-hover);
+  color: var(--color-white);
+  border-radius: var(--radius-full);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+  min-width: 120px;
+}
+
+.stepBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: transparent;
+  border: none;
+  color: var(--color-white);
+  transition: opacity 150ms ease;
+}
+
+.stepBtn:hover {
+  opacity: 0.75;
+}
+
+.qty {
+  font: var(--text-normal-bold);
+  min-width: 20px;
+  text-align: center;
+}

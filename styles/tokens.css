@@ -1,0 +1,115 @@
+/*
+ * DailyValue — Design Tokens
+ * ---------------------------------------------------------------------------
+ * Single source of truth for the design system, mapped from the Figma styles.
+ * All sizing is in fixed px (constant — not affected by browser font settings)
+ * to stay pixel-perfect with the designs.
+ *
+ * TYPOGRAPHY
+ * Each Figma text style is one token using the CSS `font` shorthand:
+ *     font: <weight> <size>/<line-height> <family>
+ * so size, line-height and weight always stay together. Apply with e.g.
+ * `font: var(--text-heading-1);` (the <Text> component does this for you).
+ */
+
+:root {
+  /* ---- Font family ----
+     Inter, loaded via next/font/google in app/layout.tsx (exposes --font-inter). */
+  --font-sans: var(--font-inter), system-ui, -apple-system, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+
+  /* ---- Weights ---- */
+  --fw-regular: 400;
+  --fw-bold: 700;
+
+  /* ---- Headings (line-height 1.1) ---- */
+  --text-heading-1: var(--fw-bold) 56px/61.6px var(--font-sans);
+  --text-heading-2: var(--fw-bold) 48px/52.8px var(--font-sans);
+  --text-heading-3: var(--fw-bold) 40px/44px var(--font-sans);
+  --text-heading-4: var(--fw-bold) 32px/35.2px var(--font-sans);
+  --text-heading-5: var(--fw-bold) 24px/26.4px var(--font-sans);
+  --text-heading-6: var(--fw-bold) 20px/22px var(--font-sans);
+
+  /* ---- Large · 20px ---- */
+  --text-large-bold: var(--fw-bold) 20px/28px var(--font-sans);
+  --text-large-regular: var(--fw-regular) 20px/28px var(--font-sans);
+
+  /* ---- Medium · 18px ---- */
+  --text-medium-bold: var(--fw-bold) 18px/25.2px var(--font-sans);
+  --text-medium-regular: var(--fw-regular) 18px/25.2px var(--font-sans);
+
+  /* ---- Normal · 14px ---- */
+  --text-normal-bold: var(--fw-bold) 14px/20px var(--font-sans);
+  --text-normal-regular: var(--fw-regular) 14px/22.4px var(--font-sans);
+
+  /* ---- Small · 12px ---- */
+  --text-small-bold: var(--fw-bold) 12px/16px var(--font-sans);
+  --text-small-regular: var(--fw-regular) 12px/14px var(--font-sans);
+
+  /* ---- X Small · 10px ---- */
+  --text-xsmall-bold: var(--fw-bold) 10px/12px var(--font-sans);
+  --text-xsmall-regular: var(--fw-regular) 10px/12px var(--font-sans);
+
+  /* ---- XX Small · 8px ---- */
+  --text-xxsmall-bold: var(--fw-bold) 8px/10px var(--font-sans);
+  --text-xxsmall-regular: var(--fw-regular) 8px/10px var(--font-sans);
+
+  /* ==========================================================================
+   * COLORS  (from Figma color styles)
+   * ======================================================================= */
+
+  /* ---- Brand ---- */
+  --color-primary: #413a78;        /* rgb(65, 58, 120) */
+  --color-primary-hover: #2e2954;  /* rgb(46, 41, 84) — Add button hover */
+
+  /* ---- Footer ---- */
+  --color-footer-bg: #544d85;      /* rgb(84, 77, 133) */
+  --color-footer-text: #ffffff;    /* rgb(255, 255, 255) */
+
+  /* ---- Base ---- */
+  --color-white: #ffffff;
+
+  /* ---- Accent greens (used ad hoc, e.g. deals / savings highlights) ---- */
+  --color-green-bright: #00d207;   /* rgb(0, 210, 7) */
+  --color-green-soft: #dbffdc;     /* rgb(219, 255, 220) */
+
+  /* ---- Category selector — hover tints ---- */
+  --color-category-dairy: #ade7f5;          /* rgb(173, 231, 245) */
+  --color-category-electronics: #d7cece;    /* rgb(215, 206, 206) */
+  --color-category-fashion: #e2b93b;        /* rgb(226, 185, 59)  */
+  --color-category-health-beauty: #eb9df9;  /* rgb(235, 157, 249) */
+  --color-category-fresh-deals: #fea1aa;    /* rgb(254, 161, 170) */
+  --color-category-grocery: #9cf5c5;        /* rgb(156, 245, 197) */
+
+  /* ---- Rating (stars) ---- */
+  --color-rating: #ffb845;        /* rgb(255, 184, 69) — filled star */
+  --color-rating-empty: #c8c8c8;  /* rgb(200, 200, 200) — empty/outline star */
+
+  /* ==========================================================================
+   * SPACING  (fixed px scale, 4px base)
+   * Conventional default — tell me your exact Figma spacing values to tune it.
+   * ======================================================================= */
+  --space-0: 0px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 32px;
+  --space-8: 40px;
+  --space-9: 48px;
+  --space-10: 64px;
+  --space-11: 80px;
+  --space-12: 96px;
+
+  /* ==========================================================================
+   * RADII  (fixed px)
+   * ======================================================================= */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+  --radius-full: 9999px;
+}

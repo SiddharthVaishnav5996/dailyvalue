@@ -1,0 +1,65 @@
+/*
+ * One class per Figma text style. Each pulls a single token that carries
+ * weight + size + line-height together (see styles/tokens.css).
+ */
+
+.heading1 {
+  font: var(--text-heading-1);
+}
+.heading2 {
+  font: var(--text-heading-2);
+}
+.heading3 {
+  font: var(--text-heading-3);
+}
+.heading4 {
+  font: var(--text-heading-4);
+}
+.heading5 {
+  font: var(--text-heading-5);
+}
+.heading6 {
+  font: var(--text-heading-6);
+}
+
+.largeBold {
+  font: var(--text-large-bold);
+}
+.largeRegular {
+  font: var(--text-large-regular);
+}
+
+.mediumBold {
+  font: var(--text-medium-bold);
+}
+.mediumRegular {
+  font: var(--text-medium-regular);
+}
+
+.normalBold {
+  font: var(--text-normal-bold);
+}
+.normalRegular {
+  font: var(--text-normal-regular);
+}
+
+.smallBold {
+  font: var(--text-small-bold);
+}
+.smallRegular {
+  font: var(--text-small-regular);
+}
+
+.xsmallBold {
+  font: var(--text-xsmall-bold);
+}
+.xsmallRegular {
+  font: var(--text-xsmall-regular);
+}
+
+.xxsmallBold {
+  font: var(--text-xxsmall-bold);
+}
+.xxsmallRegular {
+  font: var(--text-xxsmall-regular);
+}

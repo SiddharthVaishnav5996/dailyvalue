@@ -1,0 +1,159 @@
+.page {
+  max-width: 960px;
+  margin-inline: auto;
+  padding: 48px 24px 96px;
+  min-height: 100vh;
+  background: #ffffff;
+  color: #0f172a;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.section {
+  margin-top: 48px;
+}
+
+.sectionTitle {
+  margin-bottom: 20px;
+}
+
+/* --- Typography specimens --- */
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 24px;
+  align-items: baseline;
+  padding: 20px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.muted {
+  color: #94a3b8;
+}
+
+/* --- Color swatches --- */
+.swatches {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.swatch {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.chip {
+  height: 72px;
+}
+
+.swatchMeta {
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.primary {
+  background: var(--color-primary);
+}
+.primaryHover {
+  background: var(--color-primary-hover);
+}
+.footerBg {
+  background: var(--color-footer-bg);
+}
+.white {
+  background: var(--color-white);
+  border-bottom: 1px solid #e2e8f0;
+}
+.greenBright {
+  background: var(--color-green-bright);
+}
+.greenSoft {
+  background: var(--color-green-soft);
+}
+.catDairy {
+  background: var(--color-category-dairy);
+}
+.catElectronics {
+  background: var(--color-category-electronics);
+}
+.catFashion {
+  background: var(--color-category-fashion);
+}
+.catHealthBeauty {
+  background: var(--color-category-health-beauty);
+}
+.catFreshDeals {
+  background: var(--color-category-fresh-deals);
+}
+.catGrocery {
+  background: var(--color-category-grocery);
+}
+
+/* --- Component demos --- */
+.demoGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.demoCell {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.ratingRows {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.ratingRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.dotRow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dotButton {
+  padding: 4px;
+  background: transparent;
+  border: none;
+  line-height: 0;
+}
+
+@media (max-width: 640px) {
+  .row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}
