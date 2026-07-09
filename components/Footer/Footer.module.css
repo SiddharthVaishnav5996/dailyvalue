@@ -1,0 +1,95 @@
+.footer {
+  width: 100%;
+  background: var(--color-primary);
+  padding: 50px;
+}
+
+.inner {
+  max-width: 1157px;
+  margin-inline: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  min-width: 180px;
+}
+
+.heading {
+  color: var(--color-footer-text);
+}
+
+.linkList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.link {
+  font: var(--text-medium-regular);
+  color: var(--color-footer-text);
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.updatesBox {
+  width: 434px;
+  min-height: 254px;
+  background: var(--color-footer-bg);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.updatesCopy {
+  color: var(--color-footer-text);
+}
+
+.emailRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  background: var(--color-primary);
+  border-radius: 20px;
+  padding: 6px 6px 6px 20px;
+  margin-top: 8px;
+}
+
+.emailInput {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  font: var(--text-medium-regular);
+  color: var(--color-white);
+}
+
+.emailInput::placeholder {
+  color: var(--color-white);
+}
+
+.subscribeBtn {
+  background: #ffffff !important;
+  color: #413a78 !important;
+}
+
+/* Active state: once a complete, valid email is typed, swap the button's
+   fill and text color. `required` on the input makes it :invalid while
+   empty, so this only engages for a genuinely complete address. */
+.emailInput:valid ~ .subscribeBtn {
+  background: var(--color-primary) !important;
+  color: #ffffff !important;
+}

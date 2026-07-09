@@ -1,0 +1,19 @@
+.chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+  padding: 15px 20px;
+  border-radius: 20px;
+  background: transparent;
+  border: none;
+  font: var(--text-medium-bold);
+  color: var(--color-text);
+  white-space: nowrap;
+  transition: background 150ms ease;
+}
+
+.chip:hover,
+.chip:focus-visible {
+  background: var(--hover-bg);
+}

@@ -2,8 +2,14 @@ import { Text, type TextVariant } from "@/components/Text/Text";
 import { Star } from "@/components/Star/Star";
 import { StarRating } from "@/components/StarRating/StarRating";
 import { CarouselDot } from "@/components/CarouselDot/CarouselDot";
+import { StoreName } from "@/components/StoreName/StoreName";
+import { CategorySelector } from "@/components/CategorySelector/CategorySelector";
+import { STORE_NAMES } from "@/data/storeNames";
+import { CATEGORIES } from "@/data/categories";
+import { AISearchBar } from "@/components/AISearchBar/AISearchBar";
 import { AddButtonDemo } from "./AddButtonDemo";
 import { CarouselDotDemo } from "./CarouselDotDemo";
+import { FooterDemo } from "./FooterDemo";
 import styles from "./styleguide.module.css";
 
 const SPECIMENS: { variant: TextVariant; label: string; spec: string }[] = [
@@ -44,7 +50,8 @@ const COLORS: { name: string; hex: string; rgb: string; cls: string }[] = [
 
 export default function StyleguidePage() {
   return (
-    <main className={styles.page}>
+    <>
+      <main className={styles.page}>
       <header className={styles.header}>
         <Text variant="heading3" as="h1">
           Design system
@@ -172,6 +179,67 @@ export default function StyleguidePage() {
           </Text>
         </div>
       </section>
-    </main>
+
+      <section className={styles.section}>
+        <Text variant="heading4" as="h2" className={styles.sectionTitle}>
+          Store Names
+        </Text>
+        <Text variant="smallRegular" className={styles.muted}>
+          184 × 28 each · thumbnails pending, showing initials fallback
+        </Text>
+        <div className={styles.storeList}>
+          {STORE_NAMES.map((store) => (
+            <StoreName
+              key={store.id}
+              name={store.name}
+              distanceKm={store.distanceKm}
+              logoSrc={store.logoSrc}
+            />
+          ))}
+        </div>
+      </section>
+
+      <section className={styles.section}>
+        <Text variant="heading4" as="h2" className={styles.sectionTitle}>
+          Category Selector
+        </Text>
+        <Text variant="smallRegular" className={styles.muted}>
+          Transparent by default · fills with its category color on hover
+        </Text>
+        <div className={styles.categoryRow}>
+          {CATEGORIES.map((cat) => (
+            <CategorySelector
+              key={cat.id}
+              label={cat.label}
+              hoverColorVar={cat.hoverColorVar}
+            />
+          ))}
+        </div>
+      </section>
+
+      <section className={styles.section}>
+        <Text variant="heading4" as="h2" className={styles.sectionTitle}>
+          AI Search Bar
+        </Text>
+        <Text variant="smallRegular" className={styles.muted}>
+          737 × 60 max · click to focus — placeholder hides, cursor blinks
+        </Text>
+        <div className={styles.searchBarDemo}>
+          <AISearchBar />
+        </div>
+      </section>
+
+      <section className={styles.section}>
+        <Text variant="heading4" as="h2" className={styles.sectionTitle}>
+          Footer
+        </Text>
+        <Text variant="smallRegular" className={styles.muted}>
+          1157 max width · full-bleed background, rendered below (outside this
+          contained column)
+        </Text>
+      </section>
+      </main>
+      <FooterDemo />
+    </>
   );
 }
