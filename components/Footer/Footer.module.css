@@ -1,7 +1,8 @@
 .footer {
   width: 100%;
   background: var(--color-primary);
-  padding: 50px;
+  /* 50px holds from ~1000px viewports up; scales down fluidly below that. */
+  padding: clamp(24px, 5vw, 50px);
 }
 
 .inner {
@@ -42,7 +43,8 @@
 }
 
 .updatesBox {
-  width: 434px;
+  width: 100%;
+  max-width: 434px;
   min-height: 254px;
   background: var(--color-footer-bg);
   border-radius: 16px;

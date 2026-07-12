@@ -1,0 +1,166 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  padding: 10px;
+  background: var(--color-white);
+  border-radius: 20px;
+}
+
+.horizontal {
+  max-width: 458px;
+}
+
+.vertical {
+  max-width: 204px;
+}
+
+.topRow {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* ---- Image ----
+ * flex-shrink is intentionally NOT 0: the image shares the squeeze with
+ * .body (via aspect-ratio, so it scales down proportionally) instead of
+ * staying rigid and crushing .body toward zero width. min-width keeps it
+ * from disappearing; topRow's flex-wrap lets the row stack (image above
+ * body) once neither can shrink enough to coexist side by side. */
+.imageWrap {
+  position: relative;
+  width: 217px;
+  min-width: 120px;
+  max-width: 100%;
+  aspect-ratio: 217 / 166;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f1f5f9;
+}
+
+.imageWrapVertical {
+  width: 100%;
+  height: 166px;
+  max-height: 166px;
+  aspect-ratio: unset; /* fixed height instead of following the 217:166
+    ratio — the vertical card is narrower (184px) than horizontal (217px),
+    so matching that ratio would leave it too short. */
+}
+
+.image {
+  object-fit: cover;
+}
+
+.imagePlaceholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+}
+
+/* ---- Body ----
+ * min-width matches StoreName's own fixed 184px width — StoreName doesn't
+ * shrink (it's a fixed-size atom by design), so body can't usefully go
+ * narrower than that without StoreName itself overflowing it. */
+.body {
+  flex: 1 1 184px;
+  min-width: 184px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.discountPill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 111px;
+  height: 20px;
+  padding: 0 6px;
+  background: var(--color-discount);
+  border-radius: 6px;
+}
+
+.discountLabel {
+  color: var(--color-white);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.description {
+  color: var(--color-text);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.ratingRow {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-width: 0; /* .body is a column flex container; without this, rows
+    default to their content's min-content width and overflow the card
+    instead of shrinking with it. flex-wrap lets the review link drop to
+    its own line if the row is ever narrower than star-rating + link. */
+}
+
+.reviewLink {
+  padding: 0;
+  background: transparent;
+  border: none;
+  color: var(--color-review-link);
+  text-decoration: underline;
+  white-space: nowrap;
+}
+
+.priceRow {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+  min-width: 0;
+}
+
+.price {
+  color: var(--color-text);
+}
+
+.originalPrice {
+  color: var(--color-text-muted);
+  text-decoration: line-through;
+}
+
+.deliveryRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-width: 0;
+  flex-wrap: wrap;
+}
+
+.deliveryText {
+  color: var(--color-green-bright);
+}
+
+.expandBtn {
+  display: inline-flex;
+  flex-shrink: 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+  color: var(--color-text);
+}
+
+/* Scoped to .body's own width (the text column), not the full card —
+   the card is two parts: image, then this column (which ends with the
+   button), not a button spanning under the image too. */
+.addButtonFull {
+  width: 100%;
+}

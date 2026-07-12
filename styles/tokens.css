@@ -87,6 +87,10 @@
   --color-rating: #ffb845;        /* rgb(255, 184, 69) — filled star */
   --color-rating-empty: #c8c8c8;  /* rgb(200, 200, 200) — empty/outline star */
 
+  /* ---- Product card ---- */
+  --color-discount: #ff0606;      /* rgb(255, 6, 6) — "Last chance" pill */
+  --color-review-link: #03e6ff;   /* rgb(3, 230, 255) — review count link */
+
   /* ==========================================================================
    * SPACING  (fixed px scale, 4px base)
    * Conventional default — tell me your exact Figma spacing values to tune it.

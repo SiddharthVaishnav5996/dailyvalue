@@ -1,0 +1,63 @@
+.header {
+  width: 100%;
+  height: 75px;
+  /* 200px holds from ~1440px viewports up; scales down fluidly below that
+     instead of staying fixed and colliding with the header's content. */
+  padding: 0 clamp(24px, 14vw, 200px);
+  background: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logoMark {
+  height: 48px;
+  width: auto;
+}
+
+.wordmark {
+  white-space: nowrap;
+}
+
+.daily {
+  color: #063962;
+}
+
+.value {
+  color: #fe8c07;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.iconBtn {
+  display: inline-flex;
+  padding: 0;
+  background: transparent;
+  border: none;
+  color: var(--color-text);
+}
+
+.iconBtn:hover {
+  opacity: 0.7;
+}
+
+.loginBtn {
+  padding: 0;
+  background: transparent;
+  border: none;
+  color: var(--color-text);
+}
+
+.loginBtn:hover {
+  opacity: 0.7;
+}

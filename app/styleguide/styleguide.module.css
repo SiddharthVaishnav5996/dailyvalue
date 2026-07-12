@@ -1,4 +1,9 @@
 .page {
+  width: 100%; /* body is a column flex container; .page has margin-inline:
+    auto for desktop centering, and an item with auto margins doesn't stretch
+    to fill its flex parent by default — it shrinks to content instead,
+    overflowing narrow viewports. width:100% forces the stretch; max-width
+    then caps it and margin:auto centers it once the viewport exceeds 960px. */
   max-width: 960px;
   margin-inline: auto;
   padding: 48px 24px 96px;
@@ -169,6 +174,24 @@
 
 .searchBarDemo {
   margin-top: 20px;
+}
+
+.productCardGrid {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+/* Demo-only bounded height so the scrolling thread + pinned search bar are
+   both visible here — ChatPanel itself just fills 100% of its parent. */
+.chatPanelDemo {
+  margin-top: 20px;
+  height: 480px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 @media (max-width: 640px) {

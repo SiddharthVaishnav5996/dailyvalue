@@ -7,9 +7,12 @@ import { CategorySelector } from "@/components/CategorySelector/CategorySelector
 import { STORE_NAMES } from "@/data/storeNames";
 import { CATEGORIES } from "@/data/categories";
 import { AISearchBar } from "@/components/AISearchBar/AISearchBar";
+import { Header } from "@/components/Header/Header";
 import { AddButtonDemo } from "./AddButtonDemo";
 import { CarouselDotDemo } from "./CarouselDotDemo";
 import { FooterDemo } from "./FooterDemo";
+import { ProductCardDemo } from "./ProductCardDemo";
+import { ChatPanelDemo } from "./ChatPanelDemo";
 import styles from "./styleguide.module.css";
 
 const SPECIMENS: { variant: TextVariant; label: string; spec: string }[] = [
@@ -51,6 +54,7 @@ const COLORS: { name: string; hex: string; rgb: string; cls: string }[] = [
 export default function StyleguidePage() {
   return (
     <>
+      <Header />
       <main className={styles.page}>
       <header className={styles.header}>
         <Text variant="heading3" as="h1">
@@ -60,6 +64,16 @@ export default function StyleguidePage() {
           Tokens mapped from Figma · Inter
         </Text>
       </header>
+
+      <section className={styles.section}>
+        <Text variant="heading4" as="h2" className={styles.sectionTitle}>
+          Header
+        </Text>
+        <Text variant="smallRegular" className={styles.muted}>
+          75px tall, full-bleed, 200px horizontal padding — rendered above
+          (outside this contained column)
+        </Text>
+      </section>
 
       <section className={styles.section}>
         <Text variant="heading4" as="h2" className={styles.sectionTitle}>
@@ -227,6 +241,29 @@ export default function StyleguidePage() {
         <div className={styles.searchBarDemo}>
           <AISearchBar />
         </div>
+      </section>
+
+      <section className={styles.section}>
+        <Text variant="heading4" as="h2" className={styles.sectionTitle}>
+          Product Card
+        </Text>
+        <Text variant="smallRegular" className={styles.muted}>
+          Horizontal 458×240 (with / without discount pill) · Vertical 204×411
+        </Text>
+        <ProductCardDemo />
+      </section>
+
+      <section className={styles.section}>
+        <Text variant="heading4" as="h2" className={styles.sectionTitle}>
+          Chat Panel
+        </Text>
+        <Text variant="smallRegular" className={styles.muted}>
+          User messages right (primary bg, white text) · AI messages left
+          (white bg, black text, bordered) · bubble width hugs content up to
+          624px · search bar pinned to the bottom, thread scrolls above it —
+          try sending a message
+        </Text>
+        <ChatPanelDemo />
       </section>
 
       <section className={styles.section}>

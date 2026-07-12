@@ -1,0 +1,31 @@
+.row {
+  display: flex;
+  width: 100%;
+}
+
+.rowUser {
+  justify-content: flex-end;
+}
+
+.rowAi {
+  justify-content: flex-start;
+}
+
+.bubble {
+  max-width: 624px;
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid rgba(149, 144, 144, 0.6);
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+}
+
+.bubbleUser {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.bubbleAi {
+  background: var(--color-white);
+  color: var(--color-text);
+}
