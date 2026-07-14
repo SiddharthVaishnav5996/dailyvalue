@@ -1,5 +1,5 @@
 import NextImage from "next/image";
-import { ChevronDown, Image as ImageIcon } from "lucide-react";
+import { ChevronDown, Heart, Image as ImageIcon } from "lucide-react";
 import { Text } from "@/components/Text/Text";
 import { StoreName } from "@/components/StoreName/StoreName";
 import { StarRating } from "@/components/StarRating/StarRating";
@@ -14,6 +14,9 @@ export interface ProductCardProps {
   storeName: string;
   storeDistanceKm: number;
   storeLogoSrc?: string;
+  /** Wishlist heart, top-right of the image. Solid when saved, outline when not. */
+  isWishlisted?: boolean;
+  onToggleWishlist?: () => void;
   /** Figma "Show Discount" boolean — hides the pill and closes the gap it left. */
   showDiscount?: boolean;
   discountLabel?: string;
@@ -40,6 +43,8 @@ export function ProductCard({
   storeName,
   storeDistanceKm,
   storeLogoSrc,
+  isWishlisted = false,
+  onToggleWishlist,
   showDiscount = false,
   discountLabel = "Last Chance Saving",
   description,
@@ -77,6 +82,20 @@ export function ProductCard({
           <ImageIcon size={32} strokeWidth={1.5} aria-hidden="true" />
         </div>
       )}
+      <button
+        type="button"
+        className={styles.wishlistBtn}
+        onClick={onToggleWishlist}
+        aria-label={isWishlisted ? "Remove from wishlist" : "Add to wishlist"}
+        aria-pressed={isWishlisted}
+      >
+        <Heart
+          size={24}
+          className={isWishlisted ? styles.wishlistIconActive : undefined}
+          fill={isWishlisted ? "currentColor" : "none"}
+          aria-hidden="true"
+        />
+      </button>
     </div>
   );
 
@@ -84,13 +103,19 @@ export function ProductCard({
     <div className={styles.body}>
       <StoreName name={storeName} distanceKm={storeDistanceKm} logoSrc={storeLogoSrc} />
 
-      {showDiscount && (
-        <span className={styles.discountPill}>
-          <Text as="span" variant="xxsmallBold" className={styles.discountLabel}>
-            {discountLabel}
-          </Text>
-        </span>
-      )}
+      {/* Always rendered (not conditionally) so its slot stays reserved —
+          only its visibility toggles, keeping price/rating/delivery/button
+          pinned to the same spot whether or not a discount is showing. */}
+      <span
+        className={[styles.discountPill, !showDiscount ? styles.discountPillHidden : ""]
+          .filter(Boolean)
+          .join(" ")}
+        aria-hidden={!showDiscount}
+      >
+        <Text as="span" variant="xxsmallBold" className={styles.discountLabel}>
+          {discountLabel}
+        </Text>
+      </span>
 
       <Text as="p" variant="smallRegular" className={styles.description}>
         {description}

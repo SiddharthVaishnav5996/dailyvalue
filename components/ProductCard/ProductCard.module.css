@@ -12,8 +12,14 @@
   max-width: 458px;
 }
 
+/* min-height (not height) keeps every vertical card at least this tall
+   regardless of showDiscount, so cards line up in a grid — matches the
+   card's own natural height WITH the discount pill showing (its tallest
+   state), so the with/without-discount cards end up exactly equal. A
+   taller description or extra content can still grow the card further. */
 .vertical {
   max-width: 204px;
+  min-height: 427px;
 }
 
 .topRow {
@@ -53,6 +59,26 @@
   object-fit: cover;
 }
 
+.wishlistBtn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 1;
+  display: inline-flex;
+  padding: 0;
+  background: transparent;
+  border: none;
+  color: var(--color-text);
+}
+
+.wishlistBtn:hover {
+  opacity: 0.7;
+}
+
+.wishlistIconActive {
+  color: var(--color-primary);
+}
+
 .imagePlaceholder {
   position: absolute;
   inset: 0;
@@ -83,6 +109,13 @@
   padding: 0 6px;
   background: var(--color-discount);
   border-radius: 6px;
+}
+
+/* Keeps the pill's box (and the gap around it) in the layout while hiding
+   its content — this is what pins price/rating/delivery/button to the same
+   spot regardless of showDiscount, instead of everything shifting up. */
+.discountPillHidden {
+  visibility: hidden;
 }
 
 .discountLabel {
@@ -136,6 +169,11 @@
   text-decoration: line-through;
 }
 
+/* margin-top:auto absorbs any leftover height (e.g. from .vertical's
+   min-height when showDiscount is false) so the delivery row + Add button
+   stay anchored to the card's bottom instead of floating mid-card. Only
+   has an effect when the flex container has slack to give — a no-op for
+   the horizontal layout, where .body's height already matches its content. */
 .deliveryRow {
   display: flex;
   align-items: center;
@@ -143,6 +181,7 @@
   gap: 8px;
   min-width: 0;
   flex-wrap: wrap;
+  margin-top: auto;
 }
 
 .deliveryText {

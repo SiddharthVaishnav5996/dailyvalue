@@ -26,16 +26,44 @@ function useQuantity() {
   };
 }
 
+function useWishlist() {
+  const [isWishlisted, setIsWishlisted] = useState(false);
+  return {
+    isWishlisted,
+    // Toggling the heart will also add the item to cart once that feature
+    // exists — for now it only tracks the wishlisted visual state.
+    onToggleWishlist: () => setIsWishlisted((w) => !w),
+  };
+}
+
 export function ProductCardDemo() {
   const cardA = useQuantity();
   const cardB = useQuantity();
   const cardC = useQuantity();
+  const cardD = useQuantity();
+  const wishlistA = useWishlist();
+  const wishlistB = useWishlist();
+  const wishlistC = useWishlist();
+  const wishlistD = useWishlist();
 
   return (
     <div className={styles.productCardGrid}>
-      <ProductCard layout="horizontal" showDiscount {...SAMPLE} {...cardA} />
-      <ProductCard layout="horizontal" showDiscount={false} {...SAMPLE} {...cardB} />
-      <ProductCard layout="vertical" showDiscount {...SAMPLE} {...cardC} />
+      <ProductCard layout="horizontal" showDiscount {...SAMPLE} {...cardA} {...wishlistA} />
+      <ProductCard
+        layout="horizontal"
+        showDiscount={false}
+        {...SAMPLE}
+        {...cardB}
+        {...wishlistB}
+      />
+      <ProductCard layout="vertical" showDiscount {...SAMPLE} {...cardC} {...wishlistC} />
+      <ProductCard
+        layout="vertical"
+        showDiscount={false}
+        {...SAMPLE}
+        {...cardD}
+        {...wishlistD}
+      />
     </div>
   );
 }
