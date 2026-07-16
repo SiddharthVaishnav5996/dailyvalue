@@ -59,10 +59,20 @@
   object-fit: cover;
 }
 
+/* "Fit" — show the whole image; the frame goes transparent so the card's white
+   surface fills the letterboxed edges (product photos sit on white). */
+.imageContain {
+  object-fit: contain;
+}
+
+.imageWrapContain {
+  background: transparent;
+}
+
 .wishlistBtn {
   position: absolute;
-  top: 12px;
-  right: 12px;
+  top: 4px;
+  right: 7px;
   z-index: 1;
   display: inline-flex;
   padding: 0;
@@ -127,7 +137,8 @@
 .description {
   color: var(--color-text);
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }

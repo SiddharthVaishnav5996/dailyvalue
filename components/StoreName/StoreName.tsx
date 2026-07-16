@@ -1,4 +1,4 @@
-import { Text } from "@/components/Text/Text";
+import { Text, type TextVariant } from "@/components/Text/Text";
 import styles from "./StoreName.module.css";
 
 function initials(name: string): string {
@@ -13,6 +13,8 @@ export interface StoreNameProps {
   logoSrc?: string;
   selected?: boolean;
   onSelect?: () => void;
+  /** Overrides the store name's text style — defaults to the 184x28 spec's xxsmallBold. */
+  nameVariant?: TextVariant;
   className?: string;
 }
 
@@ -26,6 +28,7 @@ export function StoreName({
   logoSrc,
   selected = false,
   onSelect,
+  nameVariant = "xxsmallBold",
   className,
 }: StoreNameProps) {
   const content = (
@@ -39,7 +42,7 @@ export function StoreName({
         )}
       </span>
       <span className={styles.meta}>
-        <Text as="span" variant="xxsmallBold" className={styles.name}>
+        <Text as="span" variant={nameVariant} className={styles.name}>
           {name}
         </Text>
         <Text as="span" variant="xxsmallRegular" className={styles.distance}>

@@ -11,6 +11,10 @@ export interface ProductCardProps {
   layout?: "horizontal" | "vertical";
   imageSrc?: string;
   imageAlt?: string;
+  /** How the image sits in the frame: "cover" crops to fill; "contain" fits the
+   *  whole image (Figma "Fit") — the frame goes transparent so the card's own
+   *  surface shows behind letterboxed edges. */
+  imageFit?: "cover" | "contain";
   storeName: string;
   storeDistanceKm: number;
   storeLogoSrc?: string;
@@ -40,6 +44,7 @@ export function ProductCard({
   layout = "horizontal",
   imageSrc,
   imageAlt,
+  imageFit = "cover",
   storeName,
   storeDistanceKm,
   storeLogoSrc,
@@ -62,10 +67,15 @@ export function ProductCard({
   className,
 }: ProductCardProps) {
   const isVertical = layout === "vertical";
+  const isContain = imageFit === "contain";
 
   const image = (
     <div
-      className={[styles.imageWrap, isVertical ? styles.imageWrapVertical : ""]
+      className={[
+        styles.imageWrap,
+        isVertical ? styles.imageWrapVertical : "",
+        isContain ? styles.imageWrapContain : "",
+      ]
         .filter(Boolean)
         .join(" ")}
     >
@@ -75,7 +85,9 @@ export function ProductCard({
           alt={imageAlt ?? storeName}
           fill
           sizes={isVertical ? "204px" : "217px"}
-          className={styles.image}
+          className={[styles.image, isContain ? styles.imageContain : ""]
+            .filter(Boolean)
+            .join(" ")}
         />
       ) : (
         <div className={styles.imagePlaceholder}>
@@ -90,7 +102,7 @@ export function ProductCard({
         aria-pressed={isWishlisted}
       >
         <Heart
-          size={24}
+          size={22}
           className={isWishlisted ? styles.wishlistIconActive : undefined}
           fill={isWishlisted ? "currentColor" : "none"}
           aria-hidden="true"
@@ -101,7 +113,12 @@ export function ProductCard({
 
   const body = (
     <div className={styles.body}>
-      <StoreName name={storeName} distanceKm={storeDistanceKm} logoSrc={storeLogoSrc} />
+      <StoreName
+        name={storeName}
+        distanceKm={storeDistanceKm}
+        logoSrc={storeLogoSrc}
+        nameVariant="smallBold"
+      />
 
       {/* Always rendered (not conditionally) so its slot stays reserved —
           only its visibility toggles, keeping price/rating/delivery/button
