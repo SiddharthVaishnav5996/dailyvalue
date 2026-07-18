@@ -197,6 +197,14 @@
 
 .deliveryText {
   color: var(--color-green-bright);
+  /* Hold delivery to one line (ellipsis when long, e.g. "Free Delivery for PC
+     Express member"). A wrapped second line would push this card's Add button
+     below its neighbours' and break the row's alignment. */
+  flex: 1;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .expandBtn {

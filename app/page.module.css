@@ -1,142 +1,186 @@
-.page {
-  --background: #fafafa;
-  --foreground: #fff;
-
-  --text-primary: #000;
-  --text-secondary: #666;
-
-  --button-primary-hover: #383838;
-  --button-secondary-hover: #f2f2f2;
-  --button-secondary-border: #ebebeb;
-
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-geist-sans);
-  background-color: var(--background);
-}
+/*
+ * Landing page layout.
+ *
+ * Sizing follows the Figma reference (1440-wide artboard) but is fluid: fixed
+ * px are treated as the value *at* the reference size and wrapped in clamp()/
+ * max-width so the page scales instead of breaking. No section backgrounds are
+ * added beyond what the brief calls out (the Black Friday card is white).
+ */
 
 .main {
-  display: flex;
   flex: 1;
-  width: 100%;
-  max-width: 800px;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  background-color: var(--foreground);
-  padding: 120px 60px;
-}
-
-.intro {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-  gap: 24px;
-}
-
-.intro h1 {
-  max-width: 320px;
-  font-size: 40px;
-  font-weight: 600;
-  line-height: 48px;
-  letter-spacing: -2.4px;
-  text-wrap: balance;
-  color: var(--text-primary);
-}
-
-.intro p {
-  max-width: 440px;
-  font-size: 18px;
-  line-height: 32px;
-  text-wrap: balance;
-  color: var(--text-secondary);
-}
-
-.intro a {
-  font-weight: 500;
-  color: var(--text-primary);
-}
-
-.ctas {
-  display: flex;
-  flex-direction: row;
   width: 100%;
-  max-width: 440px;
-  gap: 16px;
-  font-size: 14px;
 }
 
-.ctas a {
+/* ---- Hero ---------------------------------------------------------------- */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(24px, 4vw, 40px);
+  /* 935px is the reference height; otherwise fill the viewport below the 75px
+     header so scrolling begins after the hero. */
+  min-height: clamp(560px, calc(100dvh - 75px), 935px);
+  padding: clamp(24px, 6vw, 80px) clamp(16px, 4vw, 40px);
+  text-align: center;
+}
+
+.heroHeading {
+  text-wrap: balance;
+}
+
+.searchWrap {
   display: flex;
   justify-content: center;
+  width: 100%;
+  max-width: 737px;
+}
+
+/* ---- Category selector (full-bleed marquee) ------------------------------ */
+.categories {
+  padding-block: 4px;
+  margin-bottom: clamp(24px, 4vw, 48px);
+}
+
+/* ---- Contained content column -------------------------------------------- */
+.content {
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-inline: clamp(16px, 3vw, 40px);
+  padding-bottom: clamp(48px, 6vw, 96px);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(40px, 6vw, 80px);
+}
+
+/* ---- Hero split: feature banner + product cards -------------------------- */
+.heroSplit {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(16px, 2vw, 28px);
+}
+
+.featureBanner {
+  position: relative;
+  flex: 1 1 400px;
+  max-width: 601px;
+  aspect-ratio: 601 / 410;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.heroCards {
+  flex: 1 1 520px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: clamp(12px, 1.5vw, 20px);
+}
+
+/* Feature image fills the banner; the overlay (title + CTA) sits on top. */
+.featureImage {
+  object-fit: cover;
+}
+
+.bannerOverlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: clamp(12px, 2vw, 20px);
+  padding: 20px; /* 20px from the bottom and left edges */
+}
+
+.bannerTitle {
+  color: var(--color-white);
+  /* Keep the white title legible over the lighter areas of the photo. */
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+}
+
+/* ---- Generic section (title + row) --------------------------------------- */
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(20px, 3vw, 32px);
+}
+
+.sectionTitle {
+  text-align: center;
+}
+
+/* Product rows: cards keep their intrinsic width and wrap, centered, so the
+   row stays "equally divided" at the reference width and degrades gracefully. */
+.productRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* Don't stretch every card to the tallest one in the row: a single card with
+     a long description (e.g. the Black Friday iPhone 12) would otherwise inflate
+     all its neighbours, and their bottom-pinned Add button (margin-top:auto)
+     opens a big empty gap mid-card. flex-start lets each card keep its own
+     height. */
+  align-items: flex-start;
+  /* Kept tight enough that six 204px cards fit one row at the 1440 reference
+     (6×204 + 5×gap ≤ content width) while still wrapping cleanly below. */
+  gap: clamp(12px, 1.5vw, 24px);
+}
+
+/* ---- Black Friday Sale --------------------------------------------------- */
+.bfContainer {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(28px, 3.2vw, 40px); /* 40px reference gap above the product row */
+  border-radius: 30px;
+  padding: clamp(20px, 3.2vw, 40px); /* 40px reference padding */
+  background: rgb(240, 240, 240);
+}
+
+.bfCard {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  height: 40px;
-  padding: 0 16px;
-  border-radius: 128px;
-  border: 1px solid transparent;
-  transition: 0.2s;
-  cursor: pointer;
-  width: fit-content;
-  font-weight: 500;
+  text-align: center;
+  gap: clamp(12px, 1.5vw, 20px);
+  background: var(--color-white);
+  border-radius: 24px;
+  padding: clamp(28px, 4vw, 56px) clamp(20px, 3vw, 40px);
 }
 
-a.primary {
-  background: var(--text-primary);
-  color: var(--background);
-  gap: 8px;
+.appleLogo {
+  width: auto;
+  height: clamp(32px, 4vw, 48px);
+  color: var(--color-text);
 }
 
-a.secondary {
-  border-color: var(--button-secondary-border);
+.bfDiscount {
+  margin-top: clamp(8px, 1.5vw, 16px);
 }
 
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  a.primary:hover {
-    background: var(--button-primary-hover);
-    border-color: transparent;
-  }
-
-  a.secondary:hover {
-    background: var(--button-secondary-hover);
-    border-color: transparent;
-  }
+.bfCta {
+  margin-top: clamp(12px, 2vw, 20px);
 }
 
-@media (max-width: 600px) {
-  .main {
-    padding: 48px 24px;
-  }
-
-  .intro {
-    gap: 16px;
-  }
-
-  .intro h1 {
-    font-size: 32px;
-    line-height: 40px;
-    letter-spacing: -1.92px;
-  }
+/* ---- Carousel + feedback ------------------------------------------------- */
+.carouselSection {
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* carousel → feedback prompt (10px reference + 20px) */
 }
 
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
-  }
+.feedback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px; /* prompt → feedback CTA */
+}
 
-  .page {
-    --background: #000;
-    --foreground: #000;
-
-    --text-primary: #ededed;
-    --text-secondary: #999;
-
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
-    --button-secondary-border: #1a1a1a;
-  }
+.feedbackText {
+  text-align: center;
 }

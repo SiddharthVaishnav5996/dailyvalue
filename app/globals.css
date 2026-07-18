@@ -1,17 +1,13 @@
 :root {
   --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 html {
   height: 100%;
+  /* Pin the page to light so the white background holds and default text,
+     form controls and scrollbars stay in their light (dark-on-white)
+     rendering — even in a dark-mode browser. */
+  color-scheme: light;
 }
 
 html,
@@ -24,7 +20,6 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  color: var(--foreground);
   background: var(--background);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
@@ -40,10 +35,4 @@ body {
 a {
   color: inherit;
   text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
 }

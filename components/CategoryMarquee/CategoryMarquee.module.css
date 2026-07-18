@@ -1,0 +1,44 @@
+.viewport {
+  --marquee-duration: 10s;
+  --marquee-return: 0.5s; /* glide-back time when the cursor enters */
+  width: 100%;
+  overflow: hidden;
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  animation: scroll var(--marquee-duration) linear infinite;
+}
+
+/* Each item owns its trailing gap (via margin) rather than using flex `gap`,
+   so one copy's width is an exact fraction of the track — keeping the shift
+   below seamless. */
+.item {
+  flex: none;
+  margin-right: clamp(12px, 2vw, 32px);
+}
+
+/* The track holds COPIES (=4) identical copies, so shifting by one copy is
+   -100%/4 = -25%. At the seam copy #2 lands exactly where copy #1 started, and
+   the remaining three copies always cover the strip (no gap / white at the end).
+   Keep this in sync with COPIES in CategoryMarquee.tsx. */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-25%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track {
+    animation: none;
+    /* Fall back to a normal scrollable row when motion is reduced. */
+    flex-wrap: nowrap;
+  }
+  .viewport {
+    overflow-x: auto;
+  }
+}

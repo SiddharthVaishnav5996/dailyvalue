@@ -25,6 +25,13 @@ export interface ProductCardProps {
   showDiscount?: boolean;
   discountLabel?: string;
   description: string;
+  /**
+   * Reserve exactly this many lines for the description (it also truncates at
+   * that many). Short copy then leaves the reserved space empty instead of
+   * pulling the rating/price/delivery/button up, so every card in a row keeps
+   * its elements on the same horizontal lines. Omit for natural height.
+   */
+  descriptionLines?: number;
   rating: number;
   reviewCount: number;
   price: number;
@@ -53,6 +60,7 @@ export function ProductCard({
   showDiscount = false,
   discountLabel = "Last Chance Saving",
   description,
+  descriptionLines,
   rating,
   reviewCount,
   price,
@@ -134,7 +142,21 @@ export function ProductCard({
         </Text>
       </span>
 
-      <Text as="p" variant="smallRegular" className={styles.description}>
+      <Text
+        as="p"
+        variant="smallRegular"
+        className={styles.description}
+        style={
+          descriptionLines
+            ? {
+                // min-height reserves the slot; line-clamp caps it — together
+                // they pin the block to exactly `descriptionLines` lines.
+                minHeight: `${descriptionLines}lh`,
+                WebkitLineClamp: descriptionLines,
+              }
+            : undefined
+        }
+      >
         {description}
       </Text>
 

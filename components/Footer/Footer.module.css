@@ -44,7 +44,7 @@
 
 .updatesBox {
   width: 100%;
-  max-width: 434px;
+  max-width: 480px;
   min-height: 254px;
   background: var(--color-footer-bg);
   border-radius: 16px;
@@ -81,6 +81,18 @@
 
 .emailInput::placeholder {
   color: var(--color-white);
+}
+
+/* Chrome/Edge autofill forces its own white background + dark text via an
+   internal shadow style; this trick swaps it back to match the pill. */
+.emailInput:-webkit-autofill,
+.emailInput:-webkit-autofill:hover,
+.emailInput:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--color-white);
+  -webkit-box-shadow: 0 0 0 1000px transparent inset;
+  box-shadow: 0 0 0 1000px transparent inset;
+  transition: background-color 9999s ease-in-out 0s;
+  caret-color: var(--color-white);
 }
 
 .subscribeBtn {

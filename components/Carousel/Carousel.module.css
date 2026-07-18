@@ -1,0 +1,132 @@
+.carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.viewport {
+  position: relative; /* anchors the pagination inside the banner */
+  width: 100%;
+  overflow: hidden;
+  border-radius: 30px;
+  touch-action: pan-y; /* let the browser scroll the page vertically; we handle horizontal swipes */
+}
+
+.track {
+  display: flex;
+  transition: transform 350ms ease;
+}
+
+.slide {
+  position: relative;
+  flex: 0 0 100%;
+  width: 100%;
+  /* Reference banner is wide and short; ratio keeps it responsive. */
+  aspect-ratio: 1160 / 340;
+  min-height: 180px;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+/* A complete, self-contained banner. Fitted whole rather than cropped — these
+   bake in their own headline and CTA, so `cover` could clip them. The slide's
+   own background fills the letterbox left by the ratio difference. */
+.banner {
+  object-fit: contain;
+  object-position: center;
+  user-select: none;
+}
+
+/* ---- Two-part slide: headline + CTA on the left, visual on the right ----
+ * Everything is contained inside the slide frame; both artworks scale down to
+ * fit (object-fit: contain) rather than overflow or crop. */
+.split {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  gap: clamp(16px, 3vw, 40px);
+  padding: clamp(20px, 3vw, 40px);
+}
+
+.textHalf {
+  flex: 1 1 0;
+  min-width: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: clamp(12px, 2vw, 24px);
+}
+
+/* Takes the height left over after the CTA, so the artwork never pushes the
+   button out of the frame. */
+.textArtWrap {
+  position: relative;
+  width: 100%;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+.textArt {
+  object-fit: contain;
+  object-position: left center;
+  user-select: none;
+}
+
+.visualHalf {
+  position: relative;
+  flex: 1 1 0;
+  min-width: 0;
+  height: 100%;
+}
+
+.visual {
+  object-fit: contain;
+  object-position: center;
+  user-select: none;
+}
+
+/* Placeholder shown until real slide images are provided — a bordered slot,
+   no background fill. */
+.placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 24px;
+  text-align: center;
+  border: 2px dashed rgba(0, 0, 0, 0.16);
+  border-radius: 30px;
+  color: var(--color-text-muted);
+}
+
+.placeholderLabel {
+  max-width: 340px;
+}
+
+/* Inside the banner, pinned bottom-centre. */
+.dots {
+  position: absolute;
+  bottom: clamp(12px, 1.6vw, 22px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dotButton {
+  display: inline-flex;
+  padding: 4px;
+  background: transparent;
+  border: none;
+  line-height: 0;
+  cursor: pointer;
+}
