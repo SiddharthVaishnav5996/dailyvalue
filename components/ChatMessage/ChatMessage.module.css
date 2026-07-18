@@ -29,3 +29,19 @@
   background: var(--color-white);
   color: var(--color-text);
 }
+
+/* ---- variant="wide" (results page) ----
+   Both roles fill the column rather than hugging their content; the user's
+   text sets right, and the AI keeps the same bubble treatment on the muted
+   lavender fill. */
+.wideUser {
+  max-width: none;
+  width: 100%;
+  text-align: right;
+}
+
+.wideAi {
+  max-width: none;
+  width: 100%;
+  background: var(--color-lavender-surface);
+}

@@ -91,6 +91,11 @@
   --color-discount: #ff0606;      /* rgb(255, 6, 6) — "Last chance" pill */
   --color-review-link: #03e6ff;   /* rgb(3, 230, 255) — review count link */
 
+  /* ---- Muted lavender surface ----
+     Shared fill: result-table heading / sub-heading / rows, the AI chat
+     bubble, and the resize bar's track. */
+  --color-lavender-surface: #f4f2fc;  /* rgb(244, 242, 252) */
+
   /* ==========================================================================
    * SPACING  (fixed px scale, 4px base)
    * Conventional default — tell me your exact Figma spacing values to tune it.
@@ -108,6 +113,12 @@
   --space-10: 64px;
   --space-11: 80px;
   --space-12: 96px;
+
+  /* ==========================================================================
+   * LAYOUT
+   * ======================================================================= */
+  /* Shared so full-height pages can subtract it — see Header.module.css. */
+  --header-height: 75px;
 
   /* ==========================================================================
    * RADII  (fixed px)

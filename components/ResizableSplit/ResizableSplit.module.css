@@ -1,0 +1,76 @@
+.split {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  min-height: 0;
+}
+
+/* min-width: 0 lets a pane shrink below its content's intrinsic width —
+   without it the grab bar would refuse to travel past the table's natural
+   size. */
+.paneLeft {
+  flex-grow: 0;
+  flex-shrink: 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.paneRight {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---- Grab bar ----
+   15px wide as a comfortable hit target; the rule painted down its middle is
+   the part you actually see. Height comes from align-items: stretch, so it
+   always runs the full height of the frame beside it. */
+.separator {
+  position: relative;
+  flex: 0 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: col-resize;
+  touch-action: none;
+}
+
+.separator::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--color-lavender-surface);
+}
+
+/* The stubby darker bar in the middle — the visual affordance that this is
+   draggable. */
+.handle {
+  position: relative;
+  width: 3px;
+  height: clamp(80px, 16vh, 160px);
+  border-radius: var(--radius-full);
+  background: rgba(65, 58, 120, 0.35);
+  transition: background 150ms ease;
+}
+
+.separator:hover .handle,
+.separator:focus-visible .handle {
+  background: var(--color-primary);
+}
+
+.separator:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: -2px;
+  border-radius: var(--radius-sm);
+}
+
+/* While dragging, keep the resize cursor everywhere and stop the pointer from
+   selecting text as it sweeps across either pane. */
+.dragging {
+  cursor: col-resize;
+  user-select: none;
+}

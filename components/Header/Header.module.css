@@ -1,6 +1,7 @@
 .header {
   width: 100%;
-  height: 75px;
+  height: var(--header-height);
+  flex-shrink: 0;
   /* 200px holds from ~1440px viewports up; scales down fluidly below that
      instead of staying fixed and colliding with the header's content. */
   padding: 0 clamp(24px, 14vw, 200px);

@@ -1,0 +1,87 @@
+/* Fills the viewport under the header exactly — no page scroll; both sides
+   scroll internally instead. */
+.main {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - var(--header-height));
+  min-height: 0;
+  /* 50px holds from ~1440px viewports up, tightening below rather than
+     crushing the two panes. */
+  padding: 16px clamp(16px, 3.5vw, 50px) 16px;
+}
+
+/* Shares the page's horizontal padding, so Back's left edge lands on the
+   same line as the chat column below it. */
+.backBar {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: flex-start;
+  padding-bottom: 16px;
+}
+
+.split {
+  flex: 1;
+  min-height: 0;
+}
+
+/* Breathing room either side of the 15px grab bar. */
+.chat {
+  flex: 1;
+  min-height: 0;
+  padding-right: 24px;
+}
+
+.tableSide {
+  /* Shared by the padding below and the two overlays, which are positioned
+     against the padding box and would otherwise ignore the inset. */
+  --pane-inset: 24px;
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  padding-left: var(--pane-inset);
+}
+
+.tableScroll {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  /* Lets the last row scroll clear of the pinned Confirm button. */
+  padding-bottom: 88px;
+  /* The bottom fade is what signals "there's more" here, so the scrollbar is
+     hidden — otherwise it steals ~22px from the table's width on Windows.
+     Wheel, trackpad and keyboard scrolling are unaffected. */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.tableScroll::-webkit-scrollbar {
+  display: none;
+}
+
+.fade {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--pane-inset);
+  right: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 91%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+
+.confirmBar {
+  position: absolute;
+  left: var(--pane-inset);
+  right: 0;
+  bottom: 16px;
+  display: flex;
+  justify-content: center;
+}

@@ -1,7 +1,10 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { ChatMessage } from "@/components/ChatMessage/ChatMessage";
+import {
+  ChatMessage,
+  type ChatMessageVariant,
+} from "@/components/ChatMessage/ChatMessage";
 import { AISearchBar } from "@/components/AISearchBar/AISearchBar";
 import styles from "./ChatPanel.module.css";
 
@@ -15,6 +18,8 @@ export interface ChatPanelProps {
   messages: ChatPanelMessage[];
   onSendMessage: (text: string) => void;
   placeholder?: string;
+  /** Message treatment — see ChatMessage. Defaults to "bubble". */
+  variant?: ChatMessageVariant;
   className?: string;
 }
 
@@ -22,11 +27,15 @@ export interface ChatPanelProps {
  * A running conversation: the message thread scrolls independently above a
  * search bar pinned to the bottom, so the user can keep chatting without it
  * scrolling away — the same pattern Claude's own chat UI uses.
+ *
+ * The panel carries no padding of its own; the 40px gap between the thread
+ * and the search bar is the only spacing it owns.
  */
 export function ChatPanel({
   messages,
   onSendMessage,
   placeholder = "Ask a follow-up…",
+  variant = "bubble",
   className,
 }: ChatPanelProps) {
   const [draft, setDraft] = useState("");
@@ -47,13 +56,29 @@ export function ChatPanel({
   return (
     <div className={[styles.panel, className].filter(Boolean).join(" ")}>
       <div className={styles.thread} ref={threadRef}>
-        <div className={styles.list}>
+        <div
+          className={[styles.list, variant === "wide" ? styles.listWide : ""]
+            .filter(Boolean)
+            .join(" ")}
+        >
           {messages.map((m) => (
-            <ChatMessage key={m.id} role={m.role} text={m.text} />
+            <ChatMessage
+              key={m.id}
+              role={m.role}
+              text={m.text}
+              variant={variant}
+            />
           ))}
         </div>
       </div>
-      <div className={styles.inputBar}>
+      <div
+        className={[
+          styles.inputBar,
+          variant === "wide" ? styles.inputBarWide : "",
+        ]
+          .filter(Boolean)
+          .join(" ")}
+      >
         <AISearchBar
           value={draft}
           onChange={setDraft}

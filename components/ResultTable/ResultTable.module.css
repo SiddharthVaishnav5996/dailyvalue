@@ -1,0 +1,59 @@
+.table {
+  display: flex;
+  flex-direction: column;
+  /* Rows are separate filled blocks; the page shows through as thin white
+     rules between them. */
+  gap: 5px;
+  width: 100%;
+}
+
+/* ---- Main heading frame ---- */
+.title {
+  padding: 10px 13px;
+  background: var(--color-lavender-surface);
+  text-align: center;
+  text-wrap: balance;
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* ---- The 5 × 1 grid: 4 content columns + the delete action ----
+   20px gutters hold from ~1440px viewports up and tighten below that rather
+   than squeezing the columns themselves to nothing. */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: clamp(8px, 1.5vw, 20px);
+  align-items: center;
+  padding: 5px 13px;
+  background: var(--color-lavender-surface);
+}
+
+.cell {
+  /* Without this, a long unbroken word forces its track wider than 1fr and
+     knocks every row out of alignment with its neighbours. */
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+
+.actionCell {
+  display: flex;
+  justify-content: center;
+}
+
+.deleteBtn {
+  display: inline-flex;
+  padding: 0;
+  background: transparent;
+  border: none;
+  color: var(--color-text);
+  transition: opacity 150ms ease;
+}
+
+.deleteBtn:hover {
+  opacity: 0.6;
+}
