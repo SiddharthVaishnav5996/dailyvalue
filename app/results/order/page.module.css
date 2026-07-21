@@ -1,0 +1,16 @@
+/* Placeholder order page — centered message until the real design lands. */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(12px, 2vw, 20px);
+  padding: clamp(40px, 8vw, 96px) clamp(16px, 4vw, 40px);
+  text-align: center;
+}
+
+.copy {
+  color: var(--color-text-muted);
+  max-width: 42ch;
+}

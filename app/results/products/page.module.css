@@ -1,0 +1,66 @@
+/*
+ * Page 3 — AI Search Result layout.
+ *
+ * A single centered column carries the back button, the two result tables and
+ * the product grid, so all three share one left edge (matching the design).
+ * Sizing follows the reference but is fluid: the column is capped just wide
+ * enough for four 204px vertical cards + gaps, and the grid drops columns as
+ * the viewport narrows rather than crushing the cards. No page background is
+ * added — the tables bring their own lavender surface, the cards their white.
+ */
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.content {
+  width: 100%;
+  /* Holds four 204px cards + 24px gaps (888) inside the 40px side padding. */
+  max-width: 992px;
+  margin-inline: auto;
+  padding: clamp(16px, 3vw, 32px) clamp(16px, 4vw, 40px) clamp(48px, 6vw, 80px);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(28px, 4vw, 44px);
+}
+
+/* Left-aligned to the column, so the button, tables and cards share one edge. */
+.backBar {
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* The two result tables, stacked — same 40px rhythm as the chat-result page. */
+.tables {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Wraps the ingredient + wine grids; the gap between them keeps the wine row's
+   spacing level with the ingredient rows above it. */
+.products {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(16px, 1.8vw, 24px);
+}
+
+/* Four vertical cards per row at the reference width, packed to the left so a
+   short final row (e.g. the two leftover ingredients) sits under the first
+   columns rather than centering. auto-fill sheds columns on narrower screens. */
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(184px, 204px));
+  justify-content: start;
+  gap: clamp(16px, 1.8vw, 24px);
+}
+
+/* Primary "Order Now" CTA, centered below the last product card. */
+.orderBar {
+  display: flex;
+  justify-content: center;
+  padding-top: clamp(8px, 1.5vw, 16px);
+}

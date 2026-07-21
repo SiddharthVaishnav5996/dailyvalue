@@ -24,6 +24,13 @@ export interface ResultTableProps {
    * the label to the next one instead of losing it.
    */
   groupFirstColumn?: boolean;
+  /**
+   * Rows whose id is listed here render their text in red — the cue that the
+   * matching product was removed from the basket, so the item is no longer
+   * being bought. Only the text recolors; the row and its delete icon are
+   * unchanged.
+   */
+  mutedRowIds?: readonly string[];
   onDeleteRow?: (id: string) => void;
   className?: string;
 }
@@ -47,6 +54,7 @@ export function ResultTable({
   columns,
   rows,
   groupFirstColumn = false,
+  mutedRowIds,
   onDeleteRow,
   className,
 }: ResultTableProps) {
@@ -87,9 +95,16 @@ export function ResultTable({
             toCells(previous.cells)[0] === cells[0];
           const describes =
             cells[groupFirstColumn ? 1 : 0] || cells.find(Boolean) || "row";
+          const removed = mutedRowIds?.includes(row.id) ?? false;
 
           return (
-            <div key={row.id} className={styles.grid} role="row">
+            <div
+              key={row.id}
+              className={[styles.grid, removed ? styles.rowRemoved : ""]
+                .filter(Boolean)
+                .join(" ")}
+              role="row"
+            >
               {cells.map((value, i) => (
                 <Text
                   key={i}

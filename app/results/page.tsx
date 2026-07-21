@@ -91,7 +91,11 @@ export default function ResultsPage() {
               <div className={styles.fade} aria-hidden="true" />
 
               <div className={styles.confirmBar}>
-                <AddButton label="Confirm" showIcon={false} />
+                <AddButton
+                  label="Confirm"
+                  showIcon={false}
+                  onAdd={() => router.push("/results/products")}
+                />
               </div>
             </div>
           }

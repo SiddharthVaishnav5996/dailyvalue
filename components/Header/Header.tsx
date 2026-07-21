@@ -5,12 +5,19 @@ import { Text } from "@/components/Text/Text";
 import styles from "./Header.module.css";
 
 export interface HeaderProps {
+  /** Basket quantity shown as a badge on the cart icon. Hidden when 0/undefined. */
+  cartCount?: number;
   onLanguageClick?: () => void;
   onCartClick?: () => void;
   onLoginClick?: () => void;
 }
 
-export function Header({ onLanguageClick, onCartClick, onLoginClick }: HeaderProps) {
+export function Header({
+  cartCount = 0,
+  onLanguageClick,
+  onCartClick,
+  onLoginClick,
+}: HeaderProps) {
   return (
     <header className={styles.header}>
       <Link href="/" className={styles.brand}>
@@ -39,11 +46,16 @@ export function Header({ onLanguageClick, onCartClick, onLoginClick }: HeaderPro
         </button>
         <button
           type="button"
-          className={styles.iconBtn}
+          className={[styles.iconBtn, styles.cartBtn].join(" ")}
           onClick={onCartClick}
-          aria-label="Open cart"
+          aria-label={cartCount > 0 ? `Open cart, ${cartCount} items` : "Open cart"}
         >
           <ShoppingCart size={24} strokeWidth={1.75} />
+          {cartCount > 0 && (
+            <span className={styles.cartBadge} aria-hidden="true">
+              {cartCount}
+            </span>
+          )}
         </button>
         <button type="button" className={styles.loginBtn} onClick={onLoginClick}>
           <Text as="span" variant="mediumRegular">

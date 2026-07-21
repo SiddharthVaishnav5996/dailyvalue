@@ -40,6 +40,12 @@
   overflow-wrap: break-word;
 }
 
+/* Removed item: the row's text goes red (cells inherit this color; the delete
+   icon keeps its own). Signals the product was taken out of the basket. */
+.rowRemoved {
+  color: var(--color-discount);
+}
+
 .actionCell {
   display: flex;
   justify-content: center;
