@@ -1,16 +1,296 @@
-/* Placeholder order page — centered message until the real design lands. */
+/*
+ * Page 4 — Checkout / Order page.
+ *
+ * A centered container splits into two columns: the left carries the "My Cart"
+ * list and the "People also bought" grid; the right stacks the Order Summary and
+ * the saved Your Info / Shipping / Payment cards. Sizes follow the design but are
+ * fluid — the right rail holds ~360px on desktop and the whole layout collapses
+ * to a single column on narrow screens. No page background is added; the cards
+ * are defined by their borders over the white page.
+ */
+
 .main {
   flex: 1;
   display: flex;
   flex-direction: column;
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: clamp(16px, 3vw, 32px) clamp(16px, 4vw, 40px) clamp(48px, 6vw, 80px);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 380px);
+  gap: clamp(24px, 3vw, 48px);
+  align-items: start;
+}
+
+/* Stack the summary/details rail under the cart on narrow screens. */
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---- Left column -------------------------------------------------------- */
+
+.left {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(32px, 4vw, 56px);
+}
+
+/* --cart-thumb / --cart-gap drive both the row layout (CartLineItem reads them)
+   and the header padding below, so "My Cart" / "Edit" line up with the rows. */
+.cart {
+  --cart-thumb: 72px;
+  --cart-gap: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(16px, 2vw, 24px);
+}
+
+.cartHeader {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  gap: clamp(12px, 2vw, 20px);
-  padding: clamp(40px, 8vw, 96px) clamp(16px, 4vw, 40px);
+  gap: 12px;
+  /* Push "My Cart" past the thumbnail gutter so it sits over the item names,
+     while "Edit" stays at the right edge above the steppers. */
+  padding-left: calc(var(--cart-thumb) + var(--cart-gap));
+}
+
+.cartList {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(16px, 2vw, 24px);
+}
+
+.suggestions {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(16px, 2vw, 24px);
+}
+
+.suggestionsTitle {
   text-align: center;
 }
 
-.copy {
+/* Two vertical cards per row, spread with equal space around each so the pair
+   sits centered in the column with matching outer margins. Tracks may shrink
+   toward 184px in the narrow band just above the single-column breakpoint,
+   keeping both cards on one row without overflow. */
+.suggestionGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(184px, 204px));
+  justify-content: space-around;
+  gap: clamp(16px, 1.8vw, 24px);
+}
+
+/* One card per row once two can no longer sit side by side. */
+@media (max-width: 480px) {
+  .suggestionGrid {
+    grid-template-columns: minmax(0, 204px);
+    justify-content: start;
+  }
+}
+
+/* ---- Right column (cards) ---------------------------------------------- */
+
+.right {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(16px, 2vw, 24px);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(14px, 1.6vw, 18px);
+  padding: clamp(18px, 2vw, 24px);
+  border: 1px solid #e6e6e6;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.summaryCard {
+  gap: 16px;
+}
+
+.infoCard {
+  gap: 16px;
+}
+
+.cardHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.cardTitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.iconBtn {
+  display: inline-flex;
+  padding: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text);
+}
+
+.iconBtn:hover {
+  opacity: 0.7;
+}
+
+/* Share + edit affordances share the bright green (rgb 0 210 7). */
+.shareIcon,
+.editIcon {
+  color: var(--color-green-bright);
+}
+
+/* ---- Order summary ----------------------------------------------------- */
+
+.promoInput {
+  width: 100%;
+  padding: 12px 16px;
+  font: var(--text-medium-regular);
+  text-align: center;
+  color: var(--color-text);
+  background: transparent;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+}
+
+.promoInput::placeholder {
   color: var(--color-text-muted);
-  max-width: 42ch;
+}
+
+.promoInput:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.summaryRows {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sumRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Applied-promo line: soft green fill (rgb 219 255 220), readable green text.
+   The negative margin lets the fill bleed toward the card edges while the text
+   stays aligned with the rows above. */
+.promoRow {
+  margin-inline: -12px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: var(--color-green-soft);
+  color: #1a8f22;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background: #e6e6e6;
+}
+
+.totalRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.placeBtn {
+  width: 100%;
+}
+
+.backLink {
+  align-self: center;
+  padding: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--color-primary);
+}
+
+.backLink:hover {
+  opacity: 0.8;
+}
+
+/* ---- Info / shipping / payment ----------------------------------------- */
+
+.infoBody {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.infoLine {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--color-text);
+}
+
+.addressRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  color: var(--color-text);
+}
+
+.addressLines {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.paymentRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.payBrand {
+  position: relative;
+  flex-shrink: 0;
+  width: 64px;
+  height: 40px;
+}
+
+.payBrandImg {
+  object-fit: contain;
+}
+
+.payMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  color: var(--color-text);
+}
+
+/* Green selected radio (rgb 0 210 7), pinned to the row's right edge. */
+.radioSelected {
+  margin-left: auto;
+  flex-shrink: 0;
+  color: var(--color-green-bright);
 }

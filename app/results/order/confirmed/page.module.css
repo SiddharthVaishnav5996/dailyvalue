@@ -1,0 +1,119 @@
+/*
+ * Page 6 — Order confirmation ("Thank you for your order!").
+ *
+ * One centered column below the header: the completed green tick (identical to
+ * Page 5's, so it reads as "the same tick"), a thank-you heading + subtext, and
+ * two actions (a primary "Continue Shopping" pill and a "Go to Order Status"
+ * text link). The whole block fades up on arrival for a smooth hand-off. No page
+ * background.
+ */
+
+.main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: clamp(24px, 6vw, 64px);
+  /* Nudge the block down so the tick lands at the same height as Page 5's,
+     keeping it visually "in place" across the transition. */
+  padding-bottom: clamp(48px, 14vh, 160px);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  animation: riseIn 0.5s ease both;
+}
+
+@keyframes riseIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---- Green tick (same size + look as Page 5, but already drawn) --------- */
+
+.icon {
+  width: clamp(56px, 6vw, 72px);
+  height: clamp(56px, 6vw, 72px);
+}
+
+.check {
+  width: 100%;
+  height: 100%;
+}
+
+.checkCircle {
+  fill: var(--color-green-bright);
+}
+
+.checkMark {
+  fill: none;
+  stroke: var(--color-white);
+  stroke-width: 4.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  /* No dasharray/animation: the tick "remains" from Page 5, fully drawn. */
+}
+
+/* ---- Copy --------------------------------------------------------------- */
+
+.heading {
+  margin-top: clamp(24px, 4vw, 40px);
+  color: var(--color-text);
+}
+
+.subtext {
+  margin-top: clamp(8px, 1.5vw, 16px);
+  color: var(--color-text-muted);
+}
+
+/* ---- Actions ------------------------------------------------------------ */
+
+.primaryBtn {
+  margin-top: clamp(32px, 5vw, 56px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: clamp(280px, 34vw, 380px);
+  padding: 18px 40px;
+  background: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--radius-full);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: background 150ms ease;
+}
+
+.primaryBtn:hover {
+  background: var(--color-primary-hover);
+}
+
+.statusLink {
+  margin-top: clamp(20px, 3vw, 32px);
+  padding: 4px 8px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--color-primary);
+  transition: opacity 150ms ease;
+}
+
+.statusLink:hover {
+  opacity: 0.8;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .content {
+    animation: none;
+  }
+}
