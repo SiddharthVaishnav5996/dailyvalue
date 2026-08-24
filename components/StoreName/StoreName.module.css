@@ -2,7 +2,11 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  width: 184px;
+  /* 184px is the reference width, but the row may shrink narrower (the name
+     ellipsises) so a product card can go compact — e.g. two-per-row on phones. */
+  width: 100%;
+  max-width: 184px;
+  min-width: 0;
   height: 28px;
   background: transparent;
   border: none;

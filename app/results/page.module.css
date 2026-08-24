@@ -85,3 +85,62 @@
   display: flex;
   justify-content: center;
 }
+
+/* ---- Stacked layout (below the ~1440 reference) ----
+   The split stacks (see ResizableSplit), so the fixed-height, dual-internal-
+   scroll model gives way to a normally-scrolling page: the chat keeps its
+   scroll-thread-with-pinned-bar design in a viewport-bounded box, and the
+   table below flows at its natural height with Confirm at its end. Both panes
+   cap to roughly their side-by-side width and centre, so they read as one
+   tidy column instead of stretching sparse across a wide stacked viewport. */
+@media (max-width: 1439px) {
+  .main {
+    height: auto;
+    min-height: calc(100vh - var(--header-height));
+  }
+
+  .split {
+    flex: 0 0 auto;
+  }
+
+  .chat {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 700px;
+    margin-inline: auto;
+    /* Height comes from the content now — the panel flows in the wide variant
+       (see ChatPanel) rather than being a fixed box that leaves dead space
+       above a short conversation. */
+    padding-right: 0;
+  }
+
+  .tableSide {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 700px;
+    margin-inline: auto;
+    min-height: auto;
+    padding-left: 0;
+  }
+
+  .tableScroll {
+    flex: 0 0 auto;
+    /* Everything flows in the page scroll now: the 700px-capped table fits
+       from 768px up, and below that each row reflows into a card (see
+       ResultTable) — so nothing needs to scroll on its own axis here. */
+    overflow: visible;
+    /* No pinned button to clear, and the fade is gone. */
+    padding-bottom: 0;
+  }
+
+  /* The whole table is on the page now, so the "there's more" fade and the
+     absolute button positioning no longer apply. */
+  .fade {
+    display: none;
+  }
+
+  .confirmBar {
+    position: static;
+    margin-top: 24px;
+  }
+}

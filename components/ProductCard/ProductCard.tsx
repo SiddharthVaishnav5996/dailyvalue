@@ -44,6 +44,12 @@ export interface ProductCardProps {
   onDecrement?: () => void;
   onReviewClick?: () => void;
   onExpandDelivery?: () => void;
+  /**
+   * Click anywhere on the card — except its own controls (heart, ADD/stepper,
+   * chevron, reviews) — e.g. to open a details pop-up. When set, the card also
+   * shows a pointer cursor.
+   */
+  onCardClick?: () => void;
   className?: string;
 }
 
@@ -72,6 +78,7 @@ export function ProductCard({
   onDecrement,
   onReviewClick,
   onExpandDelivery,
+  onCardClick,
   className,
 }: ProductCardProps) {
   const isVertical = layout === "vertical";
@@ -160,26 +167,6 @@ export function ProductCard({
         {description}
       </Text>
 
-      <div className={styles.ratingRow}>
-        <StarRating rating={rating} size={16} />
-        <button type="button" className={styles.reviewLink} onClick={onReviewClick}>
-          <Text as="span" variant="smallRegular">
-            {reviewCount} Reviews
-          </Text>
-        </button>
-      </div>
-
-      <div className={styles.priceRow}>
-        <Text as="span" variant="mediumBold" className={styles.price}>
-          {formatPrice(price)}
-        </Text>
-        {originalPrice != null && (
-          <Text as="span" variant="smallRegular" className={styles.originalPrice}>
-            {formatPrice(originalPrice)}
-          </Text>
-        )}
-      </div>
-
       <div className={styles.deliveryRow}>
         <Text as="span" variant="smallRegular" className={styles.deliveryText}>
           {deliveryText}
@@ -194,21 +181,61 @@ export function ProductCard({
         </button>
       </div>
 
-      <AddButton
-        quantity={quantity}
-        onAdd={onAdd}
-        onIncrement={onIncrement}
-        onDecrement={onDecrement}
-        className={styles.addButtonFull}
-      />
+      <div className={styles.ratingRow}>
+        <StarRating rating={rating} size={16} />
+        <button type="button" className={styles.reviewLink} onClick={onReviewClick}>
+          <Text as="span" variant="smallRegular">
+            {reviewCount} Reviews
+          </Text>
+        </button>
+      </div>
+
+      {/* Price left, Add/stepper right — pinned to the card's bottom (see
+          .priceStepperRow's margin-top: auto) so it lands on the same spot
+          whether or not the discount pill above is showing. */}
+      <div className={styles.priceStepperRow}>
+        <div className={styles.priceRow}>
+          <Text as="span" variant="mediumBold" className={styles.price}>
+            {formatPrice(price)}
+          </Text>
+          {originalPrice != null && (
+            <Text as="span" variant="smallRegular" className={styles.originalPrice}>
+              {formatPrice(originalPrice)}
+            </Text>
+          )}
+        </div>
+
+        <AddButton
+          quantity={quantity}
+          onAdd={onAdd}
+          onIncrement={onIncrement}
+          onDecrement={onDecrement}
+          className={styles.addButtonInline}
+        />
+      </div>
     </div>
   );
 
   return (
     <article
-      className={[styles.card, isVertical ? styles.vertical : styles.horizontal, className]
+      className={[
+        styles.card,
+        isVertical ? styles.vertical : styles.horizontal,
+        onCardClick ? styles.clickable : "",
+        className,
+      ]
         .filter(Boolean)
         .join(" ")}
+      onClick={
+        onCardClick
+          ? (e) => {
+              // The card's own controls (heart, ADD/stepper, chevron, reviews)
+              // handle their own clicks; a click anywhere else opens the pop.
+              if ((e.target as HTMLElement).closest("button, a")) return;
+              onCardClick();
+            }
+          : undefined
+      }
     >
       {isVertical ? (
         <>

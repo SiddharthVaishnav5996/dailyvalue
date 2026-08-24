@@ -7,10 +7,12 @@
 
 /* min-width: 0 lets a pane shrink below its content's intrinsic width —
    without it the grab bar would refuse to travel past the table's natural
-   size. */
+   size. Basis rides a custom property set inline (the drag ratio) so the
+   stacked media query below can reset it cleanly. */
 .paneLeft {
   flex-grow: 0;
   flex-shrink: 0;
+  flex-basis: var(--left-basis);
   min-width: 0;
   display: flex;
   flex-direction: column;
@@ -73,4 +75,28 @@
 .dragging {
   cursor: col-resize;
   user-select: none;
+}
+
+/* ---- Stacked layout ----
+   Side-by-side, the 5-column table only truly breathes at the ~1440 design
+   reference; below that, half a pane crushes it into character-by-character
+   wrapping. So below the reference the panes stack: the grab bar makes no
+   sense between vertically stacked panes and is hidden, and each pane takes
+   the full width. Callers cap and centre their content so it doesn't stretch
+   sparse, and give the panes their heights (see the results page). */
+@media (max-width: 1439px) {
+  .split {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .paneLeft,
+  .paneRight {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .separator {
+    display: none;
+  }
 }

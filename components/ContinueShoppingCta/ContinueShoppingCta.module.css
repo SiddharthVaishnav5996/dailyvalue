@@ -1,0 +1,8 @@
+/* Scales the shared <AddButton> up into a page-level CTA. Intentionally no
+   background / colour / radius / hover here — those are inherited from
+   AddButton so restyling that component flows through to this button too. */
+
+.cta {
+  padding: 14px 40px;
+  min-width: clamp(240px, 30vw, 320px);
+}

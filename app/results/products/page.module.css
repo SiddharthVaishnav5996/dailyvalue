@@ -33,7 +33,9 @@
   justify-content: flex-start;
 }
 
-/* The two result tables, stacked — same 40px rhythm as the chat-result page. */
+/* The two result tables, stacked — same 40px rhythm as the chat-result page.
+   Each ResultTable reflows into stacked label:value cards on phones (built into
+   the component), so no min-width / horizontal scroll is needed here. */
 .tables {
   display: flex;
   flex-direction: column;
@@ -56,6 +58,16 @@
   grid-template-columns: repeat(auto-fill, minmax(184px, 204px));
   justify-content: start;
   gap: clamp(16px, 1.8vw, 24px);
+}
+
+/* Phones: two compact cards per row (Blinkit-style) instead of one wide card
+   that wastes the width. The cards themselves release their desktop floor at
+   this same breakpoint (see ProductCard). */
+@media (max-width: 540px) {
+  .productGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
 }
 
 /* Primary "Order Now" CTA, centered below the last product card. */

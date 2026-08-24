@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { WishlistProvider } from "@/components/Wishlist/WishlistContext";
+import { CartProvider } from "@/components/Cart/CartContext";
 import "../styles/tokens.css";
 import "./globals.css";
 
@@ -21,7 +23,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={inter.variable}>
-      <body>{children}</body>
+      <body>
+        <WishlistProvider>
+          <CartProvider>{children}</CartProvider>
+        </WishlistProvider>
+      </body>
     </html>
   );
 }

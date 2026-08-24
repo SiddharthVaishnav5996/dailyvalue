@@ -41,7 +41,8 @@
 
 /* ---- Category selector (full-bleed marquee) ------------------------------ */
 .categories {
-  padding-block: 4px;
+  /* Vertical padding lives in the marquee component now; this just spaces the
+     strip from the section below. */
   margin-bottom: clamp(24px, 4vw, 48px);
 }
 
@@ -104,6 +105,36 @@
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
 }
 
+/* ---- Below 1320px: stack the hero split ----------------------------------
+   Beside the banner the three cards only fit at ≥1320px; below that they wrap
+   to 2+1 and the banner (flex stretch) balloons tall to match — dead space and
+   a lopsided row. So stack: a full-width banner (capped to a hero strip) with
+   an even 3-up row of cards beneath it. The ≤540px rule later drops that row to
+   2 columns for phones. */
+@media (max-width: 1320px) {
+  .heroSplit {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  .featureBanner {
+    flex: none;
+    width: 100%;
+    max-width: none;
+    max-height: 460px; /* cap the now-wide banner into a strip, not a tall block */
+  }
+
+  .heroCards {
+    flex: none;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: start;
+    gap: clamp(16px, 2vw, 28px);
+  }
+}
+
 /* ---- Generic section (title + row) --------------------------------------- */
 .section {
   display: flex;
@@ -130,6 +161,20 @@
   /* Kept tight enough that six 204px cards fit one row at the 1440 reference
      (6×204 + 5×gap ≤ content width) while still wrapping cleanly below. */
   gap: clamp(12px, 1.5vw, 24px);
+}
+
+/* ---- Phones: dense two-up product grids ----------------------------------
+   Below 540px the centered wrap collapses to one 204px card per row (wasteful,
+   giant cards). A 2-column grid — with the card's max-width released (see
+   ProductCard.module.css) so it fills the column — reads much cleaner. */
+@media (max-width: 540px) {
+  .heroCards,
+  .productRow {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: 10px;
+  }
 }
 
 /* ---- Black Friday Sale --------------------------------------------------- */

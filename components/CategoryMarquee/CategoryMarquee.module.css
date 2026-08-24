@@ -1,28 +1,40 @@
 .viewport {
-  --marquee-duration: 10s;
-  --marquee-return: 0.5s; /* glide-back time when the cursor enters */
+  --marquee-duration: 40s;
   width: 100%;
   overflow: hidden;
+  /* Vertical breathing room for the strip (no background band now). */
+  padding-block: clamp(16px, 2.5vw, 24px);
 }
 
 .track {
   display: flex;
+  align-items: center;
   width: max-content;
   animation: scroll var(--marquee-duration) linear infinite;
 }
 
-/* Each item owns its trailing gap (via margin) rather than using flex `gap`,
-   so one copy's width is an exact fraction of the track — keeping the shift
-   below seamless. */
-.item {
-  flex: none;
-  margin-right: clamp(12px, 2vw, 32px);
+/* Pause the strip while the cursor is over it. */
+.viewport:hover .track {
+  animation-play-state: paused;
 }
 
-/* The track holds COPIES (=4) identical copies, so shifting by one copy is
-   -100%/4 = -25%. At the seam copy #2 lands exactly where copy #1 started, and
-   the remaining three copies always cover the strip (no gap / white at the end).
-   Keep this in sync with COPIES in CategoryMarquee.tsx. */
+/* Each item owns its trailing gap so one copy is an exact quarter of the track,
+   keeping the -25% shift below seamless. Greyed by default; brightens to its own
+   category colour on hover. */
+.item {
+  flex: none;
+  margin-right: clamp(28px, 5vw, 72px);
+  font: var(--text-large-bold);
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  transition: color 200ms ease;
+}
+
+.item:hover {
+  color: var(--cat-color);
+}
+
+/* Four identical copies → shift by one copy (-100%/4). */
 @keyframes scroll {
   from {
     transform: translateX(0);
@@ -35,7 +47,6 @@
 @media (prefers-reduced-motion: reduce) {
   .track {
     animation: none;
-    /* Fall back to a normal scrollable row when motion is reduced. */
     flex-wrap: nowrap;
   }
   .viewport {

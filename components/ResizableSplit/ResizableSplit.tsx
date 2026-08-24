@@ -4,6 +4,7 @@ import {
   useImperativeHandle,
   useRef,
   useState,
+  type CSSProperties,
   type ReactNode,
   type Ref,
 } from "react";
@@ -100,10 +101,12 @@ export function ResizableSplit({
         .join(" ")}
     >
       {/* Only the left pane is sized; the right one takes whatever is left, so
-          the separator's own 15px never overflows the container. */}
+          the separator's own 15px never overflows the container. The ratio
+          rides a custom property rather than flex-basis directly, so the
+          stacked-layout media query can neutralise it without !important. */}
       <div
         className={styles.paneLeft}
-        style={{ flexBasis: `calc(${ratio * 100}% - 7.5px)` }}
+        style={{ "--left-basis": `calc(${ratio * 100}% - 7.5px)` } as CSSProperties}
       >
         {left}
       </div>

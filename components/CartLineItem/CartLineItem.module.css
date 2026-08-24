@@ -1,11 +1,10 @@
-/* A cart row: [thumbnail] [name + store] [quantity stepper].
+/* A cart row: [thumbnail] [name + store] [quantity stepper], kept to a single
+ * line — the text column shrinks (basis 0) so the stepper never wraps below.
  * --cart-thumb / --cart-gap are set by the checkout page (with fallbacks here)
- * so the "My Cart" / "Edit" header can align to the same columns. flex-wrap
- * lets the stepper drop below the text on very narrow screens. */
+ * so the "My Cart" / "Edit" header can align to the same columns. */
 .row {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
   gap: var(--cart-gap, 16px);
   width: 100%;
 }
@@ -22,7 +21,7 @@
 }
 
 .meta {
-  flex: 1 1 200px;
+  flex: 1 1 0;
   min-width: 0;
   display: flex;
   flex-direction: column;
@@ -31,12 +30,19 @@
 
 .name {
   color: var(--color-text);
+  /* Cap long product names at two lines so every row stays compact and even. */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
-/* Anchor for the price-comparison dropdown; only as wide as the store button. */
+/* Anchor for the price-comparison dropdown; capped to the text column width. */
 .storeWrap {
   position: relative;
   align-self: flex-start;
+  max-width: 100%;
 }
 
 /* "Walmart ⌄" — muted store label that opens the store picker. */
@@ -44,6 +50,8 @@
   display: inline-flex;
   align-items: center;
   gap: 4px;
+  max-width: 100%;
+  min-width: 0;
   padding: 0;
   background: transparent;
   border: none;
@@ -55,8 +63,17 @@
   opacity: 0.7;
 }
 
+/* Truncate a long store name rather than pushing the chevron out of the row. */
 .storeName {
   color: var(--color-text-muted);
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.storeChevron {
+  flex-shrink: 0;
 }
 
 .stepper {
@@ -157,4 +174,12 @@
   margin-left: auto;
   white-space: nowrap;
   color: var(--color-text);
+}
+
+/* Phones: a smaller name pairs with the checkout page's tighter --cart-thumb,
+   keeping each row to a clean two lines beside a compact stepper. */
+@media (max-width: 600px) {
+  .row .name {
+    font: var(--text-normal-bold);
+  }
 }

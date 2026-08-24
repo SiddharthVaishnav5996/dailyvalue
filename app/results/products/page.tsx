@@ -1,9 +1,11 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Header } from "@/components/Header/Header";
 import { Footer } from "@/components/Footer/Footer";
+import { useWishlist } from "@/components/Wishlist/WishlistContext";
+import { useCart, type CartItemInput } from "@/components/Cart/CartContext";
 import { AddButton } from "@/components/AddButton/AddButton";
 import { ResultTable } from "@/components/ResultTable/ResultTable";
 import { ProductCard } from "@/components/ProductCard/ProductCard";
@@ -15,11 +17,29 @@ import {
   ALL_SEARCH_PRODUCTS,
   type SearchProduct,
 } from "@/data/searchResults";
-import { PRODUCT_POP_BY_ID, type StoreOffer } from "@/data/productPop";
+import {
+  PRODUCT_POP_BY_ID,
+  type StoreOffer,
+  type RelatedProduct,
+} from "@/data/productPop";
 import styles from "./page.module.css";
 
 /** Where the cart and Order Now lead — the checkout page, designed later. */
 const ORDER_ROUTE = "/results/order";
+
+/** A shared-cart line from a product (base details — store offers are a
+ *  display-only override on the card, not stored on the cart line). */
+function toCartItem(p: SearchProduct | RelatedProduct): CartItemInput {
+  return {
+    id: p.id,
+    name: p.description,
+    price: p.price,
+    imageSrc: p.imageSrc,
+    imageAlt: p.imageAlt,
+    storeName: p.storeName,
+    storeLogoSrc: p.storeLogoSrc,
+  };
+}
 
 /**
  * Page 3 — AI Search Result. Reached from Confirm on the chat-result page
@@ -27,57 +47,43 @@ const ORDER_ROUTE = "/results/order";
  * product card per unique item beneath them (ingredients first, the wine
  * pairings on their own new row).
  *
- * Every card opens already in the basket, so the page owns the per-product
- * quantity + wishlist state. The Header cart badge shows the total quantity of
- * the cards still on the page. Taking a card to 0 (back to "ADD") reddens the
- * table rows it fulfils — the item is no longer being bought but stays listed.
- * Deleting a table row (its trash icon) is stronger: once a product's last row
- * is gone, its card disappears and its quantity leaves the cart.
+ * The recipe's products are pre-loaded into the shared cart (so cards open in
+ * the basket and carry through to checkout alongside anything added on the
+ * landing page). Taking a card to 0 (back to "ADD") reddens the table rows it
+ * fulfils — no longer being bought but still listed. Deleting a table row (its
+ * trash icon) is stronger: once a product's last row is gone, its card
+ * disappears and its line leaves the cart.
  *
  * A card's chevron opens its Product-pop (a details modal with alternatives);
- * adding an alternative there drops it into the cart via a separate bucket.
+ * adding an alternative there drops it into the same shared cart.
  */
 export default function ProductResultsPage() {
   const router = useRouter();
-
-  const [quantities, setQuantities] = useState<Record<string, number>>(() =>
-    Object.fromEntries(
-      ALL_SEARCH_PRODUCTS.map((p) => [p.id, p.initialQuantity ?? 1]),
-    ),
-  );
-  const [wishlisted, setWishlisted] = useState<Record<string, boolean>>({});
+  const { quantityOf, addItem, increment, decrement, remove, ensureItem } = useCart();
+  const { isWishlisted, toggleWishlist } = useWishlist();
   const [ingredients, setIngredients] = useState(INGREDIENTS_TABLE.rows);
   const [wines, setWines] = useState(WINE_TABLE.rows);
-  // Alternatives added from a Product-pop — their own cart bucket, since they
-  // aren't recipe-table items.
-  const [extraQuantities, setExtraQuantities] = useState<Record<string, number>>({});
   const [popupProductId, setPopupProductId] = useState<string | null>(null);
   // Which store offer is selected per product (empty → each product's first offer).
   const [selectedOffer, setSelectedOffer] = useState<Record<string, string>>({});
 
-  const setQty = (id: string, q: number) =>
-    setQuantities((prev) => ({ ...prev, [id]: Math.max(0, q) }));
-
-  // Functional delta so rapid clicks compound correctly (no stale closure).
-  const bumpQty = (id: string, delta: number) =>
-    setQuantities((prev) => ({ ...prev, [id]: Math.max(0, (prev[id] ?? 0) + delta) }));
-
-  const setExtra = (id: string, q: number) =>
-    setExtraQuantities((prev) => ({ ...prev, [id]: Math.max(0, q) }));
-  const bumpExtra = (id: string, delta: number) =>
-    setExtraQuantities((prev) => ({
-      ...prev,
-      [id]: Math.max(0, (prev[id] ?? 0) + delta),
-    }));
-
-  const toggleWishlist = (id: string) =>
-    setWishlisted((prev) => ({ ...prev, [id]: !prev[id] }));
+  // Pre-load the recipe's products into the shared cart once. ensureItem leaves
+  // anything the user already added or removed untouched, so navigating away and
+  // back doesn't undo their edits.
+  const seeded = useRef(false);
+  useEffect(() => {
+    if (seeded.current) return;
+    seeded.current = true;
+    for (const p of ALL_SEARCH_PRODUCTS) {
+      ensureItem(toCartItem(p), p.initialQuantity ?? 1);
+    }
+  }, [ensureItem]);
 
   // Row ids still present in the tables (a delete removes a row here). A product
   // card is shown only while at least one of the rows it fulfils survives, so
-  // deleting a row's last owner also drops its card — and its quantity from the
-  // cart total below. A multi-row product (e.g. the one sugar covering three
-  // rows) stays until its final row is deleted.
+  // deleting a row's last owner also drops its card — and its line from the cart
+  // (see the effect below). A multi-row product (e.g. the one sugar covering
+  // three rows) stays until its final row is deleted.
   const remainingRowIds = useMemo(() => {
     const s = new Set<string>();
     for (const r of ingredients) s.add(r.id);
@@ -93,26 +99,23 @@ export default function ProductResultsPage() {
     return s;
   }, [remainingRowIds]);
 
-  // Cart total: the cards still on the page, plus any popup alternatives added.
-  const cartCount = useMemo(() => {
-    const table = ALL_SEARCH_PRODUCTS.reduce(
-      (sum, p) => (presentIds.has(p.id) ? sum + (quantities[p.id] ?? 0) : sum),
-      0,
-    );
-    const extra = Object.values(extraQuantities).reduce((sum, q) => sum + q, 0);
-    return table + extra;
-  }, [presentIds, quantities, extraQuantities]);
+  // Once a product's last table row is deleted, take it out of the cart too.
+  useEffect(() => {
+    for (const p of ALL_SEARCH_PRODUCTS) {
+      if (!presentIds.has(p.id) && quantityOf(p.id) > 0) remove(p.id);
+    }
+  }, [presentIds, quantityOf, remove]);
 
   // Rows fulfilled by a still-present product that's been zeroed out → shown red.
   const removedRowIds = useMemo(() => {
     const ids: string[] = [];
     for (const p of ALL_SEARCH_PRODUCTS) {
-      if (presentIds.has(p.id) && (quantities[p.id] ?? 0) === 0) {
+      if (presentIds.has(p.id) && quantityOf(p.id) === 0) {
         ids.push(...p.rowIds);
       }
     }
     return ids;
-  }, [presentIds, quantities]);
+  }, [presentIds, quantityOf]);
 
   const goToOrder = () => router.push(ORDER_ROUTE);
 
@@ -130,9 +133,16 @@ export default function ProductResultsPage() {
     return offers.find((o) => o.id === selectedOffer[id]) ?? offers[0];
   };
 
+  // Quantities for the active pop's alternatives, read from the shared cart.
+  const popQuantities = useMemo(() => {
+    const rec: Record<string, number> = {};
+    if (activePop) for (const r of activePop.related) rec[r.id] = quantityOf(r.id);
+    return rec;
+  }, [activePop, quantityOf]);
+
   function renderCard(product: SearchProduct) {
     const { id } = product;
-    const quantity = quantities[id] ?? 0;
+    const quantity = quantityOf(id);
     // If the product has store offers, the selected one overrides its store /
     // price / badge (the image + description stay). Otherwise use it as-is.
     const offer = selectedOfferFor(id);
@@ -155,19 +165,20 @@ export default function ProductResultsPage() {
         layout="vertical"
         descriptionLines={2}
         quantity={quantity}
-        onAdd={() => setQty(id, 1)}
-        onIncrement={() => bumpQty(id, 1)}
-        onDecrement={() => bumpQty(id, -1)}
-        isWishlisted={!!wishlisted[id]}
-        onToggleWishlist={() => toggleWishlist(id)}
+        onAdd={() => addItem(toCartItem(product))}
+        onIncrement={() => increment(id)}
+        onDecrement={() => decrement(id)}
+        isWishlisted={isWishlisted(id)}
+        onToggleWishlist={() => toggleWishlist(toCartItem(product))}
         onExpandDelivery={() => openPopup(id)}
+        onCardClick={PRODUCT_POP_BY_ID[id] ? () => openPopup(id) : undefined}
       />
     );
   }
 
   return (
     <>
-      <Header cartCount={cartCount} onCartClick={goToOrder} />
+      <Header />
 
       <main className={styles.main}>
         <div className={styles.content}>
@@ -227,10 +238,13 @@ export default function ProductResultsPage() {
             popupProductId &&
             setSelectedOffer((prev) => ({ ...prev, [popupProductId]: offerId }))
           }
-          quantities={extraQuantities}
-          onAdd={(id) => setExtra(id, 1)}
-          onIncrement={(id) => bumpExtra(id, 1)}
-          onDecrement={(id) => bumpExtra(id, -1)}
+          quantities={popQuantities}
+          onAdd={(id) => {
+            const related = activePop.related.find((x) => x.id === id);
+            if (related) addItem(toCartItem(related));
+          }}
+          onIncrement={(id) => increment(id)}
+          onDecrement={(id) => decrement(id)}
           onClose={() => setPopupProductId(null)}
         />
       )}

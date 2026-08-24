@@ -8,6 +8,11 @@
   border-radius: 20px;
 }
 
+/* The whole card opens a details pop-up (its own controls still act normally). */
+.clickable {
+  cursor: pointer;
+}
+
 .horizontal {
   max-width: 458px;
 }
@@ -19,7 +24,7 @@
    taller description or extra content can still grow the card further. */
 .vertical {
   max-width: 204px;
-  min-height: 427px;
+  min-height: 420px;
 }
 
 .topRow {
@@ -48,6 +53,9 @@
 
 .imageWrapVertical {
   width: 100%;
+  /* Vertical cards fill their column, so drop the horizontal layout's 120px
+     floor — otherwise a very narrow two-up card overflows (heart included). */
+  min-width: 0;
   height: 166px;
   max-height: 166px;
   aspect-ratio: unset; /* fixed height instead of following the 217:166
@@ -69,10 +77,17 @@
   background: transparent;
 }
 
+/* Vertical cards show the whole product (contain) rather than cropping it. Two
+   classes outrank the base `.image` (cover) and the per-card `.imageContain`
+   modifier; the ≤480px rule below overrides back to cover for phones. */
+.imageWrapVertical .image {
+  object-fit: contain;
+}
+
 .wishlistBtn {
   position: absolute;
-  top: 4px;
-  right: 7px;
+  top: 8px;
+  right: 8px;
   z-index: 1;
   display: inline-flex;
   padding: 0;
@@ -99,9 +114,9 @@
 }
 
 /* ---- Body ----
- * min-width matches StoreName's own fixed 184px width — StoreName doesn't
- * shrink (it's a fixed-size atom by design), so body can't usefully go
- * narrower than that without StoreName itself overflowing it. */
+ * min-width holds the card at its 204px reference on desktop; StoreName now
+ * shrinks with the card, so on phones (below) this floor is released to let a
+ * vertical card go compact (two per row). */
 .body {
   flex: 1 1 184px;
   min-width: 184px;
@@ -110,13 +125,31 @@
   gap: 8px;
 }
 
+/* Compact vertical cards on phones — released floor + a pill that shrinks to
+   fit the narrower card instead of overflowing it. */
+@media (max-width: 540px) {
+  /* Release the 204px cap so the card fills its grid column (two per row). */
+  .vertical {
+    max-width: none;
+  }
+
+  .vertical .body {
+    min-width: 0;
+  }
+
+  .vertical .discountPill {
+    max-width: 100%;
+  }
+}
+
 .discountPill {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 111px;
+  width: fit-content; /* hug the label — a compact badge, not a fixed bar */
+  max-width: 100%;
   height: 20px;
-  padding: 0 6px;
+  padding: 0 8px;
   background: var(--color-discount);
   border-radius: 6px;
 }
@@ -154,20 +187,25 @@
     its own line if the row is ever narrower than star-rating + link. */
 }
 
+/* Secondary metadata: kept muted (was bright cyan + underline) so the eye goes
+   to name → price → ADD instead of the review count. */
 .reviewLink {
   padding: 0;
   background: transparent;
   border: none;
-  color: var(--color-review-link);
-  text-decoration: underline;
+  color: var(--color-text-muted);
+  text-decoration: none;
   white-space: nowrap;
 }
 
+/* Stack the price over the struck original consistently (short and long prices
+   alike) — a horizontal row put short prices side by side and only wrapped the
+   long ones, so the layout jumped card to card. */
 .priceRow {
   display: flex;
-  align-items: baseline;
-  gap: 8px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
   min-width: 0;
 }
 
@@ -180,11 +218,6 @@
   text-decoration: line-through;
 }
 
-/* margin-top:auto absorbs any leftover height (e.g. from .vertical's
-   min-height when showDiscount is false) so the delivery row + Add button
-   stay anchored to the card's bottom instead of floating mid-card. Only
-   has an effect when the flex container has slack to give — a no-op for
-   the horizontal layout, where .body's height already matches its content. */
 .deliveryRow {
   display: flex;
   align-items: center;
@@ -192,11 +225,12 @@
   gap: 8px;
   min-width: 0;
   flex-wrap: wrap;
-  margin-top: auto;
 }
 
 .deliveryText {
-  color: var(--color-green-bright);
+  /* Muted (was bright green) — secondary info that shouldn't compete with the
+     price and Add button for attention. */
+  color: var(--color-text-muted);
   /* Hold delivery to one line (ellipsis when long, e.g. "Free Delivery for PC
      Express member"). A wrapped second line would push this card's Add button
      below its neighbours' and break the row's alignment. */
@@ -216,9 +250,37 @@
   color: var(--color-text);
 }
 
-/* Scoped to .body's own width (the text column), not the full card —
-   the card is two parts: image, then this column (which ends with the
-   button), not a button spanning under the image too. */
-.addButtonFull {
-  width: 100%;
+/* Sits beside .priceRow now (not stacked full-width below it), so it hugs its
+   own content instead of stretching — flex-shrink:0 keeps it from being
+   squeezed if the price row runs long. */
+.addButtonInline {
+  flex-shrink: 0;
+}
+
+/* Price left, Add/stepper right. */
+.priceStepperRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+/* Phones: two vertical cards share a row, so release the 184px width floor and
+   the tall min-height. The grid still stretches each row's pair to equal
+   heights, and StoreName / description ellipsise to fit the narrower card. */
+@media (max-width: 480px) {
+  .vertical {
+    min-height: 0;
+  }
+
+  .vertical .body {
+    min-width: 0;
+  }
+
+  /* Shorten the image area on the narrow card to keep it compact. */
+  .imageWrapVertical {
+    height: 120px;
+    max-height: 120px;
+  }
 }

@@ -67,6 +67,11 @@ export function Footer({ onSubscribe }: FooterProps) {
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="name@email.com"
                 autoComplete="email"
+                // Native type="email" validity alone accepts domains with no
+                // TLD (e.g. "name@gm"); this pattern requires a full
+                // local@domain.tld shape before :valid (and the Subscribe
+                // button's active color) engages.
+                pattern="[^\s@]+@[^\s@]+\.[^\s@]{2,}"
                 required
               />
               <AddButton

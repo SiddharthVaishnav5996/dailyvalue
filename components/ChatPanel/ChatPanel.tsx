@@ -54,7 +54,15 @@ export function ChatPanel({
   }
 
   return (
-    <div className={[styles.panel, className].filter(Boolean).join(" ")}>
+    <div
+      className={[
+        styles.panel,
+        variant === "wide" ? styles.panelWide : "",
+        className,
+      ]
+        .filter(Boolean)
+        .join(" ")}
+    >
       <div className={styles.thread} ref={threadRef}>
         <div
           className={[styles.list, variant === "wide" ? styles.listWide : ""]

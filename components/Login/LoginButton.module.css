@@ -1,0 +1,38 @@
+/* Matches the header's other text actions. */
+.loginBtn {
+  padding: 0;
+  background: transparent;
+  border: none;
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.loginBtn:hover {
+  opacity: 0.7;
+}
+
+/* Round profile avatar shown once "logged in". */
+.avatar {
+  display: inline-flex;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  cursor: pointer;
+  transition: box-shadow 150ms ease;
+}
+
+.avatar:hover {
+  box-shadow: 0 0 0 2px var(--color-primary);
+}
+
+.avatarImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-full);
+}

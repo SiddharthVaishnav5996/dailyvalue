@@ -31,17 +31,16 @@
 }
 
 /* ---- variant="wide" (results page) ----
-   Both roles fill the column rather than hugging their content; the user's
-   text sets right, and the AI keeps the same bubble treatment on the muted
-   lavender fill. */
+   Bubbles hug their content up to 450px so the thread reads like a real chat
+   (short messages get small bubbles) rather than every bubble spanning the
+   column. The user's text still sets right; the AI keeps the muted lavender
+   fill. */
 .wideUser {
-  max-width: none;
-  width: 100%;
+  max-width: 450px;
   text-align: right;
 }
 
 .wideAi {
-  max-width: none;
-  width: 100%;
+  max-width: 450px;
   background: var(--color-lavender-surface);
 }

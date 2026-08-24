@@ -13,7 +13,7 @@ export interface CartLineItemProps {
   name: string;
   /** Partner store label shown under the name, with a dropdown chevron. */
   storeName: string;
-  imageSrc: string;
+  imageSrc?: string;
   imageAlt?: string;
   quantity: number;
   onIncrement?: () => void;
@@ -67,13 +67,15 @@ export function CartLineItem({
   return (
     <div className={[styles.row, className].filter(Boolean).join(" ")}>
       <div className={styles.thumb}>
-        <NextImage
-          src={imageSrc}
-          alt={imageAlt ?? name}
-          fill
-          sizes="72px"
-          className={styles.thumbImg}
-        />
+        {imageSrc && (
+          <NextImage
+            src={imageSrc}
+            alt={imageAlt ?? name}
+            fill
+            sizes="72px"
+            className={styles.thumbImg}
+          />
+        )}
       </div>
 
       <div className={styles.meta}>
@@ -93,7 +95,12 @@ export function CartLineItem({
             <Text as="span" variant="normalRegular" className={styles.storeName}>
               {storeName}
             </Text>
-            <ChevronDown size={16} strokeWidth={2} aria-hidden="true" />
+            <ChevronDown
+              size={16}
+              strokeWidth={2}
+              className={styles.storeChevron}
+              aria-hidden="true"
+            />
           </button>
 
           {hasOffers && open && (

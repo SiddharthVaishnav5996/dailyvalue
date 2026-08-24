@@ -23,6 +23,51 @@ export const RESULT_CONVERSATION: ChatPanelMessage[] = [
     role: "ai",
     text: "I’ve updated the base to use crushed Oreo cookies (cream removed) instead of biscuits.\n\nIf you’d like, I can also adjust the butter or sugar quantity slightly to balance the sweetness.",
   },
+  {
+    id: "4",
+    role: "user",
+    text: "Oreo works! Can we make it a no-bake version too?",
+  },
+  {
+    id: "5",
+    role: "ai",
+    text: "Absolutely. The filling now sets in the fridge with a little gelatin instead of baking — chill it for at least 6 hours, ideally overnight, so it slices cleanly.",
+  },
+  {
+    id: "6",
+    role: "user",
+    text: "How many does it serve?",
+  },
+  {
+    id: "7",
+    role: "ai",
+    text: "As written it’s a 9-inch cake — about 12 slices. Say the word and I’ll scale every quantity up or down.",
+  },
+  {
+    id: "8",
+    role: "user",
+    text: "12 is perfect.",
+  },
+  {
+    id: "9",
+    role: "user",
+    text: "Which of the wines pairs best with the blueberry topping?",
+  },
+  {
+    id: "10",
+    role: "ai",
+    text: "The Inniskillin Icewine is my top pick — its sweetness and bright acidity balance the tangy cream cheese. If you’d prefer something lighter, the Mission Hill Riesling is a lovely match too.",
+  },
+  {
+    id: "11",
+    role: "user",
+    text: "Is icewine easy to find near me in Toronto?",
+  },
+  {
+    id: "12",
+    role: "ai",
+    text: "Yes — Inniskillin and Peller Estates are both Niagara wineries, so most LCBO stores carry the 375ml dessert bottles. I’ve kept both on your list below.",
+  },
 ];
 
 interface ResultTableData {

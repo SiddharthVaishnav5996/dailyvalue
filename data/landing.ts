@@ -128,7 +128,7 @@ export const TOP_PICKS: LandingProduct[] = [
     id: "pick-onions",
     storeName: "FreshCo",
     storeDistanceKm: 2.2,
-    storeLogoSrc: "/stores/Store Logos/Save On Foods.png",
+    storeLogoSrc: "/stores/Store Logos/Freshco.png",
     showDiscount: true,
     description: "Yellow Onions, Your Fresh Market, 4.54 kg (10 lbs)",
     rating: 4,

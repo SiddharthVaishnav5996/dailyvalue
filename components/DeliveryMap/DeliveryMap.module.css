@@ -1,0 +1,106 @@
+/*
+ * DeliveryMap — the route card on Page 7 (Order Status).
+ *
+ * A self-contained stylised SVG map (drawn in a 510×720 space). On desktop the
+ * card stretches to fill its grid cell so its bottom lines up with the timeline;
+ * on narrow screens it falls back to the map's portrait ratio. The driver marker
+ * is animated inside the SVG with <animateMotion>, so it's constrained to the
+ * route and can't drift. Under reduced motion the marker layer is dropped and
+ * the static route + pin remain.
+ */
+
+.map {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: clamp(360px, 58vh, 700px);
+  margin: 0;
+  border-radius: clamp(12px, 1.6vw, 20px);
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* No grid cell to fill when stacked — use the map's own portrait ratio. */
+@media (max-width: 900px) {
+  .map {
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 510 / 720;
+  }
+}
+
+.canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* ---- Map text ----------------------------------------------------------- */
+
+.areaLabel {
+  font: var(--fw-bold) 10px/1 var(--font-sans);
+  letter-spacing: 0.4px;
+  fill: #70747a;
+  text-anchor: middle;
+}
+
+.poiLabel {
+  font: var(--fw-regular) 11px/1 var(--font-sans);
+  fill: #5f6368;
+  text-anchor: middle;
+}
+
+.riverLabel {
+  font: italic var(--fw-regular) 11px/1 var(--font-sans);
+  fill: #85a8c0;
+  letter-spacing: 0.3px;
+}
+
+.storeLabel {
+  font: var(--fw-bold) 12px/1 var(--font-sans);
+  fill: #3c4043;
+  text-anchor: start;
+}
+
+.jaLabel {
+  font: var(--fw-bold) 11px/1 var(--font-sans);
+  fill: #ffffff;
+  text-anchor: middle;
+}
+
+.shieldLabel {
+  font: var(--fw-bold) 11px/1 var(--font-sans);
+  fill: #3c4043;
+  text-anchor: middle;
+}
+
+.ttEta {
+  font: var(--fw-bold) 15px/1 var(--font-sans);
+  fill: #202124;
+  text-anchor: start;
+}
+
+.ttDist {
+  font: var(--fw-regular) 12px/1 var(--font-sans);
+  fill: #70747a;
+  text-anchor: start;
+}
+
+.watermark {
+  font: var(--fw-bold) 20px/1 var(--font-sans);
+  fill: #5f6368;
+  text-anchor: middle;
+  opacity: 0.9;
+}
+
+/* ---- Driver marker ------------------------------------------------------ */
+
+@media (prefers-reduced-motion: reduce) {
+  .driver {
+    display: none;
+  }
+  /* Skip the one-time draw — show the finished route immediately. */
+  .routeLine {
+    stroke-dashoffset: 0 !important;
+  }
+}

@@ -1,0 +1,79 @@
+/* Transparent full-screen catcher so a click anywhere outside closes the
+   dropdown — same approach as ProductPop's compare dropdown. */
+.catcher {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+}
+
+/* Anchored under the Header icon that opened it (its button sits in a
+   position:relative wrapper). right:0 keeps a wide panel from running off the
+   right edge of the viewport. */
+.dropdown {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  z-index: 41;
+  width: min(460px, calc(100vw - 32px));
+  padding: 20px;
+  background: var(--color-white);
+  border-radius: 10px;
+  box-shadow: 0 14px 44px rgba(0, 0, 0, 0.22);
+  display: flex;
+  flex-direction: column;
+  animation: pop 160ms ease;
+}
+
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dropdown {
+    animation: none;
+  }
+}
+
+/* Title over its item count. No close button — the panel closes on an outside
+   click (the catcher above) or Escape. */
+.head {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  margin-bottom: 0;
+}
+
+.subtitle {
+  color: var(--color-text-muted);
+}
+
+/* Uncapped on purpose — the panel grows with the list rather than scrolling
+   inside itself, however many items are in it. */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.empty {
+  color: var(--color-text-muted);
+  text-align: center;
+  padding: 28px 12px;
+  background: var(--color-lavender-surface);
+  border-radius: var(--radius-lg);
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}

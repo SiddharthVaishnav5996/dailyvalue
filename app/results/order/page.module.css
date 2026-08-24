@@ -72,6 +72,28 @@
   gap: clamp(16px, 2vw, 24px);
 }
 
+/* Empty-basket line — sits in the same gutter the item names occupy. */
+.emptyCart {
+  padding: 8px 0 8px calc(var(--cart-thumb) + var(--cart-gap));
+  color: var(--color-text-muted);
+}
+
+/* Denser cart on phones — a smaller thumbnail + gap (rows and the
+   "My Cart"/"Edit" header read these vars, so they stay aligned), tighter
+   spacing between rows, and less air between the cart and the suggestions. */
+@media (max-width: 600px) {
+  .cart {
+    --cart-thumb: 56px;
+    --cart-gap: 12px;
+  }
+  .cartList {
+    gap: 12px;
+  }
+  .left {
+    gap: 28px;
+  }
+}
+
 .suggestions {
   display: flex;
   flex-direction: column;
@@ -93,11 +115,13 @@
   gap: clamp(16px, 1.8vw, 24px);
 }
 
-/* One card per row once two can no longer sit side by side. */
+/* Keep two per row on phones — the cards shrink below their 184px reference
+   (ProductCard releases its floor at this width) rather than dropping to one. */
 @media (max-width: 480px) {
   .suggestionGrid {
-    grid-template-columns: minmax(0, 204px);
-    justify-content: start;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-content: stretch;
+    gap: 12px;
   }
 }
 

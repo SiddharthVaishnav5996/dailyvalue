@@ -8,7 +8,9 @@ function initials(name: string): string {
 
 export interface StoreNameProps {
   name: string;
-  distanceKm: number;
+  /** Omit where distance isn't known (e.g. a saved cart line) — the row then
+   *  shows just the store name against its thumbnail. */
+  distanceKm?: number;
   /** Store thumbnail (28x28). Falls back to an initials avatar when omitted. */
   logoSrc?: string;
   selected?: boolean;
@@ -45,9 +47,11 @@ export function StoreName({
         <Text as="span" variant={nameVariant} className={styles.name}>
           {name}
         </Text>
-        <Text as="span" variant="xxsmallRegular" className={styles.distance}>
-          {distanceKm.toFixed(1)} km away
-        </Text>
+        {distanceKm != null && (
+          <Text as="span" variant="xxsmallRegular" className={styles.distance}>
+            {distanceKm.toFixed(1)} km away
+          </Text>
+        )}
       </span>
     </>
   );

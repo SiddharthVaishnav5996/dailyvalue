@@ -21,13 +21,21 @@
   gap: 5px;
 }
 
-/* ---- The 5 × 1 grid: 4 content columns + the delete action ----
-   20px gutters hold from ~1440px viewports up and tighten below that rather
-   than squeezing the columns themselves to nothing. */
+/* ---- The grid: 4 content columns + the delete action ----
+   The delete column is a fixed narrow track, not a 5th equal fraction: an
+   equal fifth spends ~107px of a 639px table on a 20px icon, which (a) leaves
+   nothing for wider column gutters and (b) at the 1440 reference squeezes the
+   content columns to ~107px where the bold "Cheesecake" (~105px) is one line
+   from breaking. Reclaiming it gives both wider content columns and the 30px
+   inter-column gutter (up from 20px) for less congestion between Item and
+   Quantity. */
 .grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  column-gap: clamp(8px, 1.5vw, 20px);
+  /* One 1fr track per real column (set by the component) plus the fixed delete
+     track — so a 3-column table fills evenly rather than reserving a blank 4th
+     column that opened a wide void before the delete button. */
+  grid-template-columns: repeat(var(--content-cols, 4), 1fr) 44px;
+  column-gap: 36px;
   align-items: center;
   padding: 5px 13px;
   background: var(--color-lavender-surface);
@@ -62,4 +70,83 @@
 
 .deleteBtn:hover {
   opacity: 0.6;
+}
+
+/* ---- Cards (phones) ----
+   A 5-column table can't hold legible columns on a phone, so below this width
+   each row reflows into a card: the category becomes a small tag atop its
+   group's first card, the item/wine name is the headline, and every other
+   column becomes a "label: value" line (label from data-label). The
+   column-header row is redundant and hidden. The stacked *table* still serves
+   768px–1439px, where a 700px-capped table stays comfortable. */
+@media (max-width: 767px) {
+  /* Compound selector so this beats the .grid display below (both would
+     otherwise be single-class and .grid, coming later, would win). */
+  .grid.headerRow {
+    display: none;
+  }
+
+  .rows {
+    gap: 10px;
+  }
+
+  .grid {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* Override the grid's align-items:center — as a column flex that would
+       centre each line horizontally and shrink it to its content, so the
+       category, title and quantity wouldn't share the card's left edge. */
+    align-items: stretch;
+    gap: 4px;
+    padding: 14px 16px;
+    border-radius: var(--radius-md);
+  }
+
+  /* Category — group tag; blank (empty) on continuation cards, so hide those. */
+  .cellGroup {
+    font: var(--text-small-bold);
+    color: var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .cellGroup:empty {
+    display: none;
+  }
+
+  /* Item / wine name — card headline. Right padding keeps it clear of the
+     corner delete button. */
+  .cellTitle {
+    font: var(--text-medium-bold);
+    padding-right: 32px;
+  }
+
+  /* Every other column — a label:value line. The value is right-aligned so a
+     value that wraps to two lines (e.g. a long "Notes") keeps every line flush
+     to the right edge instead of the second line starting mid-card. */
+  .cellField {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    font: var(--text-normal-regular);
+    text-align: right;
+  }
+  .cellField::before {
+    content: attr(data-label);
+    color: var(--color-text-muted);
+    /* Keep the label from being squeezed to nothing by a long value. */
+    flex-shrink: 0;
+    text-align: left;
+  }
+  /* Padded-out empty column (e.g. the ingredients table's 4th) — drop it. */
+  .cellField:empty {
+    display: none;
+  }
+
+  /* Delete → the card's top-right corner. */
+  .actionCell {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+  }
 }

@@ -70,6 +70,7 @@
   --color-white: #ffffff;
   --color-text: #000000;
   --color-text-muted: #9b9b9b;
+  --color-disabled: #dadada;       /* rgb(218, 218, 218) — pending / not-yet-reached */
 
   /* ---- Accent greens (used ad hoc, e.g. deals / savings highlights) ---- */
   --color-green-bright: #00d207;   /* rgb(0, 210, 7) */

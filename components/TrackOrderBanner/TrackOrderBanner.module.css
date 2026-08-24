@@ -1,0 +1,87 @@
+/*
+ * TrackOrderBanner — the active-order strip under the header on the landing page.
+ * Full-width, same height as the header. Soft-green while the order is en route
+ * (dark text), brand-coloured once delivered (white text). The close button is
+ * pinned right; the status sits centered.
+ */
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: clamp(48px, 8vw, 72px);
+}
+
+.ongoing {
+  background: var(--color-green-soft);
+  color: var(--color-text);
+}
+
+.delivered {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.content {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+/* Ongoing banner links to the full order-status page (Page 7). */
+.trackLink {
+  cursor: pointer;
+}
+
+.trackLink:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.icon {
+  flex-shrink: 0;
+}
+
+.ongoing .icon {
+  color: #1a8f22; /* deep green tick/truck on the light-green fill */
+}
+
+.delivered .icon {
+  color: var(--color-white);
+}
+
+.label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.timer {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums; /* steady width so it doesn't jitter */
+}
+
+.close {
+  position: absolute;
+  right: clamp(12px, 3vw, 28px);
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  color: inherit;
+  transition: opacity 150ms ease;
+}
+
+.close:hover {
+  opacity: 0.7;
+}

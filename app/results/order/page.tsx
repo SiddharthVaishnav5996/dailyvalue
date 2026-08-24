@@ -15,12 +15,13 @@ import {
 } from "lucide-react";
 import { Header } from "@/components/Header/Header";
 import { Footer } from "@/components/Footer/Footer";
+import { useWishlist } from "@/components/Wishlist/WishlistContext";
+import { useCart } from "@/components/Cart/CartContext";
 import { Text } from "@/components/Text/Text";
 import { AddButton } from "@/components/AddButton/AddButton";
 import { ProductCard } from "@/components/ProductCard/ProductCard";
 import { CartLineItem } from "@/components/CartLineItem/CartLineItem";
 import {
-  CART_ITEMS,
   ORDER_SUMMARY,
   CUSTOMER,
   SHIPPING,
@@ -35,30 +36,19 @@ import styles from "./page.module.css";
  * Page 4 — Checkout / Order page. Reached from "Order Now" (and the cart) on the
  * AI Search Result page (Page 3).
  *
- * Two columns: the left holds the "My Cart" list (each row a CartLineItem) and a
- * "People also bought" suggestion grid; the right stacks the Order Summary and
- * the saved Your Info / Shipping / Payment cards. Content is static demo data
- * (see data/checkout.ts) — a real cart + checkout API come later.
+ * The "My Cart" list is the shared cart — everything added anywhere (landing
+ * storefront, AI-result products, or the suggestions below) — so the basket is
+ * consistent across the whole journey. Two columns: the left holds the cart list
+ * and a "People also bought" grid (adding a suggestion drops it into the same
+ * cart); the right stacks the Order Summary and the saved info cards. Customer /
+ * shipping / payment and the delivery/tax/promo lines are still demo data.
  */
 export default function OrderPage() {
   const router = useRouter();
-
-  // Per-line basket quantities (the steppers). Suggestions start at 0 ("ADD").
-  const [quantities, setQuantities] = useState<Record<string, number>>(() =>
-    Object.fromEntries(CART_ITEMS.map((i) => [i.id, i.initialQuantity ?? 1])),
-  );
-  const [suggestionQty, setSuggestionQty] = useState<Record<string, number>>({});
-  const [wishlisted, setWishlisted] = useState<Record<string, boolean>>({});
+  const { items, quantityOf, addItem, increment, decrement } = useCart();
+  const { isWishlisted, toggleWishlist } = useWishlist();
   // Which store offer is chosen per cart line (empty → each line's first offer).
   const [selectedOffer, setSelectedOffer] = useState<Record<string, string>>({});
-
-  // Functional deltas so rapid clicks compound correctly (no stale closure).
-  const bumpQty = (id: string, delta: number) =>
-    setQuantities((prev) => ({ ...prev, [id]: Math.max(0, (prev[id] ?? 0) + delta) }));
-  const bumpSuggestion = (id: string, delta: number) =>
-    setSuggestionQty((prev) => ({ ...prev, [id]: Math.max(0, (prev[id] ?? 0) + delta) }));
-  const toggleWishlist = (id: string) =>
-    setWishlisted((prev) => ({ ...prev, [id]: !prev[id] }));
 
   // The store offer currently chosen for a cart line (or its default first
   // offer), when the product has a price comparison — cream cheese only for now.
@@ -71,30 +61,17 @@ export default function OrderPage() {
     [selectedOffer],
   );
 
-  // Header badge: everything currently in the basket (cart lines + added picks).
-  const cartCount = useMemo(() => {
-    const lines = Object.values(quantities).reduce((s, q) => s + q, 0);
-    const picks = Object.values(suggestionQty).reduce((s, q) => s + q, 0);
-    return lines + picks;
-  }, [quantities, suggestionQty]);
-
   const { delivery, tax, promoDiscount } = ORDER_SUMMARY;
 
-  // Subtotal = every basket unit priced (cart lines + any added suggestions);
-  // total then layers on the fixed delivery/tax and the promo credit. Both
-  // recompute whenever a stepper changes a quantity.
+  // Subtotal prices every cart unit (using the chosen store offer where the line
+  // has one); total then layers on the fixed delivery/tax and the promo credit.
   const subtotal = useMemo(() => {
-    const cart = CART_ITEMS.reduce(
-      (sum, i) =>
-        sum + (selectedOfferFor(i.id)?.price ?? i.price) * (quantities[i.id] ?? 0),
+    const cart = items.reduce(
+      (sum, i) => sum + (selectedOfferFor(i.id)?.price ?? i.price) * i.quantity,
       0,
     );
-    const picks = PEOPLE_ALSO_BOUGHT.reduce(
-      (sum, p) => sum + p.price * (suggestionQty[p.id] ?? 0),
-      0,
-    );
-    return Math.round((cart + picks) * 100) / 100;
-  }, [quantities, suggestionQty, selectedOfferFor]);
+    return Math.round(cart * 100) / 100;
+  }, [items, selectedOfferFor]);
 
   const total = useMemo(
     () => Math.round((subtotal + delivery + tax - promoDiscount) * 100) / 100,
@@ -103,7 +80,7 @@ export default function OrderPage() {
 
   return (
     <>
-      <Header cartCount={cartCount} />
+      <Header />
 
       <main className={styles.main}>
         <div className={styles.container}>
@@ -121,27 +98,33 @@ export default function OrderPage() {
                 </div>
 
                 <div className={styles.cartList}>
-                  {CART_ITEMS.map((item) => {
-                    const offer = selectedOfferFor(item.id);
-                    return (
-                      <CartLineItem
-                        key={item.id}
-                        name={item.name}
-                        storeName={offer?.storeName ?? item.storeName}
-                        imageSrc={item.imageSrc}
-                        imageAlt={item.imageAlt}
-                        quantity={quantities[item.id] ?? 0}
-                        onAdd={() => bumpQty(item.id, 1)}
-                        onIncrement={() => bumpQty(item.id, 1)}
-                        onDecrement={() => bumpQty(item.id, -1)}
-                        storeOffers={PRODUCT_POP_BY_ID[item.id]?.storeOffers}
-                        selectedOfferId={selectedOffer[item.id]}
-                        onSelectOffer={(offerId) =>
-                          setSelectedOffer((prev) => ({ ...prev, [item.id]: offerId }))
-                        }
-                      />
-                    );
-                  })}
+                  {items.length === 0 ? (
+                    <Text as="p" variant="mediumRegular" className={styles.emptyCart}>
+                      Your cart is empty.
+                    </Text>
+                  ) : (
+                    items.map((item) => {
+                      const offer = selectedOfferFor(item.id);
+                      return (
+                        <CartLineItem
+                          key={item.id}
+                          name={item.name}
+                          storeName={offer?.storeName ?? item.storeName ?? ""}
+                          imageSrc={item.imageSrc}
+                          imageAlt={item.imageAlt}
+                          quantity={item.quantity}
+                          onAdd={() => increment(item.id)}
+                          onIncrement={() => increment(item.id)}
+                          onDecrement={() => decrement(item.id)}
+                          storeOffers={PRODUCT_POP_BY_ID[item.id]?.storeOffers}
+                          selectedOfferId={selectedOffer[item.id]}
+                          onSelectOffer={(offerId) =>
+                            setSelectedOffer((prev) => ({ ...prev, [item.id]: offerId }))
+                          }
+                        />
+                      );
+                    })
+                  )}
                 </div>
               </section>
 
@@ -167,12 +150,32 @@ export default function OrderPage() {
                       rating={p.rating}
                       reviewCount={p.reviewCount}
                       price={p.price}
-                      quantity={suggestionQty[p.id] ?? 0}
-                      onAdd={() => bumpSuggestion(p.id, 1)}
-                      onIncrement={() => bumpSuggestion(p.id, 1)}
-                      onDecrement={() => bumpSuggestion(p.id, -1)}
-                      isWishlisted={!!wishlisted[p.id]}
-                      onToggleWishlist={() => toggleWishlist(p.id)}
+                      quantity={quantityOf(p.id)}
+                      onAdd={() =>
+                        addItem({
+                          id: p.id,
+                          name: p.description,
+                          price: p.price,
+                          imageSrc: p.imageSrc,
+                          imageAlt: p.imageAlt,
+                          storeName: p.storeName,
+                          storeLogoSrc: p.storeLogoSrc,
+                        })
+                      }
+                      onIncrement={() => increment(p.id)}
+                      onDecrement={() => decrement(p.id)}
+                      isWishlisted={isWishlisted(p.id)}
+                      onToggleWishlist={() =>
+                        toggleWishlist({
+                          id: p.id,
+                          name: p.description,
+                          price: p.price,
+                          imageSrc: p.imageSrc,
+                          imageAlt: p.imageAlt,
+                          storeName: p.storeName,
+                          storeLogoSrc: p.storeLogoSrc,
+                        })
+                      }
                     />
                   ))}
                 </div>

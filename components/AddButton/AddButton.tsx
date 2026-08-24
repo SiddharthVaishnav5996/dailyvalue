@@ -88,7 +88,10 @@ export function AddButton({
       type="button"
       className={[styles.addBtn, stateClass, className].filter(Boolean).join(" ")}
       onClick={onAdd}
-      aria-label="Add to cart"
+      // Only spell out the bare "ADD" label; for a custom label (Checkout,
+      // SHOP, LOGIN…) the visible text is already the accessible name, and
+      // hard-coding "Add to cart" would mis-announce the button.
+      aria-label={label === "ADD" ? "Add to cart" : undefined}
     >
       {showIcon && <PlusCircle className={styles.icon} />}
       <span className={styles.label}>{label}</span>

@@ -2,13 +2,44 @@
   width: 100%;
   height: var(--header-height);
   flex-shrink: 0;
-  /* 200px holds from ~1440px viewports up; scales down fluidly below that
-     instead of staying fixed and colliding with the header's content. */
-  padding: 0 clamp(24px, 14vw, 200px);
+  /* Narrow screens use the same modest side padding as the page content
+     (clamp), so the brand + actions get the room they need instead of the old
+     14vw that crammed them into the middle and collided on phones. The calc
+     term only overtakes above ~1120px, widening toward the 200px reference
+     margin that's hit exactly at ~1440px. */
+  padding: 0 max(clamp(16px, 4vw, 40px), calc((100vw - 1040px) / 2));
   background: var(--color-white);
   display: flex;
   align-items: center;
   justify-content: space-between;
+  /* Soft separation from the page content scrolling underneath it now that
+     it's fixed above everything else. */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  /* Fixed (not sticky) — a plain translateY on a fixed element always reads
+     from the same viewport-relative baseline, so it can't get stuck the way
+     position:sticky's "stuck range" recalculation occasionally does once a
+     transform is layered on top of it. .headerSpacer below holds its place
+     in the document flow since fixed removes it from layout. */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  transition: transform 250ms ease;
+}
+
+/* Slid out of view while scrolling down; scrolling up (any amount) clears
+   this immediately so the header is always reachable on the way back up. */
+.headerHidden {
+  transform: translateY(-100%);
+}
+
+/* Reserves the header's height in normal flow now that .header itself is
+   position:fixed and out of it — otherwise page content would start at y:0,
+   underneath the header. */
+.headerSpacer {
+  height: var(--header-height);
+  flex-shrink: 0;
 }
 
 .brand {
@@ -52,6 +83,35 @@
   opacity: 0.7;
 }
 
+/* Positioning context for the cart / wishlist dropdown panels. */
+.actionAnchor {
+  position: relative;
+  display: inline-flex;
+}
+
+.wishlistBtn {
+  position: relative;
+}
+
+/* Count of saved items, pinned to the wishlist icon's top-right corner. */
+.wishlistBadge {
+  position: absolute;
+  top: -7px;
+  right: -9px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-primary);
+  color: var(--color-white);
+  border: 2px solid var(--color-white);
+  border-radius: var(--radius-full);
+  font: var(--text-xsmall-bold);
+  line-height: 1;
+}
+
 .cartBtn {
   position: relative;
 }
@@ -84,4 +144,11 @@
 
 .loginBtn:hover {
   opacity: 0.7;
+}
+
+/* Tighten the icon spacing on phones so the brand + actions never collide. */
+@media (max-width: 600px) {
+  .actions {
+    gap: 20px;
+  }
 }

@@ -1,0 +1,30 @@
+/* Subtotal block on the left, Checkout on the right — the CTA sits on the
+   "Subtotal" line, where the amount used to be, with the amount below it. */
+.footerRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.subtotalBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.subtotalPrice {
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+/* Two classes so this beats AddButton.module.css's own `.addBtn` sizing
+   regardless of which module's stylesheet the bundler emits first. */
+.footerRow .checkoutBtn {
+  width: 95px;
+  min-width: 95px;
+  height: 40px;
+  padding: 0 12px;
+  flex-shrink: 0;
+}

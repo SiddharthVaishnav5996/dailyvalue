@@ -12,7 +12,7 @@ export function StarRating({
   rating,
   count = 5,
   size = 10,
-  gap = 5,
+  gap = 1,
   className,
 }: {
   rating: number;

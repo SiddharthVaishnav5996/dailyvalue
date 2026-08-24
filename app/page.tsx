@@ -1,11 +1,13 @@
 import Image from "next/image";
 import { Header } from "@/components/Header/Header";
+import { TrackOrderBanner } from "@/components/TrackOrderBanner/TrackOrderBanner";
 import { Footer } from "@/components/Footer/Footer";
 import { AISearchBarNav } from "@/components/AISearchBar/AISearchBarNav";
 import { CategoryMarquee } from "@/components/CategoryMarquee/CategoryMarquee";
 import { ProductCardInteractive } from "@/components/ProductCard/ProductCardInteractive";
 import { Carousel } from "@/components/Carousel/Carousel";
 import { AddButton } from "@/components/AddButton/AddButton";
+import { FeedbackButton } from "@/components/Feedback/FeedbackButton";
 import { Text } from "@/components/Text/Text";
 import {
   HERO_PRODUCTS,
@@ -34,6 +36,7 @@ export default function Home() {
   return (
     <>
       <Header />
+      <TrackOrderBanner />
 
       <main className={styles.main}>
         {/* Hero — the page scrolls only after this section. */}
@@ -70,7 +73,7 @@ export default function Home() {
 
             <div className={styles.heroCards}>
               {HERO_PRODUCTS.map(({ id, ...product }) => (
-                <ProductCardInteractive key={id} layout="vertical" {...product} />
+                <ProductCardInteractive key={id} id={id} layout="vertical" {...product} />
               ))}
             </div>
           </section>
@@ -82,7 +85,7 @@ export default function Home() {
             </Text>
             <div className={styles.productRow}>
               {TOP_PICKS.map(({ id, ...product }) => (
-                <ProductCardInteractive key={id} layout="vertical" {...product} />
+                <ProductCardInteractive key={id} id={id} layout="vertical" {...product} />
               ))}
             </div>
           </section>
@@ -108,6 +111,7 @@ export default function Home() {
                 {BLACK_FRIDAY_PRODUCTS.map(({ id, ...product }) => (
                   <ProductCardInteractive
                     key={id}
+                    id={id}
                     layout="vertical"
                     // Longest copy here (the Pre-Owned iPhone 12) runs 3 lines;
                     // reserving that on every card keeps the whole row aligned.
@@ -130,7 +134,7 @@ export default function Home() {
               >
                 We will love to hear what you think !
               </Text>
-              <AddButton label="Feedback" className={styles.feedbackCta} />
+              <FeedbackButton className={styles.feedbackCta} />
             </div>
           </section>
         </div>

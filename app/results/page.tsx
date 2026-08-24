@@ -53,7 +53,7 @@ export default function ResultsPage() {
 
       <main className={styles.main} onClick={handleBackgroundClick}>
         <div className={styles.backBar}>
-          <AddButton label="Back" showIcon={false} onAdd={() => router.back()} />
+          <AddButton label="Back" showIcon={false} onAdd={() => router.push("/")} />
         </div>
 
         <ResizableSplit

@@ -1,0 +1,111 @@
+/* One list line, styled as its own card — matching ProductCard's white surface.
+   Flat (no shadow/border) so the rows read as one continuous list. */
+.row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+}
+
+.thumb {
+  position: relative;
+  flex-shrink: 0;
+  width: 66px;
+  height: 66px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--color-lavender-surface);
+}
+
+.thumbImg {
+  object-fit: fill;
+}
+
+.thumbPlaceholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+}
+
+/* min-width:0 is what lets the store and product names actually use this
+   column's width (and ellipsise at its edge) instead of forcing it wider. */
+.meta {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Store on the left, delete pinned to the row's top-right corner. */
+.topLine {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-width: 0;
+}
+
+/* Release StoreName's own 184px cap so it fills this column. Two classes so
+   this beats StoreName.module.css's own `.row` regardless of which module's
+   stylesheet the bundler emits first. */
+.topLine .store {
+  flex: 1;
+  min-width: 0;
+  max-width: none;
+}
+
+/* One line, ellipsised — keeps every row the same height. */
+.name {
+  color: var(--color-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.priceLine {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 6px;
+  min-width: 0;
+}
+
+.price {
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+.unitPrice {
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.iconBtn {
+  display: inline-flex;
+  flex-shrink: 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+  color: var(--color-text);
+  transition: opacity 150ms ease;
+}
+
+.iconBtn:hover {
+  opacity: 0.7;
+}
+
+/* Deleting is the one destructive control here — red on hover marks it. */
+.removeBtn {
+  color: var(--color-text-muted);
+}
+
+.removeBtn:hover {
+  color: var(--color-discount);
+  opacity: 1;
+}

@@ -1,6 +1,6 @@
 "use client";
 
-import { useId } from "react";
+import { useId, type CSSProperties } from "react";
 import { Trash2 } from "lucide-react";
 import { Text } from "@/components/Text/Text";
 import styles from "./ResultTable.module.css";
@@ -35,12 +35,26 @@ export interface ResultTableProps {
   className?: string;
 }
 
-/** Column 5 is reserved for the delete button, so 4 columns carry content. */
-const CONTENT_COLUMNS = 4;
+/** Pads (or trims) a row to `count` cells so every row lines up on the grid. */
+function toCells(cells: string[], count: number): string[] {
+  return Array.from({ length: count }, (_, i) => cells[i] ?? "");
+}
 
-/** Pads to exactly 4 cells so every row lines up on the same 5-track grid. */
-function toCells(cells: string[]): string[] {
-  return Array.from({ length: CONTENT_COLUMNS }, (_, i) => cells[i] ?? "");
+/**
+ * Below the phone breakpoint each row reflows into a card (see the CSS). These
+ * per-cell classes tell that layout what each column becomes:
+ *   - group: the category tag at the top of a group's first card,
+ *   - title: the item / wine name headline,
+ *   - field: a "label: value" line (the label comes from `data-label`).
+ * On desktop the classes are inert — the grid ignores them.
+ */
+function cardCellClass(index: number, groupFirstColumn: boolean): string {
+  if (groupFirstColumn) {
+    if (index === 0) return styles.cellGroup;
+    if (index === 1) return styles.cellTitle;
+    return styles.cellField;
+  }
+  return index === 0 ? styles.cellTitle : styles.cellField;
 }
 
 /**
@@ -48,6 +62,9 @@ function toCells(cells: string[]): string[] {
  * row per item. Every row is its own 5-column grid — 4 content columns plus
  * the delete action — so the ingredients table (3 labels) and the wine table
  * (4 labels) share one column rhythm.
+ *
+ * Below the phone breakpoint the same rows reflow into stacked cards so a
+ * 5-column table never has to cram onto a narrow screen.
  */
 export function ResultTable({
   title,
@@ -59,19 +76,24 @@ export function ResultTable({
   className,
 }: ResultTableProps) {
   const titleId = useId();
+  // The grid carries one 1fr track per real column plus the delete track, so a
+  // 3-column table (ingredients) doesn't leave a blank 4th column padding out
+  // to a 5-track grid — which put a wide void between Quantity and delete.
+  const contentColumns = columns.length;
 
   return (
     <section
       className={[styles.table, className].filter(Boolean).join(" ")}
       aria-labelledby={titleId}
+      style={{ "--content-cols": contentColumns } as CSSProperties}
     >
       <Text as="h2" id={titleId} variant="largeBold" className={styles.title}>
         {title}
       </Text>
 
       <div className={styles.rows} role="table" aria-labelledby={titleId}>
-        <div className={styles.grid} role="row">
-          {toCells(columns).map((label, i) => (
+        <div className={[styles.grid, styles.headerRow].join(" ")} role="row">
+          {toCells(columns, contentColumns).map((label, i) => (
             <Text
               key={i}
               as="span"
@@ -87,12 +109,12 @@ export function ResultTable({
         </div>
 
         {rows.map((row, rowIndex) => {
-          const cells = toCells(row.cells);
+          const cells = toCells(row.cells, contentColumns);
           const previous = rows[rowIndex - 1];
           const continuesGroup =
             groupFirstColumn &&
             previous !== undefined &&
-            toCells(previous.cells)[0] === cells[0];
+            toCells(previous.cells, contentColumns)[0] === cells[0];
           const describes =
             cells[groupFirstColumn ? 1 : 0] || cells.find(Boolean) || "row";
           const removed = mutedRowIds?.includes(row.id) ?? false;
@@ -112,8 +134,12 @@ export function ResultTable({
                   variant={
                     i === 0 && groupFirstColumn ? "mediumBold" : "mediumRegular"
                   }
-                  className={styles.cell}
+                  className={[styles.cell, cardCellClass(i, groupFirstColumn)].join(
+                    " ",
+                  )}
                   role="cell"
+                  // Field label for the card layout: "Quantity 200g" etc.
+                  data-label={columns[i] ?? ""}
                 >
                   {i === 0 && continuesGroup ? "" : value}
                 </Text>

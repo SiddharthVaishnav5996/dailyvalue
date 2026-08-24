@@ -43,3 +43,23 @@
 .inputBarWide > form {
   max-width: none;
 }
+
+/* ---- Wide variant, stacked (results page below the split breakpoint) ----
+   The desktop pane is a fixed height with the search bar pinned to its bottom;
+   when the results page stacks, that fixed height leaves dead space above a
+   short conversation (margin-top:auto pushes the messages down). So here the
+   panel flows to its content: messages stack from the top, the search bar sits
+   right after them, and the whole thing scrolls with the page. Scoped to the
+   wide variant, so the styleguide's fixed-box demo is unaffected. */
+@media (max-width: 1439px) {
+  .panelWide {
+    height: auto;
+  }
+  .panelWide .thread {
+    flex: none;
+    overflow: visible;
+  }
+  .panelWide .list {
+    margin-top: 0;
+  }
+}
