@@ -91,9 +91,12 @@ export default function ResultsPage() {
               <div className={styles.fade} aria-hidden="true" />
 
               <div className={styles.confirmBar}>
+                {/* Gated: logged out, this opens the login card first — the
+                    user must sign in before moving on to the product results. */}
                 <AddButton
                   label="Confirm"
                   showIcon={false}
+                  requiresAuth
                   onAdd={() => router.push("/results/products")}
                 />
               </div>

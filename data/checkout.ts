@@ -88,6 +88,21 @@ export const PAYMENT = {
   last4: "2323",
 };
 
+/* ---- Delivery tip ------------------------------------------------------- */
+
+export interface TipPreset {
+  id: string;
+  amount: number;
+  emoji: string;
+}
+
+/** Preset tip amounts for the delivery-partner tip card. */
+export const TIP_PRESETS: TipPreset[] = [
+  { id: "t-2", amount: 2, emoji: "✌️" },
+  { id: "t-3", amount: 3, emoji: "💌" },
+  { id: "t-5", amount: 5, emoji: "❤️" },
+];
+
 /* ---- People also bought ----------------------------------------------- */
 
 export interface Suggestion {

@@ -1,26 +1,24 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
 import { Text } from "@/components/Text/Text";
-import { LoginModal } from "./LoginModal";
+import { useAuth } from "@/components/Auth/AuthContext";
 import styles from "./LoginButton.module.css";
 
 /**
- * Header account control. Logged out: a LOGIN button that opens the mock login
- * dialog. Logged in: a round profile avatar — clicking it logs back out (mock;
- * no backend/session yet).
+ * Header account control, driven by the shared auth context. Logged out: a LOGIN
+ * button that opens the mock login dialog. Logged in: a round profile avatar —
+ * clicking it logs back out.
  */
 export function LoginButton() {
-  const [modalOpen, setModalOpen] = useState(false);
-  const [loggedIn, setLoggedIn] = useState(false);
+  const { isLoggedIn, promptLogin, logout } = useAuth();
 
-  if (loggedIn) {
+  if (isLoggedIn) {
     return (
       <button
         type="button"
         className={styles.avatar}
-        onClick={() => setLoggedIn(false)}
+        onClick={logout}
         aria-label="Log out"
         title="Log out"
       >
@@ -37,25 +35,10 @@ export function LoginButton() {
   }
 
   return (
-    <>
-      <button
-        type="button"
-        className={styles.loginBtn}
-        onClick={() => setModalOpen(true)}
-      >
-        <Text as="span" variant="mediumRegular">
-          LOGIN
-        </Text>
-      </button>
-      {modalOpen && (
-        <LoginModal
-          onClose={() => setModalOpen(false)}
-          onLogin={() => {
-            setLoggedIn(true);
-            setModalOpen(false);
-          }}
-        />
-      )}
-    </>
+    <button type="button" className={styles.loginBtn} onClick={promptLogin}>
+      <Text as="span" variant="mediumRegular">
+        LOGIN
+      </Text>
+    </button>
   );
 }

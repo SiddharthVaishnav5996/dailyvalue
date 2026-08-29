@@ -2,6 +2,8 @@
 
 import { ItemRow } from "@/components/ItemRow/ItemRow";
 import { ItemListPopup } from "@/components/ItemListPopup/ItemListPopup";
+import { useAuth } from "@/components/Auth/AuthContext";
+import { LoginGateBar } from "@/components/Auth/LoginGateBar";
 import { useWishlist } from "./WishlistContext";
 
 export interface WishlistPopupProps {
@@ -12,9 +14,13 @@ export interface WishlistPopupProps {
  * Saved items, opened from the Header's bookmark icon. The same list lines as
  * the cart, minus the quantity stepper and the heart — a wishlist doesn't
  * track quantities, and every line in here is already saved.
+ *
+ * Everyone can view saved items; only moving forward is gated. Logged out, a
+ * "Login to Proceed" bar sits under the list.
  */
 export function WishlistPopup({ onClose }: WishlistPopupProps) {
   const { items, count, remove } = useWishlist();
+  const { isLoggedIn, promptLogin } = useAuth();
 
   return (
     <ItemListPopup
@@ -23,6 +29,18 @@ export function WishlistPopup({ onClose }: WishlistPopupProps) {
       onClose={onClose}
       isEmpty={items.length === 0}
       emptyMessage="Nothing saved yet — tap the heart on a product to save it."
+      footer={
+        items.length > 0 && !isLoggedIn ? (
+          <LoginGateBar
+            summaryValue={String(count)}
+            summaryLabel="SAVED"
+            onProceed={() => {
+              onClose();
+              promptLogin();
+            }}
+          />
+        ) : undefined
+      }
     >
       {items.map((item) => (
         <ItemRow

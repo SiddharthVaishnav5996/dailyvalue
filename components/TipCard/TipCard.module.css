@@ -1,0 +1,81 @@
+.subtext {
+  color: var(--color-text-muted);
+}
+
+.chipRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chip {
+  flex: 1 1 0;
+  min-width: 68px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 10px 8px;
+  background: transparent;
+  border: 1px solid #e6e6e6;
+  border-radius: 12px;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: background 150ms ease, border-color 150ms ease, color 150ms ease;
+}
+
+.chip:hover {
+  border-color: var(--color-primary);
+}
+
+.chipActive {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.chipEmoji {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.customRow {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.customLabel {
+  color: var(--color-text);
+}
+
+.customInput {
+  width: 100%;
+  padding: 10px 14px;
+  font: var(--text-medium-regular);
+  color: var(--color-text);
+  background: transparent;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+}
+
+.customInput::placeholder {
+  color: var(--color-text-muted);
+}
+
+.customInput:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+/* Hide the number input's native spinner so it matches the plain promo/text
+   field styling used elsewhere on this page. */
+.customInput::-webkit-outer-spin-button,
+.customInput::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.customInput[type="number"] {
+  -moz-appearance: textfield;
+}

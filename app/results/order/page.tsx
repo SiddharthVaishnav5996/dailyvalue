@@ -21,12 +21,14 @@ import { Text } from "@/components/Text/Text";
 import { AddButton } from "@/components/AddButton/AddButton";
 import { ProductCard } from "@/components/ProductCard/ProductCard";
 import { CartLineItem } from "@/components/CartLineItem/CartLineItem";
+import { TipCard } from "@/components/TipCard/TipCard";
 import {
   ORDER_SUMMARY,
   CUSTOMER,
   SHIPPING,
   PAYMENT,
   PEOPLE_ALSO_BOUGHT,
+  TIP_PRESETS,
 } from "@/data/checkout";
 import { PRODUCT_POP_BY_ID, type StoreOffer } from "@/data/productPop";
 import { formatPrice } from "@/lib/format";
@@ -49,6 +51,9 @@ export default function OrderPage() {
   const { isWishlisted, toggleWishlist } = useWishlist();
   // Which store offer is chosen per cart line (empty → each line's first offer).
   const [selectedOffer, setSelectedOffer] = useState<Record<string, string>>({});
+  // Delivery tip: a preset's id, "custom", or null (no tip picked yet).
+  const [tipId, setTipId] = useState<string | null>(null);
+  const [customTip, setCustomTip] = useState("");
 
   // The store offer currently chosen for a cart line (or its default first
   // offer), when the product has a price comparison — cream cheese only for now.
@@ -73,9 +78,20 @@ export default function OrderPage() {
     return Math.round(cart * 100) / 100;
   }, [items, selectedOfferFor]);
 
+  // The chosen tip's dollar amount — a preset's fixed price, or the parsed
+  // custom field (invalid/blank/negative all count as no tip).
+  const tipAmount = useMemo(() => {
+    if (tipId === "custom") {
+      const n = parseFloat(customTip);
+      return Number.isFinite(n) && n > 0 ? n : 0;
+    }
+    return TIP_PRESETS.find((t) => t.id === tipId)?.amount ?? 0;
+  }, [tipId, customTip]);
+
   const total = useMemo(
-    () => Math.round((subtotal + delivery + tax - promoDiscount) * 100) / 100,
-    [subtotal, delivery, tax, promoDiscount],
+    () =>
+      Math.round((subtotal + delivery + tax - promoDiscount + tipAmount) * 100) / 100,
+    [subtotal, delivery, tax, promoDiscount, tipAmount],
   );
 
   return (
@@ -239,6 +255,16 @@ export default function OrderPage() {
                       -{formatPrice(promoDiscount)}
                     </Text>
                   </div>
+                  {tipAmount > 0 && (
+                    <div className={styles.sumRow}>
+                      <Text as="span" variant="mediumRegular">
+                        Delivery Tip
+                      </Text>
+                      <Text as="span" variant="mediumBold">
+                        {formatPrice(tipAmount)}
+                      </Text>
+                    </div>
+                  )}
                 </div>
 
                 <div className={styles.divider} />
@@ -381,6 +407,17 @@ export default function OrderPage() {
                   />
                 </div>
               </section>
+
+              {/* Delivery tip */}
+              <TipCard
+                className={[styles.card, styles.infoCard].join(" ")}
+                presets={TIP_PRESETS}
+                selectedId={tipId}
+                onSelectPreset={(id) => setTipId(id)}
+                onSelectCustom={() => setTipId("custom")}
+                customValue={customTip}
+                onCustomValueChange={setCustomTip}
+              />
             </aside>
           </div>
         </div>

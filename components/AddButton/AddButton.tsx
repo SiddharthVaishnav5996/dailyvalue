@@ -1,4 +1,10 @@
+"use client";
+
+import { useAuth } from "@/components/Auth/AuthContext";
 import styles from "./AddButton.module.css";
+
+/** The add-to-cart role — the default label. */
+const ADD_LABEL = "ADD";
 
 function PlusCircle({ className }: { className?: string }) {
   return (
@@ -34,6 +40,13 @@ export interface AddButtonProps {
    * showing the Default / Active / Hover variants (e.g. in the styleguide).
    */
   state?: "default" | "active" | "hover";
+  /**
+   * Gate the action behind login — a logged-out click opens the login dialog
+   * instead of firing `onAdd`. Off by default: adding to cart/wishlist and plain
+   * navigation stay open to everyone. Opt in on the "move forward" CTAs (the
+   * chat's Confirm) so login is required only before proceeding.
+   */
+  requiresAuth?: boolean;
   onAdd?: () => void;
   onIncrement?: () => void;
   onDecrement?: () => void;
@@ -42,14 +55,28 @@ export interface AddButtonProps {
 
 export function AddButton({
   quantity = 0,
-  label = "ADD",
+  label = ADD_LABEL,
   showIcon = true,
   state = "default",
+  requiresAuth,
   onAdd,
   onIncrement,
   onDecrement,
   className,
 }: AddButtonProps) {
+  const { isLoggedIn, promptLogin } = useAuth();
+  const gated = requiresAuth ?? false;
+
+  function handleAdd() {
+    // Logged out: send them through the login dialog first — the add itself
+    // isn't queued, so they tap ADD again once they're in.
+    if (gated && !isLoggedIn) {
+      promptLogin();
+      return;
+    }
+    onAdd?.();
+  }
+
   // "Grocery added" — quantity stepper.
   if (quantity > 0) {
     return (
@@ -87,11 +114,11 @@ export function AddButton({
     <button
       type="button"
       className={[styles.addBtn, stateClass, className].filter(Boolean).join(" ")}
-      onClick={onAdd}
+      onClick={handleAdd}
       // Only spell out the bare "ADD" label; for a custom label (Checkout,
       // SHOP, LOGIN…) the visible text is already the accessible name, and
       // hard-coding "Add to cart" would mis-announce the button.
-      aria-label={label === "ADD" ? "Add to cart" : undefined}
+      aria-label={label === ADD_LABEL ? "Add to cart" : undefined}
     >
       {showIcon && <PlusCircle className={styles.icon} />}
       <span className={styles.label}>{label}</span>

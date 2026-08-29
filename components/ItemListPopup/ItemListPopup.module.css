@@ -67,8 +67,6 @@
   color: var(--color-text-muted);
   text-align: center;
   padding: 28px 12px;
-  background: var(--color-lavender-surface);
-  border-radius: var(--radius-lg);
 }
 
 .footer {

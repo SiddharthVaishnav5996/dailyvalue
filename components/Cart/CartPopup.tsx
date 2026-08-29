@@ -5,6 +5,8 @@ import { Text } from "@/components/Text/Text";
 import { AddButton } from "@/components/AddButton/AddButton";
 import { ItemRow } from "@/components/ItemRow/ItemRow";
 import { ItemListPopup } from "@/components/ItemListPopup/ItemListPopup";
+import { useAuth } from "@/components/Auth/AuthContext";
+import { LoginGateBar } from "@/components/Auth/LoginGateBar";
 import { formatPrice } from "@/lib/format";
 import { useCart } from "./CartContext";
 import styles from "./CartPopup.module.css";
@@ -24,12 +26,15 @@ export interface CartPopupProps {
 export function CartPopup({ onClose }: CartPopupProps) {
   const router = useRouter();
   const { items, count, subtotal, remove } = useCart();
+  const { isLoggedIn, promptLogin } = useAuth();
 
   function goToCheckout() {
     onClose();
     router.push(ORDER_ROUTE);
   }
 
+  // Everyone can view the basket. Only checking out is gated: logged out, the
+  // Checkout footer is replaced by the green "Login to Proceed" bar.
   return (
     <ItemListPopup
       title="My Cart"
@@ -38,7 +43,16 @@ export function CartPopup({ onClose }: CartPopupProps) {
       isEmpty={items.length === 0}
       emptyMessage="Your cart is empty — add something to get started."
       footer={
-        items.length > 0 ? (
+        items.length === 0 ? undefined : !isLoggedIn ? (
+          <LoginGateBar
+            summaryValue={formatPrice(subtotal)}
+            summaryLabel="TOTAL"
+            onProceed={() => {
+              onClose();
+              promptLogin();
+            }}
+          />
+        ) : (
           /* "Subtotal" with its amount stacked underneath, and Checkout taking
              the spot the amount used to sit in. */
           <div className={styles.footerRow}>
@@ -57,7 +71,7 @@ export function CartPopup({ onClose }: CartPopupProps) {
               className={styles.checkoutBtn}
             />
           </div>
-        ) : undefined
+        )
       }
     >
       {items.map((item) => (
