@@ -1,4 +1,14 @@
+/* Registered so the conic gradient's start angle can be *animated* — a plain
+   custom property isn't interpolatable, so the ring would jump instead of
+   sweeping. */
+@property --dv-ring-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
 .bar {
+  position: relative; /* anchors the ::before ring */
   display: flex;
   align-items: center;
   gap: 12px;
@@ -15,6 +25,63 @@
 .bar:hover,
 .bar:focus-within {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* ---- Rotating glow ring ----
+ * A conic gradient painted over the bar, then masked down to just a 2px band
+ * around the edge (the xor/exclude trick punches the middle out) so the bar's
+ * own surface stays untouched. Idle it's invisible; on focus it fades in and
+ * the gradient's start angle sweeps 0deg -> 360deg. */
+.bar::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 12px; /* the bar's 10px + the 2px it sits outside by */
+  padding: 2px; /* the ring's thickness — this is what the mask keeps */
+  background: conic-gradient(
+    from var(--dv-ring-angle),
+    var(--color-primary),
+    var(--color-primary-light),
+    var(--color-primary),
+    var(--color-primary-light),
+    var(--color-primary)
+  );
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 220ms ease;
+  pointer-events: none; /* never intercept clicks meant for the field */
+}
+
+.bar:focus-within::before {
+  opacity: 1;
+  animation: ringSpin 3s linear infinite;
+}
+
+@keyframes ringSpin {
+  to {
+    --dv-ring-angle: 360deg;
+  }
+}
+
+/* Soft brand-coloured bloom under the ring, so it reads as "glowing" rather
+   than just an outline. */
+.bar:focus-within {
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.15),
+    0 0 18px rgba(65, 58, 120, 0.25);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bar:focus-within::before {
+    animation: none; /* ring still shows, just holds still */
+  }
 }
 
 .icon {

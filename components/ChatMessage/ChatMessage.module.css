@@ -13,9 +13,8 @@
 
 .bubble {
   max-width: 624px;
-  padding: 20px;
+  padding: 15px;
   border-radius: 20px;
-  border: 1px solid rgba(149, 144, 144, 0.6);
   white-space: pre-wrap;
   overflow-wrap: break-word;
 }
@@ -31,13 +30,12 @@
 }
 
 /* ---- variant="wide" (results page) ----
-   Bubbles hug their content up to 450px so the thread reads like a real chat
-   (short messages get small bubbles) rather than every bubble spanning the
-   column. The user's text still sets right; the AI keeps the muted lavender
-   fill. */
+   Bubbles hug their content so the thread reads like a real chat (short
+   messages get small bubbles) rather than every bubble spanning the column.
+   Text sets left inside each bubble; the AI keeps the muted lavender fill. */
 .wideUser {
-  max-width: 450px;
-  text-align: right;
+  max-width: 404px;
+  text-align: left;
 }
 
 .wideAi {

@@ -1,0 +1,343 @@
+.hero {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(24px, 4vw, 40px);
+  min-height: clamp(560px, calc(100dvh - 75px), 935px);
+  padding: clamp(24px, 6vw, 80px) clamp(16px, 4vw, 40px);
+  text-align: center;
+  overflow: hidden; /* clip the scaled, blurred backdrop */
+}
+
+/* ---- Lightly-blurred backdrop: ground + bag ---- */
+.backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  /* Light brand wash — soft tints of --color-primary (#413a78), lifted ~5%
+     lighter, with a warm glow of the orange accent (#fe8c07) in the corner. */
+  background:
+    radial-gradient(70% 62% at 88% 90%, rgba(254, 140, 7, 0.16) 0%, rgba(254, 140, 7, 0) 60%),
+    radial-gradient(64% 56% at 10% 12%, rgba(254, 140, 7, 0.12) 0%, rgba(254, 140, 7, 0) 60%),
+    radial-gradient(120% 90% at 50% 12%, #faf9fd 0%, #f1eefa 55%, #e9e4f6 100%);
+  filter: blur(1.5px);
+  transform: scale(1.05);
+}
+
+.bag {
+  position: absolute;
+  left: 50%;
+  bottom: 2%;
+  transform: translateX(-50%);
+  width: clamp(260px, 34vw, 460px);
+  aspect-ratio: 1 / 1;
+}
+
+.bagImg {
+  object-fit: contain;
+}
+
+/* ---- Spotlight scrim: lifts the sharp foreground off the scene ---- */
+.scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: radial-gradient(
+    58% 44% at 50% 44%,
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(255, 255, 255, 0.45) 45%,
+    rgba(255, 255, 255, 0) 78%
+  );
+  pointer-events: none;
+}
+
+/* ---- Sharp parallax layer for the floating cards ---- */
+.layer {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  perspective: 1000px; /* gives the tilt real depth */
+  pointer-events: none; /* only the cards themselves are interactive */
+}
+
+/* ---- Floating cards: Delivery + AI tabs share this look ---- */
+.tab,
+.badge {
+  --s: 1;
+  position: absolute;
+  pointer-events: auto;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  box-shadow: 0 16px 34px -14px rgba(6, 24, 12, 0.26);
+  /* Pointer parallax + subtle 3D tilt + hover lift, composed in one transform.
+     --mx/--my (-1..1) come from the hero; --dx/--dy are each card's depth. */
+  transform:
+    translate3d(calc(var(--mx, 0) * var(--dx, 0px)), calc(var(--my, 0) * var(--dy, 0px)), 0)
+    rotateX(calc(var(--my, 0) * -3.5deg))
+    rotateY(calc(var(--mx, 0) * 3.5deg))
+    scale(var(--s));
+  transition: transform 240ms cubic-bezier(0.22, 0.61, 0.36, 1), box-shadow 240ms ease;
+  will-change: transform;
+}
+
+.tab:hover,
+.badge:hover {
+  --s: 1.05;
+  box-shadow: 0 24px 48px -14px rgba(6, 24, 12, 0.34);
+  z-index: 1;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px 12px 12px;
+  border-radius: 999px;
+}
+
+.tabDelivery {
+  top: 15%;
+  left: clamp(12px, 6vw, 90px);
+  --dx: 15px;
+  --dy: 11px;
+}
+
+.tabAI {
+  /* Nudged diagonally — a touch lower and further in from the right edge. */
+  top: 20%;
+  right: clamp(24px, 7vw, 132px);
+  --dx: 15px;
+  --dy: 11px;
+}
+
+.tabIcon {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  flex: none;
+}
+
+.tabIcon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.iconDelivery {
+  background: #eef2f7;
+  color: #0f172a;
+}
+
+.iconAI {
+  background: #ece9f7;
+  color: var(--color-primary);
+}
+
+.tabBody {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.15;
+}
+
+.tabTitle {
+  font: var(--text-medium-bold);
+  color: #0f172a;
+}
+
+.tabSub {
+  font: var(--text-small-regular);
+  color: #64748b;
+}
+
+/* ---- Badges: shared vertical card; each side positioned + depth below.
+   They drift more than the tabs (bigger --dx/--dy) so they read as nearer. ---- */
+.badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 158px;
+  padding: 16px 14px;
+  text-align: center;
+  border-radius: 22px;
+}
+
+.badgeQuality {
+  top: 47%;
+  right: clamp(8px, 4vw, 64px);
+  --dx: 26px;
+  --dy: 20px;
+}
+
+.badgeTrusted {
+  /* Sits a little lower than the quality badge opposite it. */
+  top: 54%;
+  left: clamp(8px, 4vw, 64px);
+  --dx: 22px;
+  --dy: 17px;
+}
+
+.badgeIcon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.iconQuality {
+  background: #e7f6ea;
+  color: #157a39;
+}
+
+.iconTrusted {
+  background: #e9eefc;
+  color: #2f5fd0;
+}
+
+.badgeIcon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.badgeBody {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.badgeTitle {
+  font: var(--text-medium-bold);
+  color: #0f172a;
+}
+
+.badgeSub {
+  font: var(--text-small-regular);
+  color: #64748b;
+}
+
+/* ---- Foreground: the two elements we never compromise ---- */
+.foreground {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(24px, 4vw, 40px);
+  width: 100%;
+}
+
+.heroHeading {
+  text-wrap: balance;
+  text-shadow: 0 1px 14px rgba(255, 255, 255, 0.85);
+}
+
+.searchWrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 737px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tab,
+  .badge {
+    transition: box-shadow 240ms ease;
+  }
+}
+
+/* ---- Below ~1150px the mid-side badges would sit behind the centred search
+   bar, so drop them to the bottom corners (clear of it). ---- */
+@media (max-width: 1150px) {
+  .badgeTrusted,
+  .badgeQuality {
+    top: auto;
+    bottom: 11%;
+  }
+
+  .badgeTrusted {
+    left: clamp(8px, 3vw, 40px);
+  }
+
+  .badgeQuality {
+    right: clamp(8px, 3vw, 40px);
+  }
+}
+
+/* ---- Phones: shrink + tuck the ambient cards so they don't crowd the search ---- */
+@media (max-width: 760px) {
+  .bag {
+    width: min(66vw, 300px);
+    bottom: 4%;
+  }
+
+  .tabDelivery {
+    top: 6%;
+    left: 8px;
+  }
+
+  .tabAI {
+    top: 6%;
+    right: 8px;
+  }
+
+  .tab {
+    gap: 8px;
+    padding: 8px 12px 8px 8px;
+  }
+
+  .tabIcon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .tabIcon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .tabTitle {
+    font: var(--text-normal-bold);
+  }
+
+  /* Badges shrink but stay — they've dropped to the bottom corners (below),
+     clear of the search. */
+  .badge {
+    width: 138px;
+    padding: 12px 10px;
+    gap: 6px;
+    border-radius: 18px;
+  }
+
+  .badgeIcon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .badgeIcon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .badgeSub {
+    font: var(--text-xsmall-regular);
+  }
+
+  .badgeTrusted,
+  .badgeQuality {
+    bottom: 7%;
+  }
+
+  .badgeTrusted {
+    left: 8px;
+  }
+
+  .badgeQuality {
+    right: 8px;
+  }
+}

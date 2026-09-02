@@ -3,14 +3,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: clamp(16px, 3vw, 24px);
+  gap: clamp(6px, 3vw, 11px);
 }
 
-/* Back arrow, pinned to the card's top-left (OTP → change number; else close). */
+/* Back arrow, pinned to the card's top-left (OTP → change number; else close).
+   Centred on the brand row beside it: the brand starts 4px down (its
+   margin-top) and is as tall as the logo, so its midpoint is 4px + half that
+   height — translateY then centres the arrow on it. */
 .backBtn {
   position: absolute;
-  top: 0;
+  top: calc(4px + clamp(40px, 6vw, 48px) / 2);
   left: 0;
+  transform: translateY(-50%);
   display: inline-flex;
   padding: 4px;
   border: none;
@@ -91,11 +95,94 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
+/* ---- Country picker ---- */
+.countryWrap {
+  position: relative;
+  flex-shrink: 0;
+}
+
 .prefix {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   font: var(--text-medium-regular);
   color: var(--color-text);
-  padding-right: 12px;
+  padding: 0 12px 0 0;
+  border: none;
   border-right: 1px solid rgba(0, 0, 0, 0.12);
+  background: transparent;
+  cursor: pointer;
+}
+
+.prefix:hover {
+  opacity: 0.7;
+}
+
+/* Fixed box so every flag lines up regardless of its aspect. */
+.flag {
+  display: inline-flex;
+  flex-shrink: 0;
+  width: 22px;
+  height: 15px;
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+.flag svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.countryCatcher {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+}
+
+.countryList {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  z-index: 41;
+  list-style: none;
+  width: max-content;
+  min-width: 220px;
+  padding: 6px;
+  background: var(--color-white);
+  border-radius: 10px;
+  box-shadow: 0 14px 44px rgba(0, 0, 0, 0.22);
+}
+
+.countryOption {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 8px 10px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  text-align: left;
+  cursor: pointer;
+  transition: background 120ms ease;
+}
+
+.countryOption:hover {
+  background: var(--color-lavender-surface);
+}
+
+.countryName {
+  flex: 1;
+  font: var(--text-normal-regular);
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+.countryDial {
+  font: var(--text-normal-regular);
+  color: var(--color-text-muted);
 }
 
 .phoneInput {

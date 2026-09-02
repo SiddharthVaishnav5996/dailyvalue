@@ -3,6 +3,8 @@
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { Header } from "@/components/Header/Header";
+import { useCart } from "@/components/Cart/CartContext";
+import { startDelivery } from "@/lib/delivery";
 import { Text } from "@/components/Text/Text";
 import styles from "./page.module.css";
 
@@ -24,6 +26,16 @@ const AUTO_REDIRECT_MS = 3000;
  */
 export default function OrderConfirmedPage() {
   const router = useRouter();
+  const { clear } = useCart();
+
+  // The order is placed — this is the single "order placed" moment. Empty the
+  // cart (header badge → 0, fresh basket next shop) and start the delivery
+  // countdown that powers the Track-Order banner, so both reflect the order no
+  // matter which "Continue Shopping" path the user takes from here.
+  useEffect(() => {
+    clear();
+    startDelivery();
+  }, [clear]);
 
   // Prefetch order status, and auto-advance there if the user stays idle.
   // Clicking either action navigates away first, which unmounts this page and

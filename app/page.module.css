@@ -12,6 +12,8 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  /* The light brand wash now lives on `body` (globals.css) so every page shares
+     it — this container stays transparent to let it show through. */
 }
 
 /* ---- Hero ---------------------------------------------------------------- */

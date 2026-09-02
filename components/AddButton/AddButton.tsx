@@ -37,9 +37,13 @@ export interface AddButtonProps {
   showIcon?: boolean;
   /**
    * Force a visual state. Real hover/press styling is automatic; this is for
-   * showing the Default / Active / Hover variants (e.g. in the styleguide).
+   * showing the Default / Active / Hover / Disabled variants (e.g. in the
+   * styleguide). To actually disable the control, use `disabled` — that also
+   * blocks the click.
    */
-  state?: "default" | "active" | "hover";
+  state?: "default" | "active" | "hover" | "disabled";
+  /** Greys the button out and stops it responding (also disables the stepper). */
+  disabled?: boolean;
   /**
    * Gate the action behind login — a logged-out click opens the login dialog
    * instead of firing `onAdd`. Off by default: adding to cart/wishlist and plain
@@ -58,6 +62,7 @@ export function AddButton({
   label = ADD_LABEL,
   showIcon = true,
   state = "default",
+  disabled = false,
   requiresAuth,
   onAdd,
   onIncrement,
@@ -66,6 +71,9 @@ export function AddButton({
 }: AddButtonProps) {
   const { isLoggedIn, promptLogin } = useAuth();
   const gated = requiresAuth ?? false;
+  // `disabled` is the real thing; state="disabled" is the styleguide's way of
+  // showing the same look without wiring up a dead control.
+  const isDisabled = disabled || state === "disabled";
 
   function handleAdd() {
     // Logged out: send them through the login dialog first — the add itself
@@ -80,11 +88,16 @@ export function AddButton({
   // "Grocery added" — quantity stepper.
   if (quantity > 0) {
     return (
-      <div className={[styles.stepper, className].filter(Boolean).join(" ")}>
+      <div
+        className={[styles.stepper, isDisabled ? styles.stepperDisabled : "", className]
+          .filter(Boolean)
+          .join(" ")}
+      >
         <button
           type="button"
           className={styles.stepBtn}
           onClick={onDecrement}
+          disabled={isDisabled}
           aria-label="Decrease quantity"
         >
           <MinusCircle className={styles.icon} />
@@ -94,6 +107,7 @@ export function AddButton({
           type="button"
           className={styles.stepBtn}
           onClick={onIncrement}
+          disabled={isDisabled}
           aria-label="Increase quantity"
         >
           <PlusCircle className={styles.icon} />
@@ -103,8 +117,9 @@ export function AddButton({
   }
 
   // "ADD" button.
-  const stateClass =
-    state === "active"
+  const stateClass = isDisabled
+    ? styles.stateDisabled
+    : state === "active"
       ? styles.stateActive
       : state === "hover"
         ? styles.stateHover
@@ -115,6 +130,7 @@ export function AddButton({
       type="button"
       className={[styles.addBtn, stateClass, className].filter(Boolean).join(" ")}
       onClick={handleAdd}
+      disabled={isDisabled}
       // Only spell out the bare "ADD" label; for a custom label (Checkout,
       // SHOP, LOGIN…) the visible text is already the accessible name, and
       // hard-coding "Add to cart" would mis-announce the button.

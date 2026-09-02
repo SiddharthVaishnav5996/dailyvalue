@@ -10,9 +10,10 @@ import {
   type KeyboardEvent,
 } from "react";
 import Image from "next/image";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, ChevronDown } from "lucide-react";
 import { Modal } from "@/components/Modal/Modal";
 import { Text } from "@/components/Text/Text";
+import { COUNTRIES, DEFAULT_COUNTRY, type Country } from "./countries";
 import styles from "./LoginModal.module.css";
 
 export interface LoginModalProps {
@@ -38,18 +39,20 @@ type Step = "phone" | "otp" | "success";
 export function LoginModal({ onClose, onLoginPhone }: LoginModalProps) {
   const [step, setStep] = useState<Step>("phone");
   const [phone, setPhone] = useState("");
+  const [country, setCountry] = useState<Country>(DEFAULT_COUNTRY);
+  const [countryOpen, setCountryOpen] = useState(false);
   const [otp, setOtp] = useState<string[]>(() => Array(OTP_LENGTH).fill(""));
   const [error, setError] = useState<string | null>(null);
   const [secondsLeft, setSecondsLeft] = useState(0);
 
-  const phoneRef = useRef<HTMLInputElement>(null);
   const otpRefs = useRef<Array<HTMLInputElement | null>>([]);
 
-  const phoneComplete = phone.length === 10;
+  const phoneComplete = phone.length === country.digits;
 
-  // Focus the phone field on the phone step, and the first OTP box on that step.
+  // Focus the first OTP box when that step opens. The phone field is left
+  // unfocused on purpose so its "Enter mobile number" placeholder reads first —
+  // the caret appears once the user taps the field.
   useEffect(() => {
-    if (step === "phone") phoneRef.current?.focus();
     if (step === "otp") otpRefs.current[0]?.focus();
   }, [step]);
 
@@ -69,7 +72,7 @@ export function LoginModal({ onClose, onLoginPhone }: LoginModalProps) {
 
   function goToOtp() {
     if (!phoneComplete) {
-      setError("Enter a 10-digit mobile number.");
+      setError(`Enter a ${country.digits}-digit mobile number.`);
       return;
     }
     setError(null);
@@ -79,8 +82,17 @@ export function LoginModal({ onClose, onLoginPhone }: LoginModalProps) {
   }
 
   function handlePhoneChange(e: ChangeEvent<HTMLInputElement>) {
-    setPhone(e.target.value.replace(/\D/g, "").slice(0, 10));
+    setPhone(e.target.value.replace(/\D/g, "").slice(0, country.digits));
     if (error) setError(null);
+  }
+
+  function selectCountry(next: Country) {
+    setCountry(next);
+    setCountryOpen(false);
+    // Trim if the new country allows fewer digits, and clear a stale
+    // "enter N digits" error so it can't contradict the new selection.
+    setPhone((p) => p.slice(0, next.digits));
+    setError(null);
   }
 
   function commitOtp(next: string[]) {
@@ -174,11 +186,11 @@ export function LoginModal({ onClose, onLoginPhone }: LoginModalProps) {
         ) : step === "otp" ? (
           <form className={styles.body} onSubmit={handleSubmit}>
             <div className={styles.headings}>
-              <Text as="h2" variant="largeRegular" className={styles.title}>
+              <Text as="h2" variant="mediumRegular" className={styles.title}>
                 Verify your number
               </Text>
-              <Text as="p" variant="mediumRegular" className={styles.subtitle}>
-                Enter the {OTP_LENGTH}-digit code sent to +91 {phone}
+              <Text as="p" variant="normalRegular" className={styles.subtitle}>
+                Enter the {OTP_LENGTH}-digit code sent to {country.dial} {phone}
               </Text>
             </div>
 
@@ -227,18 +239,59 @@ export function LoginModal({ onClose, onLoginPhone }: LoginModalProps) {
         ) : (
           <form className={styles.body} onSubmit={handleSubmit}>
             <div className={styles.headings}>
-              <Text as="h2" variant="largeRegular" className={styles.title}>
+              <Text as="h2" variant="mediumRegular" className={styles.title}>
                 Log in or Sign up
               </Text>
-              <Text as="p" variant="mediumRegular" className={styles.subtitle}>
+              <Text as="p" variant="normalRegular" className={styles.subtitle}>
                 Compare every store, get the daily value.
               </Text>
             </div>
 
             <div className={styles.phoneField}>
-              <span className={styles.prefix}>+91</span>
+              {/* Country picker — US and Canada share "+1", so the flag is
+                  what actually distinguishes the selection. */}
+              <div className={styles.countryWrap}>
+                <button
+                  type="button"
+                  className={styles.prefix}
+                  onClick={() => setCountryOpen((open) => !open)}
+                  aria-label={`Country: ${country.name} (${country.dial})`}
+                  aria-haspopup="listbox"
+                  aria-expanded={countryOpen}
+                >
+                  <span className={styles.flag}>{country.flag}</span>
+                  <span>{country.dial}</span>
+                  <ChevronDown size={16} aria-hidden="true" />
+                </button>
+
+                {countryOpen && (
+                  <>
+                    <div
+                      className={styles.countryCatcher}
+                      onClick={() => setCountryOpen(false)}
+                      role="presentation"
+                    />
+                    <ul className={styles.countryList} role="listbox" aria-label="Country">
+                      {COUNTRIES.map((c) => (
+                        <li key={c.iso}>
+                          <button
+                            type="button"
+                            className={styles.countryOption}
+                            role="option"
+                            aria-selected={c.iso === country.iso}
+                            onClick={() => selectCountry(c)}
+                          >
+                            <span className={styles.flag}>{c.flag}</span>
+                            <span className={styles.countryName}>{c.name}</span>
+                            <span className={styles.countryDial}>{c.dial}</span>
+                          </button>
+                        </li>
+                      ))}
+                    </ul>
+                  </>
+                )}
+              </div>
               <input
-                ref={phoneRef}
                 type="tel"
                 inputMode="numeric"
                 name="phone"

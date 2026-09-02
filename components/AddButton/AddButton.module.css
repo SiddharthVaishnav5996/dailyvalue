@@ -20,15 +20,45 @@
 }
 
 .addBtn:active {
-  background: var(--color-primary-hover);
+  background: var(--color-primary-active);
 }
 
-/* Forced states (styleguide / programmatic). Active shares the primary color. */
+/* Forced states (styleguide / programmatic) — these mirror the real :hover and
+   :active styling above, so the three steps stay visibly distinct: default is
+   the primary, hover a shade down, active 8% darker again. */
 .stateActive {
-  background: var(--color-primary);
+  background: var(--color-primary-active);
 }
 .stateHover {
   background: var(--color-primary-hover);
+}
+
+/* Disabled — light grey, and it must beat .addBtn:hover/:active, which would
+   otherwise re-tint it on hover. */
+.addBtn.stateDisabled,
+.addBtn.stateDisabled:hover,
+.addBtn.stateDisabled:active {
+  background: var(--color-disabled);
+  color: var(--color-disabled-text);
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+/* Same treatment for the stepper form of the control. Both classes are needed:
+   .stepper sets its own background further down this file, and at equal
+   specificity the later rule would otherwise win. */
+.stepper.stepperDisabled {
+  background: var(--color-disabled);
+  color: var(--color-disabled-text);
+}
+
+.stepperDisabled .stepBtn {
+  color: var(--color-disabled-text);
+  cursor: not-allowed;
+}
+
+.stepperDisabled .stepBtn:hover {
+  opacity: 1; /* no hover feedback on a dead control */
 }
 
 .label {

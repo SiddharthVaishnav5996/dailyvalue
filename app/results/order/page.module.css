@@ -66,6 +66,20 @@
   padding-left: calc(var(--cart-thumb) + var(--cart-gap));
 }
 
+/* "Edit" — brand-coloured action that returns to the chat result to change the
+   order. Unpadded so it still sits flush with the row's right edge. */
+.editCartBtn {
+  padding: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--color-primary);
+}
+
+.editCartBtn:hover {
+  opacity: 0.8;
+}
+
 .cartList {
   display: flex;
   flex-direction: column;

@@ -61,6 +61,11 @@
   /* ---- Brand ---- */
   --color-primary: #413a78;        /* rgb(65, 58, 120) */
   --color-primary-hover: #2e2954;  /* rgb(46, 41, 84) — Add button hover */
+  --color-primary-active: #2a264d; /* rgb(42, 38, 77) — pressed/active: 8% darker
+                                      than hover, so default -> hover -> active
+                                      reads as three distinct steps */
+  --color-primary-light: #8b80d6;  /* rgb(139, 128, 214) — lighter brand tint,
+                                      e.g. the search bar's glowing border */
 
   /* ---- Footer ---- */
   --color-footer-bg: #544d85;      /* rgb(84, 77, 133) */
@@ -71,6 +76,8 @@
   --color-text: #000000;
   --color-text-muted: #9b9b9b;
   --color-disabled: #dadada;       /* rgb(218, 218, 218) — pending / not-yet-reached */
+  --color-disabled-text: #6f6f6f;  /* rgb(111, 111, 111) — label on --color-disabled;
+                                      --color-text-muted is too faint to read on it */
 
   /* ---- Accent greens (used ad hoc, e.g. deals / savings highlights) ---- */
   --color-green-bright: #00d207;   /* rgb(0, 210, 7) */

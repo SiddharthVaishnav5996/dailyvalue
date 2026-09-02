@@ -1,10 +1,12 @@
 /**
- * Demo delivery countdown shared between the Order Status "Continue Shopping"
- * CTA (Page 7) and the Track-Order banner on the landing page.
+ * Demo delivery countdown for the active order. Started the moment an order is
+ * placed (the order-confirmation page) — the same point the cart is emptied —
+ * and read by the Track-Order banner on the landing page. The Order Status
+ * "Continue Shopping" CTA also calls startDelivery as a no-op safety net.
  *
- * The active order's delivery deadline (an epoch-ms timestamp) is kept in
- * localStorage so it survives the client-side navigation from the status page
- * back to the landing page. All helpers no-op on the server (no `window`).
+ * The delivery deadline (an epoch-ms timestamp) is kept in localStorage so it
+ * survives client-side navigation (and reloads) back to the landing page. All
+ * helpers no-op on the server (no `window`).
  */
 
 export const DELIVERY_KEY = "dv_delivery_deadline";

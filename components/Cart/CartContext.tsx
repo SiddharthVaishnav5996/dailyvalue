@@ -38,6 +38,8 @@ interface CartContextValue {
   /** Seed a line at a set quantity only if it isn't tracked yet (recipe
    *  pre-load). Leaves the user's own changes — including removals — alone. */
   ensureItem: (item: CartItemInput, quantity: number) => void;
+  /** Empty the cart entirely — used once an order is placed. */
+  clear: () => void;
 }
 
 const CartContext = createContext<CartContextValue | null>(null);
@@ -92,6 +94,8 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     );
   }, []);
 
+  const clear = useCallback(() => setEntries({}), []);
+
   const quantityOf = useCallback((id: string) => entries[id]?.quantity ?? 0, [entries]);
   const isTracked = useCallback((id: string) => id in entries, [entries]);
 
@@ -122,8 +126,9 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
       decrement,
       remove,
       ensureItem,
+      clear,
     }),
-    [items, count, subtotal, quantityOf, isTracked, addItem, increment, decrement, remove, ensureItem],
+    [items, count, subtotal, quantityOf, isTracked, addItem, increment, decrement, remove, ensureItem, clear],
   );
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;

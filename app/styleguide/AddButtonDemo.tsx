@@ -32,7 +32,7 @@ export function AddButtonDemo() {
       <div className={styles.demoCell}>
         <AddButton state="active" />
         <Text variant="smallRegular" className={styles.muted}>
-          Active (#413A78)
+          Active (#2A264D)
         </Text>
       </div>
 
@@ -44,9 +44,23 @@ export function AddButtonDemo() {
       </div>
 
       <div className={styles.demoCell}>
+        <AddButton state="disabled" />
+        <Text variant="smallRegular" className={styles.muted}>
+          Disabled (#DADADA)
+        </Text>
+      </div>
+
+      <div className={styles.demoCell}>
         <AddButton quantity={1} />
         <Text variant="smallRegular" className={styles.muted}>
           Grocery added (stepper)
+        </Text>
+      </div>
+
+      <div className={styles.demoCell}>
+        <AddButton quantity={1} disabled />
+        <Text variant="smallRegular" className={styles.muted}>
+          Stepper — disabled
         </Text>
       </div>
 

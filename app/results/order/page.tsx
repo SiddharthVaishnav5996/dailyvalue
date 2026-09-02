@@ -66,7 +66,13 @@ export default function OrderPage() {
     [selectedOffer],
   );
 
-  const { delivery, tax, promoDiscount } = ORDER_SUMMARY;
+  // An empty basket carries no charges: tax drops to zero and the promo credit
+  // doesn't apply (its row hides below), so the summary reads $0.00 throughout
+  // instead of taxing — or discounting — nothing.
+  const hasItems = items.length > 0;
+  const { delivery } = ORDER_SUMMARY;
+  const tax = hasItems ? ORDER_SUMMARY.tax : 0;
+  const promoDiscount = hasItems ? ORDER_SUMMARY.promoDiscount : 0;
 
   // Subtotal prices every cart unit (using the chosen store offer where the line
   // has one); total then layers on the fixed delivery/tax and the promo credit.
@@ -81,12 +87,15 @@ export default function OrderPage() {
   // The chosen tip's dollar amount — a preset's fixed price, or the parsed
   // custom field (invalid/blank/negative all count as no tip).
   const tipAmount = useMemo(() => {
+    // Nothing to deliver on an empty basket — the tip card is hidden below, so
+    // a tip picked earlier mustn't linger in the summary either.
+    if (!hasItems) return 0;
     if (tipId === "custom") {
       const n = parseFloat(customTip);
       return Number.isFinite(n) && n > 0 ? n : 0;
     }
     return TIP_PRESETS.find((t) => t.id === tipId)?.amount ?? 0;
-  }, [tipId, customTip]);
+  }, [hasItems, tipId, customTip]);
 
   const total = useMemo(
     () =>
@@ -108,9 +117,17 @@ export default function OrderPage() {
                   <Text as="span" variant="mediumBold">
                     My Cart
                   </Text>
-                  <Text as="span" variant="mediumBold">
-                    Edit
-                  </Text>
+                  {/* Back to the chat result (Page 2) to change the order. */}
+                  <button
+                    type="button"
+                    className={styles.editCartBtn}
+                    onClick={() => router.push("/results")}
+                    aria-label="Edit cart"
+                  >
+                    <Text as="span" variant="mediumBold">
+                      Edit
+                    </Text>
+                  </button>
                 </div>
 
                 <div className={styles.cartList}>
@@ -247,14 +264,16 @@ export default function OrderPage() {
                       {formatPrice(tax)}
                     </Text>
                   </div>
-                  <div className={[styles.sumRow, styles.promoRow].join(" ")}>
-                    <Text as="span" variant="mediumRegular">
-                      Promotion Code Applied
-                    </Text>
-                    <Text as="span" variant="mediumBold">
-                      -{formatPrice(promoDiscount)}
-                    </Text>
-                  </div>
+                  {hasItems && (
+                    <div className={[styles.sumRow, styles.promoRow].join(" ")}>
+                      <Text as="span" variant="mediumRegular">
+                        Promotion Code Applied
+                      </Text>
+                      <Text as="span" variant="mediumBold">
+                        -{formatPrice(promoDiscount)}
+                      </Text>
+                    </div>
+                  )}
                   {tipAmount > 0 && (
                     <div className={styles.sumRow}>
                       <Text as="span" variant="mediumRegular">
@@ -282,6 +301,9 @@ export default function OrderPage() {
                   label="Place Order"
                   showIcon={false}
                   className={styles.placeBtn}
+                  // Nothing to order on an empty basket — the component's
+                  // disabled state also blocks the click through to payment.
+                  disabled={!hasItems}
                   onAdd={() => router.push("/results/order/verifying")}
                 />
                 <button
@@ -408,16 +430,18 @@ export default function OrderPage() {
                 </div>
               </section>
 
-              {/* Delivery tip */}
-              <TipCard
-                className={[styles.card, styles.infoCard].join(" ")}
-                presets={TIP_PRESETS}
-                selectedId={tipId}
-                onSelectPreset={(id) => setTipId(id)}
-                onSelectCustom={() => setTipId("custom")}
-                customValue={customTip}
-                onCustomValueChange={setCustomTip}
-              />
+              {/* Delivery tip — only once there's an order to deliver. */}
+              {hasItems && (
+                <TipCard
+                  className={[styles.card, styles.infoCard].join(" ")}
+                  presets={TIP_PRESETS}
+                  selectedId={tipId}
+                  onSelectPreset={(id) => setTipId(id)}
+                  onSelectCustom={() => setTipId("custom")}
+                  customValue={customTip}
+                  onCustomValueChange={setCustomTip}
+                />
+              )}
             </aside>
           </div>
         </div>

@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Header } from "@/components/Header/Header";
 import { TrackOrderBanner } from "@/components/TrackOrderBanner/TrackOrderBanner";
 import { Footer } from "@/components/Footer/Footer";
-import { AISearchBarNav } from "@/components/AISearchBar/AISearchBarNav";
+import { Hero } from "@/components/Hero/Hero";
 import { CategoryMarquee } from "@/components/CategoryMarquee/CategoryMarquee";
 import { ProductCardInteractive } from "@/components/ProductCard/ProductCardInteractive";
 import { Carousel } from "@/components/Carousel/Carousel";
@@ -40,14 +40,7 @@ export default function Home() {
 
       <main className={styles.main}>
         {/* Hero — the page scrolls only after this section. */}
-        <section className={styles.hero}>
-          <Text as="h1" variant="heading4" className={styles.heroHeading}>
-            What are you looking for ?
-          </Text>
-          <div className={styles.searchWrap}>
-            <AISearchBarNav />
-          </div>
-        </section>
+        <Hero />
 
         {/* Category selector — full-bleed, auto-scrolls right→left, pauses on hover. */}
         <CategoryMarquee className={styles.categories} />

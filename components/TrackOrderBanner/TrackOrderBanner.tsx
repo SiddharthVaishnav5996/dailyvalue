@@ -34,7 +34,7 @@ function subscribe(onChange: () => void) {
  * order is out for delivery it counts down (soft-green); when the countdown ends
  * it flips to a brand-coloured "Order Delivered" and stays until the user closes
  * it with the cross. It only renders for someone with an order in flight — the
- * deadline is seeded by the Order Status "Continue Shopping" CTA (see
+ * deadline is set when an order is placed (the order-confirmation page, see
  * lib/delivery), so a first-time visitor sees nothing. Height matches the header.
  */
 export function TrackOrderBanner() {
