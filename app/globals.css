@@ -1,5 +1,13 @@
 :root {
   --background: #ffffff;
+  /* Site-wide light brand wash — purple tints with warm accent glows in opposite
+     corners. Shared by the body and the header (both fixed) so they paint the
+     same pixels and read as one continuous surface, with no seam under the
+     header. */
+  --page-wash:
+    radial-gradient(70% 62% at 88% 90%, rgba(254, 140, 7, 0.16) 0%, rgba(254, 140, 7, 0) 60%),
+    radial-gradient(64% 56% at 10% 12%, rgba(254, 140, 7, 0.12) 0%, rgba(254, 140, 7, 0) 60%),
+    radial-gradient(120% 90% at 50% 12%, #faf9fd 0%, #f1eefa 55%, #e9e4f6 100%);
 }
 
 html {
@@ -20,13 +28,8 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  /* Site-wide light brand wash: purple tints with warm accent glows in
-     opposite corners. Fixed so the glows stay in the viewport corners while
-     scrolling any page. */
-  background:
-    radial-gradient(70% 62% at 88% 90%, rgba(254, 140, 7, 0.16) 0%, rgba(254, 140, 7, 0) 60%),
-    radial-gradient(64% 56% at 10% 12%, rgba(254, 140, 7, 0.12) 0%, rgba(254, 140, 7, 0) 60%),
-    radial-gradient(120% 90% at 50% 12%, #faf9fd 0%, #f1eefa 55%, #e9e4f6 100%);
+  /* Fixed so the glows stay in the viewport corners while scrolling any page. */
+  background: var(--page-wash);
   background-attachment: fixed;
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;

@@ -270,6 +270,13 @@ export interface CarouselSlide {
    * Takes precedence over the split halves below.
    */
   bannerSrc?: string;
+  /**
+   * How a `bannerSrc` fills the slide. Defaults to "contain" (fitted whole, with
+   * the `background` hiding the letterbox). Use "cover" to fill edge-to-edge when
+   * the artwork's aspect is close to the slide's — it crops only a sliver of the
+   * top/bottom instead of leaving side gaps. Ignored for the split layout.
+   */
+  bannerFit?: "contain" | "cover";
   /** Left half — headline artwork (transparent PNG, white text). */
   textImageSrc?: string;
   /** Right half — the visual. */
@@ -305,6 +312,9 @@ export const CAROUSEL_SLIDES: CarouselSlide[] = [
     id: "slide-summer",
     alt: "Summer Worthy — reserve summer's hottest products, buy online and pick up in-store in 2 hours",
     bannerSrc: "/stores/Product card Images/carousel 4.png",
+    // Its aspect (3.32) is within ~1.4% of the slide's (3.41) — fill edge-to-edge
+    // so there's no side gap; the crop off the top/bottom is only a few px.
+    bannerFit: "cover",
     background: "#ffffff",
   },
   {

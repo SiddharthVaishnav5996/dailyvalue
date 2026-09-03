@@ -198,11 +198,23 @@ export function ProductCard({
           <Text as="span" variant="mediumBold" className={styles.price}>
             {formatPrice(price)}
           </Text>
-          {originalPrice != null && (
-            <Text as="span" variant="smallRegular" className={styles.originalPrice}>
-              {formatPrice(originalPrice)}
-            </Text>
-          )}
+          {/* Always rendered so every price block is the same two-line height —
+              that keeps the Add button on the same line across a row whether or
+              not a card is discounted. Space is held (visibility) when there's
+              no original price. */}
+          <Text
+            as="span"
+            variant="smallRegular"
+            className={[
+              styles.originalPrice,
+              originalPrice == null ? styles.originalPriceHidden : "",
+            ]
+              .filter(Boolean)
+              .join(" ")}
+            aria-hidden={originalPrice == null}
+          >
+            {originalPrice != null ? formatPrice(originalPrice) : " "}
+          </Text>
         </div>
 
         <AddButton

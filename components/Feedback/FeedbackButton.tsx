@@ -19,6 +19,7 @@ export function FeedbackButton({ className }: FeedbackButtonProps) {
     <>
       <AddButton
         label="Feedback"
+        showIcon={false}
         className={className}
         onAdd={() => setOpen(true)}
       />

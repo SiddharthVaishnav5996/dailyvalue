@@ -113,7 +113,12 @@ export function Carousel({ slides, className }: CarouselProps) {
                     alt={slide.alt}
                     fill
                     sizes="(max-width: 900px) 100vw, 1160px"
-                    className={styles.banner}
+                    className={[
+                      styles.banner,
+                      slide.bannerFit === "cover" ? styles.bannerCover : "",
+                    ]
+                      .filter(Boolean)
+                      .join(" ")}
                     draggable={false}
                     priority={i === 0}
                   />

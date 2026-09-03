@@ -60,7 +60,7 @@ export default function Home() {
                 <Text as="h2" variant="heading2" className={styles.bannerTitle}>
                   Premium Room Comfort
                 </Text>
-                <AddButton label="SHOP" />
+                <AddButton label="SHOP" showIcon={false} />
               </div>
             </div>
 
@@ -97,7 +97,7 @@ export default function Home() {
                 <Text as="p" variant="heading4" className={styles.bfDiscount}>
                   Upto 70% OFF
                 </Text>
-                <AddButton label="SHOP" className={styles.bfCta} />
+                <AddButton label="SHOP" showIcon={false} className={styles.bfCta} />
               </div>
 
               <div className={styles.productRow}>

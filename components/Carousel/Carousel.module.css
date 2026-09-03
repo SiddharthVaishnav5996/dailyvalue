@@ -38,6 +38,12 @@
   user-select: none;
 }
 
+/* Opt-in per slide (bannerFit: "cover") — fill the slide edge-to-edge instead of
+   letterboxing. Only safe when the artwork's aspect is close to the slide's. */
+.bannerCover {
+  object-fit: cover;
+}
+
 /* ---- Two-part slide: headline + CTA on the left, visual on the right ----
  * Everything is contained inside the slide frame; both artworks scale down to
  * fit (object-fit: contain) rather than overflow or crop. */

@@ -218,6 +218,12 @@
   text-decoration: line-through;
 }
 
+/* No original price on this card — keep the line's height reserved (so the price
+   block stays two lines tall and the row's Add buttons line up), just hidden. */
+.originalPriceHidden {
+  visibility: hidden;
+}
+
 .deliveryRow {
   display: flex;
   align-items: center;

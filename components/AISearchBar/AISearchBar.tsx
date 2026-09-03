@@ -14,6 +14,16 @@ export interface AISearchBarProps {
   onVoiceClick?: () => void;
   onVoiceStop?: () => void;
   placeholder?: string;
+  /**
+   * Cycles these as the placeholder, one every `rotateMs`, each rising out of
+   * the field as the next rises in. Takes precedence over `placeholder`.
+   */
+  placeholders?: string[];
+  rotateMs?: number;
+  /** Hides the attachment + voice controls (the header's quick search). */
+  showActions?: boolean;
+  /** "compact" is the shorter, narrower bar that fits inside the header. */
+  size?: "default" | "compact";
   className?: string;
 }
 
@@ -41,6 +51,10 @@ export function AISearchBar({
   onVoiceClick,
   onVoiceStop,
   placeholder = "Help me prepare a Blueberry Cheesecake",
+  placeholders,
+  rotateMs = 2000,
+  showActions = true,
+  size = "default",
   className,
 }: AISearchBarProps) {
   const [internalValue, setInternalValue] = useState("");
@@ -50,6 +64,18 @@ export function AISearchBar({
 
   const [isRecording, setIsRecording] = useState(false);
   const [elapsedSeconds, setElapsedSeconds] = useState(0);
+
+  const rotating = (placeholders?.length ?? 0) > 1;
+  const [placeholderIndex, setPlaceholderIndex] = useState(0);
+
+  useEffect(() => {
+    if (!rotating) return;
+    const id = setInterval(
+      () => setPlaceholderIndex((i) => (i + 1) % placeholders!.length),
+      rotateMs,
+    );
+    return () => clearInterval(id);
+  }, [rotating, placeholders, rotateMs]);
 
   useEffect(() => {
     if (!isRecording) return;
@@ -94,23 +120,45 @@ export function AISearchBar({
 
   return (
     <form
-      className={[styles.bar, className].filter(Boolean).join(" ")}
+      className={[styles.bar, size === "compact" ? styles.barCompact : "", className]
+        .filter(Boolean)
+        .join(" ")}
       onSubmit={handleSubmit}
       role="search"
     >
-      <Search className={styles.icon} aria-hidden="true" size={20} />
+      <Search className={styles.icon} aria-hidden="true" size={size === "compact" ? 18 : 20} />
       <label htmlFor={inputId} className={styles.srOnly}>
         Ask DailyValue
       </label>
-      <input
-        id={inputId}
-        type="text"
-        className={styles.input}
-        value={inputValue}
-        onChange={handleChange}
-        placeholder={placeholder}
-        autoComplete="off"
-      />
+
+      {/* The rotating placeholder can't be the native `placeholder` attribute —
+          that's a plain string and isn't animatable. It's an overlay instead,
+          shown only while the field is empty, and never clickable so taps still
+          land on the input underneath. */}
+      <div className={styles.field}>
+        <input
+          id={inputId}
+          type="text"
+          className={styles.input}
+          value={inputValue}
+          onChange={handleChange}
+          placeholder={rotating ? "" : placeholder}
+          autoComplete="off"
+        />
+        {rotating && !inputValue && (
+          <div className={styles.rotator} aria-hidden="true">
+            <span
+              key={placeholderIndex}
+              className={styles.rotatorItem}
+              style={{ animationDuration: `${rotateMs}ms` }}
+            >
+              {placeholders![placeholderIndex]}
+            </span>
+          </div>
+        )}
+      </div>
+
+      {showActions && (
       <div className={styles.actions}>
         <input
           ref={fileInputRef}
@@ -151,6 +199,7 @@ export function AISearchBar({
           </button>
         )}
       </div>
+      )}
     </form>
   );
 }

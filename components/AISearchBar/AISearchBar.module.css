@@ -18,7 +18,7 @@
   padding: 15px 20px;
   border: none;
   border-radius: 10px;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 2px #00000026;
   transition: box-shadow 150ms ease;
 }
 
@@ -87,6 +87,82 @@
 .icon {
   flex-shrink: 0;
   color: var(--color-text);
+}
+
+/* Shorter, narrower variant that fits inside the 75px header. It shrinks with
+   the header (width:100% against a max), with a floor so the placeholder keeps
+   a readable amount of room rather than collapsing to just the icon. */
+.barCompact {
+  height: 42px;
+  max-width: 420px;
+  min-width: 130px;
+  padding: 0 14px;
+  gap: 8px;
+  border-radius: 21px;
+}
+
+/* Holds the input and the rotating placeholder stacked on the same spot. */
+.field {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* Clips the placeholder as it rises in and out. */
+.rotator {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none; /* taps must reach the input underneath */
+  display: flex;
+  align-items: center;
+}
+
+/* One cycle per placeholder: rise in, hold, rise out. React remounts this via
+   `key`, which restarts the animation each time the word changes. */
+.rotatorItem {
+  display: block;
+  width: 100%;
+  font: var(--text-medium-regular);
+  color: var(--color-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  animation: rotatePlaceholder 2000ms ease-in-out both;
+}
+
+@keyframes rotatePlaceholder {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  12% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  88% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+/* Holding still is the accessible fallback — the words still cycle, they just
+   don't travel. */
+@media (prefers-reduced-motion: reduce) {
+  .rotatorItem {
+    animation: none;
+  }
+}
+
+.barCompact .rotatorItem,
+.barCompact .input {
+  font: var(--text-normal-regular);
 }
 
 .input {

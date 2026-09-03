@@ -12,17 +12,14 @@
   overflow: hidden; /* clip the scaled, blurred backdrop */
 }
 
-/* ---- Lightly-blurred backdrop: ground + bag ---- */
+/* ---- Lightly-blurred backdrop: just the bag now ----
+   No ground of its own — it stays transparent so the page's fixed wash
+   (globals.css) shows straight through and continues seamlessly into the
+   category strip below, with no seam at the hero's bottom edge. */
 .backdrop {
   position: absolute;
   inset: 0;
   z-index: 0;
-  /* Light brand wash — soft tints of --color-primary (#413a78), lifted ~5%
-     lighter, with a warm glow of the orange accent (#fe8c07) in the corner. */
-  background:
-    radial-gradient(70% 62% at 88% 90%, rgba(254, 140, 7, 0.16) 0%, rgba(254, 140, 7, 0) 60%),
-    radial-gradient(64% 56% at 10% 12%, rgba(254, 140, 7, 0.12) 0%, rgba(254, 140, 7, 0) 60%),
-    radial-gradient(120% 90% at 50% 12%, #faf9fd 0%, #f1eefa 55%, #e9e4f6 100%);
   filter: blur(1.5px);
   transform: scale(1.05);
 }

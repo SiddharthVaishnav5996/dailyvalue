@@ -65,10 +65,21 @@
   color: #fe8c07;
 }
 
+/* Quick search sits between the brand and the actions, taking the slack in
+   between rather than a fixed width. */
+.searchWrap {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+  padding: 0 clamp(12px, 3vw, 40px);
+}
+
 .actions {
   display: flex;
   align-items: center;
   gap: 32px;
+  flex-shrink: 0;
 }
 
 .iconBtn {
@@ -150,5 +161,50 @@
 @media (max-width: 600px) {
   .actions {
     gap: 20px;
+  }
+}
+
+/* The search keeps its row and just narrows as the window does (it's flex:1
+   against a fixed brand and actions), so it only leaves the line as a last
+   resort — see the two breakpoints below. */
+
+/* Tighten the gutters around it before anything more drastic. */
+@media (max-width: 700px) {
+  .searchWrap {
+    padding: 0 8px;
+  }
+}
+
+/* The wordmark costs ~104px — more than the search has to spare down here — so
+   the brand goes to its logo mark alone. That's what buys another ~130px of
+   single-row runway (without it the search would be down to 49px at 391px). */
+@media (max-width: 520px) {
+  .wordmark {
+    display: none;
+  }
+}
+
+/* Out of runway: the search wraps onto its own full-width row underneath.
+   .header and .headerSpacer share one height declaration on purpose — the
+   header is position:fixed, so if the spacer didn't grow by the same amount
+   the page content would slide up underneath the taller bar. */
+@media (max-width: 389px) {
+  .header,
+  .headerSpacer {
+    height: 114px; /* 8 pad + 48 brand row + 8 gap + 42 search + 8 pad */
+  }
+
+  .header {
+    flex-wrap: wrap;
+    align-content: center;
+    row-gap: 8px;
+    padding-block: 8px;
+  }
+
+  .searchWrap {
+    /* order + 100% basis push it past the brand and actions onto row two. */
+    order: 3;
+    flex-basis: 100%;
+    padding: 0;
   }
 }

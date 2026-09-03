@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { Bookmark, ShoppingCart } from "lucide-react";
 import { Text } from "@/components/Text/Text";
+import { AISearchBar } from "@/components/AISearchBar/AISearchBar";
 import { useWishlist } from "@/components/Wishlist/WishlistContext";
 import { WishlistPopup } from "@/components/Wishlist/WishlistPopup";
 import { useCart } from "@/components/Cart/CartContext";
@@ -15,6 +16,17 @@ import styles from "./Header.module.css";
 /** Ignore scroll-down hiding until past this many px, so it doesn't flicker
  *  right at the top of the page. */
 const HIDE_THRESHOLD_PX = 80;
+
+/** Cycled one at a time in the header's quick search. */
+const QUICK_SEARCH_PLACEHOLDERS = [
+  'Search "egg"',
+  'Search "banana"',
+  'Search "iPhone"',
+  'Search "Pickle"',
+  'Search "milk"',
+  'Search "bread"',
+  'Search "coffee"',
+];
 
 export interface HeaderProps {
   /** Overrides opening the wishlist popup (the default). */
@@ -87,6 +99,16 @@ export function Header({ onWishlistClick, onCartClick }: HeaderProps) {
             <span className={styles.value}>Value</span>
           </Text>
         </Link>
+
+        {/* Quick product search — the AI bar without its attachment/voice
+            actions, for shoppers who just want to look something up. */}
+        <div className={styles.searchWrap}>
+          <AISearchBar
+            size="compact"
+            showActions={false}
+            placeholders={QUICK_SEARCH_PLACEHOLDERS}
+          />
+        </div>
 
         <div className={styles.actions}>
           {/* Each icon anchors its own dropdown — the panel positions itself

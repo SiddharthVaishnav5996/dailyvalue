@@ -20,13 +20,14 @@
 }
 
 /* Each item owns its trailing gap so one copy is an exact quarter of the track,
-   keeping the -25% shift below seamless. Greyed by default; brightens to its own
-   category colour on hover. */
+   keeping the shift below seamless. A solid mid-dark grey (clearly more legible
+   than the faint muted grey it was); brightens to its own category colour on
+   hover. */
 .item {
   flex: none;
   margin-right: clamp(28px, 5vw, 72px);
   font: var(--text-large-bold);
-  color: var(--color-text-muted);
+  color: #4a4a4a;
   white-space: nowrap;
   transition: color 200ms ease;
 }
@@ -35,13 +36,15 @@
   color: var(--cat-color);
 }
 
-/* Four identical copies → shift by one copy (-100%/4). */
+/* Four identical copies → shift by two copies (-50%). It lands on an identical
+   frame, so the loop stays seamless; it just covers twice the distance per cycle
+   (so the strip scrolls a touch quicker). */
 @keyframes scroll {
   from {
     transform: translateX(0);
   }
   to {
-    transform: translateX(-25%);
+    transform: translateX(-50%);
   }
 }
 
