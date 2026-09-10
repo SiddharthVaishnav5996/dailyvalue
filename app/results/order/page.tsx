@@ -117,24 +117,40 @@ export default function OrderPage() {
                   <Text as="span" variant="mediumBold">
                     My Cart
                   </Text>
-                  {/* Back to the chat result (Page 2) to change the order. */}
-                  <button
-                    type="button"
-                    className={styles.editCartBtn}
-                    onClick={() => router.push("/results")}
-                    aria-label="Edit cart"
-                  >
-                    <Text as="span" variant="mediumBold">
-                      Edit
-                    </Text>
-                  </button>
+                  {/* Back to the chat result (Page 2) to change the order —
+                      hidden on an empty basket, where there's nothing to edit. */}
+                  {hasItems && (
+                    <button
+                      type="button"
+                      className={styles.editCartBtn}
+                      onClick={() => router.push("/results")}
+                      aria-label="Edit cart"
+                    >
+                      <Text as="span" variant="mediumBold">
+                        Edit
+                      </Text>
+                    </button>
+                  )}
                 </div>
 
                 <div className={styles.cartList}>
                   {items.length === 0 ? (
-                    <Text as="p" variant="mediumRegular" className={styles.emptyCart}>
-                      Your cart is empty.
-                    </Text>
+                    <div className={styles.emptyCart}>
+                      <Text
+                        as="p"
+                        variant="mediumRegular"
+                        className={styles.emptyCartText}
+                      >
+                        Your cart is empty.
+                      </Text>
+                      {/* The empty state carries its own way out, rather than
+                          repurposing Edit / Go back to Chat. */}
+                      <AddButton
+                        label="Browse Products"
+                        showIcon={false}
+                        onAdd={() => router.push("/")}
+                      />
+                    </div>
                   ) : (
                     items.map((item) => {
                       const offer = selectedOfferFor(item.id);

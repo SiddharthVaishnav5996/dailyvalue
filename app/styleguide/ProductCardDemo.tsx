@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { ProductCard } from "@/components/ProductCard/ProductCard";
+import { Text } from "@/components/Text/Text";
 import styles from "./styleguide.module.css";
 
 const SAMPLE = {
@@ -47,23 +48,58 @@ export function ProductCardDemo() {
   const wishlistD = useWishlist();
 
   return (
-    <div className={styles.productCardGrid}>
-      <ProductCard layout="horizontal" showDiscount {...SAMPLE} {...cardA} {...wishlistA} />
-      <ProductCard
-        layout="horizontal"
-        showDiscount={false}
-        {...SAMPLE}
-        {...cardB}
-        {...wishlistB}
-      />
-      <ProductCard layout="vertical" showDiscount {...SAMPLE} {...cardC} {...wishlistC} />
-      <ProductCard
-        layout="vertical"
-        showDiscount={false}
-        {...SAMPLE}
-        {...cardD}
-        {...wishlistD}
-      />
+    <div className={styles.productCardGroups}>
+      <div>
+        <Text variant="normalBold" as="h3" className={styles.cardGroupLabel}>
+          Horizontal — 458px
+        </Text>
+        <div className={styles.cardRow}>
+          <div className={[styles.cardCell, styles.cardCellHorizontal].join(" ")}>
+            <ProductCard layout="horizontal" showDiscount {...SAMPLE} {...cardA} {...wishlistA} />
+            <Text variant="smallRegular" className={styles.muted}>
+              Show Discount = true
+            </Text>
+          </div>
+          <div className={[styles.cardCell, styles.cardCellHorizontal].join(" ")}>
+            <ProductCard
+              layout="horizontal"
+              showDiscount={false}
+              {...SAMPLE}
+              {...cardB}
+              {...wishlistB}
+            />
+            <Text variant="smallRegular" className={styles.muted}>
+              Show Discount = false (slot stays reserved)
+            </Text>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <Text variant="normalBold" as="h3" className={styles.cardGroupLabel}>
+          Vertical — 204px
+        </Text>
+        <div className={styles.cardRow}>
+          <div className={[styles.cardCell, styles.cardCellVertical].join(" ")}>
+            <ProductCard layout="vertical" showDiscount {...SAMPLE} {...cardC} {...wishlistC} />
+            <Text variant="smallRegular" className={styles.muted}>
+              Show Discount = true
+            </Text>
+          </div>
+          <div className={[styles.cardCell, styles.cardCellVertical].join(" ")}>
+            <ProductCard
+              layout="vertical"
+              showDiscount={false}
+              {...SAMPLE}
+              {...cardD}
+              {...wishlistD}
+            />
+            <Text variant="smallRegular" className={styles.muted}>
+              Show Discount = false (slot stays reserved)
+            </Text>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

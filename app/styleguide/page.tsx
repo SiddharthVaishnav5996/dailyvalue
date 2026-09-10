@@ -248,7 +248,9 @@ export default function StyleguidePage() {
           Product Card
         </Text>
         <Text variant="smallRegular" className={styles.muted}>
-          Horizontal 458×240 (with / without discount pill) · Vertical 204×411
+          Two layouts, each with the discount pill on and off. Heights are
+          intentionally equal within a layout — hiding the pill leaves its slot
+          reserved so cards stay aligned in a row.
         </Text>
         <ProductCardDemo />
       </section>

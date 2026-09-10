@@ -86,9 +86,17 @@
   gap: clamp(16px, 2vw, 24px);
 }
 
-/* Empty-basket line — sits in the same gutter the item names occupy. */
+/* Empty-basket state — sits in the same gutter the item names occupy, and
+   carries its own CTA back to the storefront. */
 .emptyCart {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
   padding: 8px 0 8px calc(var(--cart-thumb) + var(--cart-gap));
+}
+
+.emptyCartText {
   color: var(--color-text-muted);
 }
 

@@ -176,12 +176,43 @@
   margin-top: 20px;
 }
 
-.productCardGrid {
+/* Product card demo. The horizontal (458px) and vertical (204px) cards are
+   grouped into separate rows — wrapped together in one flex they interleaved
+   into a ragged staircase, with a vertical card orphaned beside a horizontal
+   one. Each card sits in a fixed-width cell so it keeps its spec width and the
+   caption lines up under it. */
+.productCardGroups {
   margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.cardGroupLabel {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.cardRow {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
   gap: 24px;
+}
+
+.cardCell {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 100%;
+}
+
+.cardCellHorizontal {
+  width: 458px;
+}
+
+.cardCellVertical {
+  width: 204px;
 }
 
 /* Demo-only bounded height so the scrolling thread + pinned search bar are
