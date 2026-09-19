@@ -143,6 +143,7 @@ lib/
   images/pexels.ts         # photo lookup + cache
   recipe/pdf.ts            # recipe -> PDF, loaded on demand
   search/SearchContext.tsx # one search result, shared across pages
+  ui/useScrollLock.ts      # freeze the page behind a modal, on the right element
 data/                      # stores, seeded catalog, checkout demo content
 styles/tokens.css          # design tokens
 ```
