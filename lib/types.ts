@@ -1,25 +1,52 @@
 /*
  * Shared domain types for DailyValue.
- * These describe the data that flows from the AI → catalog matching →
- * price comparison → UI. Keeping them in one place keeps the pipeline honest.
+ *
+ * Read this file first. Everything the AI produces, everything the catalog
+ * resolves, and everything the UI renders is described here, so this file is
+ * the contract the whole pipeline agrees on:
+ *
+ *   query -> AI plan -> resolved products -> offers -> UI
+ *
+ * A "type" here is just a promise about the shape of an object. TypeScript
+ * checks the promise at build time, so if the AI layer starts returning
+ * something the UI doesn't expect, the build fails instead of the page.
  */
 
-/** A partner grocery store the app can compare / order from. */
+/* ---------------------------------------------------------------------------
+ * Stores
+ * ------------------------------------------------------------------------ */
+
+/** A partner store DailyValue can compare and order from. */
 export interface Store {
   id: string;
   name: string;
   /** Brand color used for chips/badges in the UI. */
   color: string;
-  /** Short label used for the faux logo tile. */
+  /** Short label used for the fallback initials tile. */
   logoText: string;
+  /** Public path to the store's real logo, when we have one. */
+  logoSrc?: string;
   deliveryFee: number;
-  /** Human-friendly delivery window, e.g. "Today, 2–4 PM". */
+  /** Human-friendly delivery window, e.g. "Today, 2-4 PM". */
   deliveryEta: string;
+  /** Illustrative distance from the shopper, used to sort and to label cards. */
+  distanceKm: number;
+  /**
+   * Relative price level, 1.00 = baseline. Multiplies a product's base price
+   * so one store stays consistently cheaper than another across every item.
+   */
+  priceIndex: number;
+  /** What this store sells - see DEPARTMENTS in data/stores.ts. */
+  departments: string[];
 }
+
+/* ---------------------------------------------------------------------------
+ * Catalog
+ * ------------------------------------------------------------------------ */
 
 /**
  * A catalog product. The SAME product is sold at multiple stores at different
- * prices — that's what makes the price comparison meaningful.
+ * prices - that's what makes the price comparison meaningful.
  */
 export interface Product {
   id: string;
@@ -34,16 +61,201 @@ export interface Product {
   emoji: string;
   /** Aliases used to match free-text ingredients to this product. */
   searchTerms: string[];
-  /** storeId → price in CAD. */
+  /** storeId -> price in CAD. */
   prices: Record<string, number>;
 }
+
+/* ---------------------------------------------------------------------------
+ * What the AI returns
+ *
+ * This is the shape we force the model to reply in. Both Gemini and Groq get
+ * the same schema, so the rest of the app never learns which one answered.
+ * See lib/ai/schema.ts for the machine-readable version of this.
+ * ------------------------------------------------------------------------ */
+
+/** One row of a result table. Mirrors ResultTableRow in the UI exactly. */
+export interface AITableRow {
+  /** Stable within a response, e.g. "i1". Items point back at these. */
+  id: string;
+  /** Cell text left-to-right, filling columns 1-4. */
+  cells: string[];
+}
+
+/** One result table. Mirrors ResultTableProps in the UI exactly. */
+export interface AITable {
+  /** Heading, e.g. "Blueberry Cheesecake - Ingredients". */
+  title: string;
+  /** 2-4 column labels. A 5th column is reserved for the delete action. */
+  columns: string[];
+  /** Treat column 1 as a repeating group label, e.g. "Cheesecake Filling". */
+  groupFirstColumn: boolean;
+  rows: AITableRow[];
+}
+
+/**
+ * One thing to buy. This is deliberately NOT a product: it is a specification
+ * that the resolver then satisfies, either from the catalog or by generating
+ * a plausible product on the fly.
+ */
+export interface AIItem {
+  /** Table rows this purchase covers. One product can satisfy several rows. */
+  rowIds: string[];
+  /** Plain name, e.g. "Cream cheese". */
+  name: string;
+  /** A brand the model suggests, when it has a strong one, e.g. "Philadelphia". */
+  brandHint: string | null;
+  /** Display category, e.g. "Dairy", "Appliances". */
+  category: string;
+  /** Which store department stocks this - see DEPARTMENTS in data/stores.ts. */
+  department: string;
+  /** Aliases to help the catalog matcher find an existing product. */
+  searchTerms: string[];
+  /** How many packs to buy. */
+  quantity: number;
+  /** Pack size, e.g. "250 g", "12 ct", "Queen". */
+  packSize: string | null;
+  /** The model's CAD price estimate. Used ONLY when the catalog has no match. */
+  estimatedPrice: number | null;
+}
+
+/**
+ * A written recipe: the method, not just the shopping list.
+ *
+ * Only present when the shopper is cooking a specific dish. A restock or a
+ * mattress has no recipe, so the field is null for those.
+ *
+ * The ingredients are repeated here even though the table already lists them.
+ * That is deliberate: a recipe saved as a PDF has to stand on its own, long
+ * after the table on screen has been edited or closed.
+ */
+export interface AIRecipe {
+  /** e.g. "Creamy Alfredo Pasta". No emoji - this ends up in a PDF. */
+  title: string;
+  /** How many people this quantity feeds, e.g. 9. */
+  servings: number;
+  /** e.g. "15 min". Null when it genuinely does not apply. */
+  prepTime: string | null;
+  cookTime: string | null;
+  /** One line each, amount first: "900 g fettuccine". */
+  ingredients: string[];
+  /** The method, in order. One action per step. */
+  steps: string[];
+  /** Optional advice: make-ahead, substitutions, storage. */
+  tips: string[];
+}
+
+/** The single structured object every provider must return. */
+export interface AIPlan {
+  /**
+   * The scope guardrail. False for anything outside grocery, food, recipes,
+   * drinks, household and general retail shopping.
+   */
+  inScope: boolean;
+  /** Why we cannot help, when inScope is false. Null otherwise. */
+  refusal: string | null;
+  /** The assistant's chat message. Always present. */
+  reply: string;
+  /** Zero or more tables. Empty for a conversational answer with nothing to buy. */
+  tables: AITable[];
+  /** The shopping list. Empty when there is nothing to buy. */
+  items: AIItem[];
+  /** The written method, when the shopper is cooking a dish. Null otherwise. */
+  recipe: AIRecipe | null;
+}
+
+/* ---------------------------------------------------------------------------
+ * What the resolver produces
+ * ------------------------------------------------------------------------ */
+
+/** One store's price for one product. */
+export interface Offer {
+  /** The store's id, e.g. "walmart". Doubles as the selection key in the UI. */
+  id: string;
+  storeName: string;
+  storeLogoSrc?: string;
+  storeDistanceKm: number;
+  price: number;
+  /** Shown struck through when this offer is a markdown. */
+  originalPrice?: number;
+  /** 0-5, one decimal. */
+  rating: number;
+  reviewCount: number;
+  /** Green loyalty line in the comparison dropdown, e.g. "200 Scene+ Points". */
+  promo?: string;
+  /** Red badge on the card when this offer is the selected one. */
+  cardBadge?: string;
+}
+
+/** An AI item, resolved into something buyable across real stores. */
+export interface ResolvedProduct {
+  id: string;
+  /** Table rows this product fulfils, copied from the AIItem. */
+  rowIds: string[];
+  /** Full display name shown on the card. */
+  description: string;
+  brand: string;
+  category: string;
+  department: string;
+  packSize: string;
+  /** Tile emoji, used whenever no photo is available. */
+  emoji: string;
+  imageSrc?: string;
+  imageAlt?: string;
+  imageFit?: "cover" | "contain";
+  /**
+   * Where this came from - useful for debugging, and for being honest in the UI.
+   *
+   *   curated   - one of the ~36 hand-photographed products. Best cards in the
+   *               app: real product shot, real copy, fitted to the frame.
+   *   catalog   - a seeded grocery product with real per-store prices.
+   *   generated - built on the fly for something neither list covers.
+   */
+  source: "curated" | "catalog" | "generated";
+  /** Every store that stocks it, already ranked best-first. */
+  offers: Offer[];
+  /** How many to put in the basket. */
+  quantity: number;
+}
+
+/** The full response returned by POST /api/search. */
+export interface SearchResult {
+  query: string;
+  /** Which provider answered, or the built-in demo engine. */
+  source: "gemini" | "groq" | "demo";
+  inScope: boolean;
+  /** The assistant's chat message, shown in the thread. */
+  reply: string;
+  tables: AITable[];
+  /**
+   * The AI's shopping list, exactly as it answered.
+   *
+   * Kept alongside the products because the two age differently. The list is
+   * the expensive part - an AI request - and stays valid. The products are
+   * derived from it using the catalog, the curated photos and the matcher,
+   * all of which change as the project does. Keeping the list means a saved
+   * search can rebuild its products from current data without asking the AI
+   * again. See POST /api/resolve.
+   */
+  items: AIItem[];
+  /** The written method, when there is one. Cached with the list, for the same reason. */
+  recipe: AIRecipe | null;
+  products: ResolvedProduct[];
+  /** Item names the resolver could not turn into anything buyable. */
+  unresolved: string[];
+}
+
+/* ---------------------------------------------------------------------------
+ * Legacy recipe pipeline (POST /api/recipe)
+ *
+ * Kept so the original endpoint keeps compiling while the new search pipeline
+ * takes over. Safe to delete once nothing imports these.
+ * ------------------------------------------------------------------------ */
 
 /** A single ingredient extracted from a recipe by the AI. */
 export interface Ingredient {
   name: string;
   quantity: number | null;
   unit: string | null;
-  /** Hints the AI provides to help match this ingredient to a product. */
   searchTerms: string[];
 }
 
@@ -51,7 +263,6 @@ export interface Ingredient {
 export interface Recipe {
   title: string;
   servings: number;
-  /** Total time, e.g. "45 min". */
   time: string;
   steps: string[];
   ingredients: Ingredient[];
@@ -61,9 +272,8 @@ export interface Recipe {
 export interface IngredientMatch {
   ingredient: Ingredient;
   product: Product | null;
-  /** Match confidence 0–1 (1 = exact). */
+  /** Match confidence 0-1 (1 = exact). */
   score: number;
-  /** Quantity of the product to add to the basket (defaults to 1). */
   quantity: number;
 }
 
@@ -71,29 +281,24 @@ export interface IngredientMatch {
 export interface StoreTotal {
   storeId: string;
   total: number;
-  /** How many basket items are available at this store. */
   itemCount: number;
 }
 
 /** The price-comparison result across every store. */
 export interface Comparison {
-  /** Sorted cheapest → most expensive. */
   byStore: StoreTotal[];
   cheapestStoreId: string;
   cheapestTotal: number;
   mostExpensiveTotal: number;
-  /** most expensive total − cheapest total. */
   savings: number;
 }
 
 /** The full response returned by POST /api/recipe. */
 export interface RecipeResult {
   query: string;
-  /** Whether a real AI call or the built-in demo engine produced this. */
   source: "ai" | "demo";
   recipe: Recipe;
   items: IngredientMatch[];
   comparison: Comparison;
-  /** Ingredient names we couldn't match to any product. */
   unmatched: string[];
 }

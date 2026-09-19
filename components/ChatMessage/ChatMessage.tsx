@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { Text } from "@/components/Text/Text";
 import styles from "./ChatMessage.module.css";
 
@@ -13,6 +14,11 @@ export interface ChatMessageProps {
    * with its text set right, and the AI reply is plain text with no bubble.
    */
   variant?: ChatMessageVariant;
+  /**
+   * Rich content that belongs to this message, shown inside the same bubble
+   * beneath the text - e.g. a RecipeCard on an AI reply.
+   */
+  attachment?: ReactNode;
   className?: string;
 }
 
@@ -25,10 +31,17 @@ export function ChatMessage({
   role,
   text,
   variant = "bubble",
+  attachment,
   className,
 }: ChatMessageProps) {
   const isUser = role === "user";
   const isWide = variant === "wide";
+
+  const bubbleClasses = [
+    styles.bubble,
+    isUser ? styles.bubbleUser : styles.bubbleAi,
+    isWide && (isUser ? styles.wideUser : styles.wideAi),
+  ];
 
   return (
     <div
@@ -39,19 +52,26 @@ export function ChatMessage({
         .filter(Boolean)
         .join(" ")}
     >
-      <Text
-        as="p"
-        variant="mediumRegular"
-        className={[
-          styles.bubble,
-          isUser ? styles.bubbleUser : styles.bubbleAi,
-          isWide && (isUser ? styles.wideUser : styles.wideAi),
-        ]
-          .filter(Boolean)
-          .join(" ")}
-      >
-        {text}
-      </Text>
+      {attachment ? (
+        // With an attachment the bubble becomes a container, because a <p>
+        // cannot legally hold the headings and lists a recipe needs. The
+        // bubble's look - padding, colour, radius - moves to the wrapper, so
+        // it is visually the same bubble, just taller.
+        <div className={[...bubbleClasses, styles.bubbleWithAttachment].filter(Boolean).join(" ")}>
+          <Text as="p" variant="mediumRegular" className={styles.bubbleText}>
+            {text}
+          </Text>
+          {attachment}
+        </div>
+      ) : (
+        <Text
+          as="p"
+          variant="mediumRegular"
+          className={bubbleClasses.filter(Boolean).join(" ")}
+        >
+          {text}
+        </Text>
+      )}
     </div>
   );
 }

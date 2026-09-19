@@ -55,12 +55,20 @@
   color: var(--color-text-muted);
 }
 
-/* Uncapped on purpose — the panel grows with the list rather than scrolling
-   inside itself, however many items are in it. */
+/* Capped so a long list scrolls inside the panel instead of running past the
+   bottom of the screen. The panel is an absolutely-positioned dropdown hanging
+   off a fixed header, so anything below the fold is otherwise unreachable —
+   the page can't scroll to it. Only the list scrolls; the title and the
+   subtotal/checkout footer stay pinned in view. */
 .list {
   display: flex;
   flex-direction: column;
   gap: 2px;
+  max-height: min(52dvh, 460px);
+  overflow-y: auto;
+  /* Keeps the scrollbar off the rows themselves. */
+  padding-right: 4px;
+  overscroll-behavior: contain;
 }
 
 .empty {

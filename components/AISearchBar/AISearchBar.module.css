@@ -9,13 +9,18 @@
 
 .bar {
   --dv-radius: 10px; /* one source for the bar radius + the ring radius below */
+  /* One line of the field, matching --text-medium-regular. The growing field
+     and its six-line ceiling are both measured in these. */
+  --dv-line: 25.2px;
   position: relative; /* anchors the ::before ring */
   display: flex;
   align-items: center;
   gap: 12px;
   width: 100%;
   max-width: 737px;
-  height: 60px;
+  /* min-height, not height: the bar has to grow when the field wraps onto a
+     second line. A fixed height would simply clip it. */
+  min-height: 60px;
   padding: 15px 20px;
   border: none;
   border-radius: var(--dv-radius);
@@ -98,6 +103,10 @@
    a readable amount of room rather than collapsing to just the icon. */
 .barCompact {
   --dv-radius: 21px; /* full pill at 42px tall — the ring tracks this */
+  --dv-line: 22.4px; /* --text-normal-regular */
+  /* The header bar never grows: it sits in a 75px strip with nowhere to go.
+     Both are set so it wins against the base rule above. */
+  min-height: 42px;
   height: 42px;
   max-width: 420px;
   min-width: 130px;
@@ -170,14 +179,31 @@
   font: var(--text-normal-regular);
 }
 
+/* A <textarea>, so the query can run to more than one line. Everything below
+   either undoes a textarea default (the resize grip, the scrollbar, the browser
+   font) or caps how far it may grow. */
 .input {
   flex: 1;
   min-width: 0;
+  display: block;
+  width: 100%;
   border: none;
   outline: none;
   background: transparent;
   font: var(--text-medium-regular);
+  /* After the font shorthand, which carries a line-height of its own. The
+     measured height only lands on an exact number of lines if this matches. */
+  line-height: var(--dv-line);
   color: var(--color-text);
+  resize: none; /* no drag handle: the field sizes itself */
+  /* Six lines is enough to hold a long thought without the bar taking over the
+     screen. Hidden by default so a short field never shows scroll arrows; the
+     auto-grow code flips this to `auto` only once the text tops the cap. */
+  max-height: calc(var(--dv-line) * 6);
+  overflow-y: hidden;
+  scrollbar-width: thin;
+  /* Reaching the end of the field must not start scrolling the page behind it. */
+  overscroll-behavior: contain;
 }
 
 .input::placeholder {

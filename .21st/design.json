@@ -1,0 +1,169 @@
+{
+  "version": 1,
+  "project": {
+    "name": "dailyvalue",
+    "productType": "AI grocery and retail shopping assistant with cross-store price comparison",
+    "stack": [
+      "nextjs",
+      "react",
+      "typescript",
+      "css-modules"
+    ]
+  },
+  "sources": {
+    "tokens": [
+      "styles/tokens.css",
+      "app/globals.css"
+    ],
+    "components": [
+      "components/"
+    ],
+    "assets": [
+      "public/stores/"
+    ],
+    "instructions": [
+      "AGENTS.md",
+      "CLAUDE.md"
+    ]
+  },
+  "design": {
+    "colorMode": "light",
+    "colors": {
+      "--color-primary": {
+        "value": "#413a78",
+        "source": "styles/tokens.css"
+      },
+      "--color-primary-hover": {
+        "value": "#2e2954",
+        "source": "styles/tokens.css"
+      },
+      "--color-primary-light": {
+        "value": "#8b80d6",
+        "source": "styles/tokens.css"
+      },
+      "--color-lavender-surface": {
+        "value": "#f4f2fc",
+        "source": "styles/tokens.css"
+      },
+      "--color-text": {
+        "value": "#000000",
+        "source": "styles/tokens.css"
+      },
+      "--color-text-muted": {
+        "value": "#9b9b9b",
+        "source": "styles/tokens.css"
+      },
+      "--color-disabled": {
+        "value": "#dadada",
+        "source": "styles/tokens.css"
+      },
+      "--color-disabled-text": {
+        "value": "#6f6f6f",
+        "source": "styles/tokens.css"
+      },
+      "--background": {
+        "value": "#ffffff",
+        "source": "app/globals.css"
+      }
+    },
+    "typography": {
+      "family": "Inter via next/font (--font-sans)",
+      "scale": "Use the Text component variants (heading1-6, largeBold/Regular, mediumBold/Regular, normalBold/Regular, smallBold/Regular) rather than raw font sizes",
+      "source": "styles/tokens.css"
+    },
+    "spacing": {
+      "scale": "--space-1 (4px) through --space-12 (96px)",
+      "source": "styles/tokens.css"
+    },
+    "radius": {
+      "--radius-md": "8px",
+      "--radius-lg": "12px",
+      "--radius-xl": "16px",
+      "chat-bubble": "20px",
+      "source": "styles/tokens.css"
+    },
+    "shadows": {},
+    "motion": {
+      "note": "Sparse. Respect prefers-reduced-motion wherever animation is used."
+    },
+    "density": "comfortable"
+  },
+  "components": {
+    "installed": [
+      "Text",
+      "AddButton",
+      "ProductCard",
+      "ProductPop",
+      "ResultTable",
+      "ChatMessage",
+      "ChatPanel",
+      "AISearchBar",
+      "StoreName",
+      "StarRating",
+      "CartLineItem",
+      "Modal",
+      "Header",
+      "Footer"
+    ],
+    "preferredPrimitives": [
+      "Text for all typography",
+      "AddButton for primary actions (label + showIcon={false} for non-cart CTAs)",
+      "ResultTable for tabular data",
+      "ProductCard for any product tile"
+    ],
+    "patterns": [
+      "One folder per component: Component.tsx + Component.module.css",
+      "AI chat replies render in a lavender bubble (ChatMessage variant='wide')"
+    ]
+  },
+  "constraints": {
+    "must": [
+      "Style with CSS Modules and the variables in styles/tokens.css",
+      "Treat pixel sizes in a spec as the value at a reference width, and build responsively (clamp, max-width, flex/grid)",
+      "On phones, reflow data tables into stacked label:value cards rather than cramped columns or horizontal scroll",
+      "Keep visible keyboard focus and respect prefers-reduced-motion"
+    ],
+    "avoid": [
+      "Adding a background colour to a component unless the designer has specified one",
+      "Tailwind, shadcn or any second styling system",
+      "Decorative gradients, glass effects, and parallel lookalikes of existing components"
+    ]
+  },
+  "decisions": [
+    {
+      "date": "2026-09-16",
+      "decision": "Recipes render inside the AI reply's existing lavender bubble, below the reply text, with no background of their own. Download PDF uses AddButton with showIcon={false}, matching the other non-cart CTAs."
+    }
+  ],
+  "evidence": [
+    {
+      "fact": "design.tokens",
+      "source": "styles/tokens.css"
+    },
+    {
+      "fact": "design.colorMode:light",
+      "source": "app/globals.css"
+    },
+    {
+      "fact": "project.instructions",
+      "source": "AGENTS.md"
+    },
+    {
+      "fact": "project.instructions",
+      "source": "CLAUDE.md"
+    },
+    {
+      "fact": "project.stack:nextjs",
+      "source": "package.json"
+    },
+    {
+      "fact": "project.stack:react",
+      "source": "package.json"
+    },
+    {
+      "fact": "constraints.avoid:no-background-until-specified",
+      "source": "designer instruction, recorded in Claude memory"
+    }
+  ],
+  "generatedAt": "2026-09-16T12:34:08.758Z"
+}

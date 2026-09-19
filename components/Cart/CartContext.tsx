@@ -38,6 +38,11 @@ interface CartContextValue {
   /** Seed a line at a set quantity only if it isn't tracked yet (recipe
    *  pre-load). Leaves the user's own changes — including removals — alone. */
   ensureItem: (item: CartItemInput, quantity: number) => void;
+  /** Put a line in at an exact quantity, adding or replacing. Used to commit
+   *  a confirmed selection in one go. */
+  setItemQuantity: (item: CartItemInput, quantity: number) => void;
+  /** Forget these lines completely — unlike remove, which keeps them at 0. */
+  dropItems: (ids: string[]) => void;
   /** Empty the cart entirely — used once an order is placed. */
   clear: () => void;
 }
@@ -94,6 +99,37 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     );
   }, []);
 
+  /**
+   * Put a line in at an exact quantity, adding it or replacing what is there.
+   *
+   * This is what "confirm my selection" needs. addItem always lands on 1 and
+   * increment only steps, so committing a basket of "2 of these, 1 of those"
+   * would otherwise mean a loop of increments.
+   */
+  const setItemQuantity = useCallback((item: CartItemInput, quantity: number) => {
+    setEntries((prev) => ({
+      ...prev,
+      [item.id]: { ...item, quantity: Math.max(0, Math.round(quantity)) },
+    }));
+  }, []);
+
+  /**
+   * Forget these lines completely.
+   *
+   * Different from `remove`, which keeps a line tracked at quantity 0 so a page
+   * re-seeding cannot resurrect something the shopper deleted. Here the lines
+   * belong to a search that is over, so there is nothing to protect and leaving
+   * them tracked would only leak memory and confuse `isTracked`.
+   */
+  const dropItems = useCallback((ids: string[]) => {
+    if (ids.length === 0) return;
+    setEntries((prev) => {
+      const next = { ...prev };
+      for (const id of ids) delete next[id];
+      return next;
+    });
+  }, []);
+
   const clear = useCallback(() => setEntries({}), []);
 
   const quantityOf = useCallback((id: string) => entries[id]?.quantity ?? 0, [entries]);
@@ -126,9 +162,11 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
       decrement,
       remove,
       ensureItem,
+      setItemQuantity,
+      dropItems,
       clear,
     }),
-    [items, count, subtotal, quantityOf, isTracked, addItem, increment, decrement, remove, ensureItem, clear],
+    [items, count, subtotal, quantityOf, isTracked, addItem, increment, decrement, remove, ensureItem, setItemQuantity, dropItems, clear],
   );
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;

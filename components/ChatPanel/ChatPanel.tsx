@@ -6,12 +6,20 @@ import {
   type ChatMessageVariant,
 } from "@/components/ChatMessage/ChatMessage";
 import { AISearchBar } from "@/components/AISearchBar/AISearchBar";
+import { RecipeCard } from "@/components/RecipeCard/RecipeCard";
+import type { AIRecipe } from "@/lib/types";
 import styles from "./ChatPanel.module.css";
 
 export interface ChatPanelMessage {
   id: string;
   role: "user" | "ai";
   text: string;
+  /**
+   * A written recipe that belongs to this AI reply, shown inside its bubble.
+   * Plain data rather than a React element, because messages are saved to
+   * sessionStorage and must survive being turned into JSON and back.
+   */
+  recipe?: AIRecipe;
 }
 
 export interface ChatPanelProps {
@@ -75,6 +83,7 @@ export function ChatPanel({
               role={m.role}
               text={m.text}
               variant={variant}
+              attachment={m.recipe ? <RecipeCard recipe={m.recipe} /> : undefined}
             />
           ))}
         </div>

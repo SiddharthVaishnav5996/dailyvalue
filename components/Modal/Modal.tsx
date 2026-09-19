@@ -2,6 +2,7 @@
 
 import { useEffect, type ReactNode } from "react";
 import { createPortal } from "react-dom";
+import { useScrollLock } from "@/lib/ui/useScrollLock";
 import styles from "./Modal.module.css";
 
 export interface ModalProps {
@@ -20,17 +21,14 @@ export interface ModalProps {
  * `children`.
  */
 export function Modal({ onClose, children, ariaLabel, maxWidth = 560 }: ModalProps) {
+  useScrollLock();
+
   useEffect(() => {
     function handleKey(e: KeyboardEvent) {
       if (e.key === "Escape") onClose();
     }
     document.addEventListener("keydown", handleKey);
-    const previousOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-    return () => {
-      document.removeEventListener("keydown", handleKey);
-      document.body.style.overflow = previousOverflow;
-    };
+    return () => document.removeEventListener("keydown", handleKey);
   }, [onClose]);
 
   if (typeof document === "undefined") return null;

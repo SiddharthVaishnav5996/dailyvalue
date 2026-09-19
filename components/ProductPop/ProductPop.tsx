@@ -1,12 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 import NextImage from "next/image";
 import { ChevronDown, Image as ImageIcon, X } from "lucide-react";
 import { Text } from "@/components/Text/Text";
 import { StoreName } from "@/components/StoreName/StoreName";
 import { ProductCard } from "@/components/ProductCard/ProductCard";
 import { formatPrice } from "@/lib/format";
+import { useScrollLock } from "@/lib/ui/useScrollLock";
 import type { ProductPopData } from "@/data/productPop";
 import styles from "./ProductPop.module.css";
 
@@ -34,6 +35,20 @@ export interface ProductPopProps {
  * the comparison list. Closes on the backdrop, the ×, or Escape (which shuts the
  * comparison first if it's open); body scroll is locked while open.
  */
+/**
+ * Where the price comparison is drawn, in viewport coordinates.
+ *
+ * Exactly one of top / bottom is set: top when the list hangs below the price
+ * button, bottom when there is no room and it opens upwards instead.
+ */
+interface ComparePlacement {
+  left: number;
+  top?: number;
+  bottom?: number;
+  width: number;
+  maxHeight: number;
+}
+
 export function ProductPop({
   pop,
   selectedOfferId,
@@ -45,19 +60,111 @@ export function ProductPop({
   onClose,
 }: ProductPopProps) {
   const [showCompare, setShowCompare] = useState(false);
+  const [placement, setPlacement] = useState<ComparePlacement | null>(null);
+
+  const priceButtonRef = useRef<HTMLButtonElement>(null);
+  const compareRef = useRef<HTMLDivElement>(null);
+  const scrollerRef = useRef<HTMLDivElement>(null);
+  /** Did the press that is currently underway begin on the backdrop? */
+  const pressedBackdrop = useRef(false);
 
   const offers = pop.storeOffers;
   const selected = offers.find((o) => o.id === selectedOfferId) ?? offers[0];
   const alternatives = offers.filter((o) => o.id !== selected.id);
 
-  // Lock body scroll while the modal is open.
-  useEffect(() => {
-    const prev = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-    return () => {
-      document.body.style.overflow = prev;
-    };
+  // Freeze the page behind the modal. See lib/ui/useScrollLock.ts - hiding
+  // <body>'s overflow, which is what this used to do, does nothing on this
+  // site, and the page kept scrolling underneath.
+  useScrollLock();
+
+  /**
+   * Work out where the comparison list should sit.
+   *
+   * It is drawn against the window rather than tucked under the button,
+   * because the modal clips anything that runs past its own edge. In a laptop
+   * window that hid five of the eight shops outright - they were in the page,
+   * but no click could ever reach them. Viewport coordinates step outside the
+   * clip; the price of that is measuring the position by hand.
+   */
+  const placeCompare = useCallback(() => {
+    const button = priceButtonRef.current;
+    if (!button) return;
+
+    const box = button.getBoundingClientRect();
+
+    // The list floats free of the modal now, so it has to be told when its
+    // anchor has gone: scroll the price button out of sight and a list still
+    // hanging there points at nothing. Closing is what every menu does.
+    const scroller = scrollerRef.current;
+    if (scroller) {
+      const view = scroller.getBoundingClientRect();
+      const middle = box.top + box.height / 2;
+      if (middle < view.top || middle > view.bottom) {
+        setShowCompare(false);
+        return;
+      }
+    }
+
+    const GAP = 8; // between the button and the list
+    const EDGE = 12; // never right up against the window edge
+
+    const width = Math.min(380, window.innerWidth * 0.78);
+    // Line its right edge up with the button, then pull it back inside the
+    // window if that would push it off the side.
+    const left = Math.min(
+      Math.max(EDGE, box.right - width),
+      window.innerWidth - width - EDGE,
+    );
+
+    const roomBelow = window.innerHeight - box.bottom - GAP - EDGE;
+    const roomAbove = box.top - GAP - EDGE;
+    // Below, unless it would be cramped there and there is more room above.
+    const upwards = roomBelow < 220 && roomAbove > roomBelow;
+
+    setPlacement({
+      left,
+      top: upwards ? undefined : box.bottom + GAP,
+      bottom: upwards ? window.innerHeight - box.top + GAP : undefined,
+      width,
+      maxHeight: Math.max(160, upwards ? roomAbove : roomBelow),
+    });
   }, []);
+
+  // Keep the list glued to the button while the modal scrolls or the window is
+  // resized. The scroll listener is in the CAPTURE phase, because scroll events
+  // do not bubble and the thing that moves is the modal own scroller.
+  //
+  // useLayoutEffect, so the position is settled before the first paint - with a
+  // plain effect the list would flash in the top-left corner first.
+  useLayoutEffect(() => {
+    if (!showCompare) return;
+    placeCompare();
+    window.addEventListener("resize", placeCompare);
+    document.addEventListener("scroll", placeCompare, true);
+    return () => {
+      window.removeEventListener("resize", placeCompare);
+      document.removeEventListener("scroll", placeCompare, true);
+    };
+  }, [showCompare, placeCompare]);
+
+  // Press anywhere else and the list closes.
+  //
+  // This replaces a transparent full-screen <div> that used to sit over the
+  // page to catch those presses. Being position:fixed, that div belonged to the
+  // window rather than to the modal, so a wheel over it scrolled the PAGE
+  // instead of the modal - which is exactly how it looked from the outside:
+  // scrolling worked over the list, and nowhere else.
+  useEffect(() => {
+    if (!showCompare) return;
+    const onPointerDown = (e: PointerEvent) => {
+      const target = e.target as Node;
+      if (compareRef.current?.contains(target)) return;
+      if (priceButtonRef.current?.contains(target)) return; // the button toggles itself
+      setShowCompare(false);
+    };
+    document.addEventListener("pointerdown", onPointerDown);
+    return () => document.removeEventListener("pointerdown", onPointerDown);
+  }, [showCompare]);
 
   // Escape closes the price comparison first (if open), otherwise the modal.
   useEffect(() => {
@@ -71,19 +178,33 @@ export function ProductPop({
   }, [onClose, showCompare]);
 
   return (
-    <div className={styles.backdrop} onClick={onClose} role="presentation">
+    <div
+      className={styles.backdrop}
+      // The backdrop closes the modal, but only when the WHOLE press happened
+      // on it. Checking the click alone is not enough: press inside the modal,
+      // release out here - dragging across text, or on a row that moved under
+      // the pointer - and the browser reports that as a click on the nearest
+      // ancestor the two have in common, which is the backdrop. The modal then
+      // shuts on a gesture that was never meant to close it.
+      onPointerDown={(e) => {
+        pressedBackdrop.current = e.target === e.currentTarget;
+      }}
+      onClick={(e) => {
+        if (e.target === e.currentTarget && pressedBackdrop.current) onClose();
+      }}
+      role="presentation"
+    >
       <div
         className={styles.modal}
         role="dialog"
         aria-modal="true"
         aria-label={`${pop.brand} ${pop.name}`}
-        onClick={(e) => e.stopPropagation()}
       >
         <button type="button" className={styles.close} onClick={onClose} aria-label="Close">
           <X size={22} aria-hidden="true" />
         </button>
 
-        <div className={styles.scroll}>
+        <div className={styles.scroll} ref={scrollerRef}>
           {/* 1. Product image */}
           <div className={styles.hero}>
             {pop.imageSrc ? (
@@ -127,6 +248,7 @@ export function ProductPop({
               <div className={styles.priceWrap}>
                 <button
                   type="button"
+                  ref={priceButtonRef}
                   className={styles.priceDropdown}
                   onClick={() => alternatives.length > 0 && setShowCompare((s) => !s)}
                   aria-expanded={showCompare}
@@ -138,74 +260,74 @@ export function ProductPop({
                   <ChevronDown size={20} aria-hidden="true" />
                 </button>
 
-                {showCompare && alternatives.length > 0 && (
-                  <>
-                    {/* Outside-click catcher (transparent, full-screen). */}
-                    <div
-                      className={styles.compareCatcher}
-                      onClick={() => setShowCompare(false)}
-                      role="presentation"
-                    />
-                    <div
-                      className={styles.compareDropdown}
-                      role="listbox"
-                      aria-label="Price comparison across stores"
-                    >
-                      {alternatives.map((o) => (
-                        <button
-                          type="button"
-                          key={o.id}
-                          className={styles.compareRow}
-                          onClick={() => onSelectOffer?.(o.id)}
-                          role="option"
-                          aria-selected={false}
-                        >
-                          <span className={styles.compareLogo} aria-hidden="true">
-                            {o.storeLogoSrc && (
-                              // eslint-disable-next-line @next/next/no-img-element -- store logos are arbitrary assets
-                              <img
-                                src={o.storeLogoSrc}
-                                alt=""
-                                className={styles.compareLogoImg}
-                              />
-                            )}
-                          </span>
-                          <span className={styles.compareInfo}>
-                            <Text
-                              as="span"
-                              variant="normalRegular"
-                              className={styles.compareStore}
-                            >
-                              {o.storeName}
-                            </Text>
-                            <Text
-                              as="span"
-                              variant="xxsmallRegular"
-                              className={styles.compareDistance}
-                            >
-                              {o.storeDistanceKm.toFixed(1)} km away
-                            </Text>
-                            {o.promo && (
-                              <Text
-                                as="span"
-                                variant="xsmallBold"
-                                className={styles.comparePromo}
-                              >
-                                {o.promo}
-                              </Text>
-                            )}
-                          </span>
+                {showCompare && alternatives.length > 0 && placement && (
+                  <div
+                    ref={compareRef}
+                    className={styles.compareDropdown}
+                    style={{
+                      left: placement.left,
+                      top: placement.top,
+                      bottom: placement.bottom,
+                      width: placement.width,
+                      maxHeight: placement.maxHeight,
+                    }}
+                    role="listbox"
+                    aria-label="Price comparison across stores"
+                  >
+                    {alternatives.map((o) => (
+                      <button
+                        type="button"
+                        key={o.id}
+                        className={styles.compareRow}
+                        onClick={() => onSelectOffer?.(o.id)}
+                        role="option"
+                        aria-selected={false}
+                      >
+                        <span className={styles.compareLogo} aria-hidden="true">
+                          {o.storeLogoSrc && (
+                            // eslint-disable-next-line @next/next/no-img-element -- store logos are arbitrary assets
+                            <img
+                              src={o.storeLogoSrc}
+                              alt=""
+                              className={styles.compareLogoImg}
+                            />
+                          )}
+                        </span>
+                        <span className={styles.compareInfo}>
                           <Text
                             as="span"
-                            variant="normalBold"
-                            className={styles.comparePrice}
+                            variant="normalRegular"
+                            className={styles.compareStore}
                           >
-                            {formatPrice(o.price)}
+                            {o.storeName}
                           </Text>
-                        </button>
-                      ))}
-                    </div>
-                  </>
+                          <Text
+                            as="span"
+                            variant="xxsmallRegular"
+                            className={styles.compareDistance}
+                          >
+                            {o.storeDistanceKm.toFixed(1)} km away
+                          </Text>
+                          {o.promo && (
+                            <Text
+                              as="span"
+                              variant="xsmallBold"
+                              className={styles.comparePromo}
+                            >
+                              {o.promo}
+                            </Text>
+                          )}
+                        </span>
+                        <Text
+                          as="span"
+                          variant="normalBold"
+                          className={styles.comparePrice}
+                        >
+                          {formatPrice(o.price)}
+                        </Text>
+                      </button>
+                    ))}
+                  </div>
                 )}
               </div>
             </div>

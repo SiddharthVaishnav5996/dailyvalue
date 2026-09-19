@@ -42,3 +42,20 @@
   max-width: 450px;
   background: var(--color-lavender-surface);
 }
+
+/* ---- A bubble that carries an attachment (e.g. a recipe) ----
+   The bubble classes above now sit on a wrapper <div> instead of the <p>, so
+   the look is unchanged. The wrapper stacks the text and the attachment, and
+   stops pre-wrap leaking into the attachment - that is only for the AI's own
+   line breaks. Declared after .bubble so it wins the white-space rule. */
+.bubbleWithAttachment {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  white-space: normal;
+}
+
+.bubbleText {
+  margin: 0;
+  white-space: pre-wrap;
+}

@@ -31,6 +31,7 @@ import {
   TIP_PRESETS,
 } from "@/data/checkout";
 import { PRODUCT_POP_BY_ID, type StoreOffer } from "@/data/productPop";
+import { useSearch } from "@/lib/search/SearchContext";
 import { formatPrice } from "@/lib/format";
 import styles from "./page.module.css";
 
@@ -49,21 +50,41 @@ export default function OrderPage() {
   const router = useRouter();
   const { items, quantityOf, addItem, increment, decrement } = useCart();
   const { isWishlisted, toggleWishlist } = useWishlist();
+  // The current AI search, so a cart line can still be moved between stores at
+  // checkout. Products added from the landing storefront are not in here, and
+  // correctly show no store comparison.
+  const { result } = useSearch();
   // Which store offer is chosen per cart line (empty → each line's first offer).
   const [selectedOffer, setSelectedOffer] = useState<Record<string, string>>({});
   // Delivery tip: a preset's id, "custom", or null (no tip picked yet).
   const [tipId, setTipId] = useState<string | null>(null);
   const [customTip, setCustomTip] = useState("");
 
-  // The store offer currently chosen for a cart line (or its default first
-  // offer), when the product has a price comparison — cream cheese only for now.
+  /**
+   * Every store that stocks a given cart line, newest search first.
+   *
+   * Looks in the live AI result, then falls back to the hand-written pop data
+   * for anything added from the landing storefront. Returns undefined when
+   * neither knows the product, and CartLineItem then simply hides the store
+   * dropdown rather than showing an empty one.
+   */
+  const offersFor = useCallback(
+    (id: string): StoreOffer[] | undefined => {
+      const live = result?.products.find((p) => p.id === id)?.offers;
+      if (live && live.length > 1) return live;
+      return PRODUCT_POP_BY_ID[id]?.storeOffers;
+    },
+    [result],
+  );
+
+  // The store offer currently chosen for a cart line, or its default first one.
   const selectedOfferFor = useCallback(
     (id: string): StoreOffer | undefined => {
-      const offers = PRODUCT_POP_BY_ID[id]?.storeOffers;
+      const offers = offersFor(id);
       if (!offers) return undefined;
       return offers.find((o) => o.id === selectedOffer[id]) ?? offers[0];
     },
-    [selectedOffer],
+    [offersFor, selectedOffer],
   );
 
   // An empty basket carries no charges: tax drops to zero and the promo credit
@@ -165,7 +186,7 @@ export default function OrderPage() {
                           onAdd={() => increment(item.id)}
                           onIncrement={() => increment(item.id)}
                           onDecrement={() => decrement(item.id)}
-                          storeOffers={PRODUCT_POP_BY_ID[item.id]?.storeOffers}
+                          storeOffers={offersFor(item.id)}
                           selectedOfferId={selectedOffer[item.id]}
                           onSelectOffer={(offerId) =>
                             setSelectedOffer((prev) => ({ ...prev, [item.id]: offerId }))

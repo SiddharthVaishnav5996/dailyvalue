@@ -27,6 +27,10 @@
 .scroll {
   overflow-y: auto;
   overflow-x: hidden;
+  /* Without this, reaching the top or bottom of the modal hands the rest of
+     the wheel gesture to the page behind it - so the page carries on moving
+     under a modal that has stopped. "contain" ends the gesture here. */
+  overscroll-behavior: contain;
 }
 
 .close {
@@ -145,25 +149,23 @@
   padding: clamp(24px, 4vw, 40px) clamp(20px, 10%, 100px) clamp(28px, 5vw, 48px);
 }
 
-/* ---- Price comparison dropdown ----
-   Anchored under the price; a fixed transparent catcher handles outside clicks. */
+/* ---- Price comparison dropdown ---- */
 .priceWrap {
-  position: relative;
   flex-shrink: 0;
 }
 
-.compareCatcher {
-  position: fixed;
-  inset: 0;
-  z-index: 40;
-}
+/* Positioned against the WINDOW, not the price button, with left/top/width and
+   max-height written in by ProductPop.tsx.
 
+   It used to hang off the button in the ordinary way (position: absolute under
+   a relative parent), which looks tidier in a stylesheet but is clipped by the
+   modal: anything past the modal's bottom edge simply vanished, and in a laptop
+   window that was most of the store list. Fixed positioning is outside that
+   clip. The cost is that the coordinates have to be measured in JavaScript and
+   refreshed whenever the modal scrolls. */
 .compareDropdown {
-  position: absolute;
-  top: calc(100% + 8px);
-  right: 0;
+  position: fixed;
   z-index: 41;
-  width: min(380px, 78vw);
   /* 20px padding all sides, 10px corners — per the design. */
   padding: 20px;
   background: var(--color-white);
@@ -172,6 +174,10 @@
   display: flex;
   flex-direction: column;
   gap: 6px;
+  /* A list longer than the room available scrolls inside itself, and stops
+     there rather than passing the wheel on to whatever is behind it. */
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 
 .compareRow {
