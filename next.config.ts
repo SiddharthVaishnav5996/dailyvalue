@@ -8,8 +8,15 @@ const nextConfig: NextConfig = {
      * anyone could point your image optimizer at any URL on the internet and
      * make your server fetch it.
      *
-     * Pexels is the only remote host we use - product photos for items the AI
-     * generated. Everything else is a local file under /public.
+     * Two remote hosts, both read-only image CDNs:
+     *
+     * Pexels is the only remote host - generic photography for items the AI
+     * invented and nothing else covers. Everything else is a local file under
+     * /public, including the branded packshots: Open Food Facts was linked
+     * directly at first and every card came back 504, because Next fetches a
+     * remote image server-side with a seven second budget and their CDN does
+     * not answer that in time. scripts/seed-brand-photos.mjs downloads them
+     * instead.
      */
     remotePatterns: [
       {

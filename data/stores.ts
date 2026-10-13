@@ -44,6 +44,10 @@ export const DEPARTMENTS = [
   "pharmacy",
   "sports",
   "automotive",
+  "office",
+  "toys",
+  "babygear",
+  "clothing",
 ] as const;
 
 export type Department = (typeof DEPARTMENTS)[number];
@@ -137,7 +141,7 @@ export const STORES: Store[] = [
     deliveryEta: "Today, 1–3 PM",
     distanceKm: 1.5,
     priceIndex: 0.98,
-    departments: [...SUPERMARKET, "pharmacy", "baby", "home", "electronics"],
+    departments: [...SUPERMARKET, "pharmacy", "baby", "home", "electronics", "office", "toys", "babygear", "clothing"],
   },
 
   // --- Big box: groceries AND everything else ---------------------------
@@ -163,6 +167,7 @@ export const STORES: Store[] = [
       "sports",
       "automotive",
       "garden",
+    "office", "toys", "babygear", "clothing",
     ],
   },
   {
@@ -185,6 +190,7 @@ export const STORES: Store[] = [
       "pharmacy",
       "baby",
       "pet",
+    "office", "toys", "babygear", "clothing",
     ],
   },
 
@@ -223,6 +229,7 @@ export const STORES: Store[] = [
       "automotive",
       "household",
       "pet",
+    "toys", "clothing",
     ],
   },
   {

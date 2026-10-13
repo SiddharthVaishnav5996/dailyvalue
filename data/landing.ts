@@ -84,7 +84,7 @@ export const TOP_PICKS: LandingProduct[] = [
     storeName: "Walmart",
     storeDistanceKm: 1.5,
     storeLogoSrc: "/stores/Store Logos/Walmart.png",
-    description: "SUNSET Campari Tomatoes, 1lb, Campari Tomatoes, 1lb",
+    description: "SUNSET Campari Tomatoes, 1 lb",
     rating: 4.5,
     reviewCount: 45,
     price: 2.5,

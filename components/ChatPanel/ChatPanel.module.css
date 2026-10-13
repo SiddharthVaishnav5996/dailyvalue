@@ -14,6 +14,10 @@
   overflow-y: auto;
   display: flex;
   flex-direction: column;
+  /* Keeps the conversation off the scrollbar so a right-aligned bubble doesn't
+     butt against it. Removed on mobile, where the thread flows without a
+     scrollbar (see .panelWide below). */
+  padding-right: 12px;
 }
 
 .list {
@@ -58,6 +62,9 @@
   .panelWide .thread {
     flex: none;
     overflow: visible;
+    /* No scrollbar when flowing, so no gutter — keeps the messages flush with
+       the full-width search bar below. */
+    padding-right: 0;
   }
   .panelWide .list {
     margin-top: 0;

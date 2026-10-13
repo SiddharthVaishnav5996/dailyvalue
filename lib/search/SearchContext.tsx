@@ -9,7 +9,7 @@ import {
   useRef,
   useState,
 } from "react";
-import type { SearchResult } from "@/lib/types";
+import type { AIRecipe, SearchResult } from "@/lib/types";
 import type { ChatPanelMessage } from "@/components/ChatPanel/ChatPanel";
 import { useCart } from "@/components/Cart/CartContext";
 
@@ -60,6 +60,18 @@ interface SearchContextValue {
    * start a new conversation instead, which is what a `?q=` in the URL means.
    */
   runSearch: (query: string, options?: { fresh?: boolean }) => Promise<void>;
+  /**
+   * Rewrite one of the shopper's own messages and answer it again.
+   *
+   * Everything from that message onwards is discarded first, because it was
+   * all an answer to a question that no longer exists. Editing the third
+   * message of five leaves two.
+   *
+   * Editing to exactly the same text does nothing at all - opening the editor
+   * and changing your mind must not cost an AI request or replace an answer
+   * that was perfectly good.
+   */
+  editMessage: (id: string, nextText: string) => Promise<void>;
   /** Throw away the current result, e.g. when starting a fresh search. */
   reset: () => void;
   /**
@@ -74,6 +86,55 @@ interface SearchContextValue {
 }
 
 const SearchContext = createContext<SearchContextValue | null>(null);
+
+/** The recipe most recently shown in the thread, if any. */
+function latestRecipe(messages: ChatPanelMessage[]): AIRecipe | undefined {
+  for (let i = messages.length - 1; i >= 0; i--) {
+    if (messages[i].recipe) return messages[i].recipe;
+  }
+  return undefined;
+}
+
+/**
+ * Should this reply print the recipe, or is it already on screen?
+ *
+ * The complaint was that asking "add a wine that goes with it" printed the
+ * whole fried rice method again, which does not read like a conversation. The
+ * obvious fix - compare the new recipe with the old one and skip it if they
+ * match - cannot work, and finding out why was the useful part.
+ *
+ * The model does not carry the recipe forward. It writes a new one every turn.
+ * On the wine turn, with nothing about the dish asked, it came back with every
+ * step reworded, the tips rewritten, an onion gone and the rice up from 4 cups
+ * to 6. The same recipe to a reader, a completely different object to `===`.
+ * No comparison of the payload can tell a rewrite from a revision, because the
+ * payload changes either way.
+ *
+ * So the question is about intent, and intent is not in the payload. The model
+ * is asked directly - `recipeChanged` - and code covers the two ways that can
+ * be wrong:
+ *
+ *   - a false on the very first recipe would hide it completely, so the first
+ *     one always prints;
+ *   - a false while the dish really did change would hide a revision the
+ *     shopper asked for, so a different title or serving count overrides it.
+ *
+ * When it does not print, the earlier card keeps the recipe the shopper
+ * already has - which also stops their rice quietly becoming 6 cups.
+ */
+function shouldShowRecipe(
+  incoming: AIRecipe | null | undefined,
+  changed: boolean | null | undefined,
+  previous: AIRecipe | undefined,
+): boolean {
+  if (!incoming) return false;
+  if (!previous) return true; // nothing on screen yet: always show the first
+
+  if (incoming.title !== previous.title) return true;
+  if (incoming.servings !== previous.servings) return true;
+
+  return changed !== false;
+}
 
 /** Read the saved state. Returns empty state if anything at all goes wrong. */
 function readStored(): StoredState {
@@ -185,33 +246,16 @@ export function SearchProvider({ children }: { children: React.ReactNode }) {
   const nextId = useRef(1);
   const makeId = () => String(nextId.current++);
 
-  const runSearch = useCallback(
-    async (query: string, options?: { fresh?: boolean }) => {
-      const trimmed = query.trim();
-      if (!trimmed) return;
-
-      // A fresh search starts a new conversation: no history is sent, and any
-      // lines the previous search put in the cart are taken out now rather
-      // than waiting for the answer.
-      const fresh = options?.fresh === true;
-      if (fresh) {
-        dropItems(committedIds.current);
-        committedIds.current = [];
-      }
-
-      // Show the shopper's message immediately, before the network call. The
-      // thread feels instant even though the answer takes a second or two.
-      const userMessage: ChatPanelMessage = {
-        id: makeId(),
-        role: "user",
-        text: trimmed,
-      };
-
-      // Capture the history BEFORE adding this message, so the server is not
-      // sent the question twice.
-      const history = fresh ? [] : messages.map((m) => ({ role: m.role, text: m.text }));
-
-      setMessages((prev) => (fresh ? [userMessage] : [...prev, userMessage]));
+  /**
+   * Ask the server one question and fold the answer into the thread.
+   *
+   * Shared by runSearch and editMessage. Those two differ only in what the
+   * thread looks like at the moment the question is asked - a follow-up has
+   * appended a message, an edit has rewound to one - so everything from the
+   * network call onwards lives here once instead of twice.
+   */
+  const ask = useCallback(
+    async (trimmed: string, history: { role: "user" | "ai"; text: string }[]) => {
       setStatus("loading");
       setError(null);
 
@@ -230,22 +274,36 @@ export function SearchProvider({ children }: { children: React.ReactNode }) {
 
         const searchResult = data as SearchResult;
 
-        setMessages((prev) => [
-          ...prev,
-          {
-            id: makeId(),
-            role: "ai",
-            text: searchResult.reply,
-            // The recipe lives on the message, not on the page, so each reply
-            // keeps the version of the recipe it was given. A later "make it
-            // no-bake" adds a new message with the updated recipe, and the
-            // earlier one still shows what was said at the time.
-            recipe: searchResult.recipe ?? undefined,
-          },
-        ]);
+        setMessages((prev) => {
+          // The recipe lives on the message, not on the page, so each reply
+          // keeps the version of the recipe it was given. A later "make it
+          // no-bake" adds a new message with the updated recipe, and the
+          // earlier one still shows what was said at the time.
+          //
+          // A turn that did not change the dish prints no recipe at all - see
+          // shouldShowRecipe above.
+          const show = shouldShowRecipe(
+            searchResult.recipe,
+            searchResult.recipeChanged,
+            latestRecipe(prev),
+          );
+
+          return [
+            ...prev,
+            {
+              id: makeId(),
+              role: "ai",
+              text: searchResult.reply,
+              recipe: show ? (searchResult.recipe ?? undefined) : undefined,
+            },
+          ];
+        });
 
         const hasSomethingToShow = searchResult.tables.length > 0;
-        const isFirstResult = fresh || result === null;
+        // No history means this is the opening question of a conversation -
+        // true for a fresh search, and true again when the FIRST message in
+        // the thread is edited.
+        const isFirstResult = history.length === 0 || result === null;
 
         // A new list replaces the old one, so anything the shopper confirmed
         // from the PREVIOUS search leaves the cart now. Without this the badge
@@ -284,7 +342,66 @@ export function SearchProvider({ children }: { children: React.ReactNode }) {
         ]);
       }
     },
-    [messages, result, dropItems],
+    [result, dropItems],
+  );
+
+  const runSearch = useCallback(
+    async (query: string, options?: { fresh?: boolean }) => {
+      const trimmed = query.trim();
+      if (!trimmed) return;
+
+      // A fresh search starts a new conversation: no history is sent, and any
+      // lines the previous search put in the cart are taken out now rather
+      // than waiting for the answer.
+      const fresh = options?.fresh === true;
+      if (fresh) {
+        dropItems(committedIds.current);
+        committedIds.current = [];
+      }
+
+      // Show the shopper's message immediately, before the network call. The
+      // thread feels instant even though the answer takes a second or two.
+      const userMessage: ChatPanelMessage = {
+        id: makeId(),
+        role: "user",
+        text: trimmed,
+      };
+
+      // Capture the history BEFORE adding this message, so the server is not
+      // sent the question twice.
+      const history = fresh ? [] : messages.map((m) => ({ role: m.role, text: m.text }));
+
+      setMessages((prev) => (fresh ? [userMessage] : [...prev, userMessage]));
+      await ask(trimmed, history);
+    },
+    [messages, ask, dropItems],
+  );
+
+  const editMessage = useCallback(
+    async (id: string, nextText: string) => {
+      const trimmed = nextText.trim();
+      if (!trimmed) return;
+
+      const index = messages.findIndex((m) => m.id === id && m.role === "user");
+      if (index === -1) return;
+
+      // Opened the editor, changed nothing, closed it. Nothing should move -
+      // not the thread, not the tables, and certainly not an AI request.
+      if (messages[index].text === trimmed) return;
+
+      const before = messages.slice(0, index);
+
+      // The thread rewinds to just before the edited message, then carries the
+      // rewritten question. Everything that followed was an answer to a
+      // question that no longer exists.
+      setMessages([...before, { ...messages[index], text: trimmed }]);
+
+      await ask(
+        trimmed,
+        before.map((m) => ({ role: m.role, text: m.text })),
+      );
+    },
+    [messages, ask],
   );
 
   const registerCommitted = useCallback((ids: string[]) => {
@@ -307,8 +424,17 @@ export function SearchProvider({ children }: { children: React.ReactNode }) {
 
   // useMemo stops every consumer re-rendering whenever this component does.
   const value = useMemo<SearchContextValue>(
-    () => ({ result, messages, status, error, runSearch, reset, registerCommitted }),
-    [result, messages, status, error, runSearch, reset, registerCommitted],
+    () => ({
+      result,
+      messages,
+      status,
+      error,
+      runSearch,
+      editMessage,
+      reset,
+      registerCommitted,
+    }),
+    [result, messages, status, error, runSearch, editMessage, reset, registerCommitted],
   );
 
   return <SearchContext.Provider value={value}>{children}</SearchContext.Provider>;

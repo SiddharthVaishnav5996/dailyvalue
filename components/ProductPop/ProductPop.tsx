@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 import NextImage from "next/image";
-import { ChevronDown, Image as ImageIcon, X } from "lucide-react";
+import { ChevronDown, Image as ImageIcon, Star, X } from "lucide-react";
 import { Text } from "@/components/Text/Text";
 import { StoreName } from "@/components/StoreName/StoreName";
 import { ProductCard } from "@/components/ProductCard/ProductCard";
@@ -16,6 +16,10 @@ export interface ProductPopProps {
   /** Currently selected store offer id (defaults to the first offer). */
   selectedOfferId?: string;
   onSelectOffer?: (offerId: string) => void;
+  /** Does the shopper always buy this brand? */
+  isPreferredBrand?: (brand: string | undefined) => boolean;
+  /** Mark a brand as one they always buy, or stop. */
+  onToggleBrand?: (brand: string) => void;
   /** Quantities of the related items (a separate cart bucket from the table). */
   quantities: Record<string, number>;
   onAdd: (id: string) => void;
@@ -53,6 +57,8 @@ export function ProductPop({
   pop,
   selectedOfferId,
   onSelectOffer,
+  isPreferredBrand,
+  onToggleBrand,
   quantities,
   onAdd,
   onIncrement,
@@ -69,6 +75,8 @@ export function ProductPop({
   const pressedBackdrop = useRef(false);
 
   const offers = pop.storeOffers;
+  const favourite = (brand: string | undefined) =>
+    isPreferredBrand ? isPreferredBrand(brand) : false;
   const selected = offers.find((o) => o.id === selectedOfferId) ?? offers[0];
   const alternatives = offers.filter((o) => o.id !== selected.id);
 
@@ -98,8 +106,11 @@ export function ProductPop({
     const scroller = scrollerRef.current;
     if (scroller) {
       const view = scroller.getBoundingClientRect();
+      // A zero-height box has not been laid out yet - during the open, or in a
+      // hidden tab. Measuring against it would close the list the instant it
+      // opened, so skip the check until there is something to measure.
       const middle = box.top + box.height / 2;
-      if (middle < view.top || middle > view.bottom) {
+      if (view.height > 0 && (middle < view.top || middle > view.bottom)) {
         setShowCompare(false);
         return;
       }
@@ -207,9 +218,9 @@ export function ProductPop({
         <div className={styles.scroll} ref={scrollerRef}>
           {/* 1. Product image */}
           <div className={styles.hero}>
-            {pop.imageSrc ? (
+            {selected.imageSrc || pop.imageSrc ? (
               <NextImage
-                src={pop.imageSrc}
+                src={selected.imageSrc ?? pop.imageSrc!}
                 alt={pop.imageAlt ?? pop.name}
                 fill
                 sizes="(max-width: 900px) 90vw, 800px"
@@ -227,7 +238,9 @@ export function ProductPop({
             <div className={styles.headRow}>
               <div className={styles.desc}>
                 <Text as="p" variant="largeBold" className={styles.brand}>
-                  {pop.brand}
+                  {/* The selected shop's own brand wins over the product's
+                      general one: at Costco this tub really is Kirkland. */}
+                  {selected.brand || pop.brand}
                 </Text>
                 <Text as="h2" variant="heading5" className={styles.name}>
                   {pop.name}
@@ -243,6 +256,34 @@ export function ProductPop({
                   logoSrc={selected.storeLogoSrc}
                   nameVariant="smallBold"
                 />
+
+                {/* Brand loyalty, in one press. Marking a brand here makes
+                    every later search open on it wherever it is sold, instead
+                    of on whatever happens to be cheapest. */}
+                {selected.brand && onToggleBrand && (
+                  <button
+                    type="button"
+                    className={[
+                      styles.brandPrefer,
+                      favourite(selected.brand) ? styles.brandPreferOn : "",
+                    ]
+                      .filter(Boolean)
+                      .join(" ")}
+                    onClick={() => onToggleBrand(selected.brand!)}
+                    aria-pressed={favourite(selected.brand)}
+                  >
+                    <Star
+                      size={14}
+                      aria-hidden="true"
+                      fill={favourite(selected.brand) ? "currentColor" : "none"}
+                    />
+                    <Text as="span" variant="xsmallBold">
+                      {favourite(selected.brand)
+                        ? "A brand you always buy"
+                        : `Always buy ${selected.brand}`}
+                    </Text>
+                  </button>
+                )}
               </div>
 
               <div className={styles.priceWrap}>
@@ -301,6 +342,24 @@ export function ProductPop({
                           >
                             {o.storeName}
                           </Text>
+                          {o.brand && (
+                            <Text
+                              as="span"
+                              variant="xsmallBold"
+                              className={styles.compareBrand}
+                            >
+                              {favourite(o.brand) && (
+                                <Star
+                                  size={10}
+                                  className={styles.compareStar}
+                                  fill="currentColor"
+                                  aria-label="A brand you always buy"
+                                />
+                              )}
+                              {o.brand}
+                              {o.isOwnBrand ? " · their own" : ""}
+                            </Text>
+                          )}
                           <Text
                             as="span"
                             variant="xxsmallRegular"

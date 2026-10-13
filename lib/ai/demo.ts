@@ -167,6 +167,7 @@ function catalogPlan(query: string): AIPlan {
       tables: [],
       items: [],
       recipe: null,
+      recipeChanged: null,
     };
   }
 
@@ -188,6 +189,7 @@ function catalogPlan(query: string): AIPlan {
     brandHint: p.brand || null,
     category: p.category,
     department: p.category.toLowerCase(),
+    catalogId: p.id,
     searchTerms: p.searchTerms,
     quantity: 1,
     packSize: p.size,
@@ -201,6 +203,7 @@ function catalogPlan(query: string): AIPlan {
     tables: [table],
     items,
     recipe: null,
+    recipeChanged: null,
   };
 }
 
@@ -233,6 +236,7 @@ export function demoPlan(query: string): AIPlan {
       tables: [],
       items: [],
       recipe: null,
+      recipeChanged: null,
     };
   }
 
@@ -247,6 +251,7 @@ export function demoPlan(query: string): AIPlan {
       tables: [],
       items: [],
       recipe: null,
+      recipeChanged: null,
     };
   }
 
@@ -259,6 +264,9 @@ export function demoPlan(query: string): AIPlan {
       tables: [CHEESECAKE_TABLE],
       items: CHEESECAKE_ITEMS,
       recipe: CHEESECAKE_RECIPE,
+      // The offline engine only ever gives this one recipe, and only when
+      // it is asked for. It never revises, so this is always a first.
+      recipeChanged: true,
     };
   }
 

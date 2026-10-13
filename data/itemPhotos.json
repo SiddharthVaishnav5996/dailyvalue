@@ -1,0 +1,507 @@
+{
+  "banana": {
+    "name": "Bananas",
+    "image": "/stores/Brand Photos/banana.png",
+    "source": "https://digital.loblaws.ca/PCX/20175355001_KG/en/1/20175355001_enfr_front_v1_400.png",
+    "attribution": "Loblaws product photo"
+  },
+  "garlic": {
+    "name": "Garlic, Pack of 3",
+    "image": "/stores/Brand Photos/garlic.png",
+    "source": "https://i5.walmartimages.ca/images/Enlarge/100/030/625195100030.jpg?odnHeight=800&odnWidth=800&odnBg=FFFFFF",
+    "attribution": "Walmart Canada product photo"
+  },
+  "chicken-breast": {
+    "name": "Chicken Breast Boneless Skinless",
+    "image": "/stores/Brand Photos/chicken-breast.png",
+    "source": "https://digital.loblaws.ca/PCX/20028450_KG/en/1/20028450_enfr_front_v1_250.png",
+    "attribution": "Loblaws product photo"
+  },
+  "broccoli": {
+    "name": "Broccoli Stalks",
+    "image": "/stores/Brand Photos/broccoli.png",
+    "source": "https://i5.walmartimages.ca/images/Enlarge/094/505/6000200094505.jpg?odnHeight=800&odnWidth=800&odnBg=FFFFFF",
+    "attribution": "Walmart Canada product photo"
+  },
+  "blueberries": {
+    "name": "Blueberries, 312 g",
+    "image": "/stores/Brand Photos/blueberries.png",
+    "source": "https://i5.walmartimages.ca/images/Enlarge/653/137/6000204653137.jpg?odnHeight=800&odnWidth=800&odnBg=FFFFFF",
+    "attribution": "Walmart Canada product photo"
+  },
+  "strawberries": {
+    "name": "Strawberries, 1 lb.",
+    "image": "/stores/Brand Photos/strawberries.png",
+    "source": "https://i5.walmartimages.ca/images/Enlarge/005/102/812049005102.jpg?odnHeight=800&odnWidth=800&odnBg=FFFFFF",
+    "attribution": "Walmart Canada product photo"
+  },
+  "lemon": {
+    "name": "Lemon, Sold in singles",
+    "image": "/stores/Brand Photos/lemon.png",
+    "source": "https://i5.walmartimages.ca/images/Enlarge/094/504/6000200094504.jpg?odnHeight=800&odnWidth=800&odnBg=FFFFFF",
+    "attribution": "Walmart Canada product photo"
+  },
+  "onion": {
+    "name": "Yellow onions, bagged, 3 lb bag",
+    "image": "/stores/Brand Photos/onion.png",
+    "source": "https://i5.walmartimages.ca/images/Enlarge/208/928/6000202208928.jpg?odnHeight=800&odnWidth=800&odnBg=FFFFFF",
+    "attribution": "Walmart Canada product photo"
+  },
+  "spinach": {
+    "name": "Spinach, 227 g",
+    "image": "/stores/Brand Photos/spinach.png",
+    "source": "https://i5.walmartimages.ca/images/Enlarge/787/422/6000206787422.jpg?odnHeight=800&odnWidth=800&odnBg=FFFFFF",
+    "attribution": "Walmart Canada product photo"
+  },
+  "avocado": {
+    "name": "Avocado",
+    "image": "/stores/Brand Photos/avocado.png",
+    "source": "https://digital.loblaws.ca/PCX/21097012001_EA/en/1/21097012001_en_front_400.png",
+    "attribution": "Loblaws product photo"
+  },
+  "granny-smith-apples": {
+    "name": "Granny Smith Apples",
+    "image": "/stores/Brand Photos/granny-smith-apples.png",
+    "source": "https://digital.loblaws.ca/PCX/20253488001_KG/en/1/20253488001_en_front_400.png",
+    "attribution": "Loblaws product photo"
+  },
+  "green-grapes": {
+    "name": "Green Seedless Grapes",
+    "image": "/stores/Brand Photos/green-grapes.png",
+    "source": "https://digital.loblaws.ca/PCX/20425775001_KG/en/1/20425775001_en_front_v3_400.png",
+    "attribution": "Loblaws product photo"
+  },
+  "seedless-watermelon": {
+    "name": "Watermelon",
+    "image": "/stores/Brand Photos/seedless-watermelon.png",
+    "source": "https://digital.loblaws.ca/PCX/20067326001_EA/en/1/20067326001_en_front_400.png",
+    "attribution": "Loblaws product photo"
+  },
+  "cantaloupe": {
+    "name": "Cantaloupe, Sold in singles",
+    "image": "/stores/Brand Photos/cantaloupe.png",
+    "source": "https://i5.walmartimages.ca/images/Enlarge/894/7_r/6000191268947_R.jpg?odnHeight=800&odnWidth=800&odnBg=FFFFFF",
+    "attribution": "Walmart Canada product photo"
+  },
+  "mango": {
+    "name": "Mango",
+    "image": "/stores/Brand Photos/mango.png",
+    "source": "https://digital.loblaws.ca/PCX/20059635001_EA/en/1/20059635001_en_front_400.png",
+    "attribution": "Loblaws product photo"
+  },
+  "kiwi": {
+    "name": "Kiwi, Gold, 2 lb",
+    "image": "/stores/Brand Photos/kiwi.png",
+    "source": "https://i5.walmartimages.ca/asr/84f99b3a-8bfa-442b-8ce5-35e08a018944.bb5742f20d6aac908afde04392ba2fe0.jpeg?odnHeight=800&odnWidth=800&odnBg=FFFFFF",
+    "attribution": "Walmart Canada product photo"
+  },
+  "raspberries": {
+    "name": "Raspberries",
+    "image": "/stores/Brand Photos/raspberries.png",
+    "source": "https://digital.loblaws.ca/PCX/20128938001_EA/en/1/20128938001_enfr_front_400.png",
+    "attribution": "Loblaws product photo"
+  },
+  "blackberries": {
+    "name": "Blackberries",
+    "image": "/stores/Brand Photos/blackberries.png",
+    "source": "https://digital.loblaws.ca/PCX/20051015001_EA/en/1/20051015001_en_front_400.png",
+    "attribution": "Loblaws product photo"
+  },
+  "bartlett-pears": {
+    "name": "Pears, Bartlett",
+    "image": "/stores/Brand Photos/bartlett-pears.png",
+    "source": "https://i5.walmartimages.ca/images/Enlarge/-40/242/999999-40242.jpg?odnHeight=800&odnWidth=800&odnBg=FFFFFF",
+    "attribution": "Walmart Canada product photo"
+  },
+  "peaches": {
+    "name": "Peaches Yellow",
+    "image": "/stores/Brand Photos/peaches.png",
+    "source": "https://i5.walmartimages.ca/images/Enlarge/_40/389/40389.jpg?odnHeight=800&odnWidth=800&odnBg=FFFFFF",
+    "attribution": "Walmart Canada product photo"
+  },
+  "nectarines": {
+    "name": "Nectarine",
+    "image": "/stores/Brand Photos/nectarines.png",
+    "source": "https://digital.loblaws.ca/PCX/20905336001_EA/en/1/20905336001_en_front_v2_400.png",
+    "attribution": "Loblaws product photo"
+  },
+  "plums": {
+    "name": "Blue Plums",
+    "image": "/stores/Brand Photos/plums.png",
+    "source": "https://digital.loblaws.ca/PCX/20911284001_EA/en/1/20911284001_en_front_400.png",
+    "attribution": "Loblaws product photo"
+  },
+  "clementines": {
+    "name": "Mandarin",
+    "image": "/stores/Brand Photos/clementines.png",
+    "source": "https://digital.loblaws.ca/PCX/20054025001_EA/en/1/20054025001_en_front_400.png",
+    "attribution": "Loblaws product photo"
+  },
+  "lime": {
+    "name": "Limes",
+    "image": "/stores/Brand Photos/lime.png",
+    "source": "https://digital.loblaws.ca/PCX/20040489001_EA/en/1/20040489001_en_front_v2_400.png",
+    "attribution": "Loblaws product photo"
+  },
+  "pomegranate": {
+    "name": "Pomegranate",
+    "image": "/stores/Brand Photos/pomegranate.png",
+    "source": "https://digital.loblaws.ca/PCX/20134767001_EA/en/1/20134767001_en_front_400.png",
+    "attribution": "Loblaws product photo"
+  },
+  "papaya": {
+    "name": "Papaya",
+    "image": "/stores/Brand Photos/papaya.png",
+    "source": "https://digital.loblaws.ca/PCX/20817066001_KG/en/1/20817066001_en_front_400.png",
+    "attribution": "Loblaws product photo"
+  },
+  "celery": {
+    "name": "Celery",
+    "image": "/stores/Brand Photos/celery.png",
+    "source": "https://digital.loblaws.ca/PCX/20163119001_EA/en/1/20163119001_en_front_400.png",
+    "attribution": "Loblaws product photo"
+  },
+  "cauliflower": {
+    "name": "Cauliflower, Sold in singles",
+    "image": "/stores/Brand Photos/cauliflower.png",
+    "source": "https://i5.walmartimages.ca/images/Enlarge/699/998/33383699998.jpg?odnHeight=800&odnWidth=800&odnBg=FFFFFF",
+    "attribution": "Walmart Canada product photo"
+  },
+  "snap-peas": {
+    "name": "Peas, Sugar Snap, 15 oz",
+    "image": "/stores/Brand Photos/snap-peas.png",
+    "source": "https://i5.walmartimages.ca/images/Enlarge/041/068/999999-716519041068.jpg?odnHeight=800&odnWidth=800&odnBg=FFFFFF",
+    "attribution": "Walmart Canada product photo"
+  },
+  "green-bell-pepper": {
+    "name": "Pepper, Green Bell",
+    "image": "/stores/Brand Photos/green-bell-pepper.png",
+    "source": "https://i5.walmartimages.ca/images/Enlarge/351/067/6000209351067.jpg?odnHeight=800&odnWidth=800&odnBg=FFFFFF",
+    "attribution": "Walmart Canada product photo"
+  },
+  "red-bell-pepper": {
+    "name": "Red Bell Pepper",
+    "image": "/stores/Brand Photos/red-bell-pepper.png",
+    "source": "https://i5.walmartimages.ca/images/Enlarge/_46/886/46886.jpg?odnHeight=800&odnWidth=800&odnBg=FFFFFF",
+    "attribution": "Walmart Canada product photo"
+  },
+  "mini-cucumbers": {
+    "name": "Mini Cucumbers, 1 lb",
+    "image": "/stores/Brand Photos/mini-cucumbers.png",
+    "source": "https://i5.walmartimages.ca/images/Enlarge/168/268/57836168268.jpg?odnHeight=800&odnWidth=800&odnBg=FFFFFF",
+    "attribution": "Walmart Canada product photo"
+  },
+  "white-mushrooms": {
+    "name": "Mushrooms, Whole White, 8 oz",
+    "image": "/stores/Brand Photos/white-mushrooms.png",
+    "source": "https://i5.walmartimages.ca/images/Enlarge/163/459/6000202163459.jpg?odnHeight=800&odnWidth=800&odnBg=FFFFFF",
+    "attribution": "Walmart Canada product photo"
+  },
+  "cremini-mushrooms": {
+    "name": "Cremini Mushrooms",
+    "image": "/stores/Brand Photos/cremini-mushrooms.png",
+    "source": "https://digital.loblaws.ca/PCX/21021565_EA/en/1/21021565_enfr_front_250.png",
+    "attribution": "Loblaws product photo"
+  },
+  "green-onion": {
+    "name": "Green Onion, Sold in bunches",
+    "image": "/stores/Brand Photos/green-onion.png",
+    "source": "https://i5.walmartimages.ca/images/Enlarge/094/564/6000200094564.jpg?odnHeight=800&odnWidth=800&odnBg=FFFFFF",
+    "attribution": "Walmart Canada product photo"
+  },
+  "iceberg-lettuce": {
+    "name": "Lettuce, Iceberg",
+    "image": "/stores/Brand Photos/iceberg-lettuce.png",
+    "source": "https://i5.walmartimages.ca/images/Enlarge/272/297/6000191272297.jpg?odnHeight=800&odnWidth=800&odnBg=FFFFFF",
+    "attribution": "Walmart Canada product photo"
+  },
+  "red-onion": {
+    "name": "Red Onions",
+    "image": "/stores/Brand Photos/red-onion.png",
+    "source": "https://i5.walmartimages.ca/images/Enlarge/000/6_1/204082000006_1.jpg?odnHeight=800&odnWidth=800&odnBg=FFFFFF",
+    "attribution": "Walmart Canada product photo"
+  },
+  "fresh-cilantro": {
+    "name": "Cilantro, Sold in bunches",
+    "image": "/stores/Brand Photos/fresh-cilantro.png",
+    "source": "https://i5.walmartimages.ca/images/Enlarge/094/548/6000200094548.jpg?odnHeight=800&odnWidth=800&odnBg=FFFFFF",
+    "attribution": "Walmart Canada product photo"
+  },
+  "roma-tomatoes": {
+    "name": "Roma Tomatoes",
+    "image": "/stores/Brand Photos/roma-tomatoes.png",
+    "source": "https://digital.loblaws.ca/PCX/20143381001_KG/en/1/20143381001_enfr_front_v1_400.png",
+    "attribution": "Loblaws product photo"
+  },
+  "broccolini": {
+    "name": "Broccoli",
+    "image": "/stores/Brand Photos/broccolini.png",
+    "source": "https://digital.loblaws.ca/PCX/20145621001_EA/en/1/20145621001_enfr_front_250.png",
+    "attribution": "Loblaws product photo"
+  },
+  "rapini": {
+    "name": "Broccoli",
+    "image": "/stores/Brand Photos/rapini.png",
+    "source": "https://digital.loblaws.ca/PCX/20145621001_EA/en/1/20145621001_enfr_front_250.png",
+    "attribution": "Loblaws product photo"
+  },
+  "garlic-scapes": {
+    "name": "Garlic, Pack of 3",
+    "image": "/stores/Brand Photos/garlic-scapes.png",
+    "source": "https://i5.walmartimages.ca/images/Enlarge/100/030/625195100030.jpg?odnHeight=800&odnWidth=800&odnBg=FFFFFF",
+    "attribution": "Walmart Canada product photo"
+  },
+  "mini-seedless-watermelon": {
+    "name": "Watermelon",
+    "image": "/stores/Brand Photos/mini-seedless-watermelon.png",
+    "source": "https://digital.loblaws.ca/PCX/20067326001_EA/en/1/20067326001_en_front_400.png",
+    "attribution": "Loblaws product photo"
+  },
+  "lemongrass": {
+    "name": "Lemon, Sold in singles",
+    "image": "/stores/Brand Photos/lemongrass.png",
+    "source": "https://i5.walmartimages.ca/images/Enlarge/094/504/6000200094504.jpg?odnHeight=800&odnWidth=800&odnBg=FFFFFF",
+    "attribution": "Walmart Canada product photo"
+  },
+  "green-papaya": {
+    "name": "Papaya",
+    "image": "/stores/Brand Photos/green-papaya.png",
+    "source": "https://digital.loblaws.ca/PCX/20817066001_KG/en/1/20817066001_en_front_400.png",
+    "attribution": "Loblaws product photo"
+  },
+  "tomato": {
+    "name": "Tomatoes on the Vine",
+    "image": "/stores/Brand Photos/tomato.png",
+    "source": "https://i5.walmartimages.ca/images/Enlarge/752/052/628915752052.jpg?odnHeight=800&odnWidth=800&odnBg=FFFFFF",
+    "attribution": "Walmart Canada product photo"
+  },
+  "potato": {
+    "name": "Little Potatoes Red 3lb",
+    "image": "/stores/Brand Photos/potato.png",
+    "source": "https://i5.walmartimages.ca/images/Enlarge/931/564/6000209931564.jpg?odnHeight=800&odnWidth=800&odnBg=FFFFFF",
+    "attribution": "Walmart Canada product photo"
+  },
+  "gala-apples": {
+    "name": "Royal Gala Apples",
+    "image": "/stores/Brand Photos/gala-apples.png",
+    "source": "https://digital.loblaws.ca/PCX/20083526001_KG/en/1/20083526001_en_front_v1_400.png",
+    "attribution": "Loblaws product photo"
+  },
+  "navel-oranges": {
+    "name": "Navel Orange",
+    "image": "/stores/Brand Photos/navel-oranges.png",
+    "source": "https://digital.loblaws.ca/PCX/20426078001_KG/en/1/20426078001_enfr_front_v1_400.png",
+    "attribution": "Loblaws product photo"
+  },
+  "corn-on-the-cob": {
+    "name": "Corn on the cob",
+    "image": "/stores/Brand Photos/corn-on-the-cob.png",
+    "source": "https://i5.walmartimages.ca/images/Enlarge/182/753/6000208182753.jpg?odnHeight=800&odnWidth=800&odnBg=FFFFFF",
+    "attribution": "Walmart Canada product photo"
+  },
+  "romaine-lettuce": {
+    "name": "Romaine Lettuce Hearts",
+    "image": "/stores/Brand Photos/romaine-lettuce.png",
+    "source": "https://i5.walmartimages.ca/images/Enlarge/601/004/72668601004.jpg?odnHeight=800&odnWidth=800&odnBg=FFFFFF",
+    "attribution": "Walmart Canada product photo"
+  },
+  "whole-chicken": {
+    "name": "Chicken Wings",
+    "image": "/stores/Brand Photos/whole-chicken.png",
+    "source": "https://digital.loblaws.ca/PCX/20761916_KG/en/1/20761916_en_front_250.png",
+    "attribution": "Loblaws product photo"
+  },
+  "ground-beef": {
+    "name": "Ground Beef",
+    "image": "/stores/Brand Photos/ground-beef.png",
+    "source": "https://digital.loblaws.ca/PCX/20805731_KG/en/1/20805731_en_front_250.png",
+    "attribution": "Loblaws product photo"
+  },
+  "salmon": {
+    "name": "Salmon Fillet",
+    "image": "/stores/Brand Photos/salmon.png",
+    "source": "https://digital.loblaws.ca/PCX/21085873_KG/en/1/21085873_en_front_250.png",
+    "attribution": "Loblaws product photo"
+  },
+  "honeycrisp-apples": {
+    "name": "Honeycrisp Apples",
+    "image": "/stores/Brand Photos/honeycrisp-apples.png",
+    "source": "https://digital.loblaws.ca/PCX/20132621001_KG/en/1/20132621001_en_front_250.png",
+    "attribution": "Loblaws product photo"
+  },
+  "green-cabbage": {
+    "name": "Green Cabbage",
+    "image": "/stores/Brand Photos/green-cabbage.png",
+    "source": "https://digital.loblaws.ca/PCX/20793034001_KG/en/1/20793034001_enfr_front_400.png",
+    "attribution": "Loblaws product photo"
+  },
+  "carrots": {
+    "name": "Carrots",
+    "image": "/stores/Brand Photos/carrots.png",
+    "source": "https://digital.loblaws.ca/PCX/20116186001_KG/en/1/20116186001_en_front_400.png",
+    "attribution": "Loblaws product photo"
+  },
+  "green-beans": {
+    "name": "Green Beans",
+    "image": "/stores/Brand Photos/green-beans.png",
+    "source": "https://digital.loblaws.ca/PCX/20142683001_KG/en/1/20142683001_en_front_400.png",
+    "attribution": "Loblaws product photo"
+  },
+  "yellow-bell-pepper": {
+    "name": "Yellow Bell Pepper",
+    "image": "/stores/Brand Photos/yellow-bell-pepper.png",
+    "source": "https://digital.loblaws.ca/PCX/20141814001_KG/en/1/20141814001_en_front_400.png",
+    "attribution": "Loblaws product photo"
+  },
+  "russet-potatoes": {
+    "name": "Russet Potatoes",
+    "image": "/stores/Brand Photos/russet-potatoes.png",
+    "source": "https://digital.loblaws.ca/PCX/20601020001_EA/en/1/20601020001_en_front_v1_400.png",
+    "attribution": "Loblaws product photo"
+  },
+  "baby-potatoes": {
+    "name": "Baby Potatoes",
+    "image": "/stores/Brand Photos/baby-potatoes.png",
+    "source": "https://digital.loblaws.ca/PCX/21247300001_EA/en/1/21247300001_en_front_400.png",
+    "attribution": "Loblaws product photo"
+  },
+  "radishes": {
+    "name": "Radishes",
+    "image": "/stores/Brand Photos/radishes.png",
+    "source": "https://digital.loblaws.ca/PCX/20032320001_EA/en/1/20032320001_en_front_400.png",
+    "attribution": "Loblaws product photo"
+  },
+  "eggplant": {
+    "name": "Eggplant",
+    "image": "/stores/Brand Photos/eggplant.png",
+    "source": "https://digital.loblaws.ca/PCX/20155709001_KG/en/1/20155709001_en_front_400.png",
+    "attribution": "Loblaws product photo"
+  },
+  "white-onion": {
+    "name": "White Onion",
+    "image": "/stores/Brand Photos/white-onion.png",
+    "source": "https://digital.loblaws.ca/PCX/20003839001_KG/en/1/20003839001_en_front_400.png",
+    "attribution": "Loblaws product photo"
+  },
+  "jalape-o-peppers": {
+    "name": "Jalapeno Peppers",
+    "image": "/stores/Brand Photos/jalape-o-peppers.png",
+    "source": "https://digital.loblaws.ca/PCX/20088387001_KG/en/1/20088387001_en_front_400.png",
+    "attribution": "Loblaws product photo"
+  },
+  "fresh-ginger": {
+    "name": "Fresh Ginger",
+    "image": "/stores/Brand Photos/fresh-ginger.png",
+    "source": "https://digital.loblaws.ca/PCX/20179038001_KG/en/1/20179038001_en_front_400.png",
+    "attribution": "Loblaws product photo"
+  },
+  "cherry-tomatoes": {
+    "name": "Cherry Tomatoes",
+    "image": "/stores/Brand Photos/cherry-tomatoes.png",
+    "source": "https://digital.loblaws.ca/PCX/21367888001_EA/en/1/21367888001_en_front_400.png",
+    "attribution": "Loblaws product photo"
+  },
+  "vidalia-sweet-onion": {
+    "name": "Vidalia Sweet Onion",
+    "image": "/stores/Brand Photos/vidalia-sweet-onion.png",
+    "source": "https://digital.loblaws.ca/PCX/20083454001_KG/en/1/20083454001_en_front_400.png",
+    "attribution": "Loblaws product photo"
+  },
+  "chicken-thighs": {
+    "name": "Chicken Thighs",
+    "image": "/stores/Brand Photos/chicken-thighs.png",
+    "source": "https://digital.loblaws.ca/PCX/20058163_KG/en/1/20058163_en_front_v1_250.png",
+    "attribution": "Loblaws product photo"
+  },
+  "chicken-drumsticks": {
+    "name": "Chicken Drumsticks",
+    "image": "/stores/Brand Photos/chicken-drumsticks.png",
+    "source": "https://digital.loblaws.ca/PCX/20004494_KG/en/1/20004494_enfr_front_v1_250.png",
+    "attribution": "Loblaws product photo"
+  },
+  "chicken-wings": {
+    "name": "Chicken Wings",
+    "image": "/stores/Brand Photos/chicken-wings.png",
+    "source": "https://digital.loblaws.ca/PCX/20761916_KG/en/1/20761916_en_front_250.png",
+    "attribution": "Loblaws product photo"
+  },
+  "ground-turkey": {
+    "name": "Ground Turkey",
+    "image": "/stores/Brand Photos/ground-turkey.png",
+    "source": "https://digital.loblaws.ca/PCX/21100092_EA/en/1/21100092_en_front_v1_250.png",
+    "attribution": "Loblaws product photo"
+  },
+  "ground-chicken": {
+    "name": "Ground Chicken",
+    "image": "/stores/Brand Photos/ground-chicken.png",
+    "source": "https://digital.loblaws.ca/PCX/21100091_EA/en/1/21100091_en_front_v2_250.png",
+    "attribution": "Loblaws product photo"
+  },
+  "whole-turkey": {
+    "name": "Whole Turkey",
+    "image": "/stores/Brand Photos/whole-turkey.png",
+    "source": "https://digital.loblaws.ca/PCX/20118435_KG/en/1/20118435_en_front_250.png",
+    "attribution": "Loblaws product photo"
+  },
+  "beef-striploin-steak": {
+    "name": "Beef Striploin Steak",
+    "image": "/stores/Brand Photos/beef-striploin-steak.png",
+    "source": "https://digital.loblaws.ca/PCX/21672450_KG/en/1/21672450_enfr_front_250.png",
+    "attribution": "Loblaws product photo"
+  },
+  "stewing-beef": {
+    "name": "Stewing Beef",
+    "image": "/stores/Brand Photos/stewing-beef.png",
+    "source": "https://digital.loblaws.ca/PCX/20832537_KG/en/1/20832537_en_front_250.png",
+    "attribution": "Loblaws product photo"
+  },
+  "beef-short-ribs": {
+    "name": "Beef Short Ribs",
+    "image": "/stores/Brand Photos/beef-short-ribs.png",
+    "source": "https://digital.loblaws.ca/PCX/20810384_KG/en/1/20810384_enfr_front_v1_250.png",
+    "attribution": "Loblaws product photo"
+  },
+  "extra-lean-ground-beef": {
+    "name": "Lean Ground Beef",
+    "image": "/stores/Brand Photos/extra-lean-ground-beef.png",
+    "source": "https://digital.loblaws.ca/PCX/20805733_KG/en/1/20805733_en_front_250.png",
+    "attribution": "Loblaws product photo"
+  },
+  "lean-ground-beef": {
+    "name": "Lean Ground Beef",
+    "image": "/stores/Brand Photos/lean-ground-beef.png",
+    "source": "https://digital.loblaws.ca/PCX/20805733_KG/en/1/20805733_en_front_250.png",
+    "attribution": "Loblaws product photo"
+  },
+  "whole-salmon": {
+    "name": "Whole Salmon",
+    "image": "/stores/Brand Photos/whole-salmon.png",
+    "source": "https://digital.loblaws.ca/PCX/20033861_KG/en/1/20033861_en_front_250.png",
+    "attribution": "Loblaws product photo"
+  },
+  "trout-fillet": {
+    "name": "Trout Fillet",
+    "image": "/stores/Brand Photos/trout-fillet.png",
+    "source": "https://digital.loblaws.ca/PCX/21025083_KG/en/1/21025083_en_front_250.png",
+    "attribution": "Loblaws product photo"
+  },
+  "shrimp": {
+    "name": "Shrimp",
+    "image": "/stores/Brand Photos/shrimp.png",
+    "source": "https://digital.loblaws.ca/PCX/21043887_EA/en/1/21043887_en_front_v4_250.png",
+    "attribution": "Loblaws product photo"
+  },
+  "beef-stir-fry-strips": {
+    "name": "Beef Stir-Fry Strips",
+    "image": "/stores/Brand Photos/beef-stir-fry-strips.png",
+    "source": "https://digital.loblaws.ca/PCX/21588067_EA/en/1/21588067_en_front_250.png",
+    "attribution": "Loblaws product photo"
+  },
+  "almond-butter": {
+    "name": "Almond Butter",
+    "image": "/stores/Brand Photos/pinned-any-almond-butter.avif",
+    "source": "public/stores/Product card Images/AI searched/almond butter.avif",
+    "attribution": "hand-picked",
+    "pinned": true
+  }
+}

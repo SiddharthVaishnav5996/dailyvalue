@@ -1,8 +1,11 @@
 "use client";
 
 import { useId, useState } from "react";
+import { Bookmark, BookmarkCheck, Share2 } from "lucide-react";
 import { Text } from "@/components/Text/Text";
 import { AddButton } from "@/components/AddButton/AddButton";
+import { useSavedRecipes } from "@/lib/recipe/SavedRecipesContext";
+import { shareRecipe } from "@/lib/recipe/share";
 import type { AIRecipe } from "@/lib/types";
 import styles from "./RecipeCard.module.css";
 
@@ -26,12 +29,33 @@ function metaLine(recipe: AIRecipe): string {
  * ChatMessage already paints, so it reads as part of the AI's answer rather
  * than a separate panel. Sections are divided with hairlines instead.
  *
- * Download PDF builds the file on the device. The PDF code is heavy, so it is
- * only fetched the first time someone taps the button (see lib/recipe/pdf.ts).
+ * Three things can be done with it, and they are different jobs rather than
+ * three ways to do one:
+ *
+ *   Download PDF  a file, for a printer or a phone in a kitchen. The PDF code
+ *                 is heavy, so it is only fetched the first time someone taps
+ *                 the button - see lib/recipe/pdf.ts.
+ *   Save          keep it in the app. It then appears under Saved Recipes in
+ *                 the account menu, with no second trip to the AI.
+ *   Share         hand it to another person right now, through the system
+ *                 share sheet or the clipboard - see lib/recipe/share.ts.
  */
 export function RecipeCard({ recipe, className }: RecipeCardProps) {
   const titleId = useId();
   const [status, setStatus] = useState<"idle" | "working" | "failed">("idle");
+
+  const { isSaved, toggleSaved } = useSavedRecipes();
+  const saved = isSaved(recipe);
+
+  /**
+   * What the Share button last did, so it can say so.
+   *
+   * "copied" is not a failure - it is what happens on a desktop browser with
+   * no share sheet - so it gets its own value rather than being folded in with
+   * the error. Same reasoning as `status` above: name the states, do not try
+   * to infer them from a pair of booleans.
+   */
+  const [shareResult, setShareResult] = useState<"idle" | "copied" | "failed">("idle");
 
   async function handleDownload() {
     setStatus("working");
@@ -46,6 +70,13 @@ export function RecipeCard({ recipe, className }: RecipeCardProps) {
       console.error("[RecipeCard] PDF download failed:", err);
       setStatus("failed");
     }
+  }
+
+  async function handleShare() {
+    const outcome = await shareRecipe(recipe);
+    // The share sheet is its own confirmation, so only the clipboard path and
+    // an outright failure need a word from us.
+    setShareResult(outcome === "shared" ? "idle" : outcome);
   }
 
   return (
@@ -122,9 +153,45 @@ export function RecipeCard({ recipe, className }: RecipeCardProps) {
           disabled={status === "working"}
           onAdd={handleDownload}
         />
+
+        <button
+          type="button"
+          className={[styles.action, saved ? styles.actionOn : ""].filter(Boolean).join(" ")}
+          onClick={() => toggleSaved(recipe)}
+          // aria-pressed is what tells a screen reader this is a toggle that is
+          // currently on, rather than a button that does something new.
+          aria-pressed={saved}
+        >
+          {saved ? (
+            <BookmarkCheck size={16} aria-hidden="true" />
+          ) : (
+            <Bookmark size={16} aria-hidden="true" />
+          )}
+          <Text as="span" variant="xsmallBold">
+            {saved ? "Saved" : "Save"}
+          </Text>
+        </button>
+
+        <button type="button" className={styles.action} onClick={handleShare}>
+          <Share2 size={16} aria-hidden="true" />
+          <Text as="span" variant="xsmallBold">
+            {shareResult === "copied" ? "Copied" : "Share"}
+          </Text>
+        </button>
+
         {status === "failed" && (
           <Text as="p" variant="smallRegular" role="status" className={styles.error}>
             The PDF could not be created. Check your connection and try again.
+          </Text>
+        )}
+        {shareResult === "copied" && (
+          <Text as="p" variant="smallRegular" role="status" className={styles.note}>
+            Recipe copied — paste it wherever you like.
+          </Text>
+        )}
+        {shareResult === "failed" && (
+          <Text as="p" variant="smallRegular" role="status" className={styles.error}>
+            This browser would not let us share or copy. Download the PDF instead.
           </Text>
         )}
       </div>

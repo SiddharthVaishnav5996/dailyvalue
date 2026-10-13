@@ -4,11 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "node scripts/check-images.mjs && next build",
     "start": "next start",
     "lint": "eslint",
     "seed": "node scripts/seed.mjs",
-    "check-keys": "node scripts/check-keys.mjs"
+    "check-keys": "node scripts/check-keys.mjs",
+    "check-images": "node scripts/check-images.mjs",
+    "seed-photos": "node scripts/seed-brand-photos.mjs",
+    "seed-images": "node scripts/seed-item-images.mjs"
   },
   "dependencies": {
     "@google/genai": "^2.10.0",
@@ -20,11 +23,15 @@
     "react-dom": "19.2.4"
   },
   "devDependencies": {
+    "@imgly/background-removal-node": "^1.4.5",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.3.5",
     "typescript": "^5"
+  },
+  "overrides": {
+    "sharp": "0.35.4"
   }
 }

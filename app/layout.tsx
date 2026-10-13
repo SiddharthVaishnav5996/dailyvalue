@@ -4,6 +4,8 @@ import { AuthProvider } from "@/components/Auth/AuthContext";
 import { WishlistProvider } from "@/components/Wishlist/WishlistContext";
 import { CartProvider } from "@/components/Cart/CartContext";
 import { SearchProvider } from "@/lib/search/SearchContext";
+import { BrandPreferenceProvider } from "@/lib/brand/BrandPreferenceContext";
+import { SavedRecipesProvider } from "@/lib/recipe/SavedRecipesContext";
 import "../styles/tokens.css";
 import "./globals.css";
 
@@ -31,7 +33,11 @@ export default function RootLayout({
             <CartProvider>
               {/* Holds the current AI search result so /results and
                   /results/products share one answer instead of asking twice. */}
-              <SearchProvider>{children}</SearchProvider>
+              <BrandPreferenceProvider>
+                <SavedRecipesProvider>
+                  <SearchProvider>{children}</SearchProvider>
+                </SavedRecipesProvider>
+              </BrandPreferenceProvider>
             </CartProvider>
           </WishlistProvider>
         </AuthProvider>

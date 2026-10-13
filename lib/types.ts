@@ -108,6 +108,12 @@ export interface AIItem {
   category: string;
   /** Which store department stocks this - see DEPARTMENTS in data/stores.ts. */
   department: string;
+  /**
+   * The catalog product this item IS, picked by the model from the id list in
+   * the prompt. Already checked against the catalog, so a non-null value is
+   * always a real id. Null for anything the catalog does not stock.
+   */
+  catalogId?: string | null;
   /** Aliases to help the catalog matcher find an existing product. */
   searchTerms: string[];
   /** How many packs to buy. */
@@ -161,6 +167,18 @@ export interface AIPlan {
   items: AIItem[];
   /** The written method, when the shopper is cooking a dish. Null otherwise. */
   recipe: AIRecipe | null;
+  /**
+   * Did THIS turn change the dish?
+   *
+   * The model rewrites the whole recipe on every turn, so "is this the same
+   * recipe?" cannot be answered by comparing the two objects - ask for a wine
+   * pairing and the method comes back reworded, the tips rewritten and the
+   * rice quietly up from 4 cups to 6. Measured, not assumed.
+   *
+   * Nothing in the payload separates a rewrite from a revision, so the model
+   * is asked directly. Null when it did not say.
+   */
+  recipeChanged: boolean | null;
 }
 
 /* ---------------------------------------------------------------------------
@@ -180,6 +198,26 @@ export interface Offer {
   /** 0-5, one decimal. */
   rating: number;
   reviewCount: number;
+  /**
+   * The brand a shopper would actually be handed at THIS store.
+   *
+   * It belongs to the offer rather than the product, because it changes from
+   * shop to shop. One row of "cream cheese" is Great Value at Walmart,
+   * Compliments at Sobeys and Selection at Metro - three different tubs, three
+   * different prices, and the choice between them is the whole point.
+   */
+  brand?: string;
+  /** True when that brand belongs to this shop, e.g. Kirkland at Costco. */
+  isOwnBrand?: boolean;
+  /**
+   * The real package for THIS shop's brand, when one has been seeded.
+   *
+   * Switching store in the pop-up switches the photograph too, because a
+   * Kirkland tub and a Compliments tub are not the same product. Falls back to
+   * the product's own image when absent. Never set for curated products -
+   * their hand-fitted photography always wins.
+   */
+  imageSrc?: string;
   /** Green loyalty line in the comparison dropdown, e.g. "200 Scene+ Points". */
   promo?: string;
   /** Red badge on the card when this offer is the selected one. */
@@ -239,6 +277,12 @@ export interface SearchResult {
   items: AIItem[];
   /** The written method, when there is one. Cached with the list, for the same reason. */
   recipe: AIRecipe | null;
+  /**
+   * Did this turn change the dish? Passed straight through from the plan so
+   * the browser can decide whether to print the recipe again - see
+   * shouldShowRecipe in lib/search/SearchContext.tsx.
+   */
+  recipeChanged: boolean | null;
   products: ResolvedProduct[];
   /** Item names the resolver could not turn into anything buyable. */
   unresolved: string[];

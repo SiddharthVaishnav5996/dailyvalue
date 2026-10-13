@@ -1,5 +1,6 @@
 import { Type } from "@google/genai";
 import type { AIItem, AIPlan, AIRecipe, AITable, AITableRow } from "@/lib/types";
+import { PRODUCT_BY_ID } from "@/lib/catalog/products";
 
 /*
  * The shape we force the model to answer in.
@@ -107,7 +108,10 @@ export const PLAN_SCHEMA_GEMINI = {
           brandHint: {
             type: Type.STRING,
             nullable: true,
-            description: "A well-known brand if there is an obvious one, else null.",
+            description:
+              "The brand ONLY when the shopper named one or the dish requires it " +
+              "(Philadelphia, Oreo, Great Value). Null for anything generic - the app " +
+              "then fills in each store's own brand, which is a better answer.",
           },
           category: {
             type: Type.STRING,
@@ -117,6 +121,13 @@ export const PLAN_SCHEMA_GEMINI = {
             type: Type.STRING,
             description:
               "Which kind of store aisle stocks this. Must be one of the DEPARTMENTS list given in the instructions.",
+          },
+          catalogId: {
+            type: Type.STRING,
+            nullable: true,
+            description:
+              "Id of the CATALOG product this item is, copied exactly from the catalog list in " +
+              "the instructions. Null when the catalog has nothing that is this item.",
           },
           searchTerms: {
             type: Type.ARRAY,
@@ -197,6 +208,21 @@ export const PLAN_SCHEMA_GEMINI = {
       },
       required: ["title", "servings", "ingredients", "steps"],
     },
+    // AFTER the recipe, on purpose. Placed before it, the model answered this
+    // first and then returned recipe: null every single time - three runs out
+    // of three. A field asking ABOUT the recipe has to come after the recipe
+    // exists, because the model writes the JSON in order and cannot judge
+    // something it has not written yet.
+    recipeChanged: {
+      type: Type.BOOLEAN,
+      nullable: true,
+      description:
+        "Looking at the recipe you just wrote: did THIS message change the dish? " +
+        "True for a new dish, different servings, a swapped or removed " +
+        "ingredient, a different method. False when you reissued it unchanged " +
+        "because the shopper asked about something else - wine, prices, shops. " +
+        "Null when there is no recipe.",
+    },
   },
   required: ["inScope", "reply", "tables", "items"],
 };
@@ -229,6 +255,7 @@ export const PLAN_SHAPE_TEXT = `{
       "brandHint": string | null,
       "category": string,
       "department": string,
+      "catalogId": string | null,
       "searchTerms": [string],
       "quantity": number,
       "packSize": string | null,
@@ -243,7 +270,8 @@ export const PLAN_SHAPE_TEXT = `{
     "ingredients": [string],
     "steps": [string],
     "tips": [string]
-  }
+  },
+  "recipeChanged": boolean | null
 }`;
 
 /* ---------------------------------------------------------------------------
@@ -322,6 +350,9 @@ function normalizeItem(raw: unknown): AIItem | null {
     brandHint: str(i.brandHint) || null,
     category: str(i.category) || "General",
     department: str(i.department).toLowerCase() || "grocery",
+    // A made-up or misspelt id is worse than none: drop it so the resolver
+    // falls back to matching on the name.
+    catalogId: PRODUCT_BY_ID[str(i.catalogId)] ? str(i.catalogId) : null,
     // Always leave at least the item's own name to search on.
     searchTerms: terms.length ? terms : [name.toLowerCase()],
     // Round to a whole number, floor at 1, ceiling at 99.
@@ -399,6 +430,7 @@ export function normalizePlan(raw: unknown): AIPlan {
       tables: [],
       items: [],
       recipe: null,
+      recipeChanged: null,
     };
   }
 
@@ -419,6 +451,10 @@ export function normalizePlan(raw: unknown): AIPlan {
     tables,
     items,
     recipe: normalizeRecipe(p.recipe),
+    // Three-valued on purpose. A missing field means "the model did not say",
+    // which is NOT the same as "nothing changed" - the caller treats the two
+    // differently. See shouldShowRecipe in lib/search/SearchContext.tsx.
+    recipeChanged: typeof p.recipeChanged === "boolean" ? p.recipeChanged : null,
   };
 }
 

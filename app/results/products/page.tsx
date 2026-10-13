@@ -12,6 +12,7 @@ import { ProductCard } from "@/components/ProductCard/ProductCard";
 import { ProductPop } from "@/components/ProductPop/ProductPop";
 import { Text } from "@/components/Text/Text";
 import { useSearch } from "@/lib/search/SearchContext";
+import { useBrandPreferences } from "@/lib/brand/BrandPreferenceContext";
 import type { AIItem, Offer, ResolvedProduct } from "@/lib/types";
 import {
   PRODUCT_POP_BY_ID,
@@ -48,6 +49,7 @@ export default function ProductResultsPage() {
   const { result, registerCommitted } = useSearch();
   const { setItemQuantity } = useCart();
   const { isWishlisted, toggleWishlist } = useWishlist();
+  const { isPreferred, togglePreferred, preferredFirst } = useBrandPreferences();
 
   const products = useMemo(() => result?.products ?? [], [result]);
 
@@ -118,9 +120,20 @@ export default function ProductResultsPage() {
 
   /* --- offers and cart lines --------------------------------------------- */
 
-  /** The offer currently chosen for a product, or its top-ranked default. */
+  /**
+   * The offer to show for a product.
+   *
+   * In order: what the shopper picked in the pop-up, then a brand they always
+   * buy, then whatever the server ranked first on price and stars.
+   *
+   * The brand step happens HERE, in the browser, rather than in the ranking on
+   * the server - the server has no idea who is asking, and it does not need
+   * to. Nothing about a shopper's taste leaves their machine.
+   */
   const offerFor = (product: ResolvedProduct): Offer =>
-    product.offers.find((o) => o.id === selectedOffer[product.id]) ?? product.offers[0];
+    product.offers.find((o) => o.id === selectedOffer[product.id]) ??
+    preferredFirst(product.offers) ??
+    product.offers[0];
 
   /** A cart line built from a product and whichever store is selected. */
   const toCartItem = (product: ResolvedProduct): CartItemInput => {
@@ -281,13 +294,20 @@ export default function ProductResultsPage() {
         key={product.id}
         layout="vertical"
         descriptionLines={2}
-        imageSrc={product.imageSrc}
+        // The chosen shop's own packshot when there is one, so switching
+        // store in the pop-up switches the picture as well as the price.
+        imageSrc={offer.imageSrc ?? product.imageSrc}
         imageAlt={product.imageAlt ?? product.description}
         imageFit={product.imageFit}
         storeName={offer.storeName}
         storeDistanceKm={offer.storeDistanceKm}
         storeLogoSrc={offer.storeLogoSrc}
         description={product.description}
+        // The brand follows the chosen shop, because it IS the shop's: switch
+        // the store in the pop-up and this becomes Compliments or Kirkland.
+        // Always passed, even when empty, so the grid stays aligned.
+        brand={offer.brand ?? ""}
+        brandIsFavourite={isPreferred(offer.brand)}
         rating={offer.rating}
         reviewCount={offer.reviewCount}
         price={offer.price}
@@ -386,6 +406,8 @@ export default function ProductResultsPage() {
           onSelectOffer={(offerId) =>
             setSelectedOffer((prev) => ({ ...prev, [activeProduct.id]: offerId }))
           }
+          isPreferredBrand={isPreferred}
+          onToggleBrand={togglePreferred}
           quantities={popQuantities}
           onAdd={(id) => bump(id, 1)}
           onIncrement={(id) => bump(id, 1)}

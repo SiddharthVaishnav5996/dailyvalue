@@ -87,6 +87,7 @@ export async function POST(request: Request) {
         tables: [],
         items: [],
         recipe: null,
+        recipeChanged: null,
         products: [],
         unresolved: [],
       };
@@ -110,6 +111,7 @@ export async function POST(request: Request) {
       tables: plan.tables,
       items: plan.items,
       recipe: plan.recipe,
+      recipeChanged: plan.recipeChanged,
       products,
       unresolved,
     };

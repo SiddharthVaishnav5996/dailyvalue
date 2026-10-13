@@ -1,0 +1,4112 @@
+{
+  "soy-milk": {
+    "name": "Soy Milk",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-29T12:05:39.914Z"
+  },
+  "skim-milk": {
+    "name": "Skim Milk",
+    "imageMode": "brand",
+    "reason": "President's Choice: image too small (167x400) - short side under 250px",
+    "attemptedAt": "2026-09-29T12:27:28.727Z"
+  },
+  "lactose-free-milk": {
+    "name": "Lactose-Free Milk",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-29T12:05:40.045Z"
+  },
+  "english-cucumber": {
+    "name": "English Cucumber",
+    "imageMode": "generic",
+    "reason": "walmart: matched \"Cucumber, English\" but opaque coverage 8.0% is under 12% - the cutout likely ate the product; loblaws: matched \"English Cucumber\" (+1 more) but opaque coverage 9.4% is under 12% - the cutout likely ate the product",
+    "attemptedAt": "2026-09-28T13:39:53.637Z"
+  },
+  "sugar": {
+    "name": "Granulated Sugar",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:49:17.243Z"
+  },
+  "brown-sugar": {
+    "name": "Brown Sugar",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:49:17.348Z"
+  },
+  "red-grapes": {
+    "name": "Red Grapes",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: matched \"Red Seedless Grapes\" but opaque coverage 6.1% is under 12% - the cutout likely ate the product",
+    "attemptedAt": "2026-09-28T13:39:46.531Z"
+  },
+  "honeydew-melon": {
+    "name": "Honeydew Melon",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:46.975Z"
+  },
+  "pineapple": {
+    "name": "Pineapple",
+    "imageMode": "generic",
+    "reason": "walmart: matched \"Pineapple, Golden Jumbo\" but opaque coverage 11.2% is under 12% - the cutout likely ate the product; loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:47.934Z"
+  },
+  "mixed-berries": {
+    "name": "Mixed Berries",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:48.096Z"
+  },
+  "cherries": {
+    "name": "Cherries",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:48.099Z"
+  },
+  "grapefruit": {
+    "name": "Grapefruit",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:49.048Z"
+  },
+  "fresh-cranberries": {
+    "name": "Fresh Cranberries",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:49.374Z"
+  },
+  "rhubarb": {
+    "name": "Rhubarb",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:49.376Z"
+  },
+  "fresh-figs": {
+    "name": "Fresh Figs",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:49.461Z"
+  },
+  "plantains": {
+    "name": "Plantains",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: matched \"Plantains\" but opaque coverage 10.6% is under 12% - the cutout likely ate the product",
+    "attemptedAt": "2026-09-28T13:39:50.259Z"
+  },
+  "baby-carrots": {
+    "name": "Baby Carrots",
+    "imageMode": "generic",
+    "reason": "walmart: matched \"Baby-cut Carrots, 454 g\" but opaque coverage 2.6% is under 12% - the cutout likely ate the product; loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:50.197Z"
+  },
+  "red-cabbage": {
+    "name": "Red Cabbage",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:51.056Z"
+  },
+  "napa-cabbage": {
+    "name": "Napa Cabbage",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:51.059Z"
+  },
+  "brussels-sprouts": {
+    "name": "Brussels Sprouts",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:51.062Z"
+  },
+  "wax-beans": {
+    "name": "Wax Beans",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:51.313Z"
+  },
+  "snow-peas": {
+    "name": "Snow Peas",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:51.570Z"
+  },
+  "zucchini": {
+    "name": "Zucchini",
+    "imageMode": "generic",
+    "reason": "walmart: matched \"Zucchini, Green\" but opaque coverage 5.8% is under 12% - the cutout likely ate the product; loblaws: matched \"Zucchini\" but opaque coverage 11.9% is under 12% - the cutout likely ate the product",
+    "attemptedAt": "2026-09-28T13:39:53.415Z"
+  },
+  "yellow-summer-squash": {
+    "name": "Yellow Summer Squash",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:52.691Z"
+  },
+  "butternut-squash": {
+    "name": "Butternut Squash",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:52.697Z"
+  },
+  "acorn-squash": {
+    "name": "Acorn Squash",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:52.700Z"
+  },
+  "spaghetti-squash": {
+    "name": "Spaghetti Squash",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:52.702Z"
+  },
+  "portobello-mushrooms": {
+    "name": "Portobello Mushrooms",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:53.309Z"
+  },
+  "sweet-potato": {
+    "name": "Sweet Potato",
+    "imageMode": "generic",
+    "reason": "walmart: matched \"Sweet Potato\" but cutout is fully transparent - background removal ate the whole image; loblaws: matched \"Sweet Potato\" but opaque coverage 9.6% is under 12% - the cutout likely ate the product",
+    "attemptedAt": "2026-09-28T13:39:54.179Z"
+  },
+  "asparagus": {
+    "name": "Asparagus",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:53.945Z"
+  },
+  "spring-mix": {
+    "name": "Spring Mix",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:54.308Z"
+  },
+  "arugula": {
+    "name": "Arugula",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:54.311Z"
+  },
+  "kale": {
+    "name": "Kale",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:54.314Z"
+  },
+  "swiss-chard": {
+    "name": "Swiss Chard",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:54.317Z"
+  },
+  "collard-greens": {
+    "name": "Collard Greens",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:54.350Z"
+  },
+  "bok-choy": {
+    "name": "Bok Choy",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:54.354Z"
+  },
+  "beets": {
+    "name": "Beets",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:54.415Z"
+  },
+  "turnip": {
+    "name": "Turnip",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:54.419Z"
+  },
+  "rutabaga": {
+    "name": "Rutabaga",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:54.422Z"
+  },
+  "parsnip": {
+    "name": "Parsnip",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:54.425Z"
+  },
+  "leek": {
+    "name": "Leek",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:54.428Z"
+  },
+  "shallots": {
+    "name": "Shallots",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:54.432Z"
+  },
+  "hot-peppers": {
+    "name": "Hot Peppers",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:55.252Z"
+  },
+  "fresh-turmeric-root": {
+    "name": "Fresh Turmeric Root",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:55.692Z"
+  },
+  "fennel-bulb": {
+    "name": "Fennel Bulb",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:55.694Z"
+  },
+  "artichoke": {
+    "name": "Artichoke",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:55.698Z"
+  },
+  "celeriac": {
+    "name": "Celeriac",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:55.700Z"
+  },
+  "daikon-radish": {
+    "name": "Daikon Radish",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:55.703Z"
+  },
+  "bean-sprouts": {
+    "name": "Bean Sprouts",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:55.707Z"
+  },
+  "okra": {
+    "name": "Okra",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:55.710Z"
+  },
+  "fiddleheads": {
+    "name": "Fiddleheads",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:55.713Z"
+  },
+  "fresh-basil": {
+    "name": "Fresh Basil",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:55.717Z"
+  },
+  "fresh-parsley": {
+    "name": "Fresh Parsley",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:55.732Z"
+  },
+  "fresh-mint": {
+    "name": "Fresh Mint",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:55.735Z"
+  },
+  "fresh-rosemary": {
+    "name": "Fresh Rosemary",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:55.739Z"
+  },
+  "fresh-thyme": {
+    "name": "Fresh Thyme",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:55.743Z"
+  },
+  "fresh-dill": {
+    "name": "Fresh Dill",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:55.746Z"
+  },
+  "fresh-chives": {
+    "name": "Fresh Chives",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:55.749Z"
+  },
+  "watercress": {
+    "name": "Watercress",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:56.307Z"
+  },
+  "radicchio": {
+    "name": "Radicchio",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:56.310Z"
+  },
+  "belgian-endive": {
+    "name": "Belgian Endive",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:56.313Z"
+  },
+  "pearl-onions": {
+    "name": "Pearl Onions",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:56.609Z"
+  },
+  "jicama": {
+    "name": "Jicama",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:56.616Z"
+  },
+  "kohlrabi": {
+    "name": "Kohlrabi",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:56.620Z"
+  },
+  "chayote-squash": {
+    "name": "Chayote Squash",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:56.628Z"
+  },
+  "passion-fruit": {
+    "name": "Passion Fruit",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:56.632Z"
+  },
+  "persimmon": {
+    "name": "Persimmon",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:56.635Z"
+  },
+  "blood-orange": {
+    "name": "Blood Orange",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:56.639Z"
+  },
+  "concord-grapes": {
+    "name": "Concord Grapes",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:56.648Z"
+  },
+  "thai-basil": {
+    "name": "Thai Basil",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:56.651Z"
+  },
+  "horseradish-root": {
+    "name": "Horseradish Root",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:56.657Z"
+  },
+  "baby-bok-choy": {
+    "name": "Baby Bok Choy",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:56.661Z"
+  },
+  "star-fruit": {
+    "name": "Star Fruit",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:56.667Z"
+  },
+  "oat-milk": {
+    "name": "Oat Milk",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-29T12:05:39.664Z"
+  },
+  "eggnog": {
+    "name": "Eggnog",
+    "imageMode": "brand",
+    "reason": "President's Choice: image too small (174x400) - short side under 250px",
+    "attemptedAt": "2026-09-28T12:52:24.938Z"
+  },
+  "spinach": {
+    "name": "Baby Spinach",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:36.594Z"
+  },
+  "bread": {
+    "name": "Whole Wheat Bread",
+    "imageMode": "brand",
+    "reason": "Western Family: image too small (246x400) - short side under 250px",
+    "attemptedAt": "2026-09-28T12:49:10.485Z"
+  },
+  "seedless-watermelon": {
+    "name": "Seedless Watermelon",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:46.536Z"
+  },
+  "clementines": {
+    "name": "Clementines",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:49.003Z"
+  },
+  "lime": {
+    "name": "Lime",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:49.051Z"
+  },
+  "broccolini": {
+    "name": "Broccolini",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:56.302Z"
+  },
+  "rapini": {
+    "name": "Rapini",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:56.305Z"
+  },
+  "garlic-scapes": {
+    "name": "Garlic Scapes",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:56.612Z"
+  },
+  "mini-seedless-watermelon": {
+    "name": "Mini Seedless Watermelon",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:56.644Z"
+  },
+  "lemongrass": {
+    "name": "Lemongrass",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:56.654Z"
+  },
+  "green-papaya": {
+    "name": "Green Papaya",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:39:56.664Z"
+  },
+  "garden-salad-kit": {
+    "name": "Garden Salad Kit",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:50:41.807Z"
+  },
+  "ricotta-cheese": {
+    "name": "Ricotta Cheese",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:51:58.441Z"
+  },
+  "goat-cheese": {
+    "name": "Goat Cheese",
+    "imageMode": "brand",
+    "reason": "President's Choice: image too small (245x376) - short side under 250px; Compliments: image too small (169x400) - short side under 250px",
+    "attemptedAt": "2026-09-28T12:52:18.053Z"
+  },
+  "string-cheese": {
+    "name": "String Cheese",
+    "imageMode": "brand",
+    "reason": "Great Value: opaque coverage 7.5% is under 12% - the cutout likely ate the product",
+    "attemptedAt": "2026-09-28T12:52:20.269Z"
+  },
+  "coffee-creamer": {
+    "name": "Coffee Creamer",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-29T12:05:46.052Z"
+  },
+  "fruit-yogurt-multipack": {
+    "name": "Fruit Bottom Yogurt Multipack",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:43:12.061Z"
+  },
+  "brie-cheese": {
+    "name": "Brie Cheese",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:52:44.147Z"
+  },
+  "blue-cheese": {
+    "name": "Blue Cheese",
+    "imageMode": "brand",
+    "reason": "Compliments: image too small (174x400) - short side under 250px",
+    "attemptedAt": "2026-09-28T12:52:44.690Z"
+  },
+  "paneer": {
+    "name": "Paneer",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:52:44.797Z"
+  },
+  "kefir": {
+    "name": "Kefir",
+    "imageMode": "brand",
+    "reason": "President's Choice: image too small (131x400) - short side under 250px; Western Family: image too small (159x400) - short side under 250px",
+    "attemptedAt": "2026-09-28T12:52:47.106Z"
+  },
+  "plant-based-yogurt": {
+    "name": "Plant-Based Yogurt",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:43:16.033Z"
+  },
+  "vegan-butter": {
+    "name": "Vegan Butter",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:52:49.205Z"
+  },
+  "gouda-cheese": {
+    "name": "Gouda Cheese",
+    "imageMode": "brand",
+    "reason": "Great Value: image too small (127x400) - short side under 250px; Compliments: image too small (400x168) - short side under 250px",
+    "attemptedAt": "2026-09-28T12:53:03.933Z"
+  },
+  "omega-3-eggs": {
+    "name": "Omega-3 Eggs",
+    "imageMode": "brand",
+    "reason": "Western Family: image too small (400x187) - short side under 250px",
+    "attemptedAt": "2026-09-28T12:53:12.127Z"
+  },
+  "cheese-curds": {
+    "name": "Cheese Curds",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:53:20.336Z"
+  },
+  "labneh": {
+    "name": "Labneh",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:53:22.466Z"
+  },
+  "pepper-jack-cheese": {
+    "name": "Pepper Jack Cheese",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:53:22.579Z"
+  },
+  "provolone-cheese": {
+    "name": "Provolone Cheese",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:53:22.685Z"
+  },
+  "greek-yogurt-multipack": {
+    "name": "Greek Yogurt Multipack",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:43:20.166Z"
+  },
+  "yogurt-tubes": {
+    "name": "Yogurt Tubes",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:43:22.103Z"
+  },
+  "ghee": {
+    "name": "Ghee",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:53:43.237Z"
+  },
+  "colby-cheese": {
+    "name": "Colby Cheese",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:53:43.367Z"
+  },
+  "queso-fresco": {
+    "name": "Queso Fresco",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:53:53.285Z"
+  },
+  "turkey-breast": {
+    "name": "Turkey Breast",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: matched \"Turkey Breast\" but opaque coverage 4.1% is under 12% - the cutout likely ate the product",
+    "attemptedAt": "2026-09-28T13:40:32.765Z"
+  },
+  "pork-chops": {
+    "name": "Pork Chops",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:40:32.082Z"
+  },
+  "pork-tenderloin": {
+    "name": "Pork Tenderloin",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:40:32.085Z"
+  },
+  "pork-ribs": {
+    "name": "Pork Ribs",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:40:32.089Z"
+  },
+  "ground-pork": {
+    "name": "Ground Pork",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:40:32.092Z"
+  },
+  "pork-belly": {
+    "name": "Pork Belly",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:40:32.095Z"
+  },
+  "beef-ribeye-steak": {
+    "name": "Beef Ribeye Steak",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:40:32.099Z"
+  },
+  "beef-sirloin-steak": {
+    "name": "Beef Sirloin Steak",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:40:32.509Z"
+  },
+  "beef-tenderloin-steak": {
+    "name": "Beef Tenderloin Steak",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:40:32.512Z"
+  },
+  "t-bone-steak": {
+    "name": "T-Bone Steak",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:40:32.516Z"
+  },
+  "beef-flank-steak": {
+    "name": "Beef Flank Steak",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:40:32.520Z"
+  },
+  "beef-brisket": {
+    "name": "Beef Brisket",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:40:32.524Z"
+  },
+  "beef-roast": {
+    "name": "Beef Roast",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:40:32.768Z"
+  },
+  "ground-bison": {
+    "name": "Ground Bison",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:40:37.328Z"
+  },
+  "ground-veal": {
+    "name": "Ground Veal",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:40:37.331Z"
+  },
+  "veal-cutlets": {
+    "name": "Veal Cutlets",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:40:37.334Z"
+  },
+  "lamb-chops": {
+    "name": "Lamb Chops",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:40:37.337Z"
+  },
+  "ground-lamb": {
+    "name": "Ground Lamb",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:40:37.340Z"
+  },
+  "cod-fillet": {
+    "name": "Cod Fillet",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:40:37.343Z"
+  },
+  "haddock-fillet": {
+    "name": "Haddock Fillet",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:40:37.347Z"
+  },
+  "tilapia-fillet": {
+    "name": "Tilapia Fillet",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:40:37.351Z"
+  },
+  "halibut-fillet": {
+    "name": "Halibut Fillet",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:40:37.474Z"
+  },
+  "pickerel-fillet": {
+    "name": "Pickerel Fillet",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:40:37.482Z"
+  },
+  "scallops": {
+    "name": "Scallops",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:40:38.380Z"
+  },
+  "mussels": {
+    "name": "Mussels",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:40:38.383Z"
+  },
+  "clams": {
+    "name": "Clams",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:40:38.386Z"
+  },
+  "oysters": {
+    "name": "Oysters",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:40:38.388Z"
+  },
+  "calamari": {
+    "name": "Calamari",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:40:38.391Z"
+  },
+  "lobster": {
+    "name": "Lobster",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:40:38.394Z"
+  },
+  "lobster-tail": {
+    "name": "Lobster Tail",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:40:38.397Z"
+  },
+  "crab-legs": {
+    "name": "Crab Legs",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:40:38.400Z"
+  },
+  "rotisserie-chicken": {
+    "name": "Rotisserie Chicken",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:40:38.403Z"
+  },
+  "back-bacon": {
+    "name": "Back Bacon",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:54:39.193Z"
+  },
+  "turkey-bacon": {
+    "name": "Turkey Bacon",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:54:39.403Z"
+  },
+  "italian-sausages": {
+    "name": "Italian Sausages",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:54:39.795Z"
+  },
+  "bratwurst": {
+    "name": "Bratwurst",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:54:39.967Z"
+  },
+  "chorizo-sausage": {
+    "name": "Chorizo Sausage",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:54:40.180Z"
+  },
+  "kielbasa-sausage": {
+    "name": "Kielbasa Sausage",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:54:40.377Z"
+  },
+  "skim-milk-powder": {
+    "name": "Skim Milk Powder",
+    "imageMode": "brand",
+    "reason": "No Name: opaque coverage 5.2% is under 12% - the cutout likely ate the product; Western Family: image too small (183x400) - short side under 250px",
+    "attemptedAt": "2026-09-29T12:05:55.367Z"
+  },
+  "black-forest-ham": {
+    "name": "Black Forest Ham",
+    "imageMode": "brand",
+    "reason": "Compliments: opaque coverage 2.6% is under 12% - the cutout likely ate the product",
+    "attemptedAt": "2026-09-28T12:54:48.277Z"
+  },
+  "canned-ham": {
+    "name": "Canned Ham",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:55:16.813Z"
+  },
+  "prosciutto": {
+    "name": "Prosciutto",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:55:16.993Z"
+  },
+  "deli-roast-beef": {
+    "name": "Deli Roast Beef",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:55:17.198Z"
+  },
+  "marinated-chicken-breast": {
+    "name": "Marinated Chicken Breast",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:55:17.399Z"
+  },
+  "chicken-souvlaki-skewers": {
+    "name": "Chicken Souvlaki Skewers",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:55:17.551Z"
+  },
+  "pork-stir-fry-strips": {
+    "name": "Pork Stir-Fry Strips",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:40:40.625Z"
+  },
+  "chicken-stir-fry-strips": {
+    "name": "Chicken Stir-Fry Strips",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:40:40.628Z"
+  },
+  "veal-chops": {
+    "name": "Veal Chops",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:40:40.631Z"
+  },
+  "duck-breast": {
+    "name": "Duck Breast",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:40:40.634Z"
+  },
+  "extra-lean-ground-turkey": {
+    "name": "Extra Lean Ground Turkey",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:40:40.638Z"
+  },
+  "chicken-liver": {
+    "name": "Chicken Liver",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:40:40.641Z"
+  },
+  "beef-liver": {
+    "name": "Beef Liver",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: matched \"Beef Liver\" but opaque coverage 6.8% is under 12% - the cutout likely ate the product",
+    "attemptedAt": "2026-09-28T13:40:43.355Z"
+  },
+  "oxtail": {
+    "name": "Oxtail",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:40:42.948Z"
+  },
+  "turkey-drumsticks": {
+    "name": "Turkey Drumsticks",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:40:42.960Z"
+  },
+  "cornish-hen": {
+    "name": "Cornish Hen",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:40:42.968Z"
+  },
+  "rye-bread": {
+    "name": "Rye Bread",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:55:33.552Z"
+  },
+  "multigrain-bread": {
+    "name": "Multigrain Bread",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:55:33.760Z"
+  },
+  "sourdough-bread": {
+    "name": "Sourdough Bread",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:55:33.948Z"
+  },
+  "gluten-free-bread": {
+    "name": "Gluten-Free Bread",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:55:34.137Z"
+  },
+  "pumpernickel-bread": {
+    "name": "Pumpernickel Bread",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:55:34.303Z"
+  },
+  "kaiser-buns": {
+    "name": "Kaiser Buns",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:55:56.320Z"
+  },
+  "corn-tortillas": {
+    "name": "Corn Tortillas",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:56:08.157Z"
+  },
+  "pita-bread": {
+    "name": "Pita Bread",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:56:08.349Z"
+  },
+  "naan-bread": {
+    "name": "Naan Bread",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:56:08.470Z"
+  },
+  "bagels": {
+    "name": "Bagels",
+    "imageMode": "brand",
+    "reason": "No Name: image too small (249x400) - short side under 250px; Compliments: image too small (171x400) - short side under 250px; Western Family: opaque coverage 3.0% is under 12% - the cutout likely ate the product",
+    "attemptedAt": "2026-09-28T12:56:18.174Z"
+  },
+  "crescent-roll-dough": {
+    "name": "Crescent Roll Dough",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:56:18.366Z"
+  },
+  "pizza-dough": {
+    "name": "Pizza Dough",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:56:18.547Z"
+  },
+  "ciabatta-bread": {
+    "name": "Ciabatta Bread",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:56:22.159Z"
+  },
+  "baguette": {
+    "name": "Baguette",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: matched \"Baguette\" but opaque coverage 2.2% is under 12% - the cutout likely ate the product",
+    "attemptedAt": "2026-09-28T13:40:43.537Z"
+  },
+  "croissants": {
+    "name": "Croissants",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: matched \"Croissants\" but opaque coverage 11.9% is under 12% - the cutout likely ate the product",
+    "attemptedAt": "2026-09-28T13:40:43.535Z"
+  },
+  "nanaimo-bars": {
+    "name": "Nanaimo Bars",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:40:43.361Z"
+  },
+  "butter-tarts": {
+    "name": "Butter Tarts",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:40:43.364Z"
+  },
+  "cinnamon-buns": {
+    "name": "Cinnamon Buns",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:40:43.368Z"
+  },
+  "bakery-muffins": {
+    "name": "Bakery Muffins",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:40:43.371Z"
+  },
+  "donuts": {
+    "name": "Donuts",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:40:43.375Z"
+  },
+  "cupcakes": {
+    "name": "Cupcakes",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:40:43.378Z"
+  },
+  "birthday-cake": {
+    "name": "Birthday Cake",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:40:43.382Z"
+  },
+  "apple-pie": {
+    "name": "Apple Pie",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:40:43.385Z"
+  },
+  "fresh-baked-cookies": {
+    "name": "Fresh Baked Cookies",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: matched \"Fresh Baked Cookies\" but opaque coverage 0.2% is under 12% - the cutout likely ate the product",
+    "attemptedAt": "2026-09-28T13:40:49.327Z"
+  },
+  "danish-pastries": {
+    "name": "Danish Pastries",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: matched \"Danish Pastries\" but cutout is fully transparent - background removal ate the whole image",
+    "attemptedAt": "2026-09-28T13:40:44.189Z"
+  },
+  "scones": {
+    "name": "Scones",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:40:43.542Z"
+  },
+  "cornbread": {
+    "name": "Cornbread",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:40:43.545Z"
+  },
+  "focaccia-bread": {
+    "name": "Focaccia Bread",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: matched \"Focaccia Bread\" but opaque coverage 5.4% is under 12% - the cutout likely ate the product",
+    "attemptedAt": "2026-09-28T13:40:49.584Z"
+  },
+  "tea-biscuits": {
+    "name": "Tea Biscuits",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:56:27.810Z"
+  },
+  "multigrain-bagels": {
+    "name": "Multigrain Bagels",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:56:28.038Z"
+  },
+  "cinnamon-raisin-bagels": {
+    "name": "Cinnamon Raisin Bagels",
+    "imageMode": "brand",
+    "reason": "Western Family: opaque coverage 3.0% is under 12% - the cutout likely ate the product",
+    "attemptedAt": "2026-09-28T12:56:35.588Z"
+  },
+  "hawaiian-sweet-rolls": {
+    "name": "Hawaiian Sweet Rolls",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:56:35.818Z"
+  },
+  "wonton-wrappers": {
+    "name": "Wonton Wrappers",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:56:36.032Z"
+  },
+  "egg-roll-wrappers": {
+    "name": "Egg Roll Wrappers",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:56:36.235Z"
+  },
+  "melba-toast": {
+    "name": "Melba Toast",
+    "imageMode": "brand",
+    "reason": "Compliments: opaque coverage 8.5% is under 12% - the cutout likely ate the product",
+    "attemptedAt": "2026-09-28T12:56:36.239Z"
+  },
+  "phyllo-dough": {
+    "name": "Phyllo Dough",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:56:36.605Z"
+  },
+  "ladyfingers": {
+    "name": "Ladyfingers",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:56:36.797Z"
+  },
+  "stuffing-mix": {
+    "name": "Stuffing Mix",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:56:37.159Z"
+  },
+  "bread-crumbs": {
+    "name": "Bread Crumbs",
+    "imageMode": "brand",
+    "reason": "Great Value: image too small (192x400) - short side under 250px; Western Family: image too small (245x400) - short side under 250px",
+    "attemptedAt": "2026-09-28T12:56:42.503Z"
+  },
+  "fusilli-pasta": {
+    "name": "Fusilli Pasta",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:56:42.693Z"
+  },
+  "lasagna-noodles": {
+    "name": "Lasagna Noodles",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:56:42.863Z"
+  },
+  "whole-wheat-pasta": {
+    "name": "Whole Wheat Pasta",
+    "imageMode": "brand",
+    "reason": "No Name: opaque coverage 1.6% is under 12% - the cutout likely ate the product",
+    "attemptedAt": "2026-09-28T12:56:51.591Z"
+  },
+  "dried-chickpeas": {
+    "name": "Dried Chickpeas",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:57:42.457Z"
+  },
+  "pot-barley": {
+    "name": "Pot Barley",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:57:42.690Z"
+  },
+  "orzo-pasta": {
+    "name": "Orzo Pasta",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:57:42.881Z"
+  },
+  "rice-noodles": {
+    "name": "Rice Noodles",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:57:43.089Z"
+  },
+  "cake-flour": {
+    "name": "Cake Flour",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:57:51.737Z"
+  },
+  "cornstarch": {
+    "name": "Cornstarch",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:57:51.932Z"
+  },
+  "yeast": {
+    "name": "Yeast",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:58:00.019Z"
+  },
+  "icing-sugar": {
+    "name": "Icing Sugar",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:58:00.237Z"
+  },
+  "brownie-mix": {
+    "name": "Brownie Mix",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:58:18.477Z"
+  },
+  "muffin-mix": {
+    "name": "Muffin Mix",
+    "imageMode": "brand",
+    "reason": "Great Value: image too small (238x400) - short side under 250px; No Name: image too small (216x400) - short side under 250px",
+    "attemptedAt": "2026-09-28T12:58:26.052Z"
+  },
+  "corn-syrup": {
+    "name": "Corn Syrup",
+    "imageMode": "brand",
+    "reason": "No Name: image too small (141x400) - short side under 250px",
+    "attemptedAt": "2026-09-28T12:58:29.091Z"
+  },
+  "food-colouring": {
+    "name": "Food Colouring",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:58:39.493Z"
+  },
+  "sprinkles": {
+    "name": "Sprinkles",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:58:39.593Z"
+  },
+  "sesame-oil": {
+    "name": "Sesame Oil",
+    "imageMode": "brand",
+    "reason": "Great Value: image too small (142x400) - short side under 250px; President's Choice: image too small (156x400) - short side under 250px; Selection: image too small (149x400) - short side under 250px; Compliments: image too small (153x400) - short side under 250px",
+    "attemptedAt": "2026-09-28T12:59:01.120Z"
+  },
+  "cooking-spray": {
+    "name": "Cooking Spray",
+    "imageMode": "brand",
+    "reason": "Western Family: image too small (156x400) - short side under 250px",
+    "attemptedAt": "2026-09-28T12:59:03.854Z"
+  },
+  "rice-vinegar": {
+    "name": "Rice Vinegar",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:59:29.009Z"
+  },
+  "chili-powder": {
+    "name": "Chili Powder",
+    "imageMode": "brand",
+    "reason": "President's Choice: image too small (178x400) - short side under 250px",
+    "attemptedAt": "2026-09-28T12:59:40.381Z"
+  },
+  "garlic-powder": {
+    "name": "Garlic Powder",
+    "imageMode": "brand",
+    "reason": "Great Value: image too small (176x400) - short side under 250px; Selection: image too small (224x400) - short side under 250px; Compliments: image too small (151x210) - short side under 250px",
+    "attemptedAt": "2026-09-28T12:59:42.357Z"
+  },
+  "onion-powder": {
+    "name": "Onion Powder",
+    "imageMode": "brand",
+    "reason": "Great Value: image too small (209x400) - short side under 250px",
+    "attemptedAt": "2026-09-28T12:59:46.127Z"
+  },
+  "curry-powder": {
+    "name": "Curry Powder",
+    "imageMode": "brand",
+    "reason": "Compliments: image too small (158x210) - short side under 250px",
+    "attemptedAt": "2026-09-28T12:59:58.994Z"
+  },
+  "chili-flakes": {
+    "name": "Chili Flakes",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T12:59:59.115Z"
+  },
+  "steak-spice": {
+    "name": "Steak Spice",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:00:03.010Z"
+  },
+  "all-purpose-seasoning": {
+    "name": "All-Purpose Seasoning",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:00:03.145Z"
+  },
+  "ranch-seasoning-mix": {
+    "name": "Ranch Seasoning Mix",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:00:03.404Z"
+  },
+  "brown-gravy-mix": {
+    "name": "Brown Gravy Mix",
+    "imageMode": "brand",
+    "reason": "Great Value: image too small (209x400) - short side under 250px",
+    "attemptedAt": "2026-09-28T13:00:07.946Z"
+  },
+  "poutine-gravy-mix": {
+    "name": "Poutine Gravy Mix",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:00:08.077Z"
+  },
+  "vegetable-bouillon-cubes": {
+    "name": "Vegetable Bouillon Cubes",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:00:10.100Z"
+  },
+  "chicken-bouillon-cubes": {
+    "name": "Chicken Bouillon Cubes",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:00:10.246Z"
+  },
+  "beef-bouillon-cubes": {
+    "name": "Beef Bouillon Cubes",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:00:12.195Z"
+  },
+  "canned-diced-tomatoes": {
+    "name": "Canned Diced Tomatoes",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:00:12.329Z"
+  },
+  "canned-crushed-tomatoes": {
+    "name": "Canned Crushed Tomatoes",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:00:12.447Z"
+  },
+  "canned-corn": {
+    "name": "Canned Corn",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:00:13.176Z"
+  },
+  "canned-green-peas": {
+    "name": "Canned Green Peas",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:00:13.331Z"
+  },
+  "canned-green-beans": {
+    "name": "Canned Green Beans",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:00:13.438Z"
+  },
+  "canned-mixed-vegetables": {
+    "name": "Canned Mixed Vegetables",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:00:13.541Z"
+  },
+  "canned-black-beans": {
+    "name": "Canned Black Beans",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:00:15.443Z"
+  },
+  "canned-kidney-beans": {
+    "name": "Canned Kidney Beans",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:00:17.405Z"
+  },
+  "canned-chickpeas": {
+    "name": "Canned Chickpeas",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:00:19.468Z"
+  },
+  "canned-baked-beans": {
+    "name": "Canned Baked Beans",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:00:19.582Z"
+  },
+  "canned-lentils": {
+    "name": "Canned Lentils",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:00:19.695Z"
+  },
+  "canned-tuna": {
+    "name": "Canned Tuna",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:00:19.830Z"
+  },
+  "canned-salmon": {
+    "name": "Canned Salmon",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:00:20.017Z"
+  },
+  "canned-sardines": {
+    "name": "Canned Sardines",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:00:20.191Z"
+  },
+  "canned-chicken": {
+    "name": "Canned Chicken",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:00:20.413Z"
+  },
+  "canned-mushrooms": {
+    "name": "Canned Mushrooms",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:00:20.629Z"
+  },
+  "canned-coconut-milk": {
+    "name": "Canned Coconut Milk",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-29T12:05:49.453Z"
+  },
+  "canned-pumpkin-puree": {
+    "name": "Canned Pumpkin Puree",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:00:21.016Z"
+  },
+  "canned-fruit-cocktail": {
+    "name": "Canned Fruit Cocktail",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:00:21.223Z"
+  },
+  "canned-peaches": {
+    "name": "Canned Peaches",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:00:21.476Z"
+  },
+  "canned-pineapple": {
+    "name": "Canned Pineapple",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:00:21.672Z"
+  },
+  "soy-sauce": {
+    "name": "Soy Sauce",
+    "imageMode": "brand",
+    "reason": "President's Choice: image too small (400x225) - short side under 250px; Western Family: image too small (114x400) - short side under 250px",
+    "attemptedAt": "2026-09-28T13:01:25.374Z"
+  },
+  "worcestershire-sauce": {
+    "name": "Worcestershire Sauce",
+    "imageMode": "brand",
+    "reason": "Great Value: image too small (238x400) - short side under 250px",
+    "attemptedAt": "2026-09-28T13:01:27.440Z"
+  },
+  "bbq-sauce": {
+    "name": "BBQ Sauce",
+    "imageMode": "brand",
+    "reason": "President's Choice: image too small (212x400) - short side under 250px; Selection: image too small (232x400) - short side under 250px; Compliments: image too small (182x400) - short side under 250px; Western Family: image too small (229x400) - short side under 250px",
+    "attemptedAt": "2026-09-28T13:02:28.607Z"
+  },
+  "ranch-dressing": {
+    "name": "Ranch Dressing",
+    "imageMode": "brand",
+    "reason": "Great Value: image too small (113x400) - short side under 250px; Western Family: image too small (159x400) - short side under 250px",
+    "attemptedAt": "2026-09-28T13:02:32.554Z"
+  },
+  "italian-dressing": {
+    "name": "Italian Dressing",
+    "imageMode": "brand",
+    "reason": "No Name: image too small (227x400) - short side under 250px; Selection: image too small (165x400) - short side under 250px; Western Family: image too small (175x400) - short side under 250px",
+    "attemptedAt": "2026-09-28T13:02:38.727Z"
+  },
+  "pesto-sauce": {
+    "name": "Pesto Sauce",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:02:38.913Z"
+  },
+  "oyster-sauce": {
+    "name": "Oyster Sauce",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:02:39.029Z"
+  },
+  "hoisin-sauce": {
+    "name": "Hoisin Sauce",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:02:39.147Z"
+  },
+  "teriyaki-sauce": {
+    "name": "Teriyaki Sauce",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:02:39.258Z"
+  },
+  "sriracha-sauce": {
+    "name": "Sriracha Sauce",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:02:39.368Z"
+  },
+  "tahini": {
+    "name": "Tahini",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:02:39.465Z"
+  },
+  "pickled-beets": {
+    "name": "Pickled Beets",
+    "imageMode": "brand",
+    "reason": "No Name: image too small (209x400) - short side under 250px",
+    "attemptedAt": "2026-09-28T13:02:50.473Z"
+  },
+  "horseradish": {
+    "name": "Horseradish",
+    "imageMode": "brand",
+    "reason": "No Name: image too small (217x400) - short side under 250px; President's Choice: image too small (192x400) - short side under 250px",
+    "attemptedAt": "2026-09-28T13:03:08.412Z"
+  },
+  "grape-jelly": {
+    "name": "Grape Jelly",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:03:08.540Z"
+  },
+  "chocolate-hazelnut-spread": {
+    "name": "Chocolate Hazelnut Spread",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:03:08.663Z"
+  },
+  "marmalade": {
+    "name": "Marmalade",
+    "imageMode": "brand",
+    "reason": "No Name: image too small (219x400) - short side under 250px; Compliments: image too small (110x210) - short side under 250px",
+    "attemptedAt": "2026-09-28T13:03:10.683Z"
+  },
+  "salad-croutons": {
+    "name": "Salad Croutons",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:03:10.808Z"
+  },
+  "curry-paste": {
+    "name": "Curry Paste",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:03:12.890Z"
+  },
+  "rice-paper-wrappers": {
+    "name": "Rice Paper Wrappers",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:03:24.000Z"
+  },
+  "coconut-cream": {
+    "name": "Coconut Cream",
+    "imageMode": "brand",
+    "reason": "Great Value: opaque coverage 3.6% is under 12% - the cutout likely ate the product",
+    "attemptedAt": "2026-09-29T12:05:55.843Z"
+  },
+  "miso-paste": {
+    "name": "Miso Paste",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:03:24.404Z"
+  },
+  "wasabi-paste": {
+    "name": "Wasabi Paste",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:03:24.509Z"
+  },
+  "pickled-ginger": {
+    "name": "Pickled Ginger",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:03:24.614Z"
+  },
+  "nori-sheets": {
+    "name": "Nori Sheets",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:03:24.725Z"
+  },
+  "enchilada-sauce": {
+    "name": "Enchilada Sauce",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:03:28.889Z"
+  },
+  "green-chilies": {
+    "name": "Green Chilies",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:03:29.022Z"
+  },
+  "chipotle-peppers-in-adobo": {
+    "name": "Chipotle Peppers in Adobo",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:03:29.139Z"
+  },
+  "dried-cranberries": {
+    "name": "Dried Cranberries",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:04:39.596Z"
+  },
+  "sesame-seeds": {
+    "name": "Sesame Seeds",
+    "imageMode": "brand",
+    "reason": "Compliments: image too small (158x210) - short side under 250px",
+    "attemptedAt": "2026-09-28T13:05:03.164Z"
+  },
+  "poppy-seeds": {
+    "name": "Poppy Seeds",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:05:05.418Z"
+  },
+  "flax-seed": {
+    "name": "Flax Seed",
+    "imageMode": "brand",
+    "reason": "Western Family: image too small (233x400) - short side under 250px",
+    "attemptedAt": "2026-09-28T13:05:07.553Z"
+  },
+  "nutritional-yeast": {
+    "name": "Nutritional Yeast",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:05:23.353Z"
+  },
+  "cream-of-tartar": {
+    "name": "Cream of Tartar",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-29T12:05:49.706Z"
+  },
+  "agave-syrup": {
+    "name": "Agave Syrup",
+    "imageMode": "brand",
+    "reason": "President's Choice: image too small (186x400) - short side under 250px",
+    "attemptedAt": "2026-09-28T13:05:30.957Z"
+  },
+  "artificial-sweetener": {
+    "name": "Artificial Sweetener",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:05:35.646Z"
+  },
+  "xanthan-gum": {
+    "name": "Xanthan Gum",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:05:35.789Z"
+  },
+  "coconut-flour": {
+    "name": "Coconut Flour",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:05:36.014Z"
+  },
+  "gluten-free-flour-blend": {
+    "name": "Gluten-Free Flour Blend",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:05:36.140Z"
+  },
+  "pancake-syrup": {
+    "name": "Pancake Syrup",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:05:36.244Z"
+  },
+  "peanut-oil": {
+    "name": "Peanut Oil",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:05:36.350Z"
+  },
+  "fish-sauce": {
+    "name": "Fish Sauce",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:05:45.370Z"
+  },
+  "gochujang": {
+    "name": "Gochujang",
+    "imageMode": "brand",
+    "reason": "President's Choice: image too small (400x208) - short side under 250px",
+    "attemptedAt": "2026-09-28T13:05:47.398Z"
+  },
+  "chili-garlic-sauce": {
+    "name": "Chili Garlic Sauce",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:05:49.537Z"
+  },
+  "tamarind-paste": {
+    "name": "Tamarind Paste",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:05:50.272Z"
+  },
+  "tikka-masala-sauce": {
+    "name": "Tikka Masala Sauce",
+    "imageMode": "brand",
+    "reason": "Great Value: image too small (186x400) - short side under 250px",
+    "attemptedAt": "2026-09-28T13:05:50.274Z"
+  },
+  "harissa-paste": {
+    "name": "Harissa Paste",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:05:50.525Z"
+  },
+  "lard": {
+    "name": "Lard",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:05:50.636Z"
+  },
+  "custard-powder": {
+    "name": "Custard Powder",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:05:50.762Z"
+  },
+  "gelatin-dessert-mix": {
+    "name": "Gelatin Dessert Mix",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:05:50.900Z"
+  },
+  "bulk-raw-almonds": {
+    "name": "Bulk Raw Almonds",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:40:49.458Z"
+  },
+  "bulk-walnuts": {
+    "name": "Bulk Walnuts",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:40:49.462Z"
+  },
+  "bulk-trail-mix": {
+    "name": "Bulk Trail Mix",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:40:49.465Z"
+  },
+  "bulk-pitted-dates": {
+    "name": "Bulk Pitted Dates",
+    "imageMode": "generic",
+    "reason": "walmart: no candidate row matched (43 rows in TSV); loblaws: no candidate row matched (108 rows in TSV)",
+    "attemptedAt": "2026-09-28T13:40:49.469Z"
+  },
+  "frozen-mixed-vegetables": {
+    "name": "Frozen Mixed Vegetables",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:05:51.053Z"
+  },
+  "vegetable-shortening": {
+    "name": "Vegetable Shortening",
+    "imageMode": "brand",
+    "reason": "Compliments: image too small (400x217) - short side under 250px",
+    "attemptedAt": "2026-09-28T13:05:51.162Z"
+  },
+  "frozen-corn": {
+    "name": "Frozen Corn",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:05:51.262Z"
+  },
+  "frozen-broccoli": {
+    "name": "Frozen Broccoli",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:05:51.476Z"
+  },
+  "butter-chicken-sauce": {
+    "name": "Butter Chicken Sauce",
+    "imageMode": "brand",
+    "reason": "Great Value: image too small (173x400) - short side under 250px; Western Family: image too small (136x400) - short side under 250px",
+    "attemptedAt": "2026-09-28T13:05:51.477Z"
+  },
+  "frozen-peas": {
+    "name": "Frozen Peas",
+    "imageMode": "brand",
+    "reason": "No Name: opaque coverage 1.5% is under 12% - the cutout likely ate the product",
+    "attemptedAt": "2026-09-28T13:05:59.721Z"
+  },
+  "frozen-stir-fry-vegetables": {
+    "name": "Frozen Stir-Fry Vegetables",
+    "imageMode": "brand",
+    "reason": "Kirkland Signature: opaque coverage 0.3% is under 12% - the cutout likely ate the product",
+    "attemptedAt": "2026-09-28T13:05:59.855Z"
+  },
+  "frozen-green-beans": {
+    "name": "Frozen Green Beans",
+    "imageMode": "brand",
+    "reason": "President's Choice: opaque coverage 9.3% is under 12% - the cutout likely ate the product",
+    "attemptedAt": "2026-09-28T13:05:59.857Z"
+  },
+  "tater-tots": {
+    "name": "Tater Tots",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:06:08.782Z"
+  },
+  "onion-rings": {
+    "name": "Onion Rings",
+    "imageMode": "brand",
+    "reason": "Great Value: opaque coverage 11.7% is under 12% - the cutout likely ate the product",
+    "attemptedAt": "2026-09-28T13:06:16.187Z"
+  },
+  "frozen-pizza": {
+    "name": "Frozen Pizza",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:06:27.217Z"
+  },
+  "pizza-pops": {
+    "name": "Pizza Pops",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:06:27.219Z"
+  },
+  "chicken-fingers": {
+    "name": "Chicken Fingers",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:06:27.453Z"
+  },
+  "breakfast-sandwiches": {
+    "name": "Breakfast Sandwiches",
+    "imageMode": "brand",
+    "reason": "Great Value: image too small (221x400) - short side under 250px",
+    "attemptedAt": "2026-09-28T13:06:29.634Z"
+  },
+  "frozen-shrimp": {
+    "name": "Frozen Shrimp",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:06:36.468Z"
+  },
+  "turkey-burgers": {
+    "name": "Turkey Burgers",
+    "imageMode": "brand",
+    "reason": "President's Choice: opaque coverage 5.4% is under 12% - the cutout likely ate the product; Western Family: image too small (185x400) - short side under 250px",
+    "attemptedAt": "2026-09-28T13:07:10.517Z"
+  },
+  "frozen-chicken-wings": {
+    "name": "Frozen Chicken Wings",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:07:10.652Z"
+  },
+  "frozen-lasagna": {
+    "name": "Frozen Lasagna",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:07:21.397Z"
+  },
+  "burritos": {
+    "name": "Burritos",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:07:36.661Z"
+  },
+  "dumplings": {
+    "name": "Dumplings",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:07:37.036Z"
+  },
+  "garlic-bread": {
+    "name": "Garlic Bread",
+    "imageMode": "brand",
+    "reason": "Compliments: opaque coverage 0.1% is under 12% - the cutout likely ate the product",
+    "attemptedAt": "2026-09-28T13:07:45.598Z"
+  },
+  "frozen-roti": {
+    "name": "Frozen Roti",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:07:46.305Z"
+  },
+  "bao-buns": {
+    "name": "Bao Buns",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:07:46.423Z"
+  },
+  "tourtiere": {
+    "name": "Tourtière",
+    "imageMode": "brand",
+    "reason": "President's Choice: image too small (222x400) - short side under 250px",
+    "attemptedAt": "2026-09-28T13:07:46.425Z"
+  },
+  "chicken-pot-pie": {
+    "name": "Chicken Pot Pie",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:07:50.567Z"
+  },
+  "beef-pot-pie": {
+    "name": "Beef Pot Pie",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:07:50.725Z"
+  },
+  "frozen-dinner": {
+    "name": "Frozen Dinner",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:07:50.866Z"
+  },
+  "frozen-mac-and-cheese": {
+    "name": "Frozen Mac and Cheese",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:07:51.001Z"
+  },
+  "popsicles": {
+    "name": "Popsicles",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:07:55.362Z"
+  },
+  "ice-cream-drumsticks": {
+    "name": "Ice Cream Drumsticks",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-29T12:05:55.502Z"
+  },
+  "frozen-mixed-berries": {
+    "name": "Frozen Mixed Berries",
+    "imageMode": "brand",
+    "reason": "No Name: opaque coverage 7.4% is under 12% - the cutout likely ate the product",
+    "attemptedAt": "2026-09-28T13:08:19.317Z"
+  },
+  "frozen-pineapple-chunks": {
+    "name": "Frozen Pineapple Chunks",
+    "imageMode": "brand",
+    "reason": "Great Value: opaque coverage 11.4% is under 12% - the cutout likely ate the product",
+    "attemptedAt": "2026-09-28T13:08:28.901Z"
+  },
+  "frozen-fruit-pie": {
+    "name": "Frozen Fruit Pie",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:08:29.045Z"
+  },
+  "puff-pastry": {
+    "name": "Puff Pastry",
+    "imageMode": "brand",
+    "reason": "Great Value: image too small (173x400) - short side under 250px; President's Choice: opaque coverage 10.3% is under 12% - the cutout likely ate the product",
+    "attemptedAt": "2026-09-28T13:08:29.048Z"
+  },
+  "ice-cubes": {
+    "name": "Ice Cubes",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:08:29.268Z"
+  },
+  "frozen-garlic-naan": {
+    "name": "Frozen Garlic Naan",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:08:35.556Z"
+  },
+  "empanadas": {
+    "name": "Empanadas",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:08:35.670Z"
+  },
+  "chicken-kiev": {
+    "name": "Chicken Kiev",
+    "imageMode": "brand",
+    "reason": "President's Choice: image too small (400x246) - short side under 250px",
+    "attemptedAt": "2026-09-28T13:08:40.368Z"
+  },
+  "chicken-shawarma": {
+    "name": "Chicken Shawarma",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:08:40.493Z"
+  },
+  "jalape-o-poppers": {
+    "name": "Jalapeño Poppers",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:08:44.524Z"
+  },
+  "breakfast-burritos": {
+    "name": "Breakfast Burritos",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:08:47.128Z"
+  },
+  "chicken-alfredo": {
+    "name": "Chicken Alfredo",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:08:49.820Z"
+  },
+  "cheese-puffs": {
+    "name": "Cheese Puffs",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:09:17.299Z"
+  },
+  "ready-to-eat-popcorn": {
+    "name": "Ready-to-Eat Popcorn",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:09:25.416Z"
+  },
+  "microwave-popcorn": {
+    "name": "Microwave Popcorn",
+    "imageMode": "brand",
+    "reason": "Kirkland Signature: opaque coverage 6.3% is under 12% - the cutout likely ate the product",
+    "attemptedAt": "2026-09-28T13:09:25.590Z"
+  },
+  "pita-chips": {
+    "name": "Pita Chips",
+    "imageMode": "brand",
+    "reason": "Great Value: image too small (231x400) - short side under 250px; Compliments: image too small (227x400) - short side under 250px",
+    "attemptedAt": "2026-09-28T13:09:29.588Z"
+  },
+  "veggie-chips": {
+    "name": "Veggie Chips",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:09:29.708Z"
+  },
+  "plantain-chips": {
+    "name": "Plantain Chips",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:09:43.499Z"
+  },
+  "buttery-round-crackers": {
+    "name": "Buttery Round Crackers",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:09:47.466Z"
+  },
+  "water-crackers": {
+    "name": "Water Crackers",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:10:08.827Z"
+  },
+  "animal-crackers": {
+    "name": "Animal Crackers",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:10:08.955Z"
+  },
+  "shortbread-cookies": {
+    "name": "Shortbread Cookies",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:10:18.189Z"
+  },
+  "arrowroot-cookies": {
+    "name": "Arrowroot Cookies",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:10:18.319Z"
+  },
+  "fig-bars": {
+    "name": "Fig Bars",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:10:18.440Z"
+  },
+  "wafer-cookies": {
+    "name": "Wafer Cookies",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:10:18.554Z"
+  },
+  "fudge-cookies": {
+    "name": "Fudge Cookies",
+    "imageMode": "brand",
+    "reason": "Great Value: image too small (400x158) - short side under 250px",
+    "attemptedAt": "2026-09-28T13:10:18.826Z"
+  },
+  "boxed-chocolates": {
+    "name": "Boxed Chocolates",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:10:30.405Z"
+  },
+  "licorice": {
+    "name": "Licorice",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:10:52.497Z"
+  },
+  "mints": {
+    "name": "Mints",
+    "imageMode": "brand",
+    "reason": "Compliments: opaque coverage 0.0% is under 12% - the cutout likely ate the product",
+    "attemptedAt": "2026-09-28T13:11:02.990Z"
+  },
+  "chewing-gum": {
+    "name": "Chewing Gum",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:11:03.183Z"
+  },
+  "lollipops": {
+    "name": "Lollipops",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:11:03.307Z"
+  },
+  "candy-coated-chocolates": {
+    "name": "Candy-Coated Chocolates",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:11:03.592Z"
+  },
+  "caramel-candy": {
+    "name": "Caramel Candy",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:11:07.014Z"
+  },
+  "wafer-chocolate-bar": {
+    "name": "Wafer Chocolate Bar",
+    "imageMode": "brand",
+    "reason": "President's Choice: image too small (223x400) - short side under 250px",
+    "attemptedAt": "2026-09-28T13:11:07.016Z"
+  },
+  "fruit-roll-ups": {
+    "name": "Fruit Roll-Ups",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:11:24.264Z"
+  },
+  "rice-cakes": {
+    "name": "Rice Cakes",
+    "imageMode": "brand",
+    "reason": "Western Family: image too small (133x400) - short side under 250px",
+    "attemptedAt": "2026-09-28T13:11:46.474Z"
+  },
+  "rice-krispie-squares": {
+    "name": "Rice Krispie Squares",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:11:46.612Z"
+  },
+  "nacho-cheese-dip": {
+    "name": "Nacho Cheese Dip",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:12:03.830Z"
+  },
+  "pudding-cups": {
+    "name": "Pudding Cups",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:12:22.167Z"
+  },
+  "applesauce-pouches": {
+    "name": "Applesauce Pouches",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:12:22.404Z"
+  },
+  "yogurt-covered-raisins": {
+    "name": "Yogurt-Covered Raisins",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:44:41.010Z"
+  },
+  "chocolate-covered-pretzels": {
+    "name": "Chocolate-Covered Pretzels",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:12:22.838Z"
+  },
+  "cheese-and-cracker-snack-pack": {
+    "name": "Cheese and Cracker Snack Pack",
+    "imageMode": "brand",
+    "reason": "No Name: opaque coverage 9.5% is under 12% - the cutout likely ate the product",
+    "attemptedAt": "2026-09-28T13:12:23.015Z"
+  },
+  "fruit-cups": {
+    "name": "Fruit Cups",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:12:23.404Z"
+  },
+  "pork-rinds": {
+    "name": "Pork Rinds",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:12:23.656Z"
+  },
+  "peanut-butter-cups": {
+    "name": "Peanut Butter Cups",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:12:24.025Z"
+  },
+  "party-mix": {
+    "name": "Party Mix",
+    "imageMode": "brand",
+    "reason": "Great Value: image too small (238x400) - short side under 250px",
+    "attemptedAt": "2026-09-28T13:12:29.269Z"
+  },
+  "sour-candy": {
+    "name": "Sour Candy",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:12:29.492Z"
+  },
+  "taffy": {
+    "name": "Taffy",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:12:32.025Z"
+  },
+  "peanut-brittle": {
+    "name": "Peanut Brittle",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:12:32.490Z"
+  },
+  "pita-and-hummus-snack-pack": {
+    "name": "Pita and Hummus Snack Pack",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:12:32.716Z"
+  },
+  "snack-size-chip-multipack": {
+    "name": "Snack-Size Chip Multipack",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:12:32.931Z"
+  },
+  "popcorn-twists": {
+    "name": "Popcorn Twists",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:12:33.103Z"
+  },
+  "cheese-and-peanut-butter-crackers": {
+    "name": "Cheese and Peanut Butter Crackers",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:12:33.354Z"
+  },
+  "veggie-straws": {
+    "name": "Veggie Straws",
+    "imageMode": "brand",
+    "reason": "Great Value: opaque coverage 5.5% is under 12% - the cutout likely ate the product",
+    "attemptedAt": "2026-09-28T13:12:33.358Z"
+  },
+  "honey-roasted-peanuts": {
+    "name": "Honey Roasted Peanuts",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:12:33.956Z"
+  },
+  "wasabi-peas": {
+    "name": "Wasabi Peas",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:12:33.959Z"
+  },
+  "sesame-snaps": {
+    "name": "Sesame Snaps",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:12:34.546Z"
+  },
+  "roasted-chickpeas": {
+    "name": "Roasted Chickpeas",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:12:36.809Z"
+  },
+  "apple-juice": {
+    "name": "Apple Juice",
+    "imageMode": "brand",
+    "reason": "Great Value: image too small (186x400) - short side under 250px; No Name: image too small (240x400) - short side under 250px; President's Choice: image too small (214x400) - short side under 250px; Compliments: image too small (204x400) - short side under 250px; Western Family: image too small (204x400) - short side under 250px",
+    "attemptedAt": "2026-09-28T13:12:44.830Z"
+  },
+  "cranberry-juice-cocktail": {
+    "name": "Cranberry Juice Cocktail",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:12:44.967Z"
+  },
+  "vegetable-juice": {
+    "name": "Vegetable Juice",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:12:55.843Z"
+  },
+  "juice-boxes": {
+    "name": "Juice Boxes",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:12:55.963Z"
+  },
+  "lemon-lime-soda": {
+    "name": "Lemon-Lime Soda",
+    "imageMode": "brand",
+    "reason": "Great Value: image too small (191x400) - short side under 250px; President's Choice: image too small (143x400) - short side under 250px; Western Family: image too small (153x400) - short side under 250px",
+    "attemptedAt": "2026-09-28T13:13:12.401Z"
+  },
+  "diet-cola": {
+    "name": "Diet Cola",
+    "imageMode": "brand",
+    "reason": "Great Value: image too small (143x400) - short side under 250px; President's Choice: image too small (145x400) - short side under 250px; Selection: image too small (188x400) - short side under 250px; Compliments: image too small (198x400) - short side under 250px",
+    "attemptedAt": "2026-09-28T13:13:15.376Z"
+  },
+  "root-beer": {
+    "name": "Root Beer",
+    "imageMode": "brand",
+    "reason": "Great Value: image too small (146x400) - short side under 250px; Selection: image too small (190x400) - short side under 250px; Compliments: image too small (206x400) - short side under 250px; Western Family: image too small (243x400) - short side under 250px",
+    "attemptedAt": "2026-09-28T13:13:20.870Z"
+  },
+  "orange-soda": {
+    "name": "Orange Soda",
+    "imageMode": "brand",
+    "reason": "Great Value: image too small (144x400) - short side under 250px; President's Choice: image too small (145x400) - short side under 250px; Compliments: image too small (153x400) - short side under 250px",
+    "attemptedAt": "2026-09-28T13:13:23.593Z"
+  },
+  "cola-cans-12-pack": {
+    "name": "Cola Cans 12-Pack",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:13:26.315Z"
+  },
+  "bottled-water": {
+    "name": "Bottled Water",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:13:26.429Z"
+  },
+  "spring-water-jug": {
+    "name": "Spring Water Jug",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:13:26.541Z"
+  },
+  "sports-drink": {
+    "name": "Sports Drink",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:13:27.491Z"
+  },
+  "energy-drink": {
+    "name": "Energy Drink",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:13:27.597Z"
+  },
+  "flavoured-sparkling-water": {
+    "name": "Flavoured Sparkling Water",
+    "imageMode": "brand",
+    "reason": "Western Family: image too small (151x400) - short side under 250px",
+    "attemptedAt": "2026-09-28T13:13:29.516Z"
+  },
+  "vitamin-water": {
+    "name": "Vitamin Water",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:13:29.630Z"
+  },
+  "orange-pekoe-tea-bags": {
+    "name": "Orange Pekoe Tea Bags",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:13:49.361Z"
+  },
+  "green-tea-bags": {
+    "name": "Green Tea Bags",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:13:49.554Z"
+  },
+  "herbal-tea-bags": {
+    "name": "Herbal Tea Bags",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:13:49.742Z"
+  },
+  "chai-tea-latte-mix": {
+    "name": "Chai Tea Latte Mix",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:13:49.933Z"
+  },
+  "cold-brew-coffee": {
+    "name": "Cold Brew Coffee",
+    "imageMode": "brand",
+    "reason": "President's Choice: image too small (137x400) - short side under 250px",
+    "attemptedAt": "2026-09-28T13:13:53.561Z"
+  },
+  "kombucha": {
+    "name": "Kombucha",
+    "imageMode": "brand",
+    "reason": "President's Choice: image too small (176x400) - short side under 250px",
+    "attemptedAt": "2026-09-28T13:13:59.078Z"
+  },
+  "ginger-beer": {
+    "name": "Ginger Beer",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:14:09.753Z"
+  },
+  "matcha-powder": {
+    "name": "Matcha Powder",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:14:09.973Z"
+  },
+  "protein-shake": {
+    "name": "Protein Shake",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:14:10.170Z"
+  },
+  "electrolyte-drink-mix": {
+    "name": "Electrolyte Drink Mix",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:14:10.374Z"
+  },
+  "powdered-iced-tea-mix": {
+    "name": "Powdered Iced Tea Mix",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:14:10.595Z"
+  },
+  "fruit-punch-powder": {
+    "name": "Fruit Punch Powder",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:14:10.838Z"
+  },
+  "coconut-water": {
+    "name": "Coconut Water",
+    "imageMode": "brand",
+    "reason": "Kirkland Signature: opaque coverage 3.4% is under 12% - the cutout likely ate the product; Compliments: image too small (199x400) - short side under 250px; Western Family: image too small (164x400) - short side under 250px",
+    "attemptedAt": "2026-09-28T13:14:11.024Z"
+  },
+  "iced-coffee": {
+    "name": "Iced Coffee",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:14:11.026Z"
+  },
+  "prune-juice": {
+    "name": "Prune Juice",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:14:11.437Z"
+  },
+  "grapefruit-juice": {
+    "name": "Grapefruit Juice",
+    "imageMode": "brand",
+    "reason": "Compliments: image too small (170x400) - short side under 250px",
+    "attemptedAt": "2026-09-28T13:14:11.441Z"
+  },
+  "espresso-shots": {
+    "name": "Espresso Shots",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:14:11.869Z"
+  },
+  "iced-capp-mix": {
+    "name": "Iced Capp Mix",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:14:11.871Z"
+  },
+  "chocolate-milk-mix": {
+    "name": "Chocolate Milk Mix",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-29T12:05:56.155Z"
+  },
+  "non-alcoholic-beer": {
+    "name": "Non-Alcoholic Beer",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:14:12.299Z"
+  },
+  "yerba-mate": {
+    "name": "Yerba Mate",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:14:15.047Z"
+  },
+  "sparkling-juice": {
+    "name": "Sparkling Juice",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:14:15.050Z"
+  },
+  "instant-cappuccino-mix": {
+    "name": "Instant Cappuccino Mix",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:14:15.518Z"
+  },
+  "chocolate-protein-powder": {
+    "name": "Chocolate Protein Powder",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:14:15.520Z"
+  },
+  "collagen-powder": {
+    "name": "Collagen Powder",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:14:15.932Z"
+  },
+  "malt-drink-mix": {
+    "name": "Malt Drink Mix",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:14:15.936Z"
+  },
+  "cherry-cola": {
+    "name": "Cherry Cola",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:14:16.584Z"
+  },
+  "sparkling-grape-juice": {
+    "name": "Sparkling Grape Juice",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:14:16.588Z"
+  },
+  "grapefruit-soda": {
+    "name": "Grapefruit Soda",
+    "imageMode": "brand",
+    "reason": "Compliments: image too small (129x400) - short side under 250px",
+    "attemptedAt": "2026-09-28T13:14:17.028Z"
+  },
+  "watermelon-juice": {
+    "name": "Watermelon Juice",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:14:17.033Z"
+  },
+  "sparkling-lemonade": {
+    "name": "Sparkling Lemonade",
+    "imageMode": "brand",
+    "reason": "Compliments: image too small (149x400) - short side under 250px",
+    "attemptedAt": "2026-09-28T13:14:17.232Z"
+  },
+  "beet-juice": {
+    "name": "Beet Juice",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:14:17.450Z"
+  },
+  "aloe-vera-drink": {
+    "name": "Aloe Vera Drink",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:14:17.684Z"
+  },
+  "turmeric-latte-mix": {
+    "name": "Turmeric Latte Mix",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:14:17.892Z"
+  },
+  "rice-milk": {
+    "name": "Rice Milk",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-29T12:05:56.267Z"
+  },
+  "guava-juice": {
+    "name": "Guava Juice",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:14:18.710Z"
+  },
+  "crisp-rice-cereal": {
+    "name": "Crisp Rice Cereal",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:14:19.109Z"
+  },
+  "mango-juice": {
+    "name": "Mango Juice",
+    "imageMode": "brand",
+    "reason": "Western Family: image too small (214x400) - short side under 250px",
+    "attemptedAt": "2026-09-28T13:14:22.062Z"
+  },
+  "granola-cereal": {
+    "name": "Granola Cereal",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:14:22.299Z"
+  },
+  "honey-nut-cereal": {
+    "name": "Honey Nut Cereal",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:14:31.617Z"
+  },
+  "oat-cereal-rings": {
+    "name": "Oat Cereal Rings",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:14:36.144Z"
+  },
+  "kids-cereal": {
+    "name": "Kids Cereal",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:14:38.160Z"
+  },
+  "red-river-cereal": {
+    "name": "Red River Cereal",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:14:38.439Z"
+  },
+  "cream-of-wheat": {
+    "name": "Cream of Wheat",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-29T12:05:56.388Z"
+  },
+  "instant-oatmeal-packets": {
+    "name": "Instant Oatmeal Packets",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:14:38.727Z"
+  },
+  "toaster-pastries": {
+    "name": "Toaster Pastries",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:03.944Z"
+  },
+  "waffle-mix": {
+    "name": "Waffle Mix",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:30.382Z"
+  },
+  "instant-breakfast-drink-mix": {
+    "name": "Instant Breakfast Drink Mix",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:30.386Z"
+  },
+  "breakfast-cereal-bars": {
+    "name": "Breakfast Cereal Bars",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:30.764Z"
+  },
+  "granola-clusters": {
+    "name": "Granola Clusters",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:30.766Z"
+  },
+  "bran-buds-cereal": {
+    "name": "Bran Buds Cereal",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:31.129Z"
+  },
+  "multigrain-cereal-flakes": {
+    "name": "Multigrain Cereal Flakes",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:31.272Z"
+  },
+  "cinnamon-toast-cereal": {
+    "name": "Cinnamon Toast Cereal",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:31.429Z"
+  },
+  "chocolate-cereal": {
+    "name": "Chocolate Cereal",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:31.604Z"
+  },
+  "instant-grits": {
+    "name": "Instant Grits",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:31.996Z"
+  },
+  "oat-bran": {
+    "name": "Oat Bran",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:31.999Z"
+  },
+  "cereal-variety-pack": {
+    "name": "Cereal Variety Pack",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:37.096Z"
+  },
+  "overnight-oats-cup": {
+    "name": "Overnight Oats Cup",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:37.098Z"
+  },
+  "infant-formula": {
+    "name": "Infant Formula",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:37.407Z"
+  },
+  "soy-baby-formula": {
+    "name": "Soy Baby Formula",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:37.411Z"
+  },
+  "baby-food-pouches": {
+    "name": "Baby Food Pouches",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:37.738Z"
+  },
+  "baby-food-variety-pack": {
+    "name": "Baby Food Variety Pack",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:37.895Z"
+  },
+  "baby-cereal": {
+    "name": "Baby Cereal",
+    "imageMode": "brand",
+    "reason": "President's Choice: image too small (204x395) - short side under 250px",
+    "attemptedAt": "2026-09-28T13:15:38.625Z"
+  },
+  "diapers-size-1": {
+    "name": "Diapers Size 1",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:38.812Z"
+  },
+  "baby-food-puree": {
+    "name": "Baby Food Puree",
+    "imageMode": "brand",
+    "reason": "Compliments: image too small (219x400) - short side under 250px",
+    "attemptedAt": "2026-09-28T13:15:38.814Z"
+  },
+  "diapers-size-3": {
+    "name": "Diapers Size 3",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:39.147Z"
+  },
+  "diapers-size-5": {
+    "name": "Diapers Size 5",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:39.150Z"
+  },
+  "training-pants": {
+    "name": "Training Pants",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:39.549Z"
+  },
+  "swim-diapers": {
+    "name": "Swim Diapers",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:39.931Z"
+  },
+  "baby-wipes": {
+    "name": "Baby Wipes",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:40.329Z"
+  },
+  "baby-wipes-refill-pack": {
+    "name": "Baby Wipes Refill Pack",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:40.332Z"
+  },
+  "diaper-cream": {
+    "name": "Diaper Cream",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-29T12:05:56.505Z"
+  },
+  "baby-shampoo": {
+    "name": "Baby Shampoo",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:40.710Z"
+  },
+  "baby-body-wash": {
+    "name": "Baby Body Wash",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:40.885Z"
+  },
+  "baby-lotion": {
+    "name": "Baby Lotion",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:41.070Z"
+  },
+  "baby-powder": {
+    "name": "Baby Powder",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:41.235Z"
+  },
+  "baby-oil": {
+    "name": "Baby Oil",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:41.594Z"
+  },
+  "baby-bottles": {
+    "name": "Baby Bottles",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:41.598Z"
+  },
+  "bottle-nipples": {
+    "name": "Bottle Nipples",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:41.785Z"
+  },
+  "pacifiers": {
+    "name": "Pacifiers",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:42.009Z"
+  },
+  "teething-rings": {
+    "name": "Teething Rings",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:42.175Z"
+  },
+  "ready-to-feed-formula": {
+    "name": "Ready-to-Feed Formula",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:42.576Z"
+  },
+  "toddler-puff-snacks": {
+    "name": "Toddler Puff Snacks",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:42.580Z"
+  },
+  "teething-biscuits": {
+    "name": "Teething Biscuits",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:42.769Z"
+  },
+  "baby-laundry-detergent": {
+    "name": "Baby Laundry Detergent",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:42.955Z"
+  },
+  "nursing-pads": {
+    "name": "Nursing Pads",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:43.105Z"
+  },
+  "baby-sunscreen": {
+    "name": "Baby Sunscreen",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:43.280Z"
+  },
+  "baby-multivitamin-drops": {
+    "name": "Baby Multivitamin Drops",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:43.449Z"
+  },
+  "diaper-disposal-bags": {
+    "name": "Diaper Disposal Bags",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:43.804Z"
+  },
+  "infant-gas-drops": {
+    "name": "Infant Gas Drops",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:43.809Z"
+  },
+  "dry-dog-food": {
+    "name": "Dry Dog Food",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:44.201Z"
+  },
+  "dry-dog-food-jumbo-bag": {
+    "name": "Dry Dog Food Jumbo Bag",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:44.205Z"
+  },
+  "wet-dog-food": {
+    "name": "Wet Dog Food",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:44.428Z"
+  },
+  "wet-dog-food-multipack": {
+    "name": "Wet Dog Food Multipack",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:44.604Z"
+  },
+  "puppy-food": {
+    "name": "Puppy Food",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:44.796Z"
+  },
+  "senior-dog-food": {
+    "name": "Senior Dog Food",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:44.982Z"
+  },
+  "grain-free-dog-food": {
+    "name": "Grain-Free Dog Food",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:45.180Z"
+  },
+  "dry-cat-food": {
+    "name": "Dry Cat Food",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:45.339Z"
+  },
+  "wet-cat-food": {
+    "name": "Wet Cat Food",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:47.894Z"
+  },
+  "wet-cat-food-multipack": {
+    "name": "Wet Cat Food Multipack",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:48.062Z"
+  },
+  "kitten-food": {
+    "name": "Kitten Food",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:48.194Z"
+  },
+  "cat-treats": {
+    "name": "Cat Treats",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:48.500Z"
+  },
+  "dog-treats": {
+    "name": "Dog Treats",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:48.504Z"
+  },
+  "dog-biscuits": {
+    "name": "Dog Biscuits",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:48.706Z"
+  },
+  "cat-litter": {
+    "name": "Cat Litter",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:49.101Z"
+  },
+  "cat-litter-crystals": {
+    "name": "Cat Litter Crystals",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:49.105Z"
+  },
+  "cat-litter-liners": {
+    "name": "Cat Litter Liners",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:49.311Z"
+  },
+  "puppy-training-pads": {
+    "name": "Puppy Training Pads",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:49.477Z"
+  },
+  "dog-poop-bags": {
+    "name": "Dog Poop Bags",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:49.644Z"
+  },
+  "dog-dental-chews": {
+    "name": "Dog Dental Chews",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:49.825Z"
+  },
+  "cat-dental-treats": {
+    "name": "Cat Dental Treats",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:50.149Z"
+  },
+  "rawhide-chews": {
+    "name": "Rawhide Chews",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:50.153Z"
+  },
+  "pig-ears": {
+    "name": "Pig Ears",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:50.345Z"
+  },
+  "dog-shampoo": {
+    "name": "Dog Shampoo",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:50.696Z"
+  },
+  "flea-and-tick-treatment": {
+    "name": "Flea and Tick Treatment",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:51.008Z"
+  },
+  "dog-chew-toy": {
+    "name": "Dog Chew Toy",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:51.012Z"
+  },
+  "cat-toy": {
+    "name": "Cat Toy",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:51.222Z"
+  },
+  "cat-grass": {
+    "name": "Cat Grass",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:51.387Z"
+  },
+  "dog-food-toppers": {
+    "name": "Dog Food Toppers",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:51.611Z"
+  },
+  "pet-stain-and-odor-remover": {
+    "name": "Pet Stain and Odor Remover",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:51.948Z"
+  },
+  "bird-seed": {
+    "name": "Bird Seed",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:51.952Z"
+  },
+  "fish-flakes": {
+    "name": "Fish Flakes",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:52.155Z"
+  },
+  "small-animal-bedding": {
+    "name": "Small Animal Bedding",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:52.531Z"
+  },
+  "rabbit-food-pellets": {
+    "name": "Rabbit Food Pellets",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:52.919Z"
+  },
+  "hamster-food-mix": {
+    "name": "Hamster Food Mix",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:52.924Z"
+  },
+  "dish-soap": {
+    "name": "Dish Soap",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:53.103Z"
+  },
+  "automatic-dishwasher-pods": {
+    "name": "Automatic Dishwasher Pods",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:53.297Z"
+  },
+  "dishwasher-rinse-aid": {
+    "name": "Dishwasher Rinse Aid",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:53.477Z"
+  },
+  "all-purpose-cleaner": {
+    "name": "All-Purpose Cleaner",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:53.662Z"
+  },
+  "glass-cleaner": {
+    "name": "Glass Cleaner",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:53.824Z"
+  },
+  "bathroom-cleaner": {
+    "name": "Bathroom Cleaner",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:53.994Z"
+  },
+  "toilet-bowl-cleaner": {
+    "name": "Toilet Bowl Cleaner",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:54.163Z"
+  },
+  "disinfecting-wipes": {
+    "name": "Disinfecting Wipes",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:54.311Z"
+  },
+  "disinfectant-spray": {
+    "name": "Disinfectant Spray",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:54.488Z"
+  },
+  "bleach": {
+    "name": "Bleach",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:54.841Z"
+  },
+  "floor-cleaner": {
+    "name": "Floor Cleaner",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:54.845Z"
+  },
+  "wood-floor-cleaner": {
+    "name": "Wood Floor Cleaner",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:55.005Z"
+  },
+  "stainless-steel-cleaner": {
+    "name": "Stainless Steel Cleaner",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:55.182Z"
+  },
+  "oven-cleaner": {
+    "name": "Oven Cleaner",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:55.356Z"
+  },
+  "drain-cleaner": {
+    "name": "Drain Cleaner",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:55.534Z"
+  },
+  "scouring-pads": {
+    "name": "Scouring Pads",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:55.731Z"
+  },
+  "sponges": {
+    "name": "Sponges",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:55.885Z"
+  },
+  "microfiber-cleaning-cloths": {
+    "name": "Microfiber Cleaning Cloths",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:56.118Z"
+  },
+  "rubber-gloves": {
+    "name": "Rubber Gloves",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:56.301Z"
+  },
+  "furniture-polish": {
+    "name": "Furniture Polish",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:56.542Z"
+  },
+  "air-freshener-spray": {
+    "name": "Air Freshener Spray",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:56.727Z"
+  },
+  "plug-in-air-freshener": {
+    "name": "Plug-In Air Freshener",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:56.925Z"
+  },
+  "air-freshener-refill": {
+    "name": "Air Freshener Refill",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:57.069Z"
+  },
+  "carpet-deodorizer": {
+    "name": "Carpet Deodorizer",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:57.193Z"
+  },
+  "fabric-refresher-spray": {
+    "name": "Fabric Refresher Spray",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:57.382Z"
+  },
+  "laundry-detergent": {
+    "name": "Laundry Detergent",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:57.554Z"
+  },
+  "laundry-detergent-pods": {
+    "name": "Laundry Detergent Pods",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:57.774Z"
+  },
+  "powder-laundry-detergent": {
+    "name": "Powder Laundry Detergent",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:57.926Z"
+  },
+  "dryer-sheets": {
+    "name": "Dryer Sheets",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:58.089Z"
+  },
+  "stain-remover-stick": {
+    "name": "Stain Remover Stick",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:58.274Z"
+  },
+  "stain-remover-spray": {
+    "name": "Stain Remover Spray",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:58.458Z"
+  },
+  "bleach-alternative": {
+    "name": "Bleach Alternative",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:58.810Z"
+  },
+  "toilet-paper": {
+    "name": "Toilet Paper",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:58.814Z"
+  },
+  "paper-towel": {
+    "name": "Paper Towel",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:59.001Z"
+  },
+  "facial-tissue": {
+    "name": "Facial Tissue",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:59.182Z"
+  },
+  "paper-napkins": {
+    "name": "Paper Napkins",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:59.340Z"
+  },
+  "paper-plates": {
+    "name": "Paper Plates",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:59.458Z"
+  },
+  "paper-cups": {
+    "name": "Paper Cups",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:15:59.678Z"
+  },
+  "fabric-softener": {
+    "name": "Fabric Softener",
+    "imageMode": "brand",
+    "reason": "Great Value: image too small (239x400) - short side under 250px",
+    "attemptedAt": "2026-09-28T13:15:59.852Z"
+  },
+  "plastic-cutlery": {
+    "name": "Plastic Cutlery",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:00.002Z"
+  },
+  "parchment-paper": {
+    "name": "Parchment Paper",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:00.194Z"
+  },
+  "aluminum-foil": {
+    "name": "Aluminum Foil",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:00.363Z"
+  },
+  "plastic-wrap": {
+    "name": "Plastic Wrap",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:00.528Z"
+  },
+  "sandwich-bags": {
+    "name": "Sandwich Bags",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:00.721Z"
+  },
+  "freezer-bags": {
+    "name": "Freezer Bags",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:00.993Z"
+  },
+  "kitchen-garbage-bags": {
+    "name": "Kitchen Garbage Bags",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:01.140Z"
+  },
+  "outdoor-garbage-bags": {
+    "name": "Outdoor Garbage Bags",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:01.344Z"
+  },
+  "coffee-filters": {
+    "name": "Coffee Filters",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:01.534Z"
+  },
+  "aa-batteries": {
+    "name": "AA Batteries",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:01.672Z"
+  },
+  "aaa-batteries": {
+    "name": "AAA Batteries",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:01.832Z"
+  },
+  "led-light-bulbs": {
+    "name": "LED Light Bulbs",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:02.181Z"
+  },
+  "matches": {
+    "name": "Matches",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:02.185Z"
+  },
+  "lighter": {
+    "name": "Lighter",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:02.390Z"
+  },
+  "candles": {
+    "name": "Candles",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:02.597Z"
+  },
+  "charcoal-briquettes": {
+    "name": "Charcoal Briquettes",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:02.764Z"
+  },
+  "insect-repellent-spray": {
+    "name": "Insect Repellent Spray",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:02.899Z"
+  },
+  "mouse-traps": {
+    "name": "Mouse Traps",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:03.089Z"
+  },
+  "moth-balls": {
+    "name": "Moth Balls",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:03.271Z"
+  },
+  "water-filter-pitcher-cartridge": {
+    "name": "Water Filter Pitcher Cartridge",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:03.466Z"
+  },
+  "shoe-polish": {
+    "name": "Shoe Polish",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:03.816Z"
+  },
+  "sewing-kit": {
+    "name": "Sewing Kit",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:03.820Z"
+  },
+  "clothespins": {
+    "name": "Clothespins",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:03.995Z"
+  },
+  "duct-tape": {
+    "name": "Duct Tape",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:04.161Z"
+  },
+  "super-glue": {
+    "name": "Super Glue",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:04.317Z"
+  },
+  "toothpaste": {
+    "name": "Toothpaste",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:04.635Z"
+  },
+  "toothbrush": {
+    "name": "Toothbrush",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:04.640Z"
+  },
+  "electric-toothbrush-heads": {
+    "name": "Electric Toothbrush Heads",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:04.833Z"
+  },
+  "mouthwash": {
+    "name": "Mouthwash",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:05.013Z"
+  },
+  "dental-floss": {
+    "name": "Dental Floss",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:05.241Z"
+  },
+  "whitening-strips": {
+    "name": "Whitening Strips",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:05.408Z"
+  },
+  "denture-cleaner-tablets": {
+    "name": "Denture Cleaner Tablets",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:05.759Z"
+  },
+  "denture-adhesive": {
+    "name": "Denture Adhesive",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:05.763Z"
+  },
+  "shampoo": {
+    "name": "Shampoo",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:05.982Z"
+  },
+  "conditioner": {
+    "name": "Conditioner",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:06.142Z"
+  },
+  "2-in-1-shampoo-and-conditioner": {
+    "name": "2-in-1 Shampoo and Conditioner",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:06.285Z"
+  },
+  "hair-gel": {
+    "name": "Hair Gel",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:06.633Z"
+  },
+  "hair-spray": {
+    "name": "Hair Spray",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:06.637Z"
+  },
+  "hair-mousse": {
+    "name": "Hair Mousse",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:06.797Z"
+  },
+  "dry-shampoo": {
+    "name": "Dry Shampoo",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:06.994Z"
+  },
+  "hair-oil": {
+    "name": "Hair Oil",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:07.199Z"
+  },
+  "hair-dye": {
+    "name": "Hair Dye",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:07.330Z"
+  },
+  "hair-ties": {
+    "name": "Hair Ties",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:07.467Z"
+  },
+  "comb": {
+    "name": "Comb",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:07.610Z"
+  },
+  "hair-brush": {
+    "name": "Hair Brush",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:07.726Z"
+  },
+  "body-lotion": {
+    "name": "Body Lotion",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:07.915Z"
+  },
+  "facial-moisturizer": {
+    "name": "Facial Moisturizer",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:08.123Z"
+  },
+  "facial-cleanser": {
+    "name": "Facial Cleanser",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:08.461Z"
+  },
+  "body-wash": {
+    "name": "Body Wash",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:08.465Z"
+  },
+  "bar-soap": {
+    "name": "Bar Soap",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:08.829Z"
+  },
+  "hand-soap": {
+    "name": "Hand Soap",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:08.835Z"
+  },
+  "hand-sanitizer": {
+    "name": "Hand Sanitizer",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:09.019Z"
+  },
+  "sunscreen": {
+    "name": "Sunscreen",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:09.188Z"
+  },
+  "lip-balm": {
+    "name": "Lip Balm",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:09.370Z"
+  },
+  "face-mask": {
+    "name": "Face Mask",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:09.557Z"
+  },
+  "makeup-remover-wipes": {
+    "name": "Makeup Remover Wipes",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:09.741Z"
+  },
+  "hand-cream": {
+    "name": "Hand Cream",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-29T12:05:56.615Z"
+  },
+  "petroleum-jelly": {
+    "name": "Petroleum Jelly",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:10.050Z"
+  },
+  "deodorant": {
+    "name": "Deodorant",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:10.248Z"
+  },
+  "antiperspirant-spray": {
+    "name": "Antiperspirant Spray",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:10.425Z"
+  },
+  "disposable-razors": {
+    "name": "Disposable Razors",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:10.549Z"
+  },
+  "razor-cartridges": {
+    "name": "Razor Cartridges",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:10.644Z"
+  },
+  "shaving-cream": {
+    "name": "Shaving Cream",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-29T12:05:56.735Z"
+  },
+  "shaving-gel": {
+    "name": "Shaving Gel",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:10.835Z"
+  },
+  "aftershave": {
+    "name": "Aftershave",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:11.075Z"
+  },
+  "tampons": {
+    "name": "Tampons",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:11.079Z"
+  },
+  "maxi-pads": {
+    "name": "Maxi Pads",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:11.185Z"
+  },
+  "panty-liners": {
+    "name": "Panty Liners",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:11.313Z"
+  },
+  "menstrual-cup": {
+    "name": "Menstrual Cup",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:11.427Z"
+  },
+  "acetaminophen": {
+    "name": "Acetaminophen",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:11.539Z"
+  },
+  "cold-and-flu-medicine": {
+    "name": "Cold and Flu Medicine",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:11.745Z"
+  },
+  "cough-syrup": {
+    "name": "Cough Syrup",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:11.748Z"
+  },
+  "cough-drops": {
+    "name": "Cough Drops",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:11.868Z"
+  },
+  "allergy-medicine": {
+    "name": "Allergy Medicine",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:12.088Z"
+  },
+  "antacid-tablets": {
+    "name": "Antacid Tablets",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:12.092Z"
+  },
+  "heartburn-relief-tablets": {
+    "name": "Heartburn Relief Tablets",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:12.193Z"
+  },
+  "bandages": {
+    "name": "Bandages",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:12.301Z"
+  },
+  "antibiotic-ointment": {
+    "name": "Antibiotic Ointment",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:12.408Z"
+  },
+  "rubbing-alcohol": {
+    "name": "Rubbing Alcohol",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:12.512Z"
+  },
+  "hydrogen-peroxide": {
+    "name": "Hydrogen Peroxide",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:12.617Z"
+  },
+  "digital-thermometer": {
+    "name": "Digital Thermometer",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:12.810Z"
+  },
+  "multivitamin": {
+    "name": "Multivitamin",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:12.812Z"
+  },
+  "ibuprofen": {
+    "name": "Ibuprofen",
+    "imageMode": "brand",
+    "reason": "Compliments: opaque coverage 1.0% is under 12% - the cutout likely ate the product",
+    "attemptedAt": "2026-09-28T13:16:16.754Z"
+  },
+  "probiotics": {
+    "name": "Probiotics",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:16.906Z"
+  },
+  "melatonin": {
+    "name": "Melatonin",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:17.052Z"
+  },
+  "eye-drops": {
+    "name": "Eye Drops",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:17.202Z"
+  },
+  "nasal-spray": {
+    "name": "Nasal Spray",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:17.354Z"
+  },
+  "throat-lozenges": {
+    "name": "Throat Lozenges",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:17.481Z"
+  },
+  "first-aid-kit": {
+    "name": "First Aid Kit",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:17.623Z"
+  },
+  "reading-glasses": {
+    "name": "Reading Glasses",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:17.772Z"
+  },
+  "contact-lens-solution": {
+    "name": "Contact Lens Solution",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:17.922Z"
+  },
+  "athletic-tape": {
+    "name": "Athletic Tape",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:18.092Z"
+  },
+  "fish-oil": {
+    "name": "Fish Oil",
+    "imageMode": "brand",
+    "reason": "Kirkland Signature: image too small (191x400) - short side under 250px",
+    "attemptedAt": "2026-09-28T13:16:18.094Z"
+  },
+  "muscle-rub-cream": {
+    "name": "Muscle Rub Cream",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-29T12:05:56.853Z"
+  },
+  "anti-itch-cream": {
+    "name": "Anti-Itch Cream",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-29T12:05:56.976Z"
+  },
+  "foot-powder": {
+    "name": "Foot Powder",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:18.750Z"
+  },
+  "nail-clippers": {
+    "name": "Nail Clippers",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:21.096Z"
+  },
+  "cotton-swabs": {
+    "name": "Cotton Swabs",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:23.817Z"
+  },
+  "cotton-balls": {
+    "name": "Cotton Balls",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:23.820Z"
+  },
+  "incontinence-pads": {
+    "name": "Incontinence Pads",
+    "imageMode": "brand",
+    "reason": "no store brand had ANY matching Canadian product in the enumerated catalogue",
+    "attemptedAt": "2026-09-28T13:16:24.010Z"
+  },
+  "1-milk": {
+    "name": "1% Milk",
+    "imageMode": "brand",
+    "reason": "Great Value: image too small (205x400) - short side under 250px; President's Choice: image too small (245x376) - short side under 250px",
+    "attemptedAt": "2026-09-29T12:33:25.529Z"
+  },
+  "coffee-cream": {
+    "name": "Coffee Cream 10%",
+    "imageMode": "brand",
+    "reason": "Great Value: image too small (136x400) - short side under 250px; Selection: image too small (163x400) - short side under 250px",
+    "attemptedAt": "2026-09-29T12:05:41.482Z"
+  },
+  "buttermilk": {
+    "name": "Buttermilk",
+    "imageMode": "brand",
+    "reason": "Great Value: image too small (400x182) - short side under 250px",
+    "attemptedAt": "2026-09-29T12:05:45.893Z"
+  },
+  "coconut-milk-beverage": {
+    "name": "Coconut Milk Beverage",
+    "imageMode": "brand",
+    "reason": "President's Choice: opaque coverage 5.8% is under 12% - the cutout likely ate the product",
+    "attemptedAt": "2026-09-29T12:05:46.514Z"
+  },
+  "light-sour-cream": {
+    "name": "Light Sour Cream",
+    "imageMode": "brand",
+    "reason": "Compliments: image too small (210x207) - short side under 250px",
+    "attemptedAt": "2026-09-29T12:05:49.194Z"
+  },
+  "sweetened-condensed-milk": {
+    "name": "Sweetened Condensed Milk",
+    "imageMode": "brand",
+    "reason": "Western Family: image too small (237x400) - short side under 250px",
+    "attemptedAt": "2026-09-29T12:05:49.196Z"
+  },
+  "cream-soda": {
+    "name": "Cream Soda",
+    "imageMode": "brand",
+    "reason": "Compliments: image too small (192x400) - short side under 250px",
+    "attemptedAt": "2026-09-29T12:05:59.292Z"
+  },
+  "ice-cream-sandwiches": {
+    "name": "Ice Cream Sandwiches",
+    "imageMode": "brand",
+    "reason": "Great Value: opaque coverage 7.7% is under 12% - the cutout likely ate the product; No Name: opaque coverage 7.1% is under 12% - the cutout likely ate the product; Selection: image too small (189x400) - short side under 250px; Western Family: image too small (400x202) - short side under 250px",
+    "attemptedAt": "2026-09-29T12:06:02.001Z"
+  }
+}

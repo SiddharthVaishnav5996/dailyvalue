@@ -1,5 +1,7 @@
 import { DEPARTMENTS } from "@/data/stores";
 import { PLAN_SHAPE_TEXT } from "@/lib/ai/schema";
+import { PRODUCT_BY_ID } from "@/lib/catalog/products";
+import { exactMatchFor, shortlistFor } from "@/lib/ai/catalogShortlist";
 
 /*
  * The system prompt.
@@ -21,6 +23,25 @@ import { PLAN_SHAPE_TEXT } from "@/lib/ai/schema";
  */
 
 const DEPARTMENT_LIST = DEPARTMENTS.join(", ");
+
+/*
+ * Catalog candidates for one message. The model copies an id into
+ * "catalogId" instead of inventing a product name, so "butter" and "unsalted
+ * butter" both land on the same product every time. Only a shortlist goes in
+ * (see lib/ai/catalogShortlist.ts), and it goes in the USER message, not this
+ * system prompt: the system prompt stays identical on every request, which is
+ * what lets the provider cache it. The name is added only where the id alone
+ * would mislead ("milk" is 2% milk).
+ */
+const idOf = (name: string) => name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+function candidateList(text: string): string {
+  return shortlistFor(text)
+    .map((id) => {
+      const p = PRODUCT_BY_ID[id];
+      return idOf(p.name) === id ? id : `${id} (${p.name})`;
+    })
+    .join(", ");
+}
 
 export const PLAN_SYSTEM_PROMPT = `You are the shopping engine for DailyValue, a Canadian price-comparison
 shopping assistant. You turn a shopper's sentence into a shopping list they can buy.
@@ -86,11 +107,42 @@ from the tables on purpose: three rows that all say "sugar" are ONE item coverin
 For each item:
 - "rowIds" lists every table row this single purchase satisfies.
 - "department" MUST be one of: ${DEPARTMENT_LIST}
+- "catalogId" is the id from the CATALOG CANDIDATES list in the shopper's message for the
+  product this item IS. Copy it exactly. The list is a shortlist, not the whole catalog:
+  when the item is not in it (common for recipe ingredients), use null - the app matches
+  it by name instead. A variant still maps to its base product:
+  "unsalted butter", "salted butter" and "a block of butter" are all "butter". Use null
+  only when no catalog entry is this item — never pick a merely related one
+  ("peanut butter" is not "butter", "almond milk" is not "milk").
+- A request for ONE product ("butter", "unsalted butter", "eggs") is ONE row and ONE item.
+  Do not split it into variants the shopper did not ask for.
 - "searchTerms" are 2 to 4 lowercase aliases a supermarket would use.
 - "estimatedPrice" is a realistic Canadian retail price in CAD for one pack, as of today.
   Be honest and specific: a mattress is not 50 dollars, a lemon is not 12 dollars.
 - Salt, pepper, water and plain tap ingredients: include them in the table, but leave them
   OUT of items unless the shopper asked to restock a pantry.
+
+### "brandHint" — leave it null more often than you fill it
+
+This one field decides what a shopper sees on the card, so it has a rule of its own.
+
+Set it ONLY when a brand is genuinely part of the request:
+- the shopper named one ("Philadelphia cream cheese", "Great Value bread", "Kirkland nuts")
+- the dish is defined by one ("Oreo base" is Oreo, not "chocolate sandwich cookies")
+
+Otherwise set it to null, and mean it. "Cream cheese", "white bread", "2% milk" and
+"granulated sugar" all take null.
+
+Null is not a failure here. When a brand is missing, the app fills it in per store from
+its own records: Great Value at Walmart, No Name at No Frills, Compliments at Sobeys,
+Selection at Metro, Kirkland Signature at Costco. That is a better answer than any single
+brand you could name, because it is what the shopper would actually find on each shelf.
+Inventing a national brand throws that away.
+
+When you do fill it in, use the name exactly as it is printed on the package, and use a
+brand really sold in Canada — Dempster's, Lactantia, Gay Lea, Oasis, Becel, Liberté,
+Redpath, Christie. Do not invent one, and do not use an American brand that is not sold
+here.
 
 ## The recipe
 
@@ -113,6 +165,19 @@ a printed page:
 
 On a follow-up that changes the dish ("make it no-bake", "swap the base"), reissue the
 whole recipe updated to match, exactly as you reissue the tables.
+
+Set "recipeChanged" to true on that turn, and on the first turn that produces a recipe.
+
+If the follow-up does NOT change the dish - "add a wine to go with it", "how much will
+that cost", "which shop is cheapest" - set "recipeChanged" to false. Still reissue the
+recipe itself, unchanged, so nothing is lost; the app decides whether to print it again.
+The shopper is already looking at it further up the conversation, and printing the whole
+method again under an answer about wine reads as though something changed when nothing
+did.
+
+Do not quietly alter a recipe on a turn that was not about the cooking. If
+"recipeChanged" is false, the ingredients, amounts, steps and servings must be exactly
+what you gave last time.
 
 ## When the request is vague, show options and ask
 
@@ -162,7 +227,16 @@ export function buildUserMessage(
   query: string,
   history: { role: "user" | "ai"; text: string }[] = [],
 ): string {
-  if (history.length === 0) return query;
+  const userTurns = history.filter((m) => m.role === "user").map((m) => m.text);
+  const exact = exactMatchFor(query);
+  const candidates =
+    `\n\n## CATALOG CANDIDATES\n${candidateList([...userTurns.slice(-2), query].join(" "))}` +
+    (exact
+      ? `\n\nEXACT MATCH: the shopper's words name catalog product "${exact}". ` +
+        `Return that one product as one item - do not offer the other candidates as options.`
+      : "");
+
+  if (history.length === 0) return query + candidates;
 
   // Keep the last few turns only. Older context is rarely load-bearing and
   // every extra turn costs tokens on every single request.
@@ -177,5 +251,5 @@ ${transcript}
 
 The shopper's new message: ${query}
 
-Rebuild the full tables and items to reflect this new message.`;
+Rebuild the full tables and items to reflect this new message.${candidates}`;
 }

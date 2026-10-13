@@ -1,5 +1,6 @@
 import type { Offer } from "@/lib/types";
 import { STORES } from "@/data/stores";
+import { findStoreBrand } from "@/data/brands";
 import { HERO_PRODUCTS, TOP_PICKS, BLACK_FRIDAY_PRODUCTS } from "@/data/landing";
 import { ALL_SEARCH_PRODUCTS } from "@/data/searchResults";
 import { PRODUCT_POP_BY_ID } from "@/data/productPop";
@@ -47,12 +48,26 @@ export interface CuratedProduct {
   /** Hand-written per-store offers, where a Product-pop defines them. */
   storeOffers?: Offer[];
   /**
+   * Shops that genuinely do not stock this, by id.
+   *
+   * The department gate in resolve.ts is a blunt instrument: it knows Costco
+   * sells produce, so it offers Costco everything in the produce aisle. It
+   * does not know Costco sells ginger only as a paste. This is where that kind
+   * of real-world knowledge goes - one product, one shop, checked by a person.
+   */
+  notSoldAt?: string[];
+  /**
    * Every word this product is allowed to be described with - its terms plus
    * its own description. Used by findCurated to tell "philadelphia cream
    * cheese" (still this product) from "chocolate cream cheese" (a different
    * one). See the note on findCurated.
    */
   vocabulary: Set<string>;
+  /**
+   * Words that rule this product out, even though they are harmless elsewhere.
+   * See NEVER_WITH below.
+   */
+  neverWith: Set<string>;
 }
 
 /*
@@ -79,7 +94,7 @@ const TERMS: Record<string, string[]> = {
   "hero-tower-fan": ["tower fan", "fan", "cooling fan", "standing fan"],
 
   // --- Produce (top picks) ---
-  "pick-tomatoes": ["tomato", "tomatoes", "campari tomatoes", "cherry tomatoes"],
+  "pick-tomatoes": ["tomato", "tomatoes", "campari tomatoes"],
   "pick-cucumber": ["cucumber", "cucumbers", "mini cucumbers", "english cucumber"],
   "pick-mushrooms": ["mushroom", "mushrooms", "white mushrooms", "button mushrooms"],
   "pick-onions": ["onion", "onions", "yellow onion", "yellow onions"],
@@ -154,6 +169,48 @@ const TERMS: Record<string, string[]> = {
   // Whole carrots only. "Baby carrots" and "shredded carrots" are sold as
   // different products, and this photograph is neither.
   "p-carrots": ["carrot", "carrots", "whole carrots", "orange carrots", "bunch of carrots"],
+  // Root ginger, the knobbly thing in the produce aisle. Deliberately NOT
+  // "ginger paste", "ground ginger" or "pickled ginger" - those are three
+  // different products and this photograph is none of them.
+  "p-ginger": ["ginger", "fresh ginger", "ginger root", "root ginger"],
+  // A whole lemon. "Lemon juice" is a longer term on a different card and is
+  // tried first, so the bottle still wins its own name.
+  "p-lemon": ["lemon", "lemons", "fresh lemon", "whole lemon"],
+  "p-walnuts": ["walnut", "walnuts", "chopped walnuts", "walnut halves"],
+  // Not "baking powder". Different product, different aisle behaviour, and the
+  // two are confused often enough that it is worth saying so here.
+  "p-baking-soda": [
+    "baking soda",
+    "bicarbonate of soda",
+    "sodium bicarbonate",
+    "bicarb",
+  ],
+  // Plain table salt. "Sea salt", "kosher salt", "rock salt" and "garlic salt"
+  // are all different products and all refused already, because none of those
+  // first words is harmless or part of this product's own name.
+  "p-table-salt": ["table salt", "salt", "iodized salt", "iodised salt", "fine salt"],
+  // 2% milk, sometimes sold as "partly skimmed". See NEVER_WITH for the one
+  // word that would otherwise let whole milk through.
+  "p-milk-2": [
+    "2% milk",
+    "milk",
+    "2 percent milk",
+    "partly skimmed milk",
+    "partly skimmed",
+    "cow milk",
+    "cows milk",
+  ],
+  // "tomato sauce" used to match the punnet of Campari tomatoes, which was one
+  // of the sixteen traps in the matcher rewrite. Now there is a real jar for it
+  // to find, and longer terms are tried first, so the sauce wins its own name.
+  "p-tomato-sauce": [
+    "tomato pasta sauce",
+    "pasta sauce",
+    "tomato sauce",
+    "marinara",
+    "marinara sauce",
+    "tomato basil sauce",
+  ],
   "p-whipping-cream": [
     "whipping cream",
     "heavy cream",
@@ -204,6 +261,44 @@ const TERMS: Record<string, string[]> = {
 };
 
 /*
+ * Words that disqualify a product, overriding the global harmless list.
+ * ---------------------------------------------------------------------------
+ * HARMLESS says a word usually does not change what something is: "crushed"
+ * was put there for crushed graham crackers and crushed Oreos, where crushing
+ * really is the same biscuit in smaller pieces.
+ *
+ * It is not true everywhere. "Crushed tomatoes" and "diced tomatoes" are tins
+ * from the pantry aisle, and the tomato card is a punnet of fresh Campari
+ * tomatoes - so both were matching a photograph of the wrong product entirely.
+ *
+ * A global list cannot express "harmless, except for this one". This can.
+ * Keep the entries narrow: each one is a statement about a single product.
+ */
+const NEVER_WITH: Record<string, string[]> = {
+  // Fresh tomatoes in a punnet. Anything from a tin is a different product.
+  "pick-tomatoes": [
+    "crushed", "diced", "canned", "tinned", "passata",
+    "puree", "pureed", "paste", "sauce", "soup", "juice",
+  ],
+  // Whole mushrooms on a tray, not a tin of soup or a jar of sauce.
+  "pick-mushrooms": ["canned", "tinned", "soup", "sauce", "dried", "powder"],
+  // A whole cucumber, not a jar of anything.
+  "pick-cucumber": ["pickled", "canned", "jarred"],
+  // A 2% carton. "Whole milk" is a different fat content and a different
+  // product, and "whole" is on the harmless list - it was put there for whole
+  // carrots and whole mushrooms, where it really does mean the same thing.
+  //
+  // The rest are here to be read rather than because they are needed: almond,
+  // oat and soy are already refused for not being words this carton is known
+  // by. Spelling them out means the next person does not have to work that out.
+  "p-milk-2": [
+    "whole", "skim", "skimmed", "homogenized", "homogenised",
+    "almond", "oat", "soy", "soya", "coconut", "cashew",
+    "evaporated", "condensed", "powdered", "buttermilk", "chocolate",
+  ],
+};
+
+/*
  * Products whose photo exists but which no data file defines yet.
  *
  * Everything else on this page is imported from the file that owns it. These
@@ -222,7 +317,7 @@ const EXTRA_CURATED: RawCurated[] = [
     // the same thing for a crumb base, so both find this card.
     id: "p-digestive-biscuits",
     description: "Christie Peek Freans Family Digestive Biscuits, 300 g",
-    imageSrc: "/stores/Product card Images/AI searched/Screenshot 2026-03-04 181124.png",
+    imageSrc: "/stores/Product card Images/AI searched/Graham crackers.png",
     imageAlt: "Christie Peek Freans Family Digestive biscuits box",
     imageFit: "contain",
     storeName: "Walmart",
@@ -247,14 +342,11 @@ const EXTRA_CURATED: RawCurated[] = [
     reviewCount: 979,
   },
   {
-    // Stock photography gave this one a bowl of breaded nuggets.
-    //
-    // The filename really is spelled "browm". It is used exactly as it sits on
-    // disk - correcting the spelling here would simply 404. Rename the file if
-    // it bothers you, and change this line in the same commit.
+    // Stock photography gave this one a bowl of breaded nuggets, so it uses a
+    // supplied packshot instead.
     id: "p-brown-sugar",
     description: "Brown Sugar 1 kg",
-    imageSrc: "/stores/Product card Images/AI searched/browm sugar.avif",
+    imageSrc: "/stores/Product card Images/AI searched/brown sugar.avif",
     imageAlt: "Brown sugar",
     imageFit: "contain",
     storeName: "Real Canadian Superstore",
@@ -287,6 +379,74 @@ const EXTRA_CURATED: RawCurated[] = [
     imageFit: "contain",
   },
   {
+    // Stock photography gave this one a plate of sushi, because sushi is
+    // photographed with pickled ginger beside it. A perfectly good match for
+    // the word and a useless one for the product.
+    //
+    // Image only, like the carrots: the designer supplied the photograph, so
+    // the pipeline still names it and prices it across the shops that have it.
+    id: "p-ginger",
+    imageSrc: "/stores/Product card Images/AI searched/Fresh Ginger.avif",
+    imageAlt: "Two fresh ginger roots",
+    imageFit: "contain",
+    // Costco sells ginger as a paste, not as root ginger. The department gate
+    // cannot know that; a person does.
+    notSoldAt: ["costco"],
+  },
+  {
+    // Gathered by the designer and sitting unused until now - the card was
+    // showing a stock photograph instead. See the note at the top of
+    // EXTRA_CURATED: a photograph in the folder does nothing until something
+    // names it.
+    id: "p-lemon",
+    imageSrc: "/stores/Product card Images/AI searched/lemon.avif",
+    imageAlt: "A whole lemon beside a cut half",
+    imageFit: "contain",
+  },
+  {
+    // The designer's own description, from the packet.
+    id: "p-walnuts",
+    description: "Great Value Chopped Walnuts, 4 oz",
+    imageSrc: "/stores/Product card Images/AI searched/walnuts.avif",
+    imageAlt: "Great Value chopped walnuts, 4 oz bag",
+    imageFit: "contain",
+  },
+  {
+    // The filename really is spelled "Bakig". It is used exactly as it sits on
+    // disk - correcting the spelling here would simply 404.
+    id: "p-baking-soda",
+    imageSrc: "/stores/Product card Images/AI searched/Bakig Soda.png",
+    imageAlt: "Baking soda",
+    imageFit: "contain",
+  },
+  {
+    // Supplied by the designer, with instructions that it is used whenever
+    // table salt is searched for.
+    id: "p-table-salt",
+    imageSrc: "/stores/Product card Images/AI searched/Table Salt.avif",
+    imageAlt: "Table salt",
+    imageFit: "contain",
+  },
+  {
+    // Supplied by the designer, with instructions that it is used whenever
+    // 2% milk is searched for. Left without a description so the card keeps
+    // whatever size the AI asked for - 2 L, 4 L, a carton or a jug.
+    id: "p-milk-2",
+    imageSrc: "/stores/Product card Images/AI searched/2 percent cow milk- WALMART.avif",
+    imageAlt: "2% partly skimmed milk",
+    imageFit: "contain",
+  },
+  {
+    // Stock photography gave this one a bowl of plated pasta - the meal you
+    // make WITH the thing, rather than the thing. The same failure as the
+    // olive oil below and the sour cream above.
+    id: "p-tomato-sauce",
+    description: "Classico Tomato & Basil Pasta Sauce 600 mL",
+    imageSrc: "/stores/Product card Images/AI searched/Tomato pasta sauce.webp",
+    imageAlt: "Classico Tomato & Basil pasta sauce jar, 600 mL",
+    imageFit: "contain",
+  },
+  {
     // Stock photography gave this one a wine-and-charcuterie table.
     id: "p-olive-oil",
     description: "Olive Oil 1 L",
@@ -304,7 +464,7 @@ const EXTRA_CURATED: RawCurated[] = [
     // was the cheesecake table's original choice rather than a real match.
     id: "p-butter",
     description: "Butter 454 g",
-    imageSrc: "/stores/Product card Images/AI searched/Butter.avif",
+    imageSrc: "/stores/Product card Images/AI searched/Salted Butter.avif",
     imageAlt: "Wrapped butter bars beside their box",
     imageFit: "contain",
     storeName: "Costco Wholesale Canada",
@@ -333,6 +493,7 @@ interface RawCurated {
   reviewCount?: number;
   showDiscount?: boolean;
   discountLabel?: string;
+  notSoldAt?: string[];
 }
 
 /** Every curated product, gathered from the three files that define them. */
@@ -361,6 +522,13 @@ function offersFromPop(productId: string): Offer[] | undefined {
     storeDistanceKm: o.storeDistanceKm,
     price: o.price,
     originalPrice: o.originalPrice,
+    // A hand-written pop is about ONE product - Philadelphia cream cheese, at
+    // five shops - so every offer carries that brand rather than each shop's
+    // own. The offer may name its own if the designer wrote one.
+    brand: o.brand ?? pop.brand ?? undefined,
+    isOwnBrand:
+      o.isOwnBrand ??
+      (pop.brand ? findStoreBrand(pop.brand)?.storeIds.includes(o.id) : undefined),
     // These offers predate ratings, so give each a steady, believable one
     // rather than inventing variation the designer did not ask for.
     rating: 4.5,
@@ -403,6 +571,7 @@ export const CURATED_BY_ID: Record<string, CuratedProduct> = (() => {
       id: raw.id,
       description: raw.description,
       vocabulary,
+      neverWith: new Set(NEVER_WITH[raw.id] ?? []),
       imageSrc: raw.imageSrc,
       imageAlt: raw.imageAlt ?? raw.description ?? raw.id,
       // Honour whatever the designer set. Every one of these is "contain",
@@ -413,6 +582,7 @@ export const CURATED_BY_ID: Record<string, CuratedProduct> = (() => {
       originalPrice: raw.originalPrice,
       rating: raw.rating,
       reviewCount: raw.reviewCount,
+      notSoldAt: raw.notSoldAt,
       discountLabel: raw.showDiscount ? raw.discountLabel : undefined,
       storeOffers: offersFromPop(raw.id),
     };
@@ -527,6 +697,11 @@ function restIsHarmless(
  * In every case the extra word was the one that CHANGED the product. So the
  * extra words are now what decides.
  *
+ * A second, narrower rule sits in front of that one: a handful of products
+ * name words that rule them out even though the global list calls them
+ * harmless - "crushed tomatoes" is a tin, not the punnet in the photograph.
+ * See NEVER_WITH.
+ *
  * Because the AI sends several phrases per item (its name plus two to four
  * search terms), being strict on each phrase costs little: a messy name like
  * "Blueberries (fresh/frozen)" fails, but its search term "blueberries" still
@@ -544,6 +719,10 @@ export function findCurated(candidates: string[]): CuratedProduct | null {
     for (const words of phrases) {
       const start = indexOfRun(words, termWords);
       if (start === -1) continue;
+      // One word from NEVER_WITH is enough to rule the product out, whatever
+      // else the phrase says. Checked before the harmless rule, because these
+      // words are usually ON that list - that is the whole point of them.
+      if (words.some((w) => product.neverWith.has(w))) continue;
       if (restIsHarmless(words, start, termWords.length, product)) return product;
     }
   }
