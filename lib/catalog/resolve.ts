@@ -131,6 +131,44 @@ function departmentOf(product: Product): string {
   return CATEGORY_DEPARTMENT[product.category] ?? "grocery";
 }
 
+/*
+ * Words that describe a product without saying WHICH product it is. "Ground"
+ * is true of nutmeg, turmeric and coffee alike, so it must never be the thing
+ * a fuzzy match is built on.
+ */
+const MODIFIERS = new Set([
+  "ground", "fresh", "whole", "large", "small", "organic", "plain", "pure",
+  "raw", "dried", "frozen", "canned", "sliced", "chopped", "unsalted",
+  "salted", "light", "mini", "baby", "sweet", "instant", "natural", "free",
+  "range", "extra", "fine", "coarse", "boneless", "skinless", "low", "half",
+]);
+
+/** The words in a name that actually identify the product. */
+function distinctiveWords(name: string): string[] {
+  return normalize(name)
+    .split(/[^a-z0-9]+/)
+    .filter((w) => w.length >= 4 && !MODIFIERS.has(w));
+}
+
+/**
+ * Does this product plausibly answer that name?
+ *
+ * A fuzzy score says "these strings look alike", which is not the same as
+ * "this is the thing you asked for". "Ground nutmeg" scores 0.13 against
+ * Ground Turmeric purely on the shared word "ground", and the model's own
+ * hint "spice" scores a PERFECT 0.0 against Steak Spice - so no score
+ * threshold can catch either. What catches them is insisting the match
+ * carries one of the words that made the request specific: nutmeg.
+ *
+ * Substring either way, so "cornflour" still reaches "flour".
+ */
+function answersTo(product: Product, words: string[]): boolean {
+  if (words.length === 0) return true; // nothing specific was asked for
+  const hay = normalize([product.name, ...(product.searchTerms ?? [])].join(" "));
+  const hayWords = hay.split(/[^a-z0-9]+/).filter((w) => w.length >= 4);
+  return words.some((w) => hay.includes(w) || hayWords.some((h) => w.includes(h)));
+}
+
 /** Find the catalog product for an item, or null. */
 function findInCatalog(item: AIItem): Product | null {
   // 0) The item's own name is a catalog name or alias. Pure lookup, so it
@@ -161,13 +199,30 @@ function findInCatalog(item: AIItem): Product | null {
 
   // 3) Fuzzy fallback across every candidate phrase, best score wins.
   //    In Fuse, LOWER is better: 0 is a perfect match, 1 is no match at all.
+  //
+  //    The match must answer the item's NAME, not merely the hint phrase that
+  //    found it: searchTerms may propose a candidate, the name has to approve
+  //    it. Without that, the hint "spice" on an item named "Ground nutmeg"
+  //    matched Steak Spice PERFECTLY (score 0.0000) and shipped it as a
+  //    success - a missing product becoming a wrong one rather than a visible
+  //    gap. No score threshold can catch that, because the right answers
+  //    score 0.0000 too.
+  //
+  //    The approval is checked INSIDE the loop, per candidate, so that a
+  //    rejected front-runner does not sink the whole lookup. Checking it
+  //    afterwards on a single winner meant "Turmeric" with the hints
+  //    ["turmeric", "spice"] resolved to nothing at all: "spice" won on
+  //    score, failed approval, and Ground Turmeric - sitting right there in
+  //    the catalog, found by the other hint - never got its turn.
+  const wanted_ = distinctiveWords(item.name);
   let best: Product | null = null;
   let bestScore = Infinity;
   for (const c of candidates) {
-    const [top] = fuse.search(c, { limit: 1 });
-    if (top && typeof top.score === "number" && top.score < bestScore) {
-      bestScore = top.score;
-      best = top.item;
+    for (const hit of fuse.search(c, { limit: 8 })) {
+      if (typeof hit.score !== "number" || hit.score >= bestScore) continue;
+      if (!answersTo(hit.item, wanted_)) continue;
+      bestScore = hit.score;
+      best = hit.item;
     }
   }
 

@@ -50922,5 +50922,282 @@
       "verified": true,
       "notes": "CastleX youth snow pants/bib, black (Hot Paws alt was adult model photo). Original jpgrendition (no resize params); white background kept as served"
     }
+  ],
+  "nutmeg": [
+    {
+      "file": "/stores/Brand Photos/nutmeg.superstore.jpg",
+      "store": "superstore",
+      "productTitle": "President's Choice Ground Nutmeg 51 g",
+      "pageUrl": "https://www.realcanadiansuperstore.ca/en/ground-nutmeg/p/21117314_EA",
+      "imageUrl": "https://digital.loblaws.ca/PCX/21117314_EA/en/1/21117314_en_front_800.png",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "notes": "served as JPEG despite the .png URL",
+      "brand": "President's Choice"
+    },
+    {
+      "file": "/stores/Brand Photos/nutmeg.sobeys.jpg",
+      "store": "sobeys",
+      "productTitle": "Compliments Ground Nutmeg 125 g",
+      "pageUrl": "https://voila.ca/search?q=ground%20nutmeg",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/2bcd037a-4251-43f5-a69c-e5dbb55f66e0/800x800.jpg",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "notes": "search tiles lazy-load; each had to be scrolled into view before its image resolved",
+      "brand": "Compliments"
+    },
+    {
+      "file": "/stores/Brand Photos/nutmeg.metro.jpg",
+      "store": "metro",
+      "productTitle": "Selection Ground Nutmeg 130 g",
+      "pageUrl": "https://www.metro.ca/en/online-grocery/aisles/pantry/herbs-spices-sauces/spices/ground-nutmeg/p/059749889117",
+      "imageUrl": "https://product-images.metro.ca/images/hbb/hfc/13653348581406.jpg",
+      "width": 600,
+      "height": 600,
+      "verified": true,
+      "notes": "the 2x srcset variant (the listing image is only 180px). Metro CDN 403s Node fetch on TLS fingerprint - curl with browser headers gets through",
+      "brand": "Selection"
+    }
+  ],
+  "star-anise": [
+    {
+      "file": "/stores/Brand Photos/star-anise.superstore.jpg",
+      "store": "superstore",
+      "productTitle": "PC Black Label Star Anise Spice 20 g",
+      "pageUrl": "https://www.realcanadiansuperstore.ca/en/star-anise-spice/p/20380921_EA",
+      "imageUrl": "https://digital.loblaws.ca/PCX/20380921_EA/en/1/20380921_en_front_800.png",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "notes": "served as JPEG despite the .png URL",
+      "brand": "PC Black Label"
+    },
+    {
+      "file": "/stores/Brand Photos/star-anise.sobeys.jpg",
+      "store": "sobeys",
+      "productTitle": "Farm Boy Star Anise 12 g",
+      "pageUrl": "https://voila.ca/search?q=star%20anise",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/c3d6bdc0-5f13-4f1c-9bb2-b98ea0eb8e5d/800x800.jpg",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "notes": "Voila lazy-loads its search tiles; the image only resolves once the tile has been scrolled into view. No Compliments line for this spice; Farm Boy is Sobeys-owned.",
+      "brand": "Farm Boy"
+    },
+    {
+      "file": "/stores/Brand Photos/star-anise.metro.jpg",
+      "store": "metro",
+      "productTitle": "Dion Star Anise",
+      "pageUrl": "https://www.metro.ca/en/online-grocery/aisles/pantry/herbs-spices-sauces/spices/star-anise/p/620383012133",
+      "imageUrl": "https://product-images.metro.ca/images/hda/hb8/10378902765598.jpg",
+      "width": 600,
+      "height": 600,
+      "verified": true,
+      "notes": "2x srcset variant from the product page; the listing image is only 180px. Metro's CDN 403s a Node fetch on TLS fingerprint - curl with browser headers gets through.",
+      "brand": "Dion"
+    }
+  ],
+  "allspice": [
+    {
+      "file": "/stores/Brand Photos/allspice.superstore.jpg",
+      "store": "superstore",
+      "productTitle": "President's Choice Ground Allspice 42 g",
+      "pageUrl": "https://www.realcanadiansuperstore.ca/en/ground-allspice/p/21111105_EA",
+      "imageUrl": "https://digital.loblaws.ca/PCX/21111105_EA/en/1/21111105_enfr_front_v1_800.png",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "notes": "served as JPEG despite the .png URL",
+      "brand": "President's Choice"
+    },
+    {
+      "file": "/stores/Brand Photos/allspice.sobeys.jpg",
+      "store": "sobeys",
+      "productTitle": "Club House Ground Allspice 35 g",
+      "pageUrl": "https://voila.ca/search?q=ground%20allspice",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/c07b5056-ab52-454e-b4c6-ce8f04dddc95/800x800.jpg",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "notes": "Voila lazy-loads its search tiles; the image only resolves once the tile has been scrolled into view. No Compliments line for allspice.",
+      "brand": "Club House"
+    },
+    {
+      "file": "/stores/Brand Photos/allspice.metro.jpg",
+      "store": "metro",
+      "productTitle": "Selection Ground Allspice",
+      "pageUrl": "https://www.metro.ca/en/online-grocery/aisles/pantry/herbs-spices-sauces/spices/ground-allspice/p/059749990387",
+      "imageUrl": "https://product-images.metro.ca/images/he9/hed/12175767961630.jpg",
+      "width": 600,
+      "height": 600,
+      "verified": true,
+      "notes": "2x srcset variant from the product page; the listing image is only 180px. Metro's CDN 403s a Node fetch on TLS fingerprint - curl with browser headers gets through.",
+      "brand": "Selection"
+    }
+  ],
+  "ginger-powder": [
+    {
+      "file": "/stores/Brand Photos/ginger-powder.superstore.jpg",
+      "store": "superstore",
+      "productTitle": "President's Choice Ground Ginger 37 g",
+      "pageUrl": "https://www.realcanadiansuperstore.ca/en/ground-ginger/p/21116907_EA",
+      "imageUrl": "https://digital.loblaws.ca/PCX/21116907_EA/en/1/21116907_enfr_front_v1_800.png",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "notes": "served as JPEG despite the .png URL. GROUND ginger - distinct from the fresh-ginger produce item.",
+      "brand": "President's Choice"
+    },
+    {
+      "file": "/stores/Brand Photos/ginger-powder.sobeys.jpg",
+      "store": "sobeys",
+      "productTitle": "Compliments Spice Ground Ginger 105 g",
+      "pageUrl": "https://voila.ca/search?q=ground%20ginger",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/ab1de572-e512-45dd-9469-5ca77215e204/800x800.jpg",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "notes": "Voila lazy-loads its search tiles; the image only resolves once the tile has been scrolled into view.",
+      "brand": "Compliments"
+    },
+    {
+      "file": "/stores/Brand Photos/ginger-powder.metro.jpg",
+      "store": "metro",
+      "productTitle": "Selection Ground Ginger",
+      "pageUrl": "https://www.metro.ca/en/online-grocery/aisles/pantry/herbs-spices-sauces/spices/ground-ginger/p/059749889032",
+      "imageUrl": "https://product-images.metro.ca/images/h72/h69/9020173221918.jpg",
+      "width": 600,
+      "height": 600,
+      "verified": true,
+      "notes": "2x srcset variant from the product page; the listing image is only 180px. Metro's CDN 403s a Node fetch on TLS fingerprint - curl with browser headers gets through.",
+      "brand": "Selection"
+    }
+  ],
+  "saffron": [
+    {
+      "file": "/stores/Brand Photos/saffron.superstore.jpg",
+      "store": "superstore",
+      "productTitle": "PC Black Label Saffron Threads 0.5 g",
+      "pageUrl": "https://www.realcanadiansuperstore.ca/en/saffron-threads/p/20380916_EA",
+      "imageUrl": "https://digital.loblaws.ca/PCX/20380916_EA/en/1/6038301324_enfr_front_centre_marketing_GS1_Marketing_800.png",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "notes": "served as JPEG despite the .png URL",
+      "brand": "PC Black Label"
+    },
+    {
+      "file": "/stores/Brand Photos/saffron.sobeys.jpg",
+      "store": "sobeys",
+      "productTitle": "Farm Boy Spanish Saffron 1 g",
+      "pageUrl": "https://voila.ca/search?q=saffron",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/af1b564d-6c88-46cc-8439-5a4f3e86e2ba/800x800.jpg",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "notes": "Voila lazy-loads its search tiles; the image only resolves once the tile has been scrolled into view. Goya Sazon 'Saffron' is a seasoning blend, not saffron - deliberately not used.",
+      "brand": "Farm Boy"
+    },
+    {
+      "file": "/stores/Brand Photos/saffron.metro.jpg",
+      "store": "metro",
+      "productTitle": "Irresistibles Spanish Saffron Threads",
+      "pageUrl": "https://www.metro.ca/en/online-grocery/aisles/pantry/herbs-spices-sauces/spices/spanish-saffron-threads/p/059749961349",
+      "imageUrl": "https://product-images.metro.ca/images/h63/h9b/13653509177374.jpg",
+      "width": 600,
+      "height": 600,
+      "verified": true,
+      "notes": "2x srcset variant from the product page; the listing image is only 180px. Metro's CDN 403s a Node fetch on TLS fingerprint - curl with browser headers gets through.",
+      "brand": "Irresistibles"
+    }
+  ],
+  "whole-cloves": [
+    {
+      "file": "/stores/Brand Photos/whole-cloves.superstore.jpg",
+      "store": "superstore",
+      "productTitle": "President's Choice Whole Cloves 31 g",
+      "pageUrl": "https://www.realcanadiansuperstore.ca/en/whole-cloves/p/21117300_EA",
+      "imageUrl": "https://digital.loblaws.ca/PCX/21117300_EA/en/1/21117300_enfr_front_v1_1200.png",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "requested as JPEG (the CDN serves AVIF to browsers that accept it)",
+      "brand": "President's Choice"
+    },
+    {
+      "file": "/stores/Brand Photos/whole-cloves.sobeys.jpg",
+      "store": "sobeys",
+      "productTitle": "Compliments Spice Whole Cloves 87 g",
+      "pageUrl": "https://voila.ca/search?q=whole%20cloves",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/1cfe2a6c-94ae-4e7e-80a8-e5e9c3fc3fa3/800x800.jpg",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "brand": "Compliments"
+    },
+    {
+      "file": "/stores/Brand Photos/whole-cloves.sobeys-national.jpg",
+      "store": "sobeys",
+      "productTitle": "McCormick Gourmet Spice Whole Cloves 26 g",
+      "pageUrl": "https://voila.ca/search?q=whole%20cloves",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/b0beaabe-39cd-4887-8069-763caa5bf524/800x800.jpg",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "notes": "national-brand pass, for shops with no photo of their own",
+      "brand": "McCormick Gourmet"
+    },
+    {
+      "file": "/stores/Brand Photos/whole-cloves.metro.jpg",
+      "store": "metro",
+      "productTitle": "Selection Whole Cloves 60 g",
+      "pageUrl": "https://www.metro.ca/en/online-grocery/aisles/pantry/herbs-spices-sauces/spices/whole-cloves/p/059749990394",
+      "imageUrl": "https://product-images.metro.ca/images/hb5/h12/12175769010206.jpg",
+      "width": 400,
+      "height": 400,
+      "verified": true,
+      "notes": "2x srcset variant from the search tile",
+      "brand": "Selection"
+    }
+  ],
+  "fennel-seeds": [
+    {
+      "file": "/stores/Brand Photos/fennel-seeds.superstore.jpg",
+      "store": "superstore",
+      "productTitle": "President's Choice Fennel Seeds 44 g",
+      "pageUrl": "https://www.realcanadiansuperstore.ca/en/fennel-seeds/p/21117326_EA",
+      "imageUrl": "https://digital.loblaws.ca/PCX/21117326_EA/en/1/21117326_en_front_1200.png",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "requested as JPEG (the CDN serves AVIF to browsers that accept it)",
+      "brand": "President's Choice"
+    },
+    {
+      "file": "/stores/Brand Photos/fennel-seeds.sobeys.jpg",
+      "store": "sobeys",
+      "productTitle": "McCormick Gourmet Fennel Seed 43 g",
+      "pageUrl": "https://voila.ca/search?q=fennel%20seeds",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/bce33110-4bb8-4072-be67-aed941ad2b6e/800x800.jpg",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "notes": "no Compliments fennel seed at Voila; national brand, so it also covers shops with no photo",
+      "brand": "McCormick Gourmet"
+    },
+    {
+      "file": "/stores/Brand Photos/fennel-seeds.metro.jpg",
+      "store": "metro",
+      "productTitle": "Irresistible Whole Fennel Seeds 50 g",
+      "pageUrl": "https://www.metro.ca/en/online-grocery/aisles/pantry/herbs-spices-sauces/spices/whole-fennel-seeds/p/059749961158",
+      "imageUrl": "https://product-images.metro.ca/images/h94/h8c/13653502296094.jpg",
+      "width": 400,
+      "height": 400,
+      "verified": true,
+      "notes": "brand spelled as in data/brands.ts so it is treated as Metro-only, never borrowed. 2x srcset variant",
+      "brand": "Irresistibles"
+    }
   ]
 }

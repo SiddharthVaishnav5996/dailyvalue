@@ -29,10 +29,15 @@ const fuse = new Fuse(PRODUCTS, {
   minMatchCharLength: 3,
 });
 
+// Filler words that carry no product meaning. They matter more than they look:
+// a word left in here is fuzzy-matched against the whole catalog, and "give"
+// alone was dragging olives, chives, liver, endive, hard drives and a
+// screwdriver set into the shortlist - 15 junk ids out of 47 for "Give me
+// recipe for an apple pie." - because Fuse matches letters, not meaning.
 const STOP = new Set([
   "a", "an", "the", "and", "or", "of", "for", "to", "with", "some", "me", "my",
-  "i", "need", "want", "buy", "get", "make", "making", "cook", "cooking",
-  "please", "can", "you", "find", "show", "pack", "bottle", "of", "in", "on",
+  "i", "need", "want", "buy", "get", "give", "make", "making", "cook", "cooking",
+  "please", "can", "you", "find", "show", "pack", "bottle", "in", "on",
 ]);
 
 const norm = (s: string) => s.trim().toLowerCase().replace(/\s+/g, " ");

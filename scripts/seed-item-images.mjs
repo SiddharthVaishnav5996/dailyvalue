@@ -198,7 +198,7 @@
  *
  * Run the whole thousand with:  npm run seed-images
  * Run it against a custom or partial list:
- *   node scripts/seed-item-images.mjs --items=path/to/items.json --limit=25
+ *   node scripts/seed-item-images.mjs --items=path/to/products.json --limit=25
  */
 
 import { existsSync, readFileSync } from "node:fs";
@@ -236,7 +236,12 @@ const ITEM_PHOTOS_JSON = join(ROOT, "data", "itemPhotos.json");
 const IMAGE_GAPS_JSON = join(ROOT, "data", "imageGaps.json");
 /** The validated, in-repo French->English lexicon a sibling process produces. */
 const REPO_LEXICON = join(ROOT, "data", "frEnGroceryLexicon.json");
-const DEFAULT_ITEMS_JSON = join(ROOT, "data", "items.json");
+/*
+ * The catalogue. One file, since data/items.json was folded into it - see
+ * scripts/merge-items-into-products.mjs. Each row carries what the app needs
+ * (`prices`) alongside what this script needs (`imageMode`, `offQuery`).
+ */
+const DEFAULT_ITEMS_JSON = join(ROOT, "data", "products.json");
 
 /*
  * ONE directory for every product image this script writes - brand
