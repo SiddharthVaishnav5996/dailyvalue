@@ -3,15 +3,16 @@
  *
  * The basket is carried over from the AI Search Result page (Page 3): the cart
  * lines are derived straight from that page's product list so the two stay in
- * sync. The order-summary charges, saved customer / shipping / payment details
- * and the "People also bought" suggestions are static demo content — the real
- * values will come from a checkout API later.
+ * sync. The order-summary charges and the saved customer / shipping / payment
+ * details are static demo content — the real values will come from a checkout
+ * API later.
+ *
+ * "People also bought" is NOT here: those cards are derived from the current
+ * search, so they live in lib/catalog/suggestions.ts behind POST
+ * /api/suggestions.
  */
 
 import { ALL_SEARCH_PRODUCTS } from "@/data/searchResults";
-
-const IMG = "/stores/Product card Images/AI searched";
-const LOGO = "/stores/Store Logos";
 
 /* ---- My Cart ---------------------------------------------------------- */
 
@@ -103,83 +104,4 @@ export const TIP_PRESETS: TipPreset[] = [
   { id: "t-5", amount: 5, emoji: "❤️" },
 ];
 
-/* ---- People also bought ----------------------------------------------- */
 
-export interface Suggestion {
-  id: string;
-  storeName: string;
-  storeDistanceKm: number;
-  storeLogoSrc?: string;
-  showDiscount?: boolean;
-  discountLabel?: string;
-  description: string;
-  rating: number;
-  reviewCount: number;
-  price: number;
-  imageSrc?: string;
-  imageAlt?: string;
-  imageFit?: "cover" | "contain";
-}
-
-/** Four cross-sell cards under the cart. */
-export const PEOPLE_ALSO_BOUGHT: Suggestion[] = [
-  {
-    id: "s-baker",
-    storeName: "Costco Wholesale Canada",
-    storeDistanceKm: 1.5,
-    storeLogoSrc: `${LOGO}/Costco.png`,
-    showDiscount: true,
-    discountLabel: "Online Only",
-    description: "Peugeot Appolia Ceramic Square Baker, 36 cm (14 in.)",
-    rating: 5,
-    reviewCount: 345,
-    price: 58.99,
-    imageSrc: `${IMG}/Screenshot 2026-03-12 181345.png`,
-    imageAlt: "Peugeot Appolia ceramic square baker",
-    imageFit: "contain",
-  },
-  {
-    id: "s-oil-paper",
-    storeName: "Real Canadian Superstore",
-    storeDistanceKm: 1.5,
-    storeLogoSrc: `${LOGO}/Real Canadian Superstore.png`,
-    showDiscount: true,
-    discountLabel: "300 Pc Points",
-    description:
-      "Gspmoly Baking Oil Paper Thickened Oil Proof Natural Wood Pizza Pad Paper Bbq Chicken Snack Tray Oil Absorption Pad Paper",
-    rating: 5,
-    reviewCount: 345,
-    price: 10.76,
-    imageSrc: `${IMG}/Pad paper.png`,
-    imageAlt: "Gspmoly baking oil pad paper",
-    imageFit: "contain",
-  },
-  {
-    id: "s-baking-soda",
-    storeName: "Metro",
-    storeDistanceKm: 5.5,
-    storeLogoSrc: `${LOGO}/Metro.png`,
-    description: "Selection : Pure Baking Soda",
-    rating: 5,
-    reviewCount: 345,
-    price: 1.69,
-    imageSrc: `${IMG}/Bakig Soda.png`,
-    imageAlt: "Selection pure baking soda",
-    imageFit: "contain",
-  },
-  {
-    id: "s-chipits",
-    storeName: "FreshCo",
-    storeDistanceKm: 3.5,
-    storeLogoSrc: `${LOGO}/Freshco.png`,
-    showDiscount: true,
-    discountLabel: "Limited Edition",
-    description: "HERSHEY'S Butterscotch Baking Chips, Chipits",
-    rating: 5,
-    reviewCount: 345,
-    price: 5.49,
-    imageSrc: `${IMG}/chocolate chips.png`,
-    imageAlt: "Hershey's butterscotch baking chips, Chipits",
-    imageFit: "contain",
-  },
-];
