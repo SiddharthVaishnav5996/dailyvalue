@@ -94,12 +94,13 @@ const RETAILER_OWNED = new Set([
   // costs that shop a photo.
   "reflex", "matrix", "fluid",
   // Walmart
-  "mainstays", "onn", "vibrant life", "pure balance", "spring valley", "ol'roy", "parent's choice", "rascals",
+  "mainstays", "onn", "pen+gear", "hart", "george", "vibrant life", "pure balance", "spring valley", "ol'roy", "parent's choice", "rascals",
 ]);
 
 /** True when `brand` belongs to one shop (Great Value, Compliments, PC...). */
 export function isRetailerBrand(brand: string | undefined): boolean {
-  const b = (brand ?? "").trim().toLowerCase();
+  // Trailing punctuation is part of some logos ("onn.") but not of the name.
+  const b = (brand ?? "").trim().toLowerCase().replace(/[.!]+$/, "");
   if (!b || b === "unbranded") return true; // unbranded shots are not "national"
   if (RETAILER_OWNED.has(b)) return true;
   if (/^(pc|president'?s choice)\b/.test(b)) return true;

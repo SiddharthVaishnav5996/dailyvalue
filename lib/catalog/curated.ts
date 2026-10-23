@@ -102,13 +102,14 @@ const TERMS: Record<string, string[]> = {
   "pick-pickles": ["pickle", "pickles", "dill pickles", "baby dills", "gherkins"],
 
   // --- Electronics (Black Friday row) ---
-  // Bare "iphone" falls through to the flagship. Safe, because the specific
-  // names below are longer and longer terms are matched first - so "iphone 12"
-  // still finds the pre-owned one rather than landing here.
-  "bf-iphone-17-pro": ["iphone 17 pro", "iphone 17", "iphone pro", "apple iphone", "iphone"],
+  // Only its own model name. The catalog now carries the current lineup
+  // (scripts/add-phones-audio.mjs), so bare "iphone" belongs to the newest
+  // model there and "iphone 17" to the base iPhone 17 - not to this 17 Pro.
+  "bf-iphone-17-pro": ["iphone 17 pro"],
   "bf-iphone-16e": ["iphone 16e", "iphone 16"],
   "bf-watch-ultra": ["apple watch", "apple watch ultra", "smartwatch", "smart watch"],
-  "bf-airpods-pro-3": ["airpods", "airpods pro", "earbuds", "wireless earbuds"],
+  // Not bare "airpods": that is AirPods 4 in the catalog.
+  "bf-airpods-pro-3": ["airpods pro 3", "airpods pro", "earbuds", "wireless earbuds"],
   "bf-iphone-12": ["iphone 12", "refurbished iphone", "pre-owned iphone"],
 
   // --- Groceries (AI search result page) ---

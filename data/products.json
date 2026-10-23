@@ -46085,20 +46085,23 @@
   },
   {
     "id": "pollock-fillets",
-    "name": "Pollock Fillets",
+    "name": "Frozen Pollock Fillets",
     "brand": "",
-    "category": "Meat",
-    "unit": "pack",
-    "size": "per lb",
+    "category": "Frozen",
+    "unit": "bag",
+    "size": "400 g",
     "base": 8.99,
     "emoji": "🐟",
     "searchTerms": [
       "pollock",
       "pollock fillet",
-      "alaska pollock"
+      "alaska pollock",
+      "frozen pollock",
+      "frozen pollock fillets",
+      "pollock fillets"
     ],
-    "imageMode": "generic",
-    "offQuery": "raw pollock fillet",
+    "imageMode": "brand",
+    "offQuery": "frozen pollock fillets",
     "prices": {
       "freshco": 8.61,
       "walmart": 8.83,
@@ -46108,20 +46111,23 @@
   },
   {
     "id": "sole-fillets",
-    "name": "Sole Fillets",
+    "name": "Frozen Sole Fillets",
     "brand": "",
-    "category": "Meat",
-    "unit": "pack",
-    "size": "per lb",
+    "category": "Frozen",
+    "unit": "bag",
+    "size": "400 g",
     "base": 13.99,
     "emoji": "🐟",
     "searchTerms": [
       "sole fillet",
       "lemon sole",
-      "dover sole"
+      "dover sole",
+      "frozen sole",
+      "frozen sole fillets",
+      "sole fillets"
     ],
-    "imageMode": "generic",
-    "offQuery": "raw sole fillet",
+    "imageMode": "brand",
+    "offQuery": "frozen sole fillets",
     "prices": {
       "freshco": 14.54,
       "walmart": 13.01,
@@ -46465,6 +46471,565 @@
       "walmart": 3.26,
       "nofrills": 3.17,
       "metro": 3.68
+    }
+  },
+  {
+    "id": "iphone-18-pro-max",
+    "name": "Apple iPhone 18 Pro Max",
+    "brand": "Apple",
+    "category": "Electronics",
+    "unit": "each",
+    "size": "256 GB",
+    "base": 1899,
+    "emoji": "📱",
+    "searchTerms": [
+      "iphone 18 pro max",
+      "18 pro max"
+    ],
+    "imageMode": "brand",
+    "offQuery": "apple iphone 18 pro max",
+    "prices": {
+      "superstore": 1899,
+      "walmart": 1899,
+      "costco": 1823.99
+    }
+  },
+  {
+    "id": "iphone-18-pro",
+    "name": "Apple iPhone 18 Pro",
+    "brand": "Apple",
+    "category": "Electronics",
+    "unit": "each",
+    "size": "256 GB",
+    "base": 1749,
+    "emoji": "📱",
+    "searchTerms": [
+      "iphone 18 pro",
+      "18 pro",
+      "latest iphone",
+      "iphone",
+      "apple iphone"
+    ],
+    "imageMode": "brand",
+    "offQuery": "apple iphone 18 pro",
+    "prices": {
+      "superstore": 1749,
+      "walmart": 1749,
+      "costco": 1679.99
+    }
+  },
+  {
+    "id": "iphone-air",
+    "name": "Apple iPhone Air",
+    "brand": "Apple",
+    "category": "Electronics",
+    "unit": "each",
+    "size": "256 GB",
+    "base": 1599,
+    "emoji": "📱",
+    "searchTerms": [
+      "iphone air"
+    ],
+    "imageMode": "brand",
+    "offQuery": "apple iphone air",
+    "prices": {
+      "superstore": 1599,
+      "walmart": 1599,
+      "costco": 1535.99
+    }
+  },
+  {
+    "id": "iphone-17",
+    "name": "Apple iPhone 17",
+    "brand": "Apple",
+    "category": "Electronics",
+    "unit": "each",
+    "size": "256 GB",
+    "base": 1299,
+    "emoji": "📱",
+    "searchTerms": [
+      "iphone 17 256gb",
+      "apple iphone 17"
+    ],
+    "imageMode": "brand",
+    "offQuery": "apple iphone 17",
+    "prices": {
+      "superstore": 1299,
+      "walmart": 1299,
+      "costco": 1247.99
+    }
+  },
+  {
+    "id": "iphone-17e",
+    "name": "Apple iPhone 17e",
+    "brand": "Apple",
+    "category": "Electronics",
+    "unit": "each",
+    "size": "256 GB",
+    "base": 999,
+    "emoji": "📱",
+    "searchTerms": [
+      "iphone 17e",
+      "cheapest iphone"
+    ],
+    "imageMode": "brand",
+    "offQuery": "apple iphone 17e",
+    "prices": {
+      "superstore": 999,
+      "walmart": 999,
+      "costco": 959.99
+    }
+  },
+  {
+    "id": "galaxy-s26-ultra",
+    "name": "Samsung Galaxy S26 Ultra",
+    "brand": "Samsung",
+    "category": "Electronics",
+    "unit": "each",
+    "size": "256 GB",
+    "base": 2049.99,
+    "emoji": "📱",
+    "searchTerms": [
+      "galaxy s26 ultra",
+      "samsung s26 ultra",
+      "s26 ultra"
+    ],
+    "imageMode": "brand",
+    "offQuery": "samsung galaxy s26 ultra",
+    "prices": {
+      "superstore": 2049.99,
+      "walmart": 2049.99,
+      "costco": 1967.99
+    }
+  },
+  {
+    "id": "galaxy-s26-plus",
+    "name": "Samsung Galaxy S26+",
+    "brand": "Samsung",
+    "category": "Electronics",
+    "unit": "each",
+    "size": "256 GB",
+    "base": 1679.99,
+    "emoji": "📱",
+    "searchTerms": [
+      "galaxy s26 plus",
+      "galaxy s26+",
+      "samsung s26 plus"
+    ],
+    "imageMode": "brand",
+    "offQuery": "samsung galaxy s26+",
+    "prices": {
+      "superstore": 1679.99,
+      "walmart": 1679.99,
+      "costco": 1612.99
+    }
+  },
+  {
+    "id": "galaxy-s26",
+    "name": "Samsung Galaxy S26",
+    "brand": "Samsung",
+    "category": "Electronics",
+    "unit": "each",
+    "size": "256 GB",
+    "base": 1399.99,
+    "emoji": "📱",
+    "searchTerms": [
+      "galaxy s26",
+      "samsung s26",
+      "samsung galaxy phone",
+      "latest samsung"
+    ],
+    "imageMode": "brand",
+    "offQuery": "samsung galaxy s26",
+    "prices": {
+      "superstore": 1399.99,
+      "walmart": 1399.99,
+      "costco": 1343.99
+    }
+  },
+  {
+    "id": "galaxy-z-fold8",
+    "name": "Samsung Galaxy Z Fold8",
+    "brand": "Samsung",
+    "category": "Electronics",
+    "unit": "each",
+    "size": "256 GB",
+    "base": 2399.99,
+    "emoji": "📱",
+    "searchTerms": [
+      "galaxy z fold8",
+      "galaxy fold 8",
+      "samsung fold",
+      "z fold 8"
+    ],
+    "imageMode": "brand",
+    "offQuery": "samsung galaxy z fold8",
+    "prices": {
+      "superstore": 2399.99,
+      "walmart": 2399.99,
+      "costco": 2303.99
+    }
+  },
+  {
+    "id": "galaxy-z-flip8",
+    "name": "Samsung Galaxy Z Flip8",
+    "brand": "Samsung",
+    "category": "Electronics",
+    "unit": "each",
+    "size": "256 GB",
+    "base": 1549.99,
+    "emoji": "📱",
+    "searchTerms": [
+      "galaxy z flip8",
+      "galaxy flip 8",
+      "samsung flip",
+      "z flip 8"
+    ],
+    "imageMode": "brand",
+    "offQuery": "samsung galaxy z flip8",
+    "prices": {
+      "superstore": 1549.99,
+      "walmart": 1549.99,
+      "costco": 1487.99
+    }
+  },
+  {
+    "id": "airpods-pro-3",
+    "name": "Apple AirPods Pro 3",
+    "brand": "Apple",
+    "category": "Electronics",
+    "unit": "each",
+    "size": "1 ct",
+    "base": 329,
+    "emoji": "🎧",
+    "searchTerms": [
+      "airpods pro 3",
+      "airpods pro",
+      "apple earbuds"
+    ],
+    "imageMode": "brand",
+    "offQuery": "apple airpods pro 3",
+    "prices": {
+      "superstore": 329,
+      "walmart": 329,
+      "costco": 315.99
+    }
+  },
+  {
+    "id": "airpods-4-anc",
+    "name": "Apple AirPods 4 with Active Noise Cancellation",
+    "brand": "Apple",
+    "category": "Electronics",
+    "unit": "each",
+    "size": "1 ct",
+    "base": 249,
+    "emoji": "🎧",
+    "searchTerms": [
+      "airpods 4 anc",
+      "airpods 4 noise cancelling"
+    ],
+    "imageMode": "brand",
+    "offQuery": "apple airpods 4 with active noise cancellation",
+    "prices": {
+      "superstore": 249,
+      "walmart": 249,
+      "costco": 239.99
+    }
+  },
+  {
+    "id": "airpods-4",
+    "name": "Apple AirPods 4",
+    "brand": "Apple",
+    "category": "Electronics",
+    "unit": "each",
+    "size": "1 ct",
+    "base": 179,
+    "emoji": "🎧",
+    "searchTerms": [
+      "airpods 4",
+      "airpods"
+    ],
+    "imageMode": "brand",
+    "offQuery": "apple airpods 4",
+    "prices": {
+      "superstore": 179,
+      "walmart": 179,
+      "costco": 171.99
+    }
+  },
+  {
+    "id": "airpods-max",
+    "name": "Apple AirPods Max",
+    "brand": "Apple",
+    "category": "Electronics",
+    "unit": "each",
+    "size": "1 ct",
+    "base": 779,
+    "emoji": "🎧",
+    "searchTerms": [
+      "airpods max",
+      "apple headphones"
+    ],
+    "imageMode": "brand",
+    "offQuery": "apple airpods max",
+    "prices": {
+      "superstore": 779,
+      "walmart": 779,
+      "costco": 747.99
+    }
+  },
+  {
+    "id": "apple-earpods-usb-c",
+    "name": "Apple EarPods (USB-C)",
+    "brand": "Apple",
+    "category": "Electronics",
+    "unit": "each",
+    "size": "1 ct",
+    "base": 25,
+    "emoji": "🎧",
+    "searchTerms": [
+      "apple earpods",
+      "earpods",
+      "iphone earphones"
+    ],
+    "imageMode": "brand",
+    "offQuery": "apple earpods (usb-c)",
+    "prices": {
+      "superstore": 25,
+      "walmart": 25,
+      "costco": 24.99
+    }
+  },
+  {
+    "id": "galaxy-buds4-pro",
+    "name": "Samsung Galaxy Buds4 Pro",
+    "brand": "Samsung",
+    "category": "Electronics",
+    "unit": "each",
+    "size": "1 ct",
+    "base": 329,
+    "emoji": "🎧",
+    "searchTerms": [
+      "galaxy buds4 pro",
+      "galaxy buds 4 pro",
+      "samsung earbuds pro"
+    ],
+    "imageMode": "brand",
+    "offQuery": "samsung galaxy buds4 pro",
+    "prices": {
+      "superstore": 329,
+      "walmart": 329,
+      "costco": 315.99
+    }
+  },
+  {
+    "id": "galaxy-buds4",
+    "name": "Samsung Galaxy Buds4",
+    "brand": "Samsung",
+    "category": "Electronics",
+    "unit": "each",
+    "size": "1 ct",
+    "base": 249,
+    "emoji": "🎧",
+    "searchTerms": [
+      "galaxy buds4",
+      "galaxy buds 4",
+      "galaxy buds",
+      "samsung earbuds"
+    ],
+    "imageMode": "brand",
+    "offQuery": "samsung galaxy buds4",
+    "prices": {
+      "superstore": 249,
+      "walmart": 249,
+      "costco": 239.99
+    }
+  },
+  {
+    "id": "iphone-18-pro-clear-case",
+    "name": "iPhone 18 Pro Clear Case with MagSafe",
+    "brand": "Apple",
+    "category": "Electronics",
+    "unit": "each",
+    "size": "1 ct",
+    "base": 69,
+    "emoji": "📱",
+    "searchTerms": [
+      "iphone 18 pro case",
+      "iphone case",
+      "magsafe case",
+      "iphone cover"
+    ],
+    "imageMode": "brand",
+    "offQuery": "iphone 18 pro clear case with magsafe",
+    "prices": {
+      "superstore": 66.73,
+      "walmart": 66.35
+    }
+  },
+  {
+    "id": "iphone-17-silicone-case",
+    "name": "iPhone 17 Silicone Case with MagSafe",
+    "brand": "Apple",
+    "category": "Electronics",
+    "unit": "each",
+    "size": "1 ct",
+    "base": 69,
+    "emoji": "📱",
+    "searchTerms": [
+      "iphone 17 case",
+      "iphone silicone case"
+    ],
+    "imageMode": "brand",
+    "offQuery": "iphone 17 silicone case with magsafe",
+    "prices": {
+      "superstore": 66.55,
+      "walmart": 68.28
+    }
+  },
+  {
+    "id": "galaxy-s26-ultra-case",
+    "name": "Samsung Galaxy S26 Ultra Silicone Case",
+    "brand": "Samsung",
+    "category": "Electronics",
+    "unit": "each",
+    "size": "1 ct",
+    "base": 49.99,
+    "emoji": "📱",
+    "searchTerms": [
+      "galaxy s26 ultra case",
+      "samsung case",
+      "samsung phone cover"
+    ],
+    "imageMode": "brand",
+    "offQuery": "samsung galaxy s26 ultra silicone case",
+    "prices": {
+      "superstore": 50.09,
+      "walmart": 45.33
+    }
+  },
+  {
+    "id": "galaxy-s26-case",
+    "name": "Samsung Galaxy S26 Silicone Case",
+    "brand": "Samsung",
+    "category": "Electronics",
+    "unit": "each",
+    "size": "1 ct",
+    "base": 34.99,
+    "emoji": "📱",
+    "searchTerms": [
+      "galaxy s26 case",
+      "s26 cover"
+    ],
+    "imageMode": "brand",
+    "offQuery": "samsung galaxy s26 silicone case",
+    "prices": {
+      "superstore": 34.19,
+      "walmart": 30.5
+    }
+  },
+  {
+    "id": "iphone-screen-protector",
+    "name": "iPhone 18 Pro Tempered Glass Screen Protector",
+    "brand": "",
+    "category": "Electronics",
+    "unit": "each",
+    "size": "2 ct",
+    "base": 29.99,
+    "emoji": "📱",
+    "searchTerms": [
+      "iphone screen protector",
+      "iphone tempered glass",
+      "iphone 18 pro screen protector"
+    ],
+    "imageMode": "brand",
+    "offQuery": "iphone 18 pro tempered glass screen protector",
+    "prices": {
+      "superstore": 30.76,
+      "walmart": 28.37
+    }
+  },
+  {
+    "id": "galaxy-screen-protector",
+    "name": "Galaxy S26 Ultra Screen Protector",
+    "brand": "",
+    "category": "Electronics",
+    "unit": "each",
+    "size": "2 ct",
+    "base": 29.99,
+    "emoji": "📱",
+    "searchTerms": [
+      "galaxy screen protector",
+      "samsung screen protector",
+      "s26 ultra screen protector"
+    ],
+    "imageMode": "brand",
+    "offQuery": "galaxy s26 ultra screen protector",
+    "prices": {
+      "superstore": 29.85,
+      "walmart": 26.22
+    }
+  },
+  {
+    "id": "apple-20w-usb-c-adapter",
+    "name": "Apple 20W USB-C Power Adapter",
+    "brand": "Apple",
+    "category": "Electronics",
+    "unit": "each",
+    "size": "1 ct",
+    "base": 25,
+    "emoji": "🔌",
+    "searchTerms": [
+      "apple charger",
+      "iphone charger",
+      "apple 20w adapter"
+    ],
+    "imageMode": "brand",
+    "offQuery": "apple 20w usb-c power adapter",
+    "prices": {
+      "superstore": 25.84,
+      "walmart": 23.71
+    }
+  },
+  {
+    "id": "apple-magsafe-charger",
+    "name": "Apple MagSafe Charger",
+    "brand": "Apple",
+    "category": "Electronics",
+    "unit": "each",
+    "size": "1 ct",
+    "base": 59,
+    "emoji": "🔌",
+    "searchTerms": [
+      "magsafe charger",
+      "iphone wireless charger"
+    ],
+    "imageMode": "brand",
+    "offQuery": "apple magsafe charger",
+    "prices": {
+      "superstore": 57.27,
+      "walmart": 54.56
+    }
+  },
+  {
+    "id": "samsung-25w-charger",
+    "name": "Samsung 25W Super Fast Charger",
+    "brand": "Samsung",
+    "category": "Electronics",
+    "unit": "each",
+    "size": "1 ct",
+    "base": 34.99,
+    "emoji": "🔌",
+    "searchTerms": [
+      "samsung charger",
+      "samsung fast charger",
+      "galaxy charger"
+    ],
+    "imageMode": "brand",
+    "offQuery": "samsung 25w super fast charger",
+    "prices": {
+      "superstore": 34.86,
+      "walmart": 31.5
     }
   }
 ]

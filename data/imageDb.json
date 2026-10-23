@@ -163,18 +163,6 @@
       "height": 1200,
       "verified": true,
       "notes": "pageUrl is the walmart.ca category page the product was listed on"
-    },
-    {
-      "file": "/stores/Brand Photos/eggs.walmart-national.jpg",
-      "store": "walmart",
-      "brand": "Gray Ridge",
-      "productTitle": "Gray Ridge Premium Large White 18 Eggs",
-      "pageUrl": "https://www.walmart.ca/en/browse/grocery/dairy-eggs/eggs-egg-substitutes/10019_6000194327369_6000194327389",
-      "imageUrl": "https://i5.walmartimages.ca/asr/27c70176-0bab-4bb4-93c6-6255fc80802e.5a94fcea2b568880f674ff0a285c4413.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
-      "width": 1200,
-      "height": 1200,
-      "verified": true,
-      "notes": "national-brand pass. 18 ct large vs catalog 12. pageUrl is the walmart.ca category page the product was listed on"
     }
   ],
   "bread": [
@@ -427,13 +415,13 @@
     {
       "file": "/stores/Brand Photos/tomato.superstore.png",
       "store": "superstore",
-      "productTitle": "Roma Tomatoes (per lb, loose)",
-      "pageUrl": "https://www.realcanadiansuperstore.ca/en/roma-tomatoes/p/20143381001_KG",
-      "imageUrl": "https://digital.loblaws.ca/PCX/20143381001_KG/en/1/20143381001_enfr_front_v1_800.png",
-      "width": 800,
-      "height": 800,
+      "productTitle": "Tomato Beefsteak Red",
+      "pageUrl": "https://www.realcanadiansuperstore.ca/en/tomato-beefsteak-red/p/20426141001_KG",
+      "imageUrl": "https://digital.loblaws.ca/PCX/20426141001_KG/en/1/20426141001_enfr_front_v1_1200.png",
+      "width": 1200,
+      "height": 1200,
       "verified": true,
-      "notes": "PNG with transparent background",
+      "notes": "Loose beefsteak tomato, per lb; unbranded produce",
       "brand": ""
     }
   ],
@@ -455,13 +443,13 @@
     {
       "file": "/stores/Brand Photos/potato.superstore.jpg",
       "store": "superstore",
-      "productTitle": "President's Choice Russet Potatoes, 5 lb Bag",
-      "pageUrl": "https://www.realcanadiansuperstore.ca/en/russet-potatoes-5-lb-bag/p/20616206001_EA",
-      "imageUrl": "https://digital.loblaws.ca/PCX/20616206001_EA/en/1/20616206001_en_front_800.png",
-      "width": 800,
-      "height": 800,
+      "productTitle": "Yellow Potatoes, 5 lb Bag",
+      "pageUrl": "https://www.realcanadiansuperstore.ca/en/yellow-potatoes-5-lb-bag/p/20601014001_EA",
+      "imageUrl": "https://digital.loblaws.ca/PCX/20601014001_EA/en/1/20601014001_en_front_1200.png",
+      "width": 1200,
+      "height": 1200,
       "verified": true,
-      "notes": "",
+      "notes": "Yellow (not Russet) 5 lb bag; CDN served JPEG bytes",
       "brand": "President's Choice"
     }
   ],
@@ -777,6 +765,17 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing. Compliments; gluten-free crisp rice 300 g vs 375 g"
+    },
+    {
+      "file": "/stores/Brand Photos/crisp-rice-cereal.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Great Value Crispy Rice Cereal",
+      "pageUrl": "https://www.walmart.ca/en/ip/Great-Value-Crispy-Rice-Cereal/274XRY423GPT",
+      "imageUrl": "https://i5.walmartimages.ca/asr/c5ecf4a7-e5d7-4b92-a4c9-afafe778825c.90be0512bb75c42e5ca74b42a05eefd1.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "brand": "Great Value"
     }
   ],
   "peanut-butter": [
@@ -1164,6 +1163,17 @@
       "height": 1200,
       "verified": true,
       "notes": "national brand; GV free run is organic only. pageUrl is the walmart.ca category page the product was listed on"
+    },
+    {
+      "file": "/stores/Brand Photos/free-run-eggs.superstore.png",
+      "store": "superstore",
+      "productTitle": "Free Run Brown Eggs Large 12 ea",
+      "pageUrl": "https://www.realcanadiansuperstore.ca/en/search?search-bar=free%20run%20eggs",
+      "imageUrl": "https://digital.loblaws.ca/PCX/20813628001_EA/en/1/20813628001_en_front_1200.png",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "brand": "President's Choice"
     }
   ],
   "pork-ribs": [
@@ -1393,6 +1403,18 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing. national brand; 300 g vs 397 g"
+    },
+    {
+      "file": "/stores/Brand Photos/rice-noodles.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Blue Dragon Rice Noodles 300gr",
+      "pageUrl": "https://www.walmart.ca/en/ip/Blue-Dragon-Rice-Noodles-300gr/6000204293114",
+      "imageUrl": "https://i5.walmartimages.ca/asr/317cee7a-0bb0-4c50-b442-2e45cba9d1f8.6c864999a645b156bc00e166facf5553.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "300 g vs 397 g.",
+      "brand": "Blue Dragon"
     }
   ],
   "yeast": [
@@ -2007,18 +2029,6 @@
       "verified": true,
       "notes": "captured via browser screenshot of the 400px CDN image (Chrome blocked file downloads)",
       "brand": ""
-    },
-    {
-      "file": "/stores/Brand Photos/hash-browns.walmart.jpg",
-      "store": "walmart",
-      "brand": "McCain",
-      "productTitle": "McCain Diced Hashbrowns, 800g",
-      "pageUrl": "https://www.walmart.ca/en/browse/grocery/frozen-food/frozen-breakfast/10019_6000194326337_6000194349403",
-      "imageUrl": "https://i5.walmartimages.ca/asr/9860b474-3c00-4882-9e4f-a1aeaec14b98.10a9057d09d712b3547f412dbc6d6284.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
-      "width": 1200,
-      "height": 1200,
-      "verified": true,
-      "notes": "national brand; diced (not shredded); no GV hash browns listed; 800 g (item 907 g). pageUrl is the walmart.ca category page the product was listed on"
     },
     {
       "file": "/stores/Brand Photos/hash-browns.sobeys.jpg",
@@ -2767,18 +2777,6 @@
       "notes": "pageUrl is the walmart.ca category page the product was listed on"
     },
     {
-      "file": "/stores/Brand Photos/frozen-peas.sobeys.jpg",
-      "store": "sobeys",
-      "brand": "Compliments",
-      "productTitle": "Compliments Frozen Small Peas 750 g",
-      "pageUrl": "https://voila.ca/search?q=frozen+peas",
-      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/1426db63-b00b-4149-8483-44b95fd800fd/800x800.jpg",
-      "width": 800,
-      "height": 800,
-      "verified": true,
-      "notes": "Voila (Sobeys) listing."
-    },
-    {
       "file": "/stores/Brand Photos/frozen-peas.sobeys-national.jpg",
       "store": "sobeys",
       "brand": "Green Giant",
@@ -3115,18 +3113,6 @@
       "brand": ""
     },
     {
-      "file": "/stores/Brand Photos/edamame.walmart.jpg",
-      "store": "walmart",
-      "brand": "Nature's Classic",
-      "productTitle": "Natures Classic Young Edamame Shelled Soybean, 454g",
-      "pageUrl": "https://www.walmart.ca/en/browse/grocery/frozen-food/frozen-vegetables/10019_6000194326337_6000194327403",
-      "imageUrl": "https://i5.walmartimages.ca/asr/929c1062-3275-4833-9197-66b6a88f853d.d4d5aa68591e3a34e0cf53d5b0669aad.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
-      "width": 1200,
-      "height": 1200,
-      "verified": true,
-      "notes": "national brand; no GV edamame listed; 454 g (item 500 g). pageUrl is the walmart.ca category page the product was listed on"
-    },
-    {
       "file": "/stores/Brand Photos/edamame.sobeys.jpg",
       "store": "sobeys",
       "brand": "Compliments",
@@ -3165,28 +3151,16 @@
       "brand": ""
     },
     {
-      "file": "/stores/Brand Photos/french-fries.walmart.jpg",
-      "store": "walmart",
-      "brand": "Great Value",
-      "productTitle": "Great Value Crinkle Cut Frozen Fried Potatoes, 900 g",
-      "pageUrl": "https://www.walmart.ca/en/browse/grocery/frozen-food/frozen-meals-sides/frozen-fries-potatoes/10019_6000194326337_6000194327413_6000202265741",
-      "imageUrl": "https://i5.walmartimages.ca/asr/b8c12ec6-b4f3-48d1-af69-8a2211e163dc.1de7237a044d046a08874171e851df71.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
-      "width": 1200,
-      "height": 1200,
-      "verified": true,
-      "notes": "900 g crinkle cut (item 1 kg). pageUrl is the walmart.ca category page the product was listed on"
-    },
-    {
       "file": "/stores/Brand Photos/french-fries.sobeys.jpg",
       "store": "sobeys",
-      "brand": "Compliments",
-      "productTitle": "Compliments Frozen Fried Potatoes Crinkle Cut 800 g",
-      "pageUrl": "https://voila.ca/search?q=frozen+french+fries",
-      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/51aebf8c-94ea-4acf-884d-491ce655ecb6/800x800.jpg",
+      "productTitle": "Compliments Frozen Fried Potato Straight Cut 800 g",
+      "pageUrl": "https://voila.ca/search?q=french%20fries",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/f67028e4-5d7e-419e-aae8-e0a1694916dc/800x800.jpg",
       "width": 800,
       "height": 800,
       "verified": true,
-      "notes": "Voila (Sobeys) listing. 800 g vs 1 kg"
+      "notes": "Straight cut (not crinkle); replaces removed Voila photo",
+      "brand": "Compliments"
     }
   ],
   "tater-tots": [
@@ -3475,18 +3449,6 @@
       "height": 1200,
       "verified": true,
       "notes": "pageUrl is the walmart.ca category page the product was listed on"
-    },
-    {
-      "file": "/stores/Brand Photos/frozen-pizza.sobeys.jpg",
-      "store": "sobeys",
-      "brand": "Compliments",
-      "productTitle": "Compliments Frozen Pizza Classic Pepperoni 437 g",
-      "pageUrl": "https://voila.ca/search?q=compliments+pizza",
-      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/f42390f8-2f74-43e0-a60a-1be6e1914ef3/800x800.jpg",
-      "width": 800,
-      "height": 800,
-      "verified": true,
-      "notes": "Voila (Sobeys) listing."
     }
   ],
   "pizza-pops": [
@@ -3861,6 +3823,18 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing. 680 g vs 900 g"
+    },
+    {
+      "file": "/stores/Brand Photos/meatballs.superstore-national.jpg",
+      "store": "superstore",
+      "productTitle": "Marcangelo Frozen Italian Style Pork Meatballs 1.4 kg",
+      "pageUrl": "https://www.realcanadiansuperstore.ca/en/search?search-bar=frozen%20meatballs",
+      "imageUrl": "https://digital.loblaws.ca/PCX/21088753_EA/en/1/21088753_en_1_v1_1200.png",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "national brand (nat15); package prints MARC ANGELO; pork, 1.4 kg vs 900 g",
+      "brand": "Marcangelo"
     }
   ],
   "beef-burgers": [
@@ -4611,18 +4585,6 @@
       "brand": ""
     },
     {
-      "file": "/stores/Brand Photos/frozen-roti.walmart.jpg",
-      "store": "walmart",
-      "brand": "Vadilal",
-      "productTitle": "Vadilal Aloo Paratha",
-      "pageUrl": "https://www.walmart.ca/en/browse/grocery/frozen-food/frozen-bakery-dessert/10019_6000194326337_6000194701706",
-      "imageUrl": "https://i5.walmartimages.ca/asr/dc81f885-ed78-4fe4-83ed-8a4654ab4964.b2646fa3bf6072dbaab6c4d059a97698.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
-      "width": 1200,
-      "height": 1200,
-      "verified": true,
-      "notes": "weak: stuffed aloo paratha, no plain roti listed. pageUrl is the walmart.ca category page the product was listed on"
-    },
-    {
       "file": "/stores/Brand Photos/frozen-roti.sobeys.jpg",
       "store": "sobeys",
       "brand": "Halal Choice",
@@ -4709,18 +4671,6 @@
       "verified": true,
       "notes": "captured via browser screenshot of the 400px CDN image (Chrome blocked file downloads)",
       "brand": ""
-    },
-    {
-      "file": "/stores/Brand Photos/ravioli.walmart.jpg",
-      "store": "walmart",
-      "brand": "Great Value",
-      "productTitle": "Great Value Ravioli & Italian Sausage Bowls",
-      "pageUrl": "https://www.walmart.ca/en/browse/grocery/frozen-food/frozen-meals-sides/frozen-lasagna-pasta-noodles/10019_6000194326337_6000194327413_6000202265728?page=3",
-      "imageUrl": "https://i5.walmartimages.ca/asr/b3343b67-c87f-4957-8987-5b97e50996aa.71637dc0bd4c603f20ab9b35859ba537.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
-      "width": 1200,
-      "height": 1200,
-      "verified": true,
-      "notes": "weak: single-serve ravioli bowl with sausage (item is 700 g bag). pageUrl is the walmart.ca category page the product was listed on"
     },
     {
       "file": "/stores/Brand Photos/ravioli.sobeys.jpg",
@@ -4909,18 +4859,6 @@
       "verified": true,
       "notes": "captured via browser screenshot of the 400px CDN image (Chrome blocked file downloads)",
       "brand": ""
-    },
-    {
-      "file": "/stores/Brand Photos/frozen-dinner.walmart.jpg",
-      "store": "walmart",
-      "brand": "Hungry-Man",
-      "productTitle": "Hungry-Man Salisbury Beef Steakettes Frozen Entree",
-      "pageUrl": "https://www.walmart.ca/en/browse/grocery/frozen-food/frozen-meals-sides/10019_6000194326337_6000194327413",
-      "imageUrl": "https://i5.walmartimages.ca/asr/7e767b11-7389-4009-add2-24ddf8b0f170.eb9cacdfc08e4ed1e773caa7fdc49732.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
-      "width": 1200,
-      "height": 1200,
-      "verified": true,
-      "notes": "national brand; no GV TV dinner listed. pageUrl is the walmart.ca category page the product was listed on"
     },
     {
       "file": "/stores/Brand Photos/frozen-dinner.sobeys.jpg",
@@ -5407,6 +5345,17 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing."
+    },
+    {
+      "file": "/stores/Brand Photos/frozen-pineapple-chunks.sobeys-national.jpg",
+      "store": "sobeys",
+      "productTitle": "Below Zero Frozen Fruit Pineapple Chunks 600 g",
+      "pageUrl": "https://voila.ca/products/05f6149c-bc23-47ea-aaad-0247fac9288e/details",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/86c3aba7-37d5-4998-b6c3-3fa89e1cd798/800x800.jpg",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "brand": "Below Zero"
     }
   ],
   "puff-pastry": [
@@ -5959,6 +5908,17 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing."
+    },
+    {
+      "file": "/stores/Brand Photos/shepherds-pie.sobeys-national.jpg",
+      "store": "sobeys",
+      "productTitle": "Bassili's Best Frozen Shepherd's Pie 907 g",
+      "pageUrl": "https://voila.ca/products/f84caf0b-f2cd-4781-aa33-6b9540236a8c/details",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/7c745e25-dfcb-4f38-9b7d-94a953031d82/800x800.jpg",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "brand": "Bassili's Best"
     }
   ],
   "chicken-parmesan": [
@@ -10099,6 +10059,18 @@
       "verified": true,
       "notes": "single microfibre cloth, item is a 6-pack",
       "brand": "No Name"
+    },
+    {
+      "file": "/stores/Brand Photos/microfiber-cleaning-cloths.sobeys-national.jpg",
+      "store": "sobeys",
+      "productTitle": "Vileda Univel Comfort Cloths 1 + 1 Bonus",
+      "pageUrl": "https://voila.ca/products/7c9641d9-f025-4b06-ad4c-16c05510b7fd/details",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/bc0943d8-c022-4fe5-b102-576a56c9c4b7/800x800.jpg",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "notes": "Vileda Univel comfort cloths; verify microfibre",
+      "brand": "Vileda"
     }
   ],
   "rubber-gloves": [
@@ -12711,6 +12683,18 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing. Compliments hydrating sheet mask 1 ct exact"
+    },
+    {
+      "file": "/stores/Brand Photos/face-mask.sobeys-national.jpg",
+      "store": "sobeys",
+      "productTitle": "Garnier Skin Active Hydra Bomb Mask Green Tea 32 g",
+      "pageUrl": "https://voila.ca/products/a927ce81-d8ca-4b57-828e-7a1f16dccf79/details",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/cb506617-653e-4cbc-83b2-2c0977dc29de/800x800.jpg",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "notes": "sheet mask",
+      "brand": "Garnier"
     }
   ],
   "makeup-remover-wipes": [
@@ -14519,30 +14503,6 @@
       "verified": true,
       "notes": "image has coloured side label bar (store graphic)",
       "brand": "Cracker Barrel"
-    },
-    {
-      "file": "/stores/Brand Photos/cheddar.sobeys.jpg",
-      "store": "sobeys",
-      "brand": "Compliments",
-      "productTitle": "Compliments Block Cheese Old Cheddar 400 g",
-      "pageUrl": "https://voila.ca/search?q=Compliments%20Block%20Cheese%20Old%20Cheddar%20400%20g",
-      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/ea73ded0-9820-49ea-b3ad-c876bb8b22a6/800x800.jpg",
-      "width": 800,
-      "height": 800,
-      "verified": true,
-      "notes": "Compliments (Sobeys own brand), via voila.ca. "
-    },
-    {
-      "file": "/stores/Brand Photos/cheddar.walmart.jpg",
-      "store": "walmart",
-      "brand": "Great Value",
-      "productTitle": "Great Value Old Cheddar Cheese 400g",
-      "pageUrl": "https://www.walmart.ca/en/browse/grocery/dairy-eggs/cheese/10019_6000194327369_6000194327377",
-      "imageUrl": "https://i5.walmartimages.ca/images/Enlarge/063/075/6000209063075.jpg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
-      "width": 1500,
-      "height": 1500,
-      "verified": true,
-      "notes": "pageUrl is the walmart.ca category page the product was listed on"
     }
   ],
   "mozzarella-cheese": [
@@ -15849,18 +15809,6 @@
   ],
   "toffee": [
     {
-      "file": "/stores/Brand Photos/toffee.superstore.jpg",
-      "store": "superstore",
-      "productTitle": "Hershey's Chipits Skor Toffee Bits Baking Candy 200 g",
-      "pageUrl": "https://www.realcanadiansuperstore.ca/en/search?search-bar=toffee",
-      "imageUrl": "https://digital.loblaws.ca/PCX/20322910004_EA/en/1/20322910004_en_1_800.png",
-      "width": 800,
-      "height": 800,
-      "verified": true,
-      "notes": "weak: Skor toffee baking bits (no toffee candy listed); Metro skipped (bot check)",
-      "brand": "Hershey's"
-    },
-    {
       "file": "/stores/Brand Photos/toffee.sobeys.jpg",
       "store": "sobeys",
       "brand": "Mackintosh's",
@@ -16253,6 +16201,17 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing. Compliments; 325 g vs 200 g"
+    },
+    {
+      "file": "/stores/Brand Photos/dried-mango.sobeys-national.jpg",
+      "store": "sobeys",
+      "productTitle": "7D Dried Mangoes 140 g",
+      "pageUrl": "https://voila.ca/products/ffed88f4-9930-4185-9193-1a63fb489f56/details",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/69f175e3-dc4b-41eb-a7d9-b17fcb4bb098/800x800.jpg",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "brand": "7D"
     }
   ],
   "honey-roasted-peanuts": [
@@ -16369,6 +16328,17 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing. Compliments; 680 g vs 425 g"
+    },
+    {
+      "file": "/stores/Brand Photos/corn-flakes.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Great Value Corn Flakes Cereal",
+      "pageUrl": "https://www.walmart.ca/en/ip/Great-Value-Corn-Flakes-Cereal/5YTIE0XMRRMQ",
+      "imageUrl": "https://i5.walmartimages.ca/asr/4773dab9-626b-4cb1-84c8-f14cc0cb3660.fd01fb34f66129ca023623da32f7567d.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "brand": "Great Value"
     }
   ],
   "bran-flakes": [
@@ -16395,6 +16365,18 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing. national brand (no Compliments bran flakes); 560 g vs 525 g"
+    },
+    {
+      "file": "/stores/Brand Photos/bran-flakes.walmart.png",
+      "store": "walmart",
+      "productTitle": "Kellogg's All-Bran Flakes Cereal Family Size 560g",
+      "pageUrl": "https://www.walmart.ca/en/ip/Kellogg-s-All-Bran-Flakes-Cereal-Family-Size-560g/37S9UMH0NICO",
+      "imageUrl": "https://i5.walmartimages.ca/asr/286f4c29-7a68-468d-a3fe-84efdb684f69.9efbcb880e1d5746b7bbee003aa8bfbf.png?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "All-Bran Flakes; no Great Value bran flakes at Walmart. 560 g vs 525 g.",
+      "brand": "Kellogg's"
     }
   ],
   "raisin-bran": [
@@ -16421,6 +16403,17 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing. Compliments; Maximum Raisin Bran 794 g vs 675 g"
+    },
+    {
+      "file": "/stores/Brand Photos/raisin-bran.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Great Value Raisin Bran Cereal",
+      "pageUrl": "https://www.walmart.ca/en/ip/Great-Value-Raisin-Bran-Cereal/6FRJ00P1PF3A",
+      "imageUrl": "https://i5.walmartimages.ca/asr/001660eb-e2cc-440c-9fea-233dd86a0348.d538f6418c059b6ef8b62c3807913612.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "brand": "Great Value"
     }
   ],
   "granola-cereal": [
@@ -16447,6 +16440,17 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing. Sobeys-owned Longo's plain oats & honey (Compliments granola only flavoured); 325 g vs 600 g"
+    },
+    {
+      "file": "/stores/Brand Photos/granola-cereal.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Great Value Original Granola Cereals",
+      "pageUrl": "https://www.walmart.ca/en/ip/Great-Value-Original-Granola-Cereals/6000198227119",
+      "imageUrl": "https://i5.walmartimages.ca/asr/38d651ee-896f-455a-9a67-30e79887c32b.df698c3bb106891a8183a415c5b6808f.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "brand": "Great Value"
     }
   ],
   "muesli": [
@@ -16499,6 +16503,17 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing. national brand (no Compliments); 416 g vs 570 g"
+    },
+    {
+      "file": "/stores/Brand Photos/honey-nut-cereal.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Great Value Naturally Flavoured Honey Nut Toasted Oats Cereal",
+      "pageUrl": "https://www.walmart.ca/en/ip/Great-Value-Naturally-Flavoured-Honey-Nut-Toasted-Oats-Cereal/5K56LE0AJ3ID",
+      "imageUrl": "https://i5.walmartimages.ca/asr/971bfe63-b10f-46e5-a68c-57e0b0b41437.73b97d8cb5629dc1e310b7eadea528b5.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "brand": "Great Value"
     }
   ],
   "frosted-corn-flakes": [
@@ -16525,6 +16540,18 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing. national brand; 545 g vs 425 g"
+    },
+    {
+      "file": "/stores/Brand Photos/frosted-corn-flakes.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Great Value Frosted Corn Flakes Cereal",
+      "pageUrl": "https://www.walmart.ca/en/ip/Great-Value-Frosted-Corn-Flakes-Cereal/3CH3UX56U438",
+      "imageUrl": "https://i5.walmartimages.ca/asr/8e6673c9-0fa1-4abd-bb91-c267eacfdcc9.4f4bda2205f942a15f84a2d5aaf21ff9.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "Two Great Value Frosted Corn Flakes listings exist; this is the first.",
+      "brand": "Great Value"
     }
   ],
   "oat-cereal-rings": [
@@ -16551,6 +16578,18 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing. national brand; 350 g vs 420 g"
+    },
+    {
+      "file": "/stores/Brand Photos/oat-cereal-rings.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Great Value Toasted O's Cereal",
+      "pageUrl": "https://www.walmart.ca/en/ip/Great-Value-Toasted-O-s-Cereal/6W6O6M1XIISM",
+      "imageUrl": "https://i5.walmartimages.ca/asr/462aa330-3614-40e0-8f6b-c34c90b8b0a7.e123697c0524fd33a57ca667716e7ac4.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "Plain toasted oat rings (Cheerios equivalent).",
+      "brand": "Great Value"
     }
   ],
   "kids-cereal": [
@@ -16603,6 +16642,18 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing. national brand; 425 g vs 700 g"
+    },
+    {
+      "file": "/stores/Brand Photos/shredded-wheat.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Post Shredded Wheat Big Biscuit Cereal",
+      "pageUrl": "https://www.walmart.ca/en/ip/Post-Shredded-Wheat-Big-Biscuit-Cereal/10244362",
+      "imageUrl": "https://i5.walmartimages.ca/asr/386e0ce7-944b-4884-bc1c-24b33a171bb7.d9833f32542cedc40e8f74f124216fe9.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "Plain shredded wheat; Great Value version is frosted so not used.",
+      "brand": "Post"
     }
   ],
   "cream-of-wheat": [
@@ -16629,6 +16680,17 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing. national brand; 800 g vs 500 g"
+    },
+    {
+      "file": "/stores/Brand Photos/cream-of-wheat.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Cream of Wheat Stove Top 3 Minute Original Hot Cereal",
+      "pageUrl": "https://www.walmart.ca/en/ip/Cream-of-Wheat-Stove-Top-3-Minute-Original-Hot-Cereal/6000188766713",
+      "imageUrl": "https://i5.walmartimages.ca/asr/3abbcf30-2c57-46ac-95a5-c52101df8da9.380bdc19b0ea8236f8f7f12e6f749915.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "brand": "Cream of Wheat"
     }
   ],
   "instant-oatmeal-packets": [
@@ -16655,6 +16717,17 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing. Compliments; regular 280 g box vs 10 ct"
+    },
+    {
+      "file": "/stores/Brand Photos/instant-oatmeal-packets.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Great Value Regular Instant Oatmeal",
+      "pageUrl": "https://www.walmart.ca/en/ip/Great-Value-Regular-Instant-Oatmeal/4GTCVBWJWJT2",
+      "imageUrl": "https://i5.walmartimages.ca/asr/23cc9048-0418-4861-878c-d7de68cbe0a4.520ce7bc131e06a2b8ccc62960bcc0d1.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "brand": "Great Value"
     }
   ],
   "large-flake-oats": [
@@ -16757,6 +16830,18 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing. weak: Compliments only sells flavoured granola, honey almond is the base flavour; 700 g vs 600 g"
+    },
+    {
+      "file": "/stores/Brand Photos/granola.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Great Value Raisin, Nut, & Seeds Granola",
+      "pageUrl": "https://www.walmart.ca/en/ip/Great-Value-Raisin-Nut-Seeds-Granola/6000198228619",
+      "imageUrl": "https://i5.walmartimages.ca/asr/d6ab964d-0dc9-407a-820d-cd4424eaa5f1.e9989b262e9d3b9ad44644bc5066fd36.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "Raisin Nut & Seeds variant (plain Original Granola used for granola-cereal item).",
+      "brand": "Great Value"
     }
   ],
   "granola-bars": [
@@ -16783,6 +16868,18 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing. national brand; original oats n honey (Compliments only chocolate chip/dipped)"
+    },
+    {
+      "file": "/stores/Brand Photos/granola-bars.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Great Value Chewy Chocolate Chip Granola Bars",
+      "pageUrl": "https://www.walmart.ca/en/ip/Great-Value-Chewy-Chocolate-Chip-Granola-Bars/6000187053843",
+      "imageUrl": "https://i5.walmartimages.ca/asr/d9089850-aa37-4f01-96e2-ff18607bc9a5.186dfd86cca543adb6ce306791287a95.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "Chocolate chip flavour; pack count per listing.",
+      "brand": "Great Value"
     }
   ],
   "toaster-pastries": [
@@ -16809,6 +16906,18 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing. national brand (no Compliments); 8 ct"
+    },
+    {
+      "file": "/stores/Brand Photos/toaster-pastries.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Kellogg's Pop-Tarts toaster pastries, Frosted Strawberry 384 g - 8 pastries",
+      "pageUrl": "https://www.walmart.ca/en/ip/Kellogg-s-Pop-Tarts-toaster-pastries-Frosted-Strawberry-384-g-8-pastries/6000201629986",
+      "imageUrl": "https://i5.walmartimages.ca/asr/6651b821-ad5d-4d13-9766-c194a615f0fc.6e2948e8e6525bc0443580286c823296.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "Frosted Strawberry flavour; 8 pastries.",
+      "brand": "Pop-Tarts"
     }
   ],
   "pancake-mix": [
@@ -16899,6 +17008,18 @@
       "verified": true,
       "notes": "Boost instant breakfast powder (Nestle); Metro skipped (bot check)",
       "brand": "Nestlé"
+    },
+    {
+      "file": "/stores/Brand Photos/instant-breakfast-drink-mix.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "BOOST Instant Breakfast Powder, Chocolate, Drink Mix With Protein, Fibre & Calcium",
+      "pageUrl": "https://www.walmart.ca/en/ip/boost-instant-breakfast-powder-chocolate-drink-mix-with-protein-fibre-calcium/6000197843643",
+      "imageUrl": "https://i5.walmartimages.ca/images/Enlarge/016/313/6000198016313.jpg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1500,
+      "height": 1500,
+      "verified": true,
+      "notes": "Chocolate flavour; pack count may differ from 6 ct.",
+      "brand": "Boost"
     }
   ],
   "breakfast-cereal-bars": [
@@ -16925,6 +17046,18 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing. Compliments; strawberry cereal bars 300 g"
+    },
+    {
+      "file": "/stores/Brand Photos/breakfast-cereal-bars.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Great Value Strawberry Fruit-Filled Cereal Bars",
+      "pageUrl": "https://www.walmart.ca/en/ip/Great-Value-Strawberry-Fruit-Filled-Cereal-Bars/6000187053837",
+      "imageUrl": "https://i5.walmartimages.ca/asr/0b8d3379-f6be-4229-89c4-bfb2deed043f.64223ebafbfa8d2335acd2f6a8df82e6.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "Strawberry flavour.",
+      "brand": "Great Value"
     }
   ],
   "granola-clusters": [
@@ -16951,6 +17084,18 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing. weak: Sobeys-owned Farm Boy; only flavoured clusters on Voila (cranberry); 250 g vs 400 g"
+    },
+    {
+      "file": "/stores/Brand Photos/granola-clusters.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Quaker Harvest Crunch Original Granola Cereal",
+      "pageUrl": "https://www.walmart.ca/en/ip/Quaker-Harvest-Crunch-Original-Granola-Cereal/6000201266485",
+      "imageUrl": "https://i5.walmartimages.ca/asr/25a0b7ed-6b33-4e29-ae38-b66ba1f59be8.7b1332400b7cba159666d74006a8014a.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "Clustered granola cereal; not labelled 'clusters'.",
+      "brand": "Quaker"
     }
   ],
   "puffed-wheat-cereal": [
@@ -17003,6 +17148,18 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing. national brand; 500 g"
+    },
+    {
+      "file": "/stores/Brand Photos/bran-buds-cereal.walmart.png",
+      "store": "walmart",
+      "productTitle": "Kellogg's All-Bran Buds Cereal, 500g with Psyllium Fibre",
+      "pageUrl": "https://www.walmart.ca/en/ip/Kellogg-s-All-Bran-Buds-Cereal-500g-with-Psyllium-Fibre/206643",
+      "imageUrl": "https://i5.walmartimages.ca/asr/606cbe4a-84ee-45cb-9b82-a9e9e8be54ce.0f4369679b4a8dde5113db0cf624861f.png?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "Exact 500 g product; it was a sponsored tile.",
+      "brand": "All-Bran"
     }
   ],
   "multigrain-cereal-flakes": [
@@ -17055,6 +17212,18 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing. national brand; 354 g vs 400 g"
+    },
+    {
+      "file": "/stores/Brand Photos/cinnamon-toast-cereal.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Great Value Cinnamon Crunch Cereal",
+      "pageUrl": "https://www.walmart.ca/en/ip/Great-Value-Cinnamon-Crunch-Cereal/3UNU1QDDFO7R",
+      "imageUrl": "https://i5.walmartimages.ca/asr/b587cef0-f98f-4acd-97f4-5056e403cbd0.797f555f922e742af4d381bd2ddac3b9.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "Great Value's cinnamon squares cereal (Cinnamon Toast Crunch equivalent).",
+      "brand": "Great Value"
     }
   ],
   "chocolate-cereal": [
@@ -17081,6 +17250,17 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing. national brand chocolate cereal; 420 g vs 400 g"
+    },
+    {
+      "file": "/stores/Brand Photos/chocolate-cereal.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Cheerios Chocolate Flavour Cereal, 420g",
+      "pageUrl": "https://www.walmart.ca/en/ip/Cheerios-Chocolate-Flavour-Cereal-420g/6000203519507",
+      "imageUrl": "https://i5.walmartimages.ca/asr/6399cf08-67b9-48fe-9ba2-c47d15516de1.187465a5739a1091795fe0e7268d7adf.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "brand": "Cheerios"
     }
   ],
   "cereal-variety-pack": [
@@ -17867,6 +18047,18 @@
       "height": 800,
       "verified": true,
       "notes": "National brand at Sobeys/Voila (no Compliments equivalent). "
+    },
+    {
+      "file": "/stores/Brand Photos/coconut-milk-beverage.walmart.png",
+      "store": "walmart",
+      "productTitle": "Silk Coconut Milk Alternative, Unsweetened, Dairy Free",
+      "pageUrl": "https://www.walmart.ca/en/ip/Silk-Coconut-Milk-Alternative-Unsweetened-Dairy-Free/6000190181121",
+      "imageUrl": "https://i5.walmartimages.ca/asr/d7144d79-0b87-42c5-a937-4077f2926c95.96cc4e8e02e8faad8171015f1ae0e8b6.png?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "Unsweetened variant (Walmart's non-sponsored Silk coconut beverage); size not stated in title.",
+      "brand": "Silk"
     }
   ],
   "lactose-free-milk": [
@@ -18083,6 +18275,18 @@
       "height": 800,
       "verified": true,
       "notes": "Compliments (Sobeys own brand), via voila.ca. "
+    },
+    {
+      "file": "/stores/Brand Photos/ricotta-cheese.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Tre Stelle Traditional Ricotta Cheese 475 g",
+      "pageUrl": "https://www.walmart.ca/en/ip/tre-stelle-traditional-ricotta-cheese-475-g/6000191288238",
+      "imageUrl": "https://i5.walmartimages.ca/images/Enlarge/001/343/999999-59441001343.jpg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1000,
+      "height": 1000,
+      "verified": true,
+      "notes": "National brand; Walmart's only other ricotta is Your Fresh Market (not a known store brand).",
+      "brand": "Tre Stelle"
     }
   ],
   "feta-cheese": [
@@ -18121,6 +18325,18 @@
       "height": 800,
       "verified": true,
       "notes": "national-brand pass. 375 g vs 400 g"
+    },
+    {
+      "file": "/stores/Brand Photos/feta-cheese.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Tre Stelle Traditional Feta Cheese 375 g",
+      "pageUrl": "https://www.walmart.ca/en/ip/tre-stelle-traditional-feta-cheese-375-g/6000206434476",
+      "imageUrl": "https://i5.walmartimages.ca/images/Enlarge/459/217/6000206459217.jpg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1000,
+      "height": 1000,
+      "verified": true,
+      "notes": "375 g pack vs 400 g item.",
+      "brand": "Tre Stelle"
     }
   ],
   "goat-cheese": [
@@ -18147,6 +18363,17 @@
       "height": 800,
       "verified": true,
       "notes": "Compliments (Sobeys own brand), via voila.ca. 113 g log (catalog 140 g)."
+    },
+    {
+      "file": "/stores/Brand Photos/goat-cheese.sobeys-national.jpg",
+      "store": "sobeys",
+      "productTitle": "Soignon Plain Goat Cheese 125 g",
+      "pageUrl": "https://voila.ca/products/7c94a19b-8d9e-4d69-9079-6e402b3d9815/details",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/f457207f-2bbd-48bd-b753-8ce67603d312/800x800.jpg",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "brand": "Soignon"
     }
   ],
   "string-cheese": [
@@ -18325,6 +18552,18 @@
       "height": 800,
       "verified": true,
       "notes": "National brand at Sobeys/Voila (no Compliments equivalent). "
+    },
+    {
+      "file": "/stores/Brand Photos/fruit-yogurt-multipack.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Astro Original Fruit on The Bottom Yogurt Strawberry, Raspberry, Black Cherry, Nectarine 4%",
+      "pageUrl": "https://www.walmart.ca/en/ip/Astro-Original-Fruit-on-The-Bottom-Yogurt-Strawberry-Raspberry-Black-Cherry-Nectarine-4/10165975",
+      "imageUrl": "https://i5.walmartimages.ca/asr/f08e6cff-e1c8-4b3c-a408-da9dec52b75f.328a28937fec152399206da6123c39f6.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "Fruit-on-the-bottom assorted multipack; check pack count.",
+      "brand": "Astro"
     }
   ],
   "drinkable-yogurt": [
@@ -18489,6 +18728,18 @@
       "height": 800,
       "verified": true,
       "notes": "national-brand pass. 230 g vs 200 g"
+    },
+    {
+      "file": "/stores/Brand Photos/brie-cheese.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "L'Extra Double Cream Brie Cheese",
+      "pageUrl": "https://www.walmart.ca/en/ip/lextra-double-cream-brie-cheese/6000201785550",
+      "imageUrl": "https://i5.walmartimages.ca/images/Enlarge/830/757/6000201830757.jpg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1500,
+      "height": 1500,
+      "verified": true,
+      "notes": "Double cream brie.",
+      "brand": "L'Extra"
     }
   ],
   "blue-cheese": [
@@ -18515,6 +18766,17 @@
       "height": 800,
       "verified": true,
       "notes": "National brand at Sobeys/Voila (no Compliments equivalent). "
+    },
+    {
+      "file": "/stores/Brand Photos/blue-cheese.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Castello Traditional Danish Blue Cheese 125 g",
+      "pageUrl": "https://www.walmart.ca/en/ip/castello-traditional-danish-blue-cheese-125-g/6000191287977",
+      "imageUrl": "https://i5.walmartimages.ca/images/Enlarge/966/111/999999-60466966111.jpg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1000,
+      "height": 1000,
+      "verified": true,
+      "brand": "Castello"
     }
   ],
   "paneer": [
@@ -18881,6 +19143,17 @@
       "height": 800,
       "verified": true,
       "notes": "National brand at Sobeys/Voila (no Compliments equivalent). Bothwell Squeak'rs snack bag 240 g."
+    },
+    {
+      "file": "/stores/Brand Photos/cheese-curds.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Bothwell Cheese. White Cheese Curds",
+      "pageUrl": "https://www.walmart.ca/en/ip/Bothwell-Cheese-White-Cheese-Curds/6000199413626",
+      "imageUrl": "https://i5.walmartimages.ca/asr/0c7a7c3e-1638-4228-8d39-2832895dec02.8b5fbcd21fe844d7b0d1309fa3e78cde.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "brand": "Bothwell"
     }
   ],
   "labneh": [
@@ -18907,6 +19180,17 @@
       "height": 800,
       "verified": true,
       "notes": "National brand at Sobeys/Voila (no Compliments equivalent). Le Bedouin 250 g tub (catalog 340 g); no national brand, Farm Boy labneh skipped."
+    },
+    {
+      "file": "/stores/Brand Photos/labneh.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "MC Dairy 12 % M.F. Labneh",
+      "pageUrl": "https://www.walmart.ca/en/ip/MC-Dairy-12-M-F-Labneh/6000196823411",
+      "imageUrl": "https://i5.walmartimages.ca/asr/fe0f63d5-1677-437c-be84-ed7e33130868.c3375f97bdf8ddf7c5e68f02a714a6c4.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "brand": "MC Dairy"
     }
   ],
   "pepper-jack-cheese": [
@@ -18933,6 +19217,18 @@
       "height": 800,
       "verified": true,
       "notes": "National brand at Sobeys/Voila (no Compliments equivalent). Bothwell Monterey Jack Red Hot Chili Pepper 540 g; no Compliments pepper jack block."
+    },
+    {
+      "file": "/stores/Brand Photos/pepper-jack-cheese.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Bothwell Jalapeño Monterey Jack Cheese",
+      "pageUrl": "https://www.walmart.ca/en/ip/bothwell-jalapeo-monterey-jack-cheese/6000203069998",
+      "imageUrl": "https://i5.walmartimages.ca/images/Enlarge/468/296/6000203468296.jpg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1500,
+      "height": 1500,
+      "verified": true,
+      "notes": "Jalapeño Monterey Jack = pepper jack.",
+      "brand": "Bothwell"
     }
   ],
   "provolone-cheese": [
@@ -19009,6 +19305,18 @@
       "height": 800,
       "verified": true,
       "notes": "National brand at Sobeys/Voila (no Compliments equivalent). "
+    },
+    {
+      "file": "/stores/Brand Photos/cheese-spread.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Cheez Whiz Cheese Spread",
+      "pageUrl": "https://www.walmart.ca/en/ip/Cheez-Whiz-Cheese-Spread/10303149",
+      "imageUrl": "https://i5.walmartimages.ca/asr/ec61e0ce-b2f5-4470-835d-2253a9575ba7.6c40031fcba86777dee811fce7c469b4.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "Size per pack.",
+      "brand": "Cheez Whiz"
     }
   ],
   "greek-yogurt-multipack": [
@@ -19111,6 +19419,18 @@
       "height": 800,
       "verified": true,
       "notes": "National brand at Sobeys/Voila (no Compliments equivalent). Foothills Creamery whipped butter 250 g; only whipped butter on Voila."
+    },
+    {
+      "file": "/stores/Brand Photos/whipped-butter.walmart.png",
+      "store": "walmart",
+      "productTitle": "Foothills Creamery Salted Whipped Butter Tub 250 g",
+      "pageUrl": "https://www.walmart.ca/en/ip/Foothills-Creamery-Salted-Whipped-Butter-Tub-250-g/36527LJDPE4K",
+      "imageUrl": "https://i5.walmartimages.ca/asr/2113c434-8073-4114-8866-c85b95603876.8790fea7d3e13d47e9e8120afccee0cd.png?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 393,
+      "height": 393,
+      "verified": true,
+      "notes": "250 g vs 340 g item.",
+      "brand": "Foothills Creamery"
     }
   ],
   "ghee": [
@@ -19137,6 +19457,18 @@
       "height": 800,
       "verified": true,
       "notes": "National brand at Sobeys/Voila (no Compliments equivalent). "
+    },
+    {
+      "file": "/stores/Brand Photos/ghee.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Verka Pure Desi Ghee, 400g",
+      "pageUrl": "https://www.walmart.ca/en/ip/Verka-Pure-Desi-Ghee-400g/6000196032008",
+      "imageUrl": "https://i5.walmartimages.ca/asr/18c4b1f6-1c47-4321-a2f8-fb7d1d5433b8.48eafc0fb3dfa100d1068dbccf6ee8aa.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "400 g vs 370 mL item.",
+      "brand": "Verka"
     }
   ],
   "monterey-jack-cheese": [
@@ -19303,6 +19635,18 @@
       "height": 800,
       "verified": true,
       "notes": "National brand at Sobeys/Voila (no Compliments equivalent). "
+    },
+    {
+      "file": "/stores/Brand Photos/lactose-free-yogurt.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Liberté Greek 0% Lactose Free Yogurt, Plain, High Protein, 750 g",
+      "pageUrl": "https://www.walmart.ca/en/ip/Libert-Greek-0-Lactose-Free-Yogurt-Plain-High-Protein-750-g/6000195508925",
+      "imageUrl": "https://i5.walmartimages.ca/asr/b3a389e9-27e9-4860-913d-de1aba2203aa.a493199c730ebebe4252c48cf7bff530.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "750 g vs 650 g item; plain Greek lactose-free.",
+      "brand": "Liberté"
     }
   ],
   "skim-milk-powder": [
@@ -19341,6 +19685,17 @@
       "height": 800,
       "verified": true,
       "notes": "national-brand pass. size per title"
+    },
+    {
+      "file": "/stores/Brand Photos/skim-milk-powder.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Great Value Instant Skim Milk Powder",
+      "pageUrl": "https://www.walmart.ca/en/ip/Great-Value-Instant-Skim-Milk-Powder/10301225",
+      "imageUrl": "https://i5.walmartimages.ca/asr/03c82658-881e-4965-977c-bcb352daf2f2.45307e977b0d3fcd1bda2633bf732992.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "brand": "Great Value"
     }
   ],
   "blueberries": [
@@ -22269,16 +22624,16 @@
   ],
   "ground-turkey": [
     {
-      "file": "/stores/Brand Photos/ground-turkey.superstore.png",
+      "file": "/stores/Brand Photos/ground-turkey.superstore.jpg",
       "store": "superstore",
-      "productTitle": "PC Blue Menu Minced Turkey 454 g",
-      "pageUrl": "https://www.realcanadiansuperstore.ca/en/search?search-bar=ground%20turkey",
-      "imageUrl": "https://digital.loblaws.ca/PCX/21100092_EA/en/1/21100092_en_front_v1_800.png",
-      "width": 800,
-      "height": 800,
+      "productTitle": "Raw Lean Ground Turkey",
+      "pageUrl": "https://www.realcanadiansuperstore.ca/en/raw-lean-ground-turkey/p/21740597_EA",
+      "imageUrl": "https://digital.loblaws.ca/PCX/21740597_EA/en/1/21740597_en_front_1200.png",
+      "width": 1200,
+      "height": 1200,
       "verified": true,
-      "notes": "",
-      "brand": "PC Blue Menu"
+      "notes": "Lean (not extra-lean) 1.35 kg bag, unbranded; pack has a $10 sticker. PC Blue Menu Minced Turkey was rejected as extra lean.",
+      "brand": ""
     }
   ],
   "turkey-breast": [
@@ -22619,16 +22974,16 @@
   ],
   "shrimp": [
     {
-      "file": "/stores/Brand Photos/shrimp.superstore.png",
+      "file": "/stores/Brand Photos/shrimp.superstore.jpg",
       "store": "superstore",
-      "productTitle": "President's Choice Peeled Raw Pacific White Shrimp 400 g",
-      "pageUrl": "https://www.realcanadiansuperstore.ca/en/search?search-bar=shrimp",
-      "imageUrl": "https://digital.loblaws.ca/PCX/20789931_EA/en/1/20789931_en_front_v1_800.png",
-      "width": 800,
-      "height": 800,
+      "productTitle": "Pacific White Shrimp",
+      "pageUrl": "https://www.realcanadiansuperstore.ca/en/pacific-white-shrimp/p/21043887_EA",
+      "imageUrl": "https://digital.loblaws.ca/PCX/21043887_EA/en/1/21043887_en_front_v4_1200.png",
+      "width": 1200,
+      "height": 1200,
       "verified": true,
-      "notes": "raw peeled bag",
-      "brand": "President's Choice"
+      "notes": "300 g bag; check pack form",
+      "brand": "Seaquest"
     }
   ],
   "scallops": [
@@ -22939,20 +23294,6 @@
       "brand": "President's Choice"
     }
   ],
-  "marinated-chicken-breast": [
-    {
-      "file": "/stores/Brand Photos/marinated-chicken-breast.superstore.png",
-      "store": "superstore",
-      "productTitle": "No Name Seasoned Chicken Breasts Club Pack 2 kg",
-      "pageUrl": "https://www.realcanadiansuperstore.ca/en/search?search-bar=marinated%20chicken%20breast",
-      "imageUrl": "https://digital.loblaws.ca/PCX/20855786_EA/en/1/20855786_en_front_800.png",
-      "width": 800,
-      "height": 800,
-      "verified": true,
-      "notes": "WEAK: No Name seasoned chicken breasts club pack (frozen); no fresh marinated chicken breast listing",
-      "brand": "No Name"
-    }
-  ],
   "chicken-souvlaki-skewers": [
     {
       "file": "/stores/Brand Photos/chicken-souvlaki-skewers.superstore.png",
@@ -22979,20 +23320,6 @@
       "verified": true,
       "notes": "",
       "brand": ""
-    }
-  ],
-  "chicken-stir-fry-strips": [
-    {
-      "file": "/stores/Brand Photos/chicken-stir-fry-strips.superstore.png",
-      "store": "superstore",
-      "productTitle": "Ziggy's Boneless Chicken Breast Strips 500 g",
-      "pageUrl": "https://www.realcanadiansuperstore.ca/en/search?search-bar=chicken%20stir%20fry%20strips",
-      "imageUrl": "https://digital.loblaws.ca/PCX/21299922_EA/en/1/21299922_en_front_800.png",
-      "width": 800,
-      "height": 800,
-      "verified": true,
-      "notes": "WEAK: only cooked/seasoned chicken breast strips found at store, no raw stir-fry strips",
-      "brand": "Ziggy's"
     }
   ],
   "duck-breast": [
@@ -24499,18 +24826,6 @@
   ],
   "tea-biscuits": [
     {
-      "file": "/stores/Brand Photos/tea-biscuits.superstore.png",
-      "store": "superstore",
-      "productTitle": "No Name Social Tea Biscuits",
-      "pageUrl": "https://www.realcanadiansuperstore.ca/en/search?search-bar=tea%20biscuits",
-      "imageUrl": "https://digital.loblaws.ca/PCX/20618577_EA/en/1/20618577_en_front_800.png",
-      "width": 800,
-      "height": 800,
-      "verified": true,
-      "notes": "WEAK: store has no bakery tea biscuits; No Name Social Tea Biscuits (cookie) used",
-      "brand": "No Name"
-    },
-    {
       "file": "/stores/Brand Photos/tea-biscuits.sobeys.jpg",
       "store": "sobeys",
       "brand": "Sobeys",
@@ -25441,6 +25756,18 @@
       "height": 800,
       "verified": true,
       "notes": "national-brand pass. 340 g vs 350 g"
+    },
+    {
+      "file": "/stores/Brand Photos/egg-noodles.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Primo Egg Noodles 375g",
+      "pageUrl": "https://www.walmart.ca/en/ip/Primo-Egg-Noodles-375g/332DXA7MMDYE",
+      "imageUrl": "https://i5.walmartimages.ca/asr/7b31f301-4a0d-482f-a615-de2292397ddd.1b3edfc0b99cb3b9e6fcacce8e2d76fb.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "375 g vs 350 g.",
+      "brand": "Primo"
     }
   ],
   "whole-wheat-pasta": [
@@ -26071,6 +26398,17 @@
       "height": 800,
       "verified": true,
       "notes": "national-brand pass."
+    },
+    {
+      "file": "/stores/Brand Photos/cornstarch.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Great Value Corn Starch",
+      "pageUrl": "https://www.walmart.ca/en/ip/Great-Value-Corn-Starch/10317740",
+      "imageUrl": "https://i5.walmartimages.ca/asr/aa91f87f-14d6-40aa-bf3f-eb8a6e442239.23f0dea9d33928690c8901ac6481c529.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "brand": "Great Value"
     }
   ],
   "baking-soda": [
@@ -26487,6 +26825,18 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing. national brand (no Compliments corn syrup)"
+    },
+    {
+      "file": "/stores/Brand Photos/corn-syrup.walmart.png",
+      "store": "walmart",
+      "productTitle": "Crown Lily White Corn Syrup",
+      "pageUrl": "https://www.walmart.ca/en/ip/Crown-Lily-White-Corn-Syrup/10278567",
+      "imageUrl": "https://i5.walmartimages.ca/asr/66865087-849c-496e-8159-76144092ef85.e2283a070c89f305bf8de0bd7932a7b3.png?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "Brand on pack: Crown / Lily White.",
+      "brand": "Crown"
     }
   ],
   "maple-syrup": [
@@ -26739,6 +27089,18 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing. 185 ml vs 250 mL"
+    },
+    {
+      "file": "/stores/Brand Photos/sesame-oil.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Great Value Pure Sesame Oil",
+      "pageUrl": "https://www.walmart.ca/en/ip/Great-Value-Pure-Sesame-Oil/41OW6LZHO2LX",
+      "imageUrl": "https://i5.walmartimages.ca/asr/6b9d6bb8-178c-4a4a-8c11-d7d028e1a603.d143c8032ee546f7979acacd563d2dc7.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "Pure sesame oil; toasted not stated in title.",
+      "brand": "Great Value"
     }
   ],
   "cooking-spray": [
@@ -27735,6 +28097,18 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing. national brand (no Compliments listed); 63 g"
+    },
+    {
+      "file": "/stores/Brand Photos/beef-bouillon-cubes.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Knorr Beef Bouillon Cubes, Rich Broth Flavour, 63 g (6-Cube Pack)",
+      "pageUrl": "https://www.walmart.ca/en/ip/Knorr-Beef-Bouillon-Cubes-Rich-Broth-Flavour-63-g-6-Cube-Pack/10161721",
+      "imageUrl": "https://i5.walmartimages.ca/asr/797983f6-0c51-4736-a934-c070a0d0a3f2.be5d49c889e591dc7b39c7ddac3b7f61.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "6-cube pack vs 8 ct.",
+      "brand": "Knorr"
     }
   ],
   "canned-diced-tomatoes": [
@@ -27773,6 +28147,17 @@
       "height": 800,
       "verified": true,
       "notes": "national-brand pass. same 796 mL"
+    },
+    {
+      "file": "/stores/Brand Photos/canned-diced-tomatoes.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Great Value Diced Tomatoes",
+      "pageUrl": "https://www.walmart.ca/en/ip/Great-Value-Diced-Tomatoes/10303924",
+      "imageUrl": "https://i5.walmartimages.ca/asr/040adb5f-b5ff-4c52-ba5e-009fe6babe5a.f035960fb6b49d3e6dd7fedac428e716.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "brand": "Great Value"
     }
   ],
   "canned-crushed-tomatoes": [
@@ -28563,6 +28948,18 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing. jar; 620 mL vs 680 mL"
+    },
+    {
+      "file": "/stores/Brand Photos/applesauce.sobeys-national.jpg",
+      "store": "sobeys",
+      "productTitle": "Mott's Fruitsations Sweetened Apple Sauce Original 620 ml",
+      "pageUrl": "https://voila.ca/search?q=mott%27s%20applesauce",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/ff0d421e-ddd5-4558-8a70-3868d1d55733/800x800.jpg",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "notes": "national brand (nat15); 620 mL vs 680 mL",
+      "brand": "Mott's"
     }
   ],
   "chicken-noodle-soup": [
@@ -29849,6 +30246,18 @@
       "height": 800,
       "verified": true,
       "notes": "National brand at Sobeys/Voila (no Compliments equivalent). "
+    },
+    {
+      "file": "/stores/Brand Photos/hard-boiled-eggs.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Burnbrae Farms EGGS2go! Omega 3 Hard Boiled 6-Pack Pouch",
+      "pageUrl": "https://www.walmart.ca/en/ip/Burnbrae-Farms-EGGS2go-Omega-3-Hard-Boiled-6-Pack-Pouch/6000199066535",
+      "imageUrl": "https://i5.walmartimages.ca/asr/f7a51822-04f1-4e24-b1f2-d928f84b3693.0682a92476404247d600160682bc7438.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "Only hard-boiled egg product; it was a sponsored tile, but the product is exact. Omega-3 variant.",
+      "brand": "Burnbrae Farms"
     }
   ],
   "organic-butter": [
@@ -29887,6 +30296,18 @@
       "height": 800,
       "verified": true,
       "notes": "national-brand pass. salted 250 g vs 454 g"
+    },
+    {
+      "file": "/stores/Brand Photos/organic-butter.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Natrel Organic Salted Butter",
+      "pageUrl": "https://www.walmart.ca/en/ip/Natrel-Organic-Salted-Butter/6000197614916",
+      "imageUrl": "https://i5.walmartimages.ca/asr/800a7672-8dee-44e0-bfc1-d9c6cbcbdc82.831e6ac32b263d26d6b86a8c62627efc.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "Salted; Walmart has no unsalted organic.",
+      "brand": "Natrel"
     }
   ],
   "european-style-butter": [
@@ -29913,6 +30334,18 @@
       "height": 800,
       "verified": true,
       "notes": "national-brand pass. cultured salted 250 g"
+    },
+    {
+      "file": "/stores/Brand Photos/european-style-butter.superstore.jpg",
+      "store": "superstore",
+      "productTitle": "Cultured Unsalted Butter 4x113.5 g",
+      "pageUrl": "https://www.realcanadiansuperstore.ca/en/search?search-bar=european%20butter",
+      "imageUrl": "https://digital.loblaws.ca/PCX/20056675_EA/en/1/20056675_en_front_1200.png",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "cultured butter as european-style",
+      "brand": "Lactantia"
     }
   ],
   "garlic-butter": [
@@ -29939,6 +30372,28 @@
       "height": 1200,
       "verified": true,
       "notes": "weak: 125 g roll (item 200 g). source PNG with transparent background flattened onto white (store odnBg=FFFFFF). pageUrl is the walmart.ca category page the product was listed on"
+    },
+    {
+      "file": "/stores/Brand Photos/garlic-butter.superstore.jpg",
+      "store": "superstore",
+      "productTitle": "Garlic & Provencal Herb Butter 125 g",
+      "pageUrl": "https://www.realcanadiansuperstore.ca/en/search?search-bar=garlic%20butter",
+      "imageUrl": "https://digital.loblaws.ca/PCX/20106744_EA/en/1/20106744_en_front_1200.png",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "brand": "Lactantia"
+    },
+    {
+      "file": "/stores/Brand Photos/garlic-butter.metro.jpg",
+      "store": "metro",
+      "productTitle": "Garlic Butter",
+      "pageUrl": "https://www.metro.ca/en/online-grocery/search?filter=garlic%20butter",
+      "imageUrl": "https://product-images.metro.ca/images/hd3/h3a/9098471997470.jpg",
+      "width": 400,
+      "height": 400,
+      "verified": true,
+      "brand": "Irresistibles"
     }
   ],
   "soft-margarine-tub": [
@@ -29977,6 +30432,28 @@
       "height": 1200,
       "verified": true,
       "notes": "national-brand pass. tub size per pack not verified vs 850 g. pageUrl is the walmart.ca category page the product was listed on"
+    },
+    {
+      "file": "/stores/Brand Photos/soft-margarine-tub.superstore.png",
+      "store": "superstore",
+      "productTitle": "Mirage Margarine 850 g",
+      "pageUrl": "https://www.realcanadiansuperstore.ca/en/search?search-bar=soft%20margarine%20tub",
+      "imageUrl": "https://digital.loblaws.ca/PCX/20074944_EA/en/1/20074944_en_front_v1_1200.png",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "brand": "Mirage"
+    },
+    {
+      "file": "/stores/Brand Photos/soft-margarine-tub.metro.jpg",
+      "store": "metro",
+      "productTitle": "68% Vegetable Oil Margarine",
+      "pageUrl": "https://www.metro.ca/en/online-grocery/search?filter=soft%20margarine",
+      "imageUrl": "https://product-images.metro.ca/images/h18/h3d/15952612261918.jpg",
+      "width": 400,
+      "height": 400,
+      "verified": true,
+      "brand": "Selection"
     }
   ],
   "olive-oil-spread": [
@@ -30003,6 +30480,18 @@
       "height": 1200,
       "verified": true,
       "notes": "pageUrl is the walmart.ca category page the product was listed on"
+    },
+    {
+      "file": "/stores/Brand Photos/olive-oil-spread.superstore.jpg",
+      "store": "superstore",
+      "productTitle": "PC Blue Menu Margarine with Olive Oil 907 g",
+      "pageUrl": "https://www.realcanadiansuperstore.ca/en/search?search-bar=olive%20oil%20spread",
+      "imageUrl": "https://digital.loblaws.ca/PCX/20604430_EA/en/1/20604430_enfr_front_v1_1200.png",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "printed brand is PC Blue Menu (PC sub-line, labelled President's Choice)",
+      "brand": "President's Choice"
     }
   ],
   "organic-2-milk": [
@@ -30029,6 +30518,17 @@
       "height": 1200,
       "verified": true,
       "notes": "national brand. pageUrl is the walmart.ca category page the product was listed on"
+    },
+    {
+      "file": "/stores/Brand Photos/organic-2-milk.superstore.jpg",
+      "store": "superstore",
+      "productTitle": "2% Organic Milk 1.89 L",
+      "pageUrl": "https://www.realcanadiansuperstore.ca/en/search?search-bar=organic%202%25%20milk",
+      "imageUrl": "https://digital.loblaws.ca/PCX/21517740_EA/en/1/21517740_en_front_1200.png",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "brand": "Dairyland"
     }
   ],
   "organic-whole-milk": [
@@ -30055,6 +30555,18 @@
       "height": 1200,
       "verified": true,
       "notes": "national brand. pageUrl is the walmart.ca category page the product was listed on"
+    },
+    {
+      "file": "/stores/Brand Photos/organic-whole-milk.superstore.jpg",
+      "store": "superstore",
+      "productTitle": "PC Organics Organic Whole Milk 3.25% 2 L",
+      "pageUrl": "https://www.realcanadiansuperstore.ca/en/search?search-bar=organic%20whole%20milk",
+      "imageUrl": "https://digital.loblaws.ca/PCX/20535315_EA/en/1/20535315_en_front_v1_1200.png",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "printed brand is PC Organics (PC sub-line, labelled President's Choice)",
+      "brand": "President's Choice"
     }
   ],
   "bagged-milk": [
@@ -30095,6 +30607,17 @@
       "height": 1200,
       "verified": true,
       "notes": "national brand. pageUrl is the walmart.ca category page the product was listed on"
+    },
+    {
+      "file": "/stores/Brand Photos/ultra-filtered-milk.superstore.jpg",
+      "store": "superstore",
+      "productTitle": "Ultrapur Protein Ultra-Filtered Milk 2% 1.5 L",
+      "pageUrl": "https://www.realcanadiansuperstore.ca/en/search?search-bar=ultra%20filtered%20milk",
+      "imageUrl": "https://digital.loblaws.ca/PCX/21694605_EA/en/1/21694605_en_1_1200.png",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "brand": "Lactantia"
     }
   ],
   "a2-milk": [
@@ -30147,6 +30670,17 @@
       "height": 1200,
       "verified": true,
       "notes": "weak: 4 L jug shown (item 1 L). source PNG with transparent background flattened onto white (store odnBg=FFFFFF). pageUrl is the walmart.ca category page the product was listed on"
+    },
+    {
+      "file": "/stores/Brand Photos/goat-milk.superstore.jpg",
+      "store": "superstore",
+      "productTitle": "Goat Milk 2 L",
+      "pageUrl": "https://www.realcanadiansuperstore.ca/en/search?search-bar=goat%20milk",
+      "imageUrl": "https://digital.loblaws.ca/PCX/20032334_EA/en/1/20032334_en_front_v1_1200.png",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "brand": "Happy Days"
     }
   ],
   "cashew-milk": [
@@ -30173,6 +30707,17 @@
       "height": 1200,
       "verified": true,
       "notes": "national brand; size to verify. pageUrl is the walmart.ca category page the product was listed on"
+    },
+    {
+      "file": "/stores/Brand Photos/cashew-milk.superstore.jpg",
+      "store": "superstore",
+      "productTitle": "Cashew Milk Alternative Unsweetened 1.89 L",
+      "pageUrl": "https://www.realcanadiansuperstore.ca/en/search?search-bar=cashew%20milk",
+      "imageUrl": "https://digital.loblaws.ca/PCX/20863698_EA/en/1/20863698_en_1_1200.png",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "brand": "Silk"
     }
   ],
   "pea-protein-milk": [
@@ -30213,6 +30758,17 @@
       "height": 600,
       "verified": true,
       "notes": "weak: low-res source (600px). source PNG with transparent background flattened onto white (store odnBg=FFFFFF). pageUrl is the walmart.ca category page the product was listed on"
+    },
+    {
+      "file": "/stores/Brand Photos/barista-oat-milk.superstore.jpg",
+      "store": "superstore",
+      "productTitle": "Barista Oat Milk Alternative 946 ml",
+      "pageUrl": "https://www.realcanadiansuperstore.ca/en/search?search-bar=barista%20oat%20milk",
+      "imageUrl": "https://digital.loblaws.ca/PCX/21179478_EA/en/1/21179478_en_1_v1_1200.png",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "brand": "Earth's Own"
     }
   ],
   "chocolate-almond-milk": [
@@ -30239,6 +30795,17 @@
       "height": 1200,
       "verified": true,
       "notes": "weak: 946 mL carton shown (item 1.89 L). source PNG with transparent background flattened onto white (store odnBg=FFFFFF). pageUrl is the walmart.ca category page the product was listed on"
+    },
+    {
+      "file": "/stores/Brand Photos/chocolate-almond-milk.superstore.jpg",
+      "store": "superstore",
+      "productTitle": "Chocolate Almond Milk Alternative 1.89 L",
+      "pageUrl": "https://www.realcanadiansuperstore.ca/en/search?search-bar=chocolate%20almond%20milk",
+      "imageUrl": "https://digital.loblaws.ca/PCX/20299698003_EA/en/1/20299698003_en_1_1200.png",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "brand": "Earth's Own"
     }
   ],
   "half-and-half-cream-18": [
@@ -30265,6 +30832,18 @@
       "height": 1200,
       "verified": true,
       "notes": "national brand; GV table cream is 1 L. pageUrl is the walmart.ca category page the product was listed on"
+    },
+    {
+      "file": "/stores/Brand Photos/half-and-half-cream-18.superstore.jpg",
+      "store": "superstore",
+      "productTitle": "Table Cream 18% 1 L",
+      "pageUrl": "https://www.realcanadiansuperstore.ca/en/search?search-bar=half%20and%20half%20cream%2018%25",
+      "imageUrl": "https://digital.loblaws.ca/PCX/20086998_EA/en/1/20086998_en_front_1200.png",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "18% table cream (Superstore half and half is 10%)",
+      "brand": "Lactantia"
     }
   ],
   "cooking-cream-15": [
@@ -30279,6 +30858,17 @@
       "height": 800,
       "verified": true,
       "notes": "National brand at Sobeys/Voila (no Compliments equivalent). 473 ml (catalog 500 mL)."
+    },
+    {
+      "file": "/stores/Brand Photos/cooking-cream-15.metro.jpg",
+      "store": "metro",
+      "productTitle": "15% Cooking Cream",
+      "pageUrl": "https://www.metro.ca/en/online-grocery/search?filter=cooking%20cream",
+      "imageUrl": "https://product-images.metro.ca/images/h19/h76/13759950356510.jpg",
+      "width": 400,
+      "height": 400,
+      "verified": true,
+      "brand": "Selection"
     }
   ],
   "creme-fraiche": [
@@ -30307,6 +30897,40 @@
       "height": 800,
       "verified": true,
       "notes": "National brand at Sobeys/Voila (no Compliments equivalent). Shepherd Gourmet 500 g (catalog 450 g)."
+    },
+    {
+      "file": "/stores/Brand Photos/skyr.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "siggi's Plain Skyr Yogurt, High Protein, 0%",
+      "pageUrl": "https://www.walmart.ca/en/ip/siggi-s-Plain-Skyr-Yogurt-High-Protein-0/6DYWYA4KZ5GH",
+      "imageUrl": "https://i5.walmartimages.ca/asr/b4d703da-e50e-4fc0-a2b6-748427d9b11e.16b511c24730e41f948f9637542f4075.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "Size not in title.",
+      "brand": "siggi's"
+    },
+    {
+      "file": "/stores/Brand Photos/skyr.superstore.jpg",
+      "store": "superstore",
+      "productTitle": "Icelandic Style Skyr Plain Yogurt 750 g",
+      "pageUrl": "https://www.realcanadiansuperstore.ca/en/search?search-bar=skyr",
+      "imageUrl": "https://digital.loblaws.ca/PCX/21616411_EA/en/1/21616411_en_front_1200.png",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "brand": "President's Choice"
+    },
+    {
+      "file": "/stores/Brand Photos/skyr.metro.jpg",
+      "store": "metro",
+      "productTitle": "2% Plain Skyr Yogurt",
+      "pageUrl": "https://www.metro.ca/en/online-grocery/search?filter=skyr",
+      "imageUrl": "https://product-images.metro.ca/images/h28/hc8/17479364575262.jpg",
+      "width": 400,
+      "height": 400,
+      "verified": true,
+      "brand": "Irresistibles"
     }
   ],
   "vanilla-yogurt": [
@@ -30333,6 +30957,17 @@
       "height": 1200,
       "verified": true,
       "notes": "national brand. source PNG with transparent background flattened onto white (store odnBg=FFFFFF). pageUrl is the walmart.ca category page the product was listed on"
+    },
+    {
+      "file": "/stores/Brand Photos/vanilla-yogurt.superstore.jpg",
+      "store": "superstore",
+      "productTitle": "Probiotic Yogurt, Vanilla 650 g",
+      "pageUrl": "https://www.realcanadiansuperstore.ca/en/search?search-bar=vanilla%20yogurt",
+      "imageUrl": "https://digital.loblaws.ca/PCX/20325132003_EA/en/1/20325132003_en_1_1200.png",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "brand": "Activia"
     }
   ],
   "strawberry-yogurt": [
@@ -30359,6 +30994,17 @@
       "height": 1200,
       "verified": true,
       "notes": "national brand. source PNG with transparent background flattened onto white (store odnBg=FFFFFF). pageUrl is the walmart.ca category page the product was listed on"
+    },
+    {
+      "file": "/stores/Brand Photos/strawberry-yogurt.superstore.jpg",
+      "store": "superstore",
+      "productTitle": "Probiotic Yogurt, Strawberry 650 g",
+      "pageUrl": "https://www.realcanadiansuperstore.ca/en/search?search-bar=strawberry%20yogurt",
+      "imageUrl": "https://digital.loblaws.ca/PCX/20325132001_EA/en/1/20325132001_en_1_1200.png",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "brand": "Activia"
     }
   ],
   "balkan-style-yogurt": [
@@ -30385,6 +31031,17 @@
       "height": 1200,
       "verified": true,
       "notes": "750 g (item 650 g). pageUrl is the walmart.ca category page the product was listed on"
+    },
+    {
+      "file": "/stores/Brand Photos/balkan-style-yogurt.superstore.jpg",
+      "store": "superstore",
+      "productTitle": "Original Balkan Style Plain Yogurt 6% 750 g",
+      "pageUrl": "https://www.realcanadiansuperstore.ca/en/search?search-bar=balkan%20style%20yogurt",
+      "imageUrl": "https://digital.loblaws.ca/PCX/20165226001_EA/en/1/20165226001_en_1_1200.png",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "brand": "Astro"
     }
   ],
   "fat-free-greek-yogurt": [
@@ -30411,6 +31068,28 @@
       "height": 1200,
       "verified": true,
       "notes": "national brand. pageUrl is the walmart.ca category page the product was listed on"
+    },
+    {
+      "file": "/stores/Brand Photos/fat-free-greek-yogurt.superstore.jpg",
+      "store": "superstore",
+      "productTitle": "0% M.F. Plain Greek Yogurt 750 g",
+      "pageUrl": "https://www.realcanadiansuperstore.ca/en/search?search-bar=fat%20free%20greek%20yogurt",
+      "imageUrl": "https://digital.loblaws.ca/PCX/21518484_EA/en/1/21518484_en_front_v1_1200.png",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "brand": "President's Choice"
+    },
+    {
+      "file": "/stores/Brand Photos/fat-free-greek-yogurt.metro.jpg",
+      "store": "metro",
+      "productTitle": "0% Plain Greek Yogurt",
+      "pageUrl": "https://www.metro.ca/en/online-grocery/search?filter=fat%20free%20greek%20yogurt",
+      "imageUrl": "https://product-images.metro.ca/images/h22/h79/16139934564382.jpg",
+      "width": 400,
+      "height": 400,
+      "verified": true,
+      "brand": "Irresistibles"
     }
   ],
   "vanilla-greek-yogurt": [
@@ -30437,6 +31116,28 @@
       "height": 1000,
       "verified": true,
       "notes": "national brand. pageUrl is the walmart.ca category page the product was listed on"
+    },
+    {
+      "file": "/stores/Brand Photos/vanilla-greek-yogurt.superstore.jpg",
+      "store": "superstore",
+      "productTitle": "2% M.F. Greek Yogurt, Vanilla 750 g",
+      "pageUrl": "https://www.realcanadiansuperstore.ca/en/search?search-bar=vanilla%20greek%20yogurt",
+      "imageUrl": "https://digital.loblaws.ca/PCX/21518314_EA/en/1/21518314_en_front_v1_1200.png",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "brand": "President's Choice"
+    },
+    {
+      "file": "/stores/Brand Photos/vanilla-greek-yogurt.metro.jpg",
+      "store": "metro",
+      "productTitle": "2% Vanilla Greek Yogurt",
+      "pageUrl": "https://www.metro.ca/en/online-grocery/search?filter=vanilla%20yogurt",
+      "imageUrl": "https://product-images.metro.ca/images/he9/h36/16139933909022.jpg",
+      "width": 400,
+      "height": 400,
+      "verified": true,
+      "brand": "Irresistibles"
     }
   ],
   "high-protein-yogurt": [
@@ -30451,6 +31152,30 @@
       "height": 800,
       "verified": true,
       "notes": "National brand at Sobeys/Voila (no Compliments equivalent). Oikos PRO 650 g tub (catalog 4x150 g multipack)."
+    },
+    {
+      "file": "/stores/Brand Photos/high-protein-yogurt.walmart.png",
+      "store": "walmart",
+      "productTitle": "Oikos Greek Yogurt, Plain, High Protein, 0% M.F.",
+      "pageUrl": "https://www.walmart.ca/en/ip/Oikos-Greek-Yogurt-Plain-High-Protein-0-M-F/6000201925399",
+      "imageUrl": "https://i5.walmartimages.ca/asr/c4e17c50-cbdb-4618-9a3f-9de6cef48ea0.bafa5429435d189b1ce895eab23a0efa.png?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "Pack format may differ from 4x150 g.",
+      "brand": "Oikos"
+    },
+    {
+      "file": "/stores/Brand Photos/high-protein-yogurt.superstore.jpg",
+      "store": "superstore",
+      "productTitle": "Pro High Protein Greek Yogurt, Plain 650 g",
+      "pageUrl": "https://www.realcanadiansuperstore.ca/en/search?search-bar=high%20protein%20yogurt",
+      "imageUrl": "https://digital.loblaws.ca/PCX/21651917_EA/en/1/21651917_en_1_v1_1200.png",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "650 g tub vs 4x150 g",
+      "brand": "Oikos"
     }
   ],
   "mild-cheddar-cheese": [
@@ -30489,6 +31214,28 @@
       "height": 800,
       "verified": true,
       "notes": "national-brand pass. same 400 g"
+    },
+    {
+      "file": "/stores/Brand Photos/mild-cheddar-cheese.superstore.jpg",
+      "store": "superstore",
+      "productTitle": "Mild Cheddar Cheese 700 g",
+      "pageUrl": "https://www.realcanadiansuperstore.ca/en/search?search-bar=mild%20cheddar%20cheese",
+      "imageUrl": "https://digital.loblaws.ca/PCX/20975791_EA/en/1/20975791_en_front_1200.png",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "brand": "No Name"
+    },
+    {
+      "file": "/stores/Brand Photos/mild-cheddar-cheese.metro.jpg",
+      "store": "metro",
+      "productTitle": "Mild Cheddar Cheese",
+      "pageUrl": "https://www.metro.ca/en/online-grocery/search?filter=mild%20cheddar",
+      "imageUrl": "https://product-images.metro.ca/images/h53/h14/9520122789918.jpg",
+      "width": 400,
+      "height": 400,
+      "verified": true,
+      "brand": "Selection"
     }
   ],
   "medium-cheddar-cheese": [
@@ -30527,6 +31274,28 @@
       "height": 1500,
       "verified": true,
       "notes": "national-brand pass. 400 g exact. pageUrl is the walmart.ca category page the product was listed on"
+    },
+    {
+      "file": "/stores/Brand Photos/medium-cheddar-cheese.superstore.jpg",
+      "store": "superstore",
+      "productTitle": "Medium Cheddar Cheese 700 g",
+      "pageUrl": "https://www.realcanadiansuperstore.ca/en/search?search-bar=medium%20cheddar%20cheese",
+      "imageUrl": "https://digital.loblaws.ca/PCX/20975786_EA/en/1/20975786_en_front_1200.png",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "brand": "No Name"
+    },
+    {
+      "file": "/stores/Brand Photos/medium-cheddar-cheese.metro.jpg",
+      "store": "metro",
+      "productTitle": "Medium Cheddar Cheese",
+      "pageUrl": "https://www.metro.ca/en/online-grocery/search?filter=medium%20cheddar",
+      "imageUrl": "https://product-images.metro.ca/images/hdd/h5a/9520123117598.jpg",
+      "width": 400,
+      "height": 400,
+      "verified": true,
+      "brand": "Selection"
     }
   ],
   "old-cheddar-cheese": [
@@ -30565,6 +31334,28 @@
       "height": 1500,
       "verified": true,
       "notes": "national-brand pass. 400 g exact. pageUrl is the walmart.ca category page the product was listed on"
+    },
+    {
+      "file": "/stores/Brand Photos/old-cheddar-cheese.superstore.jpg",
+      "store": "superstore",
+      "productTitle": "Old Cheddar Cheese 700 g",
+      "pageUrl": "https://www.realcanadiansuperstore.ca/en/search?search-bar=old%20cheddar%20cheese",
+      "imageUrl": "https://digital.loblaws.ca/PCX/20975873_EA/en/1/20975873_en_front_1200.png",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "brand": "No Name"
+    },
+    {
+      "file": "/stores/Brand Photos/old-cheddar-cheese.metro.jpg",
+      "store": "metro",
+      "productTitle": "Old Cheddar Cheese",
+      "pageUrl": "https://www.metro.ca/en/online-grocery/search?filter=old%20cheddar",
+      "imageUrl": "https://product-images.metro.ca/images/h4c/hbb/9520125050910.jpg",
+      "width": 400,
+      "height": 400,
+      "verified": true,
+      "brand": "Selection"
     }
   ],
   "extra-old-cheddar-cheese": [
@@ -30696,18 +31487,6 @@
     }
   ],
   "shredded-four-cheese-blend": [
-    {
-      "file": "/stores/Brand Photos/shredded-four-cheese-blend.walmart.jpg",
-      "store": "walmart",
-      "brand": "Great Value",
-      "productTitle": "Great Value 3 Cheese Shredded Cheese",
-      "pageUrl": "https://www.walmart.ca/en/browse/grocery/dairy-eggs/cheese/10019_6000194327369_6000194327377?page=2",
-      "imageUrl": "https://i5.walmartimages.ca/images/Enlarge/124/900/6000209124900.jpg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
-      "width": 1500,
-      "height": 1500,
-      "verified": true,
-      "notes": "weak: 3-cheese blend (item is 4-cheese). pageUrl is the walmart.ca category page the product was listed on"
-    },
     {
       "file": "/stores/Brand Photos/shredded-four-cheese-blend.sobeys.jpg",
       "store": "sobeys",
@@ -30845,6 +31624,28 @@
       "height": 1500,
       "verified": true,
       "notes": "national-brand pass. 227 g exact. pageUrl is the walmart.ca category page the product was listed on"
+    },
+    {
+      "file": "/stores/Brand Photos/lactose-free-cream-cheese.superstore.jpg",
+      "store": "superstore",
+      "productTitle": "Lactose-Free Plain Cream Cheese 250 g",
+      "pageUrl": "https://www.realcanadiansuperstore.ca/en/search?search-bar=lactose%20free%20cream%20cheese",
+      "imageUrl": "https://digital.loblaws.ca/PCX/21184727_EA/en/1/21184727_en_front_v1_1200.png",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "brand": "President's Choice"
+    },
+    {
+      "file": "/stores/Brand Photos/lactose-free-cream-cheese.metro.jpg",
+      "store": "metro",
+      "productTitle": "Lactose-Free Cream Cheese",
+      "pageUrl": "https://www.metro.ca/en/online-grocery/search?filter=lactose%20free%20cream%20cheese",
+      "imageUrl": "https://product-images.metro.ca/images/he6/h6e/14964344684574.jpg",
+      "width": 400,
+      "height": 400,
+      "verified": true,
+      "brand": "Selection"
     }
   ],
   "smoked-gouda": [
@@ -30923,6 +31724,17 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing."
+    },
+    {
+      "file": "/stores/Brand Photos/vegan-cheese-shreds.superstore.jpg",
+      "store": "superstore",
+      "productTitle": "Dairy Free Mozzarella Cheese Shreds 200 g",
+      "pageUrl": "https://www.realcanadiansuperstore.ca/en/search?search-bar=vegan%20cheese%20shreds",
+      "imageUrl": "https://digital.loblaws.ca/PCX/21207740_EA/en/1/21207740_en_1_1200.png",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "brand": "Daiya"
     }
   ],
   "halloumi": [
@@ -30989,6 +31801,17 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing. no Compliments creamer (only powder whitener)"
+    },
+    {
+      "file": "/stores/Brand Photos/french-vanilla-creamer.superstore.jpg",
+      "store": "superstore",
+      "productTitle": "Coffee Creamer, French Vanilla 946 ml",
+      "pageUrl": "https://www.realcanadiansuperstore.ca/en/search?search-bar=french%20vanilla%20creamer",
+      "imageUrl": "https://digital.loblaws.ca/PCX/20895480002_EA/en/1/20895480002_en_1_1200.png",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "brand": "International Delight"
     }
   ],
   "hazelnut-creamer": [
@@ -31015,21 +31838,20 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing."
-    }
-  ],
-  "oat-milk-creamer": [
+    },
     {
-      "file": "/stores/Brand Photos/oat-milk-creamer.walmart.jpg",
-      "store": "walmart",
-      "brand": "Earth's Own",
-      "productTitle": "Earth's Own French Vanilla Gluten-Free Oat Coffee Creamer, 946ml",
-      "pageUrl": "https://www.walmart.ca/en/browse/grocery/dairy-eggs/cream-creamers/10019_6000194327369_6000194349396?page=2",
-      "imageUrl": "https://i5.walmartimages.ca/asr/87332fdc-08f6-4a69-87b2-99d001b79a4f.b891df0353acf6a025a157b416a00301.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "file": "/stores/Brand Photos/hazelnut-creamer.superstore.jpg",
+      "store": "superstore",
+      "productTitle": "Coffee Creamer, Hazelnut 946 ml",
+      "pageUrl": "https://www.realcanadiansuperstore.ca/en/search?search-bar=hazelnut%20creamer",
+      "imageUrl": "https://digital.loblaws.ca/PCX/20895480003_EA/en/1/20895480003_en_front_v2_1200.png",
       "width": 1200,
       "height": 1200,
       "verified": true,
-      "notes": "weak: French Vanilla flavour (item is plain oat creamer); size matches 946 mL. pageUrl is the walmart.ca category page the product was listed on"
-    },
+      "brand": "International Delight"
+    }
+  ],
+  "oat-milk-creamer": [
     {
       "file": "/stores/Brand Photos/oat-milk-creamer.sobeys.jpg",
       "store": "sobeys",
@@ -31067,6 +31889,18 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing. weak: Hazelnut flavour (only zero-sugar creamer on Voila)"
+    },
+    {
+      "file": "/stores/Brand Photos/sugar-free-creamer.superstore.jpg",
+      "store": "superstore",
+      "productTitle": "Coffee Creamer, French Vanilla ZERO SUGAR 946 ml",
+      "pageUrl": "https://www.realcanadiansuperstore.ca/en/search?search-bar=french%20vanilla%20creamer",
+      "imageUrl": "https://digital.loblaws.ca/PCX/21071278_EA/en/1/21071278_en_1_1200.png",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "pack is the zero-sugar French Vanilla creamer",
+      "brand": "International Delight"
     }
   ],
   "mango-lassi": [
@@ -31107,6 +31941,18 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing."
+    },
+    {
+      "file": "/stores/Brand Photos/rice-pudding.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Kozy Shack Gluten Free Original Rice Pudding, 6x113g",
+      "pageUrl": "https://www.walmart.ca/en/ip/Kozy-Shack-Gluten-Free-Original-Rice-Pudding-6x113g/6000195508174",
+      "imageUrl": "https://i5.walmartimages.ca/asr/e388ad53-0287-4162-9272-0073a0b0482a.e206dccf153f825e9d770fffcedd0513.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "6x113 g vs 4x100 g item.",
+      "brand": "Kozy Shack"
     }
   ],
   "tzatziki": [
@@ -31133,6 +31979,39 @@
       "height": 800,
       "verified": true,
       "notes": "national-brand pass. 227 g vs 250 g"
+    },
+    {
+      "file": "/stores/Brand Photos/tzatziki.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Great Value Greek Yogurt Dip Tzatziki",
+      "pageUrl": "https://www.walmart.ca/en/ip/great-value-greek-yogurt-dip-tzatziki/6000198839639",
+      "imageUrl": "https://i5.walmartimages.ca/images/Enlarge/171/927/6000200171927.jpg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1500,
+      "height": 1487,
+      "verified": true,
+      "brand": "Great Value"
+    },
+    {
+      "file": "/stores/Brand Photos/tzatziki.superstore.jpg",
+      "store": "superstore",
+      "productTitle": "Tzatziki Yogurt Dip 227 g",
+      "pageUrl": "https://www.realcanadiansuperstore.ca/en/search?search-bar=tzatziki",
+      "imageUrl": "https://digital.loblaws.ca/PCX/20574522_EA/en/1/20574522_en_front_1200.png",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "brand": "President's Choice"
+    },
+    {
+      "file": "/stores/Brand Photos/tzatziki.metro.jpg",
+      "store": "metro",
+      "productTitle": "Tzatziki Dip",
+      "pageUrl": "https://www.metro.ca/en/online-grocery/search?filter=tzatziki",
+      "imageUrl": "https://product-images.metro.ca/images/h6d/hee/14269606985758.jpg",
+      "width": 400,
+      "height": 400,
+      "verified": true,
+      "brand": "Irresistibles"
     }
   ],
   "vegan-cream-cheese": [
@@ -31147,6 +32026,17 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing."
+    },
+    {
+      "file": "/stores/Brand Photos/vegan-cream-cheese.superstore.jpg",
+      "store": "superstore",
+      "productTitle": "Dairy Free Original Cream Cheese 227 g",
+      "pageUrl": "https://www.realcanadiansuperstore.ca/en/search?search-bar=vegan%20cream%20cheese",
+      "imageUrl": "https://digital.loblaws.ca/PCX/20687853_EA/en/1/20687853_en_1_v5_1200.png",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "brand": "Daiya"
     }
   ],
   "bocconcini": [
@@ -31173,6 +32063,17 @@
       "height": 800,
       "verified": true,
       "notes": "national-brand pass. same 200 g"
+    },
+    {
+      "file": "/stores/Brand Photos/bocconcini.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Tre Stelle Regular Bocconcini Cheese 200 g",
+      "pageUrl": "https://www.walmart.ca/en/ip/tre-stelle-regular-bocconcini-cheese-200-g/6000191275202",
+      "imageUrl": "https://i5.walmartimages.ca/images/Enlarge/006/362/59441006362.jpg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1000,
+      "height": 1000,
+      "verified": true,
+      "brand": "Tre Stelle"
     }
   ],
   "burrata": [
@@ -31201,6 +32102,18 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing. national brand"
+    },
+    {
+      "file": "/stores/Brand Photos/mascarpone.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Tre Stelle Mascarpone Cheese 475 g",
+      "pageUrl": "https://www.walmart.ca/en/ip/tre-stelle-mascarpone-cheese-475-g/6000191270633",
+      "imageUrl": "https://i5.walmartimages.ca/images/Enlarge/001/428/999999-59441001428.jpg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1000,
+      "height": 1000,
+      "verified": true,
+      "notes": "475 g vs 250 g item.",
+      "brand": "Tre Stelle"
     }
   ],
   "camembert": [
@@ -31227,6 +32140,17 @@
       "height": 800,
       "verified": true,
       "notes": "national-brand pass. 230 g vs 125 g"
+    },
+    {
+      "file": "/stores/Brand Photos/camembert.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Castello Camembert Danish Cheese 125 g",
+      "pageUrl": "https://www.walmart.ca/en/ip/castello-camembert-danish-cheese-125-g/6000195940102",
+      "imageUrl": "https://i5.walmartimages.ca/images/Enlarge/emb/ert/999999-60466965978_Camembert.jpg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1000,
+      "height": 1000,
+      "verified": true,
+      "brand": "Castello"
     }
   ],
   "asiago-cheese": [
@@ -31255,6 +32179,18 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing."
+    },
+    {
+      "file": "/stores/Brand Photos/gruyere-cheese.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Emmi Switzerland Gruyere Cheese 150 g",
+      "pageUrl": "https://www.walmart.ca/en/ip/emmi-switzerland-gruyere-cheese-150-g/6000197953202",
+      "imageUrl": "https://i5.walmartimages.ca/images/Enlarge/100/225/999999-73015100225.jpg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1000,
+      "height": 1000,
+      "verified": true,
+      "notes": "150 g vs 200 g item.",
+      "brand": "Emmi"
     }
   ],
   "manchego-cheese": [
@@ -31297,6 +32233,18 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing."
+    },
+    {
+      "file": "/stores/Brand Photos/gorgonzola.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Castello Gorgonzola Cheese 125 g",
+      "pageUrl": "https://www.walmart.ca/en/ip/castello-gorgonzola-cheese-125-g/497E87GGDUTE",
+      "imageUrl": "https://i5.walmartimages.ca/images/Enlarge/579/619/6000209579619.jpg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1000,
+      "height": 1000,
+      "verified": true,
+      "notes": "125 g vs 150 g item.",
+      "brand": "Castello"
     }
   ],
   "crumbled-feta": [
@@ -31325,6 +32273,17 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing. national brand"
+    },
+    {
+      "file": "/stores/Brand Photos/parmigiano-reggiano.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Tre Stelle Parmigiano Reggiano Cheese 200 g",
+      "pageUrl": "https://www.walmart.ca/en/ip/tre-stelle-parmigiano-reggiano-cheese-200-g/6000197050105",
+      "imageUrl": "https://i5.walmartimages.ca/images/Enlarge/490/006/6000200490006.jpg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1000,
+      "height": 1000,
+      "verified": true,
+      "brand": "Tre Stelle"
     }
   ],
   "marmalade": [
@@ -31529,6 +32488,17 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing. lightly seasoned (plain); 145 g vs 120 g"
+    },
+    {
+      "file": "/stores/Brand Photos/salad-croutons.sobeys-national.jpg",
+      "store": "sobeys",
+      "productTitle": "Fresh Gourmet Croutons Classic Caesar 142 g",
+      "pageUrl": "https://voila.ca/products/4f9a6848-c9e7-4c56-a142-8eabfcf5f410/details",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/ecdf790d-17ed-4a8d-8483-10e0fbcdc6f2/800x800.jpg",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "brand": "Fresh Gourmet"
     }
   ],
   "coconut-cream": [
@@ -32017,6 +32987,18 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing. raw; 300 g vs 200 g"
+    },
+    {
+      "file": "/stores/Brand Photos/pumpkin-seeds.sobeys-national.jpg",
+      "store": "sobeys",
+      "productTitle": "Royal Nuts Unsalted Dry Roasted Shelled Pumpkin Seeds 250 g",
+      "pageUrl": "https://voila.ca/products/e67a9749-f389-448d-8576-4bf229556408/details",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/864eb7d2-fc22-4d86-ba1b-bebe35c14cfa/800x800.jpg",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "notes": "250 g",
+      "brand": "Royal Nuts"
     }
   ],
   "raisins": [
@@ -32119,6 +33101,17 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing. 375 g vs 350 g"
+    },
+    {
+      "file": "/stores/Brand Photos/dried-apricots.sobeys-national.jpg",
+      "store": "sobeys",
+      "productTitle": "Sun Maid Apricots 250 g",
+      "pageUrl": "https://voila.ca/products/4e719143-dffd-4223-98c9-c34fe81138e2/details",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/c8b241a6-ed4a-46ce-a504-6587290781f3/800x800.jpg",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "brand": "Sun Maid"
     }
   ],
   "trail-mix": [
@@ -32145,6 +33138,18 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing. same 400 g"
+    },
+    {
+      "file": "/stores/Brand Photos/trail-mix.superstore-national.jpg",
+      "store": "superstore",
+      "productTitle": "Bassé Classic Trail Mix 600 g",
+      "pageUrl": "https://www.realcanadiansuperstore.ca/en/search?search-bar=trail%20mix",
+      "imageUrl": "https://digital.loblaws.ca/PCX/21158603_EA/en/1/21158603_en_front_1200.png",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "national brand (nat15); 600 g vs 400 g",
+      "brand": "Bassé"
     }
   ],
   "sesame-seeds": [
@@ -32171,6 +33176,18 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing. 145 g vs 100 g"
+    },
+    {
+      "file": "/stores/Brand Photos/sesame-seeds.sobeys-national.jpg",
+      "store": "sobeys",
+      "productTitle": "McCormick Gourmet Organic Sesame Seeds 45 g",
+      "pageUrl": "https://voila.ca/search?q=sesame%20seeds",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/a240b533-30f5-4e6e-abba-3d062a1deb4f/800x800.jpg",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "notes": "national brand (nat15); organic, 45 g (Club House not found)",
+      "brand": "McCormick"
     }
   ],
   "poppy-seeds": [
@@ -32197,6 +33214,18 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing. 155 g vs 100 g"
+    },
+    {
+      "file": "/stores/Brand Photos/poppy-seeds.sobeys-national.jpg",
+      "store": "sobeys",
+      "productTitle": "McCormick Gourmet Organic Poppy Seed 46 g",
+      "pageUrl": "https://voila.ca/products/3eeda3ad-1100-4314-8505-814c4d9db187/details",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/50cb586f-5953-45f5-9bd9-f8acb79e51c5/800x800.jpg",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "notes": "McCormick Gourmet ORGANIC poppy seed (no non-organic national found)",
+      "brand": "McCormick"
     }
   ],
   "chia-seeds": [
@@ -33397,6 +34426,17 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing. 400 g vs 600 g (seen in a related search)"
+    },
+    {
+      "file": "/stores/Brand Photos/frozen-raspberries.sobeys-national.jpg",
+      "store": "sobeys",
+      "productTitle": "Nudefruit Frozen Fruit Ravishing Raspberries 400 g",
+      "pageUrl": "https://voila.ca/products/b0ada586-6934-4eca-b8b1-80e1ffe141c8/details",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/dc0640f4-1d8a-4cce-a88d-b4674a72162f/800x800.jpg",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "brand": "Nudefruit"
     }
   ],
   "frozen-cherries": [
@@ -33449,6 +34489,17 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing."
+    },
+    {
+      "file": "/stores/Brand Photos/frozen-peaches.sobeys-national.jpg",
+      "store": "sobeys",
+      "productTitle": "Below Zero Peaches Sliced Frozen 600 g",
+      "pageUrl": "https://voila.ca/products/f73b35a3-3f17-441d-a5a8-df0abc2c7623/details",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/551b5df1-cbf2-4ed9-a4ff-4de83d741b61/800x800.jpg",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "brand": "Below Zero"
     }
   ],
   "frozen-smoothie-blend": [
@@ -33501,6 +34552,18 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing. organic"
+    },
+    {
+      "file": "/stores/Brand Photos/frozen-tropical-fruit-blend.sobeys-national.jpg",
+      "store": "sobeys",
+      "productTitle": "Simply Picked Tropical Blend Frozen 600 g",
+      "pageUrl": "https://voila.ca/products/3dba442b-5299-4e07-87a0-c29b4a482f7a/details",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/5b4c1e22-d7fb-4db9-a60f-546a8e55ec86/800x800.jpg",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "notes": "Simply Picked",
+      "brand": "Simply Picked"
     }
   ],
   "frozen-potato-wedges": [
@@ -33823,6 +34886,18 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing. 198 g pack vs 9 ct"
+    },
+    {
+      "file": "/stores/Brand Photos/pizza-bagels.sobeys-national.jpg",
+      "store": "sobeys",
+      "productTitle": "Hot Bites Pizza Snacks Three Cheese 198 g",
+      "pageUrl": "https://voila.ca/products/dc249c5e-9cf8-44f6-a7de-173669fd3617/details",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/1d85d309-ec76-4cfe-b2e7-43a682a0b6b6/800x800.jpg",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "notes": "Bagel Bites three cheese (Hot Bites on label)",
+      "brand": "Bagel Bites"
     }
   ],
   "frozen-gluten-free-pizza": [
@@ -33979,6 +35054,17 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing. 1 kg vs 900 g"
+    },
+    {
+      "file": "/stores/Brand Photos/vegetable-lasagna.sobeys-national.jpg",
+      "store": "sobeys",
+      "productTitle": "Amy's Kitchen Vegetable Family Size Lasagna 920 g",
+      "pageUrl": "https://voila.ca/products/4650d189-8ef5-47c2-8fee-46e8be497484/details",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/d8a7873b-62d4-4c6a-aed6-c3345c01307c/800x800.jpg",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "brand": "Amy's Kitchen"
     }
   ],
   "salisbury-steak-dinner": [
@@ -34864,18 +35950,6 @@
     }
   ],
   "strawberry-ice-cream": [
-    {
-      "file": "/stores/Brand Photos/strawberry-ice-cream.walmart.jpg",
-      "store": "walmart",
-      "brand": "Chapman's",
-      "productTitle": "Chapman's Premium Strawberry Shortcake Ice Cream, 2L",
-      "pageUrl": "https://www.walmart.ca/en/browse/grocery/frozen-food/ice-cream-treats/10019_6000194326337_6000194349402?page=4",
-      "imageUrl": "https://i5.walmartimages.ca/asr/0fd47fc6-a49f-494f-8b65-75a5078a6f12.68fcd80e2ebb731b34fd2aae48d76317.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
-      "width": 1200,
-      "height": 1200,
-      "verified": true,
-      "notes": "weak: strawberry shortcake flavour (no plain strawberry tub listed); 2 L (item 1.5 L). pageUrl is the walmart.ca category page the product was listed on"
-    },
     {
       "file": "/stores/Brand Photos/strawberry-ice-cream.sobeys.jpg",
       "store": "sobeys",
@@ -36349,20 +37423,6 @@
       "notes": "Lakewood pure prune juice (real juice); No Name prune nectar was alt B"
     }
   ],
-  "espresso-shots": [
-    {
-      "file": "/stores/Brand Photos/espresso-shots.superstore.png",
-      "store": "superstore",
-      "brand": "Nescafe",
-      "productTitle": "Nescafe Espresso Black Coffee Concentrate 500 mL",
-      "pageUrl": "https://www.realcanadiansuperstore.ca/en/search?search-bar=espresso%20shots",
-      "imageUrl": "https://digital.loblaws.ca/PCX/21665027_EA/en/1/21665027_en_1_800.png",
-      "width": 800,
-      "height": 800,
-      "verified": true,
-      "notes": "weak: Nescafe espresso concentrate bottle (500 mL); no 4x60 mL espresso shots at Superstore"
-    }
-  ],
   "iced-capp-mix": [
     {
       "file": "/stores/Brand Photos/iced-capp-mix.superstore.png",
@@ -36660,18 +37720,6 @@
     }
   ],
   "sparkling-grape-juice": [
-    {
-      "file": "/stores/Brand Photos/sparkling-grape-juice.superstore.png",
-      "store": "superstore",
-      "brand": "Duche de Longueville",
-      "productTitle": "Duche de Longueville Sparkling Raspberry Grape Juice 750 mL",
-      "pageUrl": "https://www.realcanadiansuperstore.ca/en/search?search-bar=sparkling%20grape%20juice",
-      "imageUrl": "https://digital.loblaws.ca/PCX/20298554_EA/en/1/20298554_en_front_800.png",
-      "width": 800,
-      "height": 800,
-      "verified": true,
-      "notes": "weak: Duche de Longueville sparkling grape and raspberry; no plain sparkling grape juice found"
-    },
     {
       "file": "/stores/Brand Photos/sparkling-grape-juice.sobeys.jpg",
       "store": "sobeys",
@@ -37035,6 +38083,17 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing. 300 g vs 600 g"
+    },
+    {
+      "file": "/stores/Brand Photos/frozen-wild-blueberries.sobeys-national.jpg",
+      "store": "sobeys",
+      "productTitle": "Oxford Frozen Wild Blueberries 1.5 kg",
+      "pageUrl": "https://voila.ca/products/2b5b9ef6-0013-498d-9f72-720c34881762/details",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/c8f1e6ed-0182-4498-901f-2fc0f20dccec/800x800.jpg",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "brand": "Oxford"
     }
   ],
   "frozen-blackberries": [
@@ -37159,6 +38218,17 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing."
+    },
+    {
+      "file": "/stores/Brand Photos/cabbage-rolls.sobeys-national.jpg",
+      "store": "sobeys",
+      "productTitle": "Troika Frozen Cabbage Rolls 1.17 kg",
+      "pageUrl": "https://voila.ca/products/f3a12d63-468d-4533-9545-ce285f151cac/details",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/50d0dcf9-bbf5-44f6-92f5-a5ee7662d5bc/800x800.jpg",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "brand": "Troika"
     }
   ],
   "frozen-cauliflower-crust-pizza": [
@@ -37187,6 +38257,18 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing. Farm Boy (Sobeys-owned); no Compliments gelato"
+    },
+    {
+      "file": "/stores/Brand Photos/gelato.sobeys-national.jpg",
+      "store": "sobeys",
+      "productTitle": "Stefano Faita Gelato Italian Style Vanilla 500 ml",
+      "pageUrl": "https://voila.ca/products/c00cd180-4df3-426c-b68c-2b1fd7e18a04/details",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/d3f8ad07-f176-4f4a-b3ff-680a123729ad/800x800.jpg",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "notes": "Stefano Faita Italian-style vanilla; Talenti only flavoured",
+      "brand": "Stefano Faita"
     }
   ],
   "ice-cream-cake": [
@@ -37437,6 +38519,18 @@
       "height": 1200,
       "verified": true,
       "notes": "340 g shown (item 600 g). pageUrl is the walmart.ca category page the product was listed on"
+    },
+    {
+      "file": "/stores/Brand Photos/frozen-cod-fillets.sobeys-national.jpg",
+      "store": "sobeys",
+      "productTitle": "Fruits De Mer Frozen Fish Atlantic Portion Cod 340 g",
+      "pageUrl": "https://voila.ca/products/d88c014d-3802-42b9-9702-8be10adb06c3/details",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/9fbbcd83-4bfe-4f2b-ac7a-f0479d8b85dd/800x800.jpg",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "notes": "plain Atlantic cod portions; verify not breaded",
+      "brand": "Fruits De Mer"
     }
   ],
   "frozen-basa-fillets": [
@@ -37463,6 +38557,17 @@
       "height": 1200,
       "verified": true,
       "notes": "500 g shown (item 800 g). pageUrl is the walmart.ca category page the product was listed on"
+    },
+    {
+      "file": "/stores/Brand Photos/frozen-basa-fillets.sobeys-national.jpg",
+      "store": "sobeys",
+      "productTitle": "Aqua Star Frozen Basa Fillets 908 g",
+      "pageUrl": "https://voila.ca/products/092bf6cf-0731-4903-aac4-0d9f38122db2/details",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/9a9e5004-eb68-4b8c-b7f9-b96a17be05cf/800x800.jpg",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "brand": "Aqua Star"
     }
   ],
   "frozen-scallops": [
@@ -37515,6 +38620,18 @@
       "height": 1200,
       "verified": true,
       "notes": "pageUrl is the walmart.ca category page the product was listed on"
+    },
+    {
+      "file": "/stores/Brand Photos/frozen-cooked-shrimp.sobeys-national.jpg",
+      "store": "sobeys",
+      "productTitle": "Toppits Frozen Shrimp Cooked Tail Ecuadorian 340 g",
+      "pageUrl": "https://voila.ca/products/d738b8b2-ee29-46cd-9ca7-06e3a8377187/details",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/e91fed61-a4e8-4f46-8f31-07c21d8a7219/800x800.jpg",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "notes": "cooked, tail on; verify",
+      "brand": "Toppits"
     }
   ],
   "frozen-jumbo-shrimp-tail-on": [
@@ -39685,34 +40802,6 @@
       "notes": "weak: condensed can, not boxed soup. pageUrl is the walmart.ca category page the product was listed on"
     }
   ],
-  "canned-pasta-in-tomato-sauce": [
-    {
-      "file": "/stores/Brand Photos/canned-pasta-in-tomato-sauce.walmart.jpg",
-      "store": "walmart",
-      "brand": "Chef Boyardee",
-      "productTitle": "Chef Boyardee Beefaroni Pasta And Beef in Tomato Sauce",
-      "pageUrl": "https://www.walmart.ca/en/browse/grocery/pantry-food/instant-meals-sides/10019_6000194326346_6000202444928",
-      "imageUrl": "https://i5.walmartimages.ca/asr/930f9239-6460-4a36-a6ee-573dcd601999.bff604ec20ee97ef248703dcd35da2eb.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
-      "width": 1200,
-      "height": 1200,
-      "verified": true,
-      "notes": "weak: pasta with beef in tomato sauce. pageUrl is the walmart.ca category page the product was listed on"
-    }
-  ],
-  "refried-black-beans": [
-    {
-      "file": "/stores/Brand Photos/refried-black-beans.walmart.jpg",
-      "store": "walmart",
-      "brand": "Old El Paso",
-      "productTitle": "Old El Paso Mexican Refried Beans, Pinto",
-      "pageUrl": "https://www.walmart.ca/en/browse/grocery/pantry-food/canned-food/canned-beans-legumes/10019_6000194326346_6000194328515_6000194329530",
-      "imageUrl": "https://i5.walmartimages.ca/asr/0be91146-34c4-47a2-a71a-b3a89ad00324.67e5b6e7add4e31e0cce9c586514f64e.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
-      "width": 1200,
-      "height": 1200,
-      "verified": true,
-      "notes": "weak: pinto refried beans (no black refried beans pack shot available; La Costena listing was a 12-case). pageUrl is the walmart.ca category page the product was listed on"
-    }
-  ],
   "cubed-butternut-squash": [
     {
       "file": "/stores/Brand Photos/cubed-butternut-squash.sobeys.jpg",
@@ -40577,6 +41666,18 @@
       "height": 1200,
       "verified": true,
       "notes": "Coca-Cola Cherry; 12 x 355 mL cans vs catalog 2 L; no Great Value cherry cola listed. pageUrl is the walmart.ca category page the product was listed on"
+    },
+    {
+      "file": "/stores/Brand Photos/cherry-cola.superstore.jpg",
+      "store": "superstore",
+      "productTitle": "Cherry Cola 12x355 ml cans",
+      "pageUrl": "https://www.realcanadiansuperstore.ca/en/search?search-bar=cherry%20cola",
+      "imageUrl": "https://digital.loblaws.ca/PCX/20322361009_C12/en/1/20322361009_en_1_1200.png",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "cans pack vs 2 L bottle",
+      "brand": "Pepsi"
     }
   ],
   "turmeric-latte-mix": [
@@ -40609,16 +41710,16 @@
   ],
   "instant-grits": [
     {
-      "file": "/stores/Brand Photos/instant-grits.sobeys.jpg",
-      "store": "sobeys",
-      "brand": "Bob's Red Mill",
-      "productTitle": "Bob's Red Mill White Corn Grits Polenta 680 g",
-      "pageUrl": "https://voila.ca/search?q=corn+grits+cornmeal",
-      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/88872c59-f45d-4401-b695-5d700d0a2a70/800x800.jpg",
-      "width": 800,
-      "height": 800,
+      "file": "/stores/Brand Photos/instant-grits.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Quaker Quick Grits, 5 lb",
+      "pageUrl": "https://www.walmart.ca/en/ip/Quaker-Quick-Grits-5-lb/3IOZPDTIU3EE",
+      "imageUrl": "https://i5.walmartimages.ca/asr/a1dd1ea1-c722-47dd-af07-35976dd54912.73c5b428318e082b657d0f42177936fb.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
       "verified": true,
-      "notes": "weak: regular (not instant) corn grits, only grits product on Voila (Voila/Sobeys listing)"
+      "notes": "Quick grits, 5 lb vs 500 g.",
+      "brand": "Quaker"
     }
   ],
   "oat-bran": [
@@ -40781,6 +41882,18 @@
       "height": 800,
       "verified": true,
       "notes": "weak: no Yakult on Voila; Activia drinkable probiotic 8 x 93 ml is closest (Voila/Sobeys listing)"
+    },
+    {
+      "file": "/stores/Brand Photos/probiotic-drink.superstore.jpg",
+      "store": "superstore",
+      "productTitle": "BIO-K+ Fermented Milk Probiotic, Original 6x98 g",
+      "pageUrl": "https://www.realcanadiansuperstore.ca/en/search?search-bar=probiotic%20drink",
+      "imageUrl": "https://digital.loblaws.ca/PCX/20313000001_EA/en/1/20313000001_en_front_1200.png",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "Yakult not sold; Bio-K+ is the Superstore probiotic fermented milk drink",
+      "brand": "Bio-K+"
     }
   ],
   "fire-roasted-diced-tomatoes": [
@@ -42815,16 +43928,16 @@
   ],
   "rechargeable-batteries": [
     {
-      "file": "/stores/Brand Photos/rechargeable-batteries.canadiantire.jpg",
+      "file": "/stores/Brand Photos/rechargeable-batteries.canadiantire-hd.jpg",
       "store": "canadiantire",
-      "brand": "NOMA",
-      "productTitle": "Noma AA Ni-MH Rechargeable Battery, 8-pk",
-      "pageUrl": "https://www.canadiantire.ca/en/pdp/-0650106p.html",
-      "imageUrl": "https://media-www.canadiantire.ca/product/fixing/hardware/household-batteries/0650106/noma-aa-ni-mh-rechargeable-battery-8pk-43db45de-601d-4324-938c-a1a3fdb88fd6-jpgrendition.jpg",
-      "width": 526,
-      "height": 1063,
+      "productTitle": "Energizer NH15BP-4 AA 2300 mAh NiMH Rechargeable Batteries, 4-pk",
+      "pageUrl": "https://www.canadiantire.ca/en/pdp/energizer-nh15bp-4-aa-2300-mah-nimh-rechargeable-batteries-pre-charged-all-purpose-4-pk-0650685p.html",
+      "imageUrl": "https://media-www.canadiantire.ca/product/fixing/hardware/household-batteries/0650685/energizer-nimh-aa-rechargeable-batteries-4pk-7e437bbf-8d0f-485f-bef1-a807e38d5799-jpgrendition.jpg",
+      "width": 1120,
+      "height": 1360,
       "verified": true,
-      "notes": "Original jpgrendition (no resize params); white background kept as served."
+      "notes": "Equivalent product: 4-pk Energizer instead of Noma 8-pk; old photo was 526x1063. (pageUrl suffix guessed from SKU)",
+      "brand": "Energizer"
     }
   ],
   "clock-radio": [
@@ -43697,16 +44810,16 @@
   ],
   "pressure-washer": [
     {
-      "file": "/stores/Brand Photos/pressure-washer.canadiantire.jpg",
+      "file": "/stores/Brand Photos/pressure-washer.canadiantire-hd.jpg",
       "store": "canadiantire",
-      "brand": "Certified",
-      "productTitle": "Certified 1800 PSI 1.4 GPM Corded Cold Water Wheeled Brushed Electric Pressure Washer",
-      "pageUrl": "https://www.canadiantire.ca/en/pdp/-3990992p.html",
-      "imageUrl": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/pressure-washers-accessories/3990992/certified-1800psi-electric-pressure-washer-8974a7f9-cf81-4218-8563-14abd5e33854.png",
-      "width": 526,
-      "height": 1000,
+      "productTitle": "Simoniz 1950 PSI 1.8 GPM Wheeled Electric Pressure Washer with Foam Blaster",
+      "pageUrl": "https://www.canadiantire.ca/en/pdp/simoniz-1950-psi-1-8-gpm-wheeled-electric-pressure-washer-with-foam-blaster-0398041p.html",
+      "imageUrl": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/pressure-washers-accessories/0398041/simoniz-1950-psi-electric-pressure-washer-ee4bb872-aa8c-432a-a321-44093933dcf0-jpgrendition.jpg",
+      "width": 2000,
+      "height": 2000,
       "verified": true,
-      "notes": "Original jpgrendition (no resize params); white background kept as served."
+      "notes": "Equivalent product: Certified 1800 PSI photo was 526x1000.",
+      "brand": "Simoniz"
     }
   ],
   "solar-path-lights": [
@@ -44355,16 +45468,16 @@
   ],
   "snow-brush": [
     {
-      "file": "/stores/Brand Photos/snow-brush.canadiantire.jpg",
+      "file": "/stores/Brand Photos/snow-brush.canadiantire-hd.jpg",
       "store": "canadiantire",
-      "brand": "Certified",
-      "productTitle": "Certified Snow Brush with Ice Scraper, 35-in",
-      "pageUrl": "https://www.canadiantire.ca/en/pdp/-0304402p.html",
-      "imageUrl": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-winter-accessories/0304402/certified-35-snow-brush-d86a1231-1d5c-487c-a997-effbcc930a8d-jpgrendition.jpg",
-      "width": 216,
-      "height": 1102,
+      "productTitle": "Mallory Snow Brush with Ice Scraper, 26-in",
+      "pageUrl": "https://www.canadiantire.ca/en/pdp/mallory-snow-brush-with-ice-scraper-26-in-0304426p.html",
+      "imageUrl": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-winter-accessories/0304426/26-snow-brush-scraper-cca5c382-b11c-4cff-bc11-243c1ee5bdfb-jpgrendition.jpg",
+      "width": 1274,
+      "height": 1800,
       "verified": true,
-      "notes": "Original jpgrendition (no resize params); white background kept as served."
+      "notes": "Equivalent product (26 in, not 35 in): Certified photo was 216px wide.",
+      "brand": "Mallory"
     }
   ],
   "windshield-deicer": [
@@ -44817,16 +45930,16 @@
   ],
   "planter-pots": [
     {
-      "file": "/stores/Brand Photos/planter-pots.canadiantire.jpg",
+      "file": "/stores/Brand Photos/planter-pots.canadiantire-hd.jpg",
       "store": "canadiantire",
-      "brand": "Planter's Pride",
-      "productTitle": "Planter's Pride Round Grower Nursery Plant Pot, Assorted Sizes, Green",
-      "pageUrl": "https://www.canadiantire.ca/en/pdp/-0594435p.html",
-      "imageUrl": "https://media-www.canadiantire.ca/product/seasonal-gardening/gardening/gardening-plant-accessories/0594435/grower-planter-4-green-cbcdf288-35b8-4812-ad39-39a0ecfccec0-jpgrendition.jpg",
-      "width": 461,
-      "height": 480,
+      "productTitle": "Bloem Ariana Self-Watering Plastic Round Planter, assorted sizes/colours",
+      "pageUrl": "https://www.canadiantire.ca/en/pdp/bloem-ariana-self-watering-plastic-round-planter-plastic-assorted-sizes-colours-0595703p.html",
+      "imageUrl": "https://media-www.canadiantire.ca/product/seasonal-gardening/gardening/gardening-plant-accessories/0595715/12-ariana-plastic-planter-assorted-00c18473-99de-4c66-9b15-3b904b4c8665-jpgrendition.jpg",
+      "width": 2500,
+      "height": 2500,
       "verified": true,
-      "notes": "weak: single nursery pot shown vs 3-pc set. Original jpgrendition (no resize params); white background kept as served."
+      "notes": "Equivalent product: old Planter's Pride nursery pot photo was 461px and not available larger.",
+      "brand": "Bloem"
     }
   ],
   "garden-gloves": [
@@ -46669,6 +47782,18 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing. 4 ct vs 6 ct"
+    },
+    {
+      "file": "/stores/Brand Photos/pretzel-buns.sobeys-national.jpg",
+      "store": "sobeys",
+      "productTitle": "Portofino Kaiser Buns Pretzel 6 x 720 g",
+      "pageUrl": "https://voila.ca/products/f9859cb2-f004-43fa-b286-cbf002263de4/details",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/808f757d-2846-44a1-a3f1-4001afbf4236/800x800.jpg",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "notes": "Portofino pretzel kaiser buns",
+      "brand": "Portofino"
     }
   ],
   "oatmeal-raisin-cookies": [
@@ -47129,16 +48254,16 @@
   ],
   "laminating-pouches": [
     {
-      "file": "/stores/Brand Photos/laminating-pouches.canadiantire.jpg",
+      "file": "/stores/Brand Photos/laminating-pouches.canadiantire-hd.jpg",
       "store": "canadiantire",
-      "brand": "Fellowes",
-      "productTitle": "Fellowes Glossy SuperQuick Pouches - Letter, 5 mil, 100-pk",
-      "pageUrl": "https://www.canadiantire.ca/en/pdp/-0749898p.html",
-      "imageUrl": "https://media-www.canadiantire.ca/product/living/electronics/home-communications/0749898/fellowes-glossy-superquick-pouches-letter-5-mil-100-pack-1cbf135d-4f12-4d9f-809a-334e293c3f83-jpgrendition.jpg",
-      "width": 227,
-      "height": 410,
+      "productTitle": "Fellowes ImageLast Letter Thermal Laminating Pouches, 5 mil, 100-pk",
+      "pageUrl": "https://www.canadiantire.ca/en/pdp/fellowes-imagelast-letter-thermal-laminating-pouches-5-mm-100-pk-0744774p.html",
+      "imageUrl": "https://media-www.canadiantire.ca/product/living/electronics/home-communications/0694774/letter-laminating-pouches-5-mil-100pk-054c951e-b62b-4665-ae28-b4307a3910af-jpgrendition.jpg",
+      "width": 1800,
+      "height": 1800,
       "verified": true,
-      "notes": "100-pk vs 50 ct. Original jpgrendition (no resize params); white background kept as served."
+      "notes": "Same Fellowes letter 5 mil 100-pk as old photo but different SKU (ImageLast); old glossy SuperQuick image was only 227px.",
+      "brand": "Fellowes"
     }
   ],
   "basic-calculator": [
@@ -47883,32 +49008,18 @@
       "notes": "10-pk kraft vs 12 ct. Original jpgrendition (no resize params); white background kept as served."
     }
   ],
-  "magnetic-tiles": [
-    {
-      "file": "/stores/Brand Photos/magnetic-tiles.canadiantire.jpg",
-      "store": "canadiantire",
-      "brand": "Magnetic Blocks",
-      "productTitle": "Magnetic Blocks Game",
-      "pageUrl": "https://www.canadiantire.ca/en/pdp/-1504366p.html",
-      "imageUrl": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/preschool-toys-activities/1504366/magnetic-blocks-52c617c8-0382-4e6c-8489-185d8c02b61f-jpgrendition.jpg",
-      "width": 1500,
-      "height": 1500,
-      "verified": true,
-      "notes": "weak: Minecraft-themed magnetic building blocks, not plain magnetic tiles; count not stated. weak: Magnetic Blocks Game - verify. Original jpgrendition (no resize params); white background kept as served."
-    }
-  ],
   "family-strategy-board-game": [
     {
-      "file": "/stores/Brand Photos/family-strategy-board-game.canadiantire.jpg",
+      "file": "/stores/Brand Photos/family-strategy-board-game.canadiantire-hd.jpg",
       "store": "canadiantire",
-      "brand": "Sequence",
-      "productTitle": "Goliath Games Sequence Family Strategy Board Game, Ages 7+",
-      "pageUrl": "https://www.canadiantire.ca/en/pdp/-0505455p.html",
-      "imageUrl": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/toys-games/0505455/sequence-1c4d9a96-ccb0-4761-b604-fe42c8bd721d-jpgrendition.jpg",
-      "width": 500,
-      "height": 336,
+      "productTitle": "Blokus Family Board Game, fast-paced strategy game, ages 7+",
+      "pageUrl": "https://www.canadiantire.ca/en/pdp/blokus-family-board-game-fast-paced-strategy-game-for-kids-adults-ages-7-1501862p.html",
+      "imageUrl": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/toys-games/1501862/blokus-game-feb0ba39-572f-45d7-b4e9-0974f6aece01-jpgrendition.jpg",
+      "width": 2000,
+      "height": 2000,
       "verified": true,
-      "notes": "Original jpgrendition (no resize params); white background kept as served."
+      "notes": "Equivalent product: Sequence photo was 500x336 only.",
+      "brand": "Blokus"
     }
   ],
   "action-figure": [
@@ -48515,6 +49626,17 @@
       "height": 1500,
       "verified": true,
       "notes": "Your Fresh Market (Walmart in-store bakery brand); 400 g matches. pageUrl is the walmart.ca category page the product was listed on"
+    },
+    {
+      "file": "/stores/Brand Photos/lemon-loaf-cake.sobeys-national.jpg",
+      "store": "sobeys",
+      "productTitle": "Maison Isabella Sliced Loaf Cake Lemon 420 g",
+      "pageUrl": "https://voila.ca/products/2c6941e9-86e2-48fb-9400-0042df5e9769/details",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/51a8d742-b446-4305-b8d3-69c957e8e34d/800x800.jpg",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "brand": "Maison Isabella"
     }
   ],
   "bakery-brownies": [
@@ -49991,6 +51113,17 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing. store brand; 454 g vs 500 g"
+    },
+    {
+      "file": "/stores/Brand Photos/potato-salad.sobeys-national.jpg",
+      "store": "sobeys",
+      "productTitle": "Moishes Potato Salad Classic 454 g",
+      "pageUrl": "https://voila.ca/products/3b8a55b0-2df7-4afd-b2bc-6fa8a3f7f347/details",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/0810d1f5-a0ba-4346-b5a6-1e9eebc40aec/800x800.jpg",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "brand": "Moishes"
     }
   ],
   "moong-dal": [
@@ -50019,6 +51152,17 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing. Sobeys-owned brand; 520 g vs 500 g, Italian style"
+    },
+    {
+      "file": "/stores/Brand Photos/pasta-salad.sobeys-national.jpg",
+      "store": "sobeys",
+      "productTitle": "Summer Fresh Italiano Pasta Salad 300 g",
+      "pageUrl": "https://voila.ca/products/55adc66b-ec33-4137-9d1d-c985a1714d5b/details",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/3454e406-d442-42a0-93ef-53e402e759aa/800x800.jpg",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "brand": "Summer Fresh"
     }
   ],
   "macaroni-salad": [
@@ -50033,6 +51177,17 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing. store brand; 454 g vs 500 g"
+    },
+    {
+      "file": "/stores/Brand Photos/macaroni-salad.sobeys-national.jpg",
+      "store": "sobeys",
+      "productTitle": "Massibec Macaroni Salad 454 g",
+      "pageUrl": "https://voila.ca/products/373aa5f0-4f1c-4960-bb18-3395b58c5a17/details",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/13454388-e429-4eb3-81bb-5b0421ca48fc/800x800.jpg",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "brand": "Massibec"
     }
   ],
   "egg-salad": [
@@ -50061,6 +51216,18 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing. store brand; 375 g vs 400 g, chicken salad spread"
+    },
+    {
+      "file": "/stores/Brand Photos/chicken-salad.sobeys-national.jpg",
+      "store": "sobeys",
+      "productTitle": "St-Hubert Salad Spread Chicken 375 g",
+      "pageUrl": "https://voila.ca/products/080c2416-56de-44c1-afde-8abefcd071a0/details",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/e0f993ea-4c1a-46dc-af5f-a5d8ac3c1aa4/800x800.jpg",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "notes": "chicken salad spread",
+      "brand": "St-Hubert"
     }
   ],
   "deli-coleslaw": [
@@ -50075,6 +51242,17 @@
       "height": 800,
       "verified": true,
       "notes": "Voila (Sobeys) listing. store brand; 426 g vs 450 g"
+    },
+    {
+      "file": "/stores/Brand Photos/deli-coleslaw.sobeys-national.jpg",
+      "store": "sobeys",
+      "productTitle": "St-Hubert Creamy Coleslaw 454 g",
+      "pageUrl": "https://voila.ca/products/b771ac20-cf5a-4a2d-8197-bb6c6516589f/details",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/0b4ae458-f64c-4744-ad95-391090503cbd/800x800.jpg",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "brand": "St-Hubert"
     }
   ],
   "cheese-tray": [
@@ -50435,16 +51613,16 @@
   ],
   "wire-whisk": [
     {
-      "file": "/stores/Brand Photos/wire-whisk.canadiantire.jpg",
+      "file": "/stores/Brand Photos/wire-whisk.canadiantire-hd.jpg",
       "store": "canadiantire",
-      "brand": "MASTER Chef",
-      "productTitle": "MasterChef Stainless Steel Whisk, 12-in, Grey",
-      "pageUrl": "https://www.canadiantire.ca/en/pdp/-2420864p.html",
-      "imageUrl": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-tools-thermometers/2420864/masterchef-pro-stainless-steel-whisk-12--8a3bf581-d490-47a9-b682-349ce434937a-jpgrendition.jpg",
-      "width": 220,
-      "height": 772,
+      "productTitle": "Cuisinart Oceanware Stainless Steel Whisk with Non-Slip Handle",
+      "pageUrl": "https://www.canadiantire.ca/en/pdp/cuisinart-oceanware-stainless-steel-whisk-with-non-slip-handle-2425236p.html",
+      "imageUrl": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-tools-thermometers/2425236/cuisinart-oceanware-stainless-steel-whisk-47bee23b-e8f8-468f-8ffa-d2c4434e9bba-jpgrendition.jpg",
+      "width": 2500,
+      "height": 2500,
       "verified": true,
-      "notes": "12-in vs 10 in. Original jpgrendition (no resize params); white background kept as served"
+      "notes": "Equivalent product: MasterChef whisk photo was 220px wide.",
+      "brand": "Cuisinart"
     }
   ],
   "rolling-pin": [
@@ -50505,16 +51683,16 @@
   ],
   "potato-masher": [
     {
-      "file": "/stores/Brand Photos/potato-masher.canadiantire.jpg",
+      "file": "/stores/Brand Photos/potato-masher.canadiantire-hd.jpg",
       "store": "canadiantire",
-      "brand": "MASTER Chef",
-      "productTitle": "MasterChef Pro Potato Masher",
-      "pageUrl": "https://www.canadiantire.ca/en/pdp/-2420834p.html",
-      "imageUrl": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-tools-thermometers/2420834/masterchef-pro-potato-masher-be9a873c-91e0-4a3d-92b2-6b54d79a199a-jpgrendition.jpg",
-      "width": 312,
-      "height": 800,
+      "productTitle": "OXO Good Grips Potato Masher",
+      "pageUrl": "https://www.canadiantire.ca/en/pdp/oxo-good-grip-potato-masher-2420797p.html",
+      "imageUrl": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-tools-thermometers/2420797/oxo-good-grips-potato-masher-black-e23914fb-c788-4ded-8baf-fa85ca6e2063-jpgrendition.jpg",
+      "width": 2500,
+      "height": 2500,
       "verified": true,
-      "notes": "Original jpgrendition (no resize params); white background kept as served"
+      "notes": "Equivalent product: MasterChef Pro masher photo was 312px wide.",
+      "brand": "OXO"
     }
   ],
   "pizza-cutter": [
@@ -50959,6 +52137,18 @@
       "verified": true,
       "notes": "the 2x srcset variant (the listing image is only 180px). Metro CDN 403s Node fetch on TLS fingerprint - curl with browser headers gets through",
       "brand": "Selection"
+    },
+    {
+      "file": "/stores/Brand Photos/nutmeg.sobeys-national.jpg",
+      "store": "sobeys",
+      "productTitle": "Club House Ground Nutmeg 39 g",
+      "pageUrl": "https://voila.ca/search?q=club%20house%20ground%20nutmeg",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/ccd08c86-0843-4b64-859f-8d5521d30ceb/800x800.jpg",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "notes": "national brand (nat15); 39 g vs 55 g",
+      "brand": "Club House"
     }
   ],
   "star-anise": [
@@ -51073,6 +52263,18 @@
       "verified": true,
       "notes": "2x srcset variant from the product page; the listing image is only 180px. Metro's CDN 403s a Node fetch on TLS fingerprint - curl with browser headers gets through.",
       "brand": "Selection"
+    },
+    {
+      "file": "/stores/Brand Photos/ginger-powder.sobeys-national.jpg",
+      "store": "sobeys",
+      "productTitle": "Club House Ground Ginger 32 g",
+      "pageUrl": "https://voila.ca/search?q=club%20house%20ground%20ginger",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/3de472a2-5b6a-4f69-a8da-65bc6f69a904/800x800.jpg",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "notes": "national brand (nat15); 32 g vs 35 g",
+      "brand": "Club House"
     }
   ],
   "saffron": [
@@ -51111,6 +52313,17 @@
       "verified": true,
       "notes": "2x srcset variant from the product page; the listing image is only 180px. Metro's CDN 403s a Node fetch on TLS fingerprint - curl with browser headers gets through.",
       "brand": "Irresistibles"
+    },
+    {
+      "file": "/stores/Brand Photos/saffron.sobeys-national.jpg",
+      "store": "sobeys",
+      "productTitle": "McCormick Gourmet Saffron 0.5 g",
+      "pageUrl": "https://voila.ca/products/2ae32656-16aa-48fe-94e0-2c51e13e6d3f/details",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/6d115093-f284-4af1-90a5-4985c861300c/800x800.jpg",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "brand": "McCormick"
     }
   ],
   "whole-cloves": [
@@ -51198,6 +52411,1425 @@
       "verified": true,
       "notes": "brand spelled as in data/brands.ts so it is treated as Metro-only, never borrowed. 2x srcset variant",
       "brand": "Irresistibles"
+    }
+  ],
+  "bath-towels": [
+    {
+      "file": "/stores/Brand Photos/bath-towels.canadiantire.jpg",
+      "store": "canadiantire",
+      "productTitle": "Pima Cotton Bath Towel, Assorted Colours",
+      "pageUrl": "https://www.canadiantire.ca/en/pdp/pima-cotton-bath-towel-assorted-colours-4996221p.html",
+      "imageUrl": "https://media-www.canadiantire.ca/product/living/bed-bath-baby/bed-bath-decor/4996221/assorted-pima-cotton-bath-towel-698c4020-5167-4ca3-9289-ee0bbe7586de-jpgrendition.jpg",
+      "width": 1562,
+      "height": 1920,
+      "verified": true,
+      "notes": "single towel, brand not shown in title",
+      "brand": ""
+    }
+  ],
+  "window-curtains": [
+    {
+      "file": "/stores/Brand Photos/window-curtains.canadiantire.jpg",
+      "store": "canadiantire",
+      "productTitle": "CANVAS Grommet Light Filtering Window Curtain, 54-in x 84-in, 2-pk",
+      "pageUrl": "https://www.canadiantire.ca/en/pdp/canvas-grommet-light-filtering-window-curtain-54-in-x-84-in-2-pk-0460402p.html",
+      "imageUrl": "https://media-www.canadiantire.ca/product/living/home-decor/floor-window-decor/0460405/2-pk-london-beige-54x84--c2af0d47-ca43-4642-bda4-608c0c671665-jpgrendition.jpg",
+      "width": 2500,
+      "height": 2500,
+      "verified": true,
+      "notes": "CT house brand only; beige colourway",
+      "brand": "CANVAS"
+    }
+  ],
+  "wall-clock": [
+    {
+      "file": "/stores/Brand Photos/wall-clock.canadiantire.jpg",
+      "store": "canadiantire",
+      "productTitle": "Designart White Vortex Art Modern Wall Clock, Assorted Sizes",
+      "pageUrl": "https://www.canadiantire.ca/en/pdp/designart-white-vortex-art-modern-wall-clock-assorted-sizes-8740914p.html",
+      "imageUrl": "https://media-www.canadiantire.ca/product/living/home-decor/decor-accents/8740914/designart-white-vortex-art-clock-23-diameter-03bdbc88-61d9-4307-8128-e3d62756300d-jpgrendition.jpg",
+      "width": 2000,
+      "height": 2000,
+      "verified": true,
+      "notes": "decorative art clock",
+      "brand": "Designart"
+    }
+  ],
+  "engine-air-filter": [
+    {
+      "file": "/stores/Brand Photos/engine-air-filter.canadiantire.jpg",
+      "store": "canadiantire",
+      "productTitle": "FRAM Extra Guard Air Filter",
+      "pageUrl": "https://www.canadiantire.ca/en/pdp/fram-extra-guard-air-filter-0233019p.html",
+      "imageUrl": "https://media-www.canadiantire.ca/product/automotive/light-auto-parts/other-filters/0233706/ca30-fram-extra-guard-air-filter-4930f70c-820c-4fe6-9275-d3eabf87f564-jpgrendition.jpg",
+      "width": 928,
+      "height": 1488,
+      "verified": true,
+      "notes": "part CA30 shown",
+      "brand": "FRAM"
+    }
+  ],
+  "dry-erase-whiteboard": [
+    {
+      "file": "/stores/Brand Photos/dry-erase-whiteboard.canadiantire.jpg",
+      "store": "canadiantire",
+      "productTitle": "Hilroy Quartet Dry Erase Board with Marker and Magnet, 8.5 x 11 in",
+      "pageUrl": "https://www.canadiantire.ca/en/pdp/hilroy-quartet-dry-erase-board-with-marker-and-magnet-8-5-in-x-11-in-2425826p.html",
+      "imageUrl": "https://media-www.canadiantire.ca/product/living/bed-bath-baby/office-school-supplies/2425826/quartet-8-5x11-dry-erase-board-with-marker-and-magnet-bd808025-a0cc-4798-85e1-a02082b4178b-jpgrendition.jpg",
+      "width": 2500,
+      "height": 2500,
+      "verified": true,
+      "notes": "small 8.5x11 board, much smaller than 24x36",
+      "brand": "Hilroy"
+    }
+  ],
+  "saline-nasal-spray": [
+    {
+      "file": "/stores/Brand Photos/saline-nasal-spray.sobeys.jpg",
+      "store": "sobeys",
+      "productTitle": "NeilMed Nasamist All In One Nasal Wash 177 ml",
+      "pageUrl": "https://voila.ca/products/6b191379-7302-431e-9bdc-f92c47b1d265/details",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/233dd8c1-38f6-4ea3-a84b-edc195e79913/800x800.jpg",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "notes": "177 ml, not 30 mL",
+      "brand": "NeilMed"
+    }
+  ],
+  "weekly-pill-organizer": [
+    {
+      "file": "/stores/Brand Photos/weekly-pill-organizer.sobeys.jpg",
+      "store": "sobeys",
+      "productTitle": "Compliments Twice a Day Pill Reminder 1 EA",
+      "pageUrl": "https://voila.ca/products/cb455b18-ee6d-4f0a-acf7-e1f77272ce40/details",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/36591b7d-2a5d-49f7-beb8-9305b780d4e1/800x800.jpg",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "notes": "Sobeys house brand",
+      "brand": "Compliments"
+    }
+  ],
+  "heating-pad": [
+    {
+      "file": "/stores/Brand Photos/heating-pad.canadiantire.jpg",
+      "store": "canadiantire",
+      "productTitle": "Sunbeam Premium Electric Heating Pad For Muscle & Joint Pain, Standard Size",
+      "pageUrl": "https://www.canadiantire.ca/en/pdp/sunbeam-premium-electric-heating-pad-for-muscle-joint-pain-standard-size-beige-0439293p.html",
+      "imageUrl": "https://media-www.canadiantire.ca/product/living/personal-garment-care/personal-care/0439293/sunbeam-heating-pad-w-digital-led-controller-bc369b4b-8bb0-42b6-b130-24ffa36effda-jpgrendition.jpg",
+      "width": 1620,
+      "height": 1800,
+      "verified": true,
+      "brand": "Sunbeam"
+    }
+  ],
+  "pool-noodles": [
+    {
+      "file": "/stores/Brand Photos/pool-noodles.canadiantire.jpg",
+      "store": "canadiantire",
+      "productTitle": "Floating Pool Noodle, Multi-Coloured, 56-in, Assorted",
+      "pageUrl": "https://www.canadiantire.ca/en/pdp/floating-pool-noodle-multi-coloured-56-in-assorted-for-beach-pool-fun-activities-0810005p.html",
+      "imageUrl": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-fun/pool-fun/0810005/noodle-king-regular-pool-water-noodle-assorted-23f13fb9-ae88-4666-aeff-0f33e821de72-jpgrendition.jpg",
+      "width": 1920,
+      "height": 1281,
+      "verified": true,
+      "notes": "image file named noodle-king; brand not in title; single noodle",
+      "brand": ""
+    }
+  ],
+  "canada-day-flags": [
+    {
+      "file": "/stores/Brand Photos/canada-day-flags.canadiantire.jpg",
+      "store": "canadiantire",
+      "productTitle": "Small Boat Canada Flag with 14-in Plastic Pole, 5 x 10-in",
+      "pageUrl": "https://www.canadiantire.ca/en/pdp/small-boat-canada-flag-with-14-in-plastic-pole-5-x-10-in-0791611p.html",
+      "imageUrl": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0791611/flag-canadian-mini-5-x-10--60818d94-2dee-4cb0-b56e-87fadd59e859-jpgrendition.jpg",
+      "width": 600,
+      "height": 600,
+      "verified": true,
+      "notes": "single mini flag, not 12-ct",
+      "brand": ""
+    }
+  ],
+  "party-tablecloth": [
+    {
+      "file": "/stores/Brand Photos/party-tablecloth.canadiantire.jpg",
+      "store": "canadiantire",
+      "productTitle": "Rectangle Plastic Reusable Table Cover, Blue, 54x108-in",
+      "pageUrl": "https://www.canadiantire.ca/en/pdp/rectangle-plastic-reusable-table-cover-blue-54x108-in-for-baby-shower-hanukkah-birthday-party-0530070p.html",
+      "imageUrl": "https://media-www.canadiantire.ca/product/seasonal-gardening/party-city-everyday/party-city-dining-entertaining/8421113/54x108in-red-table-cloth-plastic-9675e4d1-3072-4b9a-950d-fa595d9a680a-jpgrendition.jpg",
+      "width": 1920,
+      "height": 834,
+      "verified": true,
+      "notes": "image shows red colourway; single cover",
+      "brand": ""
+    }
+  ],
+  "potted-orchid": [
+    {
+      "file": "/stores/Brand Photos/potted-orchid.sobeys.jpg",
+      "store": "sobeys",
+      "productTitle": "Phalaenopsis Orchid In Ceramic Planter",
+      "pageUrl": "https://voila.ca/products/f3a92481-7b27-43b1-81a7-4fecb86cc0fa/details",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/cf912b38-b3a4-4639-a75c-f7ae84f79cbd/800x800.jpg",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "notes": "unbranded live plant",
+      "brand": ""
+    }
+  ],
+  "mum-plant": [
+    {
+      "file": "/stores/Brand Photos/mum-plant.sobeys.jpg",
+      "store": "sobeys",
+      "productTitle": "Potted Mums 6-Inch",
+      "pageUrl": "https://voila.ca/products/be392afe-99f4-46c8-adff-1cc3e6df57f5/details",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/ea19b5bc-2f5e-413d-a4aa-a207be7648b9/800x800.jpg",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "notes": "unbranded live plant",
+      "brand": ""
+    }
+  ],
+  "poinsettia": [
+    {
+      "file": "/stores/Brand Photos/poinsettia.sobeys.jpg",
+      "store": "sobeys",
+      "productTitle": "Poinsettia Red Potted 6 Inch 1 EA",
+      "pageUrl": "https://voila.ca/products/4ba58a11-3381-456e-8586-fd4279707f6d/details",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/09b28950-cdcf-41fe-b2c6-aa42f43fdc0f/800x800.jpg",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "notes": "unbranded live plant",
+      "brand": ""
+    }
+  ],
+  "lean-ground-beef": [
+    {
+      "file": "/stores/Brand Photos/lean-ground-beef.sobeys.jpg",
+      "store": "sobeys",
+      "productTitle": "Ground Beef Lean 454 g",
+      "pageUrl": "https://voila.ca/search?q=lean%20ground%20beef",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/7c6ed59d-992f-4176-9b77-4097af8af06c/800x800.jpg",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "notes": "Unbranded Sobeys butcher-counter pack (no brand on listing)",
+      "brand": ""
+    }
+  ],
+  "taffy": [
+    {
+      "file": "/stores/Brand Photos/taffy.sobeys.jpg",
+      "store": "sobeys",
+      "productTitle": "The Nut Man Candy Salt Water Taffy Cherry Cola 175 g",
+      "pageUrl": "https://voila.ca/search?q=salt%20water%20taffy",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/c9155d8c-f2d7-42d7-9ee8-85732c800731/800x800.jpg",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "notes": "Cherry Cola flavour; 175 g",
+      "brand": "The Nut Man"
+    }
+  ],
+  "zucchini-noodles": [
+    {
+      "file": "/stores/Brand Photos/zucchini-noodles.sobeys.jpg",
+      "store": "sobeys",
+      "productTitle": "Artisanal Cuts Zucchini Fettuccine 340 g",
+      "pageUrl": "https://voila.ca/search?q=zucchini%20noodles",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/e16dced3-0421-4283-9827-531c90e557af/800x800.jpg",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "notes": "Spiralized zucchini cut as fettuccine; 340 g",
+      "brand": "Artisanal Cuts"
+    }
+  ],
+  "hot-cross-buns": [
+    {
+      "file": "/stores/Brand Photos/hot-cross-buns.sobeys.jpg",
+      "store": "sobeys",
+      "productTitle": "Hot Cross 8 Pack Buns 450 g",
+      "pageUrl": "https://voila.ca/search?q=hot%20cross%20buns",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/7b8e1f05-66e4-4a3d-a989-f2a809a9804b/800x800.jpg",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "notes": "In-store bakery pack of 8; unbranded",
+      "brand": ""
+    }
+  ],
+  "challah-bread": [
+    {
+      "file": "/stores/Brand Photos/challah-bread.sobeys.jpg",
+      "store": "sobeys",
+      "productTitle": "Laromme Premium Baked Egg Challah Twist 425 g (frozen)",
+      "pageUrl": "https://voila.ca/search?q=challah",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/46534346-1e08-40c8-957f-fb6fd2bf811c/800x800.jpg",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "notes": "Sold from freezer case at Sobeys; baked egg challah loaf 425 g",
+      "brand": "Laromme"
+    }
+  ],
+  "potato-bread": [
+    {
+      "file": "/stores/Brand Photos/potato-bread.sobeys.jpg",
+      "store": "sobeys",
+      "productTitle": "Potato Bread 450 g",
+      "pageUrl": "https://voila.ca/search?q=potato%20bread",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/bf66a57c-ee6d-4165-848f-d1018385e01a/800x800.jpg",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "notes": "In-store bakery, unbranded; 450 g",
+      "brand": ""
+    }
+  ],
+  "whole-wheat-rolls": [
+    {
+      "file": "/stores/Brand Photos/whole-wheat-rolls.sobeys.jpg",
+      "store": "sobeys",
+      "productTitle": "Whole Wheat Dinner Buns 12 EA",
+      "pageUrl": "https://voila.ca/search?q=whole%20wheat%20dinner%20rolls",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/cd6d556b-7100-4730-8758-6c0e2ecaa0c0/800x800.jpg",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "notes": "Bakery stock image of dinner rolls on plate; unbranded",
+      "brand": ""
+    }
+  ],
+  "chocolate-eclairs": [
+    {
+      "file": "/stores/Brand Photos/chocolate-eclairs.sobeys.jpg",
+      "store": "sobeys",
+      "productTitle": "Chocolate Eclairs",
+      "pageUrl": "https://voila.ca/search?q=chocolate%20eclairs",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/fbb2b81b-7dd9-49f7-957d-da9f759aa710/800x800.jpg",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "notes": "In-store bakery single eclair shown",
+      "brand": ""
+    }
+  ],
+  "apple-fritters": [
+    {
+      "file": "/stores/Brand Photos/apple-fritters.sobeys.jpg",
+      "store": "sobeys",
+      "productTitle": "Donut Apple Fritter 1 Count",
+      "pageUrl": "https://voila.ca/search?q=apple%20fritters",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/195338f4-ce8a-4ec0-919e-eda290975fba/800x800.jpg",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "notes": "In-store bakery single fritter",
+      "brand": ""
+    }
+  ],
+  "cassava": [
+    {
+      "file": "/stores/Brand Photos/cassava.superstore.png",
+      "store": "superstore",
+      "productTitle": "Cassava (loose, per kg)",
+      "pageUrl": "https://www.realcanadiansuperstore.ca/en/cassava/p/20087682001_KG",
+      "imageUrl": "https://digital.loblaws.ca/PCX/20087682001_KG/en/1/20087682001_en_front_1200.png",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "loose cassava root",
+      "brand": ""
+    }
+  ],
+  "single-serve-creamers": [
+    {
+      "file": "/stores/Brand Photos/single-serve-creamers.superstore.png",
+      "store": "superstore",
+      "productTitle": "Lactantia Half & Half Cream 10% 160x9 ml",
+      "pageUrl": "https://www.realcanadiansuperstore.ca/en/search?search-bar=creamer%20singles",
+      "imageUrl": "https://digital.loblaws.ca/PCX/20213480_EA/en/1/20213480_en_front_1200.png",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "Bulk bag of 9 mL single-serve cream cups (160 ct), larger count than 24 ct; accepted as single-serve creamer",
+      "brand": "Lactantia"
+    }
+  ],
+  "frozen-pepper-and-onion-strips": [
+    {
+      "file": "/stores/Brand Photos/frozen-pepper-and-onion-strips.superstore.jpg",
+      "store": "superstore",
+      "productTitle": "President's Choice 3 Pepper & Onion Blend 500 g",
+      "pageUrl": "https://www.realcanadiansuperstore.ca/en/search?search-bar=frozen%20peppers%20and%20onions",
+      "imageUrl": "https://digital.loblaws.ca/PCX/21106195_EA/en/1/21106195_en_front_1200.png",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "frozen",
+      "brand": "President's Choice"
+    }
+  ],
+  "cat-grass": [
+    {
+      "file": "/stores/Brand Photos/cat-grass.superstore.jpg",
+      "store": "superstore",
+      "productTitle": "Catit Catnip Grass 75 g (Cat Grass kit)",
+      "pageUrl": "https://www.realcanadiansuperstore.ca/en/catnip-grass/p/20032583_EA",
+      "imageUrl": "https://digital.loblaws.ca/PCX/20032583_EA/en/1/2251750128_enfr_front_centre_marketing_GS1_Ecommerce_1200.png",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "box reads Cat Grass; marketing_GS1 file, no promo banner",
+      "brand": "Catit"
+    }
+  ],
+  "sushi-tray": [
+    {
+      "file": "/stores/Brand Photos/sushi-tray.metro.jpg",
+      "store": "metro",
+      "productTitle": "California Sushi Rolls (Bento)",
+      "pageUrl": "https://www.metro.ca/en/online-grocery/search?filter=sushi",
+      "imageUrl": "https://product-images.metro.ca/images/h9c/hb3/13360761405470.jpg",
+      "width": 400,
+      "height": 400,
+      "verified": true,
+      "notes": "Packaged sushi tray of assorted rolls; piece count not verified (item is 24 pc). Image served at 400px, curl with Referer.",
+      "brand": "Bento"
+    }
+  ],
+  "pear-cider-6-cans": [
+    {
+      "file": "/stores/Brand Photos/pear-cider-6-cans.lcbo.jpg",
+      "store": "lcbo",
+      "productTitle": "Somersby Pear Cider 473 mL can",
+      "pageUrl": "https://www.lcbo.com/en/catalogsearch/result/#q=pear%20cider&t=Products&sort=relevancy&layout=card",
+      "imageUrl": "https://aem.lcbo.com/content/dam/lcbo/products/0/1/5/8/015860.jpg.thumb.960.1280.png",
+      "width": 960,
+      "height": 1280,
+      "verified": true,
+      "notes": "single can shown; item is 6 x 473 mL",
+      "brand": "Somersby"
+    }
+  ],
+  "standing-desk": [
+    {
+      "file": "/stores/Brand Photos/standing-desk.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "MotionGrey Standing Desk Height Adjustable Electric Motor Sit-to-Stand Desk Computer for Home and Office - Black Frame (55x24 Tabletop Included)",
+      "pageUrl": "https://www.walmart.ca/en/ip/MotionGrey-Standing-Desk-Height-Adjustable-Electric-Motor-Sit-to-Stand-Desk-Computer-for-Home-and-Office-Black-Frame-55x24-Tabletop-Included/2ZMRM70NSYK7",
+      "imageUrl": "https://i5.walmartimages.ca/asr/d742a17b-1d23-4ee4-8a83-527a62d4d0b7.793c7bf7513ae9fc9f8f2228c9eebad5.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1080,
+      "height": 1080,
+      "verified": true,
+      "notes": "Marketplace seller (MotionGrey); electric height-adjustable, 55x24 top. Photo shows desk with monitors/mat accessories.",
+      "brand": "MotionGrey"
+    }
+  ],
+  "top-load-washer": [
+    {
+      "file": "/stores/Brand Photos/top-load-washer.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "GE 4.9 Cu. Ft. Top Load Washer Diamond Grey-GTW491BMRDG",
+      "pageUrl": "https://www.walmart.ca/en/ip/GE-4-9-Cu-Ft-Top-Load-Washer-Diamond-Grey-GTW491BMRDG/45D3WSD58CI6",
+      "imageUrl": "https://i5.walmartimages.ca/asr/6313b6bf-ffb6-4310-be0a-933dcc362bbb.bf964dea6d787989022bdf81852e008a.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1000,
+      "height": 1000,
+      "verified": true,
+      "notes": "4.9 cu ft vs 5.0; Diamond Grey colour. Sold by GE Appliances Canada.",
+      "brand": "GE"
+    }
+  ],
+  "front-load-washer": [
+    {
+      "file": "/stores/Brand Photos/front-load-washer.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "GE 5.3 cu. ft. (IEC) Capacity Style - Front Load Washer with UltraFresh Vent System White - GFW350SSYWW",
+      "pageUrl": "https://www.walmart.ca/en/ip/GE-5-3-cu-ft-IEC-Capacity-Style-Front-Load-Washer-with-UltraFresh-Vent-System-White-GFW350SSYWW/1W3QBS77CCG4",
+      "imageUrl": "https://i5.walmartimages.ca/asr/107d8d5e-5f4a-4144-b327-9853fd46ef83.cc3cc25bae2d506cf09c904e81a312f4.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "5.3 cu ft vs 5.2. Sold by GE Appliances Canada. Photo has a promo banner (Shut the Door On Odor) across the bottom.",
+      "brand": "GE"
+    }
+  ],
+  "portable-washer": [
+    {
+      "file": "/stores/Brand Photos/portable-washer.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Black + Decker Small Portable Washer, Washing Machine for Household Use, Portable Washer 0.9 Cu. Ft. with 5 Cycles, Transparent Lid & LED Display",
+      "pageUrl": "https://www.walmart.ca/en/ip/Black-Decker-Small-Portable-Washer-Washing-Machine-for-Household-Use-Portable-Washer-0-9-Cu-Ft-with-5-Cycles-Transparent-Lid-LED-Display/6000207358320",
+      "imageUrl": "https://i5.walmartimages.ca/asr/6b5a1343-4edf-4165-aee4-087a5f68aac8.d46065cbb11086a10af3493d0319f920.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "Sold by Walmart.",
+      "brand": "Black+Decker"
+    }
+  ],
+  "electric-dryer": [
+    {
+      "file": "/stores/Brand Photos/electric-dryer.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "GE 7.2 cu.ft. Top Load Electric Dryer with SaniFresh Cycle Diamond Grey - GTD49EBMRDG",
+      "pageUrl": "https://www.walmart.ca/en/ip/GE-7-2-cu-ft-Top-Load-Electric-Dryer-with-SaniFresh-Cycle-Diamond-Grey-GTD49EBMRDG/2D3JFSEUXXNL",
+      "imageUrl": "https://i5.walmartimages.ca/asr/9822d52a-e106-44bc-b552-72ebfc028b71.19e32adb65c0105ee8d774c974d316f1.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1000,
+      "height": 1000,
+      "verified": true,
+      "notes": "7.2 cu ft vs 7.0.",
+      "brand": "GE"
+    }
+  ],
+  "dishwasher": [
+    {
+      "file": "/stores/Brand Photos/dishwasher.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "24\" Stainless Steel Tub Dishwasher with Top control and pocket handle Black - UBT410SGVBB",
+      "pageUrl": "https://www.walmart.ca/en/ip/24-Stainless-Steel-Tub-Dishwasher-with-Top-control-and-pocket-handle-Black-UBT410SGVBB/7IYFZUHP7GXW",
+      "imageUrl": "https://i5.walmartimages.ca/asr/0d10fe61-8dd4-4e78-94a7-5664f0151598.aa1312deca7373b2ae3ffd9f9ebbbb78.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1000,
+      "height": 1000,
+      "verified": true,
+      "notes": "Black colour. Sold by GE Appliances Canada; brand confirmed from photo.",
+      "brand": "GE"
+    }
+  ],
+  "electric-range": [
+    {
+      "file": "/stores/Brand Photos/electric-range.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "GE 30\" Electric Freestanding Smooth Top Range Stainless Steel - JCBS630SVSS",
+      "pageUrl": "https://www.walmart.ca/en/ip/GE-30-Electric-Freestanding-Smooth-Top-Range-Stainless-Steel-JCBS630SVSS/2WW4KQSVME6E",
+      "imageUrl": "https://i5.walmartimages.ca/asr/a253c166-0973-4599-9601-e3d3e9f73a99.7aef808fdbaa66a488875f9167352cfd.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1000,
+      "height": 1000,
+      "verified": true,
+      "brand": "GE"
+    }
+  ],
+  "gas-range": [
+    {
+      "file": "/stores/Brand Photos/gas-range.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "GE 30\" Gas Freestanding Range with Broil Drawer Stainless Steel JCGBS66SEKSS",
+      "pageUrl": "https://www.walmart.ca/en/ip/GE-30-Gas-Freestanding-Range-with-Broil-Drawer-Stainless-Steel-JCGBS66SEKSS/171QCOZ7TPOW",
+      "imageUrl": "https://i5.walmartimages.ca/asr/c2c0678e-0719-453f-8ff9-b5eba580f28c.49e9b4ab8892be358b3a7185177d1ad5.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1000,
+      "height": 1000,
+      "verified": true,
+      "brand": "GE"
+    }
+  ],
+  "tv-75-4k": [
+    {
+      "file": "/stores/Brand Photos/tv-75-4k.walmart.png",
+      "store": "walmart",
+      "productTitle": "onn 75\" QLED 4K UHD Smart Roku TV",
+      "pageUrl": "https://www.walmart.ca/en/ip/onn-75-QLED-4K-UHD-Smart-Roku-TV/64CTJXPHU89U",
+      "imageUrl": "https://i5.walmartimages.ca/asr/eeb19da2-5b38-4495-8126-a3585294caa6.1fcccc4f4a3976d7e15fcf1a4c954b22.png?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "Walmart's own onn. brand, sold by Walmart.",
+      "brand": "onn."
+    }
+  ],
+  "queen-sheet-set": [
+    {
+      "file": "/stores/Brand Photos/queen-sheet-set.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Mainstays Washed Ultra Soft Microfiber Bed Sheet Set, Queen, Papyrus Biege, 4 Piece",
+      "pageUrl": "https://www.walmart.ca/en/ip/Mainstays-Washed-Ultra-Soft-Microfiber-Bed-Sheet-Set-Queen-Papyrus-Biege-4-Piece/6000208864002",
+      "imageUrl": "https://i5.walmartimages.ca/asr/3852a268-1630-4bb7-b6c7-6261cb5151a4.293d4ada4437a935ea189df42e8548e9.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "Beige colour.",
+      "brand": "Mainstays"
+    }
+  ],
+  "throw-blanket": [
+    {
+      "file": "/stores/Brand Photos/throw-blanket.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Mainstays Plush Throw Blanket Black",
+      "pageUrl": "https://www.walmart.ca/en/ip/Mainstays-Plush-Throw-Blanket-Black/6000208538767",
+      "imageUrl": "https://i5.walmartimages.ca/asr/caccb657-343f-440a-9f6d-8e0cfd4299b5.a68ad3a5972cde2bf922f43435584dc7.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "Black plush throw; size not in title. Lifestyle photo (draped on a sofa).",
+      "brand": "Mainstays"
+    }
+  ],
+  "hand-towels": [
+    {
+      "file": "/stores/Brand Photos/hand-towels.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Mainstays 4-Pack Hand Towels, Navy Stripe",
+      "pageUrl": "https://www.walmart.ca/en/ip/Mainstays-4-Pack-Hand-Towels-Navy-Stripe/0WNILFO7JBIE",
+      "imageUrl": "https://i5.walmartimages.ca/asr/d949f7a3-6ec1-42f6-af3c-d79edf17f282.f0ec3345b49fc134bb769787318121f6.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "4-pack vs 6 pc; navy stripe.",
+      "brand": "Mainstays"
+    }
+  ],
+  "composition-notebook": [
+    {
+      "file": "/stores/Brand Photos/composition-notebook.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Mead 09932 Wireless Composition Book- College Rule- 9-3/4 x 7-1/2- White- 100 Sheets",
+      "pageUrl": "https://www.walmart.ca/en/ip/Mead-09932-Wireless-Composition-Book-College-Rule-9-3-4-x-7-1-2-White-100-Sheets/0T58QJ55EMZI",
+      "imageUrl": "https://i5.walmartimages.ca/asr/2ebd1ae3-1aff-4432-8198-98d462b3a392.e2d427de899b1f99636e5f5f881a1460.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "Marketplace seller; wireless-bound Mead composition book, 100 sheets.",
+      "brand": "Mead"
+    }
+  ],
+  "pencil-case": [
+    {
+      "file": "/stores/Brand Photos/pencil-case.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Pen+Gear Blue Large Pencil Case, Dual-Compartment Pencil Holder, Back to School Supplies",
+      "pageUrl": "https://www.walmart.ca/en/ip/Pen-Gear-Blue-Large-Pencil-Case-Dual-Compartment-Pencil-Holder-Back-to-School-Supplies/5MH9CF68MJXK",
+      "imageUrl": "https://i5.walmartimages.ca/asr/13f042b6-bb46-4c32-bcea-a835ffd1c1cf.30d0b9875afada0694197cb8ac346486.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "Walmart's own Pen+Gear brand, sold by Walmart; blue colour.",
+      "brand": "Pen+Gear"
+    }
+  ],
+  "manila-file-folders": [
+    {
+      "file": "/stores/Brand Photos/manila-file-folders.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Continental Manila Color Letter Size Reversible File Folders",
+      "pageUrl": "https://www.walmart.ca/en/ip/Continental-Manila-Color-Letter-Size-Reversible-File-Folders/10192459",
+      "imageUrl": "https://i5.walmartimages.ca/asr/99be23ab-cfe3-4978-9a8b-6bac45dbcf40.343df18db9aedc324b146fcfebbda547.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "Sold by Walmart; Continental 100-count letter-size box (exact count).",
+      "brand": "Continental"
+    }
+  ],
+  "pocket-folders": [
+    {
+      "file": "/stores/Brand Photos/pocket-folders.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "PEN+GEAR 4 PACK TWIN POCKET PORTFOLIO",
+      "pageUrl": "https://www.walmart.ca/en/ip/PEN-GEAR-4-PACK-TWIN-POCKET-PORTFOLIO/6000204686911",
+      "imageUrl": "https://i5.walmartimages.ca/asr/5bc7f5aa-787c-45bd-9785-490b6d6d97c5.387e5aa9b0e5854a6de42060656ce92c.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "4-pack vs 6 ct; Walmart own brand.",
+      "brand": "Pen+Gear"
+    }
+  ],
+  "paper-clips": [
+    {
+      "file": "/stores/Brand Photos/paper-clips.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Pen+Gear Officemate Premium 28 mm Paper Clips, 1,00 count Paper Clips , Silver",
+      "pageUrl": "https://www.walmart.ca/en/ip/Pen-Gear-Officemate-Premium-28-mm-Paper-Clips-1-00-count-Paper-Clips-Silver/6000205770682",
+      "imageUrl": "https://i5.walmartimages.ca/asr/37f75a84-3d3b-4f0b-a6ca-b065e453584e.80c1f8272c4e2c0c7b4e6b63973846ab.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "Pack shows 100 pieces (title says 1,00 count) vs 500 ct item.",
+      "brand": "Pen+Gear"
+    }
+  ],
+  "binder-clips": [
+    {
+      "file": "/stores/Brand Photos/binder-clips.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Pen+Gear Mini Binder Clips, Black, 40 pieces 15 mm Small Paper Clips Included for Home School Office",
+      "pageUrl": "https://www.walmart.ca/en/ip/Pen-Gear-Mini-Binder-Clips-Black-40-pieces-15-mm-Small-Paper-Clips-Included-for-Home-School-Office/6000205764769",
+      "imageUrl": "https://i5.walmartimages.ca/asr/3785b089-0113-4c1f-9d1a-535821d99eef.77967b7ebca3ff5f31a3ef318bdac395.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "40 pieces, mini 15 mm; found on the paper-clips search page.",
+      "brand": "Pen+Gear"
+    }
+  ],
+  "weekly-planner": [
+    {
+      "file": "/stores/Brand Photos/weekly-planner.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Mead Medium Weekly Planner, 2027",
+      "pageUrl": "https://www.walmart.ca/en/ip/Mead-Medium-Weekly-Planner-2027/5HK9X09XHQWP",
+      "imageUrl": "https://i5.walmartimages.ca/asr/128b808f-e52b-432e-9295-fa56a51b629e.a85c0b73c14bdc139efbe525a328769f.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "2027 edition.",
+      "brand": "Mead"
+    }
+  ],
+  "dinosaur-toy-set": [
+    {
+      "file": "/stores/Brand Photos/dinosaur-toy-set.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "CHUANK 12-Pack Kids Assorted Mini Dinosaur Figure Toy Play Set Educational and Realistic Models",
+      "pageUrl": "https://www.walmart.ca/en/ip/CHUANK-12-Pack-Kids-Assorted-Mini-Dinosaur-Figure-Toy-Play-Set-Educational-and-Realistic-Models/5WMUA41O09EU",
+      "imageUrl": "https://i5.walmartimages.ca/asr/b6d69ba6-310f-4076-8793-c35e5fc55e70.0e0518f6091ad00ad39354aadbb92c3b.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1000,
+      "height": 1000,
+      "verified": true,
+      "notes": "Marketplace seller CHUANK; 12 figures in a tube; no brand printed on pack, brand taken from listing.",
+      "brand": "CHUANK"
+    }
+  ],
+  "potted-herb-plant": [
+    {
+      "file": "/stores/Brand Photos/potted-herb-plant.superstore.jpg",
+      "store": "superstore",
+      "productTitle": "4 Inch Rosemary Pot",
+      "pageUrl": "https://www.realcanadiansuperstore.ca/en/search?search-bar=potted%20herbs",
+      "imageUrl": "https://digital.loblaws.ca/PCX/21392587_EA/en/1/21392587_en_front_1200.png",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "unbranded Superstore potted herb; listing is 4 Inch Rosemary Pot, photo shows three assorted herb pots",
+      "brand": ""
+    }
+  ],
+  "knit-scarf": [
+    {
+      "file": "/stores/Brand Photos/knit-scarf.superstore.jpg",
+      "store": "superstore",
+      "productTitle": "Knit Scarf",
+      "pageUrl": "https://www.realcanadiansuperstore.ca/en/search?search-bar=knit%20scarf",
+      "imageUrl": "https://digital.loblaws.ca/JF/F6WR070581003_EA/en/17/f6wr070581_burgundy_lay_down_forward-facing_1200.jpeg",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "no national brand sold",
+      "brand": "Joe Fresh"
+    }
+  ],
+  "mens-jeans": [
+    {
+      "file": "/stores/Brand Photos/mens-jeans.superstore.jpg",
+      "store": "superstore",
+      "productTitle": "Men's Medium Wash Straight Fit Jean",
+      "pageUrl": "https://www.realcanadiansuperstore.ca/en/search?search-bar=mens%20jeans",
+      "imageUrl": "https://digital.loblaws.ca/JF/C0MR060081021_EA/en/1/c0mr060081_medium_wash_on_figure_forward-facing_1200.jpeg",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "exact straight fit; Levi Strauss Signature Gold jeans also sold but fit not stated",
+      "brand": "Joe Fresh"
+    }
+  ],
+  "kids-tshirt": [
+    {
+      "file": "/stores/Brand Photos/kids-tshirt.superstore.jpg",
+      "store": "superstore",
+      "productTitle": "Kid Boys' 2-Pack T-Shirt",
+      "pageUrl": "https://www.realcanadiansuperstore.ca/en/search?search-bar=kids%20t-shirt",
+      "imageUrl": "https://digital.loblaws.ca/JF/C0BK011950004_EA/en/17/c0bk011950_white_lay_down_forward-facing_1200.jpeg",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "plain white tees, 2-pack; other kid tees have graphics",
+      "brand": "Joe Fresh"
+    }
+  ],
+  "canned-pasta-in-tomato-sauce": [
+    {
+      "file": "/stores/Brand Photos/canned-pasta-in-tomato-sauce.superstore.jpg",
+      "store": "superstore",
+      "productTitle": "Alphaghetti (Alphabet Pasta in Tomato Sauce)",
+      "pageUrl": "https://www.realcanadiansuperstore.ca/en/alphaghetti/p/20040380003_EA",
+      "imageUrl": "https://digital.loblaws.ca/PCX/20040380003_EA/en/1/20040380003_en_front_1200.png",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "398 mL; plain alphabet pasta in tomato sauce, no meat; CDN served JPEG bytes",
+      "brand": "Heinz"
+    }
+  ],
+  "refried-black-beans": [
+    {
+      "file": "/stores/Brand Photos/refried-black-beans.superstore.png",
+      "store": "superstore",
+      "productTitle": "Refried Black Beans",
+      "pageUrl": "https://www.realcanadiansuperstore.ca/en/refried-black-beans/p/20054076002_EA",
+      "imageUrl": "https://digital.loblaws.ca/PCX/20054076002_EA/en/1/7639788916_enfr_front_centre_marketing_A_1_GS1_Ecommerce_1200.png",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "546 mL can (larger than 398 mL); only a marketing_GS1 file exists but it is a clean front shot",
+      "brand": "La Costena"
+    }
+  ],
+  "marinated-chicken-breast": [
+    {
+      "file": "/stores/Brand Photos/marinated-chicken-breast.sobeys.jpg",
+      "store": "sobeys",
+      "productTitle": "Boneless Chicken Breast Marinated Dijon",
+      "pageUrl": "https://voila.ca/search?q=marinated%20chicken%20breast",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/35aec7bb-7b25-4937-9242-b36064f1b8bb/800x800.jpg",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "notes": "Fresh raw marinated breast, deli-counter item, unbranded",
+      "brand": ""
+    }
+  ],
+  "iphone-18-pro": [
+    {
+      "file": "/stores/Brand Photos/iphone-18-pro.costco.jpg",
+      "store": "costco",
+      "productTitle": "Apple iPhone 18 Pro Unlocked",
+      "pageUrl": "https://www.costco.ca/apple-iphone-18-pro-unlocked.product.4201049775.html",
+      "imageUrl": "https://gdx-assets.costco.com/adobe/assets/urn:aaid:aem:502f7e57-90d2-4153-943b-c2c29813e484/as/2109926-894__1.avif?width=2000&format=jpg",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "Costco listing (storage not verified); image width param 1200 = max",
+      "brand": "Apple"
+    }
+  ],
+  "iphone-18-pro-max": [
+    {
+      "file": "/stores/Brand Photos/iphone-18-pro-max.costco.jpg",
+      "store": "costco",
+      "productTitle": "Apple iPhone 18 Pro Max Unlocked",
+      "pageUrl": "https://www.costco.ca/apple-iphone-18-pro-max-unlocked.product.4201049770.html",
+      "imageUrl": "https://gdx-assets.costco.com/adobe/assets/urn:aaid:aem:3094696d-7542-4c04-8dc0-c0ec4dcf8b21/as/4201049770-894_silver_1.avif?width=2000&format=jpg",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "Silver colour shown",
+      "brand": "Apple"
+    }
+  ],
+  "iphone-17e": [
+    {
+      "file": "/stores/Brand Photos/iphone-17e.costco.jpg",
+      "store": "costco",
+      "productTitle": "Apple iPhone 17e 256GB Unlocked Smartphone",
+      "pageUrl": "https://www.costco.ca/apple-iphone-17e-256gb-unlocked-smartphone.product.4000448678.html",
+      "imageUrl": "https://gdx-assets.costco.com/adobe/assets/urn:aaid:aem:b27658b9-ae9a-42ad-bf4f-d5d01cb98816/as/4000448678-894_black_1.avif?width=2000&format=jpg",
+      "width": 2000,
+      "height": 2000,
+      "verified": true,
+      "notes": "Black colour shown",
+      "brand": "Apple"
+    }
+  ],
+  "galaxy-s26": [
+    {
+      "file": "/stores/Brand Photos/galaxy-s26.costco.jpg",
+      "store": "costco",
+      "productTitle": "Samsung Galaxy S26 256GB Unlocked Smartphone",
+      "pageUrl": "https://www.costco.ca/samsung-galaxy-s26-256gb-unlocked-smartphone.product.4000443573.html",
+      "imageUrl": "https://gdx-assets.costco.com/adobe/assets/urn:aaid:aem:ba3cc9f9-6d9d-4fef-b38f-43caf58aef8d/as/4000443573-894_blue_1.avif?width=2000&format=jpg",
+      "width": 2000,
+      "height": 2000,
+      "verified": true,
+      "notes": "Blue colour",
+      "brand": "Samsung"
+    }
+  ],
+  "galaxy-s26-ultra": [
+    {
+      "file": "/stores/Brand Photos/galaxy-s26-ultra.costco.jpg",
+      "store": "costco",
+      "productTitle": "Samsung Galaxy S26 Ultra 256GB Unlocked Smartphone",
+      "pageUrl": "https://www.costco.ca/samsung-galaxy-s26-ultra-256gb-unlocked-smartphone.product.4000444384.html",
+      "imageUrl": "https://gdx-assets.costco.com/adobe/assets/urn:aaid:aem:faaab68f-1af1-4895-bfab-4cd4bc91fdb9/as/4000444384-894_blue_1.avif?width=2000&format=jpg",
+      "width": 2000,
+      "height": 2000,
+      "verified": true,
+      "notes": "Blue colour",
+      "brand": "Samsung"
+    }
+  ],
+  "galaxy-z-flip8": [
+    {
+      "file": "/stores/Brand Photos/galaxy-z-flip8.costco.jpg",
+      "store": "costco",
+      "productTitle": "Samsung Galaxy Z Flip8 Unlocked Smartphone",
+      "pageUrl": "https://www.costco.ca/samsung-galaxy-z-flip8-unlocked-smartphone.product.4201029072.html",
+      "imageUrl": "https://gdx-assets.costco.com/adobe/assets/urn:aaid:aem:0c8b3c36-c43c-4515-92f6-71c4765db2e7/as/4201029072-894_black_1.avif?width=2000&format=jpg",
+      "width": 1506,
+      "height": 1506,
+      "verified": true,
+      "notes": "Black colour",
+      "brand": "Samsung"
+    }
+  ],
+  "galaxy-z-fold8": [
+    {
+      "file": "/stores/Brand Photos/galaxy-z-fold8.costco.jpg",
+      "store": "costco",
+      "productTitle": "Samsung Galaxy Z Fold8 5G Unlocked Smartphone",
+      "pageUrl": "https://www.costco.ca/samsung-galaxy-z-fold8-5g-unlocked-smartphone.product.4201029019.html",
+      "imageUrl": "https://bfasset.costco-static.com/U447IH35/at/wjqn87pv66w4nsm7sscbt5wq/4201029019-894_black_1.jpg",
+      "width": 2400,
+      "height": 2400,
+      "verified": true,
+      "notes": "Black colour",
+      "brand": "Samsung"
+    }
+  ],
+  "galaxy-buds4-pro": [
+    {
+      "file": "/stores/Brand Photos/galaxy-buds4-pro.costco.jpg",
+      "store": "costco",
+      "productTitle": "Samsung Galaxy Buds 4 Pro",
+      "pageUrl": "https://www.costco.ca/samsung-galaxy-buds-4-pro.product.4000445172.html",
+      "imageUrl": "https://gdx-assets.costco.com/adobe/assets/urn:aaid:aem:8776b613-c7df-451f-a688-f96aa39aea34/as/4000445172-894_black_1.avif?width=2000&format=jpg",
+      "width": 2000,
+      "height": 2000,
+      "verified": true,
+      "notes": "Black",
+      "brand": "Samsung"
+    }
+  ],
+  "galaxy-buds4": [
+    {
+      "file": "/stores/Brand Photos/galaxy-buds4.costco.jpg",
+      "store": "costco",
+      "productTitle": "Samsung Galaxy Buds 4",
+      "pageUrl": "https://www.costco.ca/samsung-galaxy-buds-4.product.4000445146.html",
+      "imageUrl": "https://gdx-assets.costco.com/adobe/assets/urn:aaid:aem:6d08987e-64dd-4b57-9883-bf654dc23674/as/4000445146-894_black_1.avif?width=2000&format=jpg",
+      "width": 2000,
+      "height": 2000,
+      "verified": true,
+      "notes": "Black",
+      "brand": "Samsung"
+    }
+  ],
+  "airpods-pro-3": [
+    {
+      "file": "/stores/Brand Photos/airpods-pro-3.canadiantire.jpg",
+      "store": "canadiantire",
+      "productTitle": "Apple AirPods Pro 3 True Wireless Buds",
+      "pageUrl": "https://www.canadiantire.ca/en/pdp/apple-airpods-pro-3-0358234p.html",
+      "imageUrl": "https://media-www.canadiantire.ca/product/automotive/electronics/mobile-electronics/0358234/apple-airpods-pro-3-true-wireless-buds-e935dfa9-dfdd-429d-8b46-a9b4f1569d80-jpgrendition.jpg",
+      "width": 2500,
+      "height": 2500,
+      "verified": true,
+      "brand": "Apple"
+    }
+  ],
+  "airpods-4": [
+    {
+      "file": "/stores/Brand Photos/airpods-4.canadiantire.jpg",
+      "store": "canadiantire",
+      "productTitle": "Apple AirPods 4 Wireless Earbuds with Personalized Spatial Audio",
+      "pageUrl": "https://www.canadiantire.ca/en/pdp/apple-airpods-4-wireless-earbuds-with-personalized-spatial-audio-0358232p.html",
+      "imageUrl": "https://media-www.canadiantire.ca/product/automotive/electronics/mobile-electronics/0358232/apple-airpods-4-wireless-earbuds-1be7cb4c-9592-4366-aa70-0d45d12e81b3-jpgrendition.jpg",
+      "width": 1809,
+      "height": 1920,
+      "verified": true,
+      "brand": "Apple"
+    }
+  ],
+  "airpods-4-anc": [
+    {
+      "file": "/stores/Brand Photos/airpods-4-anc.canadiantire.jpg",
+      "store": "canadiantire",
+      "productTitle": "Apple AirPods 4 Wireless ANC Earbuds with Adaptive Audio",
+      "pageUrl": "https://www.canadiantire.ca/en/pdp/apple-airpods-4-wireless-anc-earbuds-with-adaptive-audio-0358233p.html",
+      "imageUrl": "https://media-www.canadiantire.ca/product/automotive/electronics/mobile-electronics/0358233/apple-airpods-4-with-anc-noise-cancelling-ffccd74c-0205-4c54-a126-8da7e0ff6204-jpgrendition.jpg",
+      "width": 2500,
+      "height": 2500,
+      "verified": true,
+      "brand": "Apple"
+    }
+  ],
+  "apple-earpods-usb-c": [
+    {
+      "file": "/stores/Brand Photos/apple-earpods-usb-c.canadiantire.jpg",
+      "store": "canadiantire",
+      "productTitle": "Apple EarPods USB-C Wired Earbuds with Built-in Remote",
+      "pageUrl": "https://www.canadiantire.ca/en/pdp/earpods-usb-type-c-wired-earbuds-with-built-in-remote-0358228p.html",
+      "imageUrl": "https://media-www.canadiantire.ca/product/automotive/electronics/mobile-electronics/0358228/apple-earpods-wired-earbuds-usb-c-949f6075-ab34-4e58-90c6-60d2dc7c46e8-jpgrendition.jpg",
+      "width": 2500,
+      "height": 2500,
+      "verified": true,
+      "brand": "Apple"
+    }
+  ],
+  "samsung-25w-charger": [
+    {
+      "file": "/stores/Brand Photos/samsung-25w-charger.canadiantire.jpg",
+      "store": "canadiantire",
+      "productTitle": "Samsung 25W Super Fast Charging Wall Adaptor with Power Delivery",
+      "pageUrl": "https://www.canadiantire.ca/en/pdp/samsung-25w-super-fast-charging-wall-adaptor-with-power-delivery-0357431p.html",
+      "imageUrl": "https://media-www.canadiantire.ca/product/automotive/electronics/mobile-electronics/0357431/samsung-25w-charging-adaptor-f06a43b8-502f-40a4-8412-dead2f748efc-jpgrendition.jpg",
+      "width": 1920,
+      "height": 1280,
+      "verified": true,
+      "brand": "Samsung"
+    }
+  ],
+  "apple-20w-usb-c-adapter": [
+    {
+      "file": "/stores/Brand Photos/apple-20w-usb-c-adapter.canadiantire.jpg",
+      "store": "canadiantire",
+      "productTitle": "Apple 20W USB-C Portable Fast Charging Power Adapter",
+      "pageUrl": "https://www.canadiantire.ca/en/pdp/apple-20w-usb-c-portable-fast-charging-power-adapter-0358226p.html",
+      "imageUrl": "https://media-www.canadiantire.ca/product/automotive/electronics/mobile-electronics/0358226/apple-20w-usb-c-charging-adaptor-93b7210f-8282-4adc-b381-f41db5d0c242-jpgrendition.jpg",
+      "width": 2500,
+      "height": 2500,
+      "verified": true,
+      "brand": "Apple"
+    }
+  ],
+  "pollock-fillets": [
+    {
+      "file": "/stores/Brand Photos/pollock-fillets.sobeys.jpg",
+      "store": "sobeys",
+      "productTitle": "Compliments Naturally Simple Frozen Wild Pollock Fillets 400 g",
+      "pageUrl": "https://voila.ca/search?q=pollock%20fillets",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/4533b044-634e-47f0-8cd8-624ad673d7c7/800x800.jpg",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "notes": "frozen 400 g; product renamed to the frozen form it is sold in",
+      "brand": "Compliments"
+    }
+  ],
+  "sole-fillets": [
+    {
+      "file": "/stores/Brand Photos/sole-fillets.sobeys.jpg",
+      "store": "sobeys",
+      "productTitle": "Compliments Naturally Simple Frozen Wild Sole Fillets 400 g",
+      "pageUrl": "https://voila.ca/search?q=sole%20fillets",
+      "imageUrl": "https://voila.ca/images-v3/2d92d19c-0354-49c0-8a91-5260ed0bf531/99639dd7-0f1f-4850-84d0-c9fd30d796c1/800x800.jpg",
+      "width": 800,
+      "height": 800,
+      "verified": true,
+      "notes": "frozen 400 g; product renamed to the frozen form it is sold in",
+      "brand": "Compliments"
+    }
+  ],
+  "galaxy-s26-plus": [
+    {
+      "file": "/stores/Brand Photos/galaxy-s26-plus.samsung.png",
+      "store": "samsung",
+      "productTitle": "Samsung Galaxy S26+ (SM-S947W) Onyx Black",
+      "pageUrl": "https://www.samsung.com/ca/smartphones/galaxy-s26/buy/",
+      "imageUrl": "https://images.samsung.com/is/image/samsung/p6pim/ca/s2602/gallery/ca-galaxy-s26-s947-sm-s947wzkexac-550875552?wid=2000&hei=2000&fmt=png-alpha",
+      "width": 1228,
+      "height": 1228,
+      "verified": true,
+      "notes": "manufacturer photo; transparent PNG as served, margins trimmed",
+      "brand": "Samsung"
+    }
+  ],
+  "galaxy-s26-ultra-case": [
+    {
+      "file": "/stores/Brand Photos/galaxy-s26-ultra-case.samsung.png",
+      "store": "samsung",
+      "productTitle": "Galaxy S26 Ultra Silicone Magnet Case (EF-ES948)",
+      "pageUrl": "https://www.samsung.com/ca/mobile-accessories/galaxy-s26-ultra-silicone-magnet-case-blue-violet-ef-es948cvegca/",
+      "imageUrl": "https://images.samsung.com/is/image/samsung/p6pim/ca/s2602/gallery/ca-galaxy-s26ultra-es948-ef-es948cvegca-550703366?wid=2000&hei=2000&fmt=png-alpha",
+      "width": 1313,
+      "height": 1313,
+      "verified": true,
+      "notes": "manufacturer photo; transparent PNG as served, margins trimmed",
+      "brand": "Samsung"
+    }
+  ],
+  "galaxy-s26-case": [
+    {
+      "file": "/stores/Brand Photos/galaxy-s26-case.samsung.png",
+      "store": "samsung",
+      "productTitle": "Galaxy S26 Silicone Magnet Case (EF-ES942)",
+      "pageUrl": "https://www.samsung.com/ca/mobile-accessories/galaxy-s26-silicone-magnet-case-blue-violet-ef-es942cvegca/",
+      "imageUrl": "https://images.samsung.com/is/image/samsung/p6pim/ca/s2602/gallery/ca-galaxy-s26-es942-ef-es942cvegca-550703193?wid=2000&hei=2000&fmt=png-alpha",
+      "width": 1347,
+      "height": 1347,
+      "verified": true,
+      "notes": "manufacturer photo; transparent PNG as served, margins trimmed",
+      "brand": "Samsung"
+    }
+  ],
+  "galaxy-screen-protector": [
+    {
+      "file": "/stores/Brand Photos/galaxy-screen-protector.samsung.png",
+      "store": "samsung",
+      "productTitle": "Galaxy S26 Ultra Anti-Reflecting Film (EF-US948)",
+      "pageUrl": "https://www.samsung.com/ca/mobile-accessories/galaxy-s26-ultra-anti-reflecting-film-transparent-ef-us948ctegca/",
+      "imageUrl": "https://images.samsung.com/is/image/samsung/p6pim/ca/s2602/gallery/ca-galaxy-s26ultra-us948-ef-us948ctegca-550703160?wid=2000&hei=2000&fmt=png-alpha",
+      "width": 1347,
+      "height": 1347,
+      "verified": true,
+      "notes": "manufacturer photo; transparent PNG as served, margins trimmed",
+      "brand": "Samsung"
+    }
+  ],
+  "iphone-17": [
+    {
+      "file": "/stores/Brand Photos/iphone-17.apple.jpg",
+      "store": "apple",
+      "productTitle": "Apple iPhone 17 (Lavender)",
+      "pageUrl": "https://www.apple.com/ca/shop/buy-iphone/iphone-17",
+      "imageUrl": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17-finish-select-202509-lavender?wid=2400",
+      "width": 1000,
+      "height": 1000,
+      "verified": true,
+      "notes": "manufacturer photo; Apple's #f5f5f7 backdrop kept, cropped square around phone",
+      "brand": "Apple"
+    }
+  ],
+  "iphone-air": [
+    {
+      "file": "/stores/Brand Photos/iphone-air.apple.jpg",
+      "store": "apple",
+      "productTitle": "Apple iPhone Air (Sky Blue)",
+      "pageUrl": "https://www.apple.com/ca/shop/buy-iphone/iphone-air",
+      "imageUrl": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-air-finish-select-202509-skyblue?wid=2400",
+      "width": 1000,
+      "height": 1000,
+      "verified": true,
+      "notes": "manufacturer photo; Apple's #f5f5f7 backdrop kept, cropped square around phone",
+      "brand": "Apple"
+    }
+  ],
+  "airpods-max": [
+    {
+      "file": "/stores/Brand Photos/airpods-max.apple.jpg",
+      "store": "apple",
+      "productTitle": "AirPods Max 2 (Midnight)",
+      "pageUrl": "https://www.apple.com/ca/shop/buy-airpods/airpods-max-2",
+      "imageUrl": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/airpods-max-select-202409-midnight?wid=1600",
+      "width": 1600,
+      "height": 916,
+      "verified": true,
+      "notes": "manufacturer photo; current model is AirPods Max 2, photo is the AirPods Max design in Midnight",
+      "brand": "Apple"
+    }
+  ],
+  "iphone-18-pro-clear-case": [
+    {
+      "file": "/stores/Brand Photos/iphone-18-pro-clear-case.apple.jpg",
+      "store": "apple",
+      "productTitle": "iPhone 18 Pro Clear Case with MagSafe",
+      "pageUrl": "https://www.apple.com/ca/shop/product/mkdu4zm/a/iphone-18-pro-clear-case-with-magsafe",
+      "imageUrl": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MKDU4?wid=1500&hei=1500",
+      "width": 1500,
+      "height": 1500,
+      "verified": true,
+      "notes": "manufacturer photo",
+      "brand": "Apple"
+    }
+  ],
+  "iphone-17-silicone-case": [
+    {
+      "file": "/stores/Brand Photos/iphone-17-silicone-case.apple.jpg",
+      "store": "apple",
+      "productTitle": "iPhone 17 Silicone Case with MagSafe - Bright Guava",
+      "pageUrl": "https://www.apple.com/ca/shop/product/mhvq4zm/a/iphone-17-silicone-case-with-magsafe-bright-guava",
+      "imageUrl": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MHVQ4?wid=1500&hei=1500",
+      "width": 1500,
+      "height": 1500,
+      "verified": true,
+      "notes": "manufacturer photo; colour Bright Guava",
+      "brand": "Apple"
+    }
+  ],
+  "apple-magsafe-charger": [
+    {
+      "file": "/stores/Brand Photos/apple-magsafe-charger.apple.jpg",
+      "store": "apple",
+      "productTitle": "MagSafe Charger (2m)",
+      "pageUrl": "https://www.apple.com/ca/shop/product/mgdm4am/a/magsafe-charger-2m",
+      "imageUrl": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MGDM4?wid=1500&hei=1500",
+      "width": 1500,
+      "height": 1500,
+      "verified": true,
+      "notes": "manufacturer photo; 2m length",
+      "brand": "Apple"
+    }
+  ],
+  "magnetic-tiles": [
+    {
+      "file": "/stores/Brand Photos/magnetic-tiles.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Magnetic Tiles for Kids, Educational Magnetic Building Blocks (marketplace)",
+      "pageUrl": "https://www.walmart.caC:/Program Files/Git/en/ip/Magnetic-Tiles/19OZHT68PDSM",
+      "imageUrl": "https://i5.walmartimages.ca/asr/23222343-21b5-4188-b679-42c5c2f4258e.13b748e898ca018e234783ce2b842ff8.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "unbranded translucent magnetic tile set; marketplace listing, includes decorative star shapes in photo",
+      "brand": ""
+    }
+  ],
+  "ride-on-toy-car": [
+    {
+      "file": "/stores/Brand Photos/ride-on-toy-car.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Little Tikes Cozy Coupe Ride-On Toy",
+      "pageUrl": "https://www.walmart.caC:/Program Files/Git/en/ip/Little-Tikes-Cozy-Coupe-Ride-On-Toy/6000196530071",
+      "imageUrl": "https://i5.walmartimages.ca/asr/965d332b-5b62-4dac-a987-be7b00497b97.0d93ff1cff02a6faf84e1da16ac42bcb.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1000,
+      "height": 1000,
+      "verified": true,
+      "notes": "foot-powered ride-on car",
+      "brand": "Little Tikes"
+    }
+  ],
+  "false-lashes": [
+    {
+      "file": "/stores/Brand Photos/false-lashes.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Ardell False Lashes Faux Mink Wispies - 4 Pairs",
+      "pageUrl": "https://www.walmart.caC:/Program Files/Git/en/ip/Ardell-False-Lashes-Faux-Mink-Wispies-4-Pairs/23V3F75GDLP5",
+      "imageUrl": "https://i5.walmartimages.ca/asr/6e2324a1-8363-480a-9864-3685ce2efb94.515fc8d02d35c2433bda4672e1a0bf3f.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "strip lashes, 4-pair pack",
+      "brand": "Ardell"
+    }
+  ],
+  "makeup-bag": [
+    {
+      "file": "/stores/Brand Photos/makeup-bag.walmart.png",
+      "store": "walmart",
+      "productTitle": "Equate Beauty Cosmetic Bag - Quilted 3-Compartment Pyramid Case",
+      "pageUrl": "https://www.walmart.caC:/Program Files/Git/en/ip/Equate-Beauty-Cosmetic-Bag-Quilted-3-Compartment-Pyramid-Case/6000207952969",
+      "imageUrl": "https://i5.walmartimages.ca/asr/44d4ab61-a7e7-4a91-a999-a8f239a4453c.fd028eee4c82216d6e6dbca7817c991f.png?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "Walmart own brand (Equate Beauty); black quilted",
+      "brand": "Equate"
+    }
+  ],
+  "facial-cleansing-brush": [
+    {
+      "file": "/stores/Brand Photos/facial-cleansing-brush.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Electric Facial Cleansing Brush, 4 in 1",
+      "pageUrl": "https://www.walmart.caC:/Program Files/Git/en/ip/Electric-Facial-Cleansing-Brush-4-in-1-Facial-Facial-Cleansing-Brush-Face-Brush-Meticulously-Designed/6D49ECVELL6P",
+      "imageUrl": "https://i5.walmartimages.ca/asr/b387cbc1-985e-4a4e-a892-093a332f8fd4.24c689d294307b9dd3f96c2f5e5c7a1f.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "unbranded marketplace listing; electric spinning brush",
+      "brand": ""
+    }
+  ],
+  "laptop-bag": [
+    {
+      "file": "/stores/Brand Photos/laptop-bag.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Targus 15.6\" Classic Slim Laptop Briefcase",
+      "pageUrl": "https://www.walmart.caC:/Program Files/Git/en/ip/Targus-15-6-Classic-Slim-Laptop-Briefcase/6000192949412",
+      "imageUrl": "https://i5.walmartimages.ca/asr/8864739f-18b5-4563-857e-f03622b938ea.071349983be56bd051bace2b274fe4cb.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "15.6 in briefcase",
+      "brand": "Targus"
+    }
+  ],
+  "mouse-pad": [
+    {
+      "file": "/stores/Brand Photos/mouse-pad.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "onn. Mouse Pad with Smooth Surface and Anti-Slip Rubber Backing",
+      "pageUrl": "https://www.walmart.caC:/Program Files/Git/en/ip/onn-Mouse-Pad-with-Smooth-Surface-and-Anti-Slip-Rubber-Backing/17Y82PONBH5T",
+      "imageUrl": "https://i5.walmartimages.ca/asr/bdf4385d-940b-4dd5-824d-32db979e77bd.0f32278677f625984472df3114231bbb.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "Walmart own brand onn.",
+      "brand": "onn."
+    }
+  ],
+  "phone-tripod": [
+    {
+      "file": "/stores/Brand Photos/phone-tripod.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Adjustable 62\" Cell Phone Tripod with remote",
+      "pageUrl": "https://www.walmart.caC:/Program Files/Git/en/ip/Adjustable-62-Cell-Phone-Tripod-Professional-Phone-Tripod-For-Live-Streaming-Vlogging-And-More-Compatible-with-iPhone-and-Android/2UXJD4FCWXEF",
+      "imageUrl": "https://i5.walmartimages.ca/asr/63c171b6-9fd5-433a-8a8b-924a5556bea1.e774d0fc4b8a5727ca710d544f9fffab.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "unbranded marketplace listing; includes bluetooth remote",
+      "brand": ""
+    }
+  ],
+  "covid-rapid-tests": [
+    {
+      "file": "/stores/Brand Photos/covid-rapid-tests.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Rapid Response COVID-19 Antigen Test",
+      "pageUrl": "https://www.walmart.caC:/Program Files/Git/en/ip/rapid-response-covid-19-antigen-test/6000205150089",
+      "imageUrl": "https://i5.walmartimages.ca/images/Enlarge/166/372/6000205166372.jpg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1500,
+      "height": 1500,
+      "verified": true,
+      "notes": "box shows 2 tests (item is 5 ct); different size",
+      "brand": "Rapid Response"
+    }
+  ],
+  "sweatpants": [
+    {
+      "file": "/stores/Brand Photos/sweatpants.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "George Men's Fleece Sweatpant",
+      "pageUrl": "https://www.walmart.caC:/Program Files/Git/en/ip/George-Men-s-Fleece-Sweatpant/4RHOLL5P8HDT",
+      "imageUrl": "https://i5.walmartimages.ca/asr/17243226-d39a-4c6b-8107-bcb0f361a677.c6e921959ad6e0937cb3f093a5499f20.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "Walmart own brand George; on-model shot (no flat shot available); black",
+      "brand": "George"
+    }
+  ],
+  "iphone-screen-protector": [
+    {
+      "file": "/stores/Brand Photos/iphone-screen-protector.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Onn 2-Pack Premium Tempered Glass Screen Protectors for iPhone 17 Pro/18 Pro",
+      "pageUrl": "https://www.walmart.caC:/Program Files/Git/en/ip/Onn-2-Pack-Premium-Scratch-and-Impact-Absorbing-Tempered-Glass-Screen-Protectors-for-iPhone-17-Pro-18-Pro/0W8LJQNS6MO4",
+      "imageUrl": "https://i5.walmartimages.ca/asr/e929032a-2912-4ba8-a7e6-412b9afde3ef.3760819516aac8befecad0468a8142aa.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "Walmart own brand onn.; 2-pack for 18 Pro / 17 Pro",
+      "brand": "onn."
+    }
+  ],
+  "potted-succulent": [
+    {
+      "file": "/stores/Brand Photos/potted-succulent.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Plantsome Easy Care Succulent Trio in 2.5 inch White Ceramic Pots",
+      "pageUrl": "https://www.walmart.caC:/Program Files/Git/en/ip/Plantsome-Easy-Care-Succulent-Trio-in-2-5-inch-White-Ceramic-Pots-Real-Live-Plants-Succulents/2VL0SYOIJI8X",
+      "imageUrl": "https://i5.walmartimages.ca/asr/242c672d-1cdd-47f6-b1c9-00ac5ea2542b.04417299dcd0d720bfa74fd520449e60.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "photo shows a trio of 3 potted succulents in 2.5in white pots (item is single 3in pot); marketplace",
+      "brand": "Plantsome"
+    }
+  ],
+  "peace-lily": [
+    {
+      "file": "/stores/Brand Photos/peace-lily.walmart.png",
+      "store": "walmart",
+      "productTitle": "Peace Lily (M) Live Plants in 6\" growers pot",
+      "pageUrl": "https://www.walmart.caC:/Program Files/Git/en/ip/Spathiphyllum-Peace-Lily-M-Live-Plants-in-6-growers-pot/79C4X9ZWH6G0",
+      "imageUrl": "https://i5.walmartimages.ca/asr/b5f30832-a39d-4447-b233-19258b40dfa7.f088315719b721adb70ca36908c94ae7.png?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "6 in growers pot (item 6 in); marketplace seller photo",
+      "brand": "Spathiphyllum"
+    }
+  ],
+  "aloe-vera-plant": [
+    {
+      "file": "/stores/Brand Photos/aloe-vera-plant.walmart.png",
+      "store": "walmart",
+      "productTitle": "Aloe Vera (S) Live Plants in 4\" growers pot",
+      "pageUrl": "https://www.walmart.caC:/Program Files/Git/en/ip/Aloe-Vera-S-Live-Plants-in-4-growers-pot/49AHJ7Z2IQAC",
+      "imageUrl": "https://i5.walmartimages.ca/asr/9beb9bd7-c4b1-4d4e-9b58-25066da60b8f.5e28cc4042fac94f7db71787733786f5.png?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "4 in growers pot; marketplace seller photo",
+      "brand": ""
+    }
+  ],
+  "clothespins": [
+    {
+      "file": "/stores/Brand Photos/clothespins.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Neatfreak 50 Wood Clothes Pins",
+      "pageUrl": "https://www.walmart.caC:/Program Files/Git/en/ip/Neatfreak-50-Wood-Clothes-Pins/10144436",
+      "imageUrl": "https://i5.walmartimages.ca/asr/e073a048-83f0-423d-a4ba-f51521474d7b.bc75b7afb5656bcdd4fd6b520e2126a5.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "50 ct wood",
+      "brand": "Neatfreak"
+    }
+  ],
+  "rubber-bands": [
+    {
+      "file": "/stores/Brand Photos/rubber-bands.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Pen+Gear 1/4lb Rubber Bands #32",
+      "pageUrl": "https://www.walmart.caC:/Program Files/Git/en/ip/Pen-gear-1-4LB-RUBBER-BAND-32/6000199189673",
+      "imageUrl": "https://i5.walmartimages.ca/asr/b1d9d430-dc47-43ab-9be9-d966c0fb1eec.3bedba8de08577cf8a30762cba49294e.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "113.4 g bag (item 100 g); Walmart own brand",
+      "brand": "Pen+Gear"
+    }
+  ],
+  "empty-spray-bottle": [
+    {
+      "file": "/stores/Brand Photos/empty-spray-bottle.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Mainstays Plastic 16 fl oz Refillable Spray Bottle with Adjustable Nozzle",
+      "pageUrl": "https://www.walmart.caC:/Program Files/Git/en/ip/Mainstays-Plastic-16-fl-oz-Refillable-Spray-Bottle-with-Adjustable-Nozzle-1-Piece/6000204214151",
+      "imageUrl": "https://i5.walmartimages.ca/asr/c99e29dc-2ab7-4b9b-b28d-9f8cc170f0cf.29519a5e0c8413482759e950452ac27e.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "16 fl oz (473 mL) vs item 500 mL; Walmart own brand",
+      "brand": "Mainstays"
+    }
+  ],
+  "small-animal-bedding": [
+    {
+      "file": "/stores/Brand Photos/small-animal-bedding.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Kaytee Forti-Diet Clean Comfort Natural Bedding",
+      "pageUrl": "https://www.walmart.caC:/Program Files/Git/en/ip/Kaytee-Forti-Diet-Clean-Comfort-Natural-Bedding/6000203482116",
+      "imageUrl": "https://i5.walmartimages.ca/asr/7dd7bd11-095c-4ce4-8aa7-acbebbcb6760.1bd2cc021d6ece9e162dd4849d10c110.jpeg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1200,
+      "height": 1200,
+      "verified": true,
+      "notes": "72 L bag (item 8 L); different size",
+      "brand": "Kaytee"
+    }
+  ],
+  "banana-peppers": [
+    {
+      "file": "/stores/Brand Photos/banana-peppers.walmart.jpg",
+      "store": "walmart",
+      "productTitle": "Peppers, Hot Banana, Your Fresh Market, 225 g",
+      "pageUrl": "https://www.walmart.caC:/Program Files/Git/en/ip/peppers-hot-banana-your-fresh-market/6000207536650",
+      "imageUrl": "https://i5.walmartimages.ca/images/Enlarge/902/216/6000207902216.jpg?odnHeight=1200&odnWidth=1200&odnBg=FFFFFF",
+      "width": 1500,
+      "height": 1500,
+      "verified": true,
+      "notes": "packaged 225 g (item sold per lb); Walmart produce brand",
+      "brand": "Your Fresh Market"
     }
   ]
 }
