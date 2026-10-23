@@ -1,0 +1,190 @@
+/* The instant-results panel, hanging off the compact header bar (which is
+   position:relative). Mirrors the cart/wishlist dropdowns: white surface,
+   10px radius, the same lift, and the same pop-in. */
+.panel {
+  position: absolute;
+  top: calc(100% + 10px);
+  /* Centred on the bar rather than left-aligned: the bar is itself centred in
+     the header, and the panel is wider than it. */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 41;
+  /* Wide enough that a long product name and a long shop name - "Milk
+     Chocolate Bar 100 g" at "Real Canadian Superstore" - both fit on the one
+     line the row is meant to be. */
+  width: min(600px, calc(100vw - 24px));
+  /* Tall enough for the full eight rows (two products across four shops), so
+     the common case shows everything rather than putting a scroll track beside
+     a single clipped row. A short window still falls back to scrolling, which
+     is what keeps the panel from running off a fixed header and out of reach
+     below the fold. */
+  max-height: min(60vh, 480px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  padding: 8px;
+  background: var(--color-white);
+  border-radius: 10px;
+  box-shadow: 0 14px 44px rgba(0, 0, 0, 0.22);
+  text-align: left;
+  animation: pop 160ms ease;
+}
+
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -6px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .panel {
+    animation: none;
+  }
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* Photo | Product name | Store .......... Price | Add */
+.row {
+  display: flex;
+  align-items: center;
+  gap: clamp(8px, 1.5vw, 12px);
+  padding: 8px 10px;
+  border-radius: 8px;
+  transition: background 120ms ease;
+}
+
+.row:hover {
+  background: var(--color-lavender-surface); /* rgb(244, 242, 252) */
+}
+
+/* ---- Photo ---------------------------------------------------------- */
+
+.thumb {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  overflow: hidden;
+  /* The packshots are shot on white, so on a white panel they disappear. Same
+     light tile the product cards frame their photos with. */
+  background: #f1f5f9;
+}
+
+.thumbImg {
+  width: 100%;
+  height: 100%;
+  /* Packshots sit on their own ground, so fit the whole thing rather than
+     cropping into the label. */
+  object-fit: contain;
+}
+
+.emoji {
+  font-size: 22px;
+  line-height: 1;
+}
+
+/* ---- Name + store ----------------------------------------------------
+   `display: contents` keeps both as direct children of the row, so they lay
+   out as their own columns. The phone breakpoint below turns this wrapper
+   back into a real box and stacks them. */
+.info {
+  display: contents;
+}
+
+.name {
+  /* Shrinks last: "Real Canadian Superstore" is long, and squeezing the
+     product down to "2%..." to spell the shop out in full is the wrong way
+     round. */
+  flex: 1 1 auto;
+  min-width: 0;
+  color: var(--color-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Brand-coloured: the shop is what differs between otherwise identical rows,
+   so it is the one thing worth tinting. */
+.store {
+  /* Gives up width three times faster than the name, and never takes more
+     than a third of the row. */
+  flex: 0 3 auto;
+  min-width: 0;
+  max-width: 34%;
+  color: var(--color-primary); /* rgb(65, 58, 120) */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.row:hover .store {
+  color: var(--color-primary-hover); /* rgb(46, 41, 84) */
+}
+
+.price {
+  flex-shrink: 0;
+  color: var(--color-text);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Holds its width so the row does not shuffle when ADD becomes a stepper. */
+.addCell {
+  flex-shrink: 0;
+  /* The stepper the + turns into is the wider of the two states, so hold its
+     width up front and the row does not jump when something is added. */
+  min-width: 80px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.status {
+  padding: 16px 10px;
+  text-align: center;
+  color: var(--color-text-muted);
+}
+
+/* ---- Phones: stack the name over the shop so neither has to truncate to
+   nothing, and let ADD size to its content. ---------------------------- */
+@media (max-width: 560px) {
+  .row {
+    gap: 10px;
+    padding: 8px;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .name,
+  .store {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .addCell {
+    min-width: 0;
+  }
+}

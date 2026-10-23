@@ -26,6 +26,17 @@ export interface CartLineItemProps {
    * leave the chevron inert.
    */
   storeOffers?: StoreOffer[];
+  /**
+   * What this line costs at the store currently showing, per single unit.
+   * Rendered under the store so the shopper can read a price without opening
+   * the comparison dropdown — which was the only place it existed before.
+   */
+  price?: number;
+  /**
+   * The catalog unit this price is per: "jar", "bag", "block". Drives the
+   * "/jar" suffix. Omit when unknown and the price shows on its own.
+   */
+  unit?: string;
   /** Id of the currently selected offer (defaults to the first). */
   selectedOfferId?: string;
   onSelectOffer?: (offerId: string) => void;
@@ -52,11 +63,21 @@ export function CartLineItem({
   onDecrement,
   onAdd,
   storeOffers,
+  price,
+  unit,
   selectedOfferId,
   onSelectOffer,
   className,
 }: CartLineItemProps) {
   const [open, setOpen] = useState(false);
+
+  /*
+   * "$4.99/jar", or "$2.09 each" when the unit is the catalog's "each" — by
+   * far its most common value (618 products), and "/each" does not read as
+   * English. No unit at all (a generated or curated line) shows the bare
+   * price rather than inventing one.
+   */
+  const perUnit = !unit ? "" : unit === "each" ? " each" : `/${unit}`;
 
   const offers = storeOffers ?? [];
   const hasOffers = offers.length > 0;
@@ -79,7 +100,7 @@ export function CartLineItem({
       </div>
 
       <div className={styles.meta}>
-        <Text as="p" variant="mediumBold" className={styles.name}>
+        <Text as="p" variant="mediumRegular" className={styles.name}>
           {name}
         </Text>
 
@@ -156,6 +177,13 @@ export function CartLineItem({
             </>
           )}
         </div>
+
+        {price !== undefined && (
+          <Text as="p" variant="smallBold" className={styles.price}>
+            {formatPrice(price)}
+            {perUnit}
+          </Text>
+        )}
       </div>
 
       <AddButton

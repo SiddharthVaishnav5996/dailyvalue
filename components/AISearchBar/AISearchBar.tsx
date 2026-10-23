@@ -2,6 +2,7 @@
 
 import { useEffect, useId, useLayoutEffect, useRef, useState } from "react";
 import { AudioLines, CircleStop, Paperclip, Search } from "lucide-react";
+import { QuickSearchResults } from "./QuickSearchResults";
 import styles from "./AISearchBar.module.css";
 
 export interface AISearchBarProps {
@@ -32,6 +33,14 @@ export interface AISearchBarProps {
    * 75px-tall strip and has nowhere to grow into.
    */
   multiline?: boolean;
+  /**
+   * Show the instant catalog results panel while typing.
+   *
+   * On for the header's compact bar, which is the quick-lookup entry point for
+   * a shopper who already knows what they want and does not need the AI to
+   * plan a shop. Off for the big bar, whose whole job is to ask the AI.
+   */
+  showQuickResults?: boolean;
   className?: string;
 }
 
@@ -75,6 +84,7 @@ export function AISearchBar({
   showActions = true,
   size = "default",
   multiline = size !== "compact",
+  showQuickResults = size === "compact",
   className,
 }: AISearchBarProps) {
   const [internalValue, setInternalValue] = useState("");
@@ -85,6 +95,12 @@ export function AISearchBar({
 
   const [isRecording, setIsRecording] = useState(false);
   const [elapsedSeconds, setElapsedSeconds] = useState(0);
+
+  // Whether the instant-results panel is showing. The panel itself decides it
+  // has nothing to say for a one-character query, so this only tracks intent:
+  // typing or focusing opens it, Escape / a click outside / searching closes it.
+  const [quickOpen, setQuickOpen] = useState(false);
+  const quickVisible = showQuickResults && quickOpen && inputValue.trim().length >= 2;
 
   const rotating = (placeholders?.length ?? 0) > 1;
   const [placeholderIndex, setPlaceholderIndex] = useState(0);
@@ -137,10 +153,12 @@ export function AISearchBar({
     const next = e.target.value;
     if (onChange) onChange(next);
     else setInternalValue(next);
+    if (showQuickResults) setQuickOpen(true);
   }
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+    setQuickOpen(false);
     onSubmit?.(inputValue.trim());
   }
 
@@ -151,6 +169,13 @@ export function AISearchBar({
    * the search has to be triggered here.
    */
   function handleKeyDown(e: React.KeyboardEvent<HTMLTextAreaElement>) {
+    // Escape dismisses the results without clearing what was typed.
+    if (e.key === "Escape" && quickVisible) {
+      e.preventDefault();
+      setQuickOpen(false);
+      return;
+    }
+
     if (e.key !== "Enter") return;
 
     // Typing Japanese, Chinese or Korean goes through an input method editor,
@@ -189,93 +214,115 @@ export function AISearchBar({
   }
 
   return (
-    <form
-      className={[styles.bar, size === "compact" ? styles.barCompact : "", className]
-        .filter(Boolean)
-        .join(" ")}
-      onSubmit={handleSubmit}
-      role="search"
-    >
-      <Search className={styles.icon} aria-hidden="true" size={size === "compact" ? 18 : 20} />
-      <label htmlFor={inputId} className={styles.srOnly}>
-        Ask DailyValue
-      </label>
-
-      {/* The rotating placeholder can't be the native `placeholder` attribute —
-          that's a plain string and isn't animatable. It's an overlay instead,
-          shown only while the field is empty, and never clickable so taps still
-          land on the input underneath. */}
-      <div className={styles.field}>
-        <textarea
-          id={inputId}
-          ref={fieldRef}
-          // One line to start with. Anything taller is measured and applied
-          // above; without this a textarea opens two rows deep.
-          rows={1}
-          className={styles.input}
-          value={inputValue}
-          onChange={handleChange}
-          onKeyDown={handleKeyDown}
-          placeholder={rotating ? "" : placeholder}
-          autoComplete="off"
-          // Phone keyboards show a "search" key instead of a newline key.
-          enterKeyHint="search"
+    <>
+      {/* Transparent full-screen catcher, so a click anywhere else dismisses
+          the results - the same approach the cart and wishlist panels use. It
+          is a SIBLING of the bar, not a child: the bar lifts above it while
+          open (.barQuickOpen) so the field stays typable underneath. */}
+      {quickVisible && (
+        <div
+          className={styles.quickCatcher}
+          onClick={() => setQuickOpen(false)}
+          role="presentation"
         />
-        {rotating && !inputValue && (
-          <div className={styles.rotator} aria-hidden="true">
-            <span
-              key={placeholderIndex}
-              className={styles.rotatorItem}
-              style={{ animationDuration: `${rotateMs}ms` }}
-            >
-              {placeholders![placeholderIndex]}
-            </span>
-          </div>
-        )}
-      </div>
+      )}
 
-      {showActions && (
-      <div className={styles.actions}>
-        <input
-          ref={fileInputRef}
-          type="file"
-          onChange={handleFileChange}
-          className={styles.hiddenFileInput}
-          tabIndex={-1}
-          aria-hidden="true"
-        />
-        <button
-          type="button"
-          className={styles.actionBtn}
-          onClick={handleAttachmentClick}
-          aria-label="Attach a file"
-        >
-          <Paperclip className={styles.icon} aria-hidden="true" size={20} />
-        </button>
-        {isRecording ? (
-          <div className={styles.recording}>
-            <span className={styles.timer}>{formatElapsed(elapsedSeconds)}</span>
-            <button
-              type="button"
-              className={styles.actionBtn}
-              onClick={stopRecording}
-              aria-label="Stop recording"
-            >
-              <CircleStop className={styles.icon} aria-hidden="true" size={20} />
-            </button>
-          </div>
-        ) : (
+      <form
+        className={[
+          styles.bar,
+          size === "compact" ? styles.barCompact : "",
+          quickVisible ? styles.barQuickOpen : "",
+          className,
+        ]
+          .filter(Boolean)
+          .join(" ")}
+        onSubmit={handleSubmit}
+        role="search"
+      >
+        <Search className={styles.icon} aria-hidden="true" size={size === "compact" ? 18 : 20} />
+        <label htmlFor={inputId} className={styles.srOnly}>
+          Ask DailyValue
+        </label>
+
+        {/* The rotating placeholder can't be the native `placeholder` attribute —
+            that's a plain string and isn't animatable. It's an overlay instead,
+            shown only while the field is empty, and never clickable so taps still
+            land on the input underneath. */}
+        <div className={styles.field}>
+          <textarea
+            id={inputId}
+            ref={fieldRef}
+            // One line to start with. Anything taller is measured and applied
+            // above; without this a textarea opens two rows deep.
+            rows={1}
+            className={styles.input}
+            value={inputValue}
+            onChange={handleChange}
+            onKeyDown={handleKeyDown}
+            onFocus={() => showQuickResults && setQuickOpen(true)}
+            placeholder={rotating ? "" : placeholder}
+            autoComplete="off"
+            // Phone keyboards show a "search" key instead of a newline key.
+            enterKeyHint="search"
+          />
+          {rotating && !inputValue && (
+            <div className={styles.rotator} aria-hidden="true">
+              <span
+                key={placeholderIndex}
+                className={styles.rotatorItem}
+                style={{ animationDuration: `${rotateMs}ms` }}
+              >
+                {placeholders![placeholderIndex]}
+              </span>
+            </div>
+          )}
+        </div>
+
+        {showActions && (
+        <div className={styles.actions}>
+          <input
+            ref={fileInputRef}
+            type="file"
+            onChange={handleFileChange}
+            className={styles.hiddenFileInput}
+            tabIndex={-1}
+            aria-hidden="true"
+          />
           <button
             type="button"
             className={styles.actionBtn}
-            onClick={startRecording}
-            aria-label="Search by voice"
+            onClick={handleAttachmentClick}
+            aria-label="Attach a file"
           >
-            <AudioLines className={styles.icon} aria-hidden="true" size={20} />
+            <Paperclip className={styles.icon} aria-hidden="true" size={20} />
           </button>
+          {isRecording ? (
+            <div className={styles.recording}>
+              <span className={styles.timer}>{formatElapsed(elapsedSeconds)}</span>
+              <button
+                type="button"
+                className={styles.actionBtn}
+                onClick={stopRecording}
+                aria-label="Stop recording"
+              >
+                <CircleStop className={styles.icon} aria-hidden="true" size={20} />
+              </button>
+            </div>
+          ) : (
+            <button
+              type="button"
+              className={styles.actionBtn}
+              onClick={startRecording}
+              aria-label="Search by voice"
+            >
+              <AudioLines className={styles.icon} aria-hidden="true" size={20} />
+            </button>
+          )}
+        </div>
         )}
-      </div>
-      )}
-    </form>
+
+        {quickVisible && <QuickSearchResults query={inputValue} />}
+      </form>
+    </>
   );
 }

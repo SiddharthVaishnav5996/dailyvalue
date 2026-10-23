@@ -1,6 +1,13 @@
 "use client";
 
-import { createContext, useCallback, useContext, useMemo, useState } from "react";
+import {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useState,
+} from "react";
 
 /** A line in the cart. Carries enough detail for any page to render it (e.g.
  *  the checkout list) without a cross-catalog product lookup. */
@@ -49,17 +56,95 @@ interface CartContextValue {
 
 const CartContext = createContext<CartContextValue | null>(null);
 
+/*
+ * Where the basket lives between visits.
+ * ---------------------------------------------------------------------------
+ * localStorage, not sessionStorage: a basket should outlive the tab. A shopper
+ * who closes the window and comes back tomorrow expects their trolley to still
+ * be there - losing it is the most expensive thing this app can forget.
+ * (Search results are the opposite case and correctly use sessionStorage.)
+ *
+ * The WHOLE line is stored, not just { id, quantity }. CartItem deliberately
+ * carries enough detail to render anywhere without a catalog lookup, and that
+ * matters here: generated ("g-...") and curated ("cc-...") lines have no
+ * catalog row to look up, so an id-only format would silently drop them.
+ *
+ * Quantity-0 tombstones are stored too. They are how `ensureItem` knows not to
+ * re-add something the shopper removed; dropping them on save would let a page
+ * re-seed resurrect a deleted line after every refresh.
+ */
+const STORAGE_KEY = "dailyvalue:cart:v1";
+
+/** Is this parsed blob shaped like a cart line? Storage is editable by anyone. */
+function isCartItem(v: unknown): v is CartItem {
+  const i = v as Partial<CartItem> | null;
+  return (
+    Boolean(i) &&
+    typeof i!.id === "string" &&
+    typeof i!.name === "string" &&
+    typeof i!.price === "number" &&
+    typeof i!.quantity === "number"
+  );
+}
+
 /**
  * App-wide cart, keyed by product id → { details, quantity }. Shared by every
  * page — the landing storefront, the AI-result products page, and checkout —
- * so a basket built anywhere is the same basket everywhere. In-memory for now
- * (swap for a persisted/backed cart later).
+ * so a basket built anywhere is the same basket everywhere. Persisted to
+ * localStorage so it survives a refresh (see STORAGE_KEY above); a real build
+ * would move it server-side so it follows the shopper between devices.
  *
  * Removed lines are kept at quantity 0 (not deleted) so `ensureItem` won't
  * re-add something the user took out when a page re-seeds on revisit.
  */
 export function CartProvider({ children }: { children: React.ReactNode }) {
   const [entries, setEntries] = useState<Record<string, CartItem>>({});
+
+  /*
+   * Restore once, after the first render.
+   *
+   * It has to be an effect rather than a lazy useState initialiser, because
+   * Next renders this page on the server first and the server has no
+   * localStorage. Reading it during render would make the browser build
+   * different HTML from the server's, which is a hydration mismatch.
+   *
+   * `hydrated` is state rather than a ref on purpose. The save effect below
+   * reads it, and a ref flipped inside this effect would already be true when
+   * the save effect runs in the same commit - so it would write the empty
+   * starting basket over real stored data before the restore re-render landed.
+   * A state flag is still false in that pass, so nothing is clobbered.
+   */
+  const [hydrated, setHydrated] = useState(false);
+
+  useEffect(() => {
+    try {
+      const raw = window.localStorage.getItem(STORAGE_KEY);
+      if (raw) {
+        const parsed: unknown = JSON.parse(raw);
+        if (parsed && typeof parsed === "object" && !Array.isArray(parsed)) {
+          const clean: Record<string, CartItem> = {};
+          for (const [id, item] of Object.entries(parsed)) {
+            if (isCartItem(item)) clean[id] = item;
+          }
+          // eslint-disable-next-line react-hooks/set-state-in-effect
+          setEntries(clean);
+        }
+      }
+    } catch {
+      // Private browsing, cleared storage, or malformed JSON. Start empty.
+    }
+    setHydrated(true);
+  }, []);
+
+  // Save on every change, once the restore has run.
+  useEffect(() => {
+    if (!hydrated) return;
+    try {
+      window.localStorage.setItem(STORAGE_KEY, JSON.stringify(entries));
+    } catch {
+      // Storage full or blocked. The basket just will not outlive the tab.
+    }
+  }, [entries, hydrated]);
 
   const addItem = useCallback((item: CartItemInput) => {
     setEntries((prev) => {

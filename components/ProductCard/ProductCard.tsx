@@ -225,31 +225,28 @@ export function ProductCard({
         </button>
       </div>
 
-      {/* Price left, Add/stepper right — pinned to the card's bottom (see
-          .priceStepperRow's margin-top: auto) so it lands on the same spot
-          whether or not the discount pill above is showing. */}
+      {/* Price left, ADD/stepper right, vertically centred on each other. */}
       <div className={styles.priceStepperRow}>
-        <div className={styles.priceRow}>
+        <div
+          className={[
+            styles.priceRow,
+            originalPrice == null ? styles.priceRowSingle : "",
+          ]
+            .filter(Boolean)
+            .join(" ")}
+        >
           <Text as="span" variant="mediumBold" className={styles.price}>
             {formatPrice(price)}
           </Text>
-          {/* Always rendered so every price block is the same two-line height —
-              that keeps the Add button on the same line across a row whether or
-              not a card is discounted. Space is held (visibility) when there's
-              no original price. */}
-          <Text
-            as="span"
-            variant="smallRegular"
-            className={[
-              styles.originalPrice,
-              originalPrice == null ? styles.originalPriceHidden : "",
-            ]
-              .filter(Boolean)
-              .join(" ")}
-            aria-hidden={originalPrice == null}
-          >
-            {originalPrice != null ? formatPrice(originalPrice) : " "}
-          </Text>
+          {/* Only rendered when there is something to strike through — but the
+              block reserves the two-line height either way (.priceRowSingle),
+              so dropping this line never lifts the ADD button off the line its
+              neighbours in the grid row sit on. */}
+          {originalPrice != null && (
+            <Text as="span" variant="smallRegular" className={styles.originalPrice}>
+              {formatPrice(originalPrice)}
+            </Text>
+          )}
         </div>
 
         <AddButton

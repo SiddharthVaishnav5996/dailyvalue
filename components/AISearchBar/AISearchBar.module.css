@@ -174,9 +174,27 @@
   }
 }
 
+/* The header bar is a 42px pill, so both the typed query and the rotating
+   placeholder drop a step from the hero bar's Medium. Keep these two together:
+   they have to stay on the same line height or the placeholder sits off the
+   text it stands in for. */
 .barCompact .rotatorItem,
 .barCompact .input {
   font: var(--text-normal-regular);
+}
+
+/* ---- Instant results panel (compact bar) ----------------------------------
+   The panel hangs off the bar, so the bar has to sit above the catcher that
+   closes it - otherwise the catcher would swallow clicks meant for the field
+   and the shopper could not keep typing. */
+.quickCatcher {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+}
+
+.barQuickOpen {
+  z-index: 42;
 }
 
 /* A <textarea>, so the query can run to more than one line. Everything below

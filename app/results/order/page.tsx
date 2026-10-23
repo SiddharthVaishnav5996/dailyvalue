@@ -21,6 +21,7 @@ import { Text } from "@/components/Text/Text";
 import { AddButton } from "@/components/AddButton/AddButton";
 import { ProductCard } from "@/components/ProductCard/ProductCard";
 import { CartLineItem } from "@/components/CartLineItem/CartLineItem";
+import { PRODUCT_BY_ID } from "@/lib/catalog/products";
 import { TipCard } from "@/components/TipCard/TipCard";
 import {
   ORDER_SUMMARY,
@@ -115,6 +116,18 @@ export default function OrderPage() {
     },
     [result],
   );
+
+  /*
+   * The catalog unit for a cart line ("jar", "bag"), for the per-unit price.
+   *
+   * A resolved product's id is the catalog id with a "p-" prefix, so both
+   * spellings are tried. Generated ("g-…") and curated ("cc-…") lines have no
+   * catalog row and correctly return undefined — their price shows unsuffixed.
+   */
+  const unitFor = useCallback((id: string): string | undefined => {
+    const product = PRODUCT_BY_ID[id] ?? PRODUCT_BY_ID[id.replace(/^p-/, "")];
+    return product?.unit || undefined;
+  }, []);
 
   // The store offer currently chosen for a cart line, or its default first one.
   const selectedOfferFor = useCallback(
@@ -219,8 +232,15 @@ export default function OrderPage() {
                           key={item.id}
                           name={item.name}
                           storeName={offer?.storeName ?? item.storeName ?? ""}
-                          imageSrc={item.imageSrc}
+                          /* Each shop's own packshot when it has one, so
+                             switching store switches the picture — the Great
+                             Value tub and the Compliments tub are different
+                             products (Chapter 9f). Falls back to the line's
+                             own photo for shops with none. */
+                          imageSrc={offer?.imageSrc ?? item.imageSrc}
                           imageAlt={item.imageAlt}
+                          price={offer?.price ?? item.price}
+                          unit={unitFor(item.id)}
                           quantity={item.quantity}
                           onAdd={() => increment(item.id)}
                           onIncrement={() => increment(item.id)}

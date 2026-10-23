@@ -1,6 +1,13 @@
 "use client";
 
-import { createContext, useCallback, useContext, useMemo, useState } from "react";
+import {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useState,
+} from "react";
 
 /** A saved item. Carries enough detail for any page to render it (e.g. the
  *  wishlist popup) without a cross-catalog product lookup — same shape as a
@@ -29,14 +36,65 @@ interface WishlistContextValue {
 
 const WishlistContext = createContext<WishlistContextValue | null>(null);
 
+/*
+ * Saved hearts, kept between visits — same reasoning as the cart, which this
+ * file mirrors. A wishlist that empties on refresh is worse than no wishlist:
+ * the shopper did deliberate work and watched it vanish.
+ */
+const STORAGE_KEY = "dailyvalue:wishlist:v1";
+
+/** Is this parsed blob shaped like a wishlist item? */
+function isWishlistItem(v: unknown): v is WishlistItem {
+  const i = v as Partial<WishlistItem> | null;
+  return (
+    Boolean(i) &&
+    typeof i!.id === "string" &&
+    typeof i!.name === "string" &&
+    typeof i!.price === "number"
+  );
+}
+
 /**
  * App-wide wishlist, keyed by product id → its details. Shared by every
  * ProductCard heart, so the Header badge — and the wishlist popup — stay
- * accurate no matter which page saved the item. In-memory for now (swap for a
- * persisted/backed store later), matching CartProvider.
+ * accurate no matter which page saved the item. Persisted to localStorage so
+ * it survives a refresh, matching CartProvider.
  */
 export function WishlistProvider({ children }: { children: React.ReactNode }) {
   const [entries, setEntries] = useState<Record<string, WishlistItem>>({});
+
+  // Restore after the first render, then save on change. The hydration
+  // reasoning and the state-not-ref flag are explained in CartContext.
+  const [hydrated, setHydrated] = useState(false);
+
+  useEffect(() => {
+    try {
+      const raw = window.localStorage.getItem(STORAGE_KEY);
+      if (raw) {
+        const parsed: unknown = JSON.parse(raw);
+        if (parsed && typeof parsed === "object" && !Array.isArray(parsed)) {
+          const clean: Record<string, WishlistItem> = {};
+          for (const [id, item] of Object.entries(parsed)) {
+            if (isWishlistItem(item)) clean[id] = item;
+          }
+          // eslint-disable-next-line react-hooks/set-state-in-effect
+          setEntries(clean);
+        }
+      }
+    } catch {
+      // Private browsing, cleared storage, or malformed JSON. Start empty.
+    }
+    setHydrated(true);
+  }, []);
+
+  useEffect(() => {
+    if (!hydrated) return;
+    try {
+      window.localStorage.setItem(STORAGE_KEY, JSON.stringify(entries));
+    } catch {
+      // Storage full or blocked.
+    }
+  }, [entries, hydrated]);
 
   const toggleWishlist = useCallback((item: WishlistItem) => {
     setEntries((prev) => {

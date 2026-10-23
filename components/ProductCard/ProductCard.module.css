@@ -249,15 +249,27 @@
   color: var(--color-text);
 }
 
+/* No struck original on this card.
+
+   The block still reserves the height the two-line version occupies, because
+   that reserve is what keeps every ADD button in a grid row on one line — drop
+   it and an undiscounted card's button rides ~6px above its neighbours'. What
+   changes is where the lone price sits inside the reserve: centred, not at the
+   top, which puts it on the ADD button's centreline. Only the price moves; the
+   row, the button and the card keep the exact height and position they have
+   when a discount is showing.
+
+   The reserve is the two-line height spelled out: the price's line box
+   (--text-medium-bold, 18px/25.2px) + the 2px column gap + the struck line's
+   (--text-small-regular, 12px/14px). Update it if that type scale changes. */
+.priceRowSingle {
+  min-height: calc(25.2px + 2px + 14px);
+  justify-content: center;
+}
+
 .originalPrice {
   color: var(--color-text-muted);
   text-decoration: line-through;
-}
-
-/* No original price on this card — keep the line's height reserved (so the price
-   block stays two lines tall and the row's Add buttons line up), just hidden. */
-.originalPriceHidden {
-  visibility: hidden;
 }
 
 .deliveryRow {

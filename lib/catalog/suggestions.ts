@@ -19,8 +19,15 @@ import { PRODUCTS, PRODUCT_BY_ID } from "@/lib/catalog/products";
  * only change when the search does.
  */
 
-/** How many cards the strip shows. */
-const DEFAULT_COUNT = 4;
+/**
+ * How many cards the strip shows.
+ *
+ * Six, because the grid is three across (see .suggestionGrid in
+ * app/results/order/page.module.css) and a count that is not a multiple of
+ * three strands the remainder alone on the last row. Four used to be right
+ * when the grid was two across.
+ */
+const DEFAULT_COUNT = 6;
 
 /**
  * Which shopping "world" each catalog category belongs to.

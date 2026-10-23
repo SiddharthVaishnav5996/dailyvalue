@@ -66,7 +66,16 @@ export default function Home() {
 
             <div className={styles.heroCards}>
               {HERO_PRODUCTS.map(({ id, ...product }) => (
-                <ProductCardInteractive key={id} id={id} layout="vertical" {...product} />
+                <ProductCardInteractive
+                  key={id}
+                  id={id}
+                  layout="vertical"
+                  // Every name here happens to run 4 lines, so the row lines up by
+                  // coincidence. Reserving it makes that intentional and survives a
+                  // copy change.
+                  descriptionLines={4}
+                  {...product}
+                />
               ))}
             </div>
           </section>
@@ -78,7 +87,16 @@ export default function Home() {
             </Text>
             <div className={styles.productRow}>
               {TOP_PICKS.map(({ id, ...product }) => (
-                <ProductCardInteractive key={id} id={id} layout="vertical" {...product} />
+                <ProductCardInteractive
+                  key={id}
+                  id={id}
+                  layout="vertical"
+                  // Longest copy in this row runs 2 lines; reserving that on every
+                  // card keeps the price and ADD button on one line across the row
+                  // (one short name would otherwise lift its whole lower half 14px).
+                  descriptionLines={2}
+                  {...product}
+                />
               ))}
             </div>
           </section>

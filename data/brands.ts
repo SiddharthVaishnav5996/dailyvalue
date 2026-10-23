@@ -1,4 +1,4 @@
-import type { Department } from "./stores";
+ import type { Department } from "./stores";
 
 /*
  * Store brands - the ones a shop owns and nobody else may sell.
