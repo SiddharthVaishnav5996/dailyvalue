@@ -137,9 +137,9 @@ async function attempt(userMessage: string, apiKey: string): Promise<AIPlan> {
         // These two lines are the whole point of using Gemini as primary.
         responseMimeType: "application/json",
         responseSchema: PLAN_SCHEMA_GEMINI,
-        // Low temperature = less creative, more consistent. We want the same
-        // question to produce roughly the same shopping list every time.
-        temperature: 0.4,
+        // Temperature 0 = no sampling randomness. The same question must produce
+        // the same shopping list every time, or search results drift between runs.
+        temperature: 0,
         abortSignal: controller.signal,
       },
     });

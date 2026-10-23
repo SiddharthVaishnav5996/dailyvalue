@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import NextImage from "next/image";
 import {
@@ -21,17 +21,18 @@ import { Text } from "@/components/Text/Text";
 import { AddButton } from "@/components/AddButton/AddButton";
 import { ProductCard } from "@/components/ProductCard/ProductCard";
 import { CartLineItem } from "@/components/CartLineItem/CartLineItem";
+import { PRODUCT_BY_ID } from "@/lib/catalog/products";
 import { TipCard } from "@/components/TipCard/TipCard";
 import {
   ORDER_SUMMARY,
   CUSTOMER,
   SHIPPING,
   PAYMENT,
-  PEOPLE_ALSO_BOUGHT,
   TIP_PRESETS,
 } from "@/data/checkout";
 import { PRODUCT_POP_BY_ID, type StoreOffer } from "@/data/productPop";
 import { useSearch } from "@/lib/search/SearchContext";
+import type { ResolvedProduct } from "@/lib/types";
 import { formatPrice } from "@/lib/format";
 import styles from "./page.module.css";
 
@@ -59,6 +60,45 @@ export default function OrderPage() {
   // Delivery tip: a preset's id, "custom", or null (no tip picked yet).
   const [tipId, setTipId] = useState<string | null>(null);
   const [customTip, setCustomTip] = useState("");
+  // "People also bought" — complementary products for THIS search, built by
+  // POST /api/suggestions (see lib/catalog/suggestions.ts).
+  const [suggestions, setSuggestions] = useState<ResolvedProduct[]>([]);
+
+  /*
+   * Refetch whenever the search changes, and only then.
+   *
+   * Deliberately not keyed on the cart: adding a suggestion would otherwise
+   * rebuild the strip and swap the remaining cards out from under the shopper
+   * mid-tap. The picks are deterministic per query anyway, so a re-run returns
+   * the same four - what changes them is a new search.
+   */
+  useEffect(() => {
+    let cancelled = false;
+
+    void (async () => {
+      try {
+        const response = await fetch("/api/suggestions", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            items: result?.items ?? [],
+            query: result?.query ?? "",
+            // Don't offer back what this search already put on the page.
+            exclude: (result?.products ?? []).map((p) => p.id),
+          }),
+        });
+        if (!response.ok) return;
+        const data = (await response.json()) as { products?: ResolvedProduct[] };
+        if (!cancelled) setSuggestions(data.products ?? []);
+      } catch {
+        // Offline, or the server is restarting. The strip just stays hidden.
+      }
+    })();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [result]);
 
   /**
    * Every store that stocks a given cart line, newest search first.
@@ -76,6 +116,18 @@ export default function OrderPage() {
     },
     [result],
   );
+
+  /*
+   * The catalog unit for a cart line ("jar", "bag"), for the per-unit price.
+   *
+   * A resolved product's id is the catalog id with a "p-" prefix, so both
+   * spellings are tried. Generated ("g-…") and curated ("cc-…") lines have no
+   * catalog row and correctly return undefined — their price shows unsuffixed.
+   */
+  const unitFor = useCallback((id: string): string | undefined => {
+    const product = PRODUCT_BY_ID[id] ?? PRODUCT_BY_ID[id.replace(/^p-/, "")];
+    return product?.unit || undefined;
+  }, []);
 
   // The store offer currently chosen for a cart line, or its default first one.
   const selectedOfferFor = useCallback(
@@ -180,8 +232,15 @@ export default function OrderPage() {
                           key={item.id}
                           name={item.name}
                           storeName={offer?.storeName ?? item.storeName ?? ""}
-                          imageSrc={item.imageSrc}
+                          /* Each shop's own packshot when it has one, so
+                             switching store switches the picture — the Great
+                             Value tub and the Compliments tub are different
+                             products (Chapter 9f). Falls back to the line's
+                             own photo for shops with none. */
+                          imageSrc={offer?.imageSrc ?? item.imageSrc}
                           imageAlt={item.imageAlt}
+                          price={offer?.price ?? item.price}
+                          unit={unitFor(item.id)}
                           quantity={item.quantity}
                           onAdd={() => increment(item.id)}
                           onIncrement={() => increment(item.id)}
@@ -198,58 +257,56 @@ export default function OrderPage() {
                 </div>
               </section>
 
+              {suggestions.length > 0 && (
               <section className={styles.suggestions}>
                 <Text as="h2" variant="heading5" className={styles.suggestionsTitle}>
                   People also bought
                 </Text>
                 <div className={styles.suggestionGrid}>
-                  {PEOPLE_ALSO_BOUGHT.map((p) => (
+                  {suggestions.map((p) => {
+                    // Already ranked best-first by the resolver.
+                    const offer = p.offers[0];
+                    if (!offer) return null;
+                    const line = {
+                      id: p.id,
+                      name: p.description,
+                      price: offer.price,
+                      imageSrc: p.imageSrc,
+                      imageAlt: p.imageAlt,
+                      storeName: offer.storeName,
+                      storeLogoSrc: offer.storeLogoSrc,
+                    };
+                    return (
                     <ProductCard
                       key={p.id}
                       layout="vertical"
                       descriptionLines={2}
-                      imageSrc={p.imageSrc}
-                      imageAlt={p.imageAlt}
+                      imageSrc={offer.imageSrc ?? p.imageSrc}
+                      imageAlt={p.imageAlt ?? p.description}
                       imageFit={p.imageFit}
-                      storeName={p.storeName}
-                      storeDistanceKm={p.storeDistanceKm}
-                      storeLogoSrc={p.storeLogoSrc}
-                      showDiscount={p.showDiscount}
-                      discountLabel={p.discountLabel}
+                      storeName={offer.storeName}
+                      storeDistanceKm={offer.storeDistanceKm}
+                      storeLogoSrc={offer.storeLogoSrc}
+                      showDiscount={offer.cardBadge != null}
+                      discountLabel={offer.cardBadge}
                       description={p.description}
-                      rating={p.rating}
-                      reviewCount={p.reviewCount}
-                      price={p.price}
+                      brand={offer.brand ?? ""}
+                      rating={offer.rating}
+                      reviewCount={offer.reviewCount}
+                      price={offer.price}
+                      originalPrice={offer.originalPrice}
                       quantity={quantityOf(p.id)}
-                      onAdd={() =>
-                        addItem({
-                          id: p.id,
-                          name: p.description,
-                          price: p.price,
-                          imageSrc: p.imageSrc,
-                          imageAlt: p.imageAlt,
-                          storeName: p.storeName,
-                          storeLogoSrc: p.storeLogoSrc,
-                        })
-                      }
+                      onAdd={() => addItem(line)}
                       onIncrement={() => increment(p.id)}
                       onDecrement={() => decrement(p.id)}
                       isWishlisted={isWishlisted(p.id)}
-                      onToggleWishlist={() =>
-                        toggleWishlist({
-                          id: p.id,
-                          name: p.description,
-                          price: p.price,
-                          imageSrc: p.imageSrc,
-                          imageAlt: p.imageAlt,
-                          storeName: p.storeName,
-                          storeLogoSrc: p.storeLogoSrc,
-                        })
-                      }
+                      onToggleWishlist={() => toggleWishlist(line)}
                     />
-                  ))}
+                    );
+                  })}
                 </div>
               </section>
+              )}
             </div>
 
             {/* ---- Right: order summary + saved details ---- */}

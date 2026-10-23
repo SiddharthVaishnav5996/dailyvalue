@@ -95,6 +95,37 @@
   padding-top: var(--space-2);
 }
 
+/* Save and Share: an icon and a word, no surface of their own. They sit beside
+   the Download button rather than competing with it - downloading is still the
+   primary action, these two are quieter on purpose. */
+.action {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  color: var(--color-disabled-text);
+  cursor: pointer;
+  transition: color 150ms ease;
+}
+
+.action:hover {
+  color: var(--color-primary);
+}
+
+/* Saved: the state stays visible without needing a second look. */
+.actionOn {
+  color: var(--color-primary);
+}
+
+/* A neutral confirmation, as opposed to .error below. */
+.note {
+  margin: 0;
+  flex-basis: 100%;
+  color: var(--color-disabled-text);
+}
+
 .error {
   margin: 0;
   flex-basis: 100%;

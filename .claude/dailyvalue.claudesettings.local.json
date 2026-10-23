@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__claude-in-chrome__*",
+      "Bash(node:*)",
+      "Bash(mv:*)",
+      "Bash(ls:*)",
+      "PowerShell(Move-Item:*)",
+      "Write(data/imageDb.json)",
+      "Edit(data/imageDb.json)",
+      "Write(public/stores/Brand Photos/**)",
+      "Read(//c/Users/siddh/Downloads/**)",
+      "Read(//c/Users/siddh/AppData/Local/Temp/claude/**)",
+      "Write(//c/Users/siddh/AppData/Local/Temp/claude/**)"
+    ]
+  }
+}

@@ -38,6 +38,24 @@ export interface StoreOffer {
   storeLogoSrc?: string;
   price: number;
   originalPrice?: number;
+  /**
+   * The brand a shopper would actually be handed at this shop.
+   *
+   * Optional here because these offers are hand-written and predate the idea.
+   * The resolver fills it in for everything else - see data/brands.ts for who
+   * owns which brand.
+   */
+  brand?: string;
+  /** True when that brand belongs to this shop, e.g. Kirkland at Costco. */
+  isOwnBrand?: boolean;
+  /**
+   * A photograph of THIS shop's package, when one exists.
+   *
+   * Optional, and unused by the hand-written pops - they have one photograph
+   * for the whole product. The resolver fills it in for seeded catalog
+   * products so switching shop switches the packshot.
+   */
+  imageSrc?: string;
   /** Green loyalty/offer line in the comparison dropdown (e.g. "200 Scene+ Points"). */
   promo?: string;
   /** Red badge on the Page-3 card when this store is the selected one. */

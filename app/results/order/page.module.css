@@ -126,15 +126,36 @@
   text-align: center;
 }
 
-/* Two vertical cards per row, spread with equal space around each so the pair
-   sits centered in the column with matching outer margins. Tracks may shrink
-   toward 184px in the narrow band just above the single-column breakpoint,
-   keeping both cards on one row without overflow. */
+/* Three vertical cards per row, with the outer two flush to the column edges
+   so the first card's left edge and the third's right edge line up with the
+   cart rows above — CartLineItem's .row is width:100% of this same column.
+
+   Why space-between and not 1fr tracks: ProductCard's .vertical caps at 204px,
+   so a wider 1fr track would leave the card sitting inside it and the third
+   card would stop short of the right edge. Capped tracks plus space-between
+   puts the slack in the gaps instead, which is where it belongs — the edges
+   are the thing being aligned.
+
+   The tracks shrink below 204px once the column cannot hold 3 x 204 + gaps,
+   so the row stays edge-to-edge all the way down to the breakpoints below. */
 .suggestionGrid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(184px, 204px));
-  justify-content: space-around;
+  grid-template-columns: repeat(3, minmax(0, 204px));
+  justify-content: space-between;
   gap: clamp(16px, 1.8vw, 24px);
+}
+
+/* Two per row once three would each fall below the card's 184px reference.
+   The left column is viewport minus padding, the 380px rail and the column
+   gap, so 3 x 184 plus two grid gaps stops fitting at about 1080px of
+   viewport. Measured at 940px the tracks had already collapsed to 136px,
+   which on a 420px-tall card reads as a sliver. Two up keeps them at their
+   full 204px, and space-between still holds the outer edges against the
+   cart rows above. */
+@media (max-width: 1080px) {
+  .suggestionGrid {
+    grid-template-columns: repeat(2, minmax(0, 204px));
+  }
 }
 
 /* Keep two per row on phones — the cards shrink below their 184px reference

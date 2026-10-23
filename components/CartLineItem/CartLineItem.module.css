@@ -72,6 +72,12 @@
   white-space: nowrap;
 }
 
+/* Sits under the store, in full text colour rather than the store's muted
+   grey, because the price is the thing being compared. */
+.price {
+  color: var(--color-text);
+}
+
 .storeChevron {
   flex-shrink: 0;
 }

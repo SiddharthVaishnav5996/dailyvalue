@@ -36,6 +36,15 @@ export interface AddButtonProps {
   /** Figma "Show Add Button" boolean — when false, the + icon is hidden. */
   showIcon?: boolean;
   /**
+   * Drop the word and keep just the +.
+   *
+   * For rows too tight to spell ADD out - the header's instant results list,
+   * where the control sits beside a product, a shop and a price. The icon then
+   * carries the whole meaning, so the button always keeps an aria-label; the
+   * quantity stepper it turns into is already icon-only either way.
+   */
+  iconOnly?: boolean;
+  /**
    * Force a visual state. Real hover/press styling is automatic; this is for
    * showing the Default / Active / Hover / Disabled variants (e.g. in the
    * styleguide). To actually disable the control, use `disabled` — that also
@@ -61,6 +70,7 @@ export function AddButton({
   quantity = 0,
   label = ADD_LABEL,
   showIcon = true,
+  iconOnly = false,
   state = "default",
   disabled = false,
   requiresAuth,
@@ -125,19 +135,30 @@ export function AddButton({
         ? styles.stateHover
         : "";
 
+  // "ADD" reads as "Add to cart"; a custom label already says what it does.
+  const accessibleName = label === ADD_LABEL ? "Add to cart" : label;
+
   return (
     <button
       type="button"
-      className={[styles.addBtn, stateClass, className].filter(Boolean).join(" ")}
+      className={[
+        styles.addBtn,
+        iconOnly ? styles.addBtnIconOnly : "",
+        stateClass,
+        className,
+      ]
+        .filter(Boolean)
+        .join(" ")}
       onClick={handleAdd}
       disabled={isDisabled}
       // Only spell out the bare "ADD" label; for a custom label (Checkout,
       // SHOP, LOGIN…) the visible text is already the accessible name, and
-      // hard-coding "Add to cart" would mis-announce the button.
-      aria-label={label === ADD_LABEL ? "Add to cart" : undefined}
+      // hard-coding "Add to cart" would mis-announce the button. With no text
+      // at all there is nothing to read, so a name is always supplied.
+      aria-label={iconOnly || label === ADD_LABEL ? accessibleName : undefined}
     >
-      {showIcon && <PlusCircle className={styles.icon} />}
-      <span className={styles.label}>{label}</span>
+      {(showIcon || iconOnly) && <PlusCircle className={styles.icon} />}
+      {!iconOnly && <span className={styles.label}>{label}</span>}
     </button>
   );
 }

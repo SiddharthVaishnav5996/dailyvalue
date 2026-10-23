@@ -46,6 +46,10 @@ export function ProductCardDemo() {
   const wishlistB = useWishlist();
   const wishlistC = useWishlist();
   const wishlistD = useWishlist();
+  const cardE = useQuantity();
+  const cardF = useQuantity();
+  const wishlistE = useWishlist();
+  const wishlistF = useWishlist();
 
   return (
     <div className={styles.productCardGroups}>
@@ -72,6 +76,19 @@ export function ProductCardDemo() {
               Show Discount = false (slot stays reserved)
             </Text>
           </div>
+          <div className={[styles.cardCell, styles.cardCellHorizontal].join(" ")}>
+            <ProductCard
+              layout="horizontal"
+              showDiscount={false}
+              {...SAMPLE}
+              originalPrice={undefined}
+              {...cardE}
+              {...wishlistE}
+            />
+            <Text variant="smallRegular" className={styles.muted}>
+              No discount — price centred on the ADD line
+            </Text>
+          </div>
         </div>
       </div>
 
@@ -96,6 +113,19 @@ export function ProductCardDemo() {
             />
             <Text variant="smallRegular" className={styles.muted}>
               Show Discount = false (slot stays reserved)
+            </Text>
+          </div>
+          <div className={[styles.cardCell, styles.cardCellVertical].join(" ")}>
+            <ProductCard
+              layout="vertical"
+              showDiscount={false}
+              {...SAMPLE}
+              originalPrice={undefined}
+              {...cardF}
+              {...wishlistF}
+            />
+            <Text variant="smallRegular" className={styles.muted}>
+              No discount — price centred on the ADD line
             </Text>
           </div>
         </div>

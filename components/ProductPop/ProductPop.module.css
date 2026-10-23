@@ -236,6 +236,40 @@
   color: var(--color-text);
 }
 
+/* What you would actually be buying at that shop. */
+.compareBrand {
+  color: var(--color-primary);
+}
+
+.compareStar {
+  display: inline-block;
+  vertical-align: -1px;
+  margin-right: 3px;
+}
+
+/* "Always buy Great Value" - text and an outline star, no fill of its own.
+   Filled and in brand colour once it is on. */
+.brandPrefer {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  color: var(--color-disabled-text);
+  cursor: pointer;
+  transition: color 150ms ease;
+}
+
+.brandPrefer:hover {
+  color: var(--color-primary);
+}
+
+.brandPreferOn {
+  color: var(--color-primary);
+}
+
 .compareDistance {
   color: var(--color-text-muted);
 }

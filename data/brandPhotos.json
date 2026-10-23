@@ -1,0 +1,4796 @@
+{
+  "whole-wheat-bread": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "100% Whole Wheat Bread",
+      "image": "/stores/Brand Photos/great-value-whole-wheat-bread.jpg",
+      "code": "0627735266060",
+      "source": "https://images.openfoodfacts.org/images/products/062/773/526/6060/front_en.27.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Whole Wheat Bread",
+      "size": "570 g",
+      "image": "/stores/Brand Photos/compliments-whole-wheat-bread.jpg",
+      "code": "0068820126232",
+      "source": "https://images.openfoodfacts.org/images/products/006/882/012/6232/front_en.5.400.jpg"
+    },
+    "selection": {
+      "brand": "Selection",
+      "name": "Whole Wheat Bread",
+      "image": "/stores/Brand Photos/selection-whole-wheat-bread.jpg",
+      "code": "0059749916387",
+      "source": "https://images.openfoodfacts.org/images/products/005/974/991/6387/front_fr.3.400.jpg"
+    },
+    "noname": {
+      "brand": "No Name",
+      "name": "Whole wheat bread",
+      "image": "/stores/Brand Photos/no-name-whole-wheat-bread.jpg",
+      "code": "0060383022853",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/302/2853/front_fr.3.400.jpg"
+    },
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Whole Wheat Bread",
+      "size": "709 g",
+      "image": "/stores/Brand Photos/president-s-choice-whole-wheat-bread.jpg",
+      "code": "0060383212537",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/321/2537/front_en.16.400.jpg"
+    }
+  },
+  "baking-powder": {
+    "noname": {
+      "brand": "No Name",
+      "name": "baking powder",
+      "size": "450g",
+      "image": "/stores/Brand Photos/no-name-baking-powder.jpg",
+      "code": "0060383010638",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/301/0638/front_en.20.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Baking Powder",
+      "size": "225 g",
+      "image": "/stores/Brand Photos/compliments-baking-powder.jpg",
+      "code": "0055742547979",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/254/7979/front_en.7.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Baking powder",
+      "image": "/stores/Brand Photos/western-family-baking-powder.jpg",
+      "code": "0062639230814",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/923/0814/front_fr.5.400.jpg"
+    }
+  },
+  "olive-oil": {
+    "kirklandsignature": {
+      "brand": "Kirkland Signature",
+      "name": "Extra virgin olive oil",
+      "image": "/stores/Brand Photos/kirkland-signature-olive-oil.png",
+      "code": "0096619878673",
+      "source": "https://images.openfoodfacts.org/images/products/009/661/987/8673/front_fr.30.400.jpg"
+    },
+    "noname": {
+      "brand": "No Name",
+      "name": "Huile d'olive",
+      "size": "750 mL",
+      "image": "/stores/Brand Photos/no-name-olive-oil.png",
+      "code": "0060383985462",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/398/5462/front_fr.3.400.jpg"
+    },
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Extra Virgin Olive Oil",
+      "size": "1L",
+      "image": "/stores/Brand Photos/president-s-choice-olive-oil.png",
+      "code": "0060383047191",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/304/7191/front.3.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Huile dolive",
+      "image": "/stores/Brand Photos/compliments-olive-oil.png",
+      "code": "0055742567748",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/256/7748/front_fr.3.400.jpg"
+    }
+  },
+  "peanut-butter": {
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Peanut Butter",
+      "image": "/stores/Brand Photos/western-family-peanut-butter.png",
+      "code": "0062639362850",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/936/2850/front_fr.3.400.jpg"
+    },
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Smooth Peanut Butter",
+      "image": "/stores/Brand Photos/president-s-choice-peanut-butter.png",
+      "code": "13164591",
+      "source": "https://images.openfoodfacts.org/images/products/13164591/front_fr.3.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Organic Smooth Peanut Butter",
+      "size": "500 g",
+      "image": "/stores/Brand Photos/compliments-peanut-butter.png",
+      "code": "01070194",
+      "source": "https://images.openfoodfacts.org/images/products/01070194/front_en.3.400.jpg"
+    }
+  },
+  "cream-cheese": {
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Cream Cheese Product- Light",
+      "size": "340 g",
+      "image": "/stores/Brand Photos/compliments-cream-cheese.jpg",
+      "code": "0055742541144",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/254/1144/front_en.11.400.jpg"
+    },
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Cream Cheese Spread",
+      "size": "227g",
+      "image": "/stores/Brand Photos/great-value-cream-cheese.png",
+      "code": "03244023",
+      "source": "https://images.openfoodfacts.org/images/products/03244023/front_en.5.400.jpg"
+    },
+    "selection": {
+      "brand": "Selection",
+      "name": "Classic Cream Cheese",
+      "image": "/stores/Brand Photos/selection-cream-cheese.png",
+      "code": "0059749894326",
+      "source": "https://images.openfoodfacts.org/images/products/005/974/989/4326/front_fr.3.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "cream cheese",
+      "image": "/stores/Brand Photos/western-family-cream-cheese.png",
+      "code": "0062639336967",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/933/6967/front_fr.3.400.jpg"
+    },
+    "noname": {
+      "brand": "No Name",
+      "name": "Fromage à la crème",
+      "image": "/stores/Brand Photos/no-name-cream-cheese.png",
+      "code": "0060383193645",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/319/3645/front_fr.3.400.jpg"
+    }
+  },
+  "sour-cream": {
+    "kirklandsignature": {
+      "brand": "Kirkland Signature",
+      "name": "Sour Cream",
+      "size": "500ml",
+      "image": "/stores/Brand Photos/kirkland-signature-sour-cream.jpg",
+      "code": "0096619177622",
+      "source": "https://images.openfoodfacts.org/images/products/009/661/917/7622/front_en.13.400.jpg"
+    },
+    "noname": {
+      "brand": "No Name",
+      "name": "sour cream",
+      "size": "500mL",
+      "image": "/stores/Brand Photos/no-name-sour-cream.jpg",
+      "code": "0060383004033",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/300/4033/front_en.33.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Sour cream",
+      "size": "500 ml",
+      "image": "/stores/Brand Photos/compliments-sour-cream.jpg",
+      "code": "0055742357660",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/235/7660/front_fr.18.400.jpg"
+    },
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Sour cream",
+      "image": "/stores/Brand Photos/great-value-sour-cream.png",
+      "code": "0628915380941",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/538/0941/front_en.19.400.jpg"
+    },
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "14% M.F. Lactose Free Sour Cream",
+      "size": "500 mL",
+      "image": "/stores/Brand Photos/president-s-choice-sour-cream.png",
+      "code": "0060383709563",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/370/9563/front_en.13.400.jpg"
+    },
+    "selection": {
+      "brand": "Selection",
+      "name": "Crème sure 1%",
+      "size": "500 mL",
+      "image": "/stores/Brand Photos/selection-sour-cream.png",
+      "code": "0059749903936",
+      "source": "https://images.openfoodfacts.org/images/products/005/974/990/3936/front_fr.4.400.jpg"
+    }
+  },
+  "cheddar-cheese": {
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "medium Cheddar cheese",
+      "size": "250 g",
+      "image": "/stores/Brand Photos/president-s-choice-cheddar.png",
+      "code": "0060383109103",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/310/9103/front_en.4.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Medium Cheddar Cheese",
+      "image": "/stores/Brand Photos/western-family-cheddar.png",
+      "code": "0062639363581",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/936/3581/front_fr.3.400.jpg"
+    },
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "double cheddar cheese",
+      "image": "/stores/Brand Photos/great-value-cheddar.png",
+      "code": "0628915787276",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/578/7276/front_fr.3.400.jpg"
+    },
+    "selection": {
+      "brand": "Selection",
+      "name": "White Cheddar Mac & Cheese",
+      "image": "/stores/Brand Photos/selection-cheddar.png",
+      "code": "0059749884754",
+      "source": "https://images.openfoodfacts.org/images/products/005/974/988/4754/front_fr.3.400.jpg"
+    }
+  },
+  "greek-yogurt": {
+    "kirklandsignature": {
+      "brand": "Kirkland Signature",
+      "name": "organic Greek yogurt",
+      "size": "1.3 kg",
+      "image": "/stores/Brand Photos/kirkland-signature-greek-yogurt.jpg",
+      "code": "0196633916280",
+      "source": "https://images.openfoodfacts.org/images/products/019/663/391/6280/front_en.27.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Greek yogurt",
+      "image": "/stores/Brand Photos/western-family-greek-yogurt.png",
+      "code": "0062639340087",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/934/0087/front_fr.3.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Greek yogurt m f vanilla",
+      "image": "/stores/Brand Photos/compliments-greek-yogurt.png",
+      "code": "0055742550504",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/255/0504/front_fr.3.400.jpg"
+    },
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Yougourt grec",
+      "image": "/stores/Brand Photos/president-s-choice-greek-yogurt.png",
+      "code": "0060383224066",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/322/4066/front_fr.3.400.jpg"
+    }
+  },
+  "baby-spinach": {
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Baby spinach",
+      "size": "312g",
+      "image": "/stores/Brand Photos/president-s-choice-baby-spinach.jpg",
+      "code": "0060383222758",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/322/2758/front_fr.9.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Baby spinach",
+      "image": "/stores/Brand Photos/compliments-baby-spinach.jpg",
+      "code": "0055742502626",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/250/2626/front_fr.9.400.jpg"
+    }
+  },
+  "all-purpose-flour": {
+    "compliments": {
+      "brand": "Compliments",
+      "name": "All-Purpose Flour",
+      "size": "2.5 kg",
+      "image": "/stores/Brand Photos/compliments-all-purpose-flour.jpg",
+      "code": "0055742549973",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/254/9973/front_en.13.400.jpg"
+    },
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Original all purpose flour",
+      "image": "/stores/Brand Photos/great-value-flour.png",
+      "code": "0628915365733",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/536/5733/front_fr.3.400.jpg"
+    }
+  },
+  "orange-juice": {
+    "irresistibles": {
+      "brand": "Irresistibles",
+      "name": "Orange Juice",
+      "size": "2,5l",
+      "image": "/stores/Brand Photos/irresistibles-orange-juice.jpg",
+      "code": "0059749954624",
+      "source": "https://images.openfoodfacts.org/images/products/005/974/995/4624/front_en.45.400.jpg"
+    },
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Orange juice",
+      "image": "/stores/Brand Photos/great-value-orange-juice.png",
+      "code": "0628915561562",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/556/1562/front_fr.21.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Orange Juice",
+      "image": "/stores/Brand Photos/western-family-orange-juice.png",
+      "code": "0062639319441",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/931/9441/front_fr.3.400.jpg"
+    }
+  },
+  "large-eggs": {
+    "noname": {
+      "brand": "No Name",
+      "name": "large size eggs",
+      "size": "12 eggs œufs,  Net 630 g.",
+      "image": "/stores/Brand Photos/no-name-large-eggs.jpg",
+      "code": "0060383664145",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/366/4145/front_en.91.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Large eggs",
+      "size": "12 eggs,  Net:     g",
+      "image": "/stores/Brand Photos/compliments-large-eggs.jpg",
+      "code": "0055742357561",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/235/7561/front_en.10.400.jpg"
+    },
+    "complimentsbiologique": {
+      "brand": "Compliments biologique",
+      "name": "Large eggs",
+      "size": "12 Eggs/ Oeufs, Net: 630 g",
+      "image": "/stores/Brand Photos/compliments-large-eggs.jpg",
+      "code": "0055742367294",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/236/7294/front_en.40.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Large eggs",
+      "image": "/stores/Brand Photos/western-family-eggs.png",
+      "code": "0062639394981",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/939/4981/front_fr.3.400.jpg"
+    },
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Extra Large Eggs (1egg = 58 g)",
+      "image": "/stores/Brand Photos/great-value-eggs.png",
+      "code": "68119119",
+      "source": "https://images.openfoodfacts.org/images/products/68119119/front_en.3.400.jpg"
+    },
+    "selection": {
+      "brand": "Selection",
+      "name": "Large egg",
+      "image": "/stores/Brand Photos/selection-eggs.png",
+      "code": "0059749896078",
+      "source": "https://images.openfoodfacts.org/images/products/005/974/989/6078/front_ca.7.400.jpg"
+    }
+  },
+  "blueberries": {
+    "kirklandsignature": {
+      "brand": "Kirkland Signature",
+      "name": "Whole Blueberries",
+      "size": "2 kg",
+      "image": "/stores/Brand Photos/kirkland-signature-blueberries.jpg",
+      "code": "0096619760961",
+      "source": "https://images.openfoodfacts.org/images/products/009/661/976/0961/front_en.52.400.jpg"
+    },
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Canadian Blueberries",
+      "size": "600 g",
+      "image": "/stores/Brand Photos/president-s-choice-blueberries.jpg",
+      "code": "0060383030841",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/303/0841/front_en.35.400.jpg"
+    }
+  },
+  "spaghetti": {
+    "noname": {
+      "brand": "No Name",
+      "name": "spaghetti",
+      "size": "900 g",
+      "image": "/stores/Brand Photos/no-name-spaghetti.jpg",
+      "code": "0060383040000",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/304/0000/front_en.11.400.jpg"
+    },
+    "selection": {
+      "brand": "Selection",
+      "name": "Spaghetti",
+      "size": "900 g",
+      "image": "/stores/Brand Photos/selection-spaghetti.jpg",
+      "code": "0059749893176",
+      "source": "https://images.openfoodfacts.org/images/products/005/974/989/3176/front_fr.3.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Spaghetti Marinara",
+      "size": "255 g",
+      "image": "/stores/Brand Photos/compliments-spaghetti.png",
+      "code": "0055742507430",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/250/7430/front_en.3.400.jpg"
+    }
+  },
+  "honey": {
+    "kirklandsignature": {
+      "brand": "Kirkland Signature",
+      "name": "Honey",
+      "size": "750 g",
+      "image": "/stores/Brand Photos/kirkland-signature-honey.jpg",
+      "code": "0096619372379",
+      "source": "https://images.openfoodfacts.org/images/products/009/661/937/2379/front_en.52.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Raw Honey",
+      "size": "750 g",
+      "image": "/stores/Brand Photos/western-family-honey.png",
+      "code": "0062639354701",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/935/4701/front_en.16.400.jpg"
+    },
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Creamed honey",
+      "image": "/stores/Brand Photos/great-value-honey.png",
+      "code": "0681131762304",
+      "source": "https://images.openfoodfacts.org/images/products/068/113/176/2304/front_fr.3.400.jpg"
+    },
+    "noname": {
+      "brand": "No Name",
+      "name": "Liquid honey",
+      "image": "/stores/Brand Photos/no-name-honey.png",
+      "code": "0060383781217",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/378/1217/front_en.4.400.jpg"
+    },
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Honey & Ginger Tea",
+      "image": "/stores/Brand Photos/president-s-choice-honey.png",
+      "code": "0060383038519",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/303/8519/front_fr.3.400.jpg"
+    },
+    "selection": {
+      "brand": "Selection",
+      "name": "Creamed Honey, Canadian",
+      "image": "/stores/Brand Photos/selection-honey.png",
+      "code": "0059749919661",
+      "source": "https://images.openfoodfacts.org/images/products/005/974/991/9661/front_en.7.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Raw Honey, Unpasteurized",
+      "size": "750 g",
+      "image": "/stores/Brand Photos/compliments-honey.png",
+      "code": "0055742553321",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/255/3321/front_en.7.400.jpg"
+    }
+  },
+  "vanilla-extract": {
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Pure Vanilla Extract",
+      "image": "/stores/Brand Photos/president-s-choice-vanilla-extract.jpg",
+      "code": "0060383008369",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/300/8369/front_fr.3.400.jpg"
+    },
+    "noname": {
+      "brand": "No Name",
+      "name": "Artificial vanilla extract",
+      "image": "/stores/Brand Photos/no-name-vanilla.png",
+      "code": "0060383090456",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/309/0456/front_en.9.400.jpg"
+    }
+  },
+  "swiss-cheese": {
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Swiss cheese",
+      "image": "/stores/Brand Photos/compliments-swiss-cheese.png",
+      "code": "0055742541854",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/254/1854/front_fr.3.400.jpg"
+    },
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "fromage swiss leger",
+      "image": "/stores/Brand Photos/great-value-swiss-cheese.png",
+      "code": "0628915787665",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/578/7665/front_fr.3.400.jpg"
+    },
+    "noname": {
+      "brand": "No Name",
+      "name": "Swiss Cheese Slices",
+      "image": "/stores/Brand Photos/no-name-swiss-cheese.png",
+      "code": "0060383075279",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/307/5279/front_en.3.400.jpg"
+    },
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Fromage Suisse",
+      "image": "/stores/Brand Photos/president-s-choice-swiss-cheese.png",
+      "code": "0060383134945",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/313/4945/front_fr.9.400.jpg"
+    },
+    "selection": {
+      "brand": "Selection",
+      "name": "Fromage suisse",
+      "image": "/stores/Brand Photos/selection-swiss-cheese.png",
+      "code": "0059749943833",
+      "source": "https://images.openfoodfacts.org/images/products/005/974/994/3833/front_fr.9.400.jpg"
+    }
+  },
+  "cottage-cheese": {
+    "noname": {
+      "brand": "No Name",
+      "name": "cottage cheese",
+      "image": "/stores/Brand Photos/no-name-cottage-cheese.png",
+      "code": "0060383130183",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/313/0183/front_fr.11.400.jpg"
+    },
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Fromage cottage",
+      "image": "/stores/Brand Photos/great-value-cottage-cheese.png",
+      "code": "0628915830613",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/583/0613/front_en.8.400.jpg"
+    },
+    "kirklandsignature": {
+      "brand": "Kirkland Signature",
+      "name": "Cottage cheese",
+      "image": "/stores/Brand Photos/kirkland-signature-cottage-cheese.png",
+      "code": "0096619053995",
+      "source": "https://images.openfoodfacts.org/images/products/009/661/905/3995/front_fr.3.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Cottage cheese",
+      "size": "500 g",
+      "image": "/stores/Brand Photos/compliments-cottage-cheese.png",
+      "code": "0055742357653",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/235/7653/front.14.400.jpg"
+    }
+  },
+  "margarine": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Margarine",
+      "size": "907 g",
+      "image": "/stores/Brand Photos/great-value-margarine.png",
+      "code": "0628915553123",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/555/3123/front_fr.3.400.jpg"
+    },
+    "selection": {
+      "brand": "Selection",
+      "name": "Margarine",
+      "image": "/stores/Brand Photos/selection-margarine.png",
+      "code": "0059749962506",
+      "source": "https://images.openfoodfacts.org/images/products/005/974/996/2506/front_fr.3.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Margarine",
+      "image": "/stores/Brand Photos/compliments-margarine.png",
+      "code": "0055742571967",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/257/1967/front_fr.3.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Margarine",
+      "image": "/stores/Brand Photos/western-family-margarine.png",
+      "code": "0062639335854",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/933/5854/front_fr.3.400.jpg"
+    },
+    "noname": {
+      "brand": "No Name",
+      "name": "68% vegetable oil margarine",
+      "image": "/stores/Brand Photos/no-name-margarine.png",
+      "code": "0060383891237",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/389/1237/front_fr.3.400.jpg"
+    },
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Celeb original margarine",
+      "image": "/stores/Brand Photos/president-s-choice-margarine.png",
+      "code": "0060383778675",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/377/8675/front_en.12.400.jpg"
+    }
+  },
+  "chocolate-milk": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Milk chocolate",
+      "image": "/stores/Brand Photos/great-value-chocolate-milk.png",
+      "code": "0628915168389",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/516/8389/front_fr.3.400.jpg"
+    },
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Milk Chocolate Eggs",
+      "image": "/stores/Brand Photos/president-s-choice-chocolate-milk.png",
+      "code": "0060383189693",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/318/9693/front_fr.3.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Swiss milk chocolate",
+      "image": "/stores/Brand Photos/compliments-chocolate-milk.png",
+      "code": "0055742562989",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/256/2989/front_fr.3.400.jpg"
+    },
+    "frank": {
+      "brand": "Frank",
+      "name": "eclate de rire",
+      "image": "/stores/Brand Photos/frank-chocolate-milk.png",
+      "code": "0778367600231",
+      "source": "https://images.openfoodfacts.org/images/products/077/836/760/0231/front_fr.3.400.jpg"
+    }
+  },
+  "coconut-milk-beverage": {
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Coconut milk",
+      "size": "400 ml",
+      "image": "/stores/Brand Photos/western-family-coconut-milk-beverage.png",
+      "code": "0062639292973",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/929/2973/front_en.14.400.jpg"
+    }
+  },
+  "butter": {
+    "noname": {
+      "brand": "No Name",
+      "name": "Salted Butter",
+      "size": "454 g",
+      "image": "/stores/Brand Photos/no-name-butter.png",
+      "code": "0060383681890",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/368/1890/front_en.15.400.jpg"
+    },
+    "selection": {
+      "brand": "Selection",
+      "name": "Beurre salé",
+      "size": "454 g",
+      "image": "/stores/Brand Photos/selection-butter.png",
+      "code": "0059749894784",
+      "source": "https://images.openfoodfacts.org/images/products/005/974/989/4784/front_fr.17.400.jpg"
+    },
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Unsalted Churned Butter Sticks",
+      "size": "454g",
+      "image": "/stores/Brand Photos/great-value-butter.png",
+      "code": "0628915224719",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/522/4719/front_en.33.400.jpg"
+    }
+  },
+  "bacon": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Bacon",
+      "image": "/stores/Brand Photos/great-value-bacon.png",
+      "code": "0627735021706",
+      "source": "https://images.openfoodfacts.org/images/products/062/773/502/1706/front_fr.3.400.jpg"
+    },
+    "noname": {
+      "brand": "No Name",
+      "name": "Peameal Bacon",
+      "image": "/stores/Brand Photos/no-name-bacon.png",
+      "code": "0060383148072",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/314/8072/front_fr.3.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Bacon and Chedder",
+      "image": "/stores/Brand Photos/compliments-bacon.png",
+      "code": "0055742549218",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/254/9218/front_en.8.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Applewood Smoked Bacon",
+      "image": "/stores/Brand Photos/western-family-bacon.png",
+      "code": "0062639371296",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/937/1296/front_en.3.400.jpg"
+    },
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Peppercorn bacon poivre en grains à l'ancienne",
+      "image": "/stores/Brand Photos/president-s-choice-bacon.png",
+      "code": "0060383010805",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/301/0805/front_fr.3.400.jpg"
+    }
+  },
+  "graham-crackers": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Biscuits graham",
+      "image": "/stores/Brand Photos/great-value-graham-crackers.png",
+      "code": "0681131761338",
+      "source": "https://images.openfoodfacts.org/images/products/068/113/176/1338/front_fr.3.400.jpg"
+    }
+  },
+  "basmati-rice": {
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Basmati rice",
+      "image": "/stores/Brand Photos/western-family-rice.png",
+      "code": "0062639362942",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/936/2942/front_fr.3.400.jpg"
+    }
+  },
+  "caesar-salad-kit": {
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Caesar Salad Kit",
+      "size": "280 g",
+      "image": "/stores/Brand Photos/compliments-caesar-salad-kit.png",
+      "code": "0068820136101",
+      "source": "https://images.openfoodfacts.org/images/products/006/882/013/6101/front_en.8.400.jpg"
+    }
+  },
+  "shredded-mozzarella": {
+    "noname": {
+      "brand": "No Name",
+      "name": "Mozzarella",
+      "image": "/stores/Brand Photos/no-name-shredded-mozzarella.png",
+      "code": "0060383061364",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/306/1364/front_fr.3.400.jpg"
+    },
+    "selection": {
+      "brand": "Selection",
+      "name": "Mozzarella",
+      "image": "/stores/Brand Photos/selection-shredded-mozzarella.png",
+      "code": "0059749949316",
+      "source": "https://images.openfoodfacts.org/images/products/005/974/994/9316/front_fr.3.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Mozzarella",
+      "image": "/stores/Brand Photos/compliments-shredded-mozzarella.png",
+      "code": "0055742559132",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/255/9132/front_fr.3.400.jpg"
+    },
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Cheese mozzarella",
+      "image": "/stores/Brand Photos/great-value-shredded-mozzarella.png",
+      "code": "0627735014739",
+      "source": "https://images.openfoodfacts.org/images/products/062/773/501/4739/front_fr.3.400.jpg"
+    }
+  },
+  "sliced-cheese-singles": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Tex Mex",
+      "image": "/stores/Brand Photos/great-value-sliced-cheese-singles.png",
+      "code": "0628915787283",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/578/7283/front_fr.3.400.jpg"
+    },
+    "noname": {
+      "brand": "No Name",
+      "name": "Fromage",
+      "image": "/stores/Brand Photos/no-name-sliced-cheese-singles.png",
+      "code": "0060383152857",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/315/2857/front_fr.3.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Fromage",
+      "image": "/stores/Brand Photos/compliments-sliced-cheese-singles.png",
+      "code": "0055742553840",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/255/3840/front_fr.9.400.jpg"
+    },
+    "kirklandsignature": {
+      "brand": "Kirkland Signature",
+      "name": "Cottage cheese",
+      "image": "/stores/Brand Photos/kirkland-signature-sliced-cheese-singles.png",
+      "code": "0096619053995",
+      "source": "https://images.openfoodfacts.org/images/products/009/661/905/3995/front_fr.3.400.jpg"
+    },
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Fromage Suisse",
+      "image": "/stores/Brand Photos/president-s-choice-sliced-cheese-singles.png",
+      "code": "0060383134945",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/313/4945/front_fr.9.400.jpg"
+    },
+    "selection": {
+      "brand": "Selection",
+      "name": "Fromage râpé",
+      "image": "/stores/Brand Photos/selection-sliced-cheese-singles.png",
+      "code": "0059749962834",
+      "source": "https://images.openfoodfacts.org/images/products/005/974/996/2834/front_fr.8.400.jpg"
+    },
+    "irresistibles": {
+      "brand": "Irresistibles",
+      "name": "Life Smart cheese and spinach canneloni",
+      "image": "/stores/Brand Photos/irresistibles-sliced-cheese-singles.png",
+      "code": "0059749913058",
+      "source": "https://images.openfoodfacts.org/images/products/005/974/991/3058/front_en.3.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "cream cheese",
+      "image": "/stores/Brand Photos/western-family-sliced-cheese-singles.png",
+      "code": "0062639336967",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/933/6967/front_fr.3.400.jpg"
+    }
+  },
+  "2-milk": {
+    "kirklandsignature": {
+      "brand": "Kirkland Signature Partly Skimmed Milk",
+      "name": "Kirkland Signature Partly Skimmed Milk",
+      "image": "/stores/Brand Photos/pinned-kirklandsignature-milk.avif",
+      "code": "pinned",
+      "source": "public/stores/Product card Images/AI searched/partly skimmed milk - costco.avif",
+      "pinned": true
+    },
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "2% M.F. Organic Party Skimmed Milk",
+      "size": "4 L",
+      "image": "/stores/Brand Photos/president-s-choice-milk.png",
+      "code": "0060383707378",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/370/7378/front_en.15.400.jpg"
+    },
+    "greatvalue": {
+      "brand": "Great Value 2% Milk",
+      "name": "Great Value 2% Milk",
+      "image": "/stores/Brand Photos/pinned-greatvalue-milk.avif",
+      "code": "pinned",
+      "source": "public/stores/Product card Images/AI searched/2 percent cow milk- WALMART.avif",
+      "pinned": true
+    }
+  },
+  "mozzarella-cheese": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Cheese mozzarella",
+      "image": "/stores/Brand Photos/great-value-mozzarella-cheese.png",
+      "code": "0627735014739",
+      "source": "https://images.openfoodfacts.org/images/products/062/773/501/4739/front_fr.3.400.jpg"
+    },
+    "noname": {
+      "brand": "No Name",
+      "name": "Mozzarella Cheese",
+      "size": "320g",
+      "image": "/stores/Brand Photos/no-name-mozzarella-cheese.png",
+      "code": "0060383195830",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/319/5830/front_en.16.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Mozzarella Cheese",
+      "size": "700 g",
+      "image": "/stores/Brand Photos/compliments-mozzarella-cheese.png",
+      "code": "0055742553864",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/255/3864/front_en.8.400.jpg"
+    }
+  },
+  "feta-cheese": {
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Light feta cheese in brine",
+      "image": "/stores/Brand Photos/president-s-choice-feta-cheese.png",
+      "code": "0060383867560",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/386/7560/front_fr.20.400.jpg"
+    },
+    "selection": {
+      "brand": "Selection",
+      "name": "Fromage Fêta",
+      "image": "/stores/Brand Photos/selection-feta-cheese.png",
+      "code": "0059749915755",
+      "source": "https://images.openfoodfacts.org/images/products/005/974/991/5755/front_ca.6.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Feta cheese",
+      "image": "/stores/Brand Photos/compliments-feta-cheese.png",
+      "code": "0068820130161",
+      "source": "https://images.openfoodfacts.org/images/products/006/882/013/0161/front_en.6.400.jpg"
+    }
+  },
+  "whipping-cream": {
+    "selection": {
+      "brand": "Selection",
+      "name": "Creme a fouetter",
+      "image": "/stores/Brand Photos/selection-whipping-cream.png",
+      "code": "0059749936460",
+      "source": "https://images.openfoodfacts.org/images/products/005/974/993/6460/front_fr.6.400.jpg"
+    }
+  },
+  "table-salt": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Sel de table",
+      "image": "/stores/Brand Photos/great-value-salt.png",
+      "code": "0627735012957",
+      "source": "https://images.openfoodfacts.org/images/products/062/773/501/2957/front_fr.3.400.jpg"
+    }
+  },
+  "black-pepper": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Ground black pepper",
+      "image": "/stores/Brand Photos/great-value-black-pepper.png",
+      "code": "0681131862240",
+      "source": "https://images.openfoodfacts.org/images/products/068/113/186/2240/front_fr.3.400.jpg"
+    },
+    "noname": {
+      "brand": "No Name",
+      "name": "Piment de cayenne",
+      "image": "/stores/Brand Photos/no-name-black-pepper.png",
+      "code": "0060383054236",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/305/4236/front_fr.3.400.jpg"
+    },
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Peppercorn bacon poivre en grains à l'ancienne",
+      "image": "/stores/Brand Photos/president-s-choice-black-pepper.png",
+      "code": "0060383010805",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/301/0805/front_fr.3.400.jpg"
+    },
+    "selection": {
+      "brand": "Selection",
+      "name": "Ground black pepper",
+      "image": "/stores/Brand Photos/selection-black-pepper.png",
+      "code": "0059749889094",
+      "source": "https://images.openfoodfacts.org/images/products/005/974/988/9094/front_fr.3.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Pepper and Lemon Tuna",
+      "size": "85 g",
+      "image": "/stores/Brand Photos/western-family-black-pepper.png",
+      "code": "0062639307301",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/930/7301/front_en.15.400.jpg"
+    }
+  },
+  "tomato-pasta-sauce": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Tomato Basil Pasta Sauce",
+      "size": "680 ml",
+      "image": "/stores/Brand Photos/great-value-tomato-sauce.png",
+      "code": "0681131914284",
+      "source": "https://images.openfoodfacts.org/images/products/068/113/191/4284/front_en.4.400.jpg"
+    },
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Tomato and fennel pasta sauce",
+      "image": "/stores/Brand Photos/president-s-choice-tomato-sauce.png",
+      "code": "0060383204129",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/320/4129/front_en.3.400.jpg"
+    }
+  },
+  "ground-coffee": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Dark Roast Ground Coffee",
+      "image": "/stores/Brand Photos/great-value-coffee.png",
+      "code": "0628915242676",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/524/2676/front_fr.3.400.jpg"
+    },
+    "noname": {
+      "brand": "No Name",
+      "name": "Dark roast ground coffee",
+      "image": "/stores/Brand Photos/no-name-coffee.png",
+      "code": "0060383037697",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/303/7697/front_fr.3.400.jpg"
+    }
+  },
+  "parmesan-cheese": {
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Fromage parmesan",
+      "image": "/stores/Brand Photos/compliments-parmesan-cheese.png",
+      "code": "0055742553550",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/255/3550/front_fr.3.400.jpg"
+    }
+  },
+  "coffee-cream-10": {
+    "noname": {
+      "brand": "No Name",
+      "name": "Crème a café",
+      "image": "/stores/Brand Photos/no-name-coffee-cream.png",
+      "code": "0060383204815",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/320/4815/front_en.9.400.jpg"
+    }
+  },
+  "almond-milk": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Milk Chocolatey Almond",
+      "size": "4 x 88 ml",
+      "image": "/stores/Brand Photos/great-value-almond-milk.png",
+      "code": "0628915787474",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/578/7474/front_fr.3.400.jpg"
+    },
+    "presidentschoice": {
+      "brand": "President's Choice Almond Milk",
+      "name": "President's Choice Almond Milk",
+      "image": "/stores/Brand Photos/pinned-presidentschoice-almond-milk.avif",
+      "code": "pinned",
+      "source": "public/stores/Product card Images/AI searched/almond milk - real canadian superstore.avif",
+      "pinned": true
+    }
+  },
+  "buttermilk": {
+    "noname": {
+      "brand": "No Name",
+      "name": "No name buttermilk pancakes",
+      "image": "/stores/Brand Photos/no-name-buttermilk.png",
+      "code": "0060383987787",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/398/7787/front_fr.3.400.jpg"
+    }
+  },
+  "drinkable-yogurt": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Strawberry Banana Drinkable Yogurt",
+      "size": "8 x 93 ml",
+      "image": "/stores/Brand Photos/great-value-drinkable-yogurt.png",
+      "code": "0628915224900",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/522/4900/front_fr.3.400.jpg"
+    }
+  },
+  "whipped-topping": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Whipped topping",
+      "size": "1 L",
+      "image": "/stores/Brand Photos/great-value-whipped-topping.png",
+      "code": "0605388563040",
+      "source": "https://images.openfoodfacts.org/images/products/060/538/856/3040/front.3.400.jpg"
+    },
+    "noname": {
+      "brand": "No Name",
+      "name": "Whipped topping",
+      "image": "/stores/Brand Photos/no-name-whipped-topping.png",
+      "code": "0060383032180",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/303/2180/front_fr.3.400.jpg"
+    },
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Bruschetta Topping with Roasted Vegetables",
+      "size": "227 g",
+      "image": "/stores/Brand Photos/president-s-choice-whipped-topping.png",
+      "code": "0060383037086",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/303/7086/front_en.3.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Garniture aux oignons caramélisés et vinaigre balsamique",
+      "image": "/stores/Brand Photos/compliments-whipped-topping.png",
+      "code": "0623682114034",
+      "source": "https://images.openfoodfacts.org/images/products/062/368/211/4034/front_fr.3.400.jpg"
+    }
+  },
+  "egg-whites": {
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Free Range Organic Egg Whites",
+      "image": "/stores/Brand Photos/president-s-choice-egg-whites.png",
+      "code": "0060383223366",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/322/3366/front_fr.3.400.jpg"
+    }
+  },
+  "marble-cheese": {
+    "noname": {
+      "brand": "No Name",
+      "name": "Fromage marbré",
+      "image": "/stores/Brand Photos/no-name-marble-cheese.png",
+      "code": "0060383061333",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/306/1333/front_fr.10.400.jpg"
+    }
+  },
+  "extra-large-eggs": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Extra Large Eggs (1egg = 58 g)",
+      "image": "/stores/Brand Photos/great-value-extra-large-eggs.png",
+      "code": "68119119",
+      "source": "https://images.openfoodfacts.org/images/products/68119119/front_en.3.400.jpg"
+    },
+    "selection": {
+      "brand": "Selection",
+      "name": "Large egg",
+      "image": "/stores/Brand Photos/selection-extra-large-eggs.png",
+      "code": "0059749896078",
+      "source": "https://images.openfoodfacts.org/images/products/005/974/989/6078/front_ca.7.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Oeufs gros",
+      "image": "/stores/Brand Photos/compliments-extra-large-eggs.png",
+      "code": "0055742561951",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/256/1951/front_fr.8.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Large eggs",
+      "image": "/stores/Brand Photos/western-family-extra-large-eggs.png",
+      "code": "0062639394981",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/939/4981/front_fr.3.400.jpg"
+    }
+  },
+  "havarti-cheese": {
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Havarti cheese",
+      "image": "/stores/Brand Photos/compliments-havarti-cheese.png",
+      "code": "0055742559040",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/255/9040/front_fr.3.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Havarti Cheese Slices",
+      "image": "/stores/Brand Photos/western-family-havarti-cheese.png",
+      "code": "0062639366315",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/936/6315/front_fr.3.400.jpg"
+    }
+  },
+  "free-run-eggs": {
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Free-Run Brown Eggs",
+      "image": "/stores/Brand Photos/president-s-choice-free-run-eggs.png",
+      "code": "0060383695033",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/369/5033/front_en.6.400.jpg"
+    }
+  },
+  "cheese-spread": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Cream Cheese Spread",
+      "size": "227g",
+      "image": "/stores/Brand Photos/great-value-cheese-spread.png",
+      "code": "03244023",
+      "source": "https://images.openfoodfacts.org/images/products/03244023/front_en.5.400.jpg"
+    },
+    "noname": {
+      "brand": "No Name",
+      "name": "Tartinade au fromage a la creme avec fines herbes et ail roti",
+      "image": "/stores/Brand Photos/no-name-cheese-spread.png",
+      "code": "0060383187859",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/318/7859/front_fr.3.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Cream cheese spread",
+      "image": "/stores/Brand Photos/compliments-cheese-spread.png",
+      "code": "0055742541120",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/254/1120/front_fr.4.400.jpg"
+    }
+  },
+  "whipped-cream": {
+    "kirklandsignature": {
+      "brand": "Kirkland Signature",
+      "name": "Creme sure",
+      "image": "/stores/Brand Photos/kirkland-signature-whipped-cream.png",
+      "code": "0096619053223",
+      "source": "https://images.openfoodfacts.org/images/products/009/661/905/3223/front_fr.3.400.jpg"
+    },
+    "noname": {
+      "brand": "No Name",
+      "name": "Crème sur",
+      "image": "/stores/Brand Photos/no-name-whipped-cream.png",
+      "code": "0060383129255",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/312/9255/front_fr.3.400.jpg"
+    },
+    "selection": {
+      "brand": "Selection",
+      "name": "Crème sure 1%",
+      "size": "500 mL",
+      "image": "/stores/Brand Photos/selection-whipped-cream.png",
+      "code": "0059749903936",
+      "source": "https://images.openfoodfacts.org/images/products/005/974/990/3936/front_fr.4.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Cream of Mushroom",
+      "size": "284 mL",
+      "image": "/stores/Brand Photos/compliments-whipped-cream.png",
+      "code": "0055742548396",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/254/8396/front_en.8.400.jpg"
+    },
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Sour cream",
+      "image": "/stores/Brand Photos/great-value-whipped-cream.png",
+      "code": "0628915380941",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/538/0941/front_en.19.400.jpg"
+    },
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Pêcheset crème gruau instantané",
+      "image": "/stores/Brand Photos/president-s-choice-whipped-cream.png",
+      "code": "0060383011635",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/301/1635/front_fr.3.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "cream cheese",
+      "image": "/stores/Brand Photos/western-family-whipped-cream.png",
+      "code": "0062639336967",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/933/6967/front_fr.3.400.jpg"
+    }
+  },
+  "monterey-jack-cheese": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Monterey jack cheese",
+      "image": "/stores/Brand Photos/great-value-monterey-jack-cheese.png",
+      "code": "0627735014722",
+      "source": "https://images.openfoodfacts.org/images/products/062/773/501/4722/front_fr.3.400.jpg"
+    }
+  },
+  "whipped-butter": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Unsalted Churned Butter Sticks",
+      "size": "454g",
+      "image": "/stores/Brand Photos/great-value-whipped-butter.png",
+      "code": "0628915224719",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/522/4719/front_en.33.400.jpg"
+    },
+    "noname": {
+      "brand": "No Name",
+      "name": "Salted Butter",
+      "size": "454 g",
+      "image": "/stores/Brand Photos/no-name-whipped-butter.png",
+      "code": "0060383681890",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/368/1890/front_en.15.400.jpg"
+    },
+    "selection": {
+      "brand": "Selection",
+      "name": "Beurre salé",
+      "size": "454 g",
+      "image": "/stores/Brand Photos/selection-whipped-butter.png",
+      "code": "0059749894784",
+      "source": "https://images.openfoodfacts.org/images/products/005/974/989/4784/front_fr.17.400.jpg"
+    }
+  },
+  "herb-and-garlic-cream-cheese": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Herb & Garlic cream cheese product",
+      "image": "/stores/Brand Photos/great-value-herb-and-garlic-cream-cheese.png",
+      "code": "0628915362350",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/536/2350/front_fr.3.400.jpg"
+    },
+    "noname": {
+      "brand": "No Name",
+      "name": "Tartinade au fromage a la creme avec fines herbes et ail roti",
+      "image": "/stores/Brand Photos/no-name-herb-and-garlic-cream-cheese.png",
+      "code": "0060383187859",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/318/7859/front_fr.3.400.jpg"
+    }
+  },
+  "light-sour-cream": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Sour cream",
+      "image": "/stores/Brand Photos/great-value-light-sour-cream.png",
+      "code": "0628915380941",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/538/0941/front_en.19.400.jpg"
+    },
+    "kirklandsignature": {
+      "brand": "Kirkland Signature",
+      "name": "Creme sure",
+      "image": "/stores/Brand Photos/kirkland-signature-light-sour-cream.png",
+      "code": "0096619053223",
+      "source": "https://images.openfoodfacts.org/images/products/009/661/905/3223/front_fr.3.400.jpg"
+    },
+    "noname": {
+      "brand": "No Name",
+      "name": "Sour Cream",
+      "image": "/stores/Brand Photos/no-name-light-sour-cream.png",
+      "code": "0060383129224",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/312/9224/front_fr.3.400.jpg"
+    },
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "14% M.F. Lactose Free Sour Cream",
+      "size": "500 mL",
+      "image": "/stores/Brand Photos/president-s-choice-light-sour-cream.png",
+      "code": "0060383709563",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/370/9563/front_en.13.400.jpg"
+    },
+    "selection": {
+      "brand": "Selection",
+      "name": "Crème sure 1%",
+      "size": "500 mL",
+      "image": "/stores/Brand Photos/selection-light-sour-cream.png",
+      "code": "0059749903936",
+      "source": "https://images.openfoodfacts.org/images/products/005/974/990/3936/front_fr.4.400.jpg"
+    }
+  },
+  "light-cream-cheese": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Cream Cheese Spread",
+      "size": "227g",
+      "image": "/stores/Brand Photos/great-value-light-cream-cheese.png",
+      "code": "03244023",
+      "source": "https://images.openfoodfacts.org/images/products/03244023/front_en.5.400.jpg"
+    },
+    "noname": {
+      "brand": "No Name",
+      "name": "Fromage à la crème",
+      "image": "/stores/Brand Photos/no-name-light-cream-cheese.png",
+      "code": "0060383193645",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/319/3645/front_fr.3.400.jpg"
+    },
+    "selection": {
+      "brand": "Selection",
+      "name": "Classic Cream Cheese",
+      "image": "/stores/Brand Photos/selection-light-cream-cheese.png",
+      "code": "0059749894326",
+      "source": "https://images.openfoodfacts.org/images/products/005/974/989/4326/front_fr.3.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Cream Cheese Light",
+      "image": "/stores/Brand Photos/compliments-light-cream-cheese.png",
+      "code": "0055742541151",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/254/1151/front_en.6.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "cream cheese",
+      "image": "/stores/Brand Photos/western-family-light-cream-cheese.png",
+      "code": "0062639336967",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/933/6967/front_fr.3.400.jpg"
+    }
+  },
+  "hot-dogs": {
+    "noname": {
+      "brand": "No Name",
+      "name": "Hot Dog Buns",
+      "image": "/stores/Brand Photos/no-name-hot-dogs.png",
+      "code": "0060383022983",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/302/2983/front_en.3.400.jpg"
+    },
+    "selection": {
+      "brand": "Selection",
+      "name": "Pain hot dog",
+      "size": "12 pains",
+      "image": "/stores/Brand Photos/selection-hot-dogs.png",
+      "code": "0059749898478",
+      "source": "https://images.openfoodfacts.org/images/products/005/974/989/8478/front_fr.20.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Hot dog buns steamed",
+      "image": "/stores/Brand Photos/compliments-hot-dogs.png",
+      "code": "0068820125204",
+      "source": "https://images.openfoodfacts.org/images/products/006/882/012/5204/front_en.8.400.jpg"
+    }
+  },
+  "sliced-turkey-breast": {
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Herb Turkey Breast Roast",
+      "image": "/stores/Brand Photos/compliments-deli-sliced-turkey-breast.png",
+      "code": "0068820133674",
+      "source": "https://images.openfoodfacts.org/images/products/006/882/013/3674/front_en.14.400.jpg"
+    }
+  },
+  "pepperoni": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Pepperoni sticks",
+      "image": "/stores/Brand Photos/great-value-pepperoni.png",
+      "code": "0681131760652",
+      "source": "https://images.openfoodfacts.org/images/products/068/113/176/0652/front_fr.3.400.jpg"
+    },
+    "noname": {
+      "brand": "No Name",
+      "name": "Pepperoni - Smoked, Sliced",
+      "size": "500g",
+      "image": "/stores/Brand Photos/no-name-pepperoni.png",
+      "code": "0060383115289",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/311/5289/front_en.4.400.jpg"
+    },
+    "selection": {
+      "brand": "Selection",
+      "name": "Pepperoni tranché",
+      "image": "/stores/Brand Photos/selection-pepperoni.png",
+      "code": "0059749936422",
+      "source": "https://images.openfoodfacts.org/images/products/005/974/993/6422/front_fr.3.400.jpg"
+    }
+  },
+  "salami": {
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Salami de gênes",
+      "image": "/stores/Brand Photos/compliments-salami.png",
+      "code": "0055742559767",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/255/9767/front_fr.3.400.jpg"
+    }
+  },
+  "smoked-salmon": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Canadian smoked atlantic salmon",
+      "image": "/stores/Brand Photos/great-value-smoked-salmon.png",
+      "code": "0627735257822",
+      "source": "https://images.openfoodfacts.org/images/products/062/773/525/7822/front_fr.3.400.jpg"
+    },
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Peat-Smoked Scottish Atlantic Salmon",
+      "image": "/stores/Brand Photos/president-s-choice-smoked-salmon.png",
+      "code": "0060383194536",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/319/4536/front_en.3.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Smoked sockeye salmon",
+      "image": "/stores/Brand Photos/compliments-smoked-salmon.png",
+      "code": "0055742560817",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/256/0817/front_fr.3.400.jpg"
+    }
+  },
+  "smoked-ham": {
+    "kirklandsignature": {
+      "brand": "Kirkland Signature",
+      "name": "Applewood Smoked Master Carve Ham",
+      "image": "/stores/Brand Photos/kirkland-signature-smoked-ham.png",
+      "code": "0246655624721",
+      "source": "https://images.openfoodfacts.org/images/products/024/665/562/4721/front_en.3.400.jpg"
+    },
+    "noname": {
+      "brand": "No Name",
+      "name": "Smoked Ham",
+      "image": "/stores/Brand Photos/no-name-smoked-ham.png",
+      "code": "0060383147273",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/314/7273/front_fr.3.400.jpg"
+    },
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Smoked ham boneless half ham",
+      "size": "700 g",
+      "image": "/stores/Brand Photos/president-s-choice-smoked-ham.png",
+      "code": "0060383059200",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/305/9200/front_en.5.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Classic Sub Trio Salami, Smoked Ham 15% Meat Protein, Bologna",
+      "image": "/stores/Brand Photos/compliments-smoked-ham.png",
+      "code": "0068820136347",
+      "source": "https://images.openfoodfacts.org/images/products/006/882/013/6347/front_fr.3.400.jpg"
+    }
+  },
+  "white-bread": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "White + Fibre Bread",
+      "image": "/stores/Brand Photos/great-value-white-bread.png",
+      "code": "0628915824780",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/582/4780/front_fr.3.400.jpg"
+    },
+    "noname": {
+      "brand": "No Name",
+      "name": "Pain blanc",
+      "image": "/stores/Brand Photos/no-name-white-bread.png",
+      "code": "0060383681371",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/368/1371/front_fr.3.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "White bread",
+      "image": "/stores/Brand Photos/compliments-white-bread.png",
+      "code": "0068820133780",
+      "source": "https://images.openfoodfacts.org/images/products/006/882/013/3780/front_fr.3.400.jpg"
+    }
+  },
+  "hot-dog-buns": {
+    "noname": {
+      "brand": "No Name",
+      "name": "Hot Dog Buns",
+      "image": "/stores/Brand Photos/no-name-hot-dog-buns.png",
+      "code": "0060383022983",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/302/2983/front_en.3.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Hot dog buns steamed",
+      "image": "/stores/Brand Photos/compliments-hot-dog-buns.png",
+      "code": "0068820125204",
+      "source": "https://images.openfoodfacts.org/images/products/006/882/012/5204/front_en.8.400.jpg"
+    }
+  },
+  "hamburger-buns": {
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Deluxe Hamburger Buns",
+      "size": "616 g",
+      "image": "/stores/Brand Photos/compliments-hamburger-buns.png",
+      "code": "0068820133889",
+      "source": "https://images.openfoodfacts.org/images/products/006/882/013/3889/front_en.11.400.jpg"
+    }
+  },
+  "brioche-buns": {
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Mini Burger Buns Brioche",
+      "image": "/stores/Brand Photos/compliments-brioche-buns.png",
+      "code": "0068820135517",
+      "source": "https://images.openfoodfacts.org/images/products/006/882/013/5517/front_fr.3.400.jpg"
+    }
+  },
+  "english-muffins": {
+    "noname": {
+      "brand": "No Name",
+      "name": "English muffins",
+      "image": "/stores/Brand Photos/no-name-english-muffins.png",
+      "code": "0060383007447",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/300/7447/front_fr.3.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Plain english muffins",
+      "size": "6",
+      "image": "/stores/Brand Photos/compliments-english-muffins.png",
+      "code": "0068820128342",
+      "source": "https://images.openfoodfacts.org/images/products/006/882/012/8342/front_fr.3.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "English Muffins Original",
+      "image": "/stores/Brand Photos/western-family-english-muffins.png",
+      "code": "0062639172220",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/917/2220/front_fr.3.400.jpg"
+    }
+  },
+  "flour-tortillas": {
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Flour tortillas",
+      "image": "/stores/Brand Photos/western-family-flour-tortillas.png",
+      "code": "0062639359881",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/935/9881/front_fr.3.400.jpg"
+    }
+  },
+  "dinner-rolls": {
+    "noname": {
+      "brand": "No Name",
+      "name": "Whole wheat dinner rolls",
+      "image": "/stores/Brand Photos/no-name-dinner-rolls.png",
+      "code": "0060383023690",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/302/3690/front_fr.3.400.jpg"
+    }
+  },
+  "pie-crust": {
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Graham Pie Crust",
+      "size": "170 g",
+      "image": "/stores/Brand Photos/compliments-pie-crust.png",
+      "code": "0055742554021",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/255/4021/front_en.8.400.jpg"
+    }
+  },
+  "breadsticks": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Breadsticks",
+      "image": "/stores/Brand Photos/great-value-breadsticks.png",
+      "code": "0627735262253",
+      "source": "https://images.openfoodfacts.org/images/products/062/773/526/2253/front_fr.3.400.jpg"
+    }
+  },
+  "penne-pasta": {
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Gluten free penne rigate pasta",
+      "image": "/stores/Brand Photos/western-family-penne-pasta.png",
+      "code": "0062639342173",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/934/2173/front_fr.3.400.jpg"
+    }
+  },
+  "macaroni": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Macaroni",
+      "image": "/stores/Brand Photos/great-value-macaroni.png",
+      "code": "0627735260099",
+      "source": "https://images.openfoodfacts.org/images/products/062/773/526/0099/front_fr.3.400.jpg"
+    },
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Macaroni au fromage",
+      "image": "/stores/Brand Photos/president-s-choice-macaroni.png",
+      "code": "0060383212476",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/321/2476/front_fr.3.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Chesdy macaroni",
+      "image": "/stores/Brand Photos/compliments-macaroni.png",
+      "code": "0068820132875",
+      "source": "https://images.openfoodfacts.org/images/products/006/882/013/2875/front_fr.3.400.jpg"
+    }
+  },
+  "egg-noodles": {
+    "noname": {
+      "brand": "No Name",
+      "name": "Extra-Fine Egg Noodles",
+      "size": "340 g",
+      "image": "/stores/Brand Photos/no-name-egg-noodles.png",
+      "code": "0060383080365",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/308/0365/front_en.10.400.jpg"
+    }
+  },
+  "jasmine-rice": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Jasmine Rice",
+      "size": "240 g",
+      "image": "/stores/Brand Photos/great-value-jasmine-rice.png",
+      "code": "0627735268316",
+      "source": "https://images.openfoodfacts.org/images/products/062/773/526/8316/front_en.3.400.jpg"
+    },
+    "kirklandsignature": {
+      "brand": "Kirkland Signature",
+      "name": "Jasmine White Rice",
+      "size": "8 kg",
+      "image": "/stores/Brand Photos/kirkland-signature-jasmine-rice.png",
+      "code": "0096619685059",
+      "source": "https://images.openfoodfacts.org/images/products/009/661/968/5059/front_en.23.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Jasmine Rice",
+      "size": "900 g",
+      "image": "/stores/Brand Photos/compliments-jasmine-rice.png",
+      "code": "0055742569612",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/256/9612/front_en.11.400.jpg"
+    }
+  },
+  "white-rice": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Instant white rice",
+      "image": "/stores/Brand Photos/great-value-white-rice.png",
+      "code": "0628915082791",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/508/2791/front_fr.3.400.jpg"
+    },
+    "kirklandsignature": {
+      "brand": "Kirkland Signature",
+      "name": "Jasmine White Rice",
+      "size": "8 kg",
+      "image": "/stores/Brand Photos/kirkland-signature-white-rice.png",
+      "code": "0096619685059",
+      "source": "https://images.openfoodfacts.org/images/products/009/661/968/5059/front_en.23.400.jpg"
+    },
+    "noname": {
+      "brand": "No Name",
+      "name": "Long Grain White Rice",
+      "size": "2 kg",
+      "image": "/stores/Brand Photos/no-name-white-rice.png",
+      "code": "0060383008338",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/300/8338/front_en.14.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "White basmati Rice",
+      "image": "/stores/Brand Photos/western-family-white-rice.png",
+      "code": "0062639300104",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/930/0104/front_fr.3.400.jpg"
+    }
+  },
+  "brown-rice": {
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Lentil & Brown Rice",
+      "image": "/stores/Brand Photos/president-s-choice-brown-rice.png",
+      "code": "0060383026899",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/302/6899/front_fr.3.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Brown Rice",
+      "image": "/stores/Brand Photos/compliments-brown-rice.png",
+      "code": "0055742373561",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/237/3561/front_fr.3.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Brown and wild rice",
+      "image": "/stores/Brand Photos/western-family-brown-rice.png",
+      "code": "0062639358389",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/935/8389/front_fr.3.400.jpg"
+    }
+  },
+  "quinoa": {
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Chia et Quinoa",
+      "image": "/stores/Brand Photos/president-s-choice-quinoa.png",
+      "code": "0060383170813",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/317/0813/front_fr.15.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Organic Quinoa",
+      "image": "/stores/Brand Photos/compliments-quinoa.png",
+      "code": "0055742569346",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/256/9346/front_fr.3.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Red Quinoa",
+      "image": "/stores/Brand Photos/western-family-quinoa.png",
+      "code": "0062639343071",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/934/3071/front_fr.3.400.jpg"
+    }
+  },
+  "couscous": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Couscous",
+      "image": "/stores/Brand Photos/great-value-couscous.png",
+      "code": "0627735014388",
+      "source": "https://images.openfoodfacts.org/images/products/062/773/501/4388/front_en.12.400.jpg"
+    },
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Memories of Marrakech Couscous Whole Wheat",
+      "size": "340 g",
+      "image": "/stores/Brand Photos/president-s-choice-couscous.png",
+      "code": "0060383131906",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/313/1906/front_en.17.400.jpg"
+    }
+  },
+  "red-lentils": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Red lentils",
+      "size": "16 oz",
+      "image": "/stores/Brand Photos/great-value-red-lentils.png",
+      "code": "0628915002973",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/500/2973/front_fr.7.400.jpg"
+    },
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Red Split Lentils",
+      "size": "2 kg",
+      "image": "/stores/Brand Photos/president-s-choice-red-lentils.png",
+      "code": "0060383006266",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/300/6266/front_en.7.400.jpg"
+    }
+  },
+  "green-lentils": {
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Green lentils",
+      "image": "/stores/Brand Photos/western-family-green-lentils.png",
+      "code": "0062639364069",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/936/4069/front_fr.3.400.jpg"
+    }
+  },
+  "macaroni-and-cheese": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Macaroni & Cheese",
+      "size": "215 g",
+      "image": "/stores/Brand Photos/great-value-macaroni-and-cheese.png",
+      "code": "0605388716637",
+      "source": "https://images.openfoodfacts.org/images/products/060/538/871/6637/front_en.10.400.jpg"
+    },
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Macaroni au fromage",
+      "image": "/stores/Brand Photos/president-s-choice-macaroni-and-cheese.png",
+      "code": "0060383212476",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/321/2476/front_fr.3.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Macaroni & Cheese",
+      "size": "255 g",
+      "image": "/stores/Brand Photos/compliments-macaroni-and-cheese.png",
+      "code": "0055742505696",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/250/5696/front_en.6.400.jpg"
+    }
+  },
+  "whole-wheat-flour": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Farine de blé",
+      "image": "/stores/Brand Photos/great-value-whole-wheat-flour.png",
+      "code": "0628915232172",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/523/2172/front_fr.3.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Stone ground whole grain wheat flour",
+      "image": "/stores/Brand Photos/western-family-whole-wheat-flour.png",
+      "code": "0062639346058",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/934/6058/front_fr.3.400.jpg"
+    }
+  },
+  "baking-soda": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Bicarbonate de soude",
+      "size": "454g",
+      "image": "/stores/Brand Photos/great-value-baking-soda.png",
+      "code": "0628915380996",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/538/0996/front_fr.31.400.jpg"
+    },
+    "selection": {
+      "brand": "Selection",
+      "name": "baking soda",
+      "size": "500g",
+      "image": "/stores/Brand Photos/selection-baking-soda.png",
+      "code": "0059749933100",
+      "source": "https://images.openfoodfacts.org/images/products/005/974/993/3100/front_fr.34.400.jpg"
+    }
+  },
+  "instant-noodles": {
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "instant noodles",
+      "size": "85 grams",
+      "image": "/stores/Brand Photos/western-family-instant-noodles.png",
+      "code": "0062639297169",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/929/7169/front_fr.3.400.jpg"
+    }
+  },
+  "cocoa-powder": {
+    "noname": {
+      "brand": "No Name",
+      "name": "Cocoa Powder",
+      "size": "454 g",
+      "image": "/stores/Brand Photos/no-name-cocoa-powder.png",
+      "code": "4663244819386",
+      "source": "https://images.openfoodfacts.org/images/products/466/324/481/9386/front_en.5.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Cocoa Powder",
+      "image": "/stores/Brand Photos/western-family-cocoa-powder.png",
+      "code": "0062639362201",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/936/2201/front_fr.3.400.jpg"
+    }
+  },
+  "cake-mix": {
+    "noname": {
+      "brand": "No Name",
+      "name": "White Deluxe Cake Mix",
+      "size": "468 g",
+      "image": "/stores/Brand Photos/no-name-cake-mix.png",
+      "code": "0060383069629",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/306/9629/front_en.9.400.jpg"
+    }
+  },
+  "sweetened-condensed-milk": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Sweetened Condensed Milk",
+      "image": "/stores/Brand Photos/great-value-sweetened-condensed-milk.png",
+      "code": "0681131759601",
+      "source": "https://images.openfoodfacts.org/images/products/068/113/175/9601/front_fr.3.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "low fat sweetened condensed milk",
+      "size": "300 ml",
+      "image": "/stores/Brand Photos/compliments-sweetened-condensed-milk.png",
+      "code": "0055742525755",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/252/5755/front_en.4.400.jpg"
+    }
+  },
+  "chocolate-chips": {
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "The decadent milk chocolate chips",
+      "image": "/stores/Brand Photos/president-s-choice-chocolate-chips.png",
+      "code": "0060383986643",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/398/6643/front_en.4.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Compliments milk chocolate chips",
+      "image": "/stores/Brand Photos/compliments-chocolate-chips.png",
+      "code": "0055742548587",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/254/8587/front_fr.5.400.jpg"
+    }
+  },
+  "evaporated-milk": {
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Evaporated Milk",
+      "image": "/stores/Brand Photos/western-family-evaporated-milk.png",
+      "code": "0062639351373",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/935/1373/front_en.3.400.jpg"
+    },
+    "noname": {
+      "brand": "No Name",
+      "name": "Evaporated milk",
+      "image": "/stores/Brand Photos/no-name-evaporated-milk.png",
+      "code": "0060383196387",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/319/6387/front_en.14.400.jpg"
+    }
+  },
+  "maple-syrup": {
+    "kirklandsignature": {
+      "brand": "Kirkland Signature",
+      "name": "Organic Maple Syrup",
+      "size": "1 L",
+      "image": "/stores/Brand Photos/kirkland-signature-maple-syrup.png",
+      "code": "0196633928191",
+      "source": "https://images.openfoodfacts.org/images/products/019/663/392/8191/front_en.10.400.jpg"
+    }
+  },
+  "pie-filling": {
+    "noname": {
+      "brand": "No Name",
+      "name": "Apple Pie Filling",
+      "size": "540 mL",
+      "image": "/stores/Brand Photos/no-name-pie-filling.png",
+      "code": "0060383101121",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/310/1121/front_en.12.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Apple Pie Filling With Spiced",
+      "image": "/stores/Brand Photos/western-family-pie-filling.png",
+      "code": "0062639184612",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/918/4612/front_en.3.400.jpg"
+    }
+  },
+  "coconut-oil": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Coconut oil",
+      "image": "/stores/Brand Photos/great-value-coconut-oil.png",
+      "code": "0627735256948",
+      "source": "https://images.openfoodfacts.org/images/products/062/773/525/6948/front_fr.3.400.jpg"
+    },
+    "kirklandsignature": {
+      "brand": "Kirkland Signature",
+      "name": "Organic Virgin Coconut Oil",
+      "size": "2.3 kg / 2.48 l (84 fl oz)",
+      "image": "/stores/Brand Photos/kirkland-signature-coconut-oil.png",
+      "code": "0096619104574",
+      "source": "https://images.openfoodfacts.org/images/products/009/661/910/4574/front_en.47.400.jpg"
+    },
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Virgin Coconut Oil",
+      "size": "2.3 L",
+      "image": "/stores/Brand Photos/president-s-choice-coconut-oil.png",
+      "code": "0060383197360",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/319/7360/front_fr.3.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Virgin coconut oil",
+      "image": "/stores/Brand Photos/western-family-coconut-oil.png",
+      "code": "0062639357115",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/935/7115/front_fr.3.400.jpg"
+    }
+  },
+  "vegetable-oil": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Vegetable oil",
+      "image": "/stores/Brand Photos/great-value-vegetable-oil.png",
+      "code": "0627735260877",
+      "source": "https://images.openfoodfacts.org/images/products/062/773/526/0877/front_en.4.400.jpg"
+    },
+    "noname": {
+      "brand": "No Name",
+      "name": "68% vegetable oil margarine",
+      "image": "/stores/Brand Photos/no-name-vegetable-oil.png",
+      "code": "0060383891237",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/389/1237/front_fr.3.400.jpg"
+    },
+    "selection": {
+      "brand": "Selection",
+      "name": "Huile végétale",
+      "image": "/stores/Brand Photos/selection-vegetable-oil.png",
+      "code": "0059749888806",
+      "source": "https://images.openfoodfacts.org/images/products/005/974/988/8806/front_fr.8.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Vegetable oil",
+      "size": "1.42L",
+      "image": "/stores/Brand Photos/western-family-vegetable-oil.png",
+      "code": "0062639355104",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/935/5104/front_en.14.400.jpg"
+    }
+  },
+  "canola-oil": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Canola oil",
+      "image": "/stores/Brand Photos/great-value-canola-oil.png",
+      "code": "0627735017310",
+      "source": "https://images.openfoodfacts.org/images/products/062/773/501/7310/front_fr.3.400.jpg"
+    },
+    "noname": {
+      "brand": "No Name",
+      "name": "100% Pure Canola Oil",
+      "size": "3 L",
+      "image": "/stores/Brand Photos/no-name-canola-oil.png",
+      "code": "0060383018429",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/301/8429/front_en.20.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Canola oil",
+      "image": "/stores/Brand Photos/western-family-canola-oil.png",
+      "code": "0062639332532",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/933/2532/front_en.4.400.jpg"
+    }
+  },
+  "white-vinegar": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Vinaigre blanc",
+      "image": "/stores/Brand Photos/great-value-white-vinegar.png",
+      "code": "0681131799508",
+      "source": "https://images.openfoodfacts.org/images/products/068/113/179/9508/front_en.6.400.jpg"
+    },
+    "noname": {
+      "brand": "No Name",
+      "name": "Pure White Vinegar",
+      "image": "/stores/Brand Photos/no-name-white-vinegar.png",
+      "code": "0060383054748",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/305/4748/front_fr.3.400.jpg"
+    },
+    "selection": {
+      "brand": "Selection",
+      "name": "Vinaigre blanc",
+      "image": "/stores/Brand Photos/selection-white-vinegar.png",
+      "code": "0059749888363",
+      "source": "https://images.openfoodfacts.org/images/products/005/974/988/8363/front_fr.3.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Vinaigre blanc",
+      "image": "/stores/Brand Photos/compliments-white-vinegar.png",
+      "code": "0055742357813",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/235/7813/front_fr.3.400.jpg"
+    }
+  },
+  "apple-cider-vinegar": {
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Vinaigre de cidre de pomme",
+      "image": "/stores/Brand Photos/president-s-choice-apple-cider-vinegar.png",
+      "code": "0060383206840",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/320/6840/front_fr.9.400.jpg"
+    },
+    "selection": {
+      "brand": "Selection",
+      "name": "Vinaigre de cidre de pomme",
+      "image": "/stores/Brand Photos/selection-apple-cider-vinegar.png",
+      "code": "0059749888387",
+      "source": "https://images.openfoodfacts.org/images/products/005/974/988/8387/front_fr.3.400.jpg"
+    }
+  },
+  "balsamic-vinegar": {
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Garniture aux oignons caramélisés et vinaigre balsamique",
+      "image": "/stores/Brand Photos/compliments-balsamic-vinegar.png",
+      "code": "0623682114034",
+      "source": "https://images.openfoodfacts.org/images/products/062/368/211/4034/front_fr.3.400.jpg"
+    }
+  },
+  "cinnamon": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Ground cinnamon",
+      "image": "/stores/Brand Photos/great-value-cinnamon.png",
+      "code": "0628915362022",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/536/2022/front_fr.3.400.jpg"
+    },
+    "kirklandsignature": {
+      "brand": "Kirkland Signature",
+      "name": "Danoises à la cannelle roulées",
+      "size": "1.150 kg",
+      "image": "/stores/Brand Photos/kirkland-signature-cinnamon.png",
+      "code": "00394710",
+      "source": "https://images.openfoodfacts.org/images/products/00394710/front_fr.3.400.jpg"
+    },
+    "noname": {
+      "brand": "No Name",
+      "name": "Cinnamon Sticks",
+      "size": "100 g",
+      "image": "/stores/Brand Photos/no-name-cinnamon.png",
+      "code": "0060383054281",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/305/4281/front_fr.3.400.jpg"
+    },
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Apple & Cinnamon Oatmeal",
+      "image": "/stores/Brand Photos/president-s-choice-cinnamon.png",
+      "code": "0060383050566",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/305/0566/front_fr.3.400.jpg"
+    },
+    "selection": {
+      "brand": "Selection",
+      "name": "Cinnamon sticks",
+      "image": "/stores/Brand Photos/selection-cinnamon.png",
+      "code": "0059749929233",
+      "source": "https://images.openfoodfacts.org/images/products/005/974/992/9233/front_fr.3.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Iced Cinnamon Swirl",
+      "image": "/stores/Brand Photos/compliments-cinnamon.png",
+      "code": "0055742577198",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/257/7198/front_en.3.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Ground cinnamon",
+      "image": "/stores/Brand Photos/western-family-cinnamon.png",
+      "code": "0062639355227",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/935/5227/front_fr.3.400.jpg"
+    }
+  },
+  "paprika": {
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Paprika",
+      "size": "145 g",
+      "image": "/stores/Brand Photos/compliments-paprika.png",
+      "code": "0055742359374",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/235/9374/front_en.19.400.jpg"
+    }
+  },
+  "cumin": {
+    "noname": {
+      "brand": "No Name",
+      "name": "Cumin moulu",
+      "size": "97g",
+      "image": "/stores/Brand Photos/no-name-cumin.png",
+      "code": "0060383714086",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/371/4086/front_en.16.400.jpg"
+    }
+  },
+  "oregano": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Oregano leaves",
+      "image": "/stores/Brand Photos/great-value-oregano.png",
+      "code": "0605388881137",
+      "source": "https://images.openfoodfacts.org/images/products/060/538/888/1137/front_fr.3.400.jpg"
+    },
+    "noname": {
+      "brand": "No Name",
+      "name": "Feuilles d’origan",
+      "size": "30g",
+      "image": "/stores/Brand Photos/no-name-oregano.png",
+      "code": "0060383054120",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/305/4120/front_en.18.400.jpg"
+    }
+  },
+  "dried-basil": {
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Thon tomates séchées  et basilic",
+      "image": "/stores/Brand Photos/compliments-dried-basil.png",
+      "code": "0055742533903",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/253/3903/front_fr.3.400.jpg"
+    }
+  },
+  "bay-leaves": {
+    "noname": {
+      "brand": "No Name",
+      "name": "bay leaves",
+      "size": "20g",
+      "image": "/stores/Brand Photos/no-name-bay-leaves.png",
+      "code": "0060383054113",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/305/4113/front_en.15.400.jpg"
+    },
+    "selection": {
+      "brand": "Selection",
+      "name": "Feuilles de laurier",
+      "image": "/stores/Brand Photos/selection-bay-leaves.png",
+      "code": "0059749889193",
+      "source": "https://images.openfoodfacts.org/images/products/005/974/988/9193/front_fr.3.400.jpg"
+    }
+  },
+  "italian-seasoning": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Assaisonnement à l’italienne",
+      "size": "50 g",
+      "image": "/stores/Brand Photos/great-value-italian-seasoning.png",
+      "code": "0681131862370",
+      "source": "https://images.openfoodfacts.org/images/products/068/113/186/2370/front_en.4.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Italian Seasonings Stewed Tomatoes",
+      "size": "540 mL",
+      "image": "/stores/Brand Photos/compliments-italian-seasoning.png",
+      "code": "0055742563467",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/256/3467/front_en.3.400.jpg"
+    }
+  },
+  "cayenne-pepper": {
+    "noname": {
+      "brand": "No Name",
+      "name": "Piment de cayenne",
+      "image": "/stores/Brand Photos/no-name-cayenne-pepper.png",
+      "code": "0060383054236",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/305/4236/front_fr.3.400.jpg"
+    },
+    "selection": {
+      "brand": "Selection",
+      "name": "Crushed cayenne pepper",
+      "image": "/stores/Brand Photos/selection-cayenne-pepper.png",
+      "code": "0059749888967",
+      "source": "https://images.openfoodfacts.org/images/products/005/974/988/8967/front_fr.3.400.jpg"
+    }
+  },
+  "taco-seasoning": {
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Chorizo Taco Seasoning Mix",
+      "size": "24 g",
+      "image": "/stores/Brand Photos/president-s-choice-taco-seasoning.png",
+      "code": "0060383034016",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/303/4016/front_en.3.400.jpg"
+    },
+    "selection": {
+      "brand": "Selection",
+      "name": "Taco seasoning",
+      "image": "/stores/Brand Photos/selection-taco-seasoning.png",
+      "code": "0059749883290",
+      "source": "https://images.openfoodfacts.org/images/products/005/974/988/3290/front_fr.3.400.jpg"
+    }
+  },
+  "tomato-paste": {
+    "kirklandsignature": {
+      "brand": "Kirkland Signature",
+      "name": "Organic Tomato Paste",
+      "size": "12 x 156ml, 1.87 L per case",
+      "image": "/stores/Brand Photos/kirkland-signature-tomato-paste.png",
+      "code": "0096619828647",
+      "source": "https://images.openfoodfacts.org/images/products/009/661/982/8647/front_en.14.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Tomato Paste",
+      "size": "156 ml",
+      "image": "/stores/Brand Photos/compliments-tomato-paste.png",
+      "code": "0055742374605",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/237/4605/front_en.29.400.jpg"
+    }
+  },
+  "applesauce": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Unsweetened Applesauce, Organic",
+      "size": "6x 113 g cups, 678 g",
+      "image": "/stores/Brand Photos/great-value-applesauce.png",
+      "code": "0628915232363",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/523/2363/front_en.69.400.jpg"
+    }
+  },
+  "chicken-noodle-soup": {
+    "noname": {
+      "brand": "No Name",
+      "name": "Chicken Noodle Soup Mix",
+      "size": "166 g",
+      "image": "/stores/Brand Photos/no-name-chicken-noodle-soup.png",
+      "code": "0060383055615",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/305/5615/front_en.14.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Chicken Noodle Soup",
+      "size": "540 mL",
+      "image": "/stores/Brand Photos/compliments-chicken-noodle-soup.png",
+      "code": "0055742552713",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/255/2713/front_en.13.400.jpg"
+    }
+  },
+  "tomato-soup": {
+    "selection": {
+      "brand": "Selection",
+      "name": "Reduced Salt Condensed Tomato Soup",
+      "size": "284 mL",
+      "image": "/stores/Brand Photos/selection-tomato-soup.png",
+      "code": "0059749918015",
+      "source": "https://images.openfoodfacts.org/images/products/005/974/991/8015/front_en.13.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Tomato soup",
+      "image": "/stores/Brand Photos/western-family-tomato-soup.png",
+      "code": "0062639358532",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/935/8532/front_fr.3.400.jpg"
+    }
+  },
+  "chicken-broth": {
+    "kirklandsignature": {
+      "brand": "Kirkland Signature",
+      "name": "Organic Chicken Broth",
+      "size": "946",
+      "image": "/stores/Brand Photos/kirkland-signature-chicken-broth.png",
+      "code": "0096619938759",
+      "source": "https://images.openfoodfacts.org/images/products/009/661/993/8759/front_en.38.400.jpg"
+    }
+  },
+  "vegetable-soup": {
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Condensed Vegetable Soup",
+      "size": "284 mL",
+      "image": "/stores/Brand Photos/compliments-vegetable-soup.png",
+      "code": "0055742548419",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/254/8419/front_en.8.400.jpg"
+    }
+  },
+  "beef-broth": {
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Reduced Sodium Beef Broth",
+      "size": "900 mL",
+      "image": "/stores/Brand Photos/compliments-beef-broth.png",
+      "code": "0055742549843",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/254/9843/front_en.14.400.jpg"
+    }
+  },
+  "vegetable-broth": {
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Vegetable broth",
+      "image": "/stores/Brand Photos/western-family-vegetable-broth.png",
+      "code": "0062639330064",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/933/0064/front_fr.3.400.jpg"
+    }
+  },
+  "ketchup": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "mini crisp ketchup",
+      "image": "/stores/Brand Photos/great-value-ketchup.png",
+      "code": "0627735221656",
+      "source": "https://images.openfoodfacts.org/images/products/062/773/522/1656/front_fr.3.400.jpg"
+    },
+    "selection": {
+      "brand": "Selection",
+      "name": "Tomato Ketchup",
+      "size": "1",
+      "image": "/stores/Brand Photos/selection-ketchup.png",
+      "code": "0059749898775",
+      "source": "https://images.openfoodfacts.org/images/products/005/974/989/8775/front_en.18.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Ketchup",
+      "image": "/stores/Brand Photos/compliments-ketchup.png",
+      "code": "0055742545753",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/254/5753/front_fr.3.400.jpg"
+    }
+  },
+  "dijon-mustard": {
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Dijon prepared mustard",
+      "size": "250 ml",
+      "image": "/stores/Brand Photos/president-s-choice-dijon-mustard.png",
+      "code": "0060383094348",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/309/4348/front_en.17.400.jpg"
+    }
+  },
+  "yellow-mustard": {
+    "selection": {
+      "brand": "Selection",
+      "name": "Moutarde jaune préparée",
+      "size": "400 mL",
+      "image": "/stores/Brand Photos/selection-yellow-mustard.png",
+      "code": "0059749932264",
+      "source": "https://images.openfoodfacts.org/images/products/005/974/993/2264/front.3.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Yellow mustard",
+      "image": "/stores/Brand Photos/western-family-yellow-mustard.png",
+      "code": "0062639354404",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/935/4404/front_fr.3.400.jpg"
+    }
+  },
+  "mayonnaise": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Real mayonnaise",
+      "image": "/stores/Brand Photos/great-value-mayonnaise.png",
+      "code": "0628915752434",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/575/2434/front_fr.3.400.jpg"
+    },
+    "noname": {
+      "brand": "No Name",
+      "name": "Mayonnaise",
+      "image": "/stores/Brand Photos/no-name-mayonnaise.png",
+      "code": "0060383987138",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/398/7138/front_en.24.400.jpg"
+    },
+    "selection": {
+      "brand": "Selection",
+      "name": "Mayonnaise",
+      "image": "/stores/Brand Photos/selection-mayonnaise.png",
+      "code": "0059749911191",
+      "source": "https://images.openfoodfacts.org/images/products/005/974/991/1191/front_en.20.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Real Mayonnaise",
+      "size": "475 mL",
+      "image": "/stores/Brand Photos/western-family-mayonnaise.png",
+      "code": "0062639365301",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/936/5301/front_en.12.400.jpg"
+    }
+  },
+  "relish": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Relish verte sucrée",
+      "image": "/stores/Brand Photos/great-value-relish.png",
+      "code": "0628915827590",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/582/7590/front_fr.10.400.jpg"
+    },
+    "noname": {
+      "brand": "No Name",
+      "name": "Relish verte sucrée",
+      "image": "/stores/Brand Photos/no-name-relish.png",
+      "code": "0060383012847",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/301/2847/front_fr.3.400.jpg"
+    },
+    "selection": {
+      "brand": "Selection",
+      "name": "Sweetened relish sucrée",
+      "size": "500 ml",
+      "image": "/stores/Brand Photos/selection-relish.png",
+      "code": "0059749913232",
+      "source": "https://images.openfoodfacts.org/images/products/005/974/991/3232/front_fr.3.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Hot Dog Relish",
+      "image": "/stores/Brand Photos/compliments-relish.png",
+      "code": "0055742365825",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/236/5825/front_en.10.400.jpg"
+    }
+  },
+  "hot-sauce": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Jalapeno pepper hot sauce",
+      "image": "/stores/Brand Photos/great-value-hot-sauce.png",
+      "code": "0628915827958",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/582/7958/front_fr.10.400.jpg"
+    }
+  },
+  "salsa": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Salsa",
+      "image": "/stores/Brand Photos/great-value-salsa.png",
+      "code": "0627735016269",
+      "source": "https://images.openfoodfacts.org/images/products/062/773/501/6269/front_fr.3.400.jpg"
+    },
+    "noname": {
+      "brand": "No Name",
+      "name": "Salsa",
+      "image": "/stores/Brand Photos/no-name-salsa.png",
+      "code": "0060383687571",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/368/7571/front_en.4.400.jpg"
+    },
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Salsa Con Queso",
+      "image": "/stores/Brand Photos/president-s-choice-salsa.png",
+      "code": "0060383767747",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/376/7747/front_en.4.400.jpg"
+    },
+    "selection": {
+      "brand": "Selection",
+      "name": "Salsa",
+      "size": "430 mL",
+      "image": "/stores/Brand Photos/selection-salsa.png",
+      "code": "0059749883184",
+      "source": "https://images.openfoodfacts.org/images/products/005/974/988/3184/front_en.20.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Salsa verde",
+      "image": "/stores/Brand Photos/compliments-salsa.png",
+      "code": "0055742554229",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/255/4229/front_fr.3.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Salsa Mild",
+      "image": "/stores/Brand Photos/western-family-salsa.png",
+      "code": "0062639337742",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/933/7742/front_fr.9.400.jpg"
+    }
+  },
+  "balsamic-vinaigrette": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Vinaigrette Balsamique",
+      "image": "/stores/Brand Photos/great-value-balsamic-vinaigrette.png",
+      "code": "0628915365900",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/536/5900/front_fr.3.400.jpg"
+    },
+    "kirklandsignature": {
+      "brand": "Kirkland Signature",
+      "name": "Vinaigrette Balsamique",
+      "image": "/stores/Brand Photos/kirkland-signature-balsamic-vinaigrette.png",
+      "code": "0096619750030",
+      "source": "https://images.openfoodfacts.org/images/products/009/661/975/0030/front_fr.3.400.jpg"
+    }
+  },
+  "alfredo-sauce": {
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Alfredo Sauce",
+      "image": "/stores/Brand Photos/western-family-alfredo-sauce.png",
+      "code": "0062639364991",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/936/4991/front_fr.3.400.jpg"
+    }
+  },
+  "gravy": {
+    "selection": {
+      "brand": "Selection",
+      "name": "Gravy mix",
+      "image": "/stores/Brand Photos/selection-gravy.png",
+      "code": "0059749904537",
+      "source": "https://images.openfoodfacts.org/images/products/005/974/990/4537/front_fr.3.400.jpg"
+    }
+  },
+  "green-olives": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Olive verte",
+      "image": "/stores/Brand Photos/great-value-green-olives.png",
+      "code": "0628915553222",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/555/3222/front_fr.3.400.jpg"
+    },
+    "selection": {
+      "brand": "Selection",
+      "name": "Olives vertes",
+      "image": "/stores/Brand Photos/selection-green-olives.png",
+      "code": "0059749954938",
+      "source": "https://images.openfoodfacts.org/images/products/005/974/995/4938/front_fr.3.400.jpg"
+    }
+  },
+  "pickles": {
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Garlic Dill Pickles",
+      "image": "/stores/Brand Photos/compliments-pickles.png",
+      "code": "0055742346275",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/234/6275/front_en.3.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Dill pickles",
+      "image": "/stores/Brand Photos/western-family-pickles.png",
+      "code": "0062639326104",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/932/6104/front_fr.3.400.jpg"
+    }
+  },
+  "black-olives": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Slice black olives",
+      "size": "398ml",
+      "image": "/stores/Brand Photos/great-value-black-olives.png",
+      "code": "0681131761017",
+      "source": "https://images.openfoodfacts.org/images/products/068/113/176/1017/front_en.3.400.jpg"
+    },
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Ascolana Olives",
+      "size": "450 g",
+      "image": "/stores/Brand Photos/president-s-choice-black-olives.png",
+      "code": "0060383053024",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/305/3024/front_en.7.400.jpg"
+    },
+    "selection": {
+      "brand": "Selection",
+      "name": "Olives vertes",
+      "image": "/stores/Brand Photos/selection-black-olives.png",
+      "code": "0059749954938",
+      "source": "https://images.openfoodfacts.org/images/products/005/974/995/4938/front_fr.3.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Olives mûres dénoyautées",
+      "image": "/stores/Brand Photos/compliments-black-olives.png",
+      "code": "0055742374407",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/237/4407/front_fr.3.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Sliced olives",
+      "image": "/stores/Brand Photos/western-family-black-olives.png",
+      "code": "0062639365905",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/936/5905/front_fr.3.400.jpg"
+    }
+  },
+  "capers": {
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Capers",
+      "image": "/stores/Brand Photos/western-family-capers.png",
+      "code": "0062639191382",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/919/1382/front_fr.3.400.jpg"
+    }
+  },
+  "almond-butter": {
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Smooth Almond Butter",
+      "size": "340 g",
+      "image": "/stores/Brand Photos/compliments-almond-butter.png",
+      "code": "0055742554045",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/255/4045/front_en.9.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Crunchy Almond Butter",
+      "image": "/stores/Brand Photos/western-family-almond-butter.png",
+      "code": "0062639362836",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/936/2836/front_fr.3.400.jpg"
+    }
+  },
+  "strawberry-jam": {
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Strawberry jam",
+      "size": "375 ml",
+      "image": "/stores/Brand Photos/compliments-strawberry-jam.png",
+      "code": "0055742548242",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/254/8242/front_en.15.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Strawberry Jam",
+      "image": "/stores/Brand Photos/western-family-strawberry-jam.png",
+      "code": "0062639356279",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/935/6279/front_fr.3.400.jpg"
+    }
+  },
+  "kimchi": {
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Kimchi",
+      "size": "400 g",
+      "image": "/stores/Brand Photos/president-s-choice-kimchi.png",
+      "code": "0060383033880",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/303/3880/front_en.9.400.jpg"
+    }
+  },
+  "cashews": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Cashews",
+      "image": "/stores/Brand Photos/great-value-cashews.png",
+      "code": "0628915611243",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/561/1243/front_fr.3.400.jpg"
+    },
+    "kirklandsignature": {
+      "brand": "Kirkland Signature",
+      "name": "Whole Cashews",
+      "size": "1.13 kg",
+      "image": "/stores/Brand Photos/kirkland-signature-cashews.png",
+      "code": "0096619527694",
+      "source": "https://images.openfoodfacts.org/images/products/009/661/952/7694/front.6.400.jpg"
+    },
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Spinach and Cashew Girasoli",
+      "size": "300 g",
+      "image": "/stores/Brand Photos/president-s-choice-cashews.png",
+      "code": "0060383048143",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/304/8143/front_en.8.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Raw Cashews",
+      "image": "/stores/Brand Photos/compliments-cashews.png",
+      "code": "0055742561050",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/256/1050/front_fr.3.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Whole Cashews",
+      "image": "/stores/Brand Photos/western-family-cashews.png",
+      "code": "0062639247287",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/924/7287/front_fr.3.400.jpg"
+    }
+  },
+  "almonds": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Slivered almonds",
+      "image": "/stores/Brand Photos/great-value-almonds.png",
+      "code": "0628915829884",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/582/9884/front_fr.7.400.jpg"
+    },
+    "noname": {
+      "brand": "No Name",
+      "name": "Sliced blanched almonds",
+      "image": "/stores/Brand Photos/no-name-almonds.png",
+      "code": "0060383019006",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/301/9006/front_en.4.400.jpg"
+    },
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Roasted Almonds with Sea Salt",
+      "image": "/stores/Brand Photos/president-s-choice-almonds.png",
+      "code": "0060383188726",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/318/8726/front_en.3.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Sliced Almonds",
+      "image": "/stores/Brand Photos/compliments-almonds.png",
+      "code": "0055742561180",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/256/1180/front_fr.3.400.jpg"
+    }
+  },
+  "refried-beans": {
+    "noname": {
+      "brand": "No Name",
+      "name": "Refried Pinto Beans",
+      "image": "/stores/Brand Photos/no-name-refried-beans.png",
+      "code": "0060383121839",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/312/1839/front_en.14.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Spicy refried beans",
+      "image": "/stores/Brand Photos/western-family-refried-beans.png",
+      "code": "0062639311254",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/931/1254/front_fr.3.400.jpg"
+    }
+  },
+  "walnuts": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Walnut",
+      "image": "/stores/Brand Photos/great-value-walnuts.png",
+      "code": "0681131910699",
+      "source": "https://images.openfoodfacts.org/images/products/068/113/191/0699/front_en.23.400.jpg"
+    },
+    "noname": {
+      "brand": "No Name",
+      "name": "Chopped walnuts",
+      "image": "/stores/Brand Photos/no-name-walnuts.png",
+      "code": "0060383643843",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/364/3843/front_fr.3.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Walnuts chopped",
+      "image": "/stores/Brand Photos/compliments-walnuts.png",
+      "code": "0055742553970",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/255/3970/front_fr.3.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Walnut halves & pieces",
+      "image": "/stores/Brand Photos/western-family-walnuts.png",
+      "code": "0062639348212",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/934/8212/front_fr.3.400.jpg"
+    }
+  },
+  "peanuts": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Kettle cooked peanuts",
+      "image": "/stores/Brand Photos/great-value-peanuts.png",
+      "code": "0627735014159",
+      "source": "https://images.openfoodfacts.org/images/products/062/773/501/4159/front_fr.3.400.jpg"
+    },
+    "noname": {
+      "brand": "No Name",
+      "name": "seasoned dry roasted peanuts",
+      "image": "/stores/Brand Photos/no-name-peanuts.png",
+      "code": "0060383129217",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/312/9217/front_fr.3.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Kettle cooked peanuts",
+      "image": "/stores/Brand Photos/compliments-peanuts.png",
+      "code": "0055742556254",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/255/6254/front_fr.3.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Kettle cooked peanuts",
+      "size": "400g",
+      "image": "/stores/Brand Photos/western-family-peanuts.png",
+      "code": "0062639359911",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/935/9911/front_en.17.400.jpg"
+    },
+    "frank": {
+      "brand": "Frank",
+      "name": "Candied Peanuts",
+      "size": "75 g",
+      "image": "/stores/Brand Photos/frank-peanuts.png",
+      "code": "0626394337708",
+      "source": "https://images.openfoodfacts.org/images/products/062/639/433/7708/front_en.3.400.jpg"
+    }
+  },
+  "mixed-nuts": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Mixed nuts",
+      "image": "/stores/Brand Photos/great-value-mixed-nuts.png",
+      "code": "0628915611267",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/561/1267/front_fr.3.400.jpg"
+    },
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Mixed Berry Fruit & Nut Chewy Bars",
+      "size": "165 g",
+      "image": "/stores/Brand Photos/president-s-choice-mixed-nuts.png",
+      "code": "0060383181062",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/318/1062/front_en.3.400.jpg"
+    }
+  },
+  "pumpkin-seeds": {
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Pumpkin seeds",
+      "image": "/stores/Brand Photos/president-s-choice-pumpkin-seeds.png",
+      "code": "0060383046880",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/304/6880/front_fr.3.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Natural Pumpkin Seeds (Shelled)",
+      "size": "300 g",
+      "image": "/stores/Brand Photos/compliments-pumpkin-seeds.png",
+      "code": "0055742561579",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/256/1579/front_en.9.400.jpg"
+    },
+    "frank": {
+      "brand": "Frank",
+      "name": "Munches Out Unsalted Pumpkin Seeds",
+      "size": "200 g",
+      "image": "/stores/Brand Photos/frank-pumpkin-seeds.png",
+      "code": "0064777620403",
+      "source": "https://images.openfoodfacts.org/images/products/006/477/762/0403/front_en.9.400.jpg"
+    }
+  },
+  "sunflower-seeds": {
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Roasted and salted sunflower seeds",
+      "image": "/stores/Brand Photos/compliments-sunflower-seeds.png",
+      "code": "0055742561616",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/256/1616/front_fr.3.400.jpg"
+    }
+  },
+  "dried-apricots": {
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Organic Dried Apricots",
+      "size": "250 g",
+      "image": "/stores/Brand Photos/president-s-choice-dried-apricots.png",
+      "code": "0060383216320",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/321/6320/front_en.11.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Whole dried apricots",
+      "image": "/stores/Brand Photos/western-family-dried-apricots.png",
+      "code": "0062639348083",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/934/8083/front_fr.3.400.jpg"
+    }
+  },
+  "raisins": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Thompson Raisins",
+      "image": "/stores/Brand Photos/great-value-raisins.png",
+      "code": "0628915236262",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/523/6262/front_en.8.400.jpg"
+    },
+    "kirklandsignature": {
+      "brand": "Kirkland Signature",
+      "name": "Brioches roulées avec raisins",
+      "size": "0.900 kg",
+      "image": "/stores/Brand Photos/kirkland-signature-raisins.png",
+      "code": "0000012167005",
+      "source": "https://images.openfoodfacts.org/images/products/000/001/216/7005/front_fr.4.400.jpg"
+    },
+    "noname": {
+      "brand": "No Name",
+      "name": "Raisins de corinthe",
+      "image": "/stores/Brand Photos/no-name-raisins.png",
+      "code": "0060383057961",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/305/7961/front_fr.3.400.jpg"
+    },
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Tomates Raisins",
+      "image": "/stores/Brand Photos/president-s-choice-raisins.png",
+      "code": "0060383136253",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/313/6253/front_en.9.400.jpg"
+    },
+    "selection": {
+      "brand": "Selection",
+      "name": "Raisins secs Thompson",
+      "image": "/stores/Brand Photos/selection-raisins.png",
+      "code": "0059749976541",
+      "source": "https://images.openfoodfacts.org/images/products/005/974/997/6541/front_fr.3.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Maximum Raisin Bran",
+      "size": "755 g",
+      "image": "/stores/Brand Photos/compliments-raisins.png",
+      "code": "0055742549027",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/254/9027/front_en.14.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Sultana raisins",
+      "image": "/stores/Brand Photos/western-family-raisins.png",
+      "code": "0062639348250",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/934/8250/front_fr.3.400.jpg"
+    }
+  },
+  "pitted-dates": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Dattes Dénoyautées",
+      "image": "/stores/Brand Photos/great-value-pitted-dates.png",
+      "code": "0628915242355",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/524/2355/front_fr.3.400.jpg"
+    },
+    "noname": {
+      "brand": "No Name",
+      "name": "Pitted dates",
+      "image": "/stores/Brand Photos/no-name-pitted-dates.png",
+      "code": "0060383057831",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/305/7831/front_fr.3.400.jpg"
+    },
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Dried Pitted Dates",
+      "size": "250 g",
+      "image": "/stores/Brand Photos/president-s-choice-pitted-dates.png",
+      "code": "0060383216306",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/321/6306/front_en.9.400.jpg"
+    }
+  },
+  "chia-seeds": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Whole Chia Seeds",
+      "image": "/stores/Brand Photos/great-value-chia-seeds.png",
+      "code": "0628915231984",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/523/1984/front_en.21.400.jpg"
+    },
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Chia Seeds",
+      "size": "300g",
+      "image": "/stores/Brand Photos/president-s-choice-chia-seeds.png",
+      "code": "0060383156756",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/315/6756/front_en.23.400.jpg"
+    }
+  },
+  "trail-mix": {
+    "noname": {
+      "brand": "No Name",
+      "name": "Original trail mix",
+      "size": "1 kg",
+      "image": "/stores/Brand Photos/no-name-trail-mix.png",
+      "code": "0060383879884",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/387/9884/front_fr.5.400.jpg"
+    },
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Everything Trail Mix",
+      "image": "/stores/Brand Photos/president-s-choice-trail-mix.png",
+      "code": "0060383141981",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/314/1981/front_en.3.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Chewy trail mix",
+      "image": "/stores/Brand Photos/compliments-trail-mix.png",
+      "code": "0055742563597",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/256/3597/front_fr.3.400.jpg"
+    }
+  },
+  "molasses": {
+    "selection": {
+      "brand": "Selection",
+      "name": "Melasse",
+      "image": "/stores/Brand Photos/selection-molasses.png",
+      "code": "0059749918862",
+      "source": "https://images.openfoodfacts.org/images/products/005/974/991/8862/front_fr.12.400.jpg"
+    }
+  },
+  "stevia-sweetener": {
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Stevia natural source calorie-free sweetener",
+      "image": "/stores/Brand Photos/president-s-choice-stevia-sweetener.png",
+      "code": "0060383183615",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/318/3615/front_fr.6.400.jpg"
+    }
+  },
+  "almond-flour": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "100% almond flour super fine",
+      "image": "/stores/Brand Photos/great-value-almond-flour.png",
+      "code": "0628915831214",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/583/1214/front_fr.3.400.jpg"
+    },
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Almond flour",
+      "image": "/stores/Brand Photos/president-s-choice-almond-flour.png",
+      "code": "0060383041052",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/304/1052/front_fr.3.400.jpg"
+    }
+  },
+  "avocado-oil": {
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Avocado Oil",
+      "image": "/stores/Brand Photos/western-family-avocado-oil.png",
+      "code": "0062639365806",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/936/5806/front_es.3.400.jpg"
+    }
+  },
+  "frozen-spinach": {
+    "noname": {
+      "brand": "No Name",
+      "name": "Whole leaf frozen spinach",
+      "image": "/stores/Brand Photos/no-name-frozen-spinach.png",
+      "code": "0060383030834",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/303/0834/front_fr.9.400.jpg"
+    },
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Frozen Chopped Spinach",
+      "size": "500 g",
+      "image": "/stores/Brand Photos/president-s-choice-frozen-spinach.png",
+      "code": "0060383197315",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/319/7315/front_en.4.400.jpg"
+    }
+  },
+  "hash-browns": {
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Hash browns",
+      "image": "/stores/Brand Photos/compliments-hash-browns.png",
+      "code": "0055742530926",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/253/0926/front_en.9.400.jpg"
+    }
+  },
+  "french-fries": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Frites à coupe Gauffré",
+      "image": "/stores/Brand Photos/great-value-french-fries.png",
+      "code": "0628915830743",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/583/0743/front_fr.3.400.jpg"
+    },
+    "selection": {
+      "brand": "Selection",
+      "name": "Frites de legumes",
+      "image": "/stores/Brand Photos/selection-french-fries.png",
+      "code": "0059749975155",
+      "source": "https://images.openfoodfacts.org/images/products/005/974/997/5155/front_fr.3.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Frites coupe julienne",
+      "image": "/stores/Brand Photos/compliments-french-fries.png",
+      "code": "0055742567038",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/256/7038/front_fr.3.400.jpg"
+    }
+  },
+  "edamame": {
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Edamame / Green Soybeans",
+      "image": "/stores/Brand Photos/compliments-edamame.png",
+      "code": "0055742519884",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/251/9884/front_en.13.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Edamame, shelled (Soybeans), frozen",
+      "size": "500 g",
+      "image": "/stores/Brand Photos/western-family-edamame.png",
+      "code": "0062639358631",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/935/8631/front_en.16.400.jpg"
+    }
+  },
+  "waffles": {
+    "noname": {
+      "brand": "No Name",
+      "name": "Gaufres nature",
+      "image": "/stores/Brand Photos/no-name-waffles.png",
+      "code": "0060383987756",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/398/7756/front_fr.3.400.jpg"
+    },
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Cornet gaufrés",
+      "image": "/stores/Brand Photos/president-s-choice-waffles.png",
+      "code": "0060383224196",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/322/4196/front_fr.3.400.jpg"
+    }
+  },
+  "pancakes": {
+    "noname": {
+      "brand": "No Name",
+      "name": "No name buttermilk pancakes",
+      "image": "/stores/Brand Photos/no-name-pancakes.png",
+      "code": "0060383987787",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/398/7787/front_fr.3.400.jpg"
+    }
+  },
+  "chicken-nuggets": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Chicken Nuggets",
+      "size": "1.5 kg",
+      "image": "/stores/Brand Photos/great-value-chicken-nuggets.png",
+      "code": "0627735019079",
+      "source": "https://images.openfoodfacts.org/images/products/062/773/501/9079/front_en.9.400.jpg"
+    },
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Pub chicken nuggets",
+      "image": "/stores/Brand Photos/president-s-choice-chicken-nuggets.png",
+      "code": "0060383002251",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/300/2251/front_fr.3.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Chicken nuggets",
+      "image": "/stores/Brand Photos/western-family-chicken-nuggets.png",
+      "code": "0062639357153",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/935/7153/front_fr.3.400.jpg"
+    }
+  },
+  "breaded-fish-fillets": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Wild caught Breaded fish fillets",
+      "image": "/stores/Brand Photos/great-value-breaded-fish-fillets.png",
+      "code": "0627735221564",
+      "source": "https://images.openfoodfacts.org/images/products/062/773/522/1564/front_fr.3.400.jpg"
+    }
+  },
+  "fish-sticks": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Breaded fish burgers",
+      "image": "/stores/Brand Photos/great-value-fish-sticks.png",
+      "code": "0627735221557",
+      "source": "https://images.openfoodfacts.org/images/products/062/773/522/1557/front_fr.3.400.jpg"
+    }
+  },
+  "popcorn-shrimp": {
+    "noname": {
+      "brand": "No Name",
+      "name": "Entièrement panné mini-crevettes",
+      "image": "/stores/Brand Photos/no-name-popcorn-shrimp.png",
+      "code": "0060249004832",
+      "source": "https://images.openfoodfacts.org/images/products/006/024/900/4832/front_fr.3.400.jpg"
+    }
+  },
+  "meatballs": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Boulettes de viande suédoises",
+      "image": "/stores/Brand Photos/great-value-meatballs.png",
+      "code": "0681131811774",
+      "source": "https://images.openfoodfacts.org/images/products/068/113/181/1774/front_fr.3.400.jpg"
+    },
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Meatless Meatballs",
+      "size": "454 g",
+      "image": "/stores/Brand Photos/president-s-choice-meatballs.png",
+      "code": "0060383063115",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/306/3115/front_en.7.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Swedish Meatballs",
+      "size": "255 g",
+      "image": "/stores/Brand Photos/compliments-meatballs.png",
+      "code": "0055742507447",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/250/7447/front_en.4.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Swedish Meatballs",
+      "image": "/stores/Brand Photos/western-family-meatballs.png",
+      "code": "0062639345600",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/934/5600/front_fr.3.400.jpg"
+    }
+  },
+  "beef-burgers": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Beef burgers",
+      "size": "20 x 113 g",
+      "image": "/stores/Brand Photos/great-value-beef-burgers.png",
+      "code": "0628915085228",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/508/5228/front_fr.3.400.jpg"
+    },
+    "noname": {
+      "brand": "No Name",
+      "name": "Beef burger",
+      "image": "/stores/Brand Photos/no-name-beef-burgers.png",
+      "code": "0060383373337",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/337/3337/front_fr.3.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Sirloin beef burgers",
+      "size": "1.13kg",
+      "image": "/stores/Brand Photos/western-family-beef-burgers.png",
+      "code": "0062639316587",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/931/6587/front_en.4.400.jpg"
+    }
+  },
+  "veggie-burgers": {
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Black Bean Chipotle Veggie Burgers",
+      "size": "568 g",
+      "image": "/stores/Brand Photos/western-family-veggie-burgers.png",
+      "code": "0062639363994",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/936/3994/front_en.10.400.jpg"
+    }
+  },
+  "chicken-burgers": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Chicken Burgers",
+      "size": "800 g",
+      "image": "/stores/Brand Photos/great-value-chicken-burgers.png",
+      "code": "0627735019048",
+      "source": "https://images.openfoodfacts.org/images/products/062/773/501/9048/front_en.16.400.jpg"
+    },
+    "noname": {
+      "brand": "No Name",
+      "name": "Chicken burgers",
+      "image": "/stores/Brand Photos/no-name-chicken-burgers.png",
+      "code": "0060383213367",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/321/3367/front_fr.3.400.jpg"
+    },
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Thick & Crispy Breaded Chicken Burgers",
+      "size": "700 g",
+      "image": "/stores/Brand Photos/president-s-choice-chicken-burgers.png",
+      "code": "0060383001162",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/300/1162/front_en.15.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Fully Cooked Breaded Chicken Burgers",
+      "size": "1.47 kg",
+      "image": "/stores/Brand Photos/compliments-chicken-burgers.png",
+      "code": "0055742558821",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/255/8821/front_en.7.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Crispy Chicken Burgers",
+      "size": "800 g",
+      "image": "/stores/Brand Photos/western-family-chicken-burgers.png",
+      "code": "0062639362522",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/936/2522/front_en.3.400.jpg"
+    }
+  },
+  "perogies": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "perogies",
+      "image": "/stores/Brand Photos/great-value-perogies.png",
+      "code": "0628915224467",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/522/4467/front_fr.3.400.jpg"
+    },
+    "selection": {
+      "brand": "Selection",
+      "name": "Perogies",
+      "image": "/stores/Brand Photos/selection-perogies.png",
+      "code": "0059749976619",
+      "source": "https://images.openfoodfacts.org/images/products/005/974/997/6619/front_fr.3.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Bacon Cheese Perogies",
+      "size": "907 g",
+      "image": "/stores/Brand Photos/compliments-perogies.png",
+      "code": "0055742570243",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/257/0243/front_en.8.400.jpg"
+    }
+  },
+  "butter-chicken": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Butter Chicken Nutri-Bowl",
+      "size": "300 g",
+      "image": "/stores/Brand Photos/great-value-butter-chicken.png",
+      "code": "0627735014562",
+      "source": "https://images.openfoodfacts.org/images/products/062/773/501/4562/front_en.12.400.jpg"
+    },
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Butter Chicken",
+      "image": "/stores/Brand Photos/president-s-choice-butter-chicken.png",
+      "code": "0060383023287",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/302/3287/front_fr.3.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Butter Chicken",
+      "size": "280 g",
+      "image": "/stores/Brand Photos/compliments-butter-chicken.png",
+      "code": "0055742531183",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/253/1183/front_en.3.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Butter Chicken",
+      "image": "/stores/Brand Photos/western-family-butter-chicken.png",
+      "code": "0062639357559",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/935/7559/front_en.4.400.jpg"
+    }
+  },
+  "pad-thai": {
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Pad thai spring rolls",
+      "image": "/stores/Brand Photos/president-s-choice-pad-thai.png",
+      "code": "0060383062484",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/306/2484/front_en.12.400.jpg"
+    }
+  },
+  "samosas": {
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Vegetable Samosas",
+      "image": "/stores/Brand Photos/compliments-samosas.png",
+      "code": "0055742558968",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/255/8968/front_fr.3.400.jpg"
+    }
+  },
+  "spring-rolls": {
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Pad thai spring rolls",
+      "image": "/stores/Brand Photos/president-s-choice-spring-rolls.png",
+      "code": "0060383062484",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/306/2484/front_en.12.400.jpg"
+    }
+  },
+  "ravioli": {
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Ravioli Grandi crevettes et honard",
+      "image": "/stores/Brand Photos/president-s-choice-ravioli.png",
+      "code": "0060383013424",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/301/3424/front_fr.3.400.jpg"
+    }
+  },
+  "gnocchi": {
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Butter Sage Sweet Potato Gnocchi",
+      "size": "400 g",
+      "image": "/stores/Brand Photos/president-s-choice-gnocchi.png",
+      "code": "0060383066789",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/306/6789/front_en.3.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Gnocchi",
+      "image": "/stores/Brand Photos/compliments-gnocchi.png",
+      "code": "0068820134633",
+      "source": "https://images.openfoodfacts.org/images/products/006/882/013/4633/front_fr.3.400.jpg"
+    }
+  },
+  "ice-cream": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Ice cream",
+      "image": "/stores/Brand Photos/great-value-ice-cream.png",
+      "code": "0627735221526",
+      "source": "https://images.openfoodfacts.org/images/products/062/773/522/1526/front_fr.3.400.jpg"
+    },
+    "noname": {
+      "brand": "No Name",
+      "name": "Ice cream cups",
+      "image": "/stores/Brand Photos/no-name-ice-cream.png",
+      "code": "0060383202620",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/320/2620/front_en.8.400.jpg"
+    },
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Ice cream",
+      "image": "/stores/Brand Photos/president-s-choice-ice-cream.png",
+      "code": "0060383857776",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/385/7776/front_fr.3.400.jpg"
+    },
+    "selection": {
+      "brand": "Selection",
+      "name": "Gobelets à crème glacée",
+      "image": "/stores/Brand Photos/selection-ice-cream.png",
+      "code": "0059749898416",
+      "source": "https://images.openfoodfacts.org/images/products/005/974/989/8416/front_fr.3.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Crème glacée vanille",
+      "image": "/stores/Brand Photos/compliments-ice-cream.png",
+      "code": "73054030",
+      "source": "https://images.openfoodfacts.org/images/products/73054030/front_fr.3.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Ice cream",
+      "size": "1.65 L",
+      "image": "/stores/Brand Photos/western-family-ice-cream.png",
+      "code": "0062639340650",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/934/0650/front_en.7.400.jpg"
+    }
+  },
+  "frozen-yogurt": {
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Lactose free frozen yogurt",
+      "size": "6 x 80 ml",
+      "image": "/stores/Brand Photos/president-s-choice-frozen-yogurt.png",
+      "code": "0060383020651",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/302/0651/front_fr.3.400.jpg"
+    }
+  },
+  "ice-cream-sandwiches": {
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Sandwichs à la crème glacée",
+      "size": "12 x 110 ml",
+      "image": "/stores/Brand Photos/compliments-ice-cream-sandwiches.png",
+      "code": "0055742562910",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/256/2910/front_fr.3.400.jpg"
+    }
+  },
+  "sorbet": {
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Sorbet Agrume Yuzu et Bleuets",
+      "image": "/stores/Brand Photos/president-s-choice-sorbet.png",
+      "code": "0060383020729",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/302/0729/front_fr.8.400.jpg"
+    }
+  },
+  "frozen-mango-chunks": {
+    "noname": {
+      "brand": "No Name",
+      "name": "Mango Chunks, Naturally Imperfect, frozen",
+      "size": "2 kg",
+      "image": "/stores/Brand Photos/no-name-frozen-mango-chunks.png",
+      "code": "0060383181512",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/318/1512/front_en.8.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Mango chunks, frozen",
+      "size": "600 g",
+      "image": "/stores/Brand Photos/western-family-frozen-mango-chunks.png",
+      "code": "0062639284336",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/928/4336/front_en.24.400.jpg"
+    }
+  },
+  "cookie-dough": {
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Cookie Dough",
+      "size": "6 x 30 ml",
+      "image": "/stores/Brand Photos/president-s-choice-cookie-dough.png",
+      "code": "0060383055882",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/305/5882/front_fr.3.400.jpg"
+    }
+  },
+  "cheesecake": {
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Sliced cheesecake selection",
+      "image": "/stores/Brand Photos/president-s-choice-cheesecake.png",
+      "code": "0060383031718",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/303/1718/front_fr.3.400.jpg"
+    }
+  },
+  "frozen-chicken-breasts": {
+    "kirklandsignature": {
+      "brand": "Kirkland Signature",
+      "name": "Frozen Boneless, Skinless, and Seasoned Chicken Breasts",
+      "size": "2 kg",
+      "image": "/stores/Brand Photos/kirkland-signature-frozen-chicken-breasts.png",
+      "code": "0096619010462",
+      "source": "https://images.openfoodfacts.org/images/products/009/661/901/0462/front_en.8.400.jpg"
+    }
+  },
+  "falafel": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Falafel Nutri-Bowl",
+      "size": "300 g",
+      "image": "/stores/Brand Photos/great-value-falafel.png",
+      "code": "0627735014586",
+      "source": "https://images.openfoodfacts.org/images/products/062/773/501/4586/front_en.8.400.jpg"
+    }
+  },
+  "mozzarella-sticks": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Cheese mozzarella",
+      "image": "/stores/Brand Photos/great-value-mozzarella-sticks.png",
+      "code": "0627735014739",
+      "source": "https://images.openfoodfacts.org/images/products/062/773/501/4739/front_fr.3.400.jpg"
+    },
+    "noname": {
+      "brand": "No Name",
+      "name": "Mozzarella",
+      "image": "/stores/Brand Photos/no-name-mozzarella-sticks.png",
+      "code": "0060383061364",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/306/1364/front_fr.3.400.jpg"
+    },
+    "selection": {
+      "brand": "Selection",
+      "name": "Mozzarella",
+      "image": "/stores/Brand Photos/selection-mozzarella-sticks.png",
+      "code": "0059749949316",
+      "source": "https://images.openfoodfacts.org/images/products/005/974/994/9316/front_fr.3.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Mozzarella",
+      "image": "/stores/Brand Photos/compliments-mozzarella-sticks.png",
+      "code": "0055742559132",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/255/9132/front_fr.3.400.jpg"
+    }
+  },
+  "corn-dogs": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Corn Dogs",
+      "size": "1.65 kg",
+      "image": "/stores/Brand Photos/great-value-corn-dogs.png",
+      "code": "0628915561319",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/556/1319/front_en.8.400.jpg"
+    }
+  },
+  "shepherd-s-pie": {
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Homestyle shepherds pie",
+      "image": "/stores/Brand Photos/western-family-shepherds-pie.png",
+      "code": "0062639336356",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/933/6356/front_fr.3.400.jpg"
+    }
+  },
+  "potato-chips": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Regular Rippled Potato Chips",
+      "size": "200 g",
+      "image": "/stores/Brand Photos/great-value-potato-chips.png",
+      "code": "0627735018973",
+      "source": "https://images.openfoodfacts.org/images/products/062/773/501/8973/front_en.8.400.jpg"
+    },
+    "noname": {
+      "brand": "No Name",
+      "name": "Regular Potato Chips",
+      "size": "200 g",
+      "image": "/stores/Brand Photos/no-name-potato-chips.png",
+      "code": "0060383992545",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/399/2545/front_en.32.400.jpg"
+    },
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "kettle cooked potato chips plain",
+      "image": "/stores/Brand Photos/president-s-choice-potato-chips.png",
+      "code": "0060383047122",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/304/7122/front_en.15.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Potato Chips",
+      "image": "/stores/Brand Photos/compliments-potato-chips.png",
+      "code": "0055742563542",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/256/3542/front_fr.3.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Potato Chips",
+      "image": "/stores/Brand Photos/western-family-potato-chips.png",
+      "code": "0062639336561",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/933/6561/front_en.8.400.jpg"
+    }
+  },
+  "chicken-parmesan": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Garlic Parmesan Dry Rub Chicken Wings",
+      "image": "/stores/Brand Photos/great-value-chicken-parmesan.png",
+      "code": "0681131341127",
+      "source": "https://images.openfoodfacts.org/images/products/068/113/134/1127/front_fr.3.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Chicken Parmesan",
+      "image": "/stores/Brand Photos/western-family-chicken-parmesan.png",
+      "code": "0062639363734",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/936/3734/front_fr.3.400.jpg"
+    }
+  },
+  "tortilla-chips": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Tortilla chips multigrain",
+      "image": "/stores/Brand Photos/great-value-tortilla-chips.png",
+      "code": "0628915831047",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/583/1047/front_fr.3.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "White corn tortilla chips",
+      "image": "/stores/Brand Photos/western-family-tortilla-chips.png",
+      "code": "0062639337186",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/933/7186/front_fr.3.400.jpg"
+    }
+  },
+  "ketchup-chips": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Chips aux ketchup",
+      "image": "/stores/Brand Photos/great-value-ketchup-chips.png",
+      "code": "0628915828023",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/582/8023/front_fr.3.400.jpg"
+    }
+  },
+  "pretzels": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Pretzel Sticks",
+      "size": "400 g",
+      "image": "/stores/Brand Photos/great-value-pretzels.png",
+      "code": "0605388342508",
+      "source": "https://images.openfoodfacts.org/images/products/060/538/834/2508/front_en.12.400.jpg"
+    },
+    "selection": {
+      "brand": "Selection",
+      "name": "pretzel twists",
+      "size": "400g",
+      "image": "/stores/Brand Photos/selection-pretzels.png",
+      "code": "74914760",
+      "source": "https://images.openfoodfacts.org/images/products/74914760/front_en.4.400.jpg"
+    }
+  },
+  "corn-chips": {
+    "noname": {
+      "brand": "No Name",
+      "name": "Corn Chips",
+      "size": "200 g",
+      "image": "/stores/Brand Photos/no-name-corn-chips.png",
+      "code": "0060383091408",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/309/1408/front_en.11.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Corn chips",
+      "image": "/stores/Brand Photos/western-family-corn-chips.png",
+      "code": "0062639349080",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/934/9080/front_fr.3.400.jpg"
+    }
+  },
+  "rice-crackers": {
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Sesame rice crackers",
+      "size": "100g",
+      "image": "/stores/Brand Photos/compliments-rice-crackers.png",
+      "code": "0055742370294",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/237/0294/front_en.3.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Multigrain rice crackers",
+      "image": "/stores/Brand Photos/western-family-rice-crackers.png",
+      "code": "0062639354541",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/935/4541/front_fr.5.400.jpg"
+    }
+  },
+  "kettle-chips": {
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Kettle Cooked Original Chips",
+      "image": "/stores/Brand Photos/president-s-choice-kettle-chips.png",
+      "code": "0060383076146",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/307/6146/front_en.3.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Chips, Kettle-Cooked",
+      "image": "/stores/Brand Photos/compliments-kettle-chips.png",
+      "code": "0055742572636",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/257/2636/front_en.3.400.jpg"
+    },
+    "frank": {
+      "brand": "Frank",
+      "name": "Sea Salt Kettle Cooked Chips",
+      "size": "142 g",
+      "image": "/stores/Brand Photos/frank-kettle-chips.png",
+      "code": "0673879001456",
+      "source": "https://images.openfoodfacts.org/images/products/067/387/900/1456/front_en.12.400.jpg"
+    }
+  },
+  "cheese-crackers": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Craquelins a saveurs de fromage",
+      "image": "/stores/Brand Photos/great-value-cheese-crackers.png",
+      "code": "0681131759427",
+      "source": "https://images.openfoodfacts.org/images/products/068/113/175/9427/front_fr.3.400.jpg"
+    },
+    "noname": {
+      "brand": "No Name",
+      "name": "Crackers&cheese",
+      "size": "8 x 87 g",
+      "image": "/stores/Brand Photos/no-name-cheese-crackers.png",
+      "code": "0060383151157",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/315/1157/front_fr.3.400.jpg"
+    },
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "PC Loads of Spicy Cheese Crackers",
+      "image": "/stores/Brand Photos/president-s-choice-cheese-crackers.png",
+      "code": "0060383020088",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/302/0088/front_fr.3.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Crackers and cheese",
+      "image": "/stores/Brand Photos/compliments-cheese-crackers.png",
+      "code": "0055742557817",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/255/7817/front_fr.3.400.jpg"
+    }
+  },
+  "soda-crackers": {
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Salted Tops soda crackers",
+      "image": "/stores/Brand Photos/western-family-soda-crackers.png",
+      "code": "0062639175849",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/917/5849/front_fr.3.400.jpg"
+    }
+  },
+  "whole-wheat-crackers": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Original Wheat Crackers",
+      "image": "/stores/Brand Photos/great-value-whole-wheat-crackers.png",
+      "code": "0628915787764",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/578/7764/front_fr.3.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Wheat crackers",
+      "size": "225 g",
+      "image": "/stores/Brand Photos/compliments-whole-wheat-crackers.png",
+      "code": "0055742351927",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/235/1927/front_fr.3.400.jpg"
+    }
+  },
+  "sandwich-cookies": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Mint Creme Sandwich Cookies",
+      "size": "300 g",
+      "image": "/stores/Brand Photos/great-value-sandwich-cookies.png",
+      "code": "0628915243369",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/524/3369/front_en.3.400.jpg"
+    }
+  },
+  "chocolate-chip-cookies": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Oatmeal chocolate chip cookies",
+      "image": "/stores/Brand Photos/great-value-chocolate-chip-cookies.png",
+      "code": "0628915669824",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/566/9824/front_fr.3.400.jpg"
+    }
+  },
+  "dark-chocolate-bar": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Dark chocolate covered cranberries",
+      "image": "/stores/Brand Photos/great-value-dark-chocolate-bar.png",
+      "code": "0627735222721",
+      "source": "https://images.openfoodfacts.org/images/products/062/773/522/2721/front_fr.3.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Cranberry Apple Dark Chocolate Chewy Tenders",
+      "image": "/stores/Brand Photos/compliments-dark-chocolate-bar.png",
+      "code": "0055742563603",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/256/3603/front_fr.3.400.jpg"
+    }
+  },
+  "milk-chocolate-bar": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Milk chocolate",
+      "image": "/stores/Brand Photos/great-value-milk-chocolate-bar.png",
+      "code": "0628915168389",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/516/8389/front_fr.3.400.jpg"
+    },
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Milk Chocolate Eggs",
+      "image": "/stores/Brand Photos/president-s-choice-milk-chocolate-bar.png",
+      "code": "0060383189693",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/318/9693/front_fr.3.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Swiss milk chocolate",
+      "image": "/stores/Brand Photos/compliments-milk-chocolate-bar.png",
+      "code": "0055742562989",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/256/2989/front_fr.3.400.jpg"
+    },
+    "frank": {
+      "brand": "Frank",
+      "name": "eclate de rire",
+      "image": "/stores/Brand Photos/frank-milk-chocolate-bar.png",
+      "code": "0778367600231",
+      "source": "https://images.openfoodfacts.org/images/products/077/836/760/0231/front_fr.3.400.jpg"
+    }
+  },
+  "chocolate-covered-almonds": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Milk Chocolate Almonds",
+      "image": "/stores/Brand Photos/great-value-chocolate-covered-almonds.png",
+      "code": "0628915831603",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/583/1603/front_fr.8.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Milk Chocolate Covered Almonds",
+      "size": "300 g",
+      "image": "/stores/Brand Photos/compliments-chocolate-covered-almonds.png",
+      "code": "0055742561142",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/256/1142/front_en.8.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Milk chocolate covered almonds",
+      "image": "/stores/Brand Photos/western-family-chocolate-covered-almonds.png",
+      "code": "0062639363772",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/936/3772/front_fr.3.400.jpg"
+    }
+  },
+  "gummy-bears": {
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Gummy Bears",
+      "size": "125 g",
+      "image": "/stores/Brand Photos/compliments-gummy-bears.png",
+      "code": "0055742555639",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/255/5639/front_en.13.400.jpg"
+    },
+    "frank": {
+      "brand": "Frank",
+      "name": "Gummy Bears",
+      "size": "275 g",
+      "image": "/stores/Brand Photos/frank-gummy-bears.png",
+      "code": "0778367600446",
+      "source": "https://images.openfoodfacts.org/images/products/077/836/760/0446/front_en.7.400.jpg"
+    }
+  },
+  "jelly-beans": {
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Gourmet Jelly Beans",
+      "size": "700 g",
+      "image": "/stores/Brand Photos/president-s-choice-jelly-beans.png",
+      "code": "0060383025397",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/302/5397/front_en.20.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "jelly beans",
+      "image": "/stores/Brand Photos/compliments-jelly-beans.png",
+      "code": "0055742562156",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/256/2156/front_fr.3.400.jpg"
+    }
+  },
+  "candy-canes": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Candy cane creme",
+      "image": "/stores/Brand Photos/great-value-candy-canes.png",
+      "code": "0627735016351",
+      "source": "https://images.openfoodfacts.org/images/products/062/773/501/6351/front_fr.3.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Candy Cane Ice Cream",
+      "image": "/stores/Brand Photos/western-family-candy-canes.png",
+      "code": "0062639356095",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/935/6095/front_en.3.400.jpg"
+    }
+  },
+  "protein-bars": {
+    "compliments": {
+      "brand": "Compliments",
+      "name": "protein bar",
+      "image": "/stores/Brand Photos/compliments-protein-bars.png",
+      "code": "0055742556414",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/255/6414/front_fr.3.400.jpg"
+    }
+  },
+  "marshmallows": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Guimauves originales",
+      "image": "/stores/Brand Photos/great-value-marshmallows.png",
+      "code": "0628915408409",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/540/8409/front_fr.28.400.jpg"
+    },
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Madagascar vanilla marshmallows",
+      "image": "/stores/Brand Photos/president-s-choice-marshmallows.png",
+      "code": "0060383053826",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/305/3826/front_fr.3.400.jpg"
+    },
+    "selection": {
+      "brand": "Selection",
+      "name": "Guimauves",
+      "image": "/stores/Brand Photos/selection-marshmallows.png",
+      "code": "0059749887045",
+      "source": "https://images.openfoodfacts.org/images/products/005/974/988/7045/front_fr.3.400.jpg"
+    },
+    "frank": {
+      "brand": "Frank",
+      "name": "Marshmallows",
+      "size": "250 g",
+      "image": "/stores/Brand Photos/frank-marshmallows.png",
+      "code": "0054300009591",
+      "source": "https://images.openfoodfacts.org/images/products/005/430/000/9591/front_fr.16.400.jpg"
+    }
+  },
+  "fruit-snacks": {
+    "kirklandsignature": {
+      "brand": "Kirkland Signature",
+      "name": "Fruit Snacks/Collations aux fruits",
+      "image": "/stores/Brand Photos/kirkland-signature-fruit-snacks.png",
+      "code": "0096619327621",
+      "source": "https://images.openfoodfacts.org/images/products/009/661/932/7621/front_en.6.400.jpg"
+    },
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Squeeze fruit snacks apple peach",
+      "size": "4 x 90 g",
+      "image": "/stores/Brand Photos/president-s-choice-fruit-snacks.png",
+      "code": "0060383028732",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/302/8732/front_fr.3.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Zoo animal party fruit snacks",
+      "image": "/stores/Brand Photos/compliments-fruit-snacks.png",
+      "code": "0055742563092",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/256/3092/front_fr.3.400.jpg"
+    }
+  },
+  "beef-sticks": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Beef jerky",
+      "size": "80 g",
+      "image": "/stores/Brand Photos/great-value-beef-sticks.png",
+      "code": "0628915232431",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/523/2431/front_fr.14.400.jpg"
+    },
+    "noname": {
+      "brand": "No Name",
+      "name": "Beef burger",
+      "image": "/stores/Brand Photos/no-name-beef-sticks.png",
+      "code": "0060383373337",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/337/3337/front_fr.3.400.jpg"
+    },
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Sirloin Beef Strips",
+      "image": "/stores/Brand Photos/president-s-choice-beef-sticks.png",
+      "code": "0060383131807",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/313/1807/front_en.4.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Roast Beef",
+      "image": "/stores/Brand Photos/compliments-beef-sticks.png",
+      "code": "0068820133599",
+      "source": "https://images.openfoodfacts.org/images/products/006/882/013/3599/front_fr.3.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Sirloin beef burgers",
+      "size": "1.13kg",
+      "image": "/stores/Brand Photos/western-family-beef-sticks.png",
+      "code": "0062639316587",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/931/6587/front_en.4.400.jpg"
+    }
+  },
+  "beef-jerky": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Beef jerky",
+      "size": "80 g",
+      "image": "/stores/Brand Photos/great-value-beef-jerky.png",
+      "code": "0628915232431",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/523/2431/front_fr.14.400.jpg"
+    },
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Teriyaki - beef jerky",
+      "size": "200 g",
+      "image": "/stores/Brand Photos/president-s-choice-beef-jerky.png",
+      "code": "0060383206697",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/320/6697/front_en.4.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Teriyaki beef jerky",
+      "image": "/stores/Brand Photos/compliments-beef-jerky.png",
+      "code": "0055742552935",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/255/2935/front_fr.3.400.jpg"
+    }
+  },
+  "hummus": {
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Hummus",
+      "size": "454 g",
+      "image": "/stores/Brand Photos/president-s-choice-hummus.png",
+      "code": "0060383035822",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/303/5822/front_en.17.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Garlic Hummus",
+      "size": "454 g",
+      "image": "/stores/Brand Photos/compliments-hummus.png",
+      "code": "0055742566178",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/256/6178/front_en.36.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Hummus original",
+      "image": "/stores/Brand Photos/western-family-hummus.png",
+      "code": "0062639204143",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/920/4143/front_fr.3.400.jpg"
+    }
+  },
+  "seaweed-snacks": {
+    "kirklandsignature": {
+      "brand": "Kirkland Signature",
+      "name": "Organic Roasted Seaweed Snack",
+      "size": "17 g",
+      "image": "/stores/Brand Photos/kirkland-signature-seaweed-snacks.png",
+      "code": "0096619434473",
+      "source": "https://images.openfoodfacts.org/images/products/009/661/943/4473/front_en.60.400.jpg"
+    }
+  },
+  "guacamole": {
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Guacamole",
+      "image": "/stores/Brand Photos/president-s-choice-guacamole.png",
+      "code": "0060383046361",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/304/6361/front_fr.9.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Guacamole",
+      "size": "227 g",
+      "image": "/stores/Brand Photos/compliments-guacamole.png",
+      "code": "0068820132608",
+      "source": "https://images.openfoodfacts.org/images/products/006/882/013/2608/front_en.3.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Mild guacamole",
+      "image": "/stores/Brand Photos/western-family-guacamole.png",
+      "code": "0062639361419",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/936/1419/front_fr.3.400.jpg"
+    }
+  },
+  "french-onion-dip": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "French onion sour cream dip",
+      "image": "/stores/Brand Photos/great-value-french-onion-dip.png",
+      "code": "0628915231779",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/523/1779/front_fr.5.400.jpg"
+    },
+    "noname": {
+      "brand": "No Name",
+      "name": "French onion sour cream dip",
+      "image": "/stores/Brand Photos/no-name-french-onion-dip.png",
+      "code": "0060383130169",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/313/0169/front_en.8.400.jpg"
+    }
+  },
+  "toffee": {
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Rich Coffee Toffee Drizzle Extra Creamy Ice Cream",
+      "size": "500 mL",
+      "image": "/stores/Brand Photos/western-family-toffee.png",
+      "code": "0062639364427",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/936/4427/front_en.3.400.jpg"
+    }
+  },
+  "snack-mix": {
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Manhattan snack mix",
+      "image": "/stores/Brand Photos/compliments-snack-mix.png",
+      "code": "0055742561890",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/256/1890/front_fr.3.400.jpg"
+    }
+  },
+  "chocolate-covered-raisins": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Milk Chocolate Covered Raisins",
+      "size": "400 g",
+      "image": "/stores/Brand Photos/great-value-chocolate-covered-raisins.png",
+      "code": "0628915831634",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/583/1634/front_en.9.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Milk chocolate covered raisins",
+      "image": "/stores/Brand Photos/compliments-chocolate-covered-raisins.png",
+      "code": "0055742561630",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/256/1630/front_fr.3.400.jpg"
+    }
+  },
+  "pistachios": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Pistachio’s",
+      "image": "/stores/Brand Photos/great-value-pistachios.png",
+      "code": "0681131704106",
+      "source": "https://images.openfoodfacts.org/images/products/068/113/170/4106/front_fr.3.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Pistachios Dry-Roasted & Salted in Shell",
+      "image": "/stores/Brand Photos/compliments-pistachios.png",
+      "code": "0055742561715",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/256/1715/front_fr.3.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Pistachios",
+      "image": "/stores/Brand Photos/western-family-pistachios.png",
+      "code": "0062639308711",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/930/8711/front_fr.3.400.jpg"
+    }
+  },
+  "dried-mango": {
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Dried Mango Slices",
+      "size": "325 g",
+      "image": "/stores/Brand Photos/compliments-dried-mango.png",
+      "code": "0055742561647",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/256/1647/front_en.9.400.jpg"
+    }
+  },
+  "grape-juice": {
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Grape juice",
+      "image": "/stores/Brand Photos/western-family-grape-juice.png",
+      "code": "0062639356569",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/935/6569/front_fr.3.400.jpg"
+    }
+  },
+  "tomato-juice": {
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Tomato juice",
+      "image": "/stores/Brand Photos/compliments-tomato-juice.png",
+      "code": "0055742530841",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/253/0841/front_fr.3.400.jpg"
+    }
+  },
+  "fruit-punch": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Punch aux fruits aromatisant liquide pour l'eau",
+      "image": "/stores/Brand Photos/great-value-fruit-punch.png",
+      "code": "0628915381153",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/538/1153/front_fr.3.400.jpg"
+    },
+    "selection": {
+      "brand": "Selection",
+      "name": "Punch aux fruits - 30% moins de sucre",
+      "size": "1L",
+      "image": "/stores/Brand Photos/selection-fruit-punch.png",
+      "code": "0059749950015",
+      "source": "https://images.openfoodfacts.org/images/products/005/974/995/0015/front_fr.3.400.jpg"
+    }
+  },
+  "pineapple-juice": {
+    "noname": {
+      "brand": "No Name",
+      "name": "pineapple tidbits in pineapple juice",
+      "image": "/stores/Brand Photos/no-name-pineapple-juice.png",
+      "code": "0060383008581",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/300/8581/front_fr.3.400.jpg"
+    }
+  },
+  "lemonade": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Lemonade",
+      "image": "/stores/Brand Photos/great-value-lemonade.png",
+      "code": "0627735258713",
+      "source": "https://images.openfoodfacts.org/images/products/062/773/525/8713/front_fr.3.400.jpg"
+    },
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Limonade",
+      "image": "/stores/Brand Photos/president-s-choice-lemonade.png",
+      "code": "0060383160401",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/316/0401/front_fr.3.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Lemonade with mango",
+      "image": "/stores/Brand Photos/compliments-lemonade.png",
+      "code": "0055742566734",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/256/6734/front_fr.9.400.jpg"
+    }
+  },
+  "cola": {
+    "selection": {
+      "brand": "Selection",
+      "name": "Cola",
+      "image": "/stores/Brand Photos/selection-cola.png",
+      "code": "0059749882118",
+      "source": "https://images.openfoodfacts.org/images/products/005/974/988/2118/front_fr.8.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Cola Bottles",
+      "size": "125 g",
+      "image": "/stores/Brand Photos/compliments-cola.png",
+      "code": "0055742562385",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/256/2385/front_en.3.400.jpg"
+    }
+  },
+  "cream-soda": {
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Cream soda",
+      "image": "/stores/Brand Photos/president-s-choice-cream-soda.png",
+      "code": "0060383674250",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/367/4250/front_fr.3.400.jpg"
+    },
+    "selection": {
+      "brand": "Selection",
+      "name": "Cream soda",
+      "image": "/stores/Brand Photos/selection-cream-soda.png",
+      "code": "0059749882194",
+      "source": "https://images.openfoodfacts.org/images/products/005/974/988/2194/front_fr.3.400.jpg"
+    }
+  },
+  "ginger-ale": {
+    "selection": {
+      "brand": "Selection",
+      "name": "Ginger ale",
+      "image": "/stores/Brand Photos/selection-ginger-ale.png",
+      "code": "0059749882644",
+      "source": "https://images.openfoodfacts.org/images/products/005/974/988/2644/front_fr.13.400.jpg"
+    }
+  },
+  "club-soda": {
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Centre ice club soda",
+      "image": "/stores/Brand Photos/western-family-club-soda.png",
+      "code": "0062639343095",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/934/3095/front_fr.3.400.jpg"
+    }
+  },
+  "instant-coffee": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Café instantané",
+      "image": "/stores/Brand Photos/great-value-instant-coffee.png",
+      "code": "0605388878045",
+      "source": "https://images.openfoodfacts.org/images/products/060/538/887/8045/front_fr.3.400.jpg"
+    }
+  },
+  "sparkling-water-12-pack": {
+    "selection": {
+      "brand": "Selection",
+      "name": "Sparkling spring water",
+      "size": "1 l",
+      "image": "/stores/Brand Photos/selection-sparkling-water-12-pack.png",
+      "code": "0059749899253",
+      "source": "https://images.openfoodfacts.org/images/products/005/974/989/9253/front_en.17.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "natural blood orange sparkling water",
+      "size": "12 x 355 ml",
+      "image": "/stores/Brand Photos/western-family-sparkling-water-12-pack.png",
+      "code": "0062639354572",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/935/4572/front_fr.3.400.jpg"
+    }
+  },
+  "coffee-pods": {
+    "noname": {
+      "brand": "No Name",
+      "name": "coffee pods-dark roast",
+      "size": "100",
+      "image": "/stores/Brand Photos/no-name-coffee-pods.png",
+      "code": "0060383184117",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/318/4117/front_fr.3.400.jpg"
+    },
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "West Coast Dark Roast Single Serve Coffee Pods",
+      "size": "138 g",
+      "image": "/stores/Brand Photos/president-s-choice-coffee-pods.png",
+      "code": "0060383036898",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/303/6898/front_en.7.400.jpg"
+    }
+  },
+  "iced-tea": {
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Raspberry iced tea",
+      "image": "/stores/Brand Photos/compliments-iced-tea.png",
+      "code": "0055742566727",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/256/6727/front_fr.3.400.jpg"
+    }
+  },
+  "whole-bean-coffee": {
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Whole Bean Single Origin Costa Rica Medium Roast Coffee",
+      "size": "340 g",
+      "image": "/stores/Brand Photos/president-s-choice-whole-bean-coffee.png",
+      "code": "0060383044947",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/304/4947/front_en.10.400.jpg"
+    }
+  },
+  "decaf-coffee": {
+    "noname": {
+      "brand": "No Name",
+      "name": "Decaf coffee",
+      "image": "/stores/Brand Photos/no-name-decaf-coffee.png",
+      "code": "0060383037710",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/303/7710/front_fr.3.400.jpg"
+    }
+  },
+  "hot-chocolate-mix": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Marshmallow Hot Chocolate Mix",
+      "image": "/stores/Brand Photos/great-value-hot-chocolate-mix.png",
+      "code": "0628915380774",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/538/0774/front_fr.5.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Hot Chocolate Mix",
+      "size": "1.8 kg",
+      "image": "/stores/Brand Photos/compliments-hot-chocolate-mix.png",
+      "code": "0055742568370",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/256/8370/front_en.8.400.jpg"
+    }
+  },
+  "apple-cider": {
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Vinaigre de cidre de pomme",
+      "image": "/stores/Brand Photos/president-s-choice-apple-cider.png",
+      "code": "0060383206840",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/320/6840/front_fr.9.400.jpg"
+    },
+    "selection": {
+      "brand": "Selection",
+      "name": "Vinaigre de cidre de pomme",
+      "image": "/stores/Brand Photos/selection-apple-cider.png",
+      "code": "0059749888387",
+      "source": "https://images.openfoodfacts.org/images/products/005/974/988/8387/front_fr.3.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Spiced Apple Cider",
+      "image": "/stores/Brand Photos/western-family-apple-cider.png",
+      "code": "0062639353476",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/935/3476/front_fr.3.400.jpg"
+    }
+  },
+  "tonic-water": {
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Mini Diet Tonic Water",
+      "size": "6 x 222 mL",
+      "image": "/stores/Brand Photos/president-s-choice-tonic-water.png",
+      "code": "0060383204310",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/320/4310/front_en.5.400.jpg"
+    }
+  },
+  "corn-flakes": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Frosted Corn Flakes",
+      "size": "680 g",
+      "image": "/stores/Brand Photos/great-value-corn-flakes.png",
+      "code": "0628915365559",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/536/5559/front_en.3.400.jpg"
+    }
+  },
+  "raisin-bran": {
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Loads of raisins raisin bran",
+      "image": "/stores/Brand Photos/president-s-choice-raisin-bran.png",
+      "code": "0060383126179",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/312/6179/front_fr.10.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Maximum Raisin Bran",
+      "size": "755 g",
+      "image": "/stores/Brand Photos/compliments-raisin-bran.png",
+      "code": "0055742549027",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/254/9027/front_en.14.400.jpg"
+    }
+  },
+  "muesli": {
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Müesli original",
+      "image": "/stores/Brand Photos/president-s-choice-muesli.png",
+      "code": "0060383214142",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/321/4142/front_fr.3.400.jpg"
+    }
+  },
+  "bran-flakes": {
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Bran flakes cereal",
+      "size": "775 g",
+      "image": "/stores/Brand Photos/president-s-choice-bran-flakes.png",
+      "code": "0060383747824",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/374/7824/front_fr.26.400.jpg"
+    },
+    "selection": {
+      "brand": "Selection",
+      "name": "Bran flakes",
+      "image": "/stores/Brand Photos/selection-bran-flakes.png",
+      "code": "0059749874298",
+      "source": "https://images.openfoodfacts.org/images/products/005/974/987/4298/front_en.8.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Bran Flakes",
+      "size": "600 g",
+      "image": "/stores/Brand Photos/western-family-bran-flakes.png",
+      "code": "0062639318147",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/931/8147/front_en.8.400.jpg"
+    }
+  },
+  "frosted-corn-flakes": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Frosted Corn Flakes",
+      "size": "680 g",
+      "image": "/stores/Brand Photos/great-value-frosted-corn-flakes.png",
+      "code": "0628915365559",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/536/5559/front_en.3.400.jpg"
+    }
+  },
+  "shredded-wheat": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Thin wheat",
+      "image": "/stores/Brand Photos/great-value-shredded-wheat.png",
+      "code": "0628915000498",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/500/0498/front_fr.3.400.jpg"
+    },
+    "noname": {
+      "brand": "No Name",
+      "name": "Simple wheat tortillas",
+      "image": "/stores/Brand Photos/no-name-shredded-wheat.png",
+      "code": "0060383187200",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/318/7200/front_fr.3.400.jpg"
+    },
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Wheat squares",
+      "size": "725 g",
+      "image": "/stores/Brand Photos/president-s-choice-shredded-wheat.png",
+      "code": "0060383126186",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/312/6186/front_en.13.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Thin Wheat",
+      "image": "/stores/Brand Photos/compliments-shredded-wheat.png",
+      "code": "0055742567250",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/256/7250/front_fr.3.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Whole wheat Naan",
+      "image": "/stores/Brand Photos/western-family-shredded-wheat.png",
+      "code": "0062639368098",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/936/8098/front_fr.3.400.jpg"
+    }
+  },
+  "large-flake-oats": {
+    "noname": {
+      "brand": "No Name",
+      "name": "Large Flake Oats",
+      "size": "1 kg",
+      "image": "/stores/Brand Photos/no-name-large-flake-oats.png",
+      "code": "0060383159924",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/315/9924/front_en.19.400.jpg"
+    }
+  },
+  "steel-cut-oats": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Steel Cut Oats",
+      "image": "/stores/Brand Photos/great-value-steel-cut-oats.png",
+      "code": "0628915242461",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/524/2461/front_fr.3.400.jpg"
+    },
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Regular Steel Cut Oats",
+      "image": "/stores/Brand Photos/president-s-choice-steel-cut-oats.png",
+      "code": "0060383114657",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/311/4657/front_en.3.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "Steel Cut Oats",
+      "image": "/stores/Brand Photos/western-family-steel-cut-oats.png",
+      "code": "0062639342470",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/934/2470/front_fr.3.400.jpg"
+    }
+  },
+  "granola": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "granola",
+      "size": "560g",
+      "image": "/stores/Brand Photos/great-value-granola.png",
+      "code": "06144023",
+      "source": "https://images.openfoodfacts.org/images/products/06144023/front_fr.4.400.jpg"
+    },
+    "kirklandsignature": {
+      "brand": "Kirkland Signature",
+      "name": "Ancient grains granola",
+      "image": "/stores/Brand Photos/kirkland-signature-granola.png",
+      "code": "8066089994700",
+      "source": "https://images.openfoodfacts.org/images/products/806/608/999/4700/front_en.4.400.jpg"
+    },
+    "noname": {
+      "brand": "No Name",
+      "name": "Chewy choco granola bar",
+      "image": "/stores/Brand Photos/no-name-granola.png",
+      "code": "0060383125196",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/312/5196/front_fr.3.400.jpg"
+    },
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Granola",
+      "image": "/stores/Brand Photos/president-s-choice-granola.png",
+      "code": "0060383214111",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/321/4111/front_fr.3.400.jpg"
+    },
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Granola",
+      "image": "/stores/Brand Photos/compliments-granola.png",
+      "code": "0055742560886",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/256/0886/front_fr.3.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "chewy granola bars",
+      "image": "/stores/Brand Photos/western-family-granola.png",
+      "code": "0062639348472",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/934/8472/front_fr.3.400.jpg"
+    }
+  },
+  "granola-bars": {
+    "noname": {
+      "brand": "No Name",
+      "name": "Chewy choco granola bar",
+      "image": "/stores/Brand Photos/no-name-granola-bars.png",
+      "code": "0060383125196",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/312/5196/front_fr.3.400.jpg"
+    },
+    "westernfamily": {
+      "brand": "Western Family",
+      "name": "chewy granola bars",
+      "image": "/stores/Brand Photos/western-family-granola-bars.png",
+      "code": "0062639348472",
+      "source": "https://images.openfoodfacts.org/images/products/006/263/934/8472/front_fr.3.400.jpg"
+    }
+  },
+  "pancake-mix": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Melange a crepes",
+      "size": "905g",
+      "image": "/stores/Brand Photos/great-value-pancake-mix.png",
+      "code": "0681131799478",
+      "source": "https://images.openfoodfacts.org/images/products/068/113/179/9478/front_fr.3.400.jpg"
+    },
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Pancake mix",
+      "size": "900 g",
+      "image": "/stores/Brand Photos/president-s-choice-pancake-mix.png",
+      "code": "0060383152604",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/315/2604/front_en.9.400.jpg"
+    }
+  },
+  "puffed-wheat-cereal": {
+    "compliments": {
+      "brand": "Compliments",
+      "name": "Céréales de blé soufflé grillées",
+      "size": "400 grammes",
+      "image": "/stores/Brand Photos/compliments-puffed-wheat-cereal.png",
+      "code": "0055742370287",
+      "source": "https://images.openfoodfacts.org/images/products/005/574/237/0287/front_fr.3.400.jpg"
+    }
+  },
+  "rice-rusks": {
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Rice rusks",
+      "image": "/stores/Brand Photos/president-s-choice-rice-rusks.png",
+      "code": "0060383199678",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/319/9678/front_fr.8.400.jpg"
+    }
+  },
+  "vitamin-c": {
+    "kirklandsignature": {
+      "brand": "Kirkland Signature",
+      "name": "Kirkland Vitamin B-12",
+      "image": "/stores/Brand Photos/kirkland-signature-vitamin-c.png",
+      "code": "0096619282074",
+      "source": "https://images.openfoodfacts.org/images/products/009/661/928/2074/front_ar.12.400.jpg"
+    }
+  },
+  "vitamin-d": {
+    "kirklandsignature": {
+      "brand": "Kirkland Signature",
+      "name": "Kirkland Vitamin B-12",
+      "image": "/stores/Brand Photos/kirkland-signature-vitamin-d.png",
+      "code": "0096619282074",
+      "source": "https://images.openfoodfacts.org/images/products/009/661/928/2074/front_ar.12.400.jpg"
+    }
+  },
+  "breakfast-sausages": {
+    "greatvalue": {
+      "brand": "Great Value",
+      "name": "Pork Breakfast Sausages",
+      "image": "/stores/Brand Photos/great-value-breakfast-sausages.png",
+      "code": "0628915224269",
+      "source": "https://images.openfoodfacts.org/images/products/062/891/522/4269/front_fr.3.400.jpg"
+    }
+  },
+  "lactose-free-yogurt": {
+    "presidentschoice": {
+      "brand": "President's Choice",
+      "name": "Yougourt grec",
+      "image": "/stores/Brand Photos/president-s-choice-lactose-free-yogurt.png",
+      "code": "0060383224066",
+      "source": "https://images.openfoodfacts.org/images/products/006/038/322/4066/front_fr.3.400.jpg"
+    }
+  },
+  "1-milk": {
+    "kirklandsignature": {
+      "brand": "Kirkland Signature 1% Milk",
+      "name": "Kirkland Signature 1% Milk",
+      "image": "/stores/Brand Photos/pinned-kirklandsignature-1-milk.avif",
+      "code": "pinned",
+      "source": "public/stores/Product card Images/AI searched/1% milk tetrapack - Costco.avif",
+      "pinned": true
+    }
+  },
+  "whole-milk": {
+    "greatvalue": {
+      "brand": "Great Value Whole Milk",
+      "name": "Great Value Whole Milk",
+      "image": "/stores/Brand Photos/pinned-greatvalue-whole-milk.avif",
+      "code": "pinned",
+      "source": "public/stores/Product card Images/AI searched/whole milk - walmart.avif",
+      "pinned": true
+    },
+    "kirklandsignature": {
+      "brand": "Kirkland Signature Whole Milk",
+      "name": "Kirkland Signature Whole Milk",
+      "image": "/stores/Brand Photos/pinned-kirklandsignature-whole-milk.avif",
+      "code": "pinned",
+      "source": "public/stores/Product card Images/AI searched/whole milk - Costco.avif",
+      "pinned": true
+    },
+    "presidentschoice": {
+      "brand": "President's Choice Whole Milk",
+      "name": "President's Choice Whole Milk",
+      "image": "/stores/Brand Photos/pinned-presidentschoice-whole-milk.avif",
+      "code": "pinned",
+      "source": "public/stores/Product card Images/AI searched/whole milk - Real Canadian Superstore.avif",
+      "pinned": true
+    },
+    "noname": {
+      "brand": "No Name Whole Milk",
+      "name": "No Name Whole Milk",
+      "image": "/stores/Brand Photos/pinned-noname-whole-milk.avif",
+      "code": "pinned",
+      "source": "public/stores/Product card Images/AI searched/whole milk tetrapack - Real Canadian Superstore.avif",
+      "pinned": true
+    }
+  }
+}

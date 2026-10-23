@@ -1,5 +1,5 @@
 import NextImage from "next/image";
-import { ChevronDown, Heart, Image as ImageIcon } from "lucide-react";
+import { ChevronDown, Heart, Image as ImageIcon, Star } from "lucide-react";
 import { Text } from "@/components/Text/Text";
 import { StoreName } from "@/components/StoreName/StoreName";
 import { StarRating } from "@/components/StarRating/StarRating";
@@ -25,6 +25,18 @@ export interface ProductCardProps {
   showDiscount?: boolean;
   discountLabel?: string;
   description: string;
+  /**
+   * The brand, printed above the name.
+   *
+   * Three states, and the empty one matters: passing `undefined` leaves the
+   * line out altogether (the landing page, whose cards were designed without
+   * one), while passing `""` keeps the space reserved but blank. That is what
+   * holds a grid of search results on the same horizontal lines when one
+   * product happens to have no brand.
+   */
+  brand?: string;
+  /** Marks the brand with a star, for one the shopper always buys. */
+  brandIsFavourite?: boolean;
   /**
    * Reserve exactly this many lines for the description (it also truncates at
    * that many). Short copy then leaves the reserved space empty instead of
@@ -66,6 +78,8 @@ export function ProductCard({
   showDiscount = false,
   discountLabel = "Last Chance Saving",
   description,
+  brand,
+  brandIsFavourite,
   descriptionLines,
   rating,
   reviewCount,
@@ -126,6 +140,13 @@ export function ProductCard({
     </div>
   );
 
+  // Hide the brand line when the name already says it - "Inniskillin" above
+  // "Inniskillin Vidal Icewine" is just the word twice. The slot stays
+  // reserved, so the card keeps its height either way.
+  const flatten = (s: string) => s.toLowerCase().replace(/[^a-z0-9]/g, "");
+  const brandLine =
+    brand && !flatten(description).includes(flatten(brand)) ? brand : "";
+
   const body = (
     <div className={styles.body}>
       <StoreName
@@ -148,6 +169,20 @@ export function ProductCard({
           {discountLabel}
         </Text>
       </span>
+
+      {brand !== undefined && (
+        <Text as="p" variant="xsmallBold" className={styles.brand}>
+          {brandLine && brandIsFavourite && (
+            <Star
+              size={11}
+              className={styles.brandStar}
+              fill="currentColor"
+              aria-label="A brand you always buy"
+            />
+          )}
+          {brandLine}
+        </Text>
+      )}
 
       <Text
         as="p"
@@ -190,31 +225,28 @@ export function ProductCard({
         </button>
       </div>
 
-      {/* Price left, Add/stepper right — pinned to the card's bottom (see
-          .priceStepperRow's margin-top: auto) so it lands on the same spot
-          whether or not the discount pill above is showing. */}
+      {/* Price left, ADD/stepper right, vertically centred on each other. */}
       <div className={styles.priceStepperRow}>
-        <div className={styles.priceRow}>
+        <div
+          className={[
+            styles.priceRow,
+            originalPrice == null ? styles.priceRowSingle : "",
+          ]
+            .filter(Boolean)
+            .join(" ")}
+        >
           <Text as="span" variant="mediumBold" className={styles.price}>
             {formatPrice(price)}
           </Text>
-          {/* Always rendered so every price block is the same two-line height —
-              that keeps the Add button on the same line across a row whether or
-              not a card is discounted. Space is held (visibility) when there's
-              no original price. */}
-          <Text
-            as="span"
-            variant="smallRegular"
-            className={[
-              styles.originalPrice,
-              originalPrice == null ? styles.originalPriceHidden : "",
-            ]
-              .filter(Boolean)
-              .join(" ")}
-            aria-hidden={originalPrice == null}
-          >
-            {originalPrice != null ? formatPrice(originalPrice) : " "}
-          </Text>
+          {/* Only rendered when there is something to strike through — but the
+              block reserves the two-line height either way (.priceRowSingle),
+              so dropping this line never lifts the ADD button off the line its
+              neighbours in the grid row sit on. */}
+          {originalPrice != null && (
+            <Text as="span" variant="smallRegular" className={styles.originalPrice}>
+              {formatPrice(originalPrice)}
+            </Text>
+          )}
         </div>
 
         <AddButton

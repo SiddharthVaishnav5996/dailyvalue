@@ -26,7 +26,7 @@ function ResultsPageInner() {
   const searchParams = useSearchParams();
   const splitRef = useRef<ResizableSplitHandle>(null);
 
-  const { result, messages, status, runSearch } = useSearch();
+  const { result, messages, status, runSearch, editMessage } = useSearch();
 
   // The query the landing page put in the URL, e.g. /results?q=cheesecake
   const query = searchParams.get("q") ?? "";
@@ -145,6 +145,10 @@ function ResultsPageInner() {
               // question, with the thread attached, so "I don't like digestive
               // biscuits" rebuilds the whole table rather than starting over.
               onSendMessage={(text) => void runSearch(text)}
+              // Rewriting a question throws away everything after it and asks
+              // again - see editMessage in lib/search/SearchContext.tsx.
+              onEditMessage={(id, text) => void editMessage(id, text)}
+              pending={isLoading}
               variant="wide"
             />
           }

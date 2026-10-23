@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { Text } from "@/components/Text/Text";
 import styles from "./AccountMenu.module.css";
 
@@ -17,14 +18,16 @@ export interface AccountMenuProps {
  * panel anchored under the avatar, with a fixed transparent catcher behind it
  * for outside clicks, plus Escape to close.
  *
- * Log Out is the only item wired up — the rest have no page to go to yet (My
- * Orders means past orders, which don't exist; /results/order/status is live
- * tracking for the current order, not history). Give each a destination as
- * those pages get built.
+ * Two items are wired up: Saved Recipes, which has a page, and Log Out. The
+ * rest have nowhere to go yet (My Orders means past orders, which don't exist;
+ * /results/order/status is live tracking for the current order, not history).
+ * Give each a destination as those pages get built.
  *
  * Render this inside a `position: relative` anchor.
  */
 export function AccountMenu({ phone, onClose, onLogout }: AccountMenuProps) {
+  const router = useRouter();
+
   useEffect(() => {
     function handleKey(e: KeyboardEvent) {
       if (e.key === "Escape") onClose();
@@ -52,6 +55,19 @@ export function AccountMenu({ phone, onClose, onLogout }: AccountMenuProps) {
           <li>
             <button type="button" className={styles.item} role="menuitem">
               My Orders
+            </button>
+          </li>
+          <li>
+            <button
+              type="button"
+              className={styles.item}
+              role="menuitem"
+              onClick={() => {
+                onClose();
+                router.push("/saved-recipes");
+              }}
+            >
+              Saved Recipes
             </button>
           </li>
           <li>

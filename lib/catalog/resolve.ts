@@ -1,8 +1,17 @@
 import Fuse from "fuse.js";
 import type { AIItem, Offer, Product, ResolvedProduct } from "@/lib/types";
-import { PRODUCTS } from "@/lib/catalog/products";
+import { PRODUCTS, PRODUCT_BY_ID } from "@/lib/catalog/products";
 import { findCurated, seedOfferFor } from "@/lib/catalog/curated";
 import { STORES, STORE_BY_ID, CATALOG_STORE_IDS, storesForDepartment } from "@/data/stores";
+import {
+  findStoreBrand,
+  productBrandAt,
+  storeBrandFor,
+  type StoreBrand,
+} from "@/data/brands";
+import { brandPhotoFor } from "@/lib/catalog/brandPhotos";
+import { itemPhotoFor } from "@/lib/catalog/itemPhotos";
+import { offerPhotoFor, verifiedPhotoFor } from "@/lib/catalog/imageDb";
 import {
   originalPriceAt,
   priceAt,
@@ -23,8 +32,13 @@ import {
  *      keeps its own photo, its own product copy, and - where a Product-pop
  *      defines them - its own hand-written store prices and alternatives.
  *
- *   2. THE CATALOG (data/products.json). 39 seeded grocery products with
- *      genuine per-store prices. Stable, deliberately chosen, but no photos.
+ *   2. THE CATALOG (data/products.json). 1000 seeded grocery products.
+ *      The original 39 carry hand-checked per-store prices; the rest are
+ *      priced deterministically from a base (scripts/expand-catalog.mjs), so
+ *      treat those numbers as plausible rather than real. Most now have a
+ *      photo too - a store-brand packshot via brandPhotos.ts, or, for things
+ *      sold loose like produce and fresh meat, one generic shot via
+ *      itemPhotos.ts. Items with neither still fall back to the emoji tile.
  *
  *   3. GENERATION. Nothing in either list resembles an air conditioner, so
  *      anything they cannot cover is built on the fly, priced deterministically
@@ -70,6 +84,19 @@ const fuse = new Fuse(PRODUCTS, {
 const GROCERY_DEPARTMENTS = new Set([
   "grocery", "produce", "dairy", "bakery", "meat",
   "pantry", "beverages", "frozen", "snacks",
+  // Not groceries, but the catalog stocks them now. Gate 2 below still keeps
+  // a fuzzy hit inside its own department, so a mattress can only ever match
+  // furniture - never tomatoes.
+  "electronics", "furniture",
+  "appliances", "home", "hardware", "automotive", "garden", "sports",
+  "alcohol", "office", "toys", "pharmacy", "pet", "babygear", "clothing",
+]);
+
+/** Catalog departments that are not food. See resolveItems for why it matters. */
+const NON_GROCERY_CATEGORY_DEPTS = new Set([
+  "electronics", "furniture",
+  "appliances", "home", "hardware", "automotive", "garden", "sports",
+  "alcohol", "office", "toys", "pharmacy", "pet", "babygear", "clothing",
 ]);
 
 /** Catalog category -> the department that category belongs to. */
@@ -80,6 +107,23 @@ const CATEGORY_DEPARTMENT: Record<string, string> = {
   Meat: "meat",
   Pantry: "pantry",
   Beverages: "beverages",
+  Electronics: "electronics",
+  Furniture: "furniture",
+  Appliances: "appliances",
+  Home: "home",
+  Hardware: "hardware",
+  Automotive: "automotive",
+  Garden: "garden",
+  Sports: "sports",
+  Alcohol: "alcohol",
+  "School & Office": "office",
+  Toys: "toys",
+  Beauty: "pharmacy",
+  Seasonal: "home",
+  "Pet Supplies": "pet",
+  "Baby Gear": "babygear",
+  Clothing: "clothing",
+  Health: "pharmacy",
 };
 
 /** The department a catalog product really sits in, from its own category. */
@@ -87,8 +131,58 @@ function departmentOf(product: Product): string {
   return CATEGORY_DEPARTMENT[product.category] ?? "grocery";
 }
 
+/*
+ * Words that describe a product without saying WHICH product it is. "Ground"
+ * is true of nutmeg, turmeric and coffee alike, so it must never be the thing
+ * a fuzzy match is built on.
+ */
+const MODIFIERS = new Set([
+  "ground", "fresh", "whole", "large", "small", "organic", "plain", "pure",
+  "raw", "dried", "frozen", "canned", "sliced", "chopped", "unsalted",
+  "salted", "light", "mini", "baby", "sweet", "instant", "natural", "free",
+  "range", "extra", "fine", "coarse", "boneless", "skinless", "low", "half",
+]);
+
+/** The words in a name that actually identify the product. */
+function distinctiveWords(name: string): string[] {
+  return normalize(name)
+    .split(/[^a-z0-9]+/)
+    .filter((w) => w.length >= 4 && !MODIFIERS.has(w));
+}
+
+/**
+ * Does this product plausibly answer that name?
+ *
+ * A fuzzy score says "these strings look alike", which is not the same as
+ * "this is the thing you asked for". "Ground nutmeg" scores 0.13 against
+ * Ground Turmeric purely on the shared word "ground", and the model's own
+ * hint "spice" scores a PERFECT 0.0 against Steak Spice - so no score
+ * threshold can catch either. What catches them is insisting the match
+ * carries one of the words that made the request specific: nutmeg.
+ *
+ * Substring either way, so "cornflour" still reaches "flour".
+ */
+function answersTo(product: Product, words: string[]): boolean {
+  if (words.length === 0) return true; // nothing specific was asked for
+  const hay = normalize([product.name, ...(product.searchTerms ?? [])].join(" "));
+  const hayWords = hay.split(/[^a-z0-9]+/).filter((w) => w.length >= 4);
+  return words.some((w) => hay.includes(w) || hayWords.some((h) => w.includes(h)));
+}
+
 /** Find the catalog product for an item, or null. */
 function findInCatalog(item: AIItem): Product | null {
+  // 0) The item's own name is a catalog name or alias. Pure lookup, so it
+  //    wins: "All-purpose flour" is the flour product even when the model's
+  //    catalogId pointed at whole wheat flour.
+  const own = normalize(item.name);
+  const named = EXACT.get(own) ?? EXACT.get(own.replace(/s$/, ""));
+  if (named) return named;
+
+  // 1) The model picked an id from the catalog list (already validated in
+  //    normalizeItem). This is what keeps a reworded name ("block of butter")
+  //    on the same product from one run to the next.
+  if (item.catalogId) return PRODUCT_BY_ID[item.catalogId] ?? null;
+
   // Gate 1: is this even a grocery?
   if (!GROCERY_DEPARTMENTS.has(item.department)) return null;
 
@@ -96,22 +190,39 @@ function findInCatalog(item: AIItem): Product | null {
     .filter(Boolean)
     .map(normalize);
 
-  // 1) Exact or alias hit. Also try stripping a trailing "s" so "lemons"
-  //    finds "lemon".
+  // 2) Exact or alias hit on the model's aliases. Also try stripping a
+  //    trailing "s" so "lemons" finds "lemon".
   for (const c of candidates) {
     const hit = EXACT.get(c) ?? EXACT.get(c.replace(/s$/, ""));
     if (hit) return hit;
   }
 
-  // 2) Fuzzy fallback across every candidate phrase, best score wins.
+  // 3) Fuzzy fallback across every candidate phrase, best score wins.
   //    In Fuse, LOWER is better: 0 is a perfect match, 1 is no match at all.
+  //
+  //    The match must answer the item's NAME, not merely the hint phrase that
+  //    found it: searchTerms may propose a candidate, the name has to approve
+  //    it. Without that, the hint "spice" on an item named "Ground nutmeg"
+  //    matched Steak Spice PERFECTLY (score 0.0000) and shipped it as a
+  //    success - a missing product becoming a wrong one rather than a visible
+  //    gap. No score threshold can catch that, because the right answers
+  //    score 0.0000 too.
+  //
+  //    The approval is checked INSIDE the loop, per candidate, so that a
+  //    rejected front-runner does not sink the whole lookup. Checking it
+  //    afterwards on a single winner meant "Turmeric" with the hints
+  //    ["turmeric", "spice"] resolved to nothing at all: "spice" won on
+  //    score, failed approval, and Ground Turmeric - sitting right there in
+  //    the catalog, found by the other hint - never got its turn.
+  const wanted_ = distinctiveWords(item.name);
   let best: Product | null = null;
   let bestScore = Infinity;
   for (const c of candidates) {
-    const [top] = fuse.search(c, { limit: 1 });
-    if (top && typeof top.score === "number" && top.score < bestScore) {
-      bestScore = top.score;
-      best = top.item;
+    for (const hit of fuse.search(c, { limit: 8 })) {
+      if (typeof hit.score !== "number" || hit.score >= bestScore) continue;
+      if (!answersTo(hit.item, wanted_)) continue;
+      bestScore = hit.score;
+      best = hit.item;
     }
   }
 
@@ -175,12 +286,46 @@ const STORE_PROMOS: Record<string, string> = {
   canadiantire: "Canadian Tire Money",
 };
 
+/**
+ * Which brand this shop would actually be selling for this item.
+ *
+ * Three cases, and the middle one is the one that used to be wrong:
+ *
+ *   "Philadelphia cream cheese"  a NATIONAL brand. Every shop that stocks the
+ *                                department sells it. Compare away.
+ *
+ *   "Great Value white bread"    a STORE brand. Walmart sells it; Costco
+ *                                cannot. Rather than drop the other shops -
+ *                                which would leave nothing to compare - each
+ *                                one offers its own equivalent, at the same
+ *                                tier where it has one. The shopper sees that
+ *                                No Name is forty cents less AND that it is a
+ *                                different loaf, which is the real decision.
+ *
+ *   "white bread"                no brand asked for. Each shop puts forward
+ *                                its own, so the comparison reads Great Value
+ *                                / Compliments / Selection instead of three
+ *                                identical nameless rows.
+ */
+function brandForStore(storeId: string, department: string, wanted: string): string {
+  if (wanted) {
+    const owned = findStoreBrand(wanted);
+    if (!owned) return wanted; // national brand: sold everywhere
+    if (owned.storeIds.includes(storeId)) return owned.name; // its own shop
+    const equivalent = storeBrandFor(storeId, department, owned.tier);
+    return equivalent ? equivalent.name : "";
+  }
+
+  const own = storeBrandFor(storeId, department);
+  return own ? own.name : "";
+}
+
 /** Build one store's offer for a product. */
 function makeOffer(
   storeId: string,
   productKey: string,
   price: number,
-  isFirst: boolean,
+  brand: string,
 ): Offer | null {
   const store = STORE_BY_ID[storeId];
   if (!store) return null;
@@ -194,10 +339,9 @@ function makeOffer(
     originalPrice: originalPriceAt(price, productKey, storeId),
     rating: ratingAt(productKey, storeId),
     reviewCount: reviewCountAt(productKey, storeId),
+    brand: brand || undefined,
+    isOwnBrand: brand ? findStoreBrand(brand)?.storeIds.includes(storeId) : undefined,
     promo: STORE_PROMOS[storeId],
-    // Only the leading offer carries a red card badge, so the grid does not
-    // turn into a wall of badges.
-    cardBadge: isFirst ? undefined : undefined,
   };
 }
 
@@ -208,8 +352,30 @@ function makeOffer(
  * store that stocks this department gets a generated price anchored to the
  * average of those real ones, so the wider comparison stays believable.
  */
-function offersForCatalogProduct(product: Product, department: string): Offer[] {
-  const realPrices = CATALOG_STORE_IDS.map((id) => product.prices[id]).filter(
+function offersForCatalogProduct(
+  product: Product,
+  department: string,
+  wantedBrand: string,
+  /**
+   * Is this one of the hand-photographed cards?
+   *
+   * If so, hands off. A curated card is ONE specific package that somebody
+   * photographed: a Great Value egg carton, a Becel tub. Two things must not
+   * happen to it.
+   *
+   * It must not be given each shop's own brand, or the card ends up captioned
+   * "No Name" under a photograph of a Great Value carton - which is exactly
+   * what it did before this flag existed.
+   *
+   * And it must not be given a seeded packshot, because its own photograph was
+   * fitted to the card frame by hand and outranks everything. See the ladder
+   * in lib/catalog/brandPhotos.ts.
+   */
+  isCurated: boolean,
+): Offer[] {
+  // Every stored price anchors the rest: an LCBO-only bottle has no grocery
+  // price, and must not fall back to the $3.99 default below.
+  const realPrices = Object.values(product.prices).filter(
     (p): p is number => typeof p === "number",
   );
   const base =
@@ -231,8 +397,41 @@ function offersForCatalogProduct(product: Product, department: string): Offer[] 
         ? real
         : priceAt(base, product.id, store.id, store.priceIndex);
 
-    const offer = makeOffer(store.id, product.id, price, false);
-    if (offer) offers.push(offer);
+    // What this shop really sells for this product, when somebody has been
+    // in the shop and written it down. It beats the aisle-level guess, and
+    // brings a photograph of the exact package with it.
+    const known = isCurated ? null : productBrandAt(product.id, store.id);
+
+    const brand = isCurated
+      ? ""
+      : (known?.brand ?? brandForStore(store.id, department, wantedBrand));
+    const offer = makeOffer(store.id, product.id, price, brand);
+    if (offer) {
+      if (known?.image) {
+        offer.imageSrc = known.image;
+      } else if (!isCurated) {
+        /*
+         * Two seeded sources, best first. Anything hand-picked was already
+         * handled above by `known?.image` - see PRODUCT_BRAND_AT.
+         *
+         * 1. The store's OWN packshot, which is the whole point of the
+         *    comparison: the Great Value tub and the Compliments tub are
+         *    different products and should look it.
+         * 2. One GENERIC photo, for things sold loose - produce, fresh meat -
+         *    that carry no store brand at all. Without this those cards kept
+         *    the emoji tile while a real photograph sat unused in
+         *    data/itemPhotos.json.
+         */
+        const photo = brandPhotoFor(product.name, brand);
+        if (photo) {
+          offer.imageSrc = photo.image;
+        } else {
+          const generic = itemPhotoFor(product.id);
+          if (generic) offer.imageSrc = generic.image;
+        }
+      }
+      offers.push(offer);
+    }
   }
 
   return offers;
@@ -250,7 +449,10 @@ function offersForCatalogProduct(product: Product, department: string): Offer[] 
 function offersForGeneratedProduct(
   item: AIItem,
   productKey: string,
-  basePrice?: number,
+  basePrice: number | undefined,
+  wantedBrand: string,
+  /** Hand-photographed card? Then it keeps its own brand - see above. */
+  isCurated: boolean,
 ): Offer[] {
   const stores = storesForDepartment(item.department);
 
@@ -265,7 +467,12 @@ function offersForGeneratedProduct(
 
   return pool
     .map((store) =>
-      makeOffer(store.id, productKey, priceAt(base, productKey, store.id, store.priceIndex), false),
+      makeOffer(
+        store.id,
+        productKey,
+        priceAt(base, productKey, store.id, store.priceIndex),
+        isCurated ? "" : brandForStore(store.id, item.department, wantedBrand),
+      ),
     )
     .filter((o): o is Offer => o !== null);
 }
@@ -327,26 +534,83 @@ function slug(text: string): string {
 /**
  * Build the display name shown on the card.
  *
- * The brand is prepended only when the name does not already contain it,
- * otherwise you get "Inniskillin Inniskillin Icewine" - which is exactly what
- * the first run produced, because the AI puts the brand in both fields.
+ * The brand used to be glued onto the front of this: "Philadelphia Cream
+ * Cheese 250 g". It is not any more, because the brand moved onto the OFFER -
+ * it changes from shop to shop - and the card prints it on its own line above
+ * the name. Leaving it here as well printed it twice.
+ *
+ * Note that the AI puts the brand in both its fields, so a name often still
+ * contains it ("Inniskillin Vidal Icewine"). That is fine and is left alone:
+ * the card hides its brand line when the name already says it.
  */
+/**
+ * Take a store brand off the front of a name.
+ *
+ * The model names things like "Great Value Large Eggs" even when it was asked
+ * not to, and that name then sits under a brand line reading "No Name" at No
+ * Frills, because No Frills cannot sell Great Value. Two different brands on
+ * one card is worse than either.
+ *
+ * So the name is made generic and the brand line carries the brand - which is
+ * the point of moving it onto the offer in the first place. National brands
+ * are left alone: "Philadelphia Cream Cheese" is that product everywhere.
+ *
+ * A prompt asking the model to stop doing this exists too. This is the part
+ * that actually holds, because it does not depend on the model complying.
+ */
+function storeBrandInName(name: string): StoreBrand | null {
+  const words = name.trim().split(/\s+/);
+  // Longest first, so "Kirkland Signature" is found rather than nothing.
+  // Never takes the whole name - something has to be left to call the product.
+  for (let take = Math.min(3, words.length - 1); take >= 1; take--) {
+    const brand = findStoreBrand(words.slice(0, take).join(" "));
+    if (brand) return brand;
+  }
+  return null;
+}
+
+function withoutStoreBrand(name: string): string {
+  const brand = storeBrandInName(name);
+  if (!brand) return name;
+  return name.trim().split(/\s+/).slice(brand.name.trim().split(/\s+/).length).join(" ");
+}
+
 function describe(item: AIItem, product: Product | null): string {
-  const name = product?.name ?? item.name;
+  const name = withoutStoreBrand(product?.name ?? item.name);
   const size = (product?.size ?? item.packSize ?? "").trim();
-  const brand = (product?.brand || item.brandHint || "").trim();
 
   // Strip punctuation and spaces before comparing, so "10,000 BTU" is
   // recognised inside "…air conditioner 10000 BTU".
   const flatten = (s: string) => s.toLowerCase().replace(/[^a-z0-9]/g, "");
-  const flatName = flatten(name);
+  const hasSize = size !== "" && flatten(name).includes(flatten(size));
 
-  const hasBrand = brand !== "" && flatName.includes(flatten(brand));
-  const hasSize = size !== "" && flatName.includes(flatten(size));
+  return [name, hasSize ? "" : size].filter(Boolean).join(" ");
+}
 
-  return [hasBrand ? "" : brand, name, hasSize ? "" : size]
-    .filter(Boolean)
+/**
+ * Keep the variant the shopper asked for. "Unsalted butter" resolves to the
+ * one butter product, but the card should still say "Unsalted Butter 454 g".
+ * Only a name listed in the product's own searchTerms counts as a variant, so
+ * the catalog decides what is a variant and the model cannot invent one
+ * ("all-purpose" is not a kind of whole wheat flour).
+ */
+function variantOf(item: AIItem, product: Product | null): string | null {
+  if (!product?.searchTerms.map(normalize).includes(normalize(item.name))) return null;
+  const asked = normalize(item.name).split(" ");
+  const base = new Set(normalize(product.name).split(" "));
+  const lead = asked.findIndex((w) => base.has(w));
+  if (lead < 1 || lead > 2) return null;
+  if (!asked.slice(lead).every((w) => base.has(w))) return null;
+  return asked.slice(0, lead).join(" ");
+}
+
+function withVariant(description: string, variant: string | null): string {
+  if (!variant || normalize(description).startsWith(variant)) return description;
+  const qualifier = variant
+    .split(" ")
+    .map((w) => w[0].toUpperCase() + w.slice(1))
     .join(" ");
+  return `${qualifier} ${description}`;
 }
 
 export interface ResolveResult {
@@ -374,7 +638,15 @@ export function resolveItems(items: AIItem[]): ResolveResult {
     // best-looking cards in the app, so a search that lands on one should look
     // exactly as it already does rather than being rebuilt from scratch.
     const curated = findCurated([item.name, ...(item.searchTerms ?? [])]);
-    const product = findInCatalog(item);
+    // A curated electronics or furniture card (the iPhones, the fans) is its
+    // own product with its own prices. The generic catalog entry it happens
+    // to resemble ("Unlocked Android Smartphone") must not price it - that
+    // put an iPhone 17 Pro at $357.
+    const catalogHit = findInCatalog(item);
+    const product =
+      curated && catalogHit && NON_GROCERY_CATEGORY_DEPTS.has(departmentOf(catalogHit))
+        ? null
+        : catalogHit;
 
     const id = curated
       ? curated.id
@@ -392,6 +664,10 @@ export function resolveItems(items: AIItem[]): ResolveResult {
 
     const productKey = product ? product.id : slug(item.name);
 
+    // The brand the shopper asked for, if any. Worked out once, then handed to
+    // every offer - which decides for itself what IT is allowed to sell.
+    const wantedBrand = (product?.brand || item.brandHint || "").trim();
+
     let rawOffers: Offer[];
     if (curated?.storeOffers) {
       // A Product-pop defines this product's shops by hand. Those prices were
@@ -400,11 +676,22 @@ export function resolveItems(items: AIItem[]): ResolveResult {
     } else if (product) {
       // Use the product's OWN department, not the AI's guess. Otherwise a
       // mislabelled item can list milk at a hardware store.
-      rawOffers = offersForCatalogProduct(product, departmentOf(product));
+      rawOffers = offersForCatalogProduct(
+        product,
+        departmentOf(product),
+        wantedBrand,
+        Boolean(curated),
+      );
     } else {
       // A curated card's own price is the most trustworthy number we have for
       // it, so it anchors the other shops rather than the model's guess.
-      rawOffers = offersForGeneratedProduct(item, productKey, curated?.price);
+      rawOffers = offersForGeneratedProduct(
+        item,
+        productKey,
+        curated?.price,
+        wantedBrand,
+        Boolean(curated),
+      );
     }
 
     // Keep the shop and price the curated card was designed around, by putting
@@ -412,6 +699,58 @@ export function resolveItems(items: AIItem[]): ResolveResult {
     if (curated && !curated.storeOffers) {
       const seed = seedOfferFor(curated);
       if (seed) rawOffers = [seed, ...rawOffers.filter((o) => o.id !== seed.id)];
+    }
+
+    const variant = variantOf(item, product);
+    const baseDescription = withVariant(curated?.description ?? describe(item, product), variant);
+
+    // A verified photo replaces every older image for this product. Each shop
+    // keeps its own verified packshot when it has one; the rest drop their old
+    // photo so the card falls back to the product's verified one. Copies, not
+    // edits: curated storeOffers are shared module data.
+    const verified = verifiedPhotoFor(product?.id, variant);
+    if (verified && product) {
+      rawOffers = rawOffers.map((o) => {
+        const own = offerPhotoFor(product.id, variant, o.id, wantedBrand);
+        // The label must name what the photo shows: a Great Value packshot
+        // under a "Compliments" label is the mislabelling this database exists
+        // to end.
+        const brand = own?.brand || o.brand;
+        return {
+          ...o,
+          imageSrc: own?.file,
+          brand,
+          isOwnBrand: brand ? findStoreBrand(brand)?.storeIds.includes(o.id) : undefined,
+        };
+      });
+    }
+
+    // A card that IS a shop's own product may only be offered by that shop.
+    //
+    // The eggs card is a photograph of a Great Value carton, and it was being
+    // offered at No Frills - which cannot sell Great Value, because it is
+    // Walmart's. This is different from a shopper ASKING for Great Value: then
+    // the other shops offer their own equivalent, which is useful. Here the
+    // product itself is Walmart's, so there is nothing to substitute.
+    //
+    // Once the product has verified photos, each shop shows its own packshot
+    // (or a national brand's), so the card is no longer one shop's product:
+    // drop the store brand from the title and let every shop offer it.
+    const description =
+      verified && !item.brandHint ? withoutStoreBrand(baseDescription) : baseDescription;
+    const ownedBrand = verified ? null : storeBrandInName(description);
+    if (ownedBrand) {
+      const onlyItsOwn = rawOffers.filter((o) => ownedBrand.storeIds.includes(o.id));
+      // Unless that leaves nothing at all - a card with no shop is worse than
+      // a card at a shop we are unsure about.
+      if (onlyItsOwn.length > 0) rawOffers = onlyItsOwn;
+    }
+
+    // Shops a person has told us do not carry this. See notSoldAt in
+    // lib/catalog/curated.ts.
+    if (curated?.notSoldAt?.length) {
+      const stocked = rawOffers.filter((o) => !curated.notSoldAt!.includes(o.id));
+      if (stocked.length > 0) rawOffers = stocked;
     }
 
     if (rawOffers.length === 0) {
@@ -424,8 +763,8 @@ export function resolveItems(items: AIItem[]): ResolveResult {
     byId.set(id, {
       id,
       rowIds: [...item.rowIds],
-      description: curated?.description ?? describe(item, product),
-      brand: product?.brand || item.brandHint || "",
+      description,
+      brand: wantedBrand,
       category: product?.category || item.category,
       department: item.department,
       packSize: product?.size || item.packSize || "",
@@ -433,9 +772,9 @@ export function resolveItems(items: AIItem[]): ResolveResult {
       // The curated photo and its exact fit, untouched. Nothing else in the
       // pipeline may override these - see attachImages, which skips any
       // product that already has an image.
-      imageSrc: curated?.imageSrc,
-      imageAlt: curated?.imageAlt,
-      imageFit: curated?.imageFit ?? "contain",
+      imageSrc: verified?.file ?? curated?.imageSrc,
+      imageAlt: verified?.productTitle ?? curated?.imageAlt,
+      imageFit: verified ? "contain" : (curated?.imageFit ?? "contain"),
       source: curated ? "curated" : product ? "catalog" : "generated",
       offers,
       quantity: item.quantity,

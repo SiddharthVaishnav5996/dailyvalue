@@ -78,7 +78,8 @@ export async function planWithGroq(userMessage: string): Promise<AIPlan> {
         // JSON mode: guarantees the reply parses as JSON. It does NOT
         // guarantee our field names - that is what parsePlanText is for.
         response_format: { type: "json_object" },
-        temperature: 0.4,
+        // 0 so a repeated question gets a repeated answer - see gemini.ts.
+        temperature: 0,
         // Room to finish.
         //
         // A recipe with a wine pairing is two tables and a dozen items, which
