@@ -403,7 +403,9 @@ export default function OrderPage() {
                 <button
                   type="button"
                   className={styles.backLink}
-                  onClick={() => router.push("/results/products")}
+                  // The chat result is /results — /results/products is the
+                  // product grid, which is a different page with no chat on it.
+                  onClick={() => router.push("/results")}
                 >
                   <Text as="span" variant="mediumBold">
                     Go back to Chat
