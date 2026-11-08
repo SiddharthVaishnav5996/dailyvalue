@@ -38,6 +38,20 @@ export interface ProductCardProps {
   /** Marks the brand with a star, for one the shopper always buys. */
   brandIsFavourite?: boolean;
   /**
+   * A control for choosing between kinds of this product - 2% milk against
+   * skim, large eggs against jumbo. Rendered at the end of the brand line.
+   *
+   * Passed in as a node rather than built from props, because the card has no
+   * business knowing what a variant family is: it is a presentational
+   * component, and every other decision on it arrives the same way. See
+   * components/VariantPicker and data/variants.ts for what actually goes here.
+   *
+   * It shares the brand's line on purpose. That line already reserves exactly
+   * one line-height, so a card with a chooser is no taller than one without,
+   * and a grid row keeps its prices and buttons on the same horizontal lines.
+   */
+  variantControl?: React.ReactNode;
+  /**
    * Reserve exactly this many lines for the description (it also truncates at
    * that many). Short copy then leaves the reserved space empty instead of
    * pulling the rating/price/delivery/button up, so every card in a row keeps
@@ -80,6 +94,7 @@ export function ProductCard({
   description,
   brand,
   brandIsFavourite,
+  variantControl,
   descriptionLines,
   rating,
   reviewCount,
@@ -170,17 +185,25 @@ export function ProductCard({
         </Text>
       </span>
 
-      {brand !== undefined && (
+      {/* The chooser alone is reason enough to draw this line: a card can have
+          a variant to pick and no brand worth printing. */}
+      {(brand !== undefined || variantControl) && (
         <Text as="p" variant="xsmallBold" className={styles.brand}>
-          {brandLine && brandIsFavourite && (
-            <Star
-              size={11}
-              className={styles.brandStar}
-              fill="currentColor"
-              aria-label="A brand you always buy"
-            />
-          )}
-          {brandLine}
+          {/* The brand gives up its width to the chooser rather than the other
+              way round - a truncated "GREAT VALU…" still reads, a truncated
+              control does not work. */}
+          <span className={styles.brandText}>
+            {brandLine && brandIsFavourite && (
+              <Star
+                size={11}
+                className={styles.brandStar}
+                fill="currentColor"
+                aria-label="A brand you always buy"
+              />
+            )}
+            {brandLine}
+          </span>
+          {variantControl}
         </Text>
       )}
 

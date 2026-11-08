@@ -10,9 +10,11 @@ import { AddButton } from "@/components/AddButton/AddButton";
 import { ResultTable, type ResultTableRow } from "@/components/ResultTable/ResultTable";
 import { ProductCard } from "@/components/ProductCard/ProductCard";
 import { ProductPop } from "@/components/ProductPop/ProductPop";
+import { VariantPicker } from "@/components/VariantPicker/VariantPicker";
 import { Text } from "@/components/Text/Text";
 import { useSearch } from "@/lib/search/SearchContext";
 import { useBrandPreferences } from "@/lib/brand/BrandPreferenceContext";
+import { applyVariant } from "@/lib/ui/applyVariant";
 import type { AIItem, Offer, ResolvedProduct } from "@/lib/types";
 import {
   PRODUCT_POP_BY_ID,
@@ -51,7 +53,20 @@ export default function ProductResultsPage() {
   const { isWishlisted, toggleWishlist } = useWishlist();
   const { isPreferred, togglePreferred, preferredFirst } = useBrandPreferences();
 
-  const products = useMemo(() => result?.products ?? [], [result]);
+  /**
+   * Which kind of each product the shopper chose: card id -> member key.
+   *
+   * Empty to begin with, and that is not the same as "nothing chosen" - it
+   * means "whatever the search resolved to", which for "some milk" is the 2%
+   * carton. See data/variants.ts. Deliberately NOT stored: a variant is an
+   * answer to this list, not a standing preference like a favourite brand.
+   */
+  const [variantChoice, setVariantChoice] = useState<Record<string, string>>({});
+
+  const products = useMemo(
+    () => (result?.products ?? []).map((p) => applyVariant(p, variantChoice[p.id])),
+    [result, variantChoice],
+  );
 
   /** Every product's suggested quantity, as the page's opening selection. */
   function openingSelection(list: ResolvedProduct[]): Record<string, number> {
@@ -92,6 +107,11 @@ export default function ProductResultsPage() {
     setBuiltFromProducts(result.products);
     setTables(result.tables);
     setSelection(openingSelection(result.products));
+    // A new list, so the variants chosen for the old one mean nothing. Kept
+    // across a REBUILD, though - that is the same list re-resolved, and
+    // throwing away the shopper's choices would be as rude as resetting
+    // their quantities.
+    setVariantChoice({});
   } else if (result && builtFromProducts !== result.products) {
     const rebuilt = result.products;
     setBuiltFromProducts(rebuilt);
@@ -194,6 +214,61 @@ export default function ProductResultsPage() {
     return ids;
   }, [products, presentIds, selection]);
 
+  /**
+   * The tables as drawn, with any variant the shopper chose written into them.
+   *
+   * Switch the ice cream from cookies-and-cream to strawberry and the card
+   * changes, but the list above it went on saying "Cookies and cream ice
+   * cream" - two different answers to the same question, on the same screen.
+   * The list is what you are buying, so it follows what you chose.
+   *
+   * DERIVED, NOT WRITTEN BACK. The shopper's own `tables` state is left
+   * exactly as the AI wrote it and this view is rebuilt on top, so deleting a
+   * row still edits the real list by the same index and nothing accumulates.
+   *
+   * One consequence worth knowing: once a row has been touched it names the
+   * PRODUCT from then on, even if the shopper switches back. "Cookies and
+   * cream ice cream" returns as "Cookies and Cream Ice Cream 1.5 L" - the
+   * same thing, said the catalog's way rather than the model's. Rows nobody
+   * touched keep the model's wording exactly.
+   *
+   * Only the ITEM column is touched, found by its label rather than its
+   * position: an ingredient table is always CATEGORY / ITEM / QUANTITY, but a
+   * non-grocery table uses whatever columns inform the choice (see
+   * lib/ai/planPrompt.ts). A table with no ITEM column is left alone rather
+   * than guessed at.
+   *
+   * The recipe is untouched by any of this - it lives in `result.recipe` and
+   * keeps the dish as the model wrote it, which is what the PDF prints.
+   */
+  const shownTables = useMemo(() => {
+    const renamed = new Map<string, string>();
+    for (const product of products) {
+      if (!variantChoice[product.id]) continue;
+      for (const rowId of product.rowIds) renamed.set(rowId, product.description);
+    }
+    if (renamed.size === 0) return tables;
+
+    return tables.map((table) => {
+      const itemColumn = table.columns.findIndex(
+        (c) => c.trim().toUpperCase() === "ITEM",
+      );
+      if (itemColumn === -1) return table;
+
+      return {
+        ...table,
+        rows: table.rows.map((row: ResultTableRow) => {
+          const name = renamed.get(row.id);
+          if (!name) return row;
+          return {
+            ...row,
+            cells: row.cells.map((cell, i) => (i === itemColumn ? name : cell)),
+          };
+        }),
+      };
+    });
+  }, [tables, products, variantChoice]);
+
   function deleteRow(tableIndex: number, rowId: string) {
     setTables((prev) =>
       prev.map((table, i) =>
@@ -230,7 +305,14 @@ export default function ProductResultsPage() {
   const activePop: ProductPopData | null = (() => {
     if (!activeProduct) return null;
 
-    const authored = PRODUCT_POP_BY_ID[activeProduct.id];
+    // The hand-authored pop-up describes ONE product - the Philadelphia
+    // Original tub, its five shops, its Optimum points. The moment the shopper
+    // switches the card to the chocolate one, that write-up is describing
+    // something they are no longer looking at, so it stops being the better
+    // answer and the resolved product is used instead.
+    const authored = variantChoice[activeProduct.id]
+      ? undefined
+      : PRODUCT_POP_BY_ID[activeProduct.id];
     if (authored) return authored;
 
     return {
@@ -308,6 +390,19 @@ export default function ProductResultsPage() {
         // Always passed, even when empty, so the grid stays aligned.
         brand={offer.brand ?? ""}
         brandIsFavourite={isPreferred(offer.brand)}
+        // The choice nobody asked about: which milk, which eggs, which flour.
+        // Shown right on the card, so the shopper finds out here rather than
+        // at the checkout. See data/variants.ts.
+        variantControl={
+          product.variantFamily && (
+            <VariantPicker
+              family={product.variantFamily}
+              onSelect={(key) =>
+                setVariantChoice((prev) => ({ ...prev, [product.id]: key }))
+              }
+            />
+          )
+        }
         rating={offer.rating}
         reviewCount={offer.reviewCount}
         price={offer.price}
@@ -373,7 +468,7 @@ export default function ProductResultsPage() {
           </div>
 
           <div className={styles.tables}>
-            {tables.map((table, index) => (
+            {shownTables.map((table, index) => (
               <ResultTable
                 key={table.title}
                 title={table.title}
@@ -405,6 +500,10 @@ export default function ProductResultsPage() {
           selectedOfferId={selectedOffer[activeProduct.id]}
           onSelectOffer={(offerId) =>
             setSelectedOffer((prev) => ({ ...prev, [activeProduct.id]: offerId }))
+          }
+          variantFamily={activeProduct.variantFamily}
+          onSelectVariant={(key) =>
+            setVariantChoice((prev) => ({ ...prev, [activeProduct.id]: key }))
           }
           isPreferredBrand={isPreferred}
           onToggleBrand={togglePreferred}

@@ -164,9 +164,15 @@ const CREAM_CHEESE_POP: ProductPopData = {
     },
     {
       id: "cc-rel-strawberry",
-      storeName: "Home Depot",
-      storeDistanceKm: 1.0,
-      storeLogoSrc: "/stores/home-depot.png",
+      // Was Home Depot, which does not sell cream cheese and is not even a
+      // partner store - harmless while this was one tile in a row of
+      // "alternatives", and no longer harmless now the flavour chooser makes
+      // it a thing you can actually buy. Sobeys instead: a real partner, a
+      // full-line grocer that plausibly stocks a limited edition, and the one
+      // in this pop-up that had nothing to its name yet.
+      storeName: "Sobeys",
+      storeDistanceKm: 4.1,
+      storeLogoSrc: `${LOGO}/Sobeys.png`,
       showDiscount: true,
       discountLabel: "Limited Edition",
       description: "Philadelphia : Strawberry Cream Cheese Product",

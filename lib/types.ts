@@ -224,6 +224,36 @@ export interface Offer {
   cardBadge?: string;
 }
 
+/**
+ * One choice in a variant chooser - skim milk sitting next to 2%.
+ *
+ * It carries a WHOLE resolved product rather than a price and a label,
+ * because switching variant switches everything: the title, the photograph,
+ * the brand, and the price at every shop. Skim milk is not 2% milk with a
+ * different number on it; it is a different product that happens to answer
+ * the same request. Resolving all of them up front is what makes the switch
+ * instant and offline - see data/variants.ts for why that matters.
+ */
+export interface VariantOption {
+  /** Stable key within the family, e.g. "skim-milk" or "butter:unsalted". */
+  key: string;
+  /** Short label for the control, e.g. "Skim". */
+  label: string;
+  /** One line saying when to pick this, e.g. "For baking". */
+  note?: string;
+  /** This member, fully resolved. Never carries a family of its own. */
+  product: ResolvedProduct;
+}
+
+/** The choice a product belongs to, and which way it is currently answered. */
+export interface VariantFamilyInfo {
+  /** What the choice is called, e.g. "Fat content". Heads the dropdown. */
+  label: string;
+  /** The key of the member currently showing. Always one of `members`. */
+  selected: string;
+  members: VariantOption[];
+}
+
 /** An AI item, resolved into something buyable across real stores. */
 export interface ResolvedProduct {
   id: string;
@@ -253,6 +283,15 @@ export interface ResolvedProduct {
   offers: Offer[];
   /** How many to put in the basket. */
   quantity: number;
+  /**
+   * The choice behind this card, when there is one worth showing.
+   *
+   * Present only for the six families in data/variants.ts, and never on a
+   * member inside one - that would nest forever. Absent means there is no
+   * meaningful choice to make, which is true of nearly everything: there is
+   * no second kind of table salt.
+   */
+  variantFamily?: VariantFamilyInfo;
 }
 
 /** The full response returned by POST /api/search. */

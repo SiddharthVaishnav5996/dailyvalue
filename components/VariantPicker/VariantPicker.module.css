@@ -1,0 +1,188 @@
+/*
+ * The variant chooser.
+ *
+ * The TRIGGER carries no fill. It sits on the card's brand line, where a
+ * coloured chip would read as a badge - something being announced - rather
+ * than a control. An outline and a chevron say "press me" without claiming
+ * more of the card than the choice deserves.
+ *
+ * The PANEL does have a surface, because it floats over other content and has
+ * to be readable against whatever happens to be underneath. That is the same
+ * reasoning, and the same white, as .compareDropdown in ProductPop.
+ */
+
+.trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  flex-shrink: 0;
+  background: transparent;
+  color: var(--color-primary);
+  border: 1px solid color-mix(in srgb, var(--color-primary) 35%, transparent);
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  transition:
+    border-color 120ms ease,
+    background 120ms ease;
+}
+
+.trigger:hover {
+  border-color: var(--color-primary);
+  background: var(--color-lavender-surface);
+}
+
+.trigger[aria-expanded="true"] {
+  border-color: var(--color-primary);
+  background: var(--color-lavender-surface);
+}
+
+/*
+ * Chip form, for a card's brand line.
+ *
+ * The line reserves exactly one line-height (.brand in ProductCard.module.css)
+ * and a grid of cards depends on that staying true - one taller card and the
+ * whole row's prices and buttons stop lining up. So the chip is capped at 1lh
+ * and its padding is horizontal only.
+ */
+.triggerChip {
+  max-height: 1lh;
+  padding: 0 4px;
+  border-radius: 5px;
+}
+
+/* Roomier form, for the details modal where there is space to spare. */
+.triggerControl {
+  gap: 4px;
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+
+.panel {
+  position: fixed;
+  /*
+   * Above the modal, not merely above the modal's own dropdown.
+   *
+   * This read z-index 60 - comfortably over the price comparison's 41 - and
+   * that was right while the panel was rendered INSIDE the modal, where it
+   * only had to beat its siblings. Portalling it to <body> moved it out of
+   * that stacking context and put it up against the backdrop itself, which
+   * is z-index 1000. 60 lost, so inside the pop-up the panel was painted
+   * behind the dark overlay and no click could reach it.
+   *
+   * 1100 clears both this modal and components/Modal (also 1000).
+   */
+  z-index: 1100;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px;
+  background: var(--color-white);
+  border-radius: 10px;
+  box-shadow: 0 14px 44px rgb(0 0 0 / 22%);
+  /* A list taller than the room available scrolls inside itself, and keeps the
+     wheel rather than passing it on to the page behind. */
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.heading {
+  margin: 2px 6px 6px;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 6px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  text-align: left;
+  cursor: pointer;
+  transition: background 120ms ease;
+}
+
+.row:hover {
+  background: var(--color-lavender-surface);
+}
+
+.rowChosen {
+  background: var(--color-lavender-surface);
+}
+
+.thumb {
+  position: relative;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 6px;
+  color: var(--color-text-muted);
+  overflow: hidden;
+}
+
+/*
+ * "contain", not "cover".
+ *
+ * These are packshots - a carton, a bag, a tub - and cropping one to fill a
+ * square is how you end up with a picture of the middle of a milk carton. The
+ * whole pack has to be visible for the choice to mean anything.
+ */
+.thumbImg {
+  object-fit: contain;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  /* Lets the label truncate instead of shoving the price off the row. */
+  min-width: 0;
+  flex: 1;
+}
+
+/*
+ * The label wraps rather than truncating.
+ *
+ * This control exists to say exactly which thing you are getting, so a row
+ * reading "Granny S…" defeats the whole point of it. Apple varieties are the
+ * case that proved it: at a phone width the text column is about 80px and
+ * "Granny Smith" wants 89. A row that runs to two lines is cheaper than a row
+ * that cannot be read.
+ *
+ * The note below it still truncates - that one is supplementary, and letting
+ * both wrap made the rows tall enough to lose the list.
+ */
+.label {
+  color: var(--color-text);
+  overflow-wrap: anywhere;
+}
+
+.note {
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.price {
+  flex-shrink: 0;
+  color: var(--color-primary);
+}
+
+/* Reserved whether or not it holds a tick, so every label starts and every
+   price ends on the same vertical line. */
+.tick {
+  flex-shrink: 0;
+  width: 14px;
+  display: grid;
+  place-items: center;
+  color: var(--color-primary);
+}

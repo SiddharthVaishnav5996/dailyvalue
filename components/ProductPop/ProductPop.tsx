@@ -6,8 +6,10 @@ import { ChevronDown, Image as ImageIcon, Star, X } from "lucide-react";
 import { Text } from "@/components/Text/Text";
 import { StoreName } from "@/components/StoreName/StoreName";
 import { ProductCard } from "@/components/ProductCard/ProductCard";
+import { VariantPicker } from "@/components/VariantPicker/VariantPicker";
 import { formatPrice } from "@/lib/format";
 import { useScrollLock } from "@/lib/ui/useScrollLock";
+import type { VariantFamilyInfo } from "@/lib/types";
 import type { ProductPopData } from "@/data/productPop";
 import styles from "./ProductPop.module.css";
 
@@ -16,6 +18,16 @@ export interface ProductPopProps {
   /** Currently selected store offer id (defaults to the first offer). */
   selectedOfferId?: string;
   onSelectOffer?: (offerId: string) => void;
+  /**
+   * The kind-of-thing choice behind this product, when it has one: 2% milk
+   * against skim, salted butter against unsalted.
+   *
+   * Separate from `pop` rather than part of ProductPopData, because that type
+   * describes the hand-authored pop-ups in data/productPop.ts and those have
+   * no variants to offer. See data/variants.ts.
+   */
+  variantFamily?: VariantFamilyInfo;
+  onSelectVariant?: (key: string) => void;
   /** Does the shopper always buy this brand? */
   isPreferredBrand?: (brand: string | undefined) => boolean;
   /** Mark a brand as one they always buy, or stop. */
@@ -57,6 +69,8 @@ export function ProductPop({
   pop,
   selectedOfferId,
   onSelectOffer,
+  variantFamily,
+  onSelectVariant,
   isPreferredBrand,
   onToggleBrand,
   quantities,
@@ -250,6 +264,25 @@ export function ProductPop({
                     {pop.points}
                   </Text>
                 )}
+
+                {/* Which kind of this product arrived. Sits directly under the
+                    name because that is what it qualifies - "Milk 2 L" is not
+                    a complete answer on its own. The panel is told about the
+                    scroller so it closes rather than hovering over the modal
+                    after its button has scrolled away. */}
+                {variantFamily && onSelectVariant && (
+                  <div className={styles.variantRow}>
+                    <Text as="span" variant="xsmallBold" className={styles.variantLabel}>
+                      {variantFamily.label}
+                    </Text>
+                    <VariantPicker
+                      family={variantFamily}
+                      onSelect={onSelectVariant}
+                      scrollerRef={scrollerRef}
+                      size="control"
+                    />
+                  </div>
+                )}
                 <StoreName
                   name={selected.storeName}
                   distanceKm={selected.storeDistanceKm}
@@ -399,7 +432,22 @@ export function ProductPop({
             </button>
           </div>
 
-          {/* 3. Alternatives — 3 per row; ADD drops them into the cart */}
+          {/*
+            3. Alternatives — 3 per row; ADD drops them into the cart.
+
+            Hidden entirely once the product has a chooser, because the two
+            were answering the same question in two different ways. The cream
+            cheese showed a chocolate tub and a strawberry tub down here as
+            "alternatives" while the chooser above offered the same switch: one
+            of them had to go, and the row is the worse of the pair. It cannot
+            say which one you currently have, it pushes the real choice below
+            the fold, and adding from it puts a SECOND cream cheese in the
+            basket rather than changing the one you came for.
+
+            The cards themselves are not lost - the chooser is built from them.
+            See data/variants.ts.
+          */}
+          {!variantFamily && (
           <div className={styles.related}>
             {pop.related.map(({ id, ...cardProps }) => {
               const quantity = quantities[id] ?? 0;
@@ -417,6 +465,7 @@ export function ProductPop({
               );
             })}
           </div>
+          )}
         </div>
       </div>
     </div>

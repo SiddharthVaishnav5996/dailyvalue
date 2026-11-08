@@ -207,7 +207,18 @@ export const STORES: Store[] = [
     priceIndex: 1.0,
     // Ontario retails spirits and most wine through the LCBO only, so this is
     // the one store that carries `alcohol` on its own.
-    departments: ["alcohol", "beverages"],
+    //
+    // ALCOHOL AND NOTHING ELSE. It used to carry `beverages` too, which reads
+    // reasonable - an LCBO does sell mixers and soda - and was quietly wrong:
+    // the catalog files coffee, juice and tea under `beverages`, so the
+    // department gate had the LCBO offering ground coffee, and at $12.49 it
+    // was the first shop on the card. A liquor store appearing at the top of
+    // a grocery list is the sort of thing that makes the whole comparison
+    // look made up.
+    //
+    // Nothing is stranded by this: every supermarket already carries
+    // `beverages` (see SUPERMARKET above), so the mixers keep their shops.
+    departments: ["alcohol"],
   },
   {
     id: "canadiantire",

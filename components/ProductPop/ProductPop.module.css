@@ -285,3 +285,23 @@
   white-space: nowrap;
   color: var(--color-text);
 }
+
+/*
+ * The variant chooser's row, under the product name.
+ *
+ * The family's own name sits beside the control rather than inside it, because
+ * there is room here that a card does not have: "Fat content  2% v" reads as a
+ * labelled field, which is what it is.
+ */
+.variantRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.variantLabel {
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}

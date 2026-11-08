@@ -186,11 +186,27 @@
 
    min-height keeps one line of space even when it is empty, so a product with
    no brand does not sit a line higher than the ones beside it. */
+/*
+ * The brand, and - when the product has one - the variant chooser beside it.
+ *
+ * A flex row rather than a run of text, so the chooser keeps its full width
+ * while a long brand name truncates. `min-height: 1lh` is what holds a grid of
+ * cards on the same horizontal lines, and it still does: the chooser is capped
+ * at the same height, so this line never grows. See .triggerChip in
+ * components/VariantPicker/VariantPicker.module.css.
+ */
 .brand {
+  display: flex;
+  align-items: center;
+  gap: 6px;
   min-height: 1lh;
   color: var(--color-primary);
   text-transform: uppercase;
   letter-spacing: 0.04em;
+}
+
+.brandText {
+  min-width: 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
