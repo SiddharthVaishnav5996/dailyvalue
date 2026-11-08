@@ -250,7 +250,9 @@ export default function StyleguidePage() {
         <Text variant="smallRegular" className={styles.muted}>
           Two layouts, each with the discount pill on and off. Heights are
           intentionally equal within a layout — hiding the pill leaves its slot
-          reserved so cards stay aligned in a row.
+          reserved so cards stay aligned in a row. The third group adds the
+          variant chooser, which rides the brand line without changing the
+          card&rsquo;s height.
         </Text>
         <ProductCardDemo />
       </section>
