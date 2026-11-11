@@ -115,14 +115,109 @@ export interface VariantFamily {
 
 export const VARIANT_FAMILIES: VariantFamily[] = [
   {
-    id: "milk-fat",
+    /*
+     * Relabelled from "Fat content" to "Milk", and widened.
+     *
+     * Fat content was the honest label for four dairy cartons, and it quietly
+     * made the chooser useless to anyone who drinks oat milk: the catalog has
+     * almond, oat, soy and the rest, and somebody typing "milk" saw none of
+     * them. Skim and oat are not points on one scale, so the old label could
+     * not have stretched to cover both - the label had to go first.
+     *
+     * Dairy first, lightest to richest, then the ones that are milk by use
+     * rather than by composition. A shopper reads down until they recognise
+     * what they drink.
+     */
+    id: "milk-type",
     base: "milk",
-    label: "Fat content",
+    label: "Milk",
     members: [
       { id: "skim-milk", label: "Skim", note: "No fat" },
       { id: "1-milk", label: "1%", note: "Lighter" },
       { id: "milk", label: "2%", note: "The usual" },
       { id: "whole-milk", label: "Whole", note: "Richest - for custards" },
+      { id: "lactose-free-milk", label: "Lactose free", note: "Dairy, without the lactose" },
+      { id: "chocolate-milk", label: "Chocolate" },
+      { id: "oat-milk", label: "Oat", note: "Plant based - froths well" },
+      { id: "almond-milk", label: "Almond", note: "Plant based - thin, nutty" },
+      { id: "soy-milk", label: "Soy", note: "Plant based - most protein" },
+      { id: "coconut-milk-beverage", label: "Coconut", note: "Plant based - for drinking" },
+    ],
+  },
+  {
+    // The vaguest word a shopper types. "Add cheese" is an instruction with a
+    // dozen right answers and no default worth guessing at - parmesan instead
+    // of mozzarella is a different dinner, not a different brand.
+    id: "cheese-type",
+    base: "cheddar",
+    label: "Cheese",
+    members: [
+      { id: "cheddar", label: "Cheddar", note: "The all-rounder" },
+      { id: "marble-cheese", label: "Marble" },
+      { id: "mozzarella-cheese", label: "Mozzarella", note: "Melts - for pizza" },
+      { id: "swiss-cheese", label: "Swiss" },
+      { id: "parmesan-cheese", label: "Parmesan", note: "Hard - for grating" },
+      { id: "feta-cheese", label: "Feta", note: "Salty - for salads" },
+      { id: "goat-cheese", label: "Goat", note: "Tangy, soft" },
+      { id: "brie-cheese", label: "Brie", note: "For a cheese board" },
+      { id: "ricotta-cheese", label: "Ricotta", note: "For lasagne and baking" },
+      { id: "cottage-cheese", label: "Cottage" },
+    ],
+  },
+  {
+    // A recipe that says "red onion" means it. Raw red in a salad and yellow
+    // softened in a pan are not the same ingredient.
+    id: "onion-type",
+    base: "onion",
+    label: "Onion",
+    members: [
+      { id: "onion", label: "Yellow", note: "The cooking onion" },
+      { id: "red-onion", label: "Red", note: "Milder - good raw" },
+      { id: "white-onion", label: "White", note: "Sharper" },
+      { id: "vidalia-sweet-onion", label: "Sweet", note: "Vidalia - for rings" },
+      { id: "green-onion", label: "Green", note: "Scallions - a garnish" },
+      { id: "pearl-onions", label: "Pearl", note: "Small, for stews" },
+    ],
+  },
+  {
+    // A portobello is a burger. White mushrooms are a sauce.
+    id: "mushroom-type",
+    base: "white-mushrooms",
+    label: "Mushroom",
+    members: [
+      { id: "white-mushrooms", label: "White", note: "The everyday one" },
+      { id: "cremini-mushrooms", label: "Cremini", note: "Browner, deeper flavour" },
+      { id: "portobello-mushrooms", label: "Portobello", note: "Big - grill like a steak" },
+      { id: "shiitake-mushrooms", label: "Shiitake", note: "For stir-fries and broth" },
+      { id: "oyster-mushrooms", label: "Oyster", note: "Delicate, quick to cook" },
+      { id: "enoki-mushrooms", label: "Enoki", note: "Thin, for soups" },
+    ],
+  },
+  {
+    // Alfredo instead of tomato is not a substitution, it is a different meal.
+    id: "pasta-sauce-type",
+    base: "tomato-sauce",
+    label: "Sauce",
+    members: [
+      { id: "tomato-sauce", label: "Tomato", note: "The default red sauce" },
+      { id: "arrabbiata-sauce", label: "Arrabbiata", note: "Tomato, with chilli" },
+      { id: "rose-sauce", label: "Rosé", note: "Tomato and cream" },
+      { id: "vodka-sauce", label: "Vodka" },
+      { id: "alfredo-sauce", label: "Alfredo", note: "White, creamy" },
+      { id: "pesto-sauce", label: "Pesto", note: "Basil and oil - no tomato" },
+    ],
+  },
+  {
+    id: "soup-type",
+    base: "tomato-soup",
+    label: "Soup",
+    members: [
+      { id: "tomato-soup", label: "Tomato" },
+      { id: "chicken-noodle-soup", label: "Chicken noodle" },
+      { id: "vegetable-soup", label: "Vegetable" },
+      { id: "cream-of-mushroom-soup", label: "Cream of mushroom", note: "Also a recipe base" },
+      { id: "minestrone-soup", label: "Minestrone" },
+      { id: "split-pea-soup", label: "Split pea" },
     ],
   },
   {

@@ -45,6 +45,16 @@ export const BARE_WORD_PRODUCT: Record<string, string> = {
   // "fish" reached Fish Flakes - aquarium fish FOOD - which is the same
   // failure as the steamer: a confident answer from the wrong aisle.
   fish: "salmon",
+
+  // "nuts" reached Donuts, for the same reason "tea" reached a steamer: the
+  // letters n-u-t-s sit inside "do-nuts" and string similarity cannot tell
+  // the difference between a word and a fragment of one.
+  nuts: "mixed-nuts",
+
+  // Nothing in the catalog is named plain "juice" - every juice is an orange
+  // or an apple one - so the word fell through to a generated card with an
+  // invented price. Orange is what an unqualified "juice" means.
+  juice: "orange-juice",
 };
 
 /** The product a bare word means, or null. */
