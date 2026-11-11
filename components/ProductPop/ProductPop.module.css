@@ -305,3 +305,22 @@
   text-transform: uppercase;
   letter-spacing: 0.04em;
 }
+
+/*
+ * The price when there is nothing to compare it against.
+ *
+ * Same box as .priceDropdown so the header does not shift when the shopper
+ * switches between a flavour sold everywhere and one sold at a single shop -
+ * but centred rather than spaced, because there is no chevron to sit at the
+ * far end, and with no border, cursor or hover: nothing here is pressable.
+ */
+.priceOnly {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 126px;
+  height: 42px;
+  padding: 0 16px;
+  color: var(--color-text);
+}

@@ -320,19 +320,42 @@ export function ProductPop({
               </div>
 
               <div className={styles.priceWrap}>
-                <button
-                  type="button"
-                  ref={priceButtonRef}
-                  className={styles.priceDropdown}
-                  onClick={() => alternatives.length > 0 && setShowCompare((s) => !s)}
-                  aria-expanded={showCompare}
-                  aria-label="Compare price across nearby stores"
-                >
-                  <Text as="span" variant="mediumBold">
-                    {formatPrice(selected.price)}
-                  </Text>
-                  <ChevronDown size={20} aria-hidden="true" />
-                </button>
+                {/*
+                  A chevron is a promise that pressing will do something.
+
+                  This used to be a button whatever the data said, with the
+                  click quietly guarded by `alternatives.length > 0` - so a
+                  product sold at exactly one shop showed a pressable price
+                  that did nothing at all. It went unnoticed until the cream
+                  cheese flavours arrived: chocolate and strawberry are
+                  limited editions carried by one shop each, so three of the
+                  four flavours had a dead control.
+
+                  The honest fix is not to find them more shops. It is to stop
+                  offering a comparison when there is nothing to compare: one
+                  shop means a plain price, no chevron, nothing to press.
+                */}
+                {alternatives.length > 0 ? (
+                  <button
+                    type="button"
+                    ref={priceButtonRef}
+                    className={styles.priceDropdown}
+                    onClick={() => setShowCompare((s) => !s)}
+                    aria-expanded={showCompare}
+                    aria-label="Compare price across nearby stores"
+                  >
+                    <Text as="span" variant="mediumBold">
+                      {formatPrice(selected.price)}
+                    </Text>
+                    <ChevronDown size={20} aria-hidden="true" />
+                  </button>
+                ) : (
+                  <div className={styles.priceOnly}>
+                    <Text as="span" variant="mediumBold">
+                      {formatPrice(selected.price)}
+                    </Text>
+                  </div>
+                )}
 
                 {showCompare && alternatives.length > 0 && placement && (
                   <div

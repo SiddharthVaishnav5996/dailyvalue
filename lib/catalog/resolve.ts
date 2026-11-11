@@ -26,7 +26,7 @@ import { PRODUCT_POP_BY_ID, type RelatedProduct } from "@/data/productPop";
 import { bareWordProductId } from "@/data/bareWords";
 import { brandPhotoFor } from "@/lib/catalog/brandPhotos";
 import { itemPhotoFor } from "@/lib/catalog/itemPhotos";
-import { offerPhotoFor, verifiedPhotoFor } from "@/lib/catalog/imageDb";
+import { isRetailerBrand, offerPhotoFor, verifiedPhotoFor } from "@/lib/catalog/imageDb";
 import {
   originalPriceAt,
   priceAt,
@@ -939,6 +939,42 @@ function buildFromCard(cardId: string, item: AIItem): ResolvedProduct | null {
     }
   }
 
+  /*
+   * How many shops carry this card, and why it is not always one.
+   *
+   * These cards each name a single shop, and that was taken at face value at
+   * first: one card, one offer. It is wrong for most of them. The shop on the
+   * card is where the designer PHOTOGRAPHED the product, not a claim that
+   * nobody else sells it - and Philadelphia is a national brand, on every
+   * supermarket shelf in the country. Chocolate and strawberry cream cheese
+   * are limited editions of a national brand, not corner-shop exclusives.
+   *
+   * So the brand decides, using the test this project already owns:
+   *
+   *   NATIONAL brand   - Philadelphia, Lactantia, Dempster's. Priced across
+   *                      every shop in the department, like any other product.
+   *   RETAILER's brand - Great Value, No Name, Selection. Genuinely one shop,
+   *                      because the brand IS that shop. Walmart's own tub
+   *                      cannot be bought at Metro at any price.
+   *
+   * The designer's own shop and price are kept exactly as written and lead the
+   * list; the rest are priced from that number as the anchor, so the real
+   * figure is the one everything else is derived from.
+   */
+  const anchor = [offer];
+  const spreadsEverywhere = Boolean(brand) && !isRetailerBrand(brand);
+
+  const offers = spreadsEverywhere
+    ? rankOffers([
+        ...anchor,
+        ...offersForGeneratedProduct(item, `card-${card.id}`, card.price, brand, true)
+          .filter((o) => o.id !== offer.id)
+          // A national brand is the same tub wherever it is bought, so every
+          // shop shows that brand and none of them owns it.
+          .map((o) => ({ ...o, brand, isOwnBrand: false })),
+      ])
+    : anchor;
+
   return {
     id: `card-${card.id}`,
     rowIds: [...item.rowIds],
@@ -954,7 +990,7 @@ function buildFromCard(cardId: string, item: AIItem): ResolvedProduct | null {
     // Hand-photographed and hand-written, which is exactly what "curated"
     // means everywhere else in this file.
     source: "curated",
-    offers: [offer],
+    offers,
     quantity: item.quantity,
   };
 }
