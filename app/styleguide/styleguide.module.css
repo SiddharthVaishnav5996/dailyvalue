@@ -50,7 +50,9 @@
 }
 
 .muted {
-  color: #94a3b8;
+  /* Design-system muted grey (5.3:1 on white). The old hard-coded #94a3b8
+     was 2.6:1 and failed WCAG AA. */
+  color: var(--color-text-muted);
 }
 
 /* --- Color swatches --- */

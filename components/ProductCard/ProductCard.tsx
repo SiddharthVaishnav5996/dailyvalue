@@ -21,7 +21,11 @@ export interface ProductCardProps {
   /** Wishlist heart, top-right of the image. Solid when saved, outline when not. */
   isWishlisted?: boolean;
   onToggleWishlist?: () => void;
-  /** Figma "Show Discount" boolean — hides the pill and closes the gap it left. */
+  /**
+   * Figma "Show Discount" boolean. When false the pill is hidden but its slot
+   * stays reserved (visibility: hidden, aria-hidden), so price, rating and the
+   * ADD button sit on the same lines as cards that do show a discount.
+   */
   showDiscount?: boolean;
   discountLabel?: string;
   description: string;

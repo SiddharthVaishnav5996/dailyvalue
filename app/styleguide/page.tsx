@@ -41,7 +41,7 @@ const COLORS: { name: string; hex: string; rgb: string; cls: string }[] = [
   { name: "Primary hover (Add btn)", hex: "#2E2954", rgb: "46 41 84", cls: "primaryHover" },
   { name: "Footer", hex: "#544D85", rgb: "84 77 133", cls: "footerBg" },
   { name: "White / footer text", hex: "#FFFFFF", rgb: "255 255 255", cls: "white" },
-  { name: "Green bright", hex: "#00D207", rgb: "0 210 7", cls: "greenBright" },
+  { name: "Green bright", hex: "#1A7F37", rgb: "26 127 55", cls: "greenBright" },
   { name: "Green soft", hex: "#DBFFDC", rgb: "219 255 220", cls: "greenSoft" },
   { name: "Dairy", hex: "#ADE7F5", rgb: "173 231 245", cls: "catDairy" },
   { name: "Electronics", hex: "#D7CECE", rgb: "215 206 206", cls: "catElectronics" },

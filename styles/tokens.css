@@ -74,13 +74,17 @@
   /* ---- Base ---- */
   --color-white: #ffffff;
   --color-text: #000000;
-  --color-text-muted: #9b9b9b;
+  --color-text-muted: #6b6b6b;     /* rgb(107, 107, 107) — 5.3:1 on white (WCAG AA).
+                                      Was #9b9b9b at 2.8:1; darkened in the Figma
+                                      accessibility audit. */
   --color-disabled: #dadada;       /* rgb(218, 218, 218) — pending / not-yet-reached */
   --color-disabled-text: #6f6f6f;  /* rgb(111, 111, 111) — label on --color-disabled;
                                       --color-text-muted is too faint to read on it */
 
   /* ---- Accent greens (used ad hoc, e.g. deals / savings highlights) ---- */
-  --color-green-bright: #00d207;   /* rgb(0, 210, 7) */
+  --color-green-bright: #1a7f37;   /* rgb(26, 127, 55) — 5.1:1 on white (WCAG AA).
+                                      Was #00d207 at 2.1:1; darkened in the Figma
+                                      accessibility audit. */
   --color-green-soft: #dbffdc;     /* rgb(219, 255, 220) */
 
   /* ---- Category selector — hover tints ---- */
@@ -96,7 +100,9 @@
   --color-rating-empty: #c8c8c8;  /* rgb(200, 200, 200) — empty/outline star */
 
   /* ---- Product card ---- */
-  --color-discount: #ff0606;      /* rgb(255, 6, 6) — "Last chance" pill */
+  --color-discount: #d10000;      /* rgb(209, 0, 0) — "Last chance" pill; white text
+                                     on it is 5.7:1 (WCAG AA). Was #ff0606 at 4.0:1;
+                                     darkened in the Figma accessibility audit. */
   --color-review-link: #03e6ff;   /* rgb(3, 230, 255) — review count link */
 
   /* ---- Muted lavender surface ----
