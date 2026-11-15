@@ -16,7 +16,7 @@ import {
 import { Header } from "@/components/Header/Header";
 import { Footer } from "@/components/Footer/Footer";
 import { useWishlist } from "@/components/Wishlist/WishlistContext";
-import { useCart } from "@/components/Cart/CartContext";
+import { useCart, type CartItem } from "@/components/Cart/CartContext";
 import { Text } from "@/components/Text/Text";
 import { AddButton } from "@/components/AddButton/AddButton";
 import { ProductCard } from "@/components/ProductCard/ProductCard";
@@ -109,10 +109,24 @@ export default function OrderPage() {
    * dropdown rather than showing an empty one.
    */
   const offersFor = useCallback(
-    (id: string): StoreOffer[] | undefined => {
-      const live = result?.products.find((p) => p.id === id)?.offers;
-      if (live && live.length > 1) return live;
-      return PRODUCT_POP_BY_ID[id]?.storeOffers;
+    (item: CartItem): StoreOffer[] | undefined => {
+      const live = result?.products.find((p) => p.id === item.id);
+
+      // A card whose kind was switched on the results page (1% milk instead of
+      // the 2% the search chose) keeps the card's id but carries the chosen
+      // member's product, while the search result still holds the default.
+      // The line's name tells them apart. Pricing a 1% carton from the 2%
+      // carton's shops would be wrong, so a switched line uses its member's
+      // own offers - or none, which leaves the line's own store and price.
+      if (live && live.description !== item.name) {
+        const bought = live.variantFamily?.members.find(
+          (m) => m.product.description === item.name,
+        )?.product;
+        return bought && bought.offers.length > 1 ? bought.offers : undefined;
+      }
+
+      if (live && live.offers.length > 1) return live.offers;
+      return PRODUCT_POP_BY_ID[item.id]?.storeOffers;
     },
     [result],
   );
@@ -129,12 +143,25 @@ export default function OrderPage() {
     return product?.unit || undefined;
   }, []);
 
-  // The store offer currently chosen for a cart line, or its default first one.
+  /*
+   * The store offer shown for a cart line: one picked on this page, else the
+   * store the line was added from, else the first.
+   *
+   * The middle step matters. The shopper may already have switched store in
+   * the results page's pop-up, and that choice is saved on the cart line.
+   * Falling straight back to the first (cheapest-ranked) offer here quietly
+   * undid it - the checkout showed, and charged, a shop they had moved away
+   * from.
+   */
   const selectedOfferFor = useCallback(
-    (id: string): StoreOffer | undefined => {
-      const offers = offersFor(id);
+    (item: CartItem): StoreOffer | undefined => {
+      const offers = offersFor(item);
       if (!offers) return undefined;
-      return offers.find((o) => o.id === selectedOffer[id]) ?? offers[0];
+      return (
+        offers.find((o) => o.id === selectedOffer[item.id]) ??
+        offers.find((o) => o.storeName === item.storeName) ??
+        offers[0]
+      );
     },
     [offersFor, selectedOffer],
   );
@@ -151,7 +178,7 @@ export default function OrderPage() {
   // has one); total then layers on the fixed delivery/tax and the promo credit.
   const subtotal = useMemo(() => {
     const cart = items.reduce(
-      (sum, i) => sum + (selectedOfferFor(i.id)?.price ?? i.price) * i.quantity,
+      (sum, i) => sum + (selectedOfferFor(i)?.price ?? i.price) * i.quantity,
       0,
     );
     return Math.round(cart * 100) / 100;
@@ -226,7 +253,7 @@ export default function OrderPage() {
                     </div>
                   ) : (
                     items.map((item) => {
-                      const offer = selectedOfferFor(item.id);
+                      const offer = selectedOfferFor(item);
                       return (
                         <CartLineItem
                           key={item.id}
@@ -245,8 +272,8 @@ export default function OrderPage() {
                           onAdd={() => increment(item.id)}
                           onIncrement={() => increment(item.id)}
                           onDecrement={() => decrement(item.id)}
-                          storeOffers={offersFor(item.id)}
-                          selectedOfferId={selectedOffer[item.id]}
+                          storeOffers={offersFor(item)}
+                          selectedOfferId={offer?.id}
                           onSelectOffer={(offerId) =>
                             setSelectedOffer((prev) => ({ ...prev, [item.id]: offerId }))
                           }
