@@ -46,3 +46,10 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+/* Where RouteFocus puts focus after a page change: the page's heading, or its
+   <main>. A landing point for the keyboard and screen readers, not a control,
+   so it gets no focus ring. */
+[data-route-focus]:focus {
+  outline: none;
+}

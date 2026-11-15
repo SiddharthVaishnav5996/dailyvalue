@@ -49,3 +49,10 @@
     animation: none;
   }
 }
+
+/* Focus is moved onto the pop-up itself when it opens (lib/ui/useDialogFocus)
+   so a screen reader announces it. It is not a control, so no ring: the
+   next Tab lands on its first button, which shows the usual one. */
+.card:focus {
+  outline: none;
+}

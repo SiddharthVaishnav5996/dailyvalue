@@ -83,3 +83,10 @@
   gap: 12px;
   margin-top: 16px;
 }
+
+/* Focus is moved onto the pop-up itself when it opens (lib/ui/useDialogFocus)
+   so a screen reader announces it. It is not a control, so no ring: the
+   next Tab lands on its first button, which shows the usual one. */
+.dropdown:focus {
+  outline: none;
+}

@@ -1,7 +1,8 @@
 "use client";
 
-import { useEffect, type ReactNode } from "react";
+import { useEffect, useRef, type ReactNode } from "react";
 import { Text } from "@/components/Text/Text";
+import { useDialogFocus } from "@/lib/ui/useDialogFocus";
 import styles from "./ItemListPopup.module.css";
 
 export interface ItemListPopupProps {
@@ -36,6 +37,11 @@ export function ItemListPopup({
   children,
   footer,
 }: ItemListPopupProps) {
+  // Focus moves in on open and back to the header icon on close. No trap: this
+  // is a dropdown beside the page, not a modal over it.
+  const dropdownRef = useRef<HTMLDivElement>(null);
+  useDialogFocus(dropdownRef, { trap: false });
+
   useEffect(() => {
     function handleKey(e: KeyboardEvent) {
       if (e.key === "Escape") onClose();
@@ -47,7 +53,7 @@ export function ItemListPopup({
   return (
     <>
       <div className={styles.catcher} onClick={onClose} role="presentation" />
-      <div className={styles.dropdown} role="dialog" aria-label={title}>
+      <div ref={dropdownRef} className={styles.dropdown} role="dialog" aria-label={title}>
         <div className={styles.head}>
           <Text as="h2" variant="heading6">
             {title}

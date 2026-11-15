@@ -171,6 +171,9 @@ export function QuickSearchResults({ query }: QuickSearchResultsProps) {
                 <span className={styles.addCell}>
                   <AddButton
                     iconOnly
+                    // The same milk is listed once per shop, so the shop is
+                    // part of what tells these buttons apart.
+                    itemName={`${row.name} from ${row.storeName}`}
                     quantity={quantity}
                     onAdd={() =>
                       addItem({

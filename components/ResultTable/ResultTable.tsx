@@ -81,6 +81,13 @@ export function ResultTable({
   // to a 5-track grid — which put a wide void between Quantity and delete.
   const contentColumns = columns.length;
 
+  // The column that names the thing on each row, for the delete button's
+  // label. Not simply the first: a grocery table leads with Category, and
+  // naming the buttons after it gave two buttons both called "Remove Dairy".
+  const nameColumn = columns.findIndex((c) =>
+    /^(item|product|ingredient|name|wine)\b/i.test(c.trim()),
+  );
+
   return (
     <section
       className={[styles.table, className].filter(Boolean).join(" ")}
@@ -116,7 +123,10 @@ export function ResultTable({
             previous !== undefined &&
             toCells(previous.cells, contentColumns)[0] === cells[0];
           const describes =
-            cells[groupFirstColumn ? 1 : 0] || cells.find(Boolean) || "row";
+            (nameColumn >= 0 && cells[nameColumn]) ||
+            cells[groupFirstColumn ? 1 : 0] ||
+            cells.find(Boolean) ||
+            "row";
           const removed = mutedRowIds?.includes(row.id) ?? false;
 
           return (

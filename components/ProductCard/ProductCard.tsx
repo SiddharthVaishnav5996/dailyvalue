@@ -75,6 +75,14 @@ export interface ProductCardProps {
   onReviewClick?: () => void;
   onExpandDelivery?: () => void;
   /**
+   * Accessible name for the chevron beside the delivery line. Defaults to
+   * "More delivery options for <product>". Override it when the chevron does
+   * something else - on the search results it opens the product's details and
+   * store prices, and a keyboard user deciding whether to press it should
+   * hear that, not a promise about delivery.
+   */
+  expandLabel?: string;
+  /**
    * Click anywhere on the card — except its own controls (heart, ADD/stepper,
    * chevron, reviews) — e.g. to open a details pop-up. When set, the card also
    * shows a pointer cursor.
@@ -111,6 +119,7 @@ export function ProductCard({
   onDecrement,
   onReviewClick,
   onExpandDelivery,
+  expandLabel,
   onCardClick,
   className,
 }: ProductCardProps) {
@@ -146,7 +155,12 @@ export function ProductCard({
         type="button"
         className={styles.wishlistBtn}
         onClick={onToggleWishlist}
-        aria-label={isWishlisted ? "Remove from wishlist" : "Add to wishlist"}
+        // Every card has one of these, so each names its own product.
+        aria-label={
+          isWishlisted
+            ? `Remove ${description} from wishlist`
+            : `Add ${description} to wishlist`
+        }
         aria-pressed={isWishlisted}
       >
         <Heart
@@ -237,7 +251,7 @@ export function ProductCard({
           type="button"
           className={styles.expandBtn}
           onClick={onExpandDelivery}
-          aria-label="More delivery options"
+          aria-label={expandLabel ?? `More delivery options for ${description}`}
         >
           <ChevronDown size={16} aria-hidden="true" />
         </button>
@@ -245,7 +259,13 @@ export function ProductCard({
 
       <div className={styles.ratingRow}>
         <StarRating rating={rating} size={16} />
-        <button type="button" className={styles.reviewLink} onClick={onReviewClick}>
+        <button
+          type="button"
+          className={styles.reviewLink}
+          onClick={onReviewClick}
+          // Starts with the visible "14 Reviews", then says whose.
+          aria-label={`${reviewCount} Reviews of ${description}`}
+        >
           <Text as="span" variant="smallRegular">
             {reviewCount} Reviews
           </Text>
@@ -277,6 +297,7 @@ export function ProductCard({
         </div>
 
         <AddButton
+          itemName={description}
           quantity={quantity}
           onAdd={onAdd}
           onIncrement={onIncrement}

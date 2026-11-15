@@ -418,6 +418,14 @@ export default function ProductResultsPage() {
         onExpandDelivery={
           hasDetails(product) ? () => setPopupProductId(product.id) : undefined
         }
+        // The card itself opens the same pop-up on a click, but a card is not
+        // a control a keyboard can reach. This chevron is the keyboard's way
+        // in, so it is named for what it really opens.
+        expandLabel={
+          hasDetails(product)
+            ? `Details and store prices for ${product.description}`
+            : undefined
+        }
         onCardClick={hasDetails(product) ? () => setPopupProductId(product.id) : undefined}
       />
     );

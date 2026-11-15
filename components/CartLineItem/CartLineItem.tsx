@@ -1,11 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import NextImage from "next/image";
 import { ChevronDown } from "lucide-react";
 import { Text } from "@/components/Text/Text";
 import { AddButton } from "@/components/AddButton/AddButton";
 import { formatPrice } from "@/lib/format";
+import { moveFocusInList } from "@/lib/ui/moveFocusInList";
 import type { StoreOffer } from "@/data/productPop";
 import styles from "./CartLineItem.module.css";
 
@@ -70,6 +71,20 @@ export function CartLineItem({
   className,
 }: CartLineItemProps) {
   const [open, setOpen] = useState(false);
+  const storeBtnRef = useRef<HTMLButtonElement>(null);
+  const listRef = useRef<HTMLDivElement>(null);
+
+  // Keyboard: opening focuses the first shop, and closing - by a pick or by
+  // Escape - hands focus back to the store button instead of letting it fall
+  // to <body> with the row that had it.
+  useEffect(() => {
+    if (open) listRef.current?.querySelector<HTMLElement>('[role="option"]')?.focus();
+  }, [open]);
+
+  function closeList() {
+    setOpen(false);
+    storeBtnRef.current?.focus();
+  }
 
   /*
    * "$4.99/jar", or "$2.09 each" when the unit is the catalog's "each" — by
@@ -107,11 +122,14 @@ export function CartLineItem({
         <div className={styles.storeWrap}>
           <button
             type="button"
+            ref={storeBtnRef}
             className={styles.storeBtn}
             onClick={() => hasOffers && setOpen((o) => !o)}
             aria-haspopup={hasOffers ? "listbox" : undefined}
             aria-expanded={hasOffers ? open : undefined}
-            aria-label={hasOffers ? "Change store" : undefined}
+            // Names the product, because a cart has one of these per line,
+            // and keeps the shop (the visible text) inside the name.
+            aria-label={hasOffers ? `Change store for ${name}, now ${storeName}` : undefined}
           >
             <Text as="span" variant="normalRegular" className={styles.storeName}>
               {storeName}
@@ -133,9 +151,17 @@ export function CartLineItem({
                 role="presentation"
               />
               <div
+                ref={listRef}
                 className={styles.dropdown}
                 role="listbox"
-                aria-label="Compare price across nearby stores"
+                aria-label={`Other stores for ${name}`}
+                onKeyDown={(e) => {
+                  if (moveFocusInList(e, listRef.current, '[role="option"]')) return;
+                  if (e.key === "Escape") {
+                    e.preventDefault();
+                    closeList();
+                  }
+                }}
               >
                 {alternatives.map((o) => (
                   <button
@@ -144,7 +170,7 @@ export function CartLineItem({
                     className={styles.offerRow}
                     onClick={() => {
                       onSelectOffer?.(o.id);
-                      setOpen(false);
+                      closeList();
                     }}
                     role="option"
                     aria-selected={false}
@@ -187,6 +213,7 @@ export function CartLineItem({
       </div>
 
       <AddButton
+        itemName={name}
         quantity={quantity}
         onAdd={onAdd}
         onIncrement={onIncrement}

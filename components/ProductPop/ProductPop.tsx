@@ -9,6 +9,8 @@ import { ProductCard } from "@/components/ProductCard/ProductCard";
 import { VariantPicker } from "@/components/VariantPicker/VariantPicker";
 import { formatPrice } from "@/lib/format";
 import { useScrollLock } from "@/lib/ui/useScrollLock";
+import { useDialogFocus } from "@/lib/ui/useDialogFocus";
+import { moveFocusInList } from "@/lib/ui/moveFocusInList";
 import type { VariantFamilyInfo } from "@/lib/types";
 import type { ProductPopData } from "@/data/productPop";
 import styles from "./ProductPop.module.css";
@@ -87,6 +89,16 @@ export function ProductPop({
   const scrollerRef = useRef<HTMLDivElement>(null);
   /** Did the press that is currently underway begin on the backdrop? */
   const pressedBackdrop = useRef(false);
+  /**
+   * Set when the comparison is opened, so focus moves into it once. The list
+   * re-measures on every scroll, and must not keep pulling focus back.
+   */
+  const focusCompareOnOpen = useRef(false);
+
+  // Keyboard focus moves into the modal, stays there, and goes back to the
+  // card's chevron on close. See lib/ui/useDialogFocus.ts.
+  const modalRef = useRef<HTMLDivElement>(null);
+  useDialogFocus(modalRef);
 
   const offers = pop.storeOffers;
   const favourite = (brand: string | undefined) =>
@@ -191,12 +203,24 @@ export function ProductPop({
     return () => document.removeEventListener("pointerdown", onPointerDown);
   }, [showCompare]);
 
+  // Opening the comparison puts focus on its first shop, so the arrow keys
+  // work straight away and a screen reader starts reading the list.
+  useEffect(() => {
+    if (!showCompare || !placement || !focusCompareOnOpen.current) return;
+    focusCompareOnOpen.current = false;
+    compareRef.current?.querySelector<HTMLElement>('[role="option"]')?.focus();
+  }, [showCompare, placement]);
+
   // Escape closes the price comparison first (if open), otherwise the modal.
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if (e.key !== "Escape") return;
-      if (showCompare) setShowCompare(false);
-      else onClose();
+      if (e.key !== "Escape" || e.defaultPrevented) return;
+      if (showCompare) {
+        setShowCompare(false);
+        // Back to the price the list hangs from, rather than wherever focus
+        // fell when the row it was on disappeared.
+        priceButtonRef.current?.focus();
+      } else onClose();
     };
     document.addEventListener("keydown", onKey);
     return () => document.removeEventListener("keydown", onKey);
@@ -220,10 +244,12 @@ export function ProductPop({
       role="presentation"
     >
       <div
+        ref={modalRef}
         className={styles.modal}
         role="dialog"
         aria-modal="true"
-        aria-label={`${pop.brand} ${pop.name}`}
+        // Joined, not templated: a product with no brand read as " 1% Milk 2 L".
+        aria-label={[pop.brand, pop.name].filter(Boolean).join(" ")}
       >
         <button type="button" className={styles.close} onClick={onClose} aria-label="Close">
           <X size={22} aria-hidden="true" />
@@ -340,9 +366,16 @@ export function ProductPop({
                     type="button"
                     ref={priceButtonRef}
                     className={styles.priceDropdown}
-                    onClick={() => setShowCompare((s) => !s)}
+                    onClick={() => {
+                      if (!showCompare) focusCompareOnOpen.current = true;
+                      setShowCompare(!showCompare);
+                    }}
                     aria-expanded={showCompare}
-                    aria-label="Compare price across nearby stores"
+                    aria-haspopup="listbox"
+                    // The price itself belongs in the name. A bare "Compare
+                    // price…" hid it from a screen reader, so switching store
+                    // changed nothing that could be heard.
+                    aria-label={`${formatPrice(selected.price)} at ${selected.storeName}. Compare prices at nearby stores`}
                   >
                     <Text as="span" variant="mediumBold">
                       {formatPrice(selected.price)}
@@ -370,13 +403,23 @@ export function ProductPop({
                     }}
                     role="listbox"
                     aria-label="Price comparison across stores"
+                    onKeyDown={(e) =>
+                      moveFocusInList(e, compareRef.current, '[role="option"]')
+                    }
                   >
                     {alternatives.map((o) => (
                       <button
                         type="button"
                         key={o.id}
                         className={styles.compareRow}
-                        onClick={() => onSelectOffer?.(o.id)}
+                        onClick={() => {
+                          onSelectOffer?.(o.id);
+                          // The row just picked leaves the list - it shows the
+                          // OTHER shops - and focus would leave with it. The
+                          // price button now reads the new shop and price, so
+                          // that is where the change is heard.
+                          priceButtonRef.current?.focus();
+                        }}
                         role="option"
                         aria-selected={false}
                       >

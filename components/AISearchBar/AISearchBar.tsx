@@ -101,6 +101,11 @@ export function AISearchBar({
   // typing or focusing opens it, Escape / a click outside / searching closes it.
   const [quickOpen, setQuickOpen] = useState(false);
   const quickVisible = showQuickResults && quickOpen && inputValue.trim().length >= 2;
+  /**
+   * Set while focus is handed back to the field after Escape, so the field's
+   * own onFocus - which opens the results - does not reopen what was just shut.
+   */
+  const keepQuickClosed = useRef(false);
 
   const rotating = (placeholders?.length ?? 0) > 1;
   const [placeholderIndex, setPlaceholderIndex] = useState(0);
@@ -237,6 +242,16 @@ export function AISearchBar({
           .filter(Boolean)
           .join(" ")}
         onSubmit={handleSubmit}
+        // Escape from inside the results - on one of their ADD buttons - shuts
+        // them and puts focus back in the field. Escape in the field itself is
+        // handled (and marked handled) in handleKeyDown.
+        onKeyDown={(e) => {
+          if (e.key !== "Escape" || !quickVisible || e.defaultPrevented) return;
+          e.preventDefault();
+          setQuickOpen(false);
+          keepQuickClosed.current = true;
+          fieldRef.current?.focus();
+        }}
         role="search"
       >
         <Search className={styles.icon} aria-hidden="true" size={size === "compact" ? 18 : 20} />
@@ -259,7 +274,13 @@ export function AISearchBar({
             value={inputValue}
             onChange={handleChange}
             onKeyDown={handleKeyDown}
-            onFocus={() => showQuickResults && setQuickOpen(true)}
+            onFocus={() => {
+              if (keepQuickClosed.current) {
+                keepQuickClosed.current = false;
+                return;
+              }
+              if (showQuickResults) setQuickOpen(true);
+            }}
             placeholder={rotating ? "" : placeholder}
             autoComplete="off"
             // Phone keyboards show a "search" key instead of a newline key.

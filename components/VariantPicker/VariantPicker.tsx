@@ -1,12 +1,13 @@
 "use client";
 
-import { useCallback, useId, useState } from "react";
+import { useCallback, useEffect, useId, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import NextImage from "next/image";
 import { Check, ChevronDown, Image as ImageIcon } from "lucide-react";
 import { Text } from "@/components/Text/Text";
 import { formatPrice } from "@/lib/format";
 import { useAnchoredPanel } from "@/lib/ui/useAnchoredPanel";
+import { moveFocusInList } from "@/lib/ui/moveFocusInList";
 import type { VariantFamilyInfo } from "@/lib/types";
 import styles from "./VariantPicker.module.css";
 
@@ -74,9 +75,26 @@ export function VariantPicker({
   const [open, setOpen] = useState(false);
   const labelId = useId();
 
+  /*
+   * KEYBOARD
+   *
+   * The panel is portalled to the end of <body>, so in Tab order it sits after
+   * the footer. A keyboard-only run took 29 presses to reach the first kind of
+   * milk, and choosing one dropped focus on <body>. So focus is carried by
+   * hand: into the menu when it opens, round it with the arrow keys, and back
+   * to this chip when it closes - by Escape, Tab, or a choice.
+   */
+  const menuRef = useRef<HTMLDivElement | null>(null);
+  /** Set when the menu closes with focus inside it, so the chip takes it back. */
+  const refocusTrigger = useRef(false);
+
   // Stable, so the hook's listeners are not torn down and resubscribed on
   // every render of the card this sits on.
-  const close = useCallback(() => setOpen(false), []);
+  const close = useCallback(() => {
+    // Focus inside the menu is about to be removed along with it.
+    if (menuRef.current?.contains(document.activeElement)) refocusTrigger.current = true;
+    setOpen(false);
+  }, []);
 
   const { anchorRef, panelRef, placement } = useAnchoredPanel<HTMLButtonElement>(
     open,
@@ -87,6 +105,36 @@ export function VariantPicker({
     // whatever room it actually has.
     { minWidth: 288, scrollerRef },
   );
+
+  // The panel needs two refs: the hook's, for outside clicks and placement,
+  // and ours, for the focus checks above.
+  const setMenuEl = useCallback(
+    (el: HTMLDivElement | null) => {
+      menuRef.current = el;
+      panelRef.current = el;
+    },
+    [panelRef],
+  );
+
+  // Opening focuses the kind already chosen - where the shopper starts from.
+  // Once per opening: placement updates on every scroll, and focus that has
+  // moved on inside the menu is left where it is.
+  useEffect(() => {
+    if (!open || !placement) return;
+    const menu = menuRef.current;
+    if (!menu || menu.contains(document.activeElement)) return;
+    const chosen =
+      menu.querySelector<HTMLElement>('[aria-checked="true"]') ??
+      menu.querySelector<HTMLElement>('[role="menuitemradio"]');
+    chosen?.focus();
+  }, [open, placement]);
+
+  // Closing with focus inside hands it back to the chip.
+  useEffect(() => {
+    if (open || !refocusTrigger.current) return;
+    refocusTrigger.current = false;
+    anchorRef.current?.focus();
+  }, [open, anchorRef]);
 
   const current =
     family.members.find((m) => m.key === family.selected) ?? family.members[0];
@@ -123,7 +171,7 @@ export function VariantPicker({
         placement &&
         createPortal(
           <div
-            ref={panelRef}
+            ref={setMenuEl}
             className={styles.panel}
             style={{
               left: placement.left,
@@ -134,6 +182,15 @@ export function VariantPicker({
             }}
             role="menu"
             aria-labelledby={labelId}
+            onKeyDown={(e) => {
+              if (moveFocusInList(e, menuRef.current, '[role="menuitemradio"]')) return;
+              // Tab leaves a menu rather than walking through it - and walking
+              // on from here would land in the footer.
+              if (e.key === "Tab") {
+                e.preventDefault();
+                close();
+              }
+            }}
           >
             <Text as="p" variant="xxsmallBold" className={styles.heading} id={labelId}>
               {family.label}
@@ -154,8 +211,10 @@ export function VariantPicker({
                     .join(" ")}
                   role="menuitemradio"
                   aria-checked={chosen}
+                  // Reached with the arrow keys, not Tab - see onKeyDown above.
+                  tabIndex={-1}
                   onClick={() => {
-                    setOpen(false);
+                    close();
                     // Re-picking what is already showing is a no-op, not a
                     // reason to rebuild the card.
                     if (!chosen) onSelect(member.key);

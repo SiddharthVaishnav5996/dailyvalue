@@ -6,6 +6,7 @@ import { CartProvider } from "@/components/Cart/CartContext";
 import { SearchProvider } from "@/lib/search/SearchContext";
 import { BrandPreferenceProvider } from "@/lib/brand/BrandPreferenceContext";
 import { SavedRecipesProvider } from "@/lib/recipe/SavedRecipesContext";
+import { RouteFocus } from "@/components/RouteFocus/RouteFocus";
 import "../styles/tokens.css";
 import "./globals.css";
 
@@ -28,6 +29,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <body>
+        {/* Moves keyboard focus into each new page after a navigation. */}
+        <RouteFocus />
         <AuthProvider>
           <WishlistProvider>
             <CartProvider>

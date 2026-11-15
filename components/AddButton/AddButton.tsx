@@ -54,6 +54,15 @@ export interface AddButtonProps {
   /** Greys the button out and stops it responding (also disables the stepper). */
   disabled?: boolean;
   /**
+   * What this button adds, e.g. "2% Milk 2 L from Walmart".
+   *
+   * Goes into the accessible names: "Add 2% Milk 2 L to cart", "Decrease
+   * quantity of 2% Milk 2 L". Without it a results list read out eight
+   * buttons all called "Add to cart", and a screen reader user had no way to
+   * tell which product each one was for.
+   */
+  itemName?: string;
+  /**
    * Gate the action behind login — a logged-out click opens the login dialog
    * instead of firing `onAdd`. Off by default: adding to cart/wishlist and plain
    * navigation stay open to everyone. Opt in on the "move forward" CTAs (the
@@ -73,6 +82,7 @@ export function AddButton({
   iconOnly = false,
   state = "default",
   disabled = false,
+  itemName,
   requiresAuth,
   onAdd,
   onIncrement,
@@ -108,7 +118,7 @@ export function AddButton({
           className={styles.stepBtn}
           onClick={onDecrement}
           disabled={isDisabled}
-          aria-label="Decrease quantity"
+          aria-label={itemName ? `Decrease quantity of ${itemName}` : "Decrease quantity"}
         >
           <MinusCircle className={styles.icon} />
         </button>
@@ -118,7 +128,7 @@ export function AddButton({
           className={styles.stepBtn}
           onClick={onIncrement}
           disabled={isDisabled}
-          aria-label="Increase quantity"
+          aria-label={itemName ? `Increase quantity of ${itemName}` : "Increase quantity"}
         >
           <PlusCircle className={styles.icon} />
         </button>
@@ -136,7 +146,9 @@ export function AddButton({
         : "";
 
   // "ADD" reads as "Add to cart"; a custom label already says what it does.
-  const accessibleName = label === ADD_LABEL ? "Add to cart" : label;
+  // It still starts with "Add", so the visible ADD stays part of the name.
+  const accessibleName =
+    label === ADD_LABEL ? (itemName ? `Add ${itemName} to cart` : "Add to cart") : label;
 
   return (
     <button

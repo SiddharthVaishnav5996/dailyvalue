@@ -33,7 +33,7 @@ export const ORDER_TRACKING: OrderTracking = {
   trackingNumber: "#123456789",
   steps: [
     {
-      title: "Order Recieved",
+      title: "Order Received",
       lines: ["Track Order : #3202", "Date : 16-03-2026"],
       complete: true,
     },

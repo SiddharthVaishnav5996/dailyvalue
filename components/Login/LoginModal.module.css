@@ -90,9 +90,17 @@
   transition: box-shadow 150ms ease;
 }
 
-.phoneField:hover,
-.phoneField:focus-within {
+.phoneField:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* A ring while the field has focus. A slightly deeper shadow used to be the
+   only sign, and in a keyboard-only test it could not be seen at all - just a
+   caret. Brand purple on white is 10:1, well past the 3:1 a focus ring needs. */
+.phoneField:focus-within {
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.15),
+    0 0 0 2px var(--color-primary);
 }
 
 /* ---- Country picker ---- */
@@ -250,9 +258,15 @@
   color: var(--color-text);
 }
 
-.otpBox:hover,
-.otpBox:focus {
+.otpBox:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Same ring as the phone field, so the box being typed into is obvious. */
+.otpBox:focus {
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.15),
+    0 0 0 2px var(--color-primary);
 }
 
 .resendRow {
