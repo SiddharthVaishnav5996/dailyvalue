@@ -114,3 +114,30 @@
   min-width: 20px;
   text-align: center;
 }
+
+/* ---- Tap area ----
+ * The ADD button is 30px tall, and each stepper +/− is a bare 20px icon. That
+ * passes WCAG 2.2 AA's 24px minimum (the +/− on spacing), but a fingertip is
+ * nearer 44px, the size Apple and WCAG's AAA level ask for - and this control
+ * is pressed more than anything else in the shop.
+ *
+ * So each one carries an invisible area at least 44px each way, centred on
+ * it. Clicks on that area land on the button itself, so nothing else needs to
+ * know. The look does not change, and neither does the layout: the area is
+ * absolutely positioned, so it takes no space. The +/− areas stop 6px short
+ * of each other, so a press can never land on the wrong one. */
+.addBtn,
+.stepBtn {
+  position: relative;
+}
+
+.addBtn::after,
+.stepBtn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: max(100%, 44px);
+  height: max(100%, 44px);
+  transform: translate(-50%, -50%);
+}
