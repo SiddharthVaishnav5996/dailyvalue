@@ -24,7 +24,18 @@ Ask it the weather and it politely declines. That is deliberate, and it is enfor
 - **Recipes you can keep.** Ask to cook something and the reply includes the method, with a one-press PDF download that works on any device, desktop or mobile.
 - **Real multi-turn conversation.** "I don't like digestive biscuits" rebuilds the list, keeping everything else.
 - **Automatic failover** across two AI providers, then a built-in engine that needs no network at all.
+- **Works from the keyboard.** Pop-ups take focus and give it back, menus use the arrow keys, buttons name their product, the text colours were audited to WCAG AA contrast, and the Add button has a 44px tap area.
 - **Works with zero setup.** No keys? It still runs. Each key you add turns on more.
+
+---
+
+## 📊 Results
+
+- **2,201 products across 13 Canadian stores**: a curated catalog, not every item on every shelf.
+- **98.7% of products (2,173) have a photo a person checked.**
+- **82% fewer AI input tokens** on a measured search after adding retrieval (RAG): 15,308 → 2,696. Caching was already discounting most of the old prompt, so the saving at full price is 41%.
+- **Tested on the live build by 20 people.** 9 came back to re-test, and all 9 finished the whole trip: AI search, sign-in, choosing a variant, switching store, checkout.
+- **A keyboard-only run of the whole trip** found 3 gaps. All 3 are fixed.
 
 ---
 
@@ -44,14 +55,14 @@ POST /api/search
   3. Out of scope? Reply and stop. No table, no cart. ◀── guardrail
   │
   4. Resolve items to products       lib/catalog/resolve.ts
-  │    curated (real photos) -> catalog (real prices) -> generated (hashed)
+  │    curated (hand-made cards) -> catalog (estimated prices) -> generated (hashed)
   │
   5. Give every offer its brand      data/brands.ts
   │    national brand everywhere, or each shop's own
   │
   6. Rank offers by price + stars    lib/catalog/resolve.ts
   │
-  7. Attach photos                   lib/catalog/brandPhotos.ts, lib/images/pexels.ts
+  7. Attach photos                   lib/catalog/imageDb.ts, brandPhotos.ts, lib/images/pexels.ts
   ▼
   { reply, tables, products } ─▶ UI renders ─▶ cart ─▶ checkout
 ```
@@ -62,11 +73,9 @@ Three ideas carry the whole design:
 
 **One type, three providers.** Gemini, Groq and the offline engine all return the same `AIPlan`. Nothing downstream knows which answered. Swapping providers is a one-line change in [`lib/ai/plan.ts`](lib/ai/plan.ts).
 
-**Hand-made beats generated.** Around 36 products already had real photography, fitted to the card frame. A search that lands on one keeps its own photo, its own copy, and its own hand-written store prices. Only what those cannot cover falls through to the 39-product catalog, and only what neither covers is generated and priced deterministically by hash, so an air conditioner costs the same on every machine, forever, with no database. See [`lib/catalog/curated.ts`](lib/catalog/curated.ts) and [`lib/catalog/pricing.ts`](lib/catalog/pricing.ts).
+**Hand-made beats generated.** Around 36 products already had real photography, fitted to the card frame. A search that lands on one keeps its own photo, its own copy, and its own hand-written store prices. Only what those cannot cover falls through to the 2,201-product catalog, and only what neither covers is generated and priced deterministically by hash, so an air conditioner costs the same on every machine, forever, with no database. See [`lib/catalog/curated.ts`](lib/catalog/curated.ts) and [`lib/catalog/pricing.ts`](lib/catalog/pricing.ts).
 
 **A brand belongs to a shop, or to nobody.** Philadelphia is sold everywhere, so comparing its price across stores is the point. Great Value is Walmart's and exists nowhere else, so quoting it at Costco is fiction — which the app used to do. [`data/brands.ts`](data/brands.ts) records who owns what, verified rather than recalled, and the resolver gives every offer the brand that shop would really hand you. An item with no brand of its own then reads Great Value / No Name / Compliments down the comparison instead of three identical nameless rows.
-
-📘 **Full walkthrough:** every concept above is explained from first principles, with line-by-line code notes, in the project's [AI Integration Field Notes](https://claude.ai/artifact/Jy2T73PafC65HX3qaKwdZn).
 
 ---
 
@@ -79,6 +88,7 @@ Three ideas carry the whole design:
 | AI, primary | **Google Gemini** | The only free tier that *enforces* a JSON schema |
 | AI, fallback | **Groq** (GPT-OSS 120B) | Different company, different hardware, independent failure |
 | Fuzzy match | **fuse.js** | Maps messy item names to catalog products |
+| Photos, checked | **Store and brand websites** | 4,124 packshots, each one checked by a person ([`docs/HARVEST.md`](docs/HARVEST.md)) |
 | Photos, branded | **Open Food Facts** | Real Canadian packshots, seeded offline (CC-BY-SA) |
 | Photos, generic | **Pexels** | 200/hour free, cached in-process |
 | Recipe PDFs | **jsPDF** | Built in the browser on any device; loaded only on first use |
@@ -121,14 +131,26 @@ Environment variables are read at startup, so **restart the dev server** after e
 
 There is **no free public API for live Canadian grocery pricing** — Walmart's is partner-gated and FreshCo has none. So prices are **simulated, but never random**:
 
-- The 39 seeded grocery products carry fixed prices generated once by [`scripts/seed.mjs`](scripts/seed.mjs).
-- Everything else is priced by **hashing** the product name and store id, so the same product always costs the same amount at the same shop — reproducible, and the cheapest store still varies believably per item.
+- The catalog, [`data/products.json`](data/products.json), holds **2,201 products**. Its stored prices are **estimates**: a base 2026 shelf price per product, adjusted per store and generated once by the seed scripts (starting with [`scripts/seed.mjs`](scripts/seed.mjs)), never scraped. Most stored prices are for four supermarkets (No Frills, Walmart, FreshCo, Metro), with a few for Superstore, Costco and the LCBO.
+- Every other store price is made by **hashing** the product name and store id, so the same product always costs the same amount at the same shop — reproducible, and the cheapest store still varies believably per item.
 - [`data/stores.ts`](data/stores.ts) records which **departments** each of the 13 retailers stocks. That is why a mattress reaches Canadian Tire and never FreshCo, and why wine reaches the LCBO.
 - [`data/brands.ts`](data/brands.ts) records each chain's **own brands** and the departments they cover. Brand names were checked on the web rather than recalled, and a brand only covers what it really covers — Beauti-Tone is paint, so it is never offered as a cordless drill.
 
-**Branded photographs** come from [Open Food Facts](https://world.openfoodfacts.org), a free community database. Its search endpoint allows roughly ten calls a minute and one search here needs fourteen, so it is queried *offline* by `npm run seed-photos` and the results are committed to `data/brandPhotos.json`. Photographs are contributed by shoppers and licensed CC-BY-SA. Hand-photographed curated cards always outrank them.
-
 Prices are presented as a comparison demo, not live data.
+
+---
+
+## 🖼️ Images
+
+Product photos come from three places, in this order of preference:
+
+- **Store and brand websites.** 4,124 packshots for 2,173 products, gathered with the help of AI agents following the rules in [`docs/HARVEST.md`](docs/HARVEST.md), and each one checked by a person before it was kept. Every entry in [`data/imageDb.json`](data/imageDb.json) records the page it came from, so any photo can be traced. The agents worked one store at a time, at a slow pace, and stopped at any sign-in or CAPTCHA.
+- **[Open Food Facts](https://world.openfoodfacts.org)**, a free community database, licensed CC-BY-SA. Its search endpoint allows roughly ten calls a minute and one search here needs fourteen, so it is queried *offline* by `npm run seed-photos` and the results are committed to `data/brandPhotos.json`.
+- **[Pexels](https://www.pexels.com)** for generic photos, under the Pexels licence.
+
+Hand-photographed curated cards always outrank all three.
+
+**Product images, logos and brand names belong to their owners.** They are used here only to demonstrate the app, in a non-commercial portfolio project. If you own an image and would like it removed, please open an issue and it will be taken down.
 
 ---
 
@@ -159,9 +181,15 @@ lib/
   recipe/pdf.ts            # recipe -> PDF, loaded on demand
   search/SearchContext.tsx # one search result, shared across pages
   ui/useScrollLock.ts      # freeze the page behind a modal, on the right element
-data/                      # stores, seeded catalog, checkout demo content
+  ui/useDialogFocus.ts     # keyboard focus for every pop-up: in, kept, and given back
+data/                      # stores, catalog, photos, checkout demo content
+  products.json            # the 2,201-product catalog, with estimated prices
+  imageDb.json             # checked photos, each with the page it came from
   brands.ts                # who owns which store brand, and what it covers
+  variants.ts              # kinds of a product: skim, 1%, 2%…
+  bareWords.ts             # what a bare word like "tea" means
   brandPhotos.json         # seeded packshots (npm run seed-photos)
+docs/HARVEST.md            # the rules the photo agents followed
 styles/tokens.css          # design tokens
 ```
 
@@ -169,12 +197,23 @@ styles/tokens.css          # design tokens
 
 ## 🗺️ Roadmap
 
+**Still to fix, found by testing and the audits:**
+
+- **A screen-reader pass of the whole trip.** The keyboard-only run is done; a screen reader is the next check.
+- **Raise the text under 12px**, in the Figma file and in the app. 8px and 10px text is hard to read.
+- **Reach Place Order sooner by keyboard.** "People also bought" comes before the order summary in Tab order.
+
+**Then grow it:**
+
+- **Live products and prices from the stores**, wherever a retailer offers a feed, in place of the curated catalog's estimates.
+- **Make the voice and attach buttons work.** Both are in the search bar but don't do anything yet.
+- **Suggestions from past orders and budget.** Today it remembers favourite brands and saved recipes.
+- **The cheapest whole cart across stores**, not just the cheapest store for each item.
+- **Photos for AI-generated products.** 98.7% of catalog products have a checked photo; products the AI invents still fall back to generic photography.
 - **Alternative products for every item.** Hand-built Product-pops already show them; generated products show only the store comparison.
-- **Branded photos beyond the catalog.** Seeded packshots cover the 39 catalog products; anything the AI invents still falls back to generic photography.
 - **Automated tests for the product matcher.** It was verified against 24 phrases it must refuse and 16 it must still match, but as a one-off check. Those lists belong in a test suite.
 - **Rate limiting per visitor**, so one person cannot spend the daily quota.
 - **An evaluation set** of real queries with expected output, to tell a prompt improvement from a prompt change.
-- **Real pricing** wherever a public retailer API exists (e.g. Kroger).
 
 ---
 
