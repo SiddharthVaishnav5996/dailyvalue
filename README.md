@@ -221,6 +221,16 @@ styles/tokens.css          # design tokens
 
 ## ☁️ Deploy
 
-Push to GitHub and import into **Vercel**. Set `GEMINI_API_KEY`, `GROQ_API_KEY` and `PEXELS_API_KEY` in the project's environment variables.
+Live at **[dailyvalue.vercel.app](https://dailyvalue.vercel.app)**. Every push to `master` rebuilds it at the same address, and a build that fails never replaces the live site.
+
+To deploy your own copy, import the repository into **Vercel**, then set these three things in the project. The last two live only in Vercel, not in this repository, so they are easy to forget:
+
+| Setting | Where in Vercel | Why |
+| --- | --- | --- |
+| `GEMINI_API_KEY`, `GROQ_API_KEY`, `PEXELS_API_KEY` | Settings → Environment Variables | The keys from `.env.local`, which is never committed. Pasting the whole file into the Key box fills in all three. |
+| `npm_config_onnxruntime_node_install_cuda` = `skip` | Settings → Environment Variables (Production and Preview) | Without it, `npm install` fails on Vercel's Linux machines. The background remover used only by `scripts/seed-item-images.mjs` (`@imgly/background-removal-node`, a dev dependency) pulls in `onnxruntime-node`, whose installer tries to download a GPU add-on and gets a 404. `skip` tells it not to; the site never uses it. |
+| **Git LFS: Enabled** | Settings → Git | The 4,797 product photos are stored with Git LFS. Without it, Vercel serves the small pointer files instead and every photo breaks. |
+
+A changed setting only takes effect on the next build, so redeploy after changing one. Each build downloads the LFS photos (about 627 MB), which counts toward GitHub's monthly LFS bandwidth.
 
 One caveat worth knowing: the Pexels cache lives in the server's memory, so it resets on every deploy and is not shared between serverless instances. Production would move it to Redis.
