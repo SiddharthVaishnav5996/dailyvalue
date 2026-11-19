@@ -2,6 +2,8 @@
 
 **Type a sentence. Get a priced shopping cart, compared across every store.**
 
+**▶ Try it live: [dailyvalue.vercel.app](https://dailyvalue.vercel.app)**
+
 Not a search box with keywords — a sentence.
 
 - _"Help me prepare a blueberry cheesecake"_ → a recipe's ingredients, matched to real products
